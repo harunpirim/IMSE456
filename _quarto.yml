@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "weeks/*.qmd"
+    - "slides/*.qmd"
+    - "labs/*.qmd"
+
+website:
+  title: "IMSE 456/656"
+  description: "Project Management in the AI Era — North Dakota State University"
+  site-url: https://harunpirim.github.io/IMSE456
+  repo-url: https://github.com/harunpirim/IMSE456
+  repo-actions: [issue]
+  favicon: images/favicon.png
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: schedule.qmd
+        text: Schedule
+      - href: ai.qmd
+        text: AI Studio
+      - href: project.qmd
+        text: Final Project
+    right:
+      - icon: github
+        href: https://github.com/harunpirim/IMSE456
+        aria-label: Course repository
+  page-footer:
+    left: "IMSE 456/656 · Project Management · Fall 2026"
+    center: "Harun Pirim, PhD · North Dakota State University"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    email-obfuscation: javascript
+
+execute:
+  freeze: auto

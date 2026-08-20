@@ -1,0 +1,50 @@
+---
+title: "Lab 5 · Make the model compute a network, then verify every number"
+subtitle: "Rung 2 · The model proposes, your code adjudicates"
+week: 5
+release: "2026-09-21"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>5 — <a href='../weeks/week-05.qmd'>Schedule I — networks, CPM, float</a></dd>
+<dt>Rung</dt><dd>Tool-calling</dd>
+</dl>
+:::
+
+## The task
+
+Ask a model for the forward pass, backward pass, and float table of a ten-activity network you specify. Then implement CPM yourself in Python and compare, cell by cell.
+
+**Deliverable.** Both tables, a diff, and a note on any activity where total float and free float differ — including whether the model got that distinction right. It usually does not.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on critical path method. One question at a time, don't lecture.
+Give me a small network and make me compute ES/EF/LS/LF and both floats by
+hand. Then find the gap: I suspect I don't really understand the difference
+between total float and free float. Prove it or disprove it.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

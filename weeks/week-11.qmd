@@ -1,0 +1,99 @@
+---
+title: "Week 11 · Adaptive delivery — Scrum, Kanban, flow"
+week: 11
+release: "2026-11-02"
+dates: "3 and 5 November"
+reading: "Larson Ch. 15"
+session-a: "Scrum accountabilities and events; flow metrics"
+session-b: "Studio — flow simulation, Little's Law, reading a CFD"
+video:
+  provider: none
+  id: ""
+slides: true
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>3 &amp; 5 November</dd>
+<dt>Tuesday</dt><dd>Scrum accountabilities and events; flow metrics</dd>
+<dt>Thursday</dt><dd>Studio — flow simulation, Little's Law, reading a CFD</dd>
+<dt>Reading</dt><dd>Larson Ch. 15</dd>
+<dt>Due</dt><dd>SA10 · Flow simulation + Little's Law — <span class='tabular'>2026-11-08</span><br>CA7 · Concepts — Weeks 10–11 — <span class='tabular'>2026-11-08</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Learning objectives
+
+- Describe Scrum's accountabilities, events, and artifacts exactly as the Scrum Guide defines them.
+- Compute and interpret flow metrics; apply Little's Law.
+- State what Scrum abandons relative to predictive planning, and what it buys.
+
+## Core content
+
+**Scrum (Scrum Guide, November 2020 — current).**
+
+- **Three accountabilities:** Product Owner (maximizes value of the product, owns the Product Backlog, single person not a committee), Scrum Master (accountable for Scrum's effectiveness, a *true leader who serves*), Developers (everyone doing the work; the guide does not distinguish sub-roles).
+- **Five events**, all held within the container of the **Sprint** (one month or less, fixed length, no changes that endanger the Sprint Goal): Sprint Planning, Daily Scrum (15 min, for the Developers), Sprint Review, Sprint Retrospective.
+- **Three artifacts, each with one commitment** — this pairing was the 2020 revision's main structural addition:
+
+| Artifact | Commitment |
+|---|---|
+| Product Backlog | Product Goal |
+| Sprint Backlog | Sprint Goal |
+| Increment | Definition of Done |
+
+- **Five values:** commitment, focus, openness, respect, courage.
+- **Empiricism** rests on transparency, inspection, adaptation. Scrum is explicitly "purposefully incomplete" — it defines only the parts required by the framework.
+
+**Kanban and flow.** Visualize the workflow; **limit WIP**; manage flow; make policies explicit; improve collaboratively. No prescribed roles, no timeboxes, no estimates required.
+
+**Flow metrics** — the quantitative content that makes this week rigorous rather than a vocabulary lesson:
+- **Cycle time** — start of work to done, per item.
+- **Throughput** — items completed per unit time.
+- **WIP** — items in progress.
+- **Little's Law:** WIP = Throughput × Cycle Time. Worked: 12 items in progress, throughput 3/week → average cycle time = **4 weeks**. Halve WIP to 6 with throughput unchanged → cycle time 2 weeks. *This is the entire mathematical argument for WIP limits*, and it takes 90 seconds to derive.
+- **Cumulative flow diagram** — band width = WIP, band slope = throughput, horizontal distance = cycle time. Widening bands mean a bottleneck downstream.
+- **Monte Carlo on throughput** beats story-point velocity forecasting and requires no estimation at all — just a count of completed items per week.
+
+**What Scrum abandons.** Be explicit; this is the intellectual core of the week. Scrum gives up: a fixed scope baseline, long-horizon date commitments, detailed up-front design, and the ability to sign a fixed-price fixed-scope contract. It buys: short feedback loops, the option to change direction at low cost, and continuous delivery of usable increments.
+
+## The evidence, honestly stated
+
+- **Serrador & Pinto (2015)**, 1,002 projects: agile use positively affected both efficiency and overall stakeholder satisfaction; quality of the project vision/goals was a marginally significant moderator.
+- **Koch et al. (2023)**, pre-registered meta-analysis, k = 41, N = 73,825: small effects on job satisfaction, strain, and commitment; **medium-to-large** effects on performance and innovative behaviour; medium effect on psychological empowerment. Effects were **stronger outside software** (manufacturing, healthcare, logistics) and stronger in published than unpublished records — note the publication-bias signal to students.
+- **Lieberum et al. (2022)**, *M&SOM*, controlled lab experiment with a 2×2 design: performance was higher with **time-boxed progression**, because under flexible progression people over-invest in early phases — the "**progression fallacy**." Adding self-imposed phase goals on top of time-boxing added nothing; combining phase goals with *flexible* progression (i.e. traditional PM) made things actively worse. This is the cleanest causal evidence available that the *timebox specifically* is doing work.
+- **Contra:** Badran et al. (2024), 392 construction project managers in Jordan: agile PM positively affected innovation, responsiveness, quality and client satisfaction but **negatively affected cost performance** and had no significant effect on time. Domain matters.
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. Who is accountable for the Product Backlog? Can a committee hold that accountability?
+2. What is the commitment attached to the Increment, and what happens if the team redefines it mid-sprint?
+3. Our team has 30 items in progress and finishes 5 per week. A stakeholder wants to know when their new item will be done. What do you tell them, and what should you change?
+4. What does Scrum say about budgets, contracts, or portfolios? Why is that silence deliberate?
+5. Name something predictive planning gives you that Scrum cannot.
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "Agile is better than waterfall."
+
+Force decomposition: better at *which* success dimension, in *which* domain, measured *how*? The honest synthesis: strong evidence for stakeholder and team dimensions, mixed-to-weak for cost, domain-dependent throughout, and much of the primary evidence is self-reported survey data with obvious selection effects.
+:::
+
+::: {.roommate}
+### Roommate link
+
+**Jazz ensemble vs. symphony orchestra.** The orchestra has a score (baseline), a conductor (PM), and rehearsals that converge on a fixed performance. The jazz quartet has a head (product goal), agreed changes (definition of done), and improvises within them. Neither is better. But note: the quartet's freedom depends on *every* member being individually excellent, which is precisely the condition organizations skip when they "adopt agile."
+:::
+
+
+## This week's AI lab
+
+[Lab 11 — Simulate flow, then ask an agent to explain your own data](../labs/lab-11.qmd)
+
+[Slides for this week](../slides/week-11.qmd)

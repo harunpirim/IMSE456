@@ -1,0 +1,71 @@
+---
+title: "Week 11 — Adaptive delivery — Scrum, Kanban, flow"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-11-02"
+---
+
+## Where we are going
+
+- Describe Scrum's accountabilities, events, and artifacts exactly as the Scrum Guide defines them.
+- Compute and interpret flow metrics; apply Little's Law.
+- State what Scrum abandons relative to predictive planning, and what it buys.
+
+---
+
+## The frame
+
+| Artifact | Commitment |
+|---|---|
+| Product Backlog | Product Goal |
+| Sprint Backlog | Sprint Goal |
+| Increment | Definition of Done |
+
+---
+
+## The argument
+
+- Scrum (Scrum Guide, November 2020 — current)
+- Kanban and flow
+- Flow metrics
+- What Scrum abandons
+
+---
+
+## The evidence
+
+- **Serrador & Pinto (2015)**, 1,002 projects: agile use positively affected both efficiency and overall stakeholder satisfaction; quality of the project vision/goals was a marginally significant moderator.
+- **Koch et al. (2023)**, pre-registered meta-analysis, k = 41, N = 73,825: small effects on job satisfaction, strain, and commitment; **medium-to-large** effects on performance and innovative behaviour; medium effect on psychological empowerment. Effects were **stronger outside software** (manufacturing, healthcare, logistics) and stronger in published than unpublished records — note the publication-bias signal to students.
+- **Lieberum et al. (2022)**, *M&SOM*, controlled lab experiment with a 2×2 design: performance was higher with **time-boxed progression**, because under flexible progression people over-invest in early phases — the "**progression fallacy**." Adding self-imposed phase goals on top of time-boxing added nothing; combining phase goals with *flexible* progression (i.e. traditional PM) made things actively worse. This is the cleanest causal evidence available that the *timebox specifically* is doing work.
+- **Contra:** Badran et al. (2024), 392 construction project managers in Jordan: agile PM positively affected innovation, responsiveness, quality and client satisfaction but **negatively affected cost performance** and had no significant effect on time. Domain matters.
+
+---
+
+## Check yourself
+
+1. Who is accountable for the Product Backlog? Can a committee hold that accountability?
+2. What is the commitment attached to the Increment, and what happens if the team redefines it mid-sprint?
+3. Our team has 30 items in progress and finishes 5 per week. A stakeholder wants to know when their new item will be done. What do you tell them, and what should you change?
+4. What does Scrum say about budgets, contracts, or portfolios? Why is that silence deliberate?
+
+---
+
+## Attack this claim
+
+> "Agile is better than waterfall."
+
+Force decomposition: better at *which* success dimension, in *which* domain, measured *how*? The honest synthesis: strong evidence for stakeholder and team dimensions, mixed-to-weak for cost, domain-dependent throughout, and much of the primary evidence is self-reported survey data with obvious selection effects.
+
+---
+
+## Somewhere else entirely
+
+**Jazz ensemble vs. symphony orchestra.** The orchestra has a score (baseline), a conductor (PM), and rehearsals that converge on a fixed performance. The jazz quartet has a head (product goal), agreed changes (definition of done), and improvises within them. Neither is better. But note: the quartet's freedom depends on *every* member being individually excellent, which is precisely the condition organizations skip when they "adopt agile."
+
+---
+
+## Next
+
+- Notes: [Week 11 on the course site](../weeks/week-11.qmd)
+- AI lab: [Lab 11](../labs/lab-11.qmd)
+- Reading: Larson Ch. 15

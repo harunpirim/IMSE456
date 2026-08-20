@@ -1,0 +1,50 @@
+---
+title: "Lab 12 · An agent as hostile reviewer"
+subtitle: "Rung 3 · Package the job, write the acceptance tests"
+week: 12
+release: "2026-11-09"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>12 — <a href='../weeks/week-12.qmd'>Hybrid, tailoring, and scaling</a></dd>
+<dt>Rung</dt><dd>Skills and agents</dd>
+</dl>
+:::
+
+## The task
+
+Build an agent that plays the hostile reviewer against your team's chosen delivery approach — and that is specified to be *hard to satisfy*.
+
+**Deliverable.** The specification, the transcript of it attacking your approach, and the one revision you made to your approach because of it. Also: the one attack you rejected, and why.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on choosing a delivery approach. One question at a time. Give me
+a project brief, make me choose predictive/agile/hybrid, then argue the
+opposite position hard. Don't let me get away with "it depends" — make me
+name the specific factor that decided it.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

@@ -1,0 +1,103 @@
+---
+title: "Week 10 · Risk, uncertainty, and behavioural bias"
+week: 10
+release: "2026-10-26"
+dates: "27 and 29 October"
+reading: "Larson Ch. 7"
+session-a: "Risk, bias, reference-class forecasting — and the live controversy"
+session-b: "Studio — pre-mortem (silent eight minutes), then the register"
+video:
+  provider: none
+  id: ""
+slides: true
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>27 &amp; 29 October</dd>
+<dt>Tuesday</dt><dd>Risk, bias, reference-class forecasting — and the live controversy</dd>
+<dt>Thursday</dt><dd>Studio — pre-mortem (silent eight minutes), then the register</dd>
+<dt>Reading</dt><dd>Larson Ch. 7</dd>
+<dt>Milestone</dt><dd>M5 — see the <a href='../syllabus.qmd'>syllabus</a></dd>
+<dt>Due</dt><dd>SA9 · Risk register from the pre-mortem — <span class='tabular'>2026-11-01</span><br>FP2 · Schedule model + budget baseline — <span class='tabular'>2026-10-30</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Learning objectives
+
+- Build a risk register and run qualitative and quantitative analysis.
+- Apply reference-class forecasting and state the case against it.
+- Name the dominant behavioural biases in project estimation and distinguish cognitive from political ones.
+
+## Core content
+
+**Vocabulary discipline first.** *Risk* = uncertain event with a probability and an impact (insurable, registerable). *Uncertainty* = you don't know the distribution. *Ambiguity* = you don't know the variables. Registers handle the first, buffers the second, and only architecture handles the third.
+
+**Process.** Identify (checklists, prompt lists, assumption analysis, pre-mortem) → qualitative analysis (P × I matrix, ranking) → quantitative analysis (EMV, decision trees, Monte Carlo) → response planning (avoid / transfer / mitigate / accept for threats; exploit / share / enhance / accept for opportunities) → monitor.
+
+**EMV and decision trees.** EMV = Σ P(outcome) × value(outcome). Teach the decision tree with a make-vs-buy under uncertain demand — it forces students to price *information* (what would a market study have to cost to be worth it?).
+
+**Monte Carlo.** Assign a distribution to each activity duration/cost, sample, recompute the network, repeat 10,000 times, read the output distribution. This is the answer to PERT's merge bias. Report **P80 dates**, not single-point dates, and teach students to say "we have an 80% chance of finishing by 12 March" instead of "we will finish 12 March."
+
+**Behavioural biases — Flyvbjerg's top ten** (2021, *PMJ*, base rates from 2,062 projects). The critical framing: **behavioural bias ≠ cognitive bias.** Half the story is cognitive, half is political.
+
+*Cognitive:* optimism bias, the planning fallacy, uniqueness bias ("our project is different"), overconfidence, availability, anchoring, hindsight, base-rate neglect.
+*Political:* strategic misrepresentation (deliberate underestimation to win approval), escalation of commitment.
+
+Flyvbjerg identifies **base-rate neglect** as the primary reason projects underperform.
+
+**Reference-class forecasting.** The de-biasing procedure, derived from Kahneman & Tversky's outside view:
+1. Identify a reference class of past, completed, similar projects.
+2. Establish the empirical distribution of outcomes for that class.
+3. Position your project in the distribution and adjust your estimate to the class base rate, uplifting for the confidence level you need.
+
+Endorsed by the American Planning Association; used on Edinburgh Tram and Crossrail (Flyvbjerg, 2008, *European Planning Studies*). Batselier & Vanhoucke (2016) showed folding RCF into EVM forecasting produced considerable accuracy improvement over the best previously identified methods.
+
+## Teach the controversy — this is the most valuable hour of the course
+
+Do not present the planning-fallacy account as settled. It is actively contested, and the contest is instructive:
+
+- **Love, Ika, Sing et al.** (2019, *TR Part A*, two papers) analysed ≈HK$115bn (≈US$14bn) of Hong Kong transport projects and found **47%** deviated from approved budget — with cases of both over- and under-estimation. They argue the planning fallacy is a false dichotomy ("error or lie") that doesn't survive contact with homogeneous data, and that optimism and *pessimism* bias coexist (Love et al., 2019, *IEEE TEM*: 43% of Hong Kong social infrastructure projects **underran** their contract award).
+- **Chapman** (2024 *PMJ*, 2025 *IJPM*): 125 rail and 280 road projects across Scandinavia, 2008–2022, delivered generally on cost; no evidence of optimism bias or strategic misrepresentation. He argues prior work suffers methodological weaknesses in data provenance.
+- **Flyvbjerg** (2018, *World Development*) replies on the specific Hiding Hand question: yes, benefit overruns outweigh cost overruns in about **one fifth** of projects — but 80% show no such behaviour, so the planning fallacy remains the better general account.
+- **Ika & Pinto** (2020, *IEEE TEM*) propose accommodating both — the "Fifth Hand."
+
+**The pedagogical payload:** a field's most-cited empirical claim is under sustained methodological attack, and students should be able to say what evidence would settle it. (Answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. What's the difference between a risk and an issue? What changes when one becomes the other?
+2. Your risk register has 40 items, all rated medium. What went wrong?
+3. Reference-class forecasting requires a reference class. What do you do for a genuinely novel project — and is "genuinely novel" itself a bias?
+4. Distinguish the two mechanisms that both produce underestimated costs. Which one does more analysis fix?
+5. Monte Carlo gives P50 = 14 months, P80 = 19 months. Which do you commit to and to whom?
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "Cost overruns are caused by optimism bias, so better forecasting techniques will fix them."
+
+Attack: if the cause is strategic (political), better technique changes nothing — the incentive to misrepresent is untouched; the Scandinavian data suggests governance regime dominates technique; Love's data shows underruns exist, so the phenomenon isn't unidirectional; "overrun" is measured against a baseline chosen by the same actors.
+:::
+
+::: {.roommate}
+### Roommate link
+
+**Weather forecasting.** Meteorologists moved from single-point predictions to probabilities ("70% chance of rain") and the public learned to consume them. Project management still overwhelmingly communicates single-point dates. Ask the class what institutional change would be needed for a sponsor to accept "P80: 12 March" — the technical work is done; the communication norm is the blocker.
+:::
+
+## In-class activity (40 min)
+
+**Pre-mortem.** "It is 18 months from now. The project has failed completely. Write the story of why." Individually, silently, 8 minutes — then pool. Klein's technique reliably surfaces risks that a P×I workshop misses, because it removes the social cost of predicting failure. Then have teams convert the stories into register entries with owners.
+
+
+## This week's AI lab
+
+[Lab 10 — An agent that will not let you be optimistic](../labs/lab-10.qmd)
+
+[Slides for this week](../slides/week-10.qmd)

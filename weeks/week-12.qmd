@@ -1,0 +1,92 @@
+---
+title: "Week 12 · Hybrid, tailoring, and scaling"
+week: 12
+release: "2026-11-09"
+dates: "10 and 12 November"
+reading: "Larson Ch. 15–16"
+session-a: "Hybrid approaches, tailoring, and why scaling frameworks exist"
+session-b: "Studio — design an approach for four briefs, defend under attack"
+video:
+  provider: none
+  id: ""
+slides: true
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>10 &amp; 12 November</dd>
+<dt>Tuesday</dt><dd>Hybrid approaches, tailoring, and why scaling frameworks exist</dd>
+<dt>Thursday</dt><dd>Studio — design an approach for four briefs, defend under attack</dd>
+<dt>Reading</dt><dd>Larson Ch. 15–16</dd>
+<dt>Milestone</dt><dd>M6 — see the <a href='../syllabus.qmd'>syllabus</a></dd>
+<dt>Due</dt><dd>SA11 · Approach defence (scored live in studio) — <span class='tabular'>2026-11-12</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Learning objectives
+
+- Design a hybrid approach for a specific project and justify each borrowed element.
+- Evaluate the evidence for hybrid as a first-class choice rather than a compromise.
+- Explain why scaling frameworks exist and what the evidence for them is.
+
+## Core content
+
+**Hybrid is the modal case, not the fallback.** Gemino, Horner Reich & Serrador (2021, *PMJ*, 477 cross-industry projects) found **52% of projects were hybrid**. Regression across multiple outcome measures (0.21 < R² < 0.41) showed hybrid and agile approaches **significantly increased stakeholder success** over traditional, while achieving the *same* budget, time, scope and quality outcomes — and **hybrid was similar in effectiveness to fully agile**. The paper's title asks whether hybrid is a poor second choice; the answer is no.
+
+Ćirić Lalić et al. (2022, *IJMPB*, 227 professionals) found agile outperformed traditional on two of five success dimensions — *impact on the team* and *preparing for the future* — with no significant advantage on the others. Read alongside Week 1: the dimension you measure determines the answer you get.
+
+Agbejule et al. (2022, *IJOA*) add an important wrinkle via cluster analysis: **"traditional-leaning hybrid" scored highest on project success**, and organizations should have solid traditional practice *before* layering agile on top. That is an uncomfortable finding for agile-transformation consultancies and worth putting in front of students.
+
+**Common hybrid patterns:**
+
+| Pattern | Structure | Fits |
+|---|---|---|
+| Agile-in-a-stage-gate | Gates for funding/governance; sprints inside each stage | Regulated industries, NPD |
+| Predictive frame, adaptive core | Fixed milestones and budget; adaptive scope within | Contracted software delivery |
+| Water-Scrum-Fall | Up-front requirements + agile build + staged release | Common in practice; usually accidental, rarely designed |
+| Front-loaded discovery | Adaptive discovery phase → predictive execution | Construction, hardware |
+
+**Tailoring, formally.** PMBOK 8 treats tailoring as mandatory rather than optional. Give students a decision aid rather than a doctrine:
+
+| Factor | Push toward predictive | Push toward adaptive |
+|---|---|---|
+| Requirements volatility | Low | High |
+| Cost of late change | Very high (physical/regulated) | Low (software/digital) |
+| Incremental value delivery | Impossible (half a bridge) | Natural |
+| Contract/regulatory gates | Present | Absent |
+| Team co-location & empowerment | Not required | Required |
+| Technology novelty | Known | Novel |
+| Stakeholder availability | Low | High (PO must be present) |
+
+**Scaling frameworks (30 minutes, not a module).** SAFe, LeSS, Nexus, Scrum@Scale exist because Scrum is explicitly silent above the team. They add: cross-team synchronization, a portfolio layer, and architectural runway. The honest position for a lecture: adoption is wide, **controlled comparative evidence is thin**, and the most common failure mode reported qualitatively is "agile in name only" — ceremonies adopted, decision rights unchanged. Teach students to ask which *decision rights* moved, because that is the only variable that reliably distinguishes real transformation from theatre.
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. Design a hybrid for a hospital IT system replacement. Justify each element you borrowed and each you rejected.
+2. Hybrid is 52% of projects. Is that evidence it works, or evidence organizations can't commit?
+3. Agbejule et al. found traditional-leaning hybrid scored highest. What would explain that, and what would falsify your explanation?
+4. Your organization adopted SAFe 18 months ago. What single question tells you whether anything actually changed?
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "Hybrid approaches give you the benefits of both agile and predictive."
+
+Attack: they can equally give you the overhead of both — two planning systems, two reporting cadences, and a team that satisfies neither. The Gemino evidence supports hybrid's *outcomes*, but says nothing about the cost of running two systems.
+:::
+
+## In-class activity (40 min)
+
+Four project briefs of sharply different character (a satellite launch, a mobile banking app, a hospital records migration, a bridge retrofit). Teams design an approach for each using the tailoring table, then **defend one choice against a team assigned to attack it**.
+
+
+## This week's AI lab
+
+[Lab 12 — An agent as hostile reviewer](../labs/lab-12.qmd)
+
+[Slides for this week](../slides/week-12.qmd)

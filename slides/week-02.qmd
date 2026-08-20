@@ -1,0 +1,70 @@
+---
+title: "Week 2 — The standards landscape, and how to read a standard"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-08-31"
+---
+
+## Where we are going
+
+- Describe what changed between PMBOK 7 and PMBOK 8, and infer what the change signals about the field.
+- Compare PMBOK, PRINCE2, ISO 21502 and the Scrum Guide on what each one actually claims to be.
+- Apply a tailoring heuristic instead of adopting a framework wholesale.
+
+---
+
+## The frame
+
+| Standard | What it claims to be | Governance stance |
+|---|---|---|
+| PMBOK 8 (PMI, 2025) | A body of knowledge + a standard; descriptive | Tailoring is mandatory |
+| PRINCE2 (AXELOS/PeopleCert) | A *method* — prescriptive processes and roles | Strong: project board, stage boundaries, exception management |
+| ISO 21502:2020 | Guidance, deliberately generic and vendor-neutral | Light; designed to be referenced in contracts |
+| Scrum Guide (Nov 2020) | A *framework*, immutable, deliberately incomplete | None beyond the team; explicitly silent on portfolio |
+
+---
+
+## The argument
+
+- PMBOK Guide, Eighth Edition (PMI, November 2025)
+- The pedagogically interesting part is the oscillation
+- The other standards, in one line each:
+- The Scrum Guide is 13 pages and has not been revised since November 2020
+- Tailoring heuristic
+
+---
+
+## Check yourself
+
+1. PMBOK went from 49 processes → 0 → 40 in eight years. What problem was each swing solving?
+2. Which of these four documents could you actually sue someone over? Why does that matter?
+3. The Scrum Guide says Scrum is "purposefully incomplete." What is it incomplete *about*, and who fills the gap?
+4. Your organization mandates PRINCE2 and your team wants Scrum. Name the specific artifacts that collide.
+
+---
+
+## Attack this claim
+
+> "Standards bodies revise their frameworks primarily to sell new certifications, not because knowledge advanced."
+
+This one is uncomfortable and partly defensible — make students separate the cynical claim (revenue motive) from the testable one (did practice improve?). Note that the Scrum Guide, which is free and unrevised for six years, is the counterexample that complicates the cynical reading.
+
+---
+
+## Somewhere else entirely
+
+**Building codes vs. architectural style.** A building code is prescriptive, legally enforceable, and says nothing about whether the building is good. A style is a set of principles a designer can violate deliberately. PRINCE2 is closer to a code; PMBOK 7/8 is closer to a style guide; Scrum is closer to a poetic form — a sonnet is 14 lines, and the constraint is the point.
+
+---
+
+## Studio
+
+Hand out the same one-page project brief to four teams, each assigned a different standard. Each team produces the first three artifacts their standard would demand. Compare on the board. The visible divergence in *what gets written down first* is the lesson.
+
+---
+
+## Next
+
+- Notes: [Week 2 on the course site](../weeks/week-02.qmd)
+- AI lab: [Lab 2](../labs/lab-02.qmd)
+- Reading: Larson Ch. 2

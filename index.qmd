@@ -1,0 +1,55 @@
+---
+title: "IMSE 456/656 — Project Management"
+subtitle: "Fall 2026 · North Dakota State University"
+toc: false
+---
+
+Project management taught the way it is actually practiced now: the quantitative core
+(WBS, CPM, PERT, EVM) alongside adaptive delivery (Scrum, Kanban, flow), with hybrid
+treated as the default real-world case rather than a compromise — and with an AI layer
+running through every week, because the artifacts of this discipline are increasingly
+drafted by machines and audited by people.
+
+::: {.week-meta}
+<dl>
+<dt>Meets</dt><dd>Tuesday &amp; Thursday, 3:30 – 4:45 p.m.</dd>
+<dt>Room</dt><dd>Ag Hill Center, Room 240</dd>
+<dt>Term</dt><dd>25 August – 10 December 2026</dd>
+<dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
+<dt>Midterm</dt><dd>Thursday 15 October, in class</dd>
+</dl>
+:::
+
+## Start here
+
+- [Syllabus](syllabus.qmd) — policies, grading, and what this course does not cover
+- [Schedule](schedule.qmd) — all sixteen weeks, with what is live and what opens when
+- [AI Studio](ai.qmd) — the ALTER system and the four-rung agent ladder
+- [Final Project](project.qmd) — the company-partnered project, 30% of the grade
+
+## What you will be able to do
+
+1. Decide **which delivery approach fits a given project** and defend the choice against a specific alternative.
+2. Build and interpret the **core quantitative artifacts**: WBS, CPM network, PERT distribution, crash analysis, EVM report.
+3. Run the **adaptive artifacts**: product backlog, sprint mechanics, cumulative flow, Little's Law.
+4. **Read the evidence critically** — distinguish a base rate from a vendor statistic, and name what a project-success number is actually measuring.
+5. Diagnose a failing project and propose interventions ranked by expected effect, not by convention.
+6. **Specify, build, and govern an AI agent** that maintains a live project artifact — and say what it got wrong.
+
+## Textbook
+
+Larson &amp; Gray, *Project Management: The Managerial Process* (2024 Release), McGraw Hill — **optional**.
+Chapter readings are listed each week. Everything you are assessed on is in the lecture notes on this site.
+
+## How this course is graded
+
+| Component | Weight |
+|---|---:|
+| Conceptual assignments (MCQ) | 25% |
+| Studio assignments | 25% |
+| Midterm — in class, closed notes, no computers | 20% |
+| Final project — with an industry partner | 30% |
+
+: {tbl-colwidths="[70,30]"}
+
+Full detail, including the 656 differentiation, is in the [syllabus](syllabus.qmd).

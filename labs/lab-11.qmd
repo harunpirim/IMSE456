@@ -1,0 +1,51 @@
+---
+title: "Lab 11 · Simulate flow, then ask an agent to explain your own data"
+subtitle: "Rung 3 · Package the job, write the acceptance tests"
+week: 11
+release: "2026-11-02"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>11 — <a href='../weeks/week-11.qmd'>Adaptive delivery — Scrum, Kanban, flow</a></dd>
+<dt>Rung</dt><dd>Skills and agents</dd>
+</dl>
+:::
+
+## The task
+
+Run the flow simulation, generate the CFD from your own run data, and hand *only the data* to an agent with no context. Ask it to diagnose the system.
+
+**Deliverable.** Its diagnosis, your diagnosis, and where they differ. Little's Law prediction versus measurement, with the arithmetic shown.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on Scrum and flow metrics. One question at a time. Test me on
+the exact Scrum Guide definitions — accountabilities, events, artifacts and
+their commitments — and correct me if I use language from consultancies
+rather than the guide. Then make me derive the argument for WIP limits from
+Little's Law.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

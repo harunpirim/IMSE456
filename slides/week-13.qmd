@@ -1,0 +1,65 @@
+---
+title: "Week 13 — People, stakeholders, and governance"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-11-16"
+---
+
+## Where we are going
+
+- Perform a stakeholder analysis and build an engagement strategy differentiated by stakeholder position.
+- State the evidence on top-management support and explain why it outranks methodology.
+- Describe the project manager's authority problem and the structures that resolve it.
+
+---
+
+## The frame
+
+| Structure | PM authority | Resource control | Failure mode |
+|---|---|---|---|
+| Functional | Little to none | Functional manager | PM is a coordinator with no leverage |
+| Weak matrix | Limited | Functional manager | Responsibility without authority |
+| Balanced matrix | Moderate | Shared | Two bosses, ambiguous escalation |
+| Strong matrix | Moderate–high | PM | Functional skill erosion |
+| Projectized | High | PM | Resource inefficiency between projects |
+
+---
+
+## The argument
+
+- Lead with the strongest finding in the field
+- Stakeholder analysis
+- Organizational structure and the PM's authority problem
+- Team development
+- Closure
+
+---
+
+## Check yourself
+
+1. If top management support is the dominant success factor, what is the rational allocation of a new PM's first week?
+2. Your sponsor says "you have my full support" and declines to reassign a key engineer. What kind of support is that?
+3. You're in a weak matrix and a functional manager pulls your best developer. What are your actual options?
+4. Where does a lesson learned have to land to change anything?
+
+---
+
+## Attack this claim
+
+> "Project success depends primarily on the competence of the project manager."
+
+Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Have students identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
+
+---
+
+## Somewhere else entirely
+
+**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask students what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
+
+---
+
+## Next
+
+- Notes: [Week 13 on the course site](../weeks/week-13.qmd)
+- AI lab: [Lab 13](../labs/lab-13.qmd)
+- Reading: Larson Ch. 3, 10–12

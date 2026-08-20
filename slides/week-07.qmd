@@ -1,0 +1,54 @@
+---
+title: "Week 7 — Cost estimating and budgeting"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-10-05"
+---
+
+## Where we are going
+
+- Apply analogous, parametric, and bottom-up estimating and state each one's error profile.
+- Build a cost baseline including contingency and management reserve, and place each correctly.
+- Explain estimate ranges as a function of project phase.
+
+---
+
+## The frame
+
+| Method | Basis | Typical accuracy | When |
+|---|---|---|---|
+| Analogous (top-down) | Similar past project, scaled | −25% to +75% | Concept phase, minutes of effort |
+| Parametric | Statistical model on a driver (cost/m², cost/function point) | −15% to +30% | When you have a calibrated model |
+| Bottom-up (definitive) | Sum of work packages | −5% to +10% | After a validated WBS; expensive |
+| Three-point | (o + 4m + p)/6 per element | Depends | Layers on any of the above |
+
+---
+
+## The argument
+
+- Estimating methods
+- Cost baseline structure — get this ordering right, students always garble it:
+- Funding limit reconciliation
+
+---
+
+## Check yourself
+
+1. Your bottom-up estimate is 12% below your parametric estimate. Which do you trust and what do you do?
+2. A risk you identified materializes. Which reserve pays for it, and who approves?
+3. Why can't you produce a ±5% estimate at project initiation, no matter how skilled you are?
+4. What happens to EV metrics if management reserve is accidentally included in the baseline?
+
+---
+
+## Somewhere else entirely
+
+**Insurance underwriting.** An underwriter doesn't estimate whether *your* house will burn; they price a portfolio using base rates and hold reserves against the distribution. Contingency reserve is the loss-cost provision; management reserve is capital held against tail events. Ask why project sponsors resist the framing that actuaries take for granted.
+
+---
+
+## Next
+
+- Notes: [Week 7 on the course site](../weeks/week-07.qmd)
+- AI lab: [Lab 7](../labs/lab-07.qmd)
+- Reading: Larson Ch. 5

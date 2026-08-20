@@ -1,0 +1,10 @@
+format:
+  revealjs:
+    theme: [default, ../styles-slides.scss]
+    slide-number: true
+    chalkboard: false
+    incremental: false
+    width: 1280
+    height: 720
+    embed-resources: false
+    footer: "IMSE 456/656 · Project Management · NDSU"

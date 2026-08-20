@@ -1,0 +1,14 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Source Sans 3", Helvetica, Arial, sans-serif !default;
+$presentation-heading-font: "Spectral", Georgia, serif !default;
+$presentation-heading-color: #0F5A4B !default;
+$body-color: #1A2022 !default;
+$link-color: #0F5A4B !default;
+$presentation-font-size-root: 34px !default;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+.reveal table { font-size: 0.72em; }
+.reveal blockquote { font-family: "Spectral", Georgia, serif; font-style: italic; border-left: 3px solid #0F5A4B; }
+.reveal .slide-number { font-family: "IBM Plex Mono", monospace; }
+.reveal code { font-family: "IBM Plex Mono", monospace; }

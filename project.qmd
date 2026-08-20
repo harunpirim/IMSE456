@@ -1,0 +1,137 @@
+---
+title: "Final Project"
+subtitle: "A real project, a real partner, an agent you have to govern — 30% of the grade"
+---
+
+Teams of four run a genuine project-management engagement with an outside organization
+across the semester. Not a case study, not a simulation: a real scope, a real sponsor,
+a real constraint you did not choose.
+
+## Why a partner organization
+
+Everything difficult about this discipline comes from the parts you do not control. A
+classroom project has a scope you invented, a sponsor who is your instructor, and no cost
+of being wrong. A partner organization supplies what the exercise otherwise lacks —
+requirements that shift, a stakeholder whose interest conflicts with yours, and information
+you have to go and ask for.
+
+The engagement is small on purpose. **You are not being asked to deliver the project.**
+You are being asked to *manage* a defined slice of it and to produce the artifacts that
+management requires.
+
+## Finding a partner
+
+::: {.callout-important}
+## FP0 is due Friday 11 September — do not leave this late
+A team without a confirmed partner by that date is assigned one from the instructor's
+reserve list, and the reserve projects are less interesting than the ones you find yourselves.
+:::
+
+**What counts as a partner.** Any organization outside this course with a real, bounded piece
+of work in the next three months: a local manufacturer, a campus unit, a non-profit, a
+research lab, a student organization with a budget, a startup, a family business. It does
+not need to be an engineering project.
+
+**What you need from them.**
+
+- One named contact willing to spend roughly 30 minutes every other week with your team.
+- A bounded scope with a start and an end inside the semester.
+- Permission to describe the project in a report and a presentation — see confidentiality below.
+
+**Where to look.** Your own employer or internship; a faculty member's lab; NDSU facilities,
+events, or student affairs; the Fargo-Moorhead non-profit sector; a family or friend's business.
+Ask early — the request is small and most organizations say yes.
+
+**If you cannot find one.** Tell the instructor before 11 September rather than after. There
+is a reserve list. There is no penalty for using it; there is a penalty for silence.
+
+## Confidentiality and intellectual property
+
+Some partners will share information they would not want published. Handle it properly:
+
+- **Default to public.** If nothing sensitive is involved, your report is a normal academic document.
+- **If the partner asks for confidentiality**, tell the instructor at FP0. Your report can be
+  marked confidential, read only by the instructor, and excluded from any public archive.
+  Your presentation can be given with figures anonymized.
+- **Never sign anything on behalf of NDSU.** If a partner asks your team to sign an NDA,
+  stop and contact the instructor. Students may sign personally only after that conversation.
+- **The partner owns their data.** You own your analysis. Say so in writing, in an email, at
+  the start — a two-sentence email now prevents an ugly conversation in December.
+
+## Milestones
+
+| | Deliverable | Due | Weight |
+|:--|:--|:--|--:|
+| **FP0** | Team roster and confirmed partner: contact name, scope in three sentences, meeting cadence | <span class="tabular">Fri 11 Sep</span> | gate, ungraded |
+| **FP1** | Project charter and WBS to work-package level, passing the 100% rule | <span class="tabular">Fri 2 Oct</span> | 5% |
+| **FP2** | Schedule model (network, critical path, float) and a budget baseline | <span class="tabular">Fri 30 Oct</span> | 7% |
+| **FP3** | Risk register with owners and triggers, plus an EVM status report against your baseline | <span class="tabular">Fri 20 Nov</span> | 8% |
+| **FP4** | Final report and presentation | <span class="tabular">8–11 Dec</span> | 10% |
+
+: {tbl-colwidths="[8,54,20,18]"}
+
+Each milestone reuses the method taught the week before it is due. Nothing is asked of you
+that you have not just practised in studio.
+
+## The AI requirement
+
+From FP2 onward, **one project artifact must be maintained by an agent you build** — the
+schedule model, the risk register, or the status report. You choose which.
+
+The final report includes a required section, roughly two pages:
+
+1. **What the agent maintained**, and its specification — including the acceptance tests
+   you wrote before you built it.
+2. **What it got wrong.** Every agent that runs for six weeks gets something wrong. A report
+   claiming otherwise is a report whose authors were not checking.
+3. **How you caught it** — what control surfaced the error, and how long it took.
+4. **What you would put in place** to govern this agent if the project ran for two years
+   and a sponsor made decisions from its output.
+
+::: {.callout-note}
+## Point 2 is graded generously and point 3 is graded strictly
+Finding your agent's error is not a failure of the work; it *is* the work. What loses marks
+is having no mechanism that would have caught it.
+:::
+
+## Final report structure
+
+Roughly 3,000–4,000 words plus appendices. Sections in whatever order serves the argument,
+but all present:
+
+1. The project, the partner, and what success meant *to them* — on which dimensions, per Week 1.
+2. Delivery approach chosen, and the alternative rejected, with the reason — per Week 12.
+3. Scope: charter and WBS, with what changed and why.
+4. Schedule and cost: the baseline, the actuals, and where they diverged.
+5. Risk: the register, and the risk that materialized or the one you were most wrong about.
+6. The AI section, as above.
+7. What you would do differently, ranked by expected effect rather than by convention.
+
+**IMSE 656 students** additionally include a *methods justification*: the choice of delivery
+approach, estimating method, and control mechanism defended against the empirical literature,
+with citations to the [source shelf](ai.qmd#the-source-shelf).
+
+## Presentation
+
+Tuesday 8 and Thursday 10 December. 12 minutes presenting, 5 minutes questions, 3 minutes
+changeover, enforced. Partner representatives are invited. Details on the
+[Week 16 page](weeks/week-16.qmd).
+
+## Rubric
+
+| Dimension | Weight | What full marks look like |
+|:--|--:|:--|
+| Artifact quality | 25% | WBS passes the 100% rule; the network is correct; the baseline is defensible; the register has owners and triggers, not adjectives. |
+| Evidence and reasoning | 25% | Choices are defended against a named alternative with a reason, not asserted. Numbers are traceable to a source. |
+| AI governance section | 20% | A real error found, a real control that caught it, and a governance proposal that would survive a sponsor's scrutiny. |
+| Partner engagement | 15% | The partner's actual constraints are visible in the work. Evidence of regular contact and of scope negotiated rather than assumed. |
+| Communication | 15% | Report and presentation are readable by the partner, not only by the instructor. Timing respected. |
+
+: {tbl-colwidths="[26,10,64]"}
+
+## Team working
+
+Teams of four, formed by Week 3. A confidential peer-contribution assessment is collected
+with FP4 and can adjust an individual's project grade by up to ±15%. Persistent
+non-contribution is handled before FP3, not after — tell the instructor while there is
+still time to fix it.

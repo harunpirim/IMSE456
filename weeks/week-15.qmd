@@ -1,0 +1,80 @@
+---
+title: "Week 15 · Case part 2 and the evidence adjudication panel"
+week: 15
+release: "2026-11-30"
+dates: "1 and 3 December"
+reading: "Appendix C — evidence index"
+session-a: "Failing-project case, part 2 — staged decision points"
+session-b: "Evidence adjudication panel — three contested claims"
+video:
+  provider: none
+  id: ""
+slides: false
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>1 &amp; 3 December</dd>
+<dt>Tuesday</dt><dd>Failing-project case, part 2 — staged decision points</dd>
+<dt>Thursday</dt><dd>Evidence adjudication panel — three contested claims</dd>
+<dt>Reading</dt><dd>Appendix C — evidence index</dd>
+<dt>Milestone</dt><dd>M7 — see the <a href='../syllabus.qmd'>syllabus</a></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Tuesday — the case, part 2
+
+The staged decision points continue from Week 14. At each reveal your team commits to a
+decision **before** seeing what happened next. The record of what you decided, and when, is
+the material for the debrief — a case handed over complete is a reading assignment, not a
+diagnosis.
+
+Bring your Week 14 diagnostic worksheet. You will be asked to defend a call you made before
+you knew the outcome.
+
+## Thursday — evidence adjudication panel
+
+Three contested claims. For each, both sides come with primary papers, and teams are assigned
+a side they did not choose.
+
+| # | The claim | For | Against |
+|:--|:--|:--|:--|
+| 1 | "99.5% of megaprojects fail" | Flyvbjerg (2021) base rates, 2,062 projects | Chapman (2024, 2025) Scandinavian data; Love, Ika et al. (2019) |
+| 2 | "Agile outperforms predictive" | Gemino et al. (2021); Koch et al. (2023) meta-analysis | Badran et al. on cost performance; Serrador & Pinto (2015) qualifications |
+| 3 | "Top management support is the dominant success factor" | Young & Jordan (2008); Young & Poon (2013) | Blaskovics et al., LASSO-ranked factors |
+
+: {tbl-colwidths="[5,35,30,30]"}
+
+::: {.callout-note}
+## How this is scored
+The rubric rewards students who state **what evidence would change their mind**. It does not
+reward picking the side that turns out to be better supported. A team that argues its assigned
+side well *and* names the finding that would defeat it scores higher than a team that happens
+to be right.
+:::
+
+## The eight-step diagnostic protocol
+
+The protocol from Week 14, reproduced here because you will use it on the final:
+
+1. Establish what "failing" means to whom — which success dimension is actually missing.
+2. Separate the forecast from the performance: was the plan wrong, or the execution?
+3. Reconstruct the baseline and check whether one exists at all.
+4. Identify the measurement regime — what is being counted, and what is not.
+5. Locate the decision points where information was available and not used.
+6. Distinguish structural causes from personnel causes; most attributions get this backwards.
+7. Rank candidate interventions by expected effect given the evidence base, not by convention.
+8. State what you would need to observe to know your diagnosis is wrong.
+
+## Final exam
+
+There is no final examination. The final project report and presentation carry the weight.
+See [Final Project](../project.qmd).
+
+
+## This week's AI lab
+
+[Lab 15 — Adjudicate a contested claim without letting the model pick a side](../labs/lab-15.qmd)

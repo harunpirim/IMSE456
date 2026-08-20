@@ -1,0 +1,70 @@
+---
+title: "Week 16 · Final project presentations"
+week: 16
+release: "2026-12-07"
+dates: "8 and 10 December"
+reading: "—"
+session-a: "Final presentations — teams 1–5, with partner organizations present"
+session-b: "Final presentations — teams 6–10; course close"
+video:
+  provider: none
+  id: ""
+slides: false
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>8 &amp; 10 December</dd>
+<dt>Tuesday</dt><dd>Final presentations — teams 1–5, with partner organizations present</dd>
+<dt>Thursday</dt><dd>Final presentations — teams 6–10; course close</dd>
+<dt>Reading</dt><dd>—</dd>
+<dt>Due</dt><dd>FP4 · Final presentation — <span class='tabular'>2026-12-08</span><br>FP4 · Final report — <span class='tabular'>2026-12-11</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Presentations
+
+Both sessions this week are team presentations, with partner-organization representatives
+invited to attend.
+
+**Format.** 12 minutes presenting, 5 minutes questions, 3 minutes changeover. Timing is
+enforced — a project manager who cannot brief a sponsor inside a fixed slot has a problem
+that is not about slides.
+
+**Required content**, in any order that serves your argument:
+
+- The project, the partner, and what success meant *to them* — on which dimensions.
+- Your delivery approach and the alternative you rejected, with the reason.
+- The quantitative spine: WBS, schedule model, budget baseline, and where actuals diverged.
+- The risk that materialized, or the one you were most wrong about.
+- **The AI section:** what your agent maintained, what it got wrong, how you caught it, and
+  the control you would put in place to govern it over two years.
+
+The AI section is not an appendix. Teams that treat it as one lose the marks attached to the
+sixth course objective.
+
+::: {.callout-important}
+## Partner attendance
+Confirm with your partner contact by **Friday 27 November** whether they will attend in person,
+join remotely, or receive the recording. Nothing about your grade depends on their attendance —
+but the invitation is part of the professional obligation of the engagement.
+:::
+
+## Course close — Thursday
+
+The last twenty minutes are a debrief on the course itself: what the evidence base actually
+supports, what remains genuinely contested, and which of the tools you learned you should
+expect to still be using in ten years. Bring disagreements.
+
+## Final report
+
+Due **Friday 11 December, 11:59 p.m.** See [Final Project](../project.qmd) for the required
+structure and the rubric.
+
+
+## This week's AI lab
+
+[Lab 16 — The agent section of your final report](../labs/lab-16.qmd)

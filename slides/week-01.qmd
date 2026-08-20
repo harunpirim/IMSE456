@@ -1,0 +1,77 @@
+---
+title: "Week 1 — What a project is, and why anyone needed a word for it"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-08-24"
+---
+
+## Where we are going
+
+- Distinguish project work from operational work using the temporary/unique test, and identify the boundary cases where the test fails.
+- State the iron triangle and articulate three specific ways it misleads.
+- Name at least four dimensions of project success and give a real project that scored high on one and low on another.
+
+---
+
+## The frame
+
+| Dimension | Question | Time horizon |
+|---|---|---|
+| Project efficiency | Did we hit time and budget? | Immediate |
+| Impact on customer | Does it meet requirements and get used? | Months |
+| Impact on team | Did the team grow, or burn out? | Months |
+| Business/direct success | Did it produce commercial or mission value? | 1–2 years |
+| Preparing for the future | Did it create capability, technology, or market position? | 3–5 years |
+
+---
+
+## The argument
+
+- Definition
+- Boundary cases worth 10 minutes of lecture
+- The iron triangle and its problems
+- A multidimensional model instead
+
+---
+
+## The evidence
+
+- Flyvbjerg's database (>16,000 projects): **0.5%** come in on budget, on time, and with the promised benefits. **8.5%** hit both budget and schedule. Cost overrun by category (mean): nuclear waste storage +238%, Olympic Games +157%, nuclear power +120%, IT +73%, rail/tunnels ≈ +39%, solar ≈ +1%.
+- **Immediately complicate it.** Chapman (2024, 2025, *PMJ* / *IJPM*) analysed 125 rail and 280 road projects in Denmark, Norway and Sweden, 2008–2022, and found them typically delivered "on cost, over time" — Swedish road projects showed typical cost overrun of **2.7%**, rail a **1.8% underrun**. Base rates are not universal constants; they are properties of a governance regime.
+
+---
+
+## Check yourself
+
+1. A vendor tells you 71% of software projects fail. What would you need to know before repeating that number?
+2. Your project finished 20% over budget and the client renewed for three more years. Did it succeed?
+3. Give me a project that was an efficiency success and a business failure. Now the reverse.
+4. If the iron triangle is inadequate, why is it still on every slide deck in the industry?
+
+---
+
+## Attack this claim
+
+> "Because 99.5% of large projects miss at least one of budget, schedule, or benefits, the discipline of project management has essentially failed."
+
+Have students attack it. Available lines: selection effects in the database; the counterfactual is unmeasured (how bad would they be *without* PM?); "benefits shortfall" depends on who wrote the business case; the Scandinavian data contradicts universality; the base rate mixes project types with wildly different uncertainty.
+
+---
+
+## Somewhere else entirely
+
+**Cooking a dinner party vs. running a restaurant.** The dinner party is a project — fixed date, unique menu, guests who will remember it. The restaurant is operations. Notice that a chef who runs a restaurant well can still fail at a dinner party, because the failure modes are different: the restaurant's enemy is variance, the dinner party's enemy is the thing you forgot to buy.
+
+---
+
+## Studio
+
+Give teams four one-paragraph project vignettes (a vaccine rollout, a kitchen renovation, a university ERP migration, a research grant). Teams score each on the five success dimensions and must produce **one dimension where the project scored high and one where it scored low**. Debrief on disagreements — the disagreements *are* the lesson.
+
+---
+
+## Next
+
+- Notes: [Week 1 on the course site](../weeks/week-01.qmd)
+- AI lab: [Lab 1](../labs/lab-01.qmd)
+- Reading: Larson Ch. 1

@@ -1,0 +1,235 @@
+---
+title: "Syllabus"
+subtitle: "IMSE 456/656 · Project Management · Fall 2026"
+---
+
+## Basic information
+
+::: {.week-meta}
+<dl>
+<dt>Course</dt><dd>IMSE 456/656 — Project Management (3 credits)</dd>
+<dt>Term</dt><dd>Fall 2026 · 25 August – 10 December 2026</dd>
+<dt>Meets</dt><dd>Tuesday &amp; Thursday, 3:30 – 4:45 p.m.</dd>
+<dt>Room</dt><dd>Ag Hill Center, Room 240</dd>
+<dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
+<dt>Office</dt><dd>[office location]</dd>
+<dt>Office hours</dt><dd>[days and times]</dd>
+<dt>Email</dt><dd>harun.pirim@ndsu.edu</dd>
+</dl>
+:::
+
+::: {.callout-note}
+## Credit hour definition
+Using the federal definition of a credit hour, one semester credit hour is equivalent to not
+less than 50 minutes of classroom or direct faculty instruction and a minimum of two hours
+out-of-class student work each week for approximately 15 weeks for one semester. See the
+[NDSU academic credit policy](https://catalog.ndsu.edu/academic-policies/academic-credit/).
+:::
+
+## Catalog description
+
+[Paste the current catalog description for IMSE 456/656 verbatim — NDSU Policy 331.1 requires
+the syllabus description to match the catalog.]
+
+## Course description
+
+Project management as it is actually practiced: the quantitative core (work breakdown, critical
+path method, PERT, earned value management) alongside adaptive delivery (Scrum, Kanban, flow
+metrics), with hybrid approaches treated as the default real-world case rather than a compromise.
+The course argues from empirical evidence rather than from convention — students learn to
+distinguish a base rate from a vendor statistic and to say what a project-success number is
+actually measuring.
+
+Running through every week is an AI layer. Students progress from grounded prompting, through
+model-generated artifacts verified by code they write themselves, to specifying and building
+agents that maintain live project artifacts — and to governing those agents, which is the
+project-management problem the textbooks have not caught up with yet.
+
+## Course objectives
+
+By the end of the course a student can:
+
+1. Decide which delivery approach fits a given project and defend the choice against a specific alternative.
+2. Build and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, crash analysis, EVM report.
+3. Run the adaptive artifacts: product backlog, sprint mechanics, cumulative flow diagram, Little's Law.
+4. Read the evidence critically — distinguish a base rate from a vendor statistic.
+5. Diagnose a failing project and propose interventions ranked by expected effect, not by convention.
+6. Specify, build, and govern an AI agent that maintains a live project artifact, and state what it got wrong.
+
+### Additional expectations for students enrolled in IMSE 656
+
+Students enrolled under the graduate number complete the same components at a
+higher level of expectation:
+
+- **Conceptual assignments** include an additional short-answer section requiring
+  students to ground a claim in one of the primary sources on the [source shelf](ai.qmd#the-source-shelf).
+- **Final project** must include a *methods justification* section: the choice of
+  delivery approach, estimating method, and control mechanism defended against the
+  empirical literature, with citations.
+- **Final presentation** includes a five-minute defence against a challenge from the
+  instructor drawn from the counter-evidence for the position taken.
+
+## Student learning outcomes and ABET contribution
+
+Upon successful completion, students demonstrate progress toward the IME program outcomes
+based on ABET Criterion 3.
+
+| # | Outcome | Contribution |
+|:--|:--|:--|
+| 1 | Identify, formulate, and solve complex engineering problems | high |
+| 2 | Apply engineering design to produce solutions meeting specified needs | average |
+| 3 | Communicate effectively with a range of audiences | very high |
+| 4 | Recognize ethical and professional responsibilities; make informed judgments | high |
+| 5 | Function effectively on a team | very high |
+| 6 | Develop and conduct experimentation; analyze and interpret data | average |
+| 7 | Acquire and apply new knowledge using appropriate learning strategies | very high |
+
+: {tbl-colwidths="[6,64,30]"}
+
+::: {.callout-warning}
+## To confirm before publication
+The contribution levels above are a proposal based on the course's actual activities
+(team project with an industry partner, heavy written and oral communication, quantitative
+analysis). Adjust to match the IME program's assessment plan before this syllabus is final.
+:::
+
+## Required student resources
+
+- **Optional textbook:** Larson &amp; Gray, *Project Management: The Managerial Process*,
+  2024 Release, McGraw Hill. Chapter readings are listed weekly. Everything assessed
+  is contained in the lecture notes on this site.
+- **Course site:** <https://harunpirim.github.io/IMSE456> — notes, slides, recordings, labs.
+- **Software:** a current LLM assistant (Claude, ChatGPT, or Gemini — free tiers are
+  sufficient), a spreadsheet application, and Python via
+  [Google Colab](https://colab.research.google.com) (no local install required).
+  Scheduling exercises use [ProjectLibre](https://www.projectlibre.com/) or
+  [Taiga](https://www.taiga.io/), both free.
+- **Calculator** for the midterm. Programmable calculators and phones are not permitted.
+
+## Course schedule
+
+The full week-by-week schedule, with readings and due dates, is maintained on the
+[Schedule](schedule.qmd) page and is the authoritative version. It updates during the term.
+
+## Evaluation procedures and criteria
+
+| Component | Weight | What it is |
+|:--|--:|:--|
+| Conceptual assignments (MCQ) | 25% | Eight online multiple-choice sets, one per content block, on terms, theory, and the reasoning behind the methods. Auto-graded, lowest score dropped. |
+| Studio assignments | 25% | Ten team deliverables produced in and after the Thursday studio sessions: WBS, CPM analysis, crash sequence, estimate comparison, EVM dashboard, risk register, flow simulation, approach defence, stakeholder map, case diagnosis. |
+| Midterm examination | 20% | **Thursday 15 October, in class.** Closed notes, closed book, no computers or phones. Covers Weeks 1–7. |
+| Final project | 30% | A semester-long project conducted with an industry partner. Four milestones plus a final report and presentation. See [Final Project](project.qmd). |
+
+: {tbl-colwidths="[34,10,56]"}
+
+### Grading scale
+
+| Grade | Percentage of total |
+|:--|:--|
+| A | ≥ 90.00% |
+| B | 80.00 – 89.99% |
+| C | 70.00 – 79.99% |
+| D | 60.00 – 69.99% |
+| F | < 60.00% |
+
+: {tbl-colwidths="[20,80]"}
+
+### Late work
+
+Conceptual assignments close at the posted time and do not reopen; the lowest score is
+dropped to absorb one missed set. Studio assignments lose 10% per calendar day, to a floor
+of 50%, for five days, after which they are not accepted. Final project milestones are
+firm because a partner organization is waiting on them — contact the instructor **before**
+the deadline if a milestone is at risk.
+
+### Feedback turnaround
+
+Conceptual assignments are graded automatically and available immediately. Studio
+assignments are returned within seven days. Project milestones are returned within
+fourteen days.
+
+## Attendance
+
+According to [NDSU Policy 333](https://www.ndsu.edu/fileadmin/policy/333.pdf), attendance
+in classes is expected. Students should contact the instructor as soon as possible to notify
+them of any extended illness or family emergency that might warrant an extension on assignments.
+
+Attendance is not directly a component of the course grade. However, studio assignments are
+produced in teams during Thursday sessions, and a student who is absent contributes nothing
+to that deliverable — attendance is therefore consequential in practice even though it is
+not scored.
+
+Veterans and student service members with special circumstances or who are activated are
+encouraged to notify the instructor as soon as possible and are encouraged to provide
+Activation Orders.
+
+## Americans with Disabilities Act statement
+
+Any students with disabilities or other special needs, who need special accommodations in
+this course, are invited to share these concerns or requests with the instructor and contact
+the [Center for Accessibility and Disability Services](https://www.ndsu.edu/accessibility-disability)
+as soon as possible.
+
+## Family Educational Rights and Privacy Act (FERPA) statement
+
+Your personally identifiable information and educational records as they relate to this course
+are subject to FERPA.
+
+This course maintains a public website. **No student names, grades, submitted work, or
+recordings of student voices are published there.** All graded material and individual
+feedback are handled through Blackboard.
+
+## Academic honesty
+
+The academic community is operated on the basis of honesty, integrity, and fair play. NDSU
+Policy 335: Code of Academic Responsibility and Conduct applies to cases in which cheating,
+plagiarism, or other academic misconduct have occurred in an instructional context. Students
+found guilty of academic misconduct are subject to penalties, up to and possibly including
+suspension and/or expulsion. Student academic misconduct records are maintained by the Office
+of Registration and Records. Informational resources about academic honesty for students and
+instructional staff members can be found at [www.ndsu.edu/academichonesty](https://www.ndsu.edu/academichonesty).
+
+## Artificial intelligence policy
+
+AI use is **expected**, not merely permitted. Much of this course is about using these tools
+well. Three rules make that workable:
+
+1. **Label it.** Any submitted artifact that an AI system produced or substantially drafted
+   says so, names the tool, and includes the prompt or a link to the conversation.
+2. **Verify it.** Every quantitative result generated by a model must be accompanied by the
+   code or hand calculation that checks it. A number you cannot verify is a number you did
+   not produce. This is graded.
+3. **Own it.** You are responsible for everything you submit, including the parts a model
+   wrote. "The AI said so" is not a defence, in this course or in a project review.
+
+The **midterm is the exception**: it is closed-book, closed-notes, and computer-free,
+because the reasoning it tests is the reasoning you need when the tool is unavailable or wrong.
+
+## Code of ethics
+
+Students are expected to be familiar with the
+[NSPE Code of Ethics for Engineers](https://www.nspe.org/resources/ethics/code-ethics).
+Projects conducted with industry partners raise real questions of confidentiality,
+scope honesty, and reporting integrity; these are discussed in Week 12.
+
+## General policies
+
+NDSU is committed to following the General Policies detailed in the NDSU Bulletin relating to
+Student Behavior, Attendance, Privacy of Student Records, Equal Opportunity, Sexual Assault,
+Sexual Harassment, Consensual Relationships, Use of Alcohol and Other Drugs, and Campus Security.
+
+## What this course deliberately does not cover
+
+Stating exclusions explicitly is more useful than pretending to comprehensiveness:
+
+- **PMP exam drilling.** The exam changes; the reasoning does not. The credential is
+  mentioned, not taught to.
+- **Tool tutorials** (MS Project, Jira, Primavera). One is assigned as homework
+  infrastructure; no lecture time goes to menus.
+- **The full process catalogue of PMBOK 8.** You learn the *shape* of a process standard
+  and how to look things up. Memorizing inputs-tools-outputs is the lowest-value activity
+  in project-management education.
+- **Scaling frameworks in depth** (SAFe, LeSS, Nexus). One segment on why they exist and
+  why the evidence for them is thin.
+- **Six Sigma and lean manufacturing.** Adjacent field, separate course.
+- **Contract law.** Contract *types* and incentive structure are covered; the law is not.

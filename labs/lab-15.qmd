@@ -1,0 +1,39 @@
+---
+title: "Lab 15 · Adjudicate a contested claim without letting the model pick a side"
+subtitle: "Rung 4 · Governing an automated collaborator"
+week: 15
+release: "2026-11-30"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>15 — <a href='../weeks/week-15.qmd'>Case part 2 and the evidence adjudication panel</a></dd>
+<dt>Rung</dt><dd>Agent in the loop</dd>
+</dl>
+:::
+
+## The task
+
+Take one of the three contested claims and have an agent build the strongest case for **each** side from primary sources, then refuse to conclude.
+
+**Deliverable.** Both cases, and your own adjudication — including the specific evidence that would change your mind.
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

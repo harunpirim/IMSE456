@@ -1,0 +1,114 @@
+---
+title: "Week 5 · Schedule I — networks, CPM, float"
+week: 5
+release: "2026-09-21"
+dates: "22 and 24 September"
+reading: "Larson Ch. 6"
+session-a: "CPM: networks, forward and backward passes, total and free float"
+session-b: "Studio — CPM by hand, then hidden-duration sensitivity"
+video:
+  provider: none
+  id: ""
+slides: true
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>22 &amp; 24 September</dd>
+<dt>Tuesday</dt><dd>CPM: networks, forward and backward passes, total and free float</dd>
+<dt>Thursday</dt><dd>Studio — CPM by hand, then hidden-duration sensitivity</dd>
+<dt>Reading</dt><dd>Larson Ch. 6</dd>
+<dt>Milestone</dt><dd>M3 — see the <a href='../syllabus.qmd'>syllabus</a></dd>
+<dt>Due</dt><dd>SA5 · CPM analysis + sensitivity — <span class='tabular'>2026-09-27</span><br>CA3 · Concepts — Week 5 — <span class='tabular'>2026-09-27</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Learning objectives
+
+- Construct an activity-on-node network from a dependency table.
+- Execute forward and backward passes; compute total and free float.
+- Identify the critical path and explain why "critical" does not mean "important."
+
+## Core content
+
+**Dependency types.** Finish-to-start (default), start-to-start, finish-to-finish, start-to-finish (rare, usually a modelling error). Lead = negative lag; lag = imposed delay (concrete curing). Mandatory (hard logic) vs. discretionary (preferred practice) vs. external.
+
+**The passes.**
+
+- Forward: ES(j) = max{EF(i) : i ∈ predecessors}, EF(j) = ES(j) + d(j). Project duration = max EF.
+- Backward: LF(i) = min{LS(j) : j ∈ successors}, LS(i) = LF(i) − d(i).
+- **Total float** TF = LS − ES = LF − EF. Slack before the *project* end date slips.
+- **Free float** FF = min{ES(successors)} − EF. Slack before any *successor* slips.
+- Critical path: the longest path; activities with TF = 0.
+
+## Worked example — put this on the board
+
+| Activity | Duration (days) | Predecessors |
+|---|---|---|
+| A | 3 | — |
+| B | 4 | — |
+| C | 2 | A |
+| D | 5 | A, B |
+| E | 3 | C |
+| F | 4 | D |
+| G | 6 | B |
+| H | 2 | E, F, G |
+
+**Solution (verified):**
+
+| Act | Dur | ES | EF | LS | LF | TF | FF | Critical |
+|---|---|---|---|---|---|---|---|---|
+| A | 3 | 0 | 3 | 1 | 4 | 1 | 0 | |
+| B | 4 | 0 | 4 | 0 | 4 | 0 | 0 | ★ |
+| C | 2 | 3 | 5 | 8 | 10 | 5 | 0 | |
+| D | 5 | 4 | 9 | 4 | 9 | 0 | 0 | ★ |
+| E | 3 | 5 | 8 | 10 | 13 | 5 | 5 | |
+| F | 4 | 9 | 13 | 9 | 13 | 0 | 0 | ★ |
+| G | 6 | 4 | 10 | 7 | 13 | 3 | 3 | |
+| H | 2 | 13 | 15 | 13 | 15 | 0 | 0 | ★ |
+
+Path lengths: A-C-E-H = 10, A-D-F-H = 14, B-D-F-H = **15**, B-G-H = 12.
+**Critical path: B–D–F–H, 15 days.**
+
+**Three teaching points from this specific table.**
+
+1. **A has TF = 1 but FF = 0.** Delay A by one day and no successor moves *and* the project doesn't move. Delay it by two and D slips. Students conflate the two floats constantly; this row separates them.
+2. **A-D-F-H is 14 days — one day of float on the whole path.** Near-critical paths are where projects actually fail, because monitoring attention follows the CP label.
+3. **The CP is a property of the estimates, not of the work.** Change D from 5 to 3 and the critical path becomes B-G-H. Nothing about the project changed except a number in a spreadsheet.
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. Give me an activity with total float but zero free float. What does that combination physically mean?
+2. If I shorten a non-critical activity, what happens to project duration?
+3. Two paths are both 15 days. How many critical paths does the project have, and what does that do to your risk?
+4. Why does the critical path change during execution even when nothing goes wrong?
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "Managing the critical path is the core of schedule management."
+
+Attack lines: near-critical paths carry most of the realized risk; the CP assumes deterministic durations, which is false; resource constraints (Week 6) can make a non-critical activity the real bottleneck; CPM has no mechanism for the fact that people expand work to fill available float (Parkinson).
+:::
+
+::: {.roommate}
+### Roommate link
+
+**Cooking Thanksgiving dinner.** The turkey is the critical path. The cranberry sauce has enormous float. Every home cook knows intuitively that you start the turkey first and that a five-minute turkey delay is a five-minute dinner delay, while a five-minute cranberry delay is free — that's total float without free float, discovered without a textbook.
+:::
+
+## In-class activity (30 min)
+
+Give the same network but with one duration hidden. Teams must determine what values of that duration would change the critical path. This converts CPM from arithmetic into sensitivity analysis in one step.
+
+
+## This week's AI lab
+
+[Lab 5 — Make the model compute a network, then verify every number](../labs/lab-05.qmd)
+
+[Slides for this week](../slides/week-05.qmd)

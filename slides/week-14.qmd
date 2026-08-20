@@ -1,0 +1,12 @@
+---
+title: "Week 14 — Synthesis — diagnosing a failing project"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-11-23"
+---
+
+## Next
+
+- Notes: [Week 14 on the course site](../weeks/week-14.qmd)
+- AI lab: [Lab 14](../labs/lab-14.qmd)
+- Reading: Larson Ch. 14

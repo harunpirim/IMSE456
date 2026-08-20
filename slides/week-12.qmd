@@ -1,0 +1,77 @@
+---
+title: "Week 12 — Hybrid, tailoring, and scaling"
+subtitle: "IMSE 456/656 · Project Management"
+author: Harun Pirim
+date: "2026-11-09"
+---
+
+## Where we are going
+
+- Design a hybrid approach for a specific project and justify each borrowed element.
+- Evaluate the evidence for hybrid as a first-class choice rather than a compromise.
+- Explain why scaling frameworks exist and what the evidence for them is.
+
+---
+
+## The frame
+
+| Pattern | Structure | Fits |
+|---|---|---|
+| Agile-in-a-stage-gate | Gates for funding/governance; sprints inside each stage | Regulated industries, NPD |
+| Predictive frame, adaptive core | Fixed milestones and budget; adaptive scope within | Contracted software delivery |
+| Water-Scrum-Fall | Up-front requirements + agile build + staged release | Common in practice; usually accidental, rarely designed |
+| Front-loaded discovery | Adaptive discovery phase → predictive execution | Construction, hardware |
+
+---
+
+## The frame
+
+| Factor | Push toward predictive | Push toward adaptive |
+|---|---|---|
+| Requirements volatility | Low | High |
+| Cost of late change | Very high (physical/regulated) | Low (software/digital) |
+| Incremental value delivery | Impossible (half a bridge) | Natural |
+| Contract/regulatory gates | Present | Absent |
+| Team co-location & empowerment | Not required | Required |
+| Technology novelty | Known | Novel |
+| Stakeholder availability | Low | High (PO must be present) |
+
+---
+
+## The argument
+
+- Hybrid is the modal case, not the fallback
+- Common hybrid patterns:
+- Tailoring, formally
+- Scaling frameworks (30 minutes, not a module)
+
+---
+
+## Check yourself
+
+1. Design a hybrid for a hospital IT system replacement. Justify each element you borrowed and each you rejected.
+2. Hybrid is 52% of projects. Is that evidence it works, or evidence organizations can't commit?
+3. Agbejule et al. found traditional-leaning hybrid scored highest. What would explain that, and what would falsify your explanation?
+4. Your organization adopted SAFe 18 months ago. What single question tells you whether anything actually changed?
+
+---
+
+## Attack this claim
+
+> "Hybrid approaches give you the benefits of both agile and predictive."
+
+Attack: they can equally give you the overhead of both — two planning systems, two reporting cadences, and a team that satisfies neither. The Gemino evidence supports hybrid's *outcomes*, but says nothing about the cost of running two systems.
+
+---
+
+## Studio
+
+Four project briefs of sharply different character (a satellite launch, a mobile banking app, a hospital records migration, a bridge retrofit). Teams design an approach for each using the tailoring table, then **defend one choice against a team assigned to attack it**.
+
+---
+
+## Next
+
+- Notes: [Week 12 on the course site](../weeks/week-12.qmd)
+- AI lab: [Lab 12](../labs/lab-12.qmd)
+- Reading: Larson Ch. 15–16

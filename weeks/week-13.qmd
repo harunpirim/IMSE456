@@ -1,0 +1,88 @@
+---
+title: "Week 13 · People, stakeholders, and governance"
+week: 13
+release: "2026-11-16"
+dates: "17 and 19 November"
+reading: "Larson Ch. 3, 10–12"
+session-a: "People, stakeholders, sponsorship, organizational structure"
+session-b: "Studio — stakeholder map and sponsor role-play"
+video:
+  provider: none
+  id: ""
+slides: true
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>17 &amp; 19 November</dd>
+<dt>Tuesday</dt><dd>People, stakeholders, sponsorship, organizational structure</dd>
+<dt>Thursday</dt><dd>Studio — stakeholder map and sponsor role-play</dd>
+<dt>Reading</dt><dd>Larson Ch. 3, 10–12</dd>
+<dt>Due</dt><dd>SA12 · Stakeholder map + salience overlay — <span class='tabular'>2026-11-22</span><br>CA8 · Concepts — Weeks 12–13 — <span class='tabular'>2026-11-22</span><br>FP3 · Risk register + EVM status report — <span class='tabular'>2026-11-20</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Learning objectives
+
+- Perform a stakeholder analysis and build an engagement strategy differentiated by stakeholder position.
+- State the evidence on top-management support and explain why it outranks methodology.
+- Describe the project manager's authority problem and the structures that resolve it.
+
+## Core content
+
+**Lead with the strongest finding in the field.** Young & Jordan (2008) provide evidence that **top management support is the most important critical success factor — not simply one among many**, and that conventional technical and project-management advice has less impact on project success than previously assumed. Young & Poon (2013, *IJPM*) replicated with fuzzy-set QCA across 15 cases: top management support was **much more necessary than any other success factor, and sometimes sufficient**. Their conclusion is deliberately provocative — that emphasis on project methodologies "may be misdirecting effort."
+
+Zwikael (2008, *IJMPB*, 700 project managers and their supervisors across seven industries and three countries) confirms the correlation and, more usefully, decomposes *which* support practices matter by industry. Ahmed et al. (2014, *Quality & Quantity*, n = 208) found the **"provide resources"** and **"power"** dimensions carry the significant effect — support that is verbal but not resourced does nothing.
+
+The honest caveat to give students: much of this literature is cross-sectional and self-reported, and "top management support" is partly endogenous — executives support projects that look like they'll succeed. Ask the class how they would design a study to break that endogeneity.
+
+**Stakeholder analysis.** Power/interest grid (manage closely / keep satisfied / keep informed / monitor); salience model (power, legitimacy, urgency). Blaskovics et al. (2026, *SSHO*, LASSO regression on **3,153 projects** from 70 Hungarian companies) rank the top CSFs as: project manager competence and experience, precise definition of user requirements, effective stakeholder management, continuous monitoring and control, and a well-prepared coordinated team.
+
+**Organizational structure and the PM's authority problem.**
+
+| Structure | PM authority | Resource control | Failure mode |
+|---|---|---|---|
+| Functional | Little to none | Functional manager | PM is a coordinator with no leverage |
+| Weak matrix | Limited | Functional manager | Responsibility without authority |
+| Balanced matrix | Moderate | Shared | Two bosses, ambiguous escalation |
+| Strong matrix | Moderate–high | PM | Functional skill erosion |
+| Projectized | High | PM | Resource inefficiency between projects |
+
+The teaching point: most PM advice implicitly assumes a strong matrix. In a functional organization, the same advice is malpractice — the PM's actual job there is influence and coalition-building, not control.
+
+**Team development.** Tuckman (forming/storming/norming/performing/adjourning) is memorable and empirically weak — say so, and use it as a vocabulary rather than a model. Stronger ground: Brooks's Law (adding people to a late software project makes it later) has a clear mechanism — communication paths grow as n(n−1)/2 and ramp-up consumes existing staff.
+
+**Closure.** Administrative closure, contract closure, lessons learned, benefits realization. The uncomfortable fact worth stating: most organizations run lessons-learned sessions and almost none feed them into the next project's estimates. **The estimate is where a lesson becomes real.** Everything else is a document.
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. If top management support is the dominant success factor, what is the rational allocation of a new PM's first week?
+2. Your sponsor says "you have my full support" and declines to reassign a key engineer. What kind of support is that?
+3. You're in a weak matrix and a functional manager pulls your best developer. What are your actual options?
+4. Where does a lesson learned have to land to change anything?
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "Project success depends primarily on the competence of the project manager."
+
+Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Have students identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
+:::
+
+::: {.roommate}
+### Roommate link
+
+**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask students what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
+:::
+
+
+## This week's AI lab
+
+[Lab 13 — Governance: what happens when the agent is wrong in public](../labs/lab-13.qmd)
+
+[Slides for this week](../slides/week-13.qmd)

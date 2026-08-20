@@ -1,0 +1,135 @@
+---
+title: "AI Studio"
+subtitle: "The ALTER system, the source shelf, and the four-rung agent ladder"
+---
+
+Project management is one of the first disciplines where the routine artifacts — charters,
+work breakdowns, risk registers, status reports — can be drafted by a machine in seconds.
+That does not make the discipline easier. It moves the difficulty from *production* to
+*judgement*: someone still has to know whether the WBS is complete, whether the estimate is
+defensible, and whether the status report is telling the truth.
+
+This course teaches that judgement by making you use the tools constantly and hold them to
+account every time.
+
+## The ALTER system
+
+Five roles, five different jobs. The framework is Sandeep Swadia's "University in a Box"
+from *How To Become Dangerously Self-Educated (with AI)*; every week's notes carry all five.
+
+| Role | Its job | Where you meet it |
+|:--|:--|:--|
+| **Adviser** | Sets destination, baseline, sequencing, cut list | The [syllabus](syllabus.qmd) — including what this course deliberately does not cover |
+| **Librarian** | Curates credible sources, defends against distraction | The source shelf below, and per-week readings |
+| **Tutor** | Asks one question at a time, finds the gap, does not lecture | "Tutor check" in every week's notes; the per-week prompts in each lab |
+| **Editor** | Challenges logic, finds weak arguments, cuts repetition | "Editor challenge" — a defensible-sounding claim you have to attack |
+| **Roommate** | Brings perspective from an unrelated field | "Roommate link" — a cross-domain analogy that transfers structure, not vocabulary |
+
+: {tbl-colwidths="[14,44,42]"}
+
+### Tutor
+
+```text
+Be my tutor on [TOPIC] in project management. Ask me one question at a
+time. Don't lecture me. Find the gap in my understanding. Be precise.
+
+When I get something wrong, don't correct me immediately — ask a follow-up
+that makes me find the error myself. Only explain after I've tried twice.
+
+Two commands I'll use: "teach me" means give me the explanation now; "test
+me" means switch to harder questions on the same topic.
+```
+
+For exam preparation, the retrieval variant — mixed questions drawn from *all* prior weeks,
+not the current one. Mixing is what makes retrieval practice work.
+
+### Editor
+
+```text
+Attack what I just wrote. Find the weakest link in the argument, the claim
+that isn't supported, and the place where I've confused a definition with
+a conclusion. Be specific and be harsh. Don't tell me what's good about it.
+```
+
+### Roommate
+
+```text
+I've just learned [CONCEPT] in project management. You work in a completely
+different field. Where does this same structure show up in your world, and
+what does your version know that mine doesn't?
+```
+
+## The source shelf
+
+Everything else is optional reading. Load these into a single grounded workspace and make
+the assistant answer **from the shelf**, not from the open web.
+
+**Standards** — look at them; do not memorize them.
+
+- PMI, *A Guide to the Project Management Body of Knowledge (PMBOK Guide) — Eighth Edition*, November 2025 — <https://www.pmi.org/standards/pmbok>
+- Schwaber & Sutherland, *The Scrum Guide*, November 2020 — <https://scrumguides.org>
+- Beck et al., *Manifesto for Agile Software Development*, 2001 — <https://agilemanifesto.org>
+- ISO 21502:2020, *Project, programme and portfolio management — Guidance on project management*
+
+**Empirical anchors** — the papers this course actually argues from.
+
+- Gemino, Horner Reich & Serrador (2021), "Agile, Traditional, and Hybrid Approaches to Project Success", *Project Management Journal*. 477 projects.
+- Serrador & Pinto (2015), "Does Agile work? — A quantitative analysis of agile project success", *IJPM*. 1,002 projects.
+- Koch et al. (2023), "The affective, behavioural and cognitive outcomes of agile project management: A preliminary meta-analysis", *JOOP*. Pre-registered; k = 41, N = 73,825.
+- Young & Jordan (2008), "Top management support: mantra or necessity?"; Young & Poon (2013), *IJPM*.
+- Batselier & Vanhoucke (2015), "Empirical Evaluation of Earned Value Management Forecasting Accuracy", *JCEM*. 51 real projects.
+- Flyvbjerg (2021), "Top Ten Behavioral Biases in Project Management", *PMJ*. Base rates from 2,062 projects.
+- Love, Ika et al. (2019), "The cost performance of transportation projects: The fallacy of the Planning Fallacy account", *TR Part A*. The counter-case.
+- Eveleens & Verhoef (2010), "The Rise and Fall of the Chaos Report Figures", *IEEE Software* 27(1):30–36.
+
+::: {.callout-important}
+## The two failure modes
+**The model agrees with you.** Every prompt above is written to make the assistant adversarial,
+because the default behaviour is accommodation. If your Editor pass comes back mostly positive,
+the prompt didn't take — re-run it with *"you were too generous; find three more problems and be harsher."*
+
+**The model invents a citation.** Ask for a source and you will often get a plausible-looking one
+that does not exist, or a real paper with the wrong finding attached. Anything you are going to
+put in a report, verify against the actual document. This is the entire reason the Librarian is a
+separate step rather than something you do inline.
+:::
+
+## The four-rung ladder
+
+The labs escalate deliberately. Building an agent in Week 2 produces an agent that generates
+confident nonsense you cannot evaluate; the first third of the course is spent learning to
+evaluate, which is what makes the agent worth building later.
+
+| Weeks | Rung | What you do | What it teaches |
+|:--|:--|:--|:--|
+| 1–3 | **Grounded prompting** | Load the shelf; make the model answer from it; catch it when it reconstructs a paper from memory. | Evaluation before generation. |
+| 4–7 | **Tool-calling** | The model produces the WBS, the network, the estimates — then you write the code that checks its work. | The model proposes; the code adjudicates. Kills the plausible-Gantt-chart failure mode. |
+| 9–12 | **Skills and agents** | Package a repeatable job — EVM reporter, risk-register maintainer, hostile reviewer — with a written spec and acceptance tests you wrote first. | Specification *is* the skill. Writing acceptance criteria for an agent is requirements engineering. |
+| 13–16 | **Agent in the loop** | Your final project runs an agent that maintains a live artifact. The report says what it got wrong and how you caught it. | Governing an automated collaborator — the part no PM textbook covers yet. |
+
+: {tbl-colwidths="[10,20,36,34]"}
+
+## The weekly loop
+
+Roughly 60–90 minutes per module, outside class.
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+**Steps 4 and 5 do the work.** The Tutor finds gaps; producing something and having it
+attacked is what closes them. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Course policy on AI
+
+Summarised here, authoritative in the [syllabus](syllabus.qmd#artificial-intelligence-policy):
+**label it, verify it, own it.** Every quantitative result a model generates is submitted with
+the code or hand calculation that checks it — that check is graded. The midterm is the one
+place the tools are set aside, because the reasoning it tests is the reasoning you need when
+the tool is unavailable or wrong.

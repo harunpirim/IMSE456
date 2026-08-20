@@ -1,0 +1,69 @@
+/*-- scss:defaults --*/
+// IMSE 456 — pine + slate, tuned to read as a sibling of the IMSE 774 site
+$primary:   #0F5A4B !default;
+$secondary: #5C6A66 !default;
+$body-color: #1A2022 !default;
+$link-color: #0F5A4B !default;
+
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !default;
+$font-family-monospace: "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, monospace !default;
+$headings-font-family: "Spectral", Georgia, "Times New Roman", serif !default;
+$font-size-root: 17px !default;
+$toc-color: #5C6A66 !default;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+h1, h2, h3 { letter-spacing: -0.01em; text-wrap: balance; }
+h4, h5 { font-family: $font-family-sans-serif; font-weight: 700; }
+.navbar-brand { font-family: $headings-font-family; font-weight: 600; letter-spacing: 0.01em; }
+
+/* Week header block */
+.week-meta {
+  border: 1px solid #D5DBD7;
+  border-left: 3px solid $primary;
+  border-radius: 0 4px 4px 0;
+  background: #F6F8F7;
+  padding: 0.9rem 1.2rem;
+  margin: 0 0 1.6rem;
+  font-size: 0.94rem;
+}
+.week-meta dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.1rem; }
+.week-meta dt { font-family: $font-family-monospace; font-size: 0.74rem; letter-spacing: 0.09em;
+                text-transform: uppercase; color: $secondary; font-weight: 500; padding-top: 0.18rem; }
+.week-meta dd { margin: 0; }
+
+/* release-state pills, used on the schedule */
+.pill { display: inline-block; font-family: $font-family-monospace; font-size: 0.68rem;
+        letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.45rem;
+        border-radius: 2px; border: 1px solid transparent; white-space: nowrap; }
+.pill-live { background: #E3EFEA; color: $primary; border-color: $primary; }
+.pill-soon { background: #F4EBD5; color: #8F6608; border-color: #8F6608; }
+.pill-due  { background: #F5E3DF; color: #8E3628; border-color: #8E3628; }
+
+/* callouts used across week pages */
+.tutor, .editor, .roommate {
+  border-left: 3px solid; border-radius: 0 4px 4px 0;
+  padding: 0.9rem 1.2rem; margin: 1.4rem 0;
+}
+.tutor    { border-color: #0F5A4B; background: #F1F7F4; }
+.editor   { border-color: #8E3628; background: #FAF2F0; }
+.roommate { border-color: #8F6608; background: #FAF6EC; }
+.tutor > p:last-child, .editor > p:last-child, .roommate > p:last-child { margin-bottom: 0; }
+
+/* schedule table */
+table { font-size: 0.92rem; }
+table td, table th { vertical-align: top; }
+.tabular { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* gated stub */
+.gated { text-align: center; color: $secondary; border: 1px dashed #C6CEC9;
+         border-radius: 6px; padding: 2.4rem 1.5rem; margin: 2rem 0; background: #F8FAF9; }
+.gated .lock { font-family: $font-family-monospace; font-size: 0.76rem; letter-spacing: 0.12em;
+               text-transform: uppercase; color: #8F6608; display: block; margin-bottom: 0.5rem; }
+
+@media (prefers-color-scheme: dark) {
+  .week-meta { background: #171E1D; border-color: #2A3533; }
+  .gated { background: #161D1C; border-color: #2A3533; }
+  .tutor { background: #12211D; } .editor { background: #221614; } .roommate { background: #211D12; }
+}

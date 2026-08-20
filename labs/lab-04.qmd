@@ -1,0 +1,50 @@
+---
+title: "Lab 4 · Generate a WBS, then break it with code"
+subtitle: "Rung 2 · The model proposes, your code adjudicates"
+week: 4
+release: "2026-09-14"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>4 — <a href='../weeks/week-04.qmd'>Scope: charter, requirements, WBS</a></dd>
+<dt>Rung</dt><dd>Tool-calling</dd>
+</dl>
+:::
+
+## The task
+
+Have a model produce a three-level WBS for the conference brief. Then write Python (Colab is fine) that checks it mechanically: do children sum to parents, is every element a deliverable noun, are any two siblings overlapping, is the 100% rule satisfied?
+
+**Deliverable.** The WBS, your checking code, its output, and the omissions it caught. The near-universal omissions are project-management labour, contingency, post-event work, and sponsor management — did the model include them? Did your code notice?
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on scope management and work breakdown structures. One question
+at a time. Find the gap. I want to be tested specifically on the 100% rule
+and on whether I can explain scope creep as a control-system failure rather
+than as a discipline problem.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

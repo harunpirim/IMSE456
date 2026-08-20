@@ -1,0 +1,49 @@
+---
+title: "Lab 3 · Attack your own business case"
+subtitle: "Rung 1 · Grounded prompting"
+week: 3
+release: "2026-09-07"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>3 — <a href='../weeks/week-03.qmd'>Selection, business case, and the portfolio</a></dd>
+<dt>Rung</dt><dd>Grounded prompting</dd>
+</dl>
+:::
+
+## The task
+
+Have the model build an NPV/IRR business case for a project you invent, then run the [Editor prompt](../ai.qmd#editor) against it with the instruction to interrogate *who produced the forecast inputs and what their incentives were*.
+
+**Deliverable.** The case, the attack, and your judgement: which criticisms are real and which are the model manufacturing objections because you told it to.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on project selection and business cases. One question at a time,
+no lecturing. Make me compute, then make me distrust my own computation —
+push me on who produced the forecast inputs and what their incentives were.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

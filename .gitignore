@@ -1,0 +1,9 @@
+_site/
+.quarto/
+_freeze/
+*.html
+!index.html
+.DS_Store
+__pycache__/
+.venv/
+_build/

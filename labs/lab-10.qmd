@@ -1,0 +1,50 @@
+---
+title: "Lab 10 · An agent that will not let you be optimistic"
+subtitle: "Rung 3 · Package the job, write the acceptance tests"
+week: 10
+release: "2026-10-26"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>10 — <a href='../weeks/week-10.qmd'>Risk, uncertainty, and behavioural bias</a></dd>
+<dt>Rung</dt><dd>Skills and agents</dd>
+</dl>
+:::
+
+## The task
+
+Build a pre-mortem facilitator: an agent that refuses to accept a risk register until every entry has an owner, a trigger, and a named reference class.
+
+**Deliverable.** The agent's specification, the register it produced from your team's project, and a log of the three times it pushed back on you. If it never pushed back, your prompt is too accommodating — say so and fix it.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on project risk and behavioral bias in estimation. One question
+at a time. Make me distinguish cognitive bias from political bias — I keep
+collapsing them. Then present the strongest case AGAINST the planning
+fallacy account and make me respond to it.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

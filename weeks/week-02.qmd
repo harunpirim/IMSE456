@@ -1,0 +1,96 @@
+---
+title: "Week 2 · The standards landscape, and how to read a standard"
+week: 2
+release: "2026-08-31"
+dates: "1 and 3 September"
+reading: "Larson Ch. 2"
+session-a: "Standards: PMBOK 8, PRINCE2, ISO 21502, the Scrum Guide"
+session-b: "Studio — four teams × four standards → first-artifact comparison"
+video:
+  provider: none
+  id: ""
+slides: true
+lab: true
+---
+
+::: {.week-meta}
+<dl>
+<dt>Sessions</dt><dd>1 &amp; 3 September</dd>
+<dt>Tuesday</dt><dd>Standards: PMBOK 8, PRINCE2, ISO 21502, the Scrum Guide</dd>
+<dt>Thursday</dt><dd>Studio — four teams × four standards → first-artifact comparison</dd>
+<dt>Reading</dt><dd>Larson Ch. 2</dd>
+<dt>Due</dt><dd>SA2 · Standards artifact comparison — <span class='tabular'>2026-09-06</span><br>CA1 · Concepts — Weeks 1–2 — <span class='tabular'>2026-09-06</span></dd>
+</dl>
+:::
+
+<!-- VIDEO -->
+
+## Learning objectives
+
+- Describe what changed between PMBOK 7 and PMBOK 8, and infer what the change signals about the field.
+- Compare PMBOK, PRINCE2, ISO 21502 and the Scrum Guide on what each one actually claims to be.
+- Apply a tailoring heuristic instead of adopting a framework wholesale.
+
+## Core content
+
+**PMBOK Guide, Eighth Edition (PMI, November 2025).** The structure students need:
+
+- **Six principles** (down from twelve in the 7th edition): adopt a holistic view; focus on value; embed quality into processes and deliverables; be an accountable leader; integrate sustainability across all project areas; build an empowered culture. *Sustainability is genuinely new* — it did not appear as a principle in the 7th edition.
+- **Seven performance domains** (down from eight): Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk.
+- **40 processes**, reintroduced in a deliberately non-prescriptive form, consolidated down from the 49 in the 2022 *Process Groups: A Practice Guide*.
+- Expanded material on AI, PMO roles, and procurement.
+
+**The pedagogically interesting part is the oscillation.** PMBOK 6 (2017) was process-heavy — 49 processes, five process groups, ten knowledge areas. PMBOK 7 (2021) threw the processes out and went principle-based. PMBOK 8 (2025) brought processes back, but framed as non-prescriptive. Ask students what that trajectory tells them: a standards body discovered that pure principles gave practitioners nothing to *do*, and pure processes gave them nothing to *think with*. The 8th edition is an attempt to hold both.
+
+**The other standards, in one line each:**
+
+| Standard | What it claims to be | Governance stance |
+|---|---|---|
+| PMBOK 8 (PMI, 2025) | A body of knowledge + a standard; descriptive | Tailoring is mandatory |
+| PRINCE2 (AXELOS/PeopleCert) | A *method* — prescriptive processes and roles | Strong: project board, stage boundaries, exception management |
+| ISO 21502:2020 | Guidance, deliberately generic and vendor-neutral | Light; designed to be referenced in contracts |
+| Scrum Guide (Nov 2020) | A *framework*, immutable, deliberately incomplete | None beyond the team; explicitly silent on portfolio |
+
+**The Scrum Guide is 13 pages and has not been revised since November 2020** — worth noting, because students assume standards churn. Scrum.org's own position is that the guide is updated rarely by design; the 2020 revision removed prescriptive language to make it "minimally sufficient," added the Product Goal, and made the three artifacts each carry one commitment.
+
+**Tailoring heuristic** (give students this and make them apply it every week thereafter):
+
+1. How much will requirements change between now and delivery? *(High → adaptive)*
+2. How expensive is a late change? *(Very expensive → predictive front-loading)*
+3. Can we deliver value in increments a stakeholder would actually accept? *(No → predictive)*
+4. Is there a regulatory or contractual gate that requires a frozen baseline? *(Yes → predictive at least at the gate)*
+5. Is the team co-located enough, and empowered enough, for self-management? *(No → the agile ceremonies will be theatre)*
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. PMBOK went from 49 processes → 0 → 40 in eight years. What problem was each swing solving?
+2. Which of these four documents could you actually sue someone over? Why does that matter?
+3. The Scrum Guide says Scrum is "purposefully incomplete." What is it incomplete *about*, and who fills the gap?
+4. Your organization mandates PRINCE2 and your team wants Scrum. Name the specific artifacts that collide.
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "Standards bodies revise their frameworks primarily to sell new certifications, not because knowledge advanced."
+
+This one is uncomfortable and partly defensible — make students separate the cynical claim (revenue motive) from the testable one (did practice improve?). Note that the Scrum Guide, which is free and unrevised for six years, is the counterexample that complicates the cynical reading.
+:::
+
+::: {.roommate}
+### Roommate link
+
+**Building codes vs. architectural style.** A building code is prescriptive, legally enforceable, and says nothing about whether the building is good. A style is a set of principles a designer can violate deliberately. PRINCE2 is closer to a code; PMBOK 7/8 is closer to a style guide; Scrum is closer to a poetic form — a sonnet is 14 lines, and the constraint is the point.
+:::
+
+## In-class activity (20 min)
+
+Hand out the same one-page project brief to four teams, each assigned a different standard. Each team produces the first three artifacts their standard would demand. Compare on the board. The visible divergence in *what gets written down first* is the lesson.
+
+
+## This week's AI lab
+
+[Lab 2 — Make four standards disagree](../labs/lab-02.qmd)
+
+[Slides for this week](../slides/week-02.qmd)

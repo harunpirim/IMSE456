@@ -1,0 +1,50 @@
+---
+title: "Lab 2 · Make four standards disagree"
+subtitle: "Rung 1 · Grounded prompting"
+week: 2
+release: "2026-08-31"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>2 — <a href='../weeks/week-02.qmd'>The standards landscape, and how to read a standard</a></dd>
+<dt>Rung</dt><dd>Grounded prompting</dd>
+</dl>
+:::
+
+## The task
+
+Give a grounded assistant the same one-page project brief four times, each time instructing it to respond strictly as PMBOK 8, PRINCE2, ISO 21502, or the Scrum Guide would, and to name the first three artifacts that standard demands.
+
+**Deliverable.** The four outputs, a comparison table of what each writes down first, and a paragraph naming one place the model **flattened** the standards into generic project-management advice. Quote the sentence.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on the project management standards landscape: PMBOK 8, PRINCE2,
+ISO 21502, and the Scrum Guide. One question at a time. Focus on what each
+document CLAIMS to be — method vs. framework vs. body of knowledge — because
+I keep flattening them into one thing. Be precise about editions and dates.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).

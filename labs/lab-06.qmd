@@ -1,0 +1,50 @@
+---
+title: "Lab 6 · Crash it, then find where the model stops thinking"
+subtitle: "Rung 2 · The model proposes, your code adjudicates"
+week: 6
+release: "2026-09-28"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Week</dt><dd>6 — <a href='../weeks/week-06.qmd'>Schedule II — PERT, crashing, resources, critical chain</a></dd>
+<dt>Rung</dt><dd>Tool-calling</dd>
+</dl>
+:::
+
+## The task
+
+Have the model produce a crash sequence to a target duration. Then write code that recomputes the critical path *after every crash step*.
+
+**Deliverable.** The model's sequence, your verified sequence, and the step at which they diverge. Models routinely keep crashing one path after a second critical path has emerged.
+
+## Tutor prompt for this week
+
+Run this before you read the notes, and again after.
+
+```text
+Be my tutor on PERT, crashing, and resource levelling. One question at a
+time. Make me do a crash sequence step by step and stop me the moment I
+crash something off the critical path. Then attack PERT's assumptions and
+make me explain merge bias in my own words.
+```
+
+## The weekly loop
+
+This lab is step 4–6 of the loop. The whole cycle:
+
+```text
+1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
+2. Read the module     — 20 min — notes + one primary source
+3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
+4. Write something     — 15 min — a plan, an argument, a worked problem
+5. EDITOR              — 10 min — attack what I wrote
+6. ROOMMATE            —  5 min — where else does this structure appear?
+7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+```
+
+Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+
+## Submission
+
+Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
