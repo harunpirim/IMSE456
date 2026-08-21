@@ -17,6 +17,7 @@ drafted by machines and audited by people.
 <dt>Term</dt><dd>25 August – 10 December 2026</dd>
 <dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
 <dt>Midterm</dt><dd>Thursday 15 October, in class</dd>
+<dt>Tools</dt><dd>ProjectLibre · Taiga · Smartsheet · Power BI · Python · Gemini — all free or licensed</dd>
 </dl>
 :::
 
@@ -24,8 +25,8 @@ drafted by machines and audited by people.
 
 - [Syllabus](syllabus.qmd) — policies, grading, and what this course does not cover
 - [Schedule](schedule.qmd) — all sixteen weeks, with what is live and what opens when
-- [AI Studio](ai.qmd) — the ALTER system and the four-rung agent ladder
-- [Final Project](project.qmd) — the company-partnered project, 30% of the grade
+- [AI Studio](ai.qmd) — Gemini, Antigravity, the source shelf and the study loop
+- [Final Project](project.qmd) — the company-partnered team project, 30% of the grade
 
 ## What you will be able to do
 
@@ -39,17 +40,28 @@ drafted by machines and audited by people.
 ## Textbook
 
 Larson &amp; Gray, *Project Management: The Managerial Process* (2024 Release), McGraw Hill — **optional**.
-Chapter readings are listed each week. Everything you are assessed on is in the lecture notes on this site.
+The course follows the book's chapter order with one displacement, so you can read along. Everything
+you are assessed on is on this site.
+
+## How the week works
+
+**Tuesday** is concept and case — the chapter's ideas, a short case with a decision in it, and one
+question worth arguing about.
+
+**Thursday is studio: hands-on, at your own machine, and individual.** You *build* the tool
+yourself, then *use* the professional one on the same data, then explain where the two disagree.
+The disagreement is the graded part, because it is the only part a machine cannot check.
 
 ## How this course is graded
 
 | Component | Weight |
 |---|---:|
 | Conceptual assignments (MCQ) | 25% |
-| Studio assignments | 25% |
+| Studio assignments — individual | 25% |
 | Midterm — in class, closed notes, no computers | 20% |
-| Final project — with an industry partner | 30% |
+| Final project — team, with an industry partner | 30% |
 
 : {tbl-colwidths="[70,30]"}
 
-Full detail, including the 656 differentiation, is in the [syllabus](syllabus.qmd).
+Full detail, including the 656 differentiation and what to do if you work on lab computers only,
+is in the [syllabus](syllabus.qmd).

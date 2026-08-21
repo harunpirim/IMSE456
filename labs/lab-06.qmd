@@ -1,50 +1,118 @@
 ---
-title: "Lab 6 · Crash it, then find where the model stops thinking"
-subtitle: "Rung 2 · The model proposes, your code adjudicates"
+title: "Studio 6 · Write CPM yourself, then let the tool grade you"
+subtitle: "Week 6 — Developing a Project Schedule · Larson Ch. 6"
 week: 6
 release: "2026-09-28"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Week</dt><dd>6 — <a href='../weeks/week-06.qmd'>Schedule II — PERT, crashing, resources, critical chain</a></dd>
-<dt>Rung</dt><dd>Tool-calling</dd>
+<dt>Deliverable</dt><dd><strong>SA6</strong> — the notebook with both passes and both float columns, the <code>.pod</code>, the drawn network, the paragraph</dd>
+<dt>Due</dt><dd>CA4 (Ch 6) · SA6 · Sun 4 Oct</dd>
+<dt>Tools</dt><dd>Colab · networkx · ProjectLibre · Smartsheet · draw.io · Antigravity</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-06.qmd">Week 6 — Developing a Project Schedule</a></dd>
 </dl>
 :::
 
-## The task
+::: {.callout-important appearance="simple"}
+**This is individual work.** Every student submits their own. The final project is where you work
+in a team; the studio is where the mechanics get into your own hands.
+:::
 
-Have the model produce a crash sequence to a target duration. Then write code that recomputes the critical path *after every crash step*.
+The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
+The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
+Build is a legitimate finding, reported as one.
 
-**Deliverable.** The model's sequence, your verified sequence, and the step at which they diverge. Models routinely keep crashing one path after a second critical path has emerged.
+::: {.part}
+### Part 1 · Before you arrive
 
-## Tutor prompt for this week
+Accounts and data only. Nothing here needs software installed at home.
 
-Run this before you read the notes, and again after.
+1. Download this week's dataset from the course Drive folder into your `IMSE456` cloud folder.
+2. Open the week's Colab notebook and run the first cell to confirm it loads. Ten minutes, from any machine.
+:::
+
+::: {.part}
+### Part 2 · What you will have at the end
+
+SA6 — the notebook with both passes and both float columns, the <code>.pod</code>, the drawn network, the paragraph
+:::
+
+::: {.part}
+### Part 3 · Build it yourself — 25 minutes
+
+1. In Colab, load a twelve-activity dependency table into networkx.
+2. Implement the forward pass. No shortcuts, no library function that does it for you.
+3. Implement the backward pass.
+4. Compute total float and free float as <em>separate columns</em>. They are different quantities and the difference is the point of the week.
+5. Identify the critical path, and every near-critical path within two days of it.
+:::
+
+::: {.part}
+### Part 4 · Now the professional tool — 20 minutes
+
+1. Build the identical network in ProjectLibre.
+2. Read its critical path and its slack column.
+3. Redraw the network in draw.io for the report — ProjectLibre's rendering is not presentable.
+4. Enter the same network in Smartsheet with predecessors and lag, and turn on critical path highlighting. Note what it will and will not let you express.
+:::
+
+::: {.part}
+### Part 5 · Where do they disagree? — 15 minutes
+
+ProjectLibre reports one figure it calls slack, Smartsheet reports another, and your code reports two. Which float is each tool showing, and which row of your table proves it?
+
+Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+:::
+
+::: {.part}
+### Part 6 · Run the check
+
+Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
+prints a completion code. If it fails, you have found your error while it is still cheap to fix —
+that is the point of it. Paste the code into your submission.
+:::
+
+::: {.part}
+### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
+
+- [ ] Hand-computed and ProjectLibre durations match exactly
+- [ ] at least one activity has TF&gt;0 and FF=0 and the team identified it
+- [ ] the near-critical path is named
+:::
+
+::: {.part}
+### Part 8 · Where it is saved
+
+`IMSE456/studio-06/` in your cloud folder. Name files `SA6_yourlastname.*`.
+
+**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
+left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+:::
+
+::: {.browser-path}
+**Working on lab machines?**
+
+**No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
+
+**No Antigravity?** Use the Gemini API from the course Colab notebook — the key is in the shared config cell. Same work, browser only.
+:::
+
+## Study loop for this week
+
+Run this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.
 
 ```text
-Be my tutor on PERT, crashing, and resource levelling. One question at a
-time. Make me do a crash sequence step by step and stop me the moment I
-crash something off the critical path. Then attack PERT's assumptions and
-make me explain merge bias in my own words.
+Be my tutor on critical path method. One question at a time, don't lecture.
+Give me a small network and make me compute ES/EF/LS/LF and both floats by
+hand. Then find the gap: I suspect I don't really understand the difference
+between total float and free float. Prove it or disprove it.
 ```
 
-## The weekly loop
+See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.
 
-This lab is step 4–6 of the loop. The whole cycle:
 
-```text
-1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
-2. Read the module     — 20 min — notes + one primary source
-3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
-4. Write something     — 15 min — a plan, an argument, a worked problem
-5. EDITOR              — 10 min — attack what I wrote
-6. ROOMMATE            —  5 min — where else does this structure appear?
-7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
-```
-
-Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
-
-## Submission
-
-Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
+::: {.callout-important appearance="simple"}
+**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
+:::

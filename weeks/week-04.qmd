@@ -1,11 +1,12 @@
 ---
-title: "Week 4 · Scope: charter, requirements, WBS"
+title: "Week 4 · Defining the Project"
 week: 4
 release: "2026-09-14"
+chapter: "Larson Ch. 4"
 dates: "15 and 17 September"
 reading: "Larson Ch. 4"
-session-a: "Scope: charter, requirements, scope arbitration"
-session-b: "Studio — WBS for a 500-person conference, then peer audit"
+session-a: "The 500-person conference"
+session-b: "Generate a WBS, then break it"
 video:
   provider: none
   id: ""
@@ -16,23 +17,51 @@ lab: true
 ::: {.week-meta}
 <dl>
 <dt>Sessions</dt><dd>15 &amp; 17 September</dd>
-<dt>Tuesday</dt><dd>Scope: charter, requirements, scope arbitration</dd>
-<dt>Thursday</dt><dd>Studio — WBS for a 500-person conference, then peer audit</dd>
+<dt>Chapter</dt><dd>Larson Ch. 4</dd>
+<dt>Tuesday</dt><dd>The 500-person conference — concept and case</dd>
+<dt>Thursday</dt><dd>Generate a WBS, then break it</dd>
 <dt>Reading</dt><dd>Larson Ch. 4</dd>
-<dt>Milestone</dt><dd>M2 — see the <a href='../syllabus.qmd'>syllabus</a></dd>
-<dt>Due</dt><dd>SA4 · Conference WBS + peer audit — <span class='tabular'>2026-09-20</span><br>CA2 · Concepts — Weeks 3–4 — <span class='tabular'>2026-09-20</span></dd>
+<dt>Due</dt><dd>CA2 (Ch 3–4) · SA4 · Sun 20 Sep</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
 
-## Learning objectives
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">the scope statement — objective, deliverables, milestones, technical requirements, limits and exclusions</span><span class="chip">scope creep and its mechanism</span><span class="chip">the priority matrix — constrain, enhance, accept</span><span class="chip">WBS and the 100% rule</span><span class="chip">work packages and the can-you-estimate-it test</span><span class="chip">OBS</span><span class="chip">responsibility matrix</span><span class="chip">the communication plan</span>
+:::
+
+## Tuesday — The 500-person conference
+
+::: {.case}
+A brief with enough detail to decompose and not so much that the decomposition is dictated. Teams build a WBS, then audit another team's.
+
+::: {.qn}
+Four things are missing from nearly every student WBS: project management labour, contingency, post-event work, and sponsor management. Why <em>those four</em> specifically? What do they have in common?
+:::
+:::
+
+## Thursday studio
+
+::: {.studio}
+#### Generate a WBS, then break it
+
+Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
+
+**[Open the Week 4 lab sheet](../labs/lab-04.qmd)** · [slides](../slides/week-04.qmd)
+:::
+
+## Lecture notes
+
+### Learning objectives
 
 - Write a project charter that constrains rather than describes.
 - Decompose scope into a WBS satisfying the 100% rule.
 - Explain scope creep mechanically — as a control-system failure, not a character flaw.
 
-## Core content
+### Core content
 
 **The charter.** One page, authorizes the project manager, names the sponsor, states objectives and success criteria, and — most importantly — states **exclusions**. Teaching point: a charter without an explicit "out of scope" section is not a charter, it's a press release.
 
@@ -73,13 +102,6 @@ Force precision: *how much* do they change, in which domains, and at what cost p
 **A restaurant menu.** The menu is the scope baseline. Specials are approved changes. A customer asking for an off-menu dish is a change request — and the kitchen's willingness to say yes without repricing is exactly scope creep. Note how restaurants solve it: a visible price for every modification.
 :::
 
-## In-class activity (35 min)
+### In-class activity (35 min)
 
 Teams build a WBS for "run a 500-person academic conference" to three levels, then swap and audit against the 100% rule. Almost every team omits project management labour, contingency, and post-event work. That omission is the debrief.
-
-
-## This week's AI lab
-
-[Lab 4 — Generate a WBS, then break it with code](../labs/lab-04.qmd)
-
-[Slides for this week](../slides/week-04.qmd)

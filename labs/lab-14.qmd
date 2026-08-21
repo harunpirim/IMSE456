@@ -1,39 +1,92 @@
 ---
-title: "Lab 14 · Diagnose with an agent, and grade the agent"
-subtitle: "Rung 4 · Governing an automated collaborator"
+title: "Studio 14 · A contract-type decision tool — compressed, Tuesday only"
+subtitle: "Week 14 — Outsourcing: Managing Interorganizational Relations · Larson Ch. 12"
 week: 14
 release: "2026-11-23"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Week</dt><dd>14 — <a href='../weeks/week-14.qmd'>Synthesis — diagnosing a failing project</a></dd>
-<dt>Rung</dt><dd>Agent in the loop</dd>
+<dt>Deliverable</dt><dd><strong>SA13</strong> — the decision tool and the outsourcing recommendation with its incentive structure</dd>
+<dt>Due</dt><dd>SA13 · Sun 29 Nov</dd>
+<dt>Tools</dt><dd>Excel / Numbers · Gemini</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-14.qmd">Week 14 — Outsourcing: Managing Interorganizational Relations</a></dd>
 </dl>
 :::
 
-## The task
+::: {.callout-important appearance="simple"}
+**This is individual work.** Every student submits their own. The final project is where you work
+in a team; the studio is where the mechanics get into your own hands.
+:::
 
-Run the eight-step diagnostic protocol on the case, once yourself and once with an agent.
+The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
+The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
+Build is a legitimate finding, reported as one.
 
-**Deliverable.** Both diagnoses, ranked interventions from each, and an assessment of which steps the agent handled well and which it performed as ritual.
+::: {.part}
+### Part 1 · Before you arrive
 
-## The weekly loop
+Accounts and data only. Nothing here needs software installed at home.
 
-This lab is step 4–6 of the loop. The whole cycle:
+1. Download this week's dataset from the course Drive folder into your `IMSE456` cloud folder.
+2. Open the week's Colab notebook and run the first cell to confirm it loads. Ten minutes, from any machine.
+:::
 
-```text
-1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
-2. Read the module     — 20 min — notes + one primary source
-3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
-4. Write something     — 15 min — a plan, an argument, a worked problem
-5. EDITOR              — 10 min — attack what I wrote
-6. ROOMMATE            —  5 min — where else does this structure appear?
-7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
-```
+::: {.part}
+### Part 2 · What you will have at the end
 
-Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+SA13 — the decision tool and the outsourcing recommendation with its incentive structure
+:::
 
-## Submission
+::: {.part}
+### Part 3 · Build it yourself — 25 minutes
 
-Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
+1. Thanksgiving removes Thursday, so this build runs 25 minutes inside the Tuesday session.
+2. In Excel or Numbers, build a decision tool that takes scope certainty, schedule pressure and change likelihood, and returns a recommended contract type <em>together with</em> the resulting risk allocation.
+3. Test it: it must recommend different types for different inputs, or it is a lookup table with opinions.
+:::
+
+::: {.part}
+### Part 4 · Now the professional tool — 20 minutes
+
+1. Apply it to one activity of your partner project you would genuinely outsource.
+2. Write the incentive structure out in full — not the contract type alone.
+:::
+
+::: {.part}
+### Part 5 · Where do they disagree? — 15 minutes
+
+Your tool recommends a type. Ask Gemini the same question and compare. Where it disagrees, which of you is reasoning about risk allocation and which about convention?
+
+Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+:::
+
+::: {.part}
+### Part 6 · Run the check
+
+Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
+prints a completion code. If it fails, you have found your error while it is still cheap to fix —
+that is the point of it. Paste the code into your submission.
+:::
+
+::: {.part}
+### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
+
+- [ ] The tool recommends different types for different inputs
+- [ ] the recommendation states explicitly who bears which risk
+:::
+
+::: {.part}
+### Part 8 · Where it is saved
+
+`IMSE456/studio-14/` in your cloud folder. Name files `SA13_yourlastname.*`.
+
+**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
+left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+:::
+
+
+::: {.callout-important appearance="simple"}
+**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
+:::

@@ -10,7 +10,7 @@ subtitle: "IMSE 456/656 · Project Management · Fall 2026"
 <dt>Course</dt><dd>IMSE 456/656 — Project Management (3 credits)</dd>
 <dt>Term</dt><dd>Fall 2026 · 25 August – 10 December 2026</dd>
 <dt>Meets</dt><dd>Tuesday &amp; Thursday, 3:30 – 4:45 p.m.</dd>
-<dt>Room</dt><dd>Ag Hill Center, Room 240</dd>
+<dt>Room</dt><dd>Ag Hill Center, Room 240 <em>(Week 11 studio meets in the campus Windows room — see the <a href="schedule.qmd">schedule</a>)</em></dd>
 <dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
 <dt>Office</dt><dd>[office location]</dd>
 <dt>Office hours</dt><dd>[days and times]</dd>
@@ -20,59 +20,84 @@ subtitle: "IMSE 456/656 · Project Management · Fall 2026"
 
 ::: {.callout-note}
 ## Credit hour definition
-Using the federal definition of a credit hour, one semester credit hour is equivalent to not
-less than 50 minutes of classroom or direct faculty instruction and a minimum of two hours
-out-of-class student work each week for approximately 15 weeks for one semester. See the
+Using the federal definition of a credit hour, one semester credit hour is equivalent to not less
+than 50 minutes of classroom or direct faculty instruction and a minimum of two hours out-of-class
+student work each week for approximately 15 weeks for one semester. See the
 [NDSU academic credit policy](https://catalog.ndsu.edu/academic-policies/academic-credit/).
 :::
 
 ## Catalog description
 
-[Paste the current catalog description for IMSE 456/656 verbatim — NDSU Policy 331.1 requires
-the syllabus description to match the catalog.]
+[Paste the current catalog description for IMSE 456/656 verbatim — NDSU Policy 331.1 requires the
+syllabus description to match the catalog.]
+
+## How this course runs
+
+Two sessions a week, and they do different jobs.
+
+**Tuesday is concept and case.** The chapter's ideas, then a short case with a decision in it and
+one question worth arguing about. You leave with an assignment.
+
+**Thursday is studio, and it is hands-on and individual.** Every student works at their own machine
+on the same three movements:
+
+1. **Build — 25 minutes.** You implement the concept yourself: write the critical-path passes in
+   Python, build the earned-value model, direct an agent to draft a work breakdown structure. No
+   professional software yet. You cannot hide behind a black box you had to construct.
+2. **Use — 20 minutes.** The same project, in ProjectLibre, Smartsheet, Taiga or Power BI — the
+   tools you will meet in industry, met while you already know what they are doing underneath.
+3. **Reconcile — 15 minutes.** The two disagree. They always do. Find the difference, explain it,
+   decide which is right. **This is the graded part**, because it is the only part a machine
+   cannot check for you.
+
+A five-minute peer check closes the session: a neighbour runs your "done looks like" checklist
+against your screen. It is not grading, it is catching.
+
+::: {.callout-important}
+## Studios are individual. The project is a team.
+The mechanics have to be in *your* hands — in a team studio one person drives the software and the
+others watch, then discover in Week 11 that they cannot do a backward pass. The final project is
+where collaboration genuinely matters, and that is where you will work in a team of four or five.
+Nobody free-rides on the mechanics; nobody does the project alone.
+:::
 
 ## Course description
 
-Project management as it is actually practiced: the quantitative core (work breakdown, critical
-path method, PERT, earned value management) alongside adaptive delivery (Scrum, Kanban, flow
-metrics), with hybrid approaches treated as the default real-world case rather than a compromise.
-The course argues from empirical evidence rather than from convention — students learn to
-distinguish a base rate from a vendor statistic and to say what a project-success number is
-actually measuring.
+Project management as it is actually practised: the quantitative core — work breakdown, critical
+path, PERT, resource levelling, crashing, earned value — alongside adaptive delivery and flow
+metrics, with hybrid treated as the default real-world case rather than a compromise. The course
+argues from empirical evidence rather than from convention.
 
-Running through every week is an AI layer. Students progress from grounded prompting, through
-model-generated artifacts verified by code they write themselves, to specifying and building
-agents that maintain live project artifacts — and to governing those agents, which is the
-project-management problem the textbooks have not caught up with yet.
+Running through every week is an AI layer. You will generate project artifacts with a model, then
+write the code that checks them; specify and build agents; and, in the final project, govern one
+that maintains a live artifact — and report what it got wrong.
 
 ## Course objectives
 
-By the end of the course a student can:
+By the end of the course you can:
 
 1. Decide which delivery approach fits a given project and defend the choice against a specific alternative.
-2. Build and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, crash analysis, EVM report.
+2. Build and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, resource-levelled schedule, crash analysis, EVM report.
 3. Run the adaptive artifacts: product backlog, sprint mechanics, cumulative flow diagram, Little's Law.
 4. Read the evidence critically — distinguish a base rate from a vendor statistic.
 5. Diagnose a failing project and propose interventions ranked by expected effect, not by convention.
-6. Specify, build, and govern an AI agent that maintains a live project artifact, and state what it got wrong.
+6. Specify, build and govern an AI agent that maintains a live project artifact, and state what it got wrong.
 
 ### Additional expectations for students enrolled in IMSE 656
 
-Students enrolled under the graduate number complete the same components at a
-higher level of expectation:
+Students enrolled under the graduate number complete the same components at a higher level of
+expectation:
 
-- **Conceptual assignments** include an additional short-answer section requiring
-  students to ground a claim in one of the primary sources on the [source shelf](ai.qmd#the-source-shelf).
-- **Final project** must include a *methods justification* section: the choice of
-  delivery approach, estimating method, and control mechanism defended against the
-  empirical literature, with citations.
-- **Final presentation** includes a five-minute defence against a challenge from the
-  instructor drawn from the counter-evidence for the position taken.
+- **Conceptual assignments** include an additional short-answer section requiring a claim grounded
+  in one of the primary sources on the [source shelf](ai.qmd#the-source-shelf).
+- **Studio assignments** require the reconciliation paragraph to cite the mechanism, not only the
+  symptom — *which algorithm or formula choice produces this difference*, with a reference.
+- **Final project** includes a *methods justification*: the choice of delivery approach, estimating
+  method and control mechanism defended against the empirical literature, with citations.
+- **Final presentation** includes a five-minute defence against a challenge drawn from the
+  counter-evidence for the position taken.
 
 ## Student learning outcomes and ABET contribution
-
-Upon successful completion, students demonstrate progress toward the IME program outcomes
-based on ABET Criterion 3.
 
 | # | Outcome | Contribution |
 |:--|:--|:--|
@@ -88,39 +113,78 @@ based on ABET Criterion 3.
 
 ::: {.callout-warning}
 ## To confirm before publication
-The contribution levels above are a proposal based on the course's actual activities
-(team project with an industry partner, heavy written and oral communication, quantitative
-analysis). Adjust to match the IME program's assessment plan before this syllabus is final.
+The contribution levels above are a proposal based on what the course actually does. Adjust to
+match the IME program's assessment plan before this syllabus is final.
 :::
+
+## Textbook and sequence
+
+**Optional:** Larson &amp; Gray, *Project Management: The Managerial Process*, 2024 Release,
+McGraw Hill. The course follows the book's chapter order with one displacement — the three
+relationship chapters (10, 11, 12) move past 13 and 15, so that earned value arrives early enough
+for your project to use it, and agile arrives after the predictive methods it trades against.
+
+| Wk | Ch. | Subject | Wk | Ch. | Subject |
+|:--|:--|:--|:--|:--|:--|
+| 1 | 1 | Modern Project Management | 9 | 8 | Scheduling Resources and Costs |
+| 2 | 2 | Strategy and Project Selection | 10 | 9 | Reducing Project Duration |
+| 3 | 3 | Structure and Culture | 11 | 13 | Progress and Performance Measurement |
+| 4 | 4 | Defining the Project | 12 | 15 | Agile Project Management |
+| 5 | 5 | Estimating Times and Costs | 13 | 10 + 11 | Effective PM and Teams |
+| 6 | 6 | Developing a Project Schedule | 14 | 12 | Outsourcing |
+| 7 | 7 | Managing Risk | 15 | 14 + 16 | Closure and International |
+| 8 | — | Review · **Midterm 15 Oct** | 16 | — | Final presentations |
+
+: {tbl-colwidths="[5,8,37,5,8,37]"}
+
+Everything you are assessed on is on this site. The book is a fuller treatment, not a requirement.
+The authoritative week-by-week schedule with all due dates is on the [Schedule](schedule.qmd) page.
 
 ## Required student resources
 
-- **Optional textbook:** Larson &amp; Gray, *Project Management: The Managerial Process*,
-  2024 Release, McGraw Hill. Chapter readings are listed weekly. Everything assessed
-  is contained in the lecture notes on this site.
-- **Course site:** <https://harunpirim.github.io/IMSE456> — notes, slides, recordings, labs.
-- **Software:** a current LLM assistant (Claude, ChatGPT, or Gemini — free tiers are
-  sufficient), a spreadsheet application, and Python via
-  [Google Colab](https://colab.research.google.com) (no local install required).
-  Scheduling exercises use [ProjectLibre](https://www.projectlibre.com/) or
-  [Taiga](https://www.taiga.io/), both free.
-- **Calculator** for the midterm. Programmable calculators and phones are not permitted.
+Everything below is free to you, licensed by the university, or already on your machine. **You will
+not be asked to buy software for this course.**
 
-## Course schedule
+| Tool | What for | Access |
+|:--|:--|:--|
+| [Taiga](https://tree.taiga.io) | Backlog, sprints, task ownership, evidence | Free account, browser |
+| ProjectLibre | WBS, Gantt, network, critical path, resource levelling | Free download; Smartsheet substitutes in a browser |
+| Smartsheet | Shared schedules, resource views, dashboards, forms, approvals | Licensed by NDSU, browser |
+| Power BI | Analytics over the project record | Browser Service for most weeks; Desktop in the campus Windows room for Week 11 |
+| [Google Colab](https://colab.research.google.com) | Python: networkx, pandas, numpy, matplotlib, PuLP | Free, browser |
+| Excel or Numbers | Scoring models, crash tables, decision tools | Whichever you have; templates ship as `.xlsx` |
+| [draw.io](https://app.diagrams.net) | WBS trees, networks, org charts, stakeholder maps | Free, browser |
+| Gemini and Antigravity | Drafting, reasoning, and agent building | Free; the instructor supplies API keys to anyone who needs them |
 
-The full week-by-week schedule, with readings and due dates, is maintained on the
-[Schedule](schedule.qmd) page and is the authoritative version. It updates during the term.
+: {tbl-colwidths="[18,46,36]"}
+
+A non-programmable calculator is required for the midterm.
+
+::: {.callout-important}
+## If you work on lab computers only, this course still works
+Two tools are local installs; everything else runs in a browser. Where an install is a problem,
+each lab sheet gives you a substitute: **Smartsheet** in place of ProjectLibre, and the
+**Gemini API from Colab** in place of Antigravity. Nothing is lost and nothing is graded
+differently.
+
+Software installation is never homework. Week 1's access form asks which machine you will work on
+and which AI tools you can reach; your answer decides which version of every later lab sheet you
+receive. It has no effect on your grade.
+
+**Save nothing to a local disk.** Lab machines are wiped on reboot and laptops get left at home.
+Set up a cloud folder in Week 1 and keep everything there.
+:::
 
 ## Evaluation procedures and criteria
 
 | Component | Weight | What it is |
 |:--|--:|:--|
-| Conceptual assignments (MCQ) | 25% | Eight online multiple-choice sets, one per content block, on terms, theory, and the reasoning behind the methods. Auto-graded, lowest score dropped. |
-| Studio assignments | 25% | Ten team deliverables produced in and after the Thursday studio sessions: WBS, CPM analysis, crash sequence, estimate comparison, EVM dashboard, risk register, flow simulation, approach defence, stakeholder map, case diagnosis. |
-| Midterm examination | 20% | **Thursday 15 October, in class.** Closed notes, closed book, no computers or phones. Covers Weeks 1–7. |
-| Final project | 30% | A semester-long project conducted with an industry partner. Four milestones plus a final report and presentation. See [Final Project](project.qmd). |
+| Conceptual assignments | 25% | CA1–CA8, online multiple choice on terms, theory and the reasoning behind the methods. Auto-graded, lowest score dropped. |
+| Studio assignments | 25% | SA1–SA14, **individual**, produced in and after Thursday studio. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case. |
+| Midterm examination | 20% | **Thursday 15 October, in class.** Closed book, closed notes, no computers or phones. Covers Chapters 1–7. |
+| Final project | 30% | A semester-long project with an industry partner, in teams of four or five. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See [Final Project](project.qmd). |
 
-: {tbl-colwidths="[34,10,56]"}
+: {tbl-colwidths="[26,10,64]"}
 
 ### Grading scale
 
@@ -136,100 +200,213 @@ The full week-by-week schedule, with readings and due dates, is maintained on th
 
 ### Late work
 
-Conceptual assignments close at the posted time and do not reopen; the lowest score is
-dropped to absorb one missed set. Studio assignments lose 10% per calendar day, to a floor
-of 50%, for five days, after which they are not accepted. Final project milestones are
-firm because a partner organization is waiting on them — contact the instructor **before**
-the deadline if a milestone is at risk.
+Conceptual assignments close at the posted time and do not reopen; the lowest score is dropped to
+absorb one missed set. Studio assignments lose 10% per calendar day to a floor of 50%, for five
+days, after which they are not accepted — and the two lowest are dropped, which is your margin for
+a bad week. Final project milestones are firm because a partner organization is waiting on them;
+contact the instructor **before** the deadline if a milestone is at risk.
 
 ### Feedback turnaround
 
-Conceptual assignments are graded automatically and available immediately. Studio
-assignments are returned within seven days. Project milestones are returned within
-fourteen days.
+Conceptual assignments are graded automatically. Studio assignments are returned within seven days.
+Project milestones within fourteen.
 
 ## Attendance
 
-According to [NDSU Policy 333](https://www.ndsu.edu/fileadmin/policy/333.pdf), attendance
-in classes is expected. Students should contact the instructor as soon as possible to notify
-them of any extended illness or family emergency that might warrant an extension on assignments.
+According to [NDSU Policy 333](https://www.ndsu.edu/fileadmin/policy/333.pdf), attendance in
+classes is expected. Students should contact the instructor as soon as possible to notify them of
+any extended illness or family emergency that might warrant an extension on assignments.
 
-Attendance is not directly a component of the course grade. However, studio assignments are
-produced in teams during Thursday sessions, and a student who is absent contributes nothing
-to that deliverable — attendance is therefore consequential in practice even though it is
-not scored.
+Attendance is not a direct component of the grade. But studio deliverables are produced during
+Thursday sessions with the instructor and TA circulating, so an absence is expensive in practice
+even though it is not scored.
 
-Veterans and student service members with special circumstances or who are activated are
-encouraged to notify the instructor as soon as possible and are encouraged to provide
-Activation Orders.
+Veterans and student service members with special circumstances or who are activated are encouraged
+to notify the instructor as soon as possible and are encouraged to provide Activation Orders.
 
 ## Americans with Disabilities Act statement
 
-Any students with disabilities or other special needs, who need special accommodations in
-this course, are invited to share these concerns or requests with the instructor and contact
-the [Center for Accessibility and Disability Services](https://www.ndsu.edu/accessibility-disability)
+Any students with disabilities or other special needs, who need special accommodations in this
+course, are invited to share these concerns or requests with the instructor and contact the
+[Center for Accessibility and Disability Services](https://www.ndsu.edu/accessibility-disability)
 as soon as possible.
 
 ## Family Educational Rights and Privacy Act (FERPA) statement
 
-Your personally identifiable information and educational records as they relate to this course
-are subject to FERPA.
+Your personally identifiable information and educational records as they relate to this course are
+subject to FERPA.
 
-This course maintains a public website. **No student names, grades, submitted work, or
-recordings of student voices are published there.** All graded material and individual
-feedback are handled through Blackboard.
+This course maintains a public website. **No student names, grades, submitted work, or recordings
+of student voices are published there.** All graded material and individual feedback are handled
+through Blackboard.
 
 ## Academic honesty
 
-The academic community is operated on the basis of honesty, integrity, and fair play. NDSU
-Policy 335: Code of Academic Responsibility and Conduct applies to cases in which cheating,
-plagiarism, or other academic misconduct have occurred in an instructional context. Students
-found guilty of academic misconduct are subject to penalties, up to and possibly including
-suspension and/or expulsion. Student academic misconduct records are maintained by the Office
-of Registration and Records. Informational resources about academic honesty for students and
-instructional staff members can be found at [www.ndsu.edu/academichonesty](https://www.ndsu.edu/academichonesty).
+The academic community is operated on the basis of honesty, integrity, and fair play. NDSU Policy
+335: Code of Academic Responsibility and Conduct applies to cases in which cheating, plagiarism, or
+other academic misconduct have occurred in an instructional context. Students found guilty of
+academic misconduct are subject to penalties, up to and possibly including suspension and/or
+expulsion. Student academic misconduct records are maintained by the Office of Registration and
+Records. Informational resources about academic honesty for students and instructional staff
+members can be found at [www.ndsu.edu/academichonesty](https://www.ndsu.edu/academichonesty).
 
-## Artificial intelligence policy
+## Use of Generative Artificial Intelligence
 
-AI use is **expected**, not merely permitted. Much of this course is about using these tools
-well. Three rules make that workable:
+Generative AI use in this course is **permitted and expected, within the parameters below**. This
+section is the course's AI policy under NDSU Policy 335: Code of Academic Responsibility and
+Conduct. **Use outside these parameters is academic dishonesty** and is handled under that policy.
 
-1. **Label it.** Any submitted artifact that an AI system produced or substantially drafted
-   says so, names the tool, and includes the prompt or a link to the conversation.
-2. **Verify it.** Every quantitative result generated by a model must be accompanied by the
-   code or hand calculation that checks it. A number you cannot verify is a number you did
-   not produce. This is graded.
-3. **Own it.** You are responsible for everything you submit, including the parts a model
-   wrote. "The AI said so" is not a defence, in this course or in a project review.
+Much of this course is about using these tools well and knowing when they are wrong. That is a
+learning objective, not a concession.
 
-The **midterm is the exception**: it is closed-book, closed-notes, and computer-free,
-because the reasoning it tests is the reasoning you need when the tool is unavailable or wrong.
+### Approved tools
+
+**Gemini**, **Google Antigravity**, the **Gemini API** supplied through the course notebook, and
+**Microsoft 365 Copilot** are approved for all permitted uses without further request. Any other
+general-purpose assistant is approved on the same terms provided you name it in your disclosure.
+Anything that is not a general-purpose assistant — a tool that completes assignments for you, or a
+service you would have to send course material to — ask first.
+
+Every student has access to Gemini and Antigravity, and **the instructor supplies API keys to
+anyone who needs them**, so no graded work in this course depends on being able to buy a
+subscription.
+
+### How much AI, on which assessment
+
+Each assessment carries a level from the Generative AI Acceptable Use Scale (Perkins et al., 2024).
+The level is repeated on every lab sheet and assignment so you never have to guess.
+
+| Assessment | Level | What that means here |
+|:--|:--|:--|
+| **Midterm examination** | **1 · Prohibited** | Closed book, closed notes, no computers or phones. The reasoning this tests is the reasoning you need when the tool is unavailable or wrong. |
+| **Conceptual assignments (CA1–CA8)** | **1 · Prohibited during the attempt** | These are quizzes. Use AI freely to *study* — the Tutor prompts in [AI Studio](ai.qmd) are built for it — but not while the assessment is open. |
+| **Studio assignments (SA1–SA14)** | **4 · Full use with documentation** | Generate freely, including the code. Every quantitative result arrives with the check that proves it, and the reconciliation paragraph must be your own reasoning. |
+| **Final project (FP1–FP4)** | **5 · Full use with human oversight** | You are *required* to build and run an agent that maintains a live project artifact, and to report what it got wrong and how you caught it. |
+
+: {tbl-colwidths="[26,20,54]"}
+
+### The three rules
+
+1. **Label it.** Any submitted artifact a model produced or substantially drafted says so, names the
+   tool, and includes the prompt or a shareable link to the conversation.
+2. **Verify it.** Every quantitative result a model generates is submitted with the code or hand
+   calculation that checks it. A number you cannot verify is a number you did not produce.
+   **The check is graded**, not the output.
+3. **Own it.** You are responsible for everything you submit, including the parts a model wrote.
+   "The model said so" is not a defence — not here, and not in a project review.
+
+### How to disclose
+
+Append this to any submission where AI was used. It takes two minutes and its absence is what turns
+permitted use into a violation.
+
+> **AI acknowledgement.** I used [tool and version] for [what — e.g. drafting the WBS, writing the
+> forward-pass code, generating counter-arguments]. Prompt or transcript: [link or attached
+> screenshots]. What I changed after reviewing its output: [specific edits]. What it got wrong:
+> [or "nothing I found", if that is honestly the case]. I have verified every quantitative result
+> in this submission and the verification is included.
+
+### The requirements, in short
+
+- Acknowledge any significant AI contribution in submissions.
+- Verify all AI-generated content for accuracy.
+- Use AI ethically; violations constitute academic dishonesty.
+- **AI is forbidden for quizzes and tests** — the midterm and the conceptual assignments.
+
+### Data, confidentiality and privacy
+
+This matters more here than in most courses, because your final project involves a real
+organization's information.
+
+- **Do not put a partner organization's confidential information into any AI tool.** Costs,
+  contracts, customer data, unreleased plans, anything they asked you to protect. Generalize the
+  problem or use synthetic numbers instead. If you are unsure whether something is confidential,
+  it is.
+- **Do not put anyone's personal information into an AI tool** — classmates', a partner's staff,
+  your own beyond what you would post publicly.
+- **Do not upload another student's work.** Their submissions are their educational records.
+- If a partner asks for a written commitment about AI use, bring it to the instructor before you
+  agree to anything. Do not sign on behalf of NDSU.
+
+## Instructor use of AI — disclosure
+
+You are being asked to label, verify and own your AI use. The same standard applies to the person
+teaching you, so here is exactly how AI was used to build this course.
+
+**What AI did.** Working from my own outlines, notes and the textbook's chapter structure, I used
+generative AI to help organize the course: to sequence the sixteen weeks against Larson's chapters
+and argue about where the displacement should fall; to draft and edit lecture notes, the mini-cases
+you read on Tuesdays, and the studio lab sheets you work from on Thursdays; to generate the studio
+datasets and compute every answer key programmatically; to draft rubrics and the "done looks like"
+checklists; and to build this website.
+
+**What AI did not do, and will not do.**
+
+- **It does not grade you.** No AI system assigns or recommends a mark in this course.
+- **Your work is not uploaded to any third-party AI system**, for grading or for any other purpose.
+  Your submissions are educational records under FERPA and they stay in Blackboard.
+- **It does not decide anything.** Every sequencing choice, assessment weight, rubric criterion and
+  final grade is mine.
+
+**What I verify.** Every factual claim, empirical figure and citation in these materials is checked
+against a primary source before it is published — the sources are listed in
+[AI Studio](ai.qmd#the-source-shelf) so you can check them too. Every numerical answer key is
+computed in code rather than by hand, precisely because a hand-worked key is where errors hide and
+an error in a key is worse than an error in a lecture.
+
+**Where you can see it.** This site is public and so is
+[the repository that builds it](https://github.com/harunpirim/IMSE456). If you want to see how a
+course is actually assembled, including the parts a model drafted, you can read the source. That
+transparency is the point: I am asking you to show your work, so I show mine.
+
+**If AI use in this course changes** — a new tool, a new use — it will be announced on Blackboard
+and this section updated. If you think something here was AI-generated and is wrong, tell me. You
+will be right often enough to make it worth asking, and finding it is exactly the skill this course
+is trying to build.
 
 ## Code of ethics
 
 Students are expected to be familiar with the
-[NSPE Code of Ethics for Engineers](https://www.nspe.org/resources/ethics/code-ethics).
-Projects conducted with industry partners raise real questions of confidentiality,
-scope honesty, and reporting integrity; these are discussed in Week 12.
+[NSPE Code of Ethics for Engineers](https://www.nspe.org/resources/ethics/code-ethics). Projects
+conducted with industry partners raise real questions of confidentiality, scope honesty and
+reporting integrity; these are discussed in Weeks 13 and 14.
 
 ## General policies
 
 NDSU is committed to following the General Policies detailed in the NDSU Bulletin relating to
-Student Behavior, Attendance, Privacy of Student Records, Equal Opportunity, Sexual Assault,
-Sexual Harassment, Consensual Relationships, Use of Alcohol and Other Drugs, and Campus Security.
+Student Behavior, Attendance, Privacy of Student Records, Equal Opportunity, Sexual Assault, Sexual
+Harassment, Consensual Relationships, Use of Alcohol and Other Drugs, and Campus Security.
+
+## Student athletes
+
+All student-athletes have signed the "Buckley" Amendment, which is required by the NCAA and which
+allows NDSU to see their grades to comply with the requirement for NCAA eligibility.
+
+## Well-being resources
+
+As a member of the NDSU community, resources are available should you need help dealing with
+adverse reactions to things happening in the world today.
+
+**On campus and remotely (telehealth):** Counseling Services 701-231-7671 · Disability Services
+701-231-8463 · Student Health Service 701-231-7331
+
+**In a crisis or emergency:** University Police 701-231-8998 · 911 · a hospital emergency room ·
+Prairie St. John's needs assessment 701-476-7216 (510 4th St. S.) · FirstLink Help Line
+1-800-273-8255 or 2-1-1 · Rape and Abuse Crisis Center 701-293-7273
 
 ## What this course deliberately does not cover
 
-Stating exclusions explicitly is more useful than pretending to comprehensiveness:
-
-- **PMP exam drilling.** The exam changes; the reasoning does not. The credential is
-  mentioned, not taught to.
-- **Tool tutorials** (MS Project, Jira, Primavera). One is assigned as homework
-  infrastructure; no lecture time goes to menus.
-- **The full process catalogue of PMBOK 8.** You learn the *shape* of a process standard
-  and how to look things up. Memorizing inputs-tools-outputs is the lowest-value activity
-  in project-management education.
-- **Scaling frameworks in depth** (SAFe, LeSS, Nexus). One segment on why they exist and
-  why the evidence for them is thin.
+- **PMP exam drilling.** The exam changes; the reasoning does not.
+- **Software menu tours.** You will use six tools, but no lecture time goes to menus — the studio
+  teaches the tool by making you build what it does first.
+- **The full process catalogue.** You learn the *shape* of a process standard and how to look
+  things up. Memorizing inputs-tools-outputs is the lowest-value activity in project-management education.
+- **Scaling frameworks in depth.** One segment on why they exist and why the evidence is thin.
 - **Six Sigma and lean manufacturing.** Adjacent field, separate course.
 - **Contract law.** Contract *types* and incentive structure are covered; the law is not.
+
+::: {.callout-note appearance="simple"}
+This syllabus provides an initial schedule for covering the basic course topics and the grading
+scheme. As needed, adjustments may be required; changes are announced on Blackboard and reflected
+on the [Schedule](schedule.qmd) page, which is the authoritative version.
+:::

@@ -1,6 +1,6 @@
 ---
-title: "Week 13 — People, stakeholders, and governance"
-subtitle: "IMSE 456/656 · Project Management"
+title: "Week 13 — Being an Effective Project Manager · Managing Project Teams"
+subtitle: "IMSE 456/656 · Larson Ch. 10 + 11"
 author: Harun Pirim
 date: "2026-11-16"
 ---
@@ -60,6 +60,6 @@ Attack with Young & Jordan directly: the evidence points above the PM. But then 
 
 ## Next
 
-- Notes: [Week 13 on the course site](../weeks/week-13.qmd)
-- AI lab: [Lab 13](../labs/lab-13.qmd)
-- Reading: Larson Ch. 3, 10–12
+- Notes: [Week 13](../weeks/week-13.qmd)
+- Studio: [Lab 13](../labs/lab-13.qmd)
+- Reading: Larson Ch. 10 + 11

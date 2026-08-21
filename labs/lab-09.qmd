@@ -1,39 +1,106 @@
 ---
-title: "Lab 9 · Package an EVM status reporter"
-subtitle: "Rung 3 · Package the job, write the acceptance tests"
+title: "Studio 9 · Heuristic versus optimal, and the price of the difference"
+subtitle: "Week 9 — Scheduling Resources and Costs · Larson Ch. 8"
 week: 9
 release: "2026-10-19"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Week</dt><dd>9 — <a href='../weeks/week-09.qmd'>Earned Value Management</a></dd>
-<dt>Rung</dt><dd>Skills and agents</dd>
+<dt>Deliverable</dt><dd><strong>SA8</strong> — histograms before and after, the heuristic code, the LP formulation and solution, the <code>.pod</code>, the ranked comparison</dd>
+<dt>Due</dt><dd>CA6 (Ch 8–9) · SA8 · Sun 25 Oct · <strong>FP2</strong> Fri 30 Oct</dd>
+<dt>Tools</dt><dd>Colab · PuLP · ProjectLibre · Smartsheet · Power BI · Antigravity</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-09.qmd">Week 9 — Scheduling Resources and Costs</a></dd>
 </dl>
 :::
 
-## The task
+::: {.callout-important appearance="simple"}
+**This is individual work.** Every student submits their own. The final project is where you work
+in a team; the studio is where the mechanics get into your own hands.
+:::
 
-Build a reusable skill — a saved prompt with attached instructions and a worked example — that takes raw PV/EV/AC data and produces a status report with CV, SV, CPI, SPI, the three EAC families, ETC, VAC, TCPI and Earned Schedule.
+The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
+The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
+Build is a legitimate finding, reported as one.
 
-**Deliverable.** The skill definition, three acceptance tests you wrote *before* running it (including one designed to fail), and the transcript showing it passing two and failing one.
+::: {.part}
+### Part 1 · Before you arrive
 
-## The weekly loop
+Accounts and data only. Nothing here needs software installed at home.
 
-This lab is step 4–6 of the loop. The whole cycle:
+1. Confirm you can sign in to Power BI in a browser at [app.powerbi.com](https://app.powerbi.com) with your NDSU account.
+2. Confirm your Smartsheet access works.
+:::
 
-```text
-1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
-2. Read the module     — 20 min — notes + one primary source
-3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
-4. Write something     — 15 min — a plan, an argument, a worked problem
-5. EDITOR              — 10 min — attack what I wrote
-6. ROOMMATE            —  5 min — where else does this structure appear?
-7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
-```
+::: {.part}
+### Part 2 · What you will have at the end
 
-Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+SA8 — histograms before and after, the heuristic code, the LP formulation and solution, the <code>.pod</code>, the ranked comparison
+:::
 
-## Submission
+::: {.part}
+### Part 3 · Build it yourself — 25 minutes
 
-Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
+1. In Colab, build the resource histogram from the Week 6 network plus assignments.
+2. Implement the minimum-slack leveling heuristic yourself. Re-plot the histogram. Record the new finish date.
+3. Formulate the same problem as an integer program in PuLP: minimise makespan subject to precedence and resource capacity. Solve it.
+4. Record the gap between your heuristic makespan and the optimal one.
+:::
+
+::: {.part}
+### Part 4 · Now the professional tool — 20 minutes
+
+1. Run ProjectLibre's <em>Level Resources</em> on the same file. Record its finish date and exactly which activities it moved.
+2. Generate the time-phased cost baseline and export the S-curve.
+3. In Smartsheet, import the schedule, assign resources, and open the resource view. Note what the cloud tool shows a sponsor that the desktop tool does not.
+4. <strong>First Power BI session.</strong> Export the assignment table from Smartsheet, load it into Power BI, and build a resource-utilisation matrix — person by week, conditionally formatted so anything over 100% turns red. This is the visual nobody looked at in the case.
+:::
+
+::: {.part}
+### Part 5 · Where do they disagree? — 15 minutes
+
+Four finish dates now — your heuristic, the solver's, ProjectLibre's, and Smartsheet's. Rank them, explain the gaps, and say which you would commit to a customer. The optimal one may well be the wrong answer.
+
+Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+:::
+
+::: {.part}
+### Part 6 · Run the check
+
+Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
+prints a completion code. If it fails, you have found your error while it is still cheap to fix —
+that is the point of it. Paste the code into your submission.
+:::
+
+::: {.part}
+### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
+
+- [ ] Four finish dates recorded
+- [ ] the LP is provably optimal or the solver's gap is reported
+- [ ] the S-curve is a curve, not a straight line
+:::
+
+::: {.part}
+### Part 8 · Where it is saved
+
+`IMSE456/studio-09/` in your cloud folder. Name files `SA8_yourlastname.*`.
+
+**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
+left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+:::
+
+::: {.browser-path}
+**Working on lab machines?**
+
+**No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
+
+**No Antigravity?** Use the Gemini API from the course Colab notebook — the key is in the shared config cell. Same work, browser only.
+
+**Power BI here is the browser Service** at [app.powerbi.com](https://app.powerbi.com). Nothing to install; works on any machine.
+:::
+
+
+::: {.callout-important appearance="simple"}
+**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
+:::

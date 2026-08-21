@@ -3,8 +3,8 @@ title: "Final Project"
 subtitle: "A real project, a real partner, an agent you have to govern — 30% of the grade"
 ---
 
-Teams of four run a genuine project-management engagement with an outside organization
-across the semester. Not a case study, not a simulation: a real scope, a real sponsor,
+Teams of four or five run a genuine project-management engagement with an outside organization
+across the semester. Ten teams, formed by Week 3. Not a case study, not a simulation: a real scope, a real sponsor,
 a real constraint you did not choose.
 
 ## Why a partner organization
@@ -131,7 +131,35 @@ changeover, enforced. Partner representatives are invited. Details on the
 
 ## Team working
 
-Teams of four, formed by Week 3. A confidential peer-contribution assessment is collected
-with FP4 and can adjust an individual's project grade by up to ±15%. Persistent
+**Ten teams.** At 47 students that is seven teams of five and three of four; at 50, ten of five.
+Teams are formed by Week 3, at FP0.
+
+### The five responsibilities
+
+Each carries a duty that cannot be delegated, from the course operations guide:
+
+| Role | Primary duty | Cannot be delegated |
+|:--|:--|:--|
+| Coordinator / Taiga owner | Creates the project, manages members, submits URLs | Keeping access working and preserving the record |
+| Scope &amp; backlog lead | Epics, stories, acceptance criteria, priority | Confirming backlog scope matches the approved project |
+| Process facilitator | Runs planning, review and retrospective | Surfacing blockers and keeping the board truthful |
+| Schedule &amp; resource lead | Master schedule file and its version history | Protecting the baseline and reconciling changes |
+| Quality, risk &amp; documentation lead | Evidence, issues, risk responses, final archive | Verifying completion criteria and submission integrity |
+
+: {tbl-colwidths="[22,40,38]"}
+
+**In a four-person team, merge coordinator with process facilitator** — both are keep-the-team-running
+jobs and the coordinator already owns membership. Scope, schedule and quality each keep a single
+owner; those three answer for artifacts and cannot be shared.
+
+**Roles rotate at FP2 and FP3** so every member drives the master schedule at least once and writes
+at least one status report.
+
+Every member still plans and performs project work. Each updates their own Taiga tasks weekly and
+completes at least one documented schedule action — adding dependencies, assigning resources,
+analysing the critical path, or recording actual progress.
+
+ A confidential peer-contribution assessment is collected with FP4 and can adjust an individual's
+project grade by up to ±15%. Persistent
 non-contribution is handled before FP3, not after — tell the instructor while there is
 still time to fix it.

@@ -1,71 +1,97 @@
 ---
-title: "Week 11 — Adaptive delivery — Scrum, Kanban, flow"
-subtitle: "IMSE 456/656 · Project Management"
+title: "Week 11 — Progress and Performance Measurement"
+subtitle: "IMSE 456/656 · Larson Ch. 13"
 author: Harun Pirim
 date: "2026-11-02"
 ---
 
 ## Where we are going
 
-- Describe Scrum's accountabilities, events, and artifacts exactly as the Scrum Guide defines them.
-- Compute and interpret flow metrics; apply Little's Law.
-- State what Scrum abandons relative to predictive planning, and what it buys.
+- Compute the full EVM metric set from PV, EV, AC and interpret each.
+- Select an EAC formula appropriate to the situation and justify the choice.
+- State what EVM cannot detect, and describe Earned Schedule's fix for the SPI pathology.
 
 ---
 
 ## The frame
 
-| Artifact | Commitment |
-|---|---|
-| Product Backlog | Product Goal |
-| Sprint Backlog | Sprint Goal |
-| Increment | Definition of Done |
+| Metric | Formula | Reading |
+|---|---|---|
+| Cost variance | CV = EV − AC | < 0 = over cost |
+| Schedule variance | SV = EV − PV | < 0 = behind (in $, not time) |
+| Cost performance index | CPI = EV / AC | < 1 = over cost |
+| Schedule performance index | SPI = EV / PV | < 1 = behind |
+| EAC (typical variance) | BAC / CPI | Current cost performance continues |
+| EAC (atypical) | AC + (BAC − EV) | Variance was a one-off |
+| EAC (both indices) | AC + (BAC − EV)/(CPI × SPI) | Schedule pressure will keep costing money |
+| ETC | EAC − AC | Remaining spend |
+| VAC | BAC − EAC | Projected over/under at end |
+| TCPI | (BAC − EV)/(BAC − AC) | Efficiency required to still hit BAC |
 
 ---
 
 ## The argument
 
-- Scrum (Scrum Guide, November 2020 — current)
-- Kanban and flow
-- Flow metrics
-- What Scrum abandons
+- The three inputs
+- Metrics
 
 ---
 
-## The evidence
+## Worked example
 
-- **Serrador & Pinto (2015)**, 1,002 projects: agile use positively affected both efficiency and overall stakeholder satisfaction; quality of the project vision/goals was a marginally significant moderator.
-- **Koch et al. (2023)**, pre-registered meta-analysis, k = 41, N = 73,825: small effects on job satisfaction, strain, and commitment; **medium-to-large** effects on performance and innovative behaviour; medium effect on psychological empowerment. Effects were **stronger outside software** (manufacturing, healthcare, logistics) and stronger in published than unpublished records — note the publication-bias signal to students.
-- **Lieberum et al. (2022)**, *M&SOM*, controlled lab experiment with a 2×2 design: performance was higher with **time-boxed progression**, because under flexible progression people over-invest in early phases — the "**progression fallacy**." Adding self-imposed phase goals on top of time-boxing added nothing; combining phase goals with *flexible* progression (i.e. traditional PM) made things actively worse. This is the cleanest causal evidence available that the *timebox specifically* is doing work.
-- **Contra:** Badran et al. (2024), 392 construction project managers in Jordan: agile PM positively affected innovation, responsiveness, quality and client satisfaction but **negatively affected cost performance** and had no significant effect on time. Domain matters.
+Project: BAC = $500,000, planned duration 20 weeks. **At end of week 8:** PV = $200,000, EV = $170,000, AC = $190,000.
+
+- CV = 170,000 − 190,000 = **−$20,000** (over cost)
+- SV = 170,000 − 200,000 = **−$30,000** (behind schedule)
+- CPI = 170/190 = **0.895** → getting 89.5 cents of value per dollar
+- SPI = 170/200 = **0.850**
+- EAC (typical) = 500,000/0.8947 = **$558,824**
+- EAC (atypical) = 190,000 + 330,000 = **$520,000**
+- EAC (both indices) = 190,000 + 330,000/(0.8947 × 0.85) = **$623,910**
+- ETC (typical) = 558,824 − 190,000 = **$368,824**
+- VAC = 500,000 − 558,824 = **−$58,824**
+- TCPI(BAC) = 330,000/310,000 = **1.065** → you now need 6.5% *better than planned* efficiency for the rest of the project, having averaged 10.5% worse. Ask the class whether that's plausible. It almost never is, and that is the single most useful thing EVM tells a manager.
+
+**The spread between $520k and $624k is the lesson.** The formula choice is a *judgement about causation*, not a computation. Make students defend a choice.
+
+**The SPI pathology.** As a project approaches completion, EV → BAC and PV → BAC, so **SPI → 1 regardless of how late the project is**. A project delivering a year late shows SPI = 1.00 on its final day. SPI is also denominated in dollars, not time.
+
+**Earned Schedule fixes this.** ES = the time at which the *planned* value equals the *current* earned value: find t such that PV(t) = EV. Then SPI(t) = ES/AT, and IEAC(t) = PD/SPI(t).
+
+Continuing the example with PV accruing linearly at $25,000/week:
+ES = 170,000/25,000 = **6.80 weeks**. AT = 8. SPI(t) = 6.80/8 = **0.850**. IEAC(t) = 20/0.85 = **23.5 weeks** — a forecast in *time units*, which SPI cannot give you. (With a linear PV curve SPI and SPI(t) coincide; with a realistic S-curve they diverge, and they diverge most near the end, which is exactly where you need the number.)
+
+**Does EVM actually forecast well?** Yes, with caveats, and the evidence is decent. Batselier & Vanhoucke (2015, *JCEM*) evaluated EVM forecasting on **51 real projects** (mostly construction) plus Monte Carlo support and found that highly accurate time and cost forecasts are obtainable, while identifying which methods perform best. Barrientos-Orellana et al. (2021, 2023) compared 27 duration and 30 cost methods across 4,100 simulated networks and found the **simplest formulations were most stable and accurate**, with accuracy degrading as networks become more parallel. De Marco et al. (2023, 79 projects) report EAC MAPE improving from ~14.6% early to ~11.4% late under a proactive risk strategy.
+
+**What EVM cannot see:** quality, stakeholder satisfaction, whether the scope was worth building, rework not yet discovered, and any risk that hasn't yet hit the ledger. A project can show CPI = 1.0 the week before it is cancelled.
 
 ---
 
 ## Check yourself
 
-1. Who is accountable for the Product Backlog? Can a committee hold that accountability?
-2. What is the commitment attached to the Increment, and what happens if the team redefines it mid-sprint?
-3. Our team has 30 items in progress and finishes 5 per week. A stakeholder wants to know when their new item will be done. What do you tell them, and what should you change?
-4. What does Scrum say about budgets, contracts, or portfolios? Why is that silence deliberate?
+1. CPI = 1.05 and SPI = 0.80. What is probably happening on this project?
+2. Which EAC formula would you use if last month's overrun was a one-time supplier failure? What if it was a systematic underestimate?
+3. TCPI = 1.4. What are you going to tell the sponsor?
+4. Why does SPI become useless near the end, and what replaces it?
 
 ---
 
 ## Attack this claim
 
-> "Agile is better than waterfall."
+> "EVM gives objective, quantitative project control."
 
-Force decomposition: better at *which* success dimension, in *which* domain, measured *how*? The honest synthesis: strong evidence for stakeholder and team dimensions, mixed-to-weak for cost, domain-dependent throughout, and much of the primary evidence is self-reported survey data with obvious selection effects.
+Attack: EV depends on a subjective percent-complete judgement (0/100, 50/50, and level-of-effort rules all produce different EVs from the same work); the baseline is a forecast, so EVM measures deviation from a guess; it is silent on quality and value; and it can be gamed by claiming credit early.
 
 ---
 
-## Somewhere else entirely
+## Studio preview
 
-**Jazz ensemble vs. symphony orchestra.** The orchestra has a score (baseline), a conductor (PM), and rehearsals that converge on a fixed performance. The jazz quartet has a head (product goal), agreed changes (definition of done), and improvises within them. Neither is better. But note: the quartet's freedom depends on *every* member being individually excellent, which is precisely the condition organizations skip when they "adopt agile."
+Give teams three months of raw PV/EV/AC data with one anomaly seeded (e.g. a month where AC drops because an invoice was late). Teams must produce a forecast and identify the data-quality problem. Most produce the forecast and miss the anomaly — which is the debrief.
 
 ---
 
 ## Next
 
-- Notes: [Week 11 on the course site](../weeks/week-11.qmd)
-- AI lab: [Lab 11](../labs/lab-11.qmd)
-- Reading: Larson Ch. 15
+- Notes: [Week 11](../weeks/week-11.qmd)
+- Studio: [Lab 11](../labs/lab-11.qmd)
+- Reading: Larson Ch. 13

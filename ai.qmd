@@ -1,33 +1,100 @@
 ---
 title: "AI Studio"
-subtitle: "The ALTER system, the source shelf, and the four-rung agent ladder"
+subtitle: "Gemini, Antigravity, the source shelf, and the study loop"
 ---
 
-Project management is one of the first disciplines where the routine artifacts — charters,
-work breakdowns, risk registers, status reports — can be drafted by a machine in seconds.
-That does not make the discipline easier. It moves the difficulty from *production* to
-*judgement*: someone still has to know whether the WBS is complete, whether the estimate is
-defensible, and whether the status report is telling the truth.
+Project management is one of the first disciplines where the routine artifacts — charters, work
+breakdowns, risk registers, status reports — can be drafted by a machine in seconds. That does not
+make the discipline easier. It moves the difficulty from *production* to *judgement*: someone still
+has to know whether the WBS is complete, whether the estimate is defensible, and whether the status
+report is telling the truth.
 
-This course teaches that judgement by making you use the tools constantly and hold them to
-account every time.
+This course teaches that judgement by making you use the tools constantly and hold them to account
+every time.
 
-## The ALTER system
+## What you have, and what it costs you
 
-Five roles, five different jobs. The framework is Sandeep Swadia's "University in a Box"
-from *How To Become Dangerously Self-Educated (with AI)*; every week's notes carry all five.
+| Tool | Role in this course | Access |
+|:--|:--|:--|
+| **Gemini** | The reasoning and drafting half — generating WBSs, risk registers, candidate lessons, and the counter-argument you have to defeat | Free tier is sufficient for every studio |
+| **Antigravity** | The agentic half — directing agents to write the checker, the CPM implementation, the LP formulation, the agent that refuses your sloppy register | Free to everyone |
+| **Gemini API in Colab** | The browser-only substitute for Antigravity | Key supplied in the course notebook |
+
+: {tbl-colwidths="[18,56,26]"}
+
+::: {.callout-important}
+## Nothing here requires a paid plan
+The free tiers cover all fourteen studios, and the instructor supplies API keys to anyone who needs
+them. Google's free student year of AI Pro is a convenience for those eligible, not a requirement —
+it takes a payment method and renews at full price, so set a reminder if you claim it.
+:::
+
+## The three rules
+
+1. **Label it.** Any submitted artifact a model produced or substantially drafted says so, names the
+   tool, and includes the prompt or a shareable transcript link.
+2. **Verify it.** Every quantitative result a model generates arrives with the code or hand
+   calculation that checks it. **The check is graded**, not the output.
+3. **Own it.** "The model said so" is not a defence — not here, and not in a project review.
+
+## How much AI, on which assessment
+
+Each assessment carries a level from the Generative AI Acceptable Use Scale. The level is repeated
+on every lab sheet, so you never have to guess.
+
+| Assessment | Level |
+|:--|:--|
+| Midterm | **1 · Prohibited** |
+| Conceptual assignments | **1 · Prohibited during the attempt** — study with it freely |
+| Studio assignments | **4 · Full use with documentation** |
+| Final project | **5 · Full use with human oversight** |
+
+: {tbl-colwidths="[52,48]"}
+
+The full policy, the disclosure block you append to submissions, and the confidentiality rules that
+apply to your partner organization's information are in the
+[syllabus](syllabus.qmd#use-of-generative-artificial-intelligence).
+
+::: {.callout-note}
+## How your instructor uses AI
+You are asked to label, verify and own your AI use; the same standard applies to the person
+teaching you. AI helped organize this course — sequencing, drafting notes and cases, generating
+studio datasets, computing every answer key in code, and building this site. It does **not** grade
+you, your work is **never** uploaded to a third-party AI system, and every decision is the
+instructor's. The full disclosure is in the
+[syllabus](syllabus.qmd#instructor-use-of-ai-disclosure), and since
+[the repository](https://github.com/harunpirim/IMSE456) is public you can read the source yourself.
+:::
+
+## Build → Use → Reconcile
+
+Every Thursday studio runs the same three movements, and the AI sits inside the first one. You
+*build* the tool — often by directing an agent to write it — then *use* the professional software
+on the same data, then explain where the two disagree.
+
+This is the entire argument for teaching project management to engineers rather than leaving it to
+a certification. A course that only teaches ProjectLibre produces students who can operate a tool
+until the version changes. A course that only teaches the mathematics produces students who have
+never seen a resource histogram. Building it and then using it produces the one capability that
+transfers: **knowing when the tool is wrong.**
+
+## The study loop
+
+### The five roles
+
+Five roles, five different jobs. The framework is Sandeep Swadia's "University in a Box" from *How To Become Dangerously Self-Educated (with AI)*. None of it is graded — it is the fastest way to find out what you have wrong before an assignment does it for you.
 
 | Role | Its job | Where you meet it |
 |:--|:--|:--|
 | **Adviser** | Sets destination, baseline, sequencing, cut list | The [syllabus](syllabus.qmd) — including what this course deliberately does not cover |
 | **Librarian** | Curates credible sources, defends against distraction | The source shelf below, and per-week readings |
-| **Tutor** | Asks one question at a time, finds the gap, does not lecture | "Tutor check" in every week's notes; the per-week prompts in each lab |
+| **Tutor** | Asks one question at a time, finds the gap, does not lecture | "Tutor check" in every week's notes; the per-week prompt at the foot of each lab sheet |
 | **Editor** | Challenges logic, finds weak arguments, cuts repetition | "Editor challenge" — a defensible-sounding claim you have to attack |
 | **Roommate** | Brings perspective from an unrelated field | "Roommate link" — a cross-domain analogy that transfers structure, not vocabulary |
 
 : {tbl-colwidths="[14,44,42]"}
 
-### Tutor
+#### Tutor prompt
 
 ```text
 Be my tutor on [TOPIC] in project management. Ask me one question at a
@@ -43,7 +110,7 @@ me" means switch to harder questions on the same topic.
 For exam preparation, the retrieval variant — mixed questions drawn from *all* prior weeks,
 not the current one. Mixing is what makes retrieval practice work.
 
-### Editor
+#### Editor prompt
 
 ```text
 Attack what I just wrote. Find the weakest link in the argument, the claim
@@ -51,7 +118,7 @@ that isn't supported, and the place where I've confused a definition with
 a conclusion. Be specific and be harsh. Don't tell me what's good about it.
 ```
 
-### Roommate
+#### Roommate prompt
 
 ```text
 I've just learned [CONCEPT] in project management. You work in a completely
@@ -94,24 +161,9 @@ put in a report, verify against the actual document. This is the entire reason t
 separate step rather than something you do inline.
 :::
 
-## The four-rung ladder
+## The weekly cycle
 
-The labs escalate deliberately. Building an agent in Week 2 produces an agent that generates
-confident nonsense you cannot evaluate; the first third of the course is spent learning to
-evaluate, which is what makes the agent worth building later.
-
-| Weeks | Rung | What you do | What it teaches |
-|:--|:--|:--|:--|
-| 1–3 | **Grounded prompting** | Load the shelf; make the model answer from it; catch it when it reconstructs a paper from memory. | Evaluation before generation. |
-| 4–7 | **Tool-calling** | The model produces the WBS, the network, the estimates — then you write the code that checks its work. | The model proposes; the code adjudicates. Kills the plausible-Gantt-chart failure mode. |
-| 9–12 | **Skills and agents** | Package a repeatable job — EVM reporter, risk-register maintainer, hostile reviewer — with a written spec and acceptance tests you wrote first. | Specification *is* the skill. Writing acceptance criteria for an agent is requirements engineering. |
-| 13–16 | **Agent in the loop** | Your final project runs an agent that maintains a live artifact. The report says what it got wrong and how you caught it. | Governing an automated collaborator — the part no PM textbook covers yet. |
-
-: {tbl-colwidths="[10,20,36,34]"}
-
-## The weekly loop
-
-Roughly 60–90 minutes per module, outside class.
+Roughly 60–90 minutes per chapter, outside class. Not graded.
 
 ```text
 1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
@@ -128,8 +180,4 @@ attacked is what closes them. A loop that stops after step 3 feels productive an
 
 ## Course policy on AI
 
-Summarised here, authoritative in the [syllabus](syllabus.qmd#artificial-intelligence-policy):
-**label it, verify it, own it.** Every quantitative result a model generates is submitted with
-the code or hand calculation that checks it — that check is graded. The midterm is the one
-place the tools are set aside, because the reasoning it tests is the reasoning you need when
-the tool is unavailable or wrong.
+Stated in full in the [syllabus](syllabus.qmd#use-of-generative-artificial-intelligence).

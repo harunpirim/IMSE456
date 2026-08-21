@@ -1,6 +1,6 @@
 ---
-title: "Week 4 — Scope: charter, requirements, WBS"
-subtitle: "IMSE 456/656 · Project Management"
+title: "Week 4 — Defining the Project"
+subtitle: "IMSE 456/656 · Larson Ch. 4"
 author: Harun Pirim
 date: "2026-09-14"
 ---
@@ -46,7 +46,7 @@ Force precision: *how much* do they change, in which domains, and at what cost p
 
 ---
 
-## Studio
+## Studio preview
 
 Teams build a WBS for "run a 500-person academic conference" to three levels, then swap and audit against the 100% rule. Almost every team omits project management labour, contingency, and post-event work. That omission is the debrief.
 
@@ -54,6 +54,6 @@ Teams build a WBS for "run a 500-person academic conference" to three levels, th
 
 ## Next
 
-- Notes: [Week 4 on the course site](../weeks/week-04.qmd)
-- AI lab: [Lab 4](../labs/lab-04.qmd)
+- Notes: [Week 4](../weeks/week-04.qmd)
+- Studio: [Lab 4](../labs/lab-04.qmd)
 - Reading: Larson Ch. 4

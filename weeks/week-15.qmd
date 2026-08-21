@@ -1,80 +1,81 @@
 ---
-title: "Week 15 · Case part 2 and the evidence adjudication panel"
+title: "Week 15 · Project Closure · International Projects"
 week: 15
 release: "2026-11-30"
+chapter: "Larson Ch. 14 + 16"
 dates: "1 and 3 December"
-reading: "Appendix C — evidence index"
-session-a: "Failing-project case, part 2 — staged decision points"
-session-b: "Evidence adjudication panel — three contested claims"
+reading: "Larson Ch. 14 + 16"
+session-a: "The lessons-learned document nobody read"
+session-b: "Mine your own history, and close properly"
 video:
   provider: none
   id: ""
-slides: false
+slides: true
 lab: true
 ---
 
 ::: {.week-meta}
 <dl>
 <dt>Sessions</dt><dd>1 &amp; 3 December</dd>
-<dt>Tuesday</dt><dd>Failing-project case, part 2 — staged decision points</dd>
-<dt>Thursday</dt><dd>Evidence adjudication panel — three contested claims</dd>
-<dt>Reading</dt><dd>Appendix C — evidence index</dd>
-<dt>Milestone</dt><dd>M7 — see the <a href='../syllabus.qmd'>syllabus</a></dd>
+<dt>Chapter</dt><dd>Larson Ch. 14 + 16</dd>
+<dt>Tuesday</dt><dd>The lessons-learned document nobody read — concept and case</dd>
+<dt>Thursday</dt><dd>Mine your own history, and close properly</dd>
+<dt>Reading</dt><dd>Larson Ch. 14 + 16</dd>
+<dt>Due</dt><dd>SA14 · Sun 6 Dec</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
 
-## Tuesday — the case, part 2
+## Concepts introduced
 
-The staged decision points continue from Week 14. At each reveal your team commits to a
-decision **before** seeing what happened next. The record of what you decided, and when, is
-the material for the debrief — a case handed over complete is a reading assignment, not a
-diagnosis.
-
-Bring your Week 14 diagnostic worksheet. You will be asked to defend a call you made before
-you knew the outcome.
-
-## Thursday — evidence adjudication panel
-
-Three contested claims. For each, both sides come with primary papers, and teams are assigned
-a side they did not choose.
-
-| # | The claim | For | Against |
-|:--|:--|:--|:--|
-| 1 | "99.5% of megaprojects fail" | Flyvbjerg (2021) base rates, 2,062 projects | Chapman (2024, 2025) Scandinavian data; Love, Ika et al. (2019) |
-| 2 | "Agile outperforms predictive" | Gemino et al. (2021); Koch et al. (2023) meta-analysis | Badran et al. on cost performance; Serrador & Pinto (2015) qualifications |
-| 3 | "Top management support is the dominant success factor" | Young & Jordan (2008); Young & Poon (2013) | Blaskovics et al., LASSO-ranked factors |
-
-: {tbl-colwidths="[5,35,30,30]"}
-
-::: {.callout-note}
-## How this is scored
-The rubric rewards students who state **what evidence would change their mind**. It does not
-reward picking the side that turns out to be better supported. A team that argues its assigned
-side well *and* names the finding that would defeat it scores higher than a team that happens
-to be right.
+::: {.chips}
+<span class="chip">normal, premature, perpetual, failed and changed-priority closure</span><span class="chip">wrap-up activities</span><span class="chip">the close-out report</span><span class="chip">post-implementation evaluation</span><span class="chip">360-degree review</span><span class="chip">retrospectives</span><span class="chip">why lessons learned are rarely learned</span><span class="chip">archiving</span><span class="chip">legal-political, security, geographic, economic, infrastructure and cultural factors</span><span class="chip">site selection</span><span class="chip">Hofstede — uses and misuses</span><span class="chip">culture shock</span><span class="chip">selection and training</span>
 :::
 
-## The eight-step diagnostic protocol
+## Tuesday — The lessons-learned document nobody read
 
-The protocol from Week 14, reproduced here because you will use it on the final:
+::: {.case}
+Forty archived reports, and the one practice that finally made the forty-first change what the next team did.
 
-1. Establish what "failing" means to whom — which success dimension is actually missing.
-2. Separate the forecast from the performance: was the plan wrong, or the execution?
-3. Reconstruct the baseline and check whether one exists at all.
-4. Identify the measurement regime — what is being counted, and what is not.
-5. Locate the decision points where information was available and not used.
-6. Distinguish structural causes from personnel causes; most attributions get this backwards.
-7. Rank candidate interventions by expected effect given the evidence base, not by convention.
-8. State what you would need to observe to know your diagnosis is wrong.
+::: {.qn}
+Your organization has forty lessons-learned reports. Name the mechanism that would make the forty-first useful. "Write it better" is not a mechanism.
+:::
+:::
 
-## Final exam
+## Thursday studio
 
-There is no final examination. The final project report and presentation carry the weight.
-See [Final Project](../project.qmd).
+::: {.studio}
+#### Mine your own history, and close properly
 
+Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
 
-## This week's AI lab
+**[Open the Week 15 lab sheet](../labs/lab-15.qmd)** · [slides](../slides/week-15.qmd)
+:::
 
-[Lab 15 — Adjudicate a contested claim without letting the model pick a side](../labs/lab-15.qmd)
+## Lecture notes
+
+::: {.callout-note}
+The synthesis material below — the eight-step protocol for diagnosing a failing project — is the analytical spine of this week and of the final report. Extended notes specific to Larson Ch. 14 (closure mechanics) and Ch. 16 (international projects) are in preparation; the concepts list above and the reading are the assessable material for those.
+:::
+
+### Diagnosing a failing project — synthesis
+
+### Structure
+
+No new content. A single extended case, presented in stages, with students making decisions before seeing what happened next.
+
+**Suggested cases** (all well documented, all with published post-mortems): Denver International Airport baggage system; the UK NHS National Programme for IT; Boeing 787 outsourcing; Berlin Brandenburg Airport; Healthcare.gov; a university ERP implementation.
+
+**The diagnostic protocol students should be able to run by now:**
+
+1. **What was the success definition, and whose?** (Week 1)
+2. **Was scope baselined, and was change controlled?** (Week 4)
+3. **What did the schedule model assume, and was it ever true?** (Weeks 5–6)
+4. **What did the cost data say, and when did it first say it?** (Weeks 7–8)
+5. **Which risks were identified but unowned? Which bias is visible in the original estimate?** (Week 9)
+6. **Was the delivery approach fit for the requirement volatility?** (Weeks 10–11)
+7. **Where was top management, and what did they actually provide?** (Week 12)
+8. **Rank interventions by evidence strength, not by convention.**
+
+Step 8 is the assessment. A student who proposes "better communication" without evidence has not passed; a student who proposes "resource the sponsor's commitment or cancel" and cites Young & Poon has.

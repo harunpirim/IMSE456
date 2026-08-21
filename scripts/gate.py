@@ -107,9 +107,17 @@ def as_date(v) -> dt.date | None:
 
 
 def copy_tree() -> None:
+    """Refresh _build/ from the source tree.
+
+    Prefers a clean rebuild, but falls back to overwriting in place on systems
+    where the directory cannot be removed (some sandboxed or synced volumes).
+    """
     if BUILD.exists():
-        shutil.rmtree(BUILD)
-    shutil.copytree(ROOT, BUILD,
+        try:
+            shutil.rmtree(BUILD)
+        except (PermissionError, OSError):
+            pass
+    shutil.copytree(ROOT, BUILD, dirs_exist_ok=True,
                     ignore=lambda d, names: [n for n in names if n in SKIP])
 
 
@@ -222,7 +230,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # Die quietly when piped into `head`, the way a normal Unix tool does.
     try:
-        main()
-    except BrokenPipeError:   # e.g. `gate.py | head`
+        import signal
+        if hasattr(signal, "SIGPIPE"):
+            signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+    except Exception:
         pass
+    main()

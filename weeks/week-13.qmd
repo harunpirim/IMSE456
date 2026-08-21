@@ -1,11 +1,12 @@
 ---
-title: "Week 13 · People, stakeholders, and governance"
+title: "Week 13 · Being an Effective Project Manager · Managing Project Teams"
 week: 13
 release: "2026-11-16"
+chapter: "Larson Ch. 10 + 11"
 dates: "17 and 19 November"
-reading: "Larson Ch. 3, 10–12"
-session-a: "People, stakeholders, sponsorship, organizational structure"
-session-b: "Studio — stakeholder map and sponsor role-play"
+reading: "Larson Ch. 10 + 11"
+session-a: "The sponsor who said yes"
+session-b: "Map the network you are actually working in"
 video:
   provider: none
   id: ""
@@ -16,22 +17,51 @@ lab: true
 ::: {.week-meta}
 <dl>
 <dt>Sessions</dt><dd>17 &amp; 19 November</dd>
-<dt>Tuesday</dt><dd>People, stakeholders, sponsorship, organizational structure</dd>
-<dt>Thursday</dt><dd>Studio — stakeholder map and sponsor role-play</dd>
-<dt>Reading</dt><dd>Larson Ch. 3, 10–12</dd>
-<dt>Due</dt><dd>SA12 · Stakeholder map + salience overlay — <span class='tabular'>2026-11-22</span><br>CA8 · Concepts — Weeks 12–13 — <span class='tabular'>2026-11-22</span><br>FP3 · Risk register + EVM status report — <span class='tabular'>2026-11-20</span></dd>
+<dt>Chapter</dt><dd>Larson Ch. 10 + 11</dd>
+<dt>Tuesday</dt><dd>The sponsor who said yes — concept and case</dd>
+<dt>Thursday</dt><dd>Map the network you are actually working in</dd>
+<dt>Reading</dt><dd>Larson Ch. 10 + 11</dd>
+<dt>Due</dt><dd>CA8 (Ch 10–12, 15) · SA12 · <strong>FP3</strong> Fri 20 Nov</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
 
-## Learning objectives
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">managing versus leading</span><span class="chip">mapping stakeholder dependencies</span><span class="chip">influence as exchange and its currencies</span><span class="chip">social network building</span><span class="chip">management by wandering around</span><span class="chip">managing upward</span><span class="chip">building trust</span><span class="chip">the five-stage team model</span><span class="chip">team norms</span><span class="chip">functional versus dysfunctional conflict</span><span class="chip">virtual teams</span><span class="chip">groupthink, bureaucratic bypass, entrepreneur's disease, team infatuation, going native</span>
+:::
+
+## Tuesday — The sponsor who said yes
+
+::: {.case}
+Enthusiastic verbal support in every meeting, and a quiet refusal to reassign the one engineer the project depends on.
+
+::: {.qn}
+That is a specific kind of support. Name it — and say what you do on Monday morning.
+:::
+:::
+
+## Thursday studio
+
+::: {.studio}
+#### Map the network you are actually working in
+
+Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
+
+**[Open the Week 13 lab sheet](../labs/lab-13.qmd)** · [slides](../slides/week-13.qmd)
+:::
+
+## Lecture notes
+
+### Learning objectives
 
 - Perform a stakeholder analysis and build an engagement strategy differentiated by stakeholder position.
 - State the evidence on top-management support and explain why it outranks methodology.
 - Describe the project manager's authority problem and the structures that resolve it.
 
-## Core content
+### Core content
 
 **Lead with the strongest finding in the field.** Young & Jordan (2008) provide evidence that **top management support is the most important critical success factor — not simply one among many**, and that conventional technical and project-management advice has less impact on project success than previously assumed. Young & Poon (2013, *IJPM*) replicated with fuzzy-set QCA across 15 cases: top management support was **much more necessary than any other success factor, and sometimes sufficient**. Their conclusion is deliberately provocative — that emphasis on project methodologies "may be misdirecting effort."
 
@@ -79,10 +109,3 @@ Attack with Young & Jordan directly: the evidence points above the PM. But then 
 
 **A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask students what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
 :::
-
-
-## This week's AI lab
-
-[Lab 13 — Governance: what happens when the agent is wrong in public](../labs/lab-13.qmd)
-
-[Slides for this week](../slides/week-13.qmd)

@@ -1,28 +1,109 @@
 ---
-title: "Lab 1 · Build the shelf, then catch the model reconstructing it"
-subtitle: "Rung 1 · Grounded prompting"
+title: "Studio 1 · Set up your toolchain, and classify what you are managing"
+subtitle: "Week 1 — Modern Project Management · Larson Ch. 1"
 week: 1
 release: "2026-08-24"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Week</dt><dd>1 — <a href='../weeks/week-01.qmd'>What a project is, and why anyone needed a word for it</a></dd>
-<dt>Rung</dt><dd>Grounded prompting</dd>
+<dt>Deliverable</dt><dd><strong>SA1</strong> — your Taiga sandbox URL, the <code>.pod</code>, the classification table, the paragraph</dd>
+<dt>Due</dt><dd>SA1 · Sun 30 Aug</dd>
+<dt>Tools</dt><dd>Taiga · ProjectLibre · Colab · Gemini · Antigravity</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-01.qmd">Week 1 — Modern Project Management</a></dd>
 </dl>
 :::
 
-## The task
+::: {.callout-important appearance="simple"}
+**This is individual work.** Every student submits their own. The final project is where you work
+in a team; the studio is where the mechanics get into your own hands.
+:::
 
-Load the four standards documents and three of the empirical papers from the [source shelf](../ai.qmd#the-source-shelf) into a single grounded workspace (NotebookLM, a Claude Project, or a ChatGPT project — any tool that lets you attach sources).
+The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
+The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
+Build is a legitimate finding, reported as one.
 
-Ask it: *"What percentage of large projects fail, according to the sources I gave you?"* Then ask the same question in a fresh chat **with no sources attached**.
+::: {.part}
+### Part 1 · Before you arrive
 
-**Deliverable.** One page: both answers side by side, the specific differences, and — this is the graded part — a claim the ungrounded model made that is *not supported by any source on the shelf*, with the source that contradicts it.
+Accounts and data only. Nothing here needs software installed at home.
 
-## Tutor prompt for this week
+1. Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`.
+2. Create the cloud folder you will use all semester — Google Drive or OneDrive, named `IMSE456`. **Everything in this course is saved there, never to a local disk.**
+3. Open the access form linked on Blackboard and answer both questions: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
+:::
 
-Run this before you read the notes, and again after.
+::: {.part}
+### Part 2 · What you will have at the end
+
+SA1 — your Taiga sandbox URL, the <code>.pod</code>, the classification table, the paragraph
+:::
+
+::: {.part}
+### Part 3 · Build it yourself — 25 minutes
+
+1. Create your own Taiga account at <code>tree.taiga.io</code> and a private sandbox project named <code>IMSE456-yourlastname</code>. The team project comes later, at FP0.
+2. Install ProjectLibre and open the supplied <code>.pod</code>. If it fails on your machine it fails <em>today</em>, not in Week 4 — and GanttProject is the sanctioned fallback.
+3. Open the course Colab notebook and run the setup cell.
+4. Claim your AI access: register the free student year at <a href="https://gemini.google/students/">gemini.google/students</a> if you are eligible, and install <a href="https://antigravity.google/">Antigravity</a>, which is free to everyone. If neither is available to you, the free Gemini tier is sufficient for every studio in this course — tell the instructor so it is on record.
+5. Ask Gemini to generate six candidate initiatives for a campus organization. Classify each as project, operation, or hybrid using the temporary-and-unique test — and record every one the model classified wrongly.
+:::
+
+::: {.part}
+### Part 4 · Now the professional tool — 20 minutes
+
+1. Enter the three you classified as projects into your Taiga sandbox as epics.
+2. Enter the same three into ProjectLibre as summary tasks with placeholder durations.
+3. Write down what each tool <em>forced</em> you to state that the other did not.
+:::
+
+::: {.part}
+### Part 5 · Where do they disagree? — 15 minutes
+
+Which tool made you commit to something you did not yet know? One paragraph, naming the specific field.
+
+Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+:::
+
+::: {.part}
+### Part 6 · Run the check
+
+Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
+prints a completion code. If it fails, you have found your error while it is still cheap to fix —
+that is the point of it. Paste the code into your submission.
+:::
+
+::: {.part}
+### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
+
+- [ ] Taiga account created and the sandbox project exists
+- [ ] the .pod opens on your machine or you have reported the failure
+- [ ] AI access claimed or reported
+- [ ] six items classified with a written justification each
+- [ ] the paragraph names a specific field
+:::
+
+::: {.part}
+### Part 8 · Where it is saved
+
+`IMSE456/studio-01/` in your cloud folder. Name files `SA1_yourlastname.*`.
+
+**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
+left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+:::
+
+::: {.browser-path}
+**Working on lab machines?**
+
+**No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
+
+**No Antigravity?** Use the Gemini API from the course Colab notebook — the key is in the shared config cell. Same work, browser only.
+:::
+
+## Study loop for this week
+
+Run this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.
 
 ```text
 Be my tutor on what "project success" means and why it's contested. Ask me
@@ -31,22 +112,9 @@ then attack my definition. Push until I admit it's multidimensional, then
 make me name the dimensions myself.
 ```
 
-## The weekly loop
+See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.
 
-This lab is step 4–6 of the loop. The whole cycle:
 
-```text
-1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
-2. Read the module     — 20 min — notes + one primary source
-3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
-4. Write something     — 15 min — a plan, an argument, a worked problem
-5. EDITOR              — 10 min — attack what I wrote
-6. ROOMMATE            —  5 min — where else does this structure appear?
-7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
-```
-
-Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
-
-## Submission
-
-Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
+::: {.callout-important appearance="simple"}
+**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
+:::

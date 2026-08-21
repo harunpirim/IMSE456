@@ -2,10 +2,11 @@
 title: "Week 8 · Integration, review, and the midterm"
 week: 8
 release: "2026-10-12"
+chapter: "—"
 dates: "13 and 15 October"
-reading: "Weeks 1–7"
-session-a: "Integration and review — Weeks 1–7 as one connected argument"
-session-b: "Midterm examination — in class, closed notes, no computers"
+reading: "Weeks 1–7, for the midterm"
+session-a: "The chain, argued backwards"
+session-b: "Midterm examination"
 video:
   provider: none
   id: ""
@@ -16,60 +17,60 @@ lab: true
 ::: {.week-meta}
 <dl>
 <dt>Sessions</dt><dd>13 &amp; 15 October</dd>
-<dt>Tuesday</dt><dd>Integration and review — Weeks 1–7 as one connected argument</dd>
-<dt>Thursday</dt><dd><strong>Midterm examination</strong> — in class, closed notes, no computers</dd>
-<dt>Reading</dt><dd>Weeks 1–7</dd>
-<dt>Due</dt><dd>MID · Midterm examination — in class — <span class='tabular'>2026-10-15</span></dd>
+<dt>Chapter</dt><dd>—</dd>
+<dt>Tuesday</dt><dd>The chain, argued backwards — concept and case</dd>
+<dt>Thursday</dt><dd>Midterm examination</dd>
+<dt>Reading</dt><dd>Weeks 1–7, for the midterm</dd>
+<dt>Due</dt><dd><strong>Midterm — Thu 15 Oct</strong></dd>
 </dl>
 :::
 
 <!-- VIDEO -->
 
-## What this week is for
+## Concepts introduced
 
-Weeks 1–7 are not seven topics. They are one argument, and the midterm tests whether you
-can see it:
-
-> Success is contested and multidimensional (W1), which is why you have to read a standard
-> for its *shape* rather than its checklist (W2), which is why selection is a judgement about
-> criteria and not only a calculation (W3), which is why scope has to be decomposed before it
-> can be scheduled (W4), which is what makes a critical path meaningful (W5), which is what
-> makes crashing an economic decision rather than an arithmetic one (W6), which is why an
-> estimate's accuracy is a function of design maturity rather than estimator effort (W7).
-
-Tuesday is spent walking that chain in both directions, with the quantitative pieces re-worked
-on the board. Bring the problems you got wrong.
-
-## Midterm — Thursday 15 October, in class
-
-::: {.callout-important}
-## Format
-75 minutes. **Closed book, closed notes. No computers, tablets, or phones.** A non-programmable
-calculator is permitted and recommended. One double-sided page of hand-written notes is **not**
-permitted — the point of this exam is what you can reason through unaided.
+::: {.chips}
+<span class="chip">the Ch 1–7 chain as a single argument</span><span class="chip">where an error does the most damage</span>
 :::
 
-**Covers** Weeks 1–7. Earned value (Week 9) is *not* on the midterm.
+## Tuesday — The chain, argued backwards
 
-**Shape of the paper**
+::: {.case}
+Tuesday is not a lecture. Teams work the problems they got wrong and reconstruct the causal chain from Chapter 1 to Chapter 7 on the board, in both directions.
+
+::: {.qn}
+Success is contested, so strategy decides what to select, so structure decides who can deliver it, so scope decides what <em>it</em> is, so estimates price it, so the network sequences it, so risk says how wrong all of that might be. Where in that chain does an error do the most damage, and why there?
+:::
+:::
+
+## Tuesday — integration
+
+Not a lecture. Work the problems you got wrong and reconstruct the chain from Chapter 1 to
+Chapter 7 on the board, in both directions. Bring your marked-up studio work.
+
+## Thursday — midterm examination
+
+::: {.studio}
+#### 75 minutes · closed book · closed notes · no computers or phones
+
+A non-programmable calculator is permitted and recommended. Covers **Larson Chapters 1–7**.
+
+**AI use: Level 1 — prohibited.** No AI during the examination, and none during a conceptual assignment while it is open. See the [policy](../syllabus.qmd#use-of-generative-artificial-intelligence). Using AI to *prepare* is encouraged — that is what the retrieval prompt is for.
+Earned value is Week 11 and is **not** on this paper.
 
 | Part | Weight | What it asks |
 |:--|--:|:--|
-| A · Short concept | 30% | Definitions, distinctions, and *why* a distinction matters. Expect "name three ways the iron triangle misleads." |
-| B · Quantitative | 45% | A CPM network with a full float table; a crash step; a three-point estimate. Arithmetic is checkable — method is what earns marks. |
-| C · Judgement | 25% | A short scenario. Choose, and defend the choice against the strongest alternative. There is more than one defensible answer; there are many indefensible ones. |
+| A · Short concept | 30% | Definitions, distinctions, and *why* a distinction matters |
+| B · Quantitative | 45% | A network with a full float table, a crash step, a three-point estimate. Arithmetic is checkable — method earns the marks |
+| C · Judgement | 25% | A short scenario. Choose, and defend against the strongest alternative |
 
 : {tbl-colwidths="[26,12,62]"}
 
-**How to prepare.** Re-work the studio problems without the key, then check. Use the
-[retrieval Tutor prompt](../ai.qmd#tutor) for mixed questions across all seven weeks —
-mixing is what makes retrieval practice work, and it is the one form of AI use that helps
-you on a closed-book exam.
+**How to prepare.** Re-work the studio problems without the key, then check. Use the retrieval
+prompt in [AI Studio](../ai.qmd) for mixed questions across all seven weeks — mixing is what makes
+retrieval practice work, and it is the one form of AI use that helps on a closed-book exam.
 
-**What is not tested.** Memorized process catalogues, ITTO tables, or standard edition numbers.
-If it is the kind of thing you would look up in thirty seconds on the job, it is not on the paper.
+**What is not tested.** Memorized process catalogues, ITTO tables, or edition numbers. If you would
+look it up in thirty seconds on the job, it is not on the paper.
+:::
 
-
-## This week's AI lab
-
-[Lab 8 — No lab — midterm week](../labs/lab-08.qmd)

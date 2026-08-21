@@ -1,81 +1,60 @@
 ---
-title: "Week 3 · Selection, business case, and the portfolio"
+title: "Week 3 · Organization: Structure and Culture"
 week: 3
 release: "2026-09-07"
+chapter: "Larson Ch. 3"
 dates: "8 and 10 September"
-reading: "Larson Ch. 2–3"
-session-a: "Selection, business case, stage-gate governance"
-session-b: "Studio — portfolio funding game, then the outcome reveal"
+reading: "Larson Ch. 3"
+session-a: "Two managers, one engineer"
+session-b: "Instantiate a structure and watch it constrain you"
 video:
   provider: none
   id: ""
-slides: true
+slides: false
 lab: true
 ---
 
 ::: {.week-meta}
 <dl>
 <dt>Sessions</dt><dd>8 &amp; 10 September</dd>
-<dt>Tuesday</dt><dd>Selection, business case, stage-gate governance</dd>
-<dt>Thursday</dt><dd>Studio — portfolio funding game, then the outcome reveal</dd>
-<dt>Reading</dt><dd>Larson Ch. 2–3</dd>
-<dt>Due</dt><dd>SA3 · Portfolio funding decision memo — <span class='tabular'>2026-09-13</span><br>FP0 · Team formed, partner confirmed — <span class='tabular'>2026-09-11</span></dd>
+<dt>Chapter</dt><dd>Larson Ch. 3</dd>
+<dt>Tuesday</dt><dd>Two managers, one engineer — concept and case</dd>
+<dt>Thursday</dt><dd>Instantiate a structure and watch it constrain you</dd>
+<dt>Reading</dt><dd>Larson Ch. 3</dd>
+<dt>Due</dt><dd>FP0 partner confirmed · Fri 11 Sep · SA3 · Sun 13 Sep</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
 
-## Learning objectives
+## Concepts introduced
 
-- Compute and interpret NPV, IRR, payback, and a benefit–cost ratio for a project.
-- Explain why financial criteria alone systematically select the wrong projects.
-- Describe stage-gate governance and its documented failure mode.
-
-## Core content
-
-**Financial screens.** NPV = Σ Cₜ/(1+r)ᵗ − I₀. IRR = the r where NPV = 0. Payback = years to recover I₀ (ignores time value and everything after payback — teach it only to explain why it's dangerous). Benefit–cost ratio = PV(benefits)/PV(costs).
-
-**Worked screen.** Project P: I₀ = $500k; net cash flows $180k/yr for 4 years; r = 10%.
-PV = 180(0.9091 + 0.8264 + 0.7513 + 0.6830) = 180 × 3.1699 = $570.6k. NPV = **+$70.6k**. Payback = 500/180 = **2.78 years**. Ask: what does the NPV *not* tell you? (Option value, strategic fit, whether the cash-flow estimate is itself biased — which is Week 9's subject.)
-
-**Why financial screens misfire.** The inputs are forecasts produced by the people who want the project approved. Flyvbjerg's *strategic misrepresentation* is exactly this: benefit overestimation and cost underestimation are not random error, they are a rational response to a competitive approval process. This yields "survival of the unfittest" — the projects that get built are the most misrepresented, not the best (Flyvbjerg, 2005, *Environment and Planning B*).
-
-**Stage-gate.** Cooper's model: sequential stages separated by go/kill decision gates. The intent is to kill bad projects cheaply and early.
-
-**The documented failure mode:** gates become rubber stamps because by gate 3 the sunk cost is political, not just financial. Eliasson (2025, *TR Part A*) shows the mechanism cleanly in Swedish transport data — cost estimates escalate substantially during the *planning* stages while decision-to-build estimates end up close to final cost, because **decisions are locked in before costs and benefits have been properly assessed**. The lock-in doesn't just cause overruns; it distorts project *selection* and removes the incentive to search for cheaper designs.
-
-Also worth teaching: Bianchi et al. (2020, *JBR*, n = 181 software developers) found adoption of Stage-Gate principles **negatively** associated with speed and cost performance in software NPD, while sprint use was positively related to quality and on-time/on-budget completion. Stage-gate is not a neutral default.
-
-::: {.tutor}
-### Tutor check — one question at a time, no lecturing
-
-1. Two projects have identical NPV. What would make you choose one?
-2. Who produced the cash-flow forecast in your business case, and what happens to them if the project is killed?
-3. A gate review has never killed a project in your organization's history. Is the process working?
-4. Why might a project with negative NPV still be correct to fund?
+::: {.chips}
+<span class="chip">functional organization</span><span class="chip">dedicated project teams</span><span class="chip">matrix — weak, balanced, strong</span><span class="chip">network and virtual organizations</span><span class="chip">choosing a structure</span><span class="chip">the ten characteristics of culture</span><span class="chip">the structure–culture interaction</span>
 :::
 
-::: {.editor}
-### Editor challenge — attack this claim
+## Tuesday — Two managers, one engineer
 
-> "Rigorous financial gating is the best defence against wasteful projects."
+::: {.case}
+A balanced matrix in which a shared engineer is committed one hundred percent to two projects by two managers, each of whom has been told their project is the priority.
 
-Attack lines: gates measure the forecast, not the reality; escalation of commitment rises with each passed gate; gating adds cycle time, which in fast-moving domains is itself a cost; the Bianchi finding.
+::: {.qn}
+Nobody in this case did anything wrong. Name the structural feature that produced the failure — then say which structure would have prevented it, and what that structure costs.
+:::
 :::
 
-::: {.roommate}
-### Roommate link
+## Thursday studio
 
-**Venture capital portfolio construction.** A VC expects most investments to fail and prices for it — the portfolio, not the project, is the unit of success. Most organizations run project portfolios as if every project must succeed, which forces optimistic business cases and makes killing anything an admission of error.
+::: {.studio}
+#### Instantiate a structure and watch it constrain you
+
+Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
+
+**[Open the Week 3 lab sheet](../labs/lab-03.qmd)**
 :::
 
-## In-class activity (30 min)
+## Lecture notes
 
-Four competing project proposals, one budget that funds two. Teams must fund, then are shown the true outcomes. Debrief: how much of the selection error was forecast error vs. criteria error?
-
-
-## This week's AI lab
-
-[Lab 3 — Attack your own business case](../labs/lab-03.qmd)
-
-[Slides for this week](../slides/week-03.qmd)
+::: {.callout-note}
+Extended notes for this chapter are in preparation. The concepts above, the reading, and the studio are the assessable material for this week; the midterm and the conceptual assignments are drawn from them.
+:::

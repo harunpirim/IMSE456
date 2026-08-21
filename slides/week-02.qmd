@@ -1,70 +1,59 @@
 ---
-title: "Week 2 — The standards landscape, and how to read a standard"
-subtitle: "IMSE 456/656 · Project Management"
+title: "Week 2 — Organization Strategy and Project Selection"
+subtitle: "IMSE 456/656 · Larson Ch. 2"
 author: Harun Pirim
 date: "2026-08-31"
 ---
 
 ## Where we are going
 
-- Describe what changed between PMBOK 7 and PMBOK 8, and infer what the change signals about the field.
-- Compare PMBOK, PRINCE2, ISO 21502 and the Scrum Guide on what each one actually claims to be.
-- Apply a tailoring heuristic instead of adopting a framework wholesale.
-
----
-
-## The frame
-
-| Standard | What it claims to be | Governance stance |
-|---|---|---|
-| PMBOK 8 (PMI, 2025) | A body of knowledge + a standard; descriptive | Tailoring is mandatory |
-| PRINCE2 (AXELOS/PeopleCert) | A *method* — prescriptive processes and roles | Strong: project board, stage boundaries, exception management |
-| ISO 21502:2020 | Guidance, deliberately generic and vendor-neutral | Light; designed to be referenced in contracts |
-| Scrum Guide (Nov 2020) | A *framework*, immutable, deliberately incomplete | None beyond the team; explicitly silent on portfolio |
+- Compute and interpret NPV, IRR, payback, and a benefit–cost ratio for a project.
+- Explain why financial criteria alone systematically select the wrong projects.
+- Describe stage-gate governance and its documented failure mode.
 
 ---
 
 ## The argument
 
-- PMBOK Guide, Eighth Edition (PMI, November 2025)
-- The pedagogically interesting part is the oscillation
-- The other standards, in one line each:
-- The Scrum Guide is 13 pages and has not been revised since November 2020
-- Tailoring heuristic
+- Financial screens
+- Worked screen
+- Why financial screens misfire
+- Stage-gate
+- The documented failure mode:
 
 ---
 
 ## Check yourself
 
-1. PMBOK went from 49 processes → 0 → 40 in eight years. What problem was each swing solving?
-2. Which of these four documents could you actually sue someone over? Why does that matter?
-3. The Scrum Guide says Scrum is "purposefully incomplete." What is it incomplete *about*, and who fills the gap?
-4. Your organization mandates PRINCE2 and your team wants Scrum. Name the specific artifacts that collide.
+1. Two projects have identical NPV. What would make you choose one?
+2. Who produced the cash-flow forecast in your business case, and what happens to them if the project is killed?
+3. A gate review has never killed a project in your organization's history. Is the process working?
+4. Why might a project with negative NPV still be correct to fund?
 
 ---
 
 ## Attack this claim
 
-> "Standards bodies revise their frameworks primarily to sell new certifications, not because knowledge advanced."
+> "Rigorous financial gating is the best defence against wasteful projects."
 
-This one is uncomfortable and partly defensible — make students separate the cynical claim (revenue motive) from the testable one (did practice improve?). Note that the Scrum Guide, which is free and unrevised for six years, is the counterexample that complicates the cynical reading.
+Attack lines: gates measure the forecast, not the reality; escalation of commitment rises with each passed gate; gating adds cycle time, which in fast-moving domains is itself a cost; the Bianchi finding.
 
 ---
 
 ## Somewhere else entirely
 
-**Building codes vs. architectural style.** A building code is prescriptive, legally enforceable, and says nothing about whether the building is good. A style is a set of principles a designer can violate deliberately. PRINCE2 is closer to a code; PMBOK 7/8 is closer to a style guide; Scrum is closer to a poetic form — a sonnet is 14 lines, and the constraint is the point.
+**Venture capital portfolio construction.** A VC expects most investments to fail and prices for it — the portfolio, not the project, is the unit of success. Most organizations run project portfolios as if every project must succeed, which forces optimistic business cases and makes killing anything an admission of error.
 
 ---
 
-## Studio
+## Studio preview
 
-Hand out the same one-page project brief to four teams, each assigned a different standard. Each team produces the first three artifacts their standard would demand. Compare on the board. The visible divergence in *what gets written down first* is the lesson.
+Four competing project proposals, one budget that funds two. Teams must fund, then are shown the true outcomes. Debrief: how much of the selection error was forecast error vs. criteria error?
 
 ---
 
 ## Next
 
-- Notes: [Week 2 on the course site](../weeks/week-02.qmd)
-- AI lab: [Lab 2](../labs/lab-02.qmd)
+- Notes: [Week 2](../weeks/week-02.qmd)
+- Studio: [Lab 2](../labs/lab-02.qmd)
 - Reading: Larson Ch. 2

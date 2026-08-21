@@ -1,39 +1,115 @@
 ---
-title: "Lab 7 · Three estimates, one scope, one adjudication"
-subtitle: "Rung 2 · The model proposes, your code adjudicates"
+title: "Studio 7 · A register that argues back, and a schedule that admits it might slip"
+subtitle: "Week 7 — Managing Risk · Larson Ch. 7"
 week: 7
 release: "2026-10-05"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Week</dt><dd>7 — <a href='../weeks/week-07.qmd'>Cost estimating and budgeting</a></dd>
-<dt>Rung</dt><dd>Tool-calling</dd>
+<dt>Deliverable</dt><dd><strong>SA7</strong> — the register, the simulation, the criticality table, the Taiga issues, the reconciliation</dd>
+<dt>Due</dt><dd>CA5 (Ch 7) · SA7 · Sun 11 Oct</dd>
+<dt>Tools</dt><dd>Colab · numpy · Taiga · ProjectLibre · Gemini · Antigravity</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-07.qmd">Week 7 — Managing Risk</a></dd>
 </dl>
 :::
 
-## The task
+::: {.callout-important appearance="simple"}
+**This is individual work.** Every student submits their own. The final project is where you work
+in a team; the studio is where the mechanics get into your own hands.
+:::
 
-Give a model the same scope statement with three different data packets — analogous, parametric, bottom-up — in three separate conversations, so it cannot anchor on its own earlier answer.
+The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
+The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
+Build is a legitimate finding, reported as one.
 
-**Deliverable.** The three estimates, the spread, and your forced choice with justification. Then: ask a fourth conversation to pick, and say whether you agree with it and why.
+::: {.part}
+### Part 1 · Before you arrive
 
-## The weekly loop
+Accounts and data only. Nothing here needs software installed at home.
 
-This lab is step 4–6 of the loop. The whole cycle:
+1. Download this week's dataset from the course Drive folder into your `IMSE456` cloud folder.
+2. Open the week's Colab notebook and run the first cell to confirm it loads. Ten minutes, from any machine.
+:::
+
+::: {.part}
+### Part 2 · What you will have at the end
+
+SA7 — the register, the simulation, the criticality table, the Taiga issues, the reconciliation
+:::
+
+::: {.part}
+### Part 3 · Build it yourself — 25 minutes
+
+1. Run the silent pre-mortem. Eight minutes, alone, no talking. The silence is the technique — discussion first destroys it.
+2. Convert the stories into a register: risk, probability, impact, RPN, owner, trigger, response type.
+3. In Colab, Monte-Carlo the schedule: triangular distributions on the twelve durations, ten thousand trials. Plot the completion-date distribution and compute each activity's criticality index.
+4. Build an agent — in Antigravity, or as a Gemini system prompt — that <em>refuses</em> a register entry lacking an owner, a trigger, and a named reference class. Run your own register through it and log every rejection.
+:::
+
+::: {.part}
+### Part 4 · Now the professional tool — 20 minutes
+
+1. Enter the top eight risks as Taiga issues with severity and assignee.
+2. Add contingency to the ProjectLibre schedule as an explicit buffer activity — not as padding hidden inside estimates.
+:::
+
+::: {.part}
+### Part 5 · Where do they disagree? — 15 minutes
+
+Your deterministic critical path from Week 6 versus the criticality index from the simulation. Which activities are critical more than forty percent of the time yet never appear on the deterministic path?
+
+Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+:::
+
+::: {.part}
+### Part 6 · Run the check
+
+Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
+prints a completion code. If it fails, you have found your error while it is still cheap to fix —
+that is the point of it. Paste the code into your submission.
+:::
+
+::: {.part}
+### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
+
+- [ ] Every row has an owner and an observable trigger
+- [ ] the agent rejected at least one entry
+- [ ] at least one high-criticality activity is off the deterministic path
+:::
+
+::: {.part}
+### Part 8 · Where it is saved
+
+`IMSE456/studio-07/` in your cloud folder. Name files `SA7_yourlastname.*`.
+
+**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
+left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+:::
+
+::: {.browser-path}
+**Working on lab machines?**
+
+**No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
+
+**No Antigravity?** Use the Gemini API from the course Colab notebook — the key is in the shared config cell. Same work, browser only.
+:::
+
+## Study loop for this week
+
+Run this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.
 
 ```text
-1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
-2. Read the module     — 20 min — notes + one primary source
-3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
-4. Write something     — 15 min — a plan, an argument, a worked problem
-5. EDITOR              — 10 min — attack what I wrote
-6. ROOMMATE            —  5 min — where else does this structure appear?
-7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
+Be my tutor on project risk and behavioral bias in estimation. One question
+at a time. Make me distinguish cognitive bias from political bias — I keep
+collapsing them. Then present the strongest case AGAINST the planning
+fallacy account and make me respond to it.
 ```
 
-Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.
 
-## Submission
 
-Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
+::: {.callout-important appearance="simple"}
+**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
+:::

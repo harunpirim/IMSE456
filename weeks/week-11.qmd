@@ -1,11 +1,12 @@
 ---
-title: "Week 11 · Adaptive delivery — Scrum, Kanban, flow"
+title: "Week 11 · Progress and Performance Measurement"
 week: 11
 release: "2026-11-02"
+chapter: "Larson Ch. 13"
 dates: "3 and 5 November"
-reading: "Larson Ch. 15"
-session-a: "Scrum accountabilities and events; flow metrics"
-session-b: "Studio — flow simulation, Little's Law, reading a CFD"
+reading: "Larson Ch. 13"
+session-a: "The CPI that looked good"
+session-b: "Build the dashboard, then find what it hides"
 video:
   provider: none
   id: ""
@@ -16,84 +17,115 @@ lab: true
 ::: {.week-meta}
 <dl>
 <dt>Sessions</dt><dd>3 &amp; 5 November</dd>
-<dt>Tuesday</dt><dd>Scrum accountabilities and events; flow metrics</dd>
-<dt>Thursday</dt><dd>Studio — flow simulation, Little's Law, reading a CFD</dd>
-<dt>Reading</dt><dd>Larson Ch. 15</dd>
-<dt>Due</dt><dd>SA10 · Flow simulation + Little's Law — <span class='tabular'>2026-11-08</span><br>CA7 · Concepts — Weeks 10–11 — <span class='tabular'>2026-11-08</span></dd>
+<dt>Chapter</dt><dd>Larson Ch. 13</dd>
+<dt>Tuesday</dt><dd>The CPI that looked good — concept and case</dd>
+<dt>Thursday</dt><dd>Build the dashboard, then find what it hides</dd>
+<dt>Reading</dt><dd>Larson Ch. 13</dd>
+<dt>Due</dt><dd>CA7 (Ch 13) · SA10 · Sun 8 Nov</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
 
-## Learning objectives
+## Concepts introduced
 
-- Describe Scrum's accountabilities, events, and artifacts exactly as the Scrum Guide defines them.
-- Compute and interpret flow metrics; apply Little's Law.
-- State what Scrum abandons relative to predictive planning, and what it buys.
+::: {.chips}
+<span class="chip">the control process</span><span class="chip">the tracking Gantt</span><span class="chip">the integrated cost–schedule system</span><span class="chip">PV, EV, AC, BAC</span><span class="chip">CV and SV</span><span class="chip">percent-complete rules and how they are gamed</span><span class="chip">CPI, SPI, PCIB, PCIC</span><span class="chip">the three EAC families</span><span class="chip">TCPI</span><span class="chip">Earned Schedule</span><span class="chip">baseline changes and the cost of scope creep</span><span class="chip">what EVM cannot tell you</span>
+:::
 
-## Core content
+## Tuesday — The CPI that looked good
 
-**Scrum (Scrum Guide, November 2020 — current).**
+::: {.case}
+An invoice posted a month late made cost performance look excellent — right up until it corrected, in the month the sponsor happened to be reading.
 
-- **Three accountabilities:** Product Owner (maximizes value of the product, owns the Product Backlog, single person not a committee), Scrum Master (accountable for Scrum's effectiveness, a *true leader who serves*), Developers (everyone doing the work; the guide does not distinguish sub-roles).
-- **Five events**, all held within the container of the **Sprint** (one month or less, fixed length, no changes that endanger the Sprint Goal): Sprint Planning, Daily Scrum (15 min, for the Developers), Sprint Review, Sprint Retrospective.
-- **Three artifacts, each with one commitment** — this pairing was the 2020 revision's main structural addition:
+::: {.qn}
+Your SPI is 1.0 and the project is three weeks late. Explain how both statements are simultaneously true.
+:::
+:::
 
-| Artifact | Commitment |
-|---|---|
-| Product Backlog | Product Goal |
-| Sprint Backlog | Sprint Goal |
-| Increment | Definition of Done |
+## Thursday studio
 
-- **Five values:** commitment, focus, openness, respect, courage.
-- **Empiricism** rests on transparency, inspection, adaptation. Scrum is explicitly "purposefully incomplete" — it defines only the parts required by the framework.
+::: {.studio}
+#### Build the dashboard, then find what it hides
 
-**Kanban and flow.** Visualize the workflow; **limit WIP**; manage flow; make policies explicit; improve collaboratively. No prescribed roles, no timeboxes, no estimates required.
+Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
 
-**Flow metrics** — the quantitative content that makes this week rigorous rather than a vocabulary lesson:
-- **Cycle time** — start of work to done, per item.
-- **Throughput** — items completed per unit time.
-- **WIP** — items in progress.
-- **Little's Law:** WIP = Throughput × Cycle Time. Worked: 12 items in progress, throughput 3/week → average cycle time = **4 weeks**. Halve WIP to 6 with throughput unchanged → cycle time 2 weeks. *This is the entire mathematical argument for WIP limits*, and it takes 90 seconds to derive.
-- **Cumulative flow diagram** — band width = WIP, band slope = throughput, horizontal distance = cycle time. Widening bands mean a bottleneck downstream.
-- **Monte Carlo on throughput** beats story-point velocity forecasting and requires no estimation at all — just a count of completed items per week.
+**[Open the Week 11 lab sheet](../labs/lab-11.qmd)** · [slides](../slides/week-11.qmd)
+:::
 
-**What Scrum abandons.** Be explicit; this is the intellectual core of the week. Scrum gives up: a fixed scope baseline, long-horizon date commitments, detailed up-front design, and the ability to sign a fixed-price fixed-scope contract. It buys: short feedback loops, the option to change direction at low cost, and continuous delivery of usable increments.
+## Lecture notes
 
-## The evidence, honestly stated
+### Learning objectives
 
-- **Serrador & Pinto (2015)**, 1,002 projects: agile use positively affected both efficiency and overall stakeholder satisfaction; quality of the project vision/goals was a marginally significant moderator.
-- **Koch et al. (2023)**, pre-registered meta-analysis, k = 41, N = 73,825: small effects on job satisfaction, strain, and commitment; **medium-to-large** effects on performance and innovative behaviour; medium effect on psychological empowerment. Effects were **stronger outside software** (manufacturing, healthcare, logistics) and stronger in published than unpublished records — note the publication-bias signal to students.
-- **Lieberum et al. (2022)**, *M&SOM*, controlled lab experiment with a 2×2 design: performance was higher with **time-boxed progression**, because under flexible progression people over-invest in early phases — the "**progression fallacy**." Adding self-imposed phase goals on top of time-boxing added nothing; combining phase goals with *flexible* progression (i.e. traditional PM) made things actively worse. This is the cleanest causal evidence available that the *timebox specifically* is doing work.
-- **Contra:** Badran et al. (2024), 392 construction project managers in Jordan: agile PM positively affected innovation, responsiveness, quality and client satisfaction but **negatively affected cost performance** and had no significant effect on time. Domain matters.
+- Compute the full EVM metric set from PV, EV, AC and interpret each.
+- Select an EAC formula appropriate to the situation and justify the choice.
+- State what EVM cannot detect, and describe Earned Schedule's fix for the SPI pathology.
+
+### Core content
+
+**The three inputs.** PV (planned value, budgeted cost of work *scheduled*), EV (earned value, budgeted cost of work *performed*), AC (actual cost of work performed). BAC = budget at completion. Everything else is arithmetic on these.
+
+**Metrics.**
+
+| Metric | Formula | Reading |
+|---|---|---|
+| Cost variance | CV = EV − AC | < 0 = over cost |
+| Schedule variance | SV = EV − PV | < 0 = behind (in $, not time) |
+| Cost performance index | CPI = EV / AC | < 1 = over cost |
+| Schedule performance index | SPI = EV / PV | < 1 = behind |
+| EAC (typical variance) | BAC / CPI | Current cost performance continues |
+| EAC (atypical) | AC + (BAC − EV) | Variance was a one-off |
+| EAC (both indices) | AC + (BAC − EV)/(CPI × SPI) | Schedule pressure will keep costing money |
+| ETC | EAC − AC | Remaining spend |
+| VAC | BAC − EAC | Projected over/under at end |
+| TCPI | (BAC − EV)/(BAC − AC) | Efficiency required to still hit BAC |
+
+### Worked example — put this on the board
+
+Project: BAC = $500,000, planned duration 20 weeks. **At end of week 8:** PV = $200,000, EV = $170,000, AC = $190,000.
+
+- CV = 170,000 − 190,000 = **−$20,000** (over cost)
+- SV = 170,000 − 200,000 = **−$30,000** (behind schedule)
+- CPI = 170/190 = **0.895** → getting 89.5 cents of value per dollar
+- SPI = 170/200 = **0.850**
+- EAC (typical) = 500,000/0.8947 = **$558,824**
+- EAC (atypical) = 190,000 + 330,000 = **$520,000**
+- EAC (both indices) = 190,000 + 330,000/(0.8947 × 0.85) = **$623,910**
+- ETC (typical) = 558,824 − 190,000 = **$368,824**
+- VAC = 500,000 − 558,824 = **−$58,824**
+- TCPI(BAC) = 330,000/310,000 = **1.065** → you now need 6.5% *better than planned* efficiency for the rest of the project, having averaged 10.5% worse. Ask the class whether that's plausible. It almost never is, and that is the single most useful thing EVM tells a manager.
+
+**The spread between $520k and $624k is the lesson.** The formula choice is a *judgement about causation*, not a computation. Make students defend a choice.
+
+**The SPI pathology.** As a project approaches completion, EV → BAC and PV → BAC, so **SPI → 1 regardless of how late the project is**. A project delivering a year late shows SPI = 1.00 on its final day. SPI is also denominated in dollars, not time.
+
+**Earned Schedule fixes this.** ES = the time at which the *planned* value equals the *current* earned value: find t such that PV(t) = EV. Then SPI(t) = ES/AT, and IEAC(t) = PD/SPI(t).
+
+Continuing the example with PV accruing linearly at $25,000/week:
+ES = 170,000/25,000 = **6.80 weeks**. AT = 8. SPI(t) = 6.80/8 = **0.850**. IEAC(t) = 20/0.85 = **23.5 weeks** — a forecast in *time units*, which SPI cannot give you. (With a linear PV curve SPI and SPI(t) coincide; with a realistic S-curve they diverge, and they diverge most near the end, which is exactly where you need the number.)
+
+**Does EVM actually forecast well?** Yes, with caveats, and the evidence is decent. Batselier & Vanhoucke (2015, *JCEM*) evaluated EVM forecasting on **51 real projects** (mostly construction) plus Monte Carlo support and found that highly accurate time and cost forecasts are obtainable, while identifying which methods perform best. Barrientos-Orellana et al. (2021, 2023) compared 27 duration and 30 cost methods across 4,100 simulated networks and found the **simplest formulations were most stable and accurate**, with accuracy degrading as networks become more parallel. De Marco et al. (2023, 79 projects) report EAC MAPE improving from ~14.6% early to ~11.4% late under a proactive risk strategy.
+
+**What EVM cannot see:** quality, stakeholder satisfaction, whether the scope was worth building, rework not yet discovered, and any risk that hasn't yet hit the ledger. A project can show CPI = 1.0 the week before it is cancelled.
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
 
-1. Who is accountable for the Product Backlog? Can a committee hold that accountability?
-2. What is the commitment attached to the Increment, and what happens if the team redefines it mid-sprint?
-3. Our team has 30 items in progress and finishes 5 per week. A stakeholder wants to know when their new item will be done. What do you tell them, and what should you change?
-4. What does Scrum say about budgets, contracts, or portfolios? Why is that silence deliberate?
-5. Name something predictive planning gives you that Scrum cannot.
+1. CPI = 1.05 and SPI = 0.80. What is probably happening on this project?
+2. Which EAC formula would you use if last month's overrun was a one-time supplier failure? What if it was a systematic underestimate?
+3. TCPI = 1.4. What are you going to tell the sponsor?
+4. Why does SPI become useless near the end, and what replaces it?
+5. My project is on budget and on schedule by EVM. Name three ways it could still be failing.
 :::
 
 ::: {.editor}
 ### Editor challenge — attack this claim
 
-> "Agile is better than waterfall."
+> "EVM gives objective, quantitative project control."
 
-Force decomposition: better at *which* success dimension, in *which* domain, measured *how*? The honest synthesis: strong evidence for stakeholder and team dimensions, mixed-to-weak for cost, domain-dependent throughout, and much of the primary evidence is self-reported survey data with obvious selection effects.
+Attack: EV depends on a subjective percent-complete judgement (0/100, 50/50, and level-of-effort rules all produce different EVs from the same work); the baseline is a forecast, so EVM measures deviation from a guess; it is silent on quality and value; and it can be gamed by claiming credit early.
 :::
 
-::: {.roommate}
-### Roommate link
+### In-class activity (30 min)
 
-**Jazz ensemble vs. symphony orchestra.** The orchestra has a score (baseline), a conductor (PM), and rehearsals that converge on a fixed performance. The jazz quartet has a head (product goal), agreed changes (definition of done), and improvises within them. Neither is better. But note: the quartet's freedom depends on *every* member being individually excellent, which is precisely the condition organizations skip when they "adopt agile."
-:::
-
-
-## This week's AI lab
-
-[Lab 11 — Simulate flow, then ask an agent to explain your own data](../labs/lab-11.qmd)
-
-[Slides for this week](../slides/week-11.qmd)
+Give teams three months of raw PV/EV/AC data with one anomaly seeded (e.g. a month where AC drops because an invoice was late). Teams must produce a forecast and identify the data-quality problem. Most produce the forecast and miss the anomaly — which is the debrief.

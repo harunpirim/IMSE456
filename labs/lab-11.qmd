@@ -1,51 +1,107 @@
 ---
-title: "Lab 11 · Simulate flow, then ask an agent to explain your own data"
-subtitle: "Rung 3 · Package the job, write the acceptance tests"
+title: "Studio 11 · Build the dashboard, then find what it hides"
+subtitle: "Week 11 — Progress and Performance Measurement · Larson Ch. 13"
 week: 11
 release: "2026-11-02"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Week</dt><dd>11 — <a href='../weeks/week-11.qmd'>Adaptive delivery — Scrum, Kanban, flow</a></dd>
-<dt>Rung</dt><dd>Skills and agents</dd>
+<dt>Deliverable</dt><dd><strong>SA10</strong> — the dashboard, the S-curve plot, ES versus SPI, the anomaly with its evidence, the EAC choice defended</dd>
+<dt>Due</dt><dd>CA7 (Ch 13) · SA10 · Sun 8 Nov</dd>
+<dt>Tools</dt><dd>Colab · pandas · ProjectLibre · Smartsheet · Power BI · Excel / Numbers</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-11.qmd">Week 11 — Progress and Performance Measurement</a></dd>
 </dl>
 :::
 
-## The task
+::: {.callout-important appearance="simple"}
+**This is individual work.** Every student submits their own. The final project is where you work
+in a team; the studio is where the mechanics get into your own hands.
+:::
 
-Run the flow simulation, generate the CFD from your own run data, and hand *only the data* to an agent with no context. Ask it to diagnose the system.
+The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
+The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
+Build is a legitimate finding, reported as one.
 
-**Deliverable.** Its diagnosis, your diagnosis, and where they differ. Little's Law prediction versus measurement, with the arithmetic shown.
+::: {.part}
+### Part 1 · Before you arrive
 
-## Tutor prompt for this week
+Accounts and data only. Nothing here needs software installed at home.
 
-Run this before you read the notes, and again after.
+1. **This studio is in the campus Windows room, not our usual classroom.** Check the location on the schedule page before Thursday.
+2. Confirm Power BI Desktop opens on the lab machine — it is preinstalled.
+3. Download `evm-three-months.xlsx` from the course Drive folder into your `IMSE456` cloud folder.
+:::
 
-```text
-Be my tutor on Scrum and flow metrics. One question at a time. Test me on
-the exact Scrum Guide definitions — accountabilities, events, artifacts and
-their commitments — and correct me if I use language from consultancies
-rather than the guide. Then make me derive the argument for WIP limits from
-Little's Law.
-```
+::: {.part}
+### Part 2 · What you will have at the end
 
-## The weekly loop
+SA10 — the dashboard, the S-curve plot, ES versus SPI, the anomaly with its evidence, the EAC choice defended
+:::
 
-This lab is step 4–6 of the loop. The whole cycle:
+::: {.part}
+### Part 3 · Build it yourself — 25 minutes
 
-```text
-1. TUTOR (diagnostic)  — 10 min — what do I already wrongly believe?
-2. Read the module     — 20 min — notes + one primary source
-3. TUTOR (voice)       — 20 min — one question at a time, no lecturing
-4. Write something     — 15 min — a plan, an argument, a worked problem
-5. EDITOR              — 10 min — attack what I wrote
-6. ROOMMATE            —  5 min — where else does this structure appear?
-7. TUTOR (retrieval)   —  5 min — mixed questions from all prior weeks
-```
+1. In Colab with pandas, load three months of PV, EV and AC.
+2. Compute CV, SV, CPI, SPI, the three EAC families, ETC, VAC and TCPI.
+3. Plot the S-curves. The PV curve must be an S and not a line — that is what makes SPI and SPI(t) diverge.
+4. Compute Earned Schedule and SPI(t). Compare with SPI.
+5. The dataset contains one seeded data-quality anomaly. Find it.
+:::
 
-Steps 4 and 5 do the work. A loop that stops after step 3 feels productive and mostly isn't.
+::: {.part}
+### Part 4 · Now the professional tool — 20 minutes
 
-## Submission
+1. Set the baseline in ProjectLibre, enter actuals, and read its variance columns. Compare the tool's numbers against yours, line by line.
+2. In Smartsheet, maintain the same project as a live sheet: baseline columns, actual columns, and a dashboard with metric widgets and a chart widget.
+3. <strong>Build the EVM model in Power BI.</strong> Load the Smartsheet export through Power Query. Write CPI, SPI, CV, SV, EAC and TCPI as <em>DAX measures</em>, not as spreadsheet cells — a measure recalculates for whatever period the reader filters to, which is the entire difference between a report and a dashboard.
+4. Add a date table and time intelligence so cumulative PV, EV and AC plot as running totals. Publish to the Power BI Service and share a read-only view.
+:::
 
-Upload to Blackboard as a single PDF. Include your prompts. Label every AI-produced element and attach the verification, per the [AI policy](../syllabus.qmd#artificial-intelligence-policy).
+::: {.part}
+### Part 5 · Where do they disagree? — 15 minutes
+
+Three questions. Which EAC formula is ProjectLibre using, and is that assumption right here — each EAC family makes a different claim about causation, so state the one you adopt. Would your Power BI dashboard have let a sponsor <em>see</em> the seeded anomaly, or does the running total bury it? And which of the three tools would you have caught it in fastest?
+
+Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+:::
+
+::: {.part}
+### Part 6 · Run the check
+
+Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
+prints a completion code. If it fails, you have found your error while it is still cheap to fix —
+that is the point of it. Paste the code into your submission.
+:::
+
+::: {.part}
+### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
+
+- [ ] The anomaly is found and traced to a specific period
+- [ ] SPI and SPI(t) differ and you can say why
+- [ ] CPI and SPI exist as DAX measures that respond to a period filter, not as static numbers
+- [ ] the EAC choice is defended as a claim about causation
+:::
+
+::: {.part}
+### Part 8 · Where it is saved
+
+`IMSE456/studio-11/` in your cloud folder. Name files `SA10_yourlastname.*`.
+
+**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
+left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+:::
+
+::: {.browser-path}
+**Working on lab machines?**
+
+**No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
+
+**This studio uses Power BI Desktop on a campus Windows machine.** Publish to the Service before you leave the room so the model is reachable from your own laptop afterwards.
+:::
+
+
+::: {.callout-important appearance="simple"}
+**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
+:::

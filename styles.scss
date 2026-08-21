@@ -67,3 +67,52 @@ table td, table th { vertical-align: top; }
   .gated { background: #161D1C; border-color: #2A3533; }
   .tutor { background: #12211D; } .editor { background: #221614; } .roommate { background: #211D12; }
 }
+
+/* ---- concept chips ---- */
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 1.4rem; }
+.chip {
+  font-size: 0.86rem; padding: 0.12rem 0.55rem; border-radius: 12px;
+  background: #F0F3F1; border: 1px solid #D5DBD7; color: #1A2022;
+}
+
+/* ---- the Tuesday case ---- */
+.case {
+  border: 1px solid #D5DBD7; border-left: 3px solid $secondary;
+  border-radius: 0 4px 4px 0; background: #FAFBFA;
+  padding: 1rem 1.3rem; margin: 0 0 1.4rem;
+}
+.case > p:last-child { margin-bottom: 0; }
+.case .qn {
+  font-family: $headings-font-family; font-style: italic;
+  border-left: 2px solid $primary; padding-left: 0.8rem; margin: 0.9rem 0 0;
+}
+
+/* ---- studio call-out on the week page ---- */
+.studio {
+  border: 1px solid $primary; border-radius: 4px;
+  background: #F1F7F4; padding: 1rem 1.3rem; margin: 0 0 1.4rem;
+}
+.studio h4 { margin-top: 0; }
+.studio > p:last-child { margin-bottom: 0; }
+
+/* ---- lab sheet parts ---- */
+.part {
+  border-top: 1px solid #D5DBD7; padding-top: 0.9rem; margin-top: 1.6rem;
+}
+.part-n {
+  font-family: $font-family-monospace; font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: $secondary; display: block; margin-bottom: 0.2rem;
+}
+.browser-path {
+  border-left: 3px solid #8F6608; background: #FAF6EC;
+  border-radius: 0 4px 4px 0; padding: 0.8rem 1.1rem; margin: 1rem 0; font-size: 0.94rem;
+}
+.browser-path > p:last-child { margin-bottom: 0; }
+
+@media (prefers-color-scheme: dark) {
+  .chip { background: #1C2524; border-color: #2A3533; color: #E5EAE7; }
+  .case { background: #171E1D; border-color: #2A3533; }
+  .studio { background: #12211D; }
+  .browser-path { background: #211D12; }
+  .part { border-top-color: #2A3533; }
+}
