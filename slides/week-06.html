@@ -12,7 +12,7 @@
 
   <meta name="author" content="Harun Pirim">
   <meta name="dcterms.date" content="2026-09-28">
-  <title>IMSE 456/656 – Week 6 — Schedule II — PERT, crashing, resources, critical chain</title>
+  <title>IMSE 456/656 – Week 6 — Developing a Project Schedule</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,8 +129,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 6 — Schedule II — PERT, crashing, resources, critical chain</h1>
-  <p class="subtitle">IMSE 456/656 · Project Management</p>
+  <h1 class="title">Week 6 — Developing a Project Schedule</h1>
+  <p class="subtitle">IMSE 456/656 · Larson Ch. 6</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -145,107 +145,215 @@ Harun Pirim
 <section id="where-we-are-going" class="slide level2">
 <h2>Where we are going</h2>
 <ul>
-<li>Compute PERT expected duration and variance; state the distributional assumptions and why they’re wrong.</li>
-<li>Perform a least-cost crash sequence and know when to stop.</li>
-<li>Explain resource levelling and the difference between a CPM critical path and a resource-constrained one.</li>
+<li>Construct an activity-on-node network from a dependency table.</li>
+<li>Execute forward and backward passes; compute total and free float.</li>
+<li>Identify the critical path and explain why “critical” does not mean “important.”</li>
 </ul>
 </section>
-<section id="the-frame" class="slide level2">
-<h2>The frame</h2>
+<section id="the-argument" class="slide level2">
+<h2>The argument</h2>
+<ul>
+<li>Dependency types</li>
+<li>The passes</li>
+</ul>
+</section>
+<section id="worked-example" class="slide level2">
+<h2>Worked example</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>Activity</th>
-<th>Normal d</th>
-<th>Crash d</th>
-<th>Max crash</th>
-<th>Slope ($/day)</th>
+<th>Duration (days)</th>
+<th>Predecessors</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>A</td>
 <td>3</td>
-<td>2</td>
-<td>1</td>
-<td>1,500</td>
+<td>—</td>
 </tr>
 <tr class="even">
 <td>B</td>
 <td>4</td>
-<td>2</td>
-<td>2</td>
-<td>2,000</td>
+<td>—</td>
 </tr>
 <tr class="odd">
+<td>C</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr class="even">
 <td>D</td>
 <td>5</td>
+<td>A, B</td>
+</tr>
+<tr class="odd">
+<td>E</td>
 <td>3</td>
-<td>2</td>
-<td>2,500</td>
+<td>C</td>
 </tr>
 <tr class="even">
 <td>F</td>
 <td>4</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>6</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>2</td>
+<td>E, F, G</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solution (verified):</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Act</th>
+<th>Dur</th>
+<th>ES</th>
+<th>EF</th>
+<th>LS</th>
+<th>LF</th>
+<th>TF</th>
+<th>FF</th>
+<th>Critical</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>3</td>
+<td>0</td>
 <td>3</td>
 <td>1</td>
-<td>3,000</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>★</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>10</td>
+<td>5</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>5</td>
+<td>4</td>
+<td>9</td>
+<td>4</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>★</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>10</td>
+<td>13</td>
+<td>5</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>4</td>
+<td>9</td>
+<td>13</td>
+<td>9</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>★</td>
 </tr>
 <tr class="odd">
 <td>G</td>
 <td>6</td>
 <td>4</td>
-<td>2</td>
-<td>1,200</td>
+<td>10</td>
+<td>7</td>
+<td>13</td>
+<td>3</td>
+<td>3</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>H</td>
 <td>2</td>
-<td>1</td>
-<td>1</td>
-<td>1,200</td>
+<td>13</td>
+<td>15</td>
+<td>13</td>
+<td>15</td>
+<td>0</td>
+<td>0</td>
+<td>★</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="the-argument" class="slide level2">
-<h2>The argument</h2>
-<ul>
-<li>PERT</li>
-<li>Worked PERT</li>
-<li>Then break it</li>
-<li>Crashing</li>
-<li>Worked crash</li>
-<li>Resource levelling vs.&nbsp;smoothing</li>
-<li>Critical chain (Goldratt)</li>
-</ul>
+<p>Path lengths: A-C-E-H = 10, A-D-F-H = 14, B-D-F-H = <strong>15</strong>, B-G-H = 12. <strong>Critical path: B–D–F–H, 15 days.</strong></p>
+<p><strong>Three teaching points from this specific table.</strong></p>
+<ol type="1">
+<li><strong>A has TF = 1 but FF = 0.</strong> Delay A by one day and no successor moves <em>and</em> the project doesn’t move. Delay it by two and D slips. Students conflate the two floats constantly; this row separates them.</li>
+<li><strong>A-D-F-H is 14 days — one day of float on the whole path.</strong> Near-critical paths are where projects actually fail, because monitoring attention follows the CP label.</li>
+<li><strong>The CP is a property of the estimates, not of the work.</strong> Change D from 5 to 3 and the critical path becomes B-G-H. Nothing about the project changed except a number in a spreadsheet.</li>
+</ol>
 </section>
 <section id="check-yourself" class="slide level2">
 <h2>Check yourself</h2>
 <ol type="1">
-<li>Why is crashing an activity with the lowest slope sometimes the wrong move?</li>
-<li>When two critical paths exist, what must be true about the activity you crash?</li>
-<li>PERT says P(finish by day 14) = 87%. What has that number assumed that is false?</li>
-<li>Levelling extended my project by 6 days but no activity got longer. Explain.</li>
+<li>Give me an activity with total float but zero free float. What does that combination physically mean?</li>
+<li>If I shorten a non-critical activity, what happens to project duration?</li>
+<li>Two paths are both 15 days. How many critical paths does the project have, and what does that do to your risk?</li>
+<li>Why does the critical path change during execution even when nothing goes wrong?</li>
 </ol>
 </section>
 <section id="attack-this-claim" class="slide level2">
 <h2>Attack this claim</h2>
 <blockquote>
-<p>“Adding a buffer to each activity estimate is prudent risk management.”</p>
+<p>“Managing the critical path is the core of schedule management.”</p>
 </blockquote>
-<p>Attack: aggregated variance is smaller than summed variance (√n effect); per-activity buffers get consumed regardless (Parkinson); the buffer is invisible to management so it can’t be governed. This is the CCPM argument — make students construct it themselves before you name it.</p>
+<p>Attack lines: near-critical paths carry most of the realized risk; the CP assumes deterministic durations, which is false; resource constraints (Week 6) can make a non-critical activity the real bottleneck; CPM has no mechanism for the fact that people expand work to fill available float (Parkinson).</p>
 </section>
-<section id="studio" class="slide level2">
-<h2>Studio</h2>
-<p>Teams crash a fresh 10-activity network to a target date with an indirect cost of $2,000/day and a $10,000/day late penalty. They must find the <strong>economically optimal</strong> duration, not just the target. Most teams crash too far.</p>
+<section id="somewhere-else-entirely" class="slide level2">
+<h2>Somewhere else entirely</h2>
+<p><strong>Cooking Thanksgiving dinner.</strong> The turkey is the critical path. The cranberry sauce has enormous float. Every home cook knows intuitively that you start the turkey first and that a five-minute turkey delay is a five-minute dinner delay, while a five-minute cranberry delay is free — that’s total float without free float, discovered without a textbook.</p>
+</section>
+<section id="studio-preview" class="slide level2">
+<h2>Studio preview</h2>
+<p>Give the same network but with one duration hidden. Teams must determine what values of that duration would change the critical path. This converts CPM from arithmetic into sensitivity analysis in one step.</p>
 </section>
 <section id="next" class="slide level2">
 <h2>Next</h2>
 <ul>
-<li>Notes: <a href="../weeks/week-06.html">Week 6 on the course site</a></li>
-<li>AI lab: <a href="../labs/lab-06.html">Lab 6</a></li>
-<li>Reading: Larson Ch. 8–9</li>
+<li>Notes: <a href="../weeks/week-06.html">Week 6</a></li>
+<li>Studio: <a href="../labs/lab-06.html">Lab 6</a></li>
+<li>Reading: Larson Ch. 6</li>
 </ul>
 
 

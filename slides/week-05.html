@@ -12,7 +12,7 @@
 
   <meta name="author" content="Harun Pirim">
   <meta name="dcterms.date" content="2026-09-21">
-  <title>IMSE 456/656 – Week 5 — Schedule I — networks, CPM, float</title>
+  <title>IMSE 456/656 – Week 5 — Estimating Project Times and Costs</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -129,8 +129,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 5 — Schedule I — networks, CPM, float</h1>
-  <p class="subtitle">IMSE 456/656 · Project Management</p>
+  <h1 class="title">Week 5 — Estimating Project Times and Costs</h1>
+  <p class="subtitle">IMSE 456/656 · Larson Ch. 5</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -145,215 +145,83 @@ Harun Pirim
 <section id="where-we-are-going" class="slide level2">
 <h2>Where we are going</h2>
 <ul>
-<li>Construct an activity-on-node network from a dependency table.</li>
-<li>Execute forward and backward passes; compute total and free float.</li>
-<li>Identify the critical path and explain why “critical” does not mean “important.”</li>
+<li>Apply analogous, parametric, and bottom-up estimating and state each one’s error profile.</li>
+<li>Build a cost baseline including contingency and management reserve, and place each correctly.</li>
+<li>Explain estimate ranges as a function of project phase.</li>
 </ul>
+</section>
+<section id="the-frame" class="slide level2">
+<h2>The frame</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Basis</th>
+<th>Typical accuracy</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Analogous (top-down)</td>
+<td>Similar past project, scaled</td>
+<td>−25% to +75%</td>
+<td>Concept phase, minutes of effort</td>
+</tr>
+<tr class="even">
+<td>Parametric</td>
+<td>Statistical model on a driver (cost/m², cost/function point)</td>
+<td>−15% to +30%</td>
+<td>When you have a calibrated model</td>
+</tr>
+<tr class="odd">
+<td>Bottom-up (definitive)</td>
+<td>Sum of work packages</td>
+<td>−5% to +10%</td>
+<td>After a validated WBS; expensive</td>
+</tr>
+<tr class="even">
+<td>Three-point</td>
+<td>(o + 4m + p)/6 per element</td>
+<td>Depends</td>
+<td>Layers on any of the above</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="the-argument" class="slide level2">
 <h2>The argument</h2>
 <ul>
-<li>Dependency types</li>
-<li>The passes</li>
+<li>Estimating methods</li>
+<li>Cost baseline structure — get this ordering right, students always garble it:</li>
+<li>Funding limit reconciliation</li>
 </ul>
-</section>
-<section id="worked-example" class="slide level2">
-<h2>Worked example</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Activity</th>
-<th>Duration (days)</th>
-<th>Predecessors</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A</td>
-<td>3</td>
-<td>—</td>
-</tr>
-<tr class="even">
-<td>B</td>
-<td>4</td>
-<td>—</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td>2</td>
-<td>A</td>
-</tr>
-<tr class="even">
-<td>D</td>
-<td>5</td>
-<td>A, B</td>
-</tr>
-<tr class="odd">
-<td>E</td>
-<td>3</td>
-<td>C</td>
-</tr>
-<tr class="even">
-<td>F</td>
-<td>4</td>
-<td>D</td>
-</tr>
-<tr class="odd">
-<td>G</td>
-<td>6</td>
-<td>B</td>
-</tr>
-<tr class="even">
-<td>H</td>
-<td>2</td>
-<td>E, F, G</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Solution (verified):</strong></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Act</th>
-<th>Dur</th>
-<th>ES</th>
-<th>EF</th>
-<th>LS</th>
-<th>LF</th>
-<th>TF</th>
-<th>FF</th>
-<th>Critical</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A</td>
-<td>3</td>
-<td>0</td>
-<td>3</td>
-<td>1</td>
-<td>4</td>
-<td>1</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>B</td>
-<td>4</td>
-<td>0</td>
-<td>4</td>
-<td>0</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>★</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td>2</td>
-<td>3</td>
-<td>5</td>
-<td>8</td>
-<td>10</td>
-<td>5</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>D</td>
-<td>5</td>
-<td>4</td>
-<td>9</td>
-<td>4</td>
-<td>9</td>
-<td>0</td>
-<td>0</td>
-<td>★</td>
-</tr>
-<tr class="odd">
-<td>E</td>
-<td>3</td>
-<td>5</td>
-<td>8</td>
-<td>10</td>
-<td>13</td>
-<td>5</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>F</td>
-<td>4</td>
-<td>9</td>
-<td>13</td>
-<td>9</td>
-<td>13</td>
-<td>0</td>
-<td>0</td>
-<td>★</td>
-</tr>
-<tr class="odd">
-<td>G</td>
-<td>6</td>
-<td>4</td>
-<td>10</td>
-<td>7</td>
-<td>13</td>
-<td>3</td>
-<td>3</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>H</td>
-<td>2</td>
-<td>13</td>
-<td>15</td>
-<td>13</td>
-<td>15</td>
-<td>0</td>
-<td>0</td>
-<td>★</td>
-</tr>
-</tbody>
-</table>
-<p>Path lengths: A-C-E-H = 10, A-D-F-H = 14, B-D-F-H = <strong>15</strong>, B-G-H = 12. <strong>Critical path: B–D–F–H, 15 days.</strong></p>
-<p><strong>Three teaching points from this specific table.</strong></p>
-<ol type="1">
-<li><strong>A has TF = 1 but FF = 0.</strong> Delay A by one day and no successor moves <em>and</em> the project doesn’t move. Delay it by two and D slips. Students conflate the two floats constantly; this row separates them.</li>
-<li><strong>A-D-F-H is 14 days — one day of float on the whole path.</strong> Near-critical paths are where projects actually fail, because monitoring attention follows the CP label.</li>
-<li><strong>The CP is a property of the estimates, not of the work.</strong> Change D from 5 to 3 and the critical path becomes B-G-H. Nothing about the project changed except a number in a spreadsheet.</li>
-</ol>
 </section>
 <section id="check-yourself" class="slide level2">
 <h2>Check yourself</h2>
 <ol type="1">
-<li>Give me an activity with total float but zero free float. What does that combination physically mean?</li>
-<li>If I shorten a non-critical activity, what happens to project duration?</li>
-<li>Two paths are both 15 days. How many critical paths does the project have, and what does that do to your risk?</li>
-<li>Why does the critical path change during execution even when nothing goes wrong?</li>
+<li>Your bottom-up estimate is 12% below your parametric estimate. Which do you trust and what do you do?</li>
+<li>A risk you identified materializes. Which reserve pays for it, and who approves?</li>
+<li>Why can’t you produce a ±5% estimate at project initiation, no matter how skilled you are?</li>
+<li>What happens to EV metrics if management reserve is accidentally included in the baseline?</li>
 </ol>
-</section>
-<section id="attack-this-claim" class="slide level2">
-<h2>Attack this claim</h2>
-<blockquote>
-<p>“Managing the critical path is the core of schedule management.”</p>
-</blockquote>
-<p>Attack lines: near-critical paths carry most of the realized risk; the CP assumes deterministic durations, which is false; resource constraints (Week 6) can make a non-critical activity the real bottleneck; CPM has no mechanism for the fact that people expand work to fill available float (Parkinson).</p>
 </section>
 <section id="somewhere-else-entirely" class="slide level2">
 <h2>Somewhere else entirely</h2>
-<p><strong>Cooking Thanksgiving dinner.</strong> The turkey is the critical path. The cranberry sauce has enormous float. Every home cook knows intuitively that you start the turkey first and that a five-minute turkey delay is a five-minute dinner delay, while a five-minute cranberry delay is free — that’s total float without free float, discovered without a textbook.</p>
-</section>
-<section id="studio" class="slide level2">
-<h2>Studio</h2>
-<p>Give the same network but with one duration hidden. Teams must determine what values of that duration would change the critical path. This converts CPM from arithmetic into sensitivity analysis in one step.</p>
+<p><strong>Insurance underwriting.</strong> An underwriter doesn’t estimate whether <em>your</em> house will burn; they price a portfolio using base rates and hold reserves against the distribution. Contingency reserve is the loss-cost provision; management reserve is capital held against tail events. Ask why project sponsors resist the framing that actuaries take for granted.</p>
 </section>
 <section id="next" class="slide level2">
 <h2>Next</h2>
 <ul>
-<li>Notes: <a href="../weeks/week-05.html">Week 5 on the course site</a></li>
-<li>AI lab: <a href="../labs/lab-05.html">Lab 5</a></li>
-<li>Reading: Larson Ch. 6</li>
+<li>Notes: <a href="../weeks/week-05.html">Week 5</a></li>
+<li>Studio: <a href="../labs/lab-05.html">Lab 5</a></li>
+<li>Reading: Larson Ch. 5</li>
 </ul>
 
 
