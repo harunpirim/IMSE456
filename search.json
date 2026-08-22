@@ -536,7 +536,7 @@
     "href": "index.html#what-you-will-be-able-to-do",
     "title": "IMSE 456/656 — Project Management",
     "section": "What you will be able to do",
-    "text": "What you will be able to do\n\nDecide which delivery approach fits a given project and defend the choice against a specific alternative.\nBuild and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, crash analysis, EVM report.\nRun the adaptive artifacts: product backlog, sprint mechanics, cumulative flow, Little’s Law.\nRead the evidence critically — distinguish a base rate from a vendor statistic, and name what a project-success number is actually measuring.\nDiagnose a failing project and propose interventions ranked by expected effect, not by convention.\nSpecify, build, and govern an AI agent that maintains a live project artifact — and say what it got wrong."
+    "text": "What you will be able to do\n\nDecide which delivery approach fits a given project and defend the choice against a specific alternative.\nBuild and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, crash analysis, EVM report.\nRun the adaptive artifacts: product backlog, sprint mechanics, cumulative flow, Little’s Law.\nRead the evidence critically — distinguish a base rate from a vendor statistic, and name what a project-success number is actually measuring.\nDiagnose a failing project and propose interventions ranked by expected effect, not by convention.\nUse AI to produce project artifacts, check them, and describe clearly where it helped and where it was wrong."
   },
   {
     "objectID": "index.html#textbook",
