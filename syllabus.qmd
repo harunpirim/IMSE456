@@ -12,8 +12,6 @@ subtitle: "IMSE 456/656 · Project Management · Fall 2026"
 <dt>Meets</dt><dd>Tuesday &amp; Thursday, 3:30 – 4:45 p.m.</dd>
 <dt>Room</dt><dd>Ag Hill Center, Room 240</dd>
 <dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
-<dt>Office</dt><dd>[office location]</dd>
-<dt>Office hours</dt><dd>[days and times]</dd>
 <dt>Email</dt><dd>harun.pirim@ndsu.edu</dd>
 <dt>Teaching assistant</dt><dd>Faria Farzana — faria.farzana@ndsu.edu</dd>
 <dt>TA office</dt><dd>Offerdahl 102</dd>
@@ -160,9 +158,8 @@ A non-programmable calculator is required for the midterm.
 
 ::: {.callout-important}
 ## If you work on lab computers only, this course still works
-Two tools are local installs; everything else runs in a browser. Where an install is a problem,
-each lab sheet gives you a substitute: **Smartsheet** in place of ProjectLibre, and the
-**Gemini API from Colab** in place of Antigravity. Nothing is lost and nothing is graded
+Almost everything runs in a browser. Where an install is a problem, the lab sheet gives you a
+substitute — **Smartsheet** in place of ProjectLibre. Nothing is lost and nothing is graded
 differently.
 
 Software installation is never homework. Week 1's access form asks which machine you will work on

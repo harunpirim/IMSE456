@@ -94,8 +94,6 @@ left at home. Submit the PDF and the completion code to Blackboard by the due da
 **Working on lab machines?**
 
 **No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
-
-**No Antigravity?** Use the Gemini API from the course Colab notebook — the key is in the shared config cell. Same work, browser only.
 :::
 
 ## Study loop for this week
