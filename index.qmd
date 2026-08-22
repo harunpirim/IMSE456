@@ -32,7 +32,7 @@ critical path, PERT, earned value — alongside agile and flow, with AI running 
 3. Run the **adaptive artifacts**: product backlog, sprint mechanics, cumulative flow, Little's Law.
 4. **Read the evidence critically** — distinguish a base rate from a vendor statistic, and name what a project-success number is actually measuring.
 5. Diagnose a failing project and propose interventions ranked by expected effect, not by convention.
-6. **Specify, build, and govern an AI agent** that maintains a live project artifact — and say what it got wrong.
+6. **Use AI to produce project artifacts**, check them, and describe clearly where it helped and where it was wrong.
 
 ## Textbook
 

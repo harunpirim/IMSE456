@@ -62,12 +62,6 @@ table td, table th { vertical-align: top; }
 .gated .lock { font-family: $font-family-monospace; font-size: 0.76rem; letter-spacing: 0.12em;
                text-transform: uppercase; color: #8F6608; display: block; margin-bottom: 0.5rem; }
 
-@media (prefers-color-scheme: dark) {
-  .week-meta { background: #171E1D; border-color: #2A3533; }
-  .gated { background: #161D1C; border-color: #2A3533; }
-  .tutor { background: #12211D; } .editor { background: #221614; } .roommate { background: #211D12; }
-}
-
 /* ---- concept chips ---- */
 .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 1.4rem; }
 .chip {
@@ -108,15 +102,6 @@ table td, table th { vertical-align: top; }
   border-radius: 0 4px 4px 0; padding: 0.8rem 1.1rem; margin: 1rem 0; font-size: 0.94rem;
 }
 .browser-path > p:last-child { margin-bottom: 0; }
-
-@media (prefers-color-scheme: dark) {
-  .chip { background: #1C2524; border-color: #2A3533; color: #E5EAE7; }
-  .case { background: #171E1D; border-color: #2A3533; }
-  .studio { background: #12211D; }
-  .browser-path { background: #211D12; }
-  .part { border-top-color: #2A3533; }
-}
-
 
 /* ---- navbar: NDSU yellow on hover, and on the page you are on ---- */
 $ndsu-yellow: #FFC72C;
