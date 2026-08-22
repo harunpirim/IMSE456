@@ -21,14 +21,6 @@ subtitle: "IMSE 456/656 · Project Management · Fall 2026"
 </dl>
 :::
 
-::: {.callout-note}
-## Credit hour definition
-Using the federal definition of a credit hour, one semester credit hour is equivalent to not less
-than 50 minutes of classroom or direct faculty instruction and a minimum of two hours out-of-class
-student work each week for approximately 15 weeks for one semester. See the
-[NDSU academic credit policy](https://catalog.ndsu.edu/academic-policies/academic-credit/).
-:::
-
 ## Catalog description
 
 **IMSE 456. Program and Project Management. 3 Credits.** Integrated approaches to managing
@@ -74,14 +66,6 @@ your partner has confirmed it. That is the whole rubric.
 
 Getting a different answer from the tool does not make a studio incomplete. Not explaining the
 difference does.
-
-::: {.callout-important}
-## Studios are individual. The project is a team.
-The mechanics have to be in *your* hands — in a team studio one person drives the software and the
-others watch, then discover in Week 11 that they cannot do a backward pass. The final project is
-where collaboration genuinely matters, and that is where you will work in a team of four or five.
-Nobody free-rides on the mechanics; nobody does the project alone.
-:::
 
 ## Course description
 
