@@ -4,11 +4,8 @@ subtitle: "Fall 2026 · North Dakota State University"
 toc: false
 ---
 
-Project management taught the way it is actually practiced now: the quantitative core
-(WBS, CPM, PERT, EVM) alongside adaptive delivery (Scrum, Kanban, flow), with hybrid
-treated as the default real-world case rather than a compromise — and with an AI layer
-running through every week, because the artifacts of this discipline are increasingly
-drafted by machines and audited by people.
+Project management the way it is practised now: the quantitative core — work breakdown,
+critical path, PERT, earned value — alongside agile and flow, with AI running through every week.
 
 ::: {.week-meta}
 <dl>
@@ -23,9 +20,9 @@ drafted by machines and audited by people.
 
 ## Start here
 
-- [Syllabus](syllabus.qmd) — policies, grading, and what this course does not cover
-- [Schedule](schedule.qmd) — all sixteen weeks, with what is live and what opens when
-- [AI Studio](ai.qmd) — Gemini, Antigravity, the source shelf and the study loop
+- [Syllabus](syllabus.qmd) — policies, grading, and how the week works
+- [Schedule](schedule.qmd) — all sixteen weeks and every key date
+- [AI Studio](ai.qmd) — the tools, what they cost you (nothing), and how much AI is allowed where
 - [Final Project](project.qmd) — the company-partnered team project, 30% of the grade
 
 ## What you will be able to do
@@ -45,12 +42,11 @@ you are assessed on is on this site.
 
 ## How the week works
 
-**Tuesday** is concept and case — the chapter's ideas, a short case with a decision in it, and one
-question worth arguing about.
+**Tuesday** is concept — the chapter's ideas, usually with a short case or discussion.
 
-**Thursday is studio: hands-on, at your own machine, and individual.** You *build* the tool
-yourself, then *use* the professional one on the same data, then explain where the two disagree.
-The disagreement is the graded part, because it is the only part a machine cannot check.
+**Thursday is studio: hands-on, at your own machine, and individual.** Work the problem out
+yourself first, then do the same thing in the real tool, then compare. If the answers differ,
+explain how and why. Studios are graded complete or incomplete.
 
 ## How this course is graded
 
@@ -59,7 +55,7 @@ The disagreement is the graded part, because it is the only part a machine canno
 | Conceptual assignments (MCQ) | 25% |
 | Studio assignments — individual | 25% |
 | Midterm — in class, closed notes, no computers | 20% |
-| Final project — team, with an industry partner | 30% |
+| Final project — team, with an industry partner and a published article | 30% |
 
 : {tbl-colwidths="[70,30]"}
 

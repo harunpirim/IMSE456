@@ -14,28 +14,23 @@ every time.
 
 ## What you have, and what it costs you
 
-| Tool | Role in this course | Access |
+| Tool | What you use it for | Access |
 |:--|:--|:--|
-| **Gemini** | The reasoning and drafting half — generating WBSs, risk registers, candidate lessons, and the counter-argument you have to defeat | Free tier is sufficient for every studio |
-| **Antigravity** | The agentic half — directing agents to write the checker, the CPM implementation, the LP formulation, the agent that refuses your sloppy register | Free to everyone |
-| **Gemini API in Colab** | The browser-only substitute for Antigravity | Key supplied in the course notebook |
+| **Gemini** | Drafting work breakdowns, risk registers, status reports, and arguments you then have to check | **Free** — students get Gemini Pro at no cost |
+| **Antigravity** | Building and running small agents and code | **Free to everyone** |
+| **Google Colab** | Python notebooks for the studio work | **Free**, in a browser, no install |
 
-: {tbl-colwidths="[18,56,26]"}
+: {tbl-colwidths="[18,54,28]"}
 
 ::: {.callout-important}
-## Nothing here requires a paid plan
-The free tiers cover all fourteen studios, and the instructor supplies API keys to anyone who needs
-them. Google's free student year of AI Pro is a convenience for those eligible, not a requirement —
-it takes a payment method and renews at full price, so set a reminder if you claim it.
+## You do not pay for anything
+Gemini Pro is free for students, and Antigravity and Colab are free to everyone. **If for any
+reason you cannot get access, tell the instructor** — API keys are supplied to anyone who needs
+them. No graded work in this course depends on being able to buy a subscription.
+
+If you claim the free student year, note that it asks for a payment method and renews at full
+price when the year ends, so set yourself a reminder.
 :::
-
-## The three rules
-
-1. **Label it.** Any submitted artifact a model produced or substantially drafted says so, names the
-   tool, and includes the prompt or a shareable transcript link.
-2. **Verify it.** Every quantitative result a model generates arrives with the code or hand
-   calculation that checks it. **The check is graded**, not the output.
-3. **Own it.** "The model said so" is not a defence — not here, and not in a project review.
 
 ## How much AI, on which assessment
 
@@ -55,16 +50,6 @@ The full policy, the disclosure block you append to submissions, and the confide
 apply to your partner organization's information are in the
 [syllabus](syllabus.qmd#use-of-generative-artificial-intelligence).
 
-::: {.callout-note}
-## How your instructor uses AI
-You are asked to label, verify and own your AI use; the same standard applies to the person
-teaching you. AI helped organize this course — sequencing, drafting notes and cases, generating
-studio datasets, computing every answer key in code, and building this site. It does **not** grade
-you, your work is **never** uploaded to a third-party AI system, and every decision is the
-instructor's. The full disclosure is in the
-[syllabus](syllabus.qmd#instructor-use-of-ai-disclosure), and since
-[the repository](https://github.com/harunpirim/IMSE456) is public you can read the source yourself.
-:::
 
 ## Build → Use → Reconcile
 
@@ -86,7 +71,7 @@ Five roles, five different jobs. The framework is Sandeep Swadia's "University i
 
 | Role | Its job | Where you meet it |
 |:--|:--|:--|
-| **Adviser** | Sets destination, baseline, sequencing, cut list | The [syllabus](syllabus.qmd) — including what this course deliberately does not cover |
+| **Adviser** | Sets destination, baseline, sequencing | The [syllabus](syllabus.qmd) and the [schedule](schedule.qmd) |
 | **Librarian** | Curates credible sources, defends against distraction | The source shelf below, and per-week readings |
 | **Tutor** | Asks one question at a time, finds the gap, does not lecture | "Tutor check" in every week's notes; the per-week prompt at the foot of each lab sheet |
 | **Editor** | Challenges logic, finds weak arguments, cuts repetition | "Editor challenge" — a defensible-sounding claim you have to attack |

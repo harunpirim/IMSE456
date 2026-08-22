@@ -10,11 +10,14 @@ subtitle: "IMSE 456/656 · Project Management · Fall 2026"
 <dt>Course</dt><dd>IMSE 456/656 — Project Management (3 credits)</dd>
 <dt>Term</dt><dd>Fall 2026 · 25 August – 10 December 2026</dd>
 <dt>Meets</dt><dd>Tuesday &amp; Thursday, 3:30 – 4:45 p.m.</dd>
-<dt>Room</dt><dd>Ag Hill Center, Room 240 <em>(Week 11 studio meets in the campus Windows room — see the <a href="schedule.qmd">schedule</a>)</em></dd>
+<dt>Room</dt><dd>Ag Hill Center, Room 240</dd>
 <dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
 <dt>Office</dt><dd>[office location]</dd>
 <dt>Office hours</dt><dd>[days and times]</dd>
 <dt>Email</dt><dd>harun.pirim@ndsu.edu</dd>
+<dt>Teaching assistant</dt><dd>Faria Farzana — faria.farzana@ndsu.edu</dd>
+<dt>TA office</dt><dd>Offerdahl 102</dd>
+<dt>TA office hours</dt><dd>Thursday 2–3 p.m., or by appointment</dd>
 </dl>
 :::
 
@@ -28,30 +31,49 @@ student work each week for approximately 15 weeks for one semester. See the
 
 ## Catalog description
 
-[Paste the current catalog description for IMSE 456/656 verbatim — NDSU Policy 331.1 requires the
-syllabus description to match the catalog.]
+**IMSE 456. Program and Project Management. 3 Credits.** Integrated approaches to managing
+engineering, technology and business projects, addressing the project management lifecycle
+including initiating, planning, executing, controlling and closing. Additional topics include
+program management, portfolio management, and applying principles in a business environment.
+Prereq or Coreq: Junior standing. Dual-listing: IMSE 656.
 
 ## How this course runs
 
 Two sessions a week, and they do different jobs.
 
-**Tuesday is concept and case.** The chapter's ideas, then a short case with a decision in it and
-one question worth arguing about. You leave with an assignment.
+**Tuesday is concept.** The chapter's ideas, and usually a short case or discussion with a
+decision in it. You leave knowing what is due.
 
 **Thursday is studio, and it is hands-on and individual.** Every student works at their own machine
 on the same three movements:
 
-1. **Build — 25 minutes.** You implement the concept yourself: write the critical-path passes in
-   Python, build the earned-value model, direct an agent to draft a work breakdown structure. No
-   professional software yet. You cannot hide behind a black box you had to construct.
-2. **Use — 20 minutes.** The same project, in ProjectLibre, Smartsheet, Taiga or Power BI — the
-   tools you will meet in industry, met while you already know what they are doing underneath.
-3. **Reconcile — 15 minutes.** The two disagree. They always do. Find the difference, explain it,
-   decide which is right. **This is the graded part**, because it is the only part a machine
-   cannot check for you.
+1. **Build — 25 minutes.** Work the concept out yourself first — by hand, in a spreadsheet, in a
+   notebook, or with AI help. No professional software yet.
+2. **Use — 20 minutes.** Do the same thing in the real tool: ProjectLibre, Smartsheet, Taiga or
+   Power BI.
+3. **Reconcile — 15 minutes.** Compare the two. If the numbers match, say so and say why you would
+   trust them. **If they do not match exactly, explain how they differ and why** — a different
+   definition, a different assumption, a rounding choice, or a mistake in one of them. Either
+   answer is fine. Not looking is not.
 
-A five-minute peer check closes the session: a neighbour runs your "done looks like" checklist
-against your screen. It is not grading, it is catching.
+**Then a five-minute pair check.** Swap screens with the person next to you and read each other's
+checklist out loud. You are only confirming that each item exists — not judging quality. If
+something is missing, there is still time to add it.
+
+### How studios are graded
+
+**Complete or incomplete.** A studio is complete when every item on its checklist is present and
+your partner has confirmed it. That is the whole rubric.
+
+| | |
+|:--|:--|
+| **Complete** | All checklist items present · reconciliation paragraph written · pair confirmed |
+| **Incomplete** | Something on the checklist is missing |
+
+: {tbl-colwidths="[24,76]"}
+
+Getting a different answer from the tool does not make a studio incomplete. Not explaining the
+difference does.
 
 ::: {.callout-important}
 ## Studios are individual. The project is a team.
@@ -65,12 +87,12 @@ Nobody free-rides on the mechanics; nobody does the project alone.
 
 Project management as it is actually practised: the quantitative core — work breakdown, critical
 path, PERT, resource levelling, crashing, earned value — alongside adaptive delivery and flow
-metrics, with hybrid treated as the default real-world case rather than a compromise. The course
-argues from empirical evidence rather than from convention.
+metrics, with hybrid treated as the normal real-world case.
 
-Running through every week is an AI layer. You will generate project artifacts with a model, then
-write the code that checks them; specify and build agents; and, in the final project, govern one
-that maintains a live artifact — and report what it got wrong.
+AI runs through every week. You will use it to draft project artifacts — work breakdowns, risk
+registers, status reports, schedules — and then check what it produced against the real tool and
+against your own work. In the final project your team builds a small AI-assisted project-management
+workflow and writes about it publicly.
 
 ## Course objectives
 
@@ -81,19 +103,17 @@ By the end of the course you can:
 3. Run the adaptive artifacts: product backlog, sprint mechanics, cumulative flow diagram, Little's Law.
 4. Read the evidence critically — distinguish a base rate from a vendor statistic.
 5. Diagnose a failing project and propose interventions ranked by expected effect, not by convention.
-6. Specify, build and govern an AI agent that maintains a live project artifact, and state what it got wrong.
+6. Use AI to produce project artifacts, check them, and describe clearly where it helped and where it was wrong.
 
 ### Additional expectations for students enrolled in IMSE 656
 
 Students enrolled under the graduate number complete the same components at a higher level of
 expectation:
 
-- **Conceptual assignments** include an additional short-answer section requiring a claim grounded
-  in one of the primary sources on the [source shelf](ai.qmd#the-source-shelf).
 - **Studio assignments** require the reconciliation paragraph to cite the mechanism, not only the
   symptom — *which algorithm or formula choice produces this difference*, with a reference.
-- **Final project** includes a *methods justification*: the choice of delivery approach, estimating
-  method and control mechanism defended against the empirical literature, with citations.
+- **Final project** includes a short *methods justification*: why you chose the delivery approach,
+  estimating method and control mechanism you did.
 - **Final presentation** includes a five-minute defence against a challenge drawn from the
   counter-evidence for the position taken.
 
@@ -110,12 +130,6 @@ expectation:
 | 7 | Acquire and apply new knowledge using appropriate learning strategies | very high |
 
 : {tbl-colwidths="[6,64,30]"}
-
-::: {.callout-warning}
-## To confirm before publication
-The contribution levels above are a proposal based on what the course actually does. Adjust to
-match the IME program's assessment plan before this syllabus is final.
-:::
 
 ## Textbook and sequence
 
@@ -150,7 +164,7 @@ not be asked to buy software for this course.**
 | [Taiga](https://tree.taiga.io) | Backlog, sprints, task ownership, evidence | Free account, browser |
 | ProjectLibre | WBS, Gantt, network, critical path, resource levelling | Free download; Smartsheet substitutes in a browser |
 | Smartsheet | Shared schedules, resource views, dashboards, forms, approvals | Licensed by NDSU, browser |
-| Power BI | Analytics over the project record | Browser Service for most weeks; Desktop in the campus Windows room for Week 11 |
+| Power BI | Dashboards and analytics over the project record | Free in a browser at app.powerbi.com; Desktop is also available on campus Windows machines |
 | [Google Colab](https://colab.research.google.com) | Python: networkx, pandas, numpy, matplotlib, PuLP | Free, browser |
 | Excel or Numbers | Scoring models, crash tables, decision tools | Whichever you have; templates ship as `.xlsx` |
 | [draw.io](https://app.diagrams.net) | WBS trees, networks, org charts, stakeholder maps | Free, browser |
@@ -182,7 +196,7 @@ Set up a cloud folder in Week 1 and keep everything there.
 | Conceptual assignments | 25% | CA1–CA8, online multiple choice on terms, theory and the reasoning behind the methods. Auto-graded, lowest score dropped. |
 | Studio assignments | 25% | SA1–SA14, **individual**, produced in and after Thursday studio. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case. |
 | Midterm examination | 20% | **Thursday 15 October, in class.** Closed book, closed notes, no computers or phones. Covers Chapters 1–7. |
-| Final project | 30% | A semester-long project with an industry partner, in teams of four or five. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See [Final Project](project.qmd). |
+| Final project | 30% | A semester-long project with an industry partner, in teams of four or five, including a published Medium article on the AI-assisted workflow your team built. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See [Final Project](project.qmd). |
 
 : {tbl-colwidths="[26,10,64]"}
 
@@ -200,16 +214,9 @@ Set up a cloud folder in Week 1 and keep everything there.
 
 ### Late work
 
-Conceptual assignments close at the posted time and do not reopen; the lowest score is dropped to
-absorb one missed set. Studio assignments lose 10% per calendar day to a floor of 50%, for five
-days, after which they are not accepted — and the two lowest are dropped, which is your margin for
-a bad week. Final project milestones are firm because a partner organization is waiting on them;
-contact the instructor **before** the deadline if a milestone is at risk.
-
-### Feedback turnaround
-
-Conceptual assignments are graded automatically. Studio assignments are returned within seven days.
-Project milestones within fourteen.
+**Late work is not accepted.** Deadlines are firm. The dropped scores are your margin for a bad
+week: the lowest conceptual assignment and the two lowest studio assignments are dropped
+automatically. If something serious happens, contact the instructor **before** the deadline.
 
 ## Attendance
 
@@ -285,26 +292,14 @@ The level is repeated on every lab sheet and assignment so you never have to gue
 
 : {tbl-colwidths="[26,20,54]"}
 
-### The three rules
-
-1. **Label it.** Any submitted artifact a model produced or substantially drafted says so, names the
-   tool, and includes the prompt or a shareable link to the conversation.
-2. **Verify it.** Every quantitative result a model generates is submitted with the code or hand
-   calculation that checks it. A number you cannot verify is a number you did not produce.
-   **The check is graded**, not the output.
-3. **Own it.** You are responsible for everything you submit, including the parts a model wrote.
-   "The model said so" is not a defence — not here, and not in a project review.
-
 ### How to disclose
 
 Append this to any submission where AI was used. It takes two minutes and its absence is what turns
 permitted use into a violation.
 
-> **AI acknowledgement.** I used [tool and version] for [what — e.g. drafting the WBS, writing the
-> forward-pass code, generating counter-arguments]. Prompt or transcript: [link or attached
-> screenshots]. What I changed after reviewing its output: [specific edits]. What it got wrong:
-> [or "nothing I found", if that is honestly the case]. I have verified every quantitative result
-> in this submission and the verification is included.
+> **AI acknowledgement.** Tool used: [name]. What I used it for: [e.g. drafting the WBS].
+> Prompt or transcript: [link or screenshot]. What I changed after reading its output: [edits].
+> What it got wrong: [or "nothing I found"].
 
 ### The requirements, in short
 
@@ -393,17 +388,6 @@ adverse reactions to things happening in the world today.
 **In a crisis or emergency:** University Police 701-231-8998 · 911 · a hospital emergency room ·
 Prairie St. John's needs assessment 701-476-7216 (510 4th St. S.) · FirstLink Help Line
 1-800-273-8255 or 2-1-1 · Rape and Abuse Crisis Center 701-293-7273
-
-## What this course deliberately does not cover
-
-- **PMP exam drilling.** The exam changes; the reasoning does not.
-- **Software menu tours.** You will use six tools, but no lecture time goes to menus — the studio
-  teaches the tool by making you build what it does first.
-- **The full process catalogue.** You learn the *shape* of a process standard and how to look
-  things up. Memorizing inputs-tools-outputs is the lowest-value activity in project-management education.
-- **Scaling frameworks in depth.** One segment on why they exist and why the evidence is thin.
-- **Six Sigma and lean manufacturing.** Adjacent field, separate course.
-- **Contract law.** Contract *types* and incentive structure are covered; the law is not.
 
 ::: {.callout-note appearance="simple"}
 This syllabus provides an initial schedule for covering the basic course topics and the grading

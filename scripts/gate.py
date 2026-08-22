@@ -151,33 +151,29 @@ def write_schedule(weeks: list[dict], today: dt.date) -> None:
     rows = []
     for w in weeks:
         m, n = w["meta"], w["meta"].get("week", 0)
-        state = (f'<span class="pill pill-soon">opens {human(w["release"])}</span>'
-                 if w["gated"] else '<span class="pill pill-live">live</span>')
         title = re.sub(r"^Week \d+ · ", "", str(m.get("title", "")))
         link = title if w["gated"] else f'[{title}](weeks/{w["file"]})'
         rows.append(
             f'| <span class="tabular">{n:02d}</span> '
             f'| <span class="tabular">{m.get("dates","")}</span> '
-            f'| {link} | {m.get("reading","—") or "—"} | {state} |')
+            f'| {link} | {m.get("reading","—") or "—"} |')
 
-    live = sum(1 for w in weeks if not w["gated"])
     body = f"""---
 title: "Schedule"
-subtitle: "IMSE 456/656 · Fall 2026 · sixteen weeks"
+subtitle: "IMSE 456/656 · Fall 2026"
 toc: false
 ---
 
-Sixteen weeks, Tuesday and Thursday, 3:30–4:45 p.m. in Ag Hill Center 240.
-Each week opens on the Monday before its first session. **{live} of {len(weeks)} weeks are
-live**; the rest publish automatically on the dates below.
+Tuesday and Thursday, 3:30–4:45 p.m., Ag Hill Center 240. Each week's page opens on the Monday
+before its first session.
 
-| Wk | Sessions | Topic | Reading | |
-|:--|:--|:--|:--|:--|
+| Wk | Sessions | Topic | Reading |
+|:--|:--|:--|:--|
 {chr(10).join(rows)}
 
-: {{tbl-colwidths="[6,17,45,20,12]"}}
+: {{tbl-colwidths="[7,20,48,25]"}}
 
-## Fixed dates
+## Key dates
 
 | Date | What |
 |:--|:--|
@@ -186,21 +182,20 @@ live**; the rest publish automatically on the dates below.
 | <span class="tabular">Fri 2 Oct</span> | FP1 — project charter and WBS |
 | <span class="tabular">Thu 15 Oct</span> | **Midterm**, in class, closed notes, no computers |
 | <span class="tabular">Fri 30 Oct</span> | FP2 — schedule model and budget baseline |
-| <span class="tabular">Thu 26 Nov</span> | *No class — Thanksgiving* |
 | <span class="tabular">Fri 20 Nov</span> | FP3 — risk register and EVM status report |
+| <span class="tabular">Thu 26 Nov</span> | *No class — Thanksgiving* |
 | <span class="tabular">Tue 8 &amp; Thu 10 Dec</span> | Final presentations |
-| <span class="tabular">Fri 11 Dec</span> | Final report due, 11:59 p.m. |
+| <span class="tabular">Fri 11 Dec</span> | Final report and Medium article due, 11:59 p.m. |
 
 : {{tbl-colwidths="[24,76]"}}
 
-## Assignment cadence
+## Assignments
 
 **Conceptual assignments (CA1–CA8, 25%)** close Sunday 11:59 p.m. Lowest score dropped.
-**Studio assignments (SA1–SA12, 25%)** are due the Sunday after the studio that produced them.
-Lowest score dropped. Late work loses 10% per day to a floor of 50%, for five days.
 
-*This page is generated from each week's front matter. Do not edit it by hand —
-edit `release:` in the week file instead.*
+**Studio assignments (SA1–SA14, 25%)** are graded **complete or incomplete**. Two lowest dropped.
+
+**Late work is not accepted.**
 """
     (BUILD / "schedule.qmd").write_text(body, encoding="utf8")
 

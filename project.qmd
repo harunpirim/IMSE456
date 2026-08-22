@@ -22,9 +22,9 @@ management requires.
 ## Finding a partner
 
 ::: {.callout-important}
-## FP0 is due Friday 11 September — do not leave this late
-A team without a confirmed partner by that date is assigned one from the instructor's
-reserve list, and the reserve projects are less interesting than the ones you find yourselves.
+## FP0 is due Friday 11 September
+Start looking now. If your team is struggling to find a partner, talk to the instructor early
+rather than late.
 :::
 
 **What counts as a partner.** Any organization outside this course with a real, bounded piece
@@ -41,9 +41,6 @@ not need to be an engineering project.
 **Where to look.** Your own employer or internship; a faculty member's lab; NDSU facilities,
 events, or student affairs; the Fargo-Moorhead non-profit sector; a family or friend's business.
 Ask early — the request is small and most organizations say yes.
-
-**If you cannot find one.** Tell the instructor before 11 September rather than after. There
-is a reserve list. There is no penalty for using it; there is a penalty for silence.
 
 ## Confidentiality and intellectual property
 
@@ -70,28 +67,34 @@ Some partners will share information they would not want published. Handle it pr
 
 : {tbl-colwidths="[8,54,20,18]"}
 
-Each milestone reuses the method taught the week before it is due. Nothing is asked of you
-that you have not just practised in studio.
-
 ## The AI requirement
 
-From FP2 onward, **one project artifact must be maintained by an agent you build** — the
-schedule model, the risk register, or the status report. You choose which.
+From FP2 onward, **AI is part of how your team runs the project**, not an add-on. Use it to draft
+and maintain at least one artifact — the schedule, the risk register, or the status report — and
+keep a short record of what you asked it and what you changed.
 
-The final report includes a required section, roughly two pages:
+### The Medium article
 
-1. **What the agent maintained**, and its specification — including the acceptance tests
-   you wrote before you built it.
-2. **What it got wrong.** Every agent that runs for six weeks gets something wrong. A report
-   claiming otherwise is a report whose authors were not checking.
-3. **How you caught it** — what control surfaced the error, and how long it took.
-4. **What you would put in place** to govern this agent if the project ran for two years
-   and a sponsor made decisions from its output.
+Each team publishes **one article on Medium** describing the AI-assisted project-management
+workflow you built. Roughly 1,000–1,500 words, written for a working professional rather than for
+your instructor.
+
+Cover four things:
+
+1. **The pipeline.** What your team did with AI, step by step — which tool, at which stage, on which
+   artifact. A diagram or screenshots help.
+2. **What worked.** Where it genuinely saved time or caught something you would have missed.
+3. **What it got wrong**, with a concrete example. Every workflow that runs for six weeks produces
+   at least one. A piece claiming otherwise is a piece whose authors were not checking.
+4. **What you would do differently** if you ran the same project again.
+
+Submit the published link with FP4. This is a public, citable artifact with your name on it — it is
+worth writing well, and it is the part of this course you can show an employer.
 
 ::: {.callout-note}
-## Point 2 is graded generously and point 3 is graded strictly
-Finding your agent's error is not a failure of the work; it *is* the work. What loses marks
-is having no mechanism that would have caught it.
+## Point 3 is graded generously
+Finding where the AI was wrong is not a failure of the work; it *is* the work. What loses marks is
+having no way you would have noticed.
 :::
 
 ## Final report structure
@@ -104,7 +107,7 @@ but all present:
 3. Scope: charter and WBS, with what changed and why.
 4. Schedule and cost: the baseline, the actuals, and where they diverged.
 5. Risk: the register, and the risk that materialized or the one you were most wrong about.
-6. The AI section, as above.
+6. Your AI workflow, and the link to your published Medium article.
 7. What you would do differently, ranked by expected effect rather than by convention.
 
 **IMSE 656 students** additionally include a *methods justification*: the choice of delivery
@@ -123,7 +126,7 @@ changeover, enforced. Partner representatives are invited. Details on the
 |:--|--:|:--|
 | Artifact quality | 25% | WBS passes the 100% rule; the network is correct; the baseline is defensible; the register has owners and triggers, not adjectives. |
 | Evidence and reasoning | 25% | Choices are defended against a named alternative with a reason, not asserted. Numbers are traceable to a source. |
-| AI governance section | 20% | A real error found, a real control that caught it, and a governance proposal that would survive a sponsor's scrutiny. |
+| AI workflow and article | 20% | A workflow that was genuinely used, an honest account of where it was wrong, and a published article a professional would read. |
 | Partner engagement | 15% | The partner's actual constraints are visible in the work. Evidence of regular contact and of scope negotiated rather than assumed. |
 | Communication | 15% | Report and presentation are readable by the partner, not only by the instructor. Timing respected. |
 
@@ -151,9 +154,6 @@ Each carries a duty that cannot be delegated, from the course operations guide:
 **In a four-person team, merge coordinator with process facilitator** — both are keep-the-team-running
 jobs and the coordinator already owns membership. Scope, schedule and quality each keep a single
 owner; those three answer for artifacts and cannot be shared.
-
-**Roles rotate at FP2 and FP3** so every member drives the master schedule at least once and writes
-at least one status report.
 
 Every member still plans and performs project work. Each updates their own Taiga tasks weekly and
 completes at least one documented schedule action — adding dependencies, assigning resources,

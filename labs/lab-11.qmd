@@ -29,8 +29,7 @@ Build is a legitimate finding, reported as one.
 
 Accounts and data only. Nothing here needs software installed at home.
 
-1. **This studio is in the campus Windows room, not our usual classroom.** Check the location on the schedule page before Thursday.
-2. Confirm Power BI Desktop opens on the lab machine — it is preinstalled.
+1. Sign in to Power BI in a browser at [app.powerbi.com](https://app.powerbi.com) with your NDSU account and confirm it works.
 3. Download `evm-three-months.xlsx` from the course Drive folder into your `IMSE456` cloud folder.
 :::
 
@@ -98,7 +97,7 @@ left at home. Submit the PDF and the completion code to Blackboard by the due da
 
 **No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
 
-**This studio uses Power BI Desktop on a campus Windows machine.** Publish to the Service before you leave the room so the model is reachable from your own laptop afterwards.
+**Power BI here is the browser Service** at [app.powerbi.com](https://app.powerbi.com) — it works on any machine. Power BI Desktop gives you more modelling control if you have a Windows machine or use one on campus, but everything in this studio can be done in the browser.
 :::
 
 
