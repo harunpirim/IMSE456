@@ -7,3 +7,6 @@ _freeze/
 __pycache__/
 .venv/
 _build/
+
+/.quarto/
+private/

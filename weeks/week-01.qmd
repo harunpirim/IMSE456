@@ -73,7 +73,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 2. **It hides the trade-off asymmetry.** The three legs are not symmetric — scope is usually the only one anyone will actually flex, and the flex is usually unacknowledged.
 3. **It has no stakeholder dimension.** The person who paid, the person who uses it, and the team who built it can disagree about success, and often do.
 
-**A multidimensional model instead.** Shenhar & Dvir's dimensions, which the empirical literature broadly uses:
+**A multidimensional model instead.** Shenhar & Dvir's five dimensions, from *Reinventing Project Management* (2007) — the 2001 *Long Range Planning* paper has only four; *impact on the team* was added in the book:
 
 | Dimension | Question | Time horizon |
 |---|---|---|
@@ -87,8 +87,8 @@ This model is what makes the agile-vs-predictive evidence legible: Gemino et al.
 
 ### Evidence to put on the board
 
-- Flyvbjerg's database (>16,000 projects): **0.5%** come in on budget, on time, and with the promised benefits. **8.5%** hit both budget and schedule. Cost overrun by category (mean): nuclear waste storage +238%, Olympic Games +157%, nuclear power +120%, IT +73%, rail/tunnels ≈ +39%, solar ≈ +1%.
-- **Immediately complicate it.** Chapman (2024, 2025, *PMJ* / *IJPM*) analysed 125 rail and 280 road projects in Denmark, Norway and Sweden, 2008–2022, and found them typically delivered "on cost, over time" — Swedish road projects showed typical cost overrun of **2.7%**, rail a **1.8% underrun**. Base rates are not universal constants; they are properties of a governance regime.
+- Flyvbjerg's database (>16,000 projects): **0.5%** come in on budget, on time, and with the promised benefits. **8.5%** hit both budget and schedule. Cost overrun by category (mean): nuclear waste storage +238%, Olympic Games +157%, nuclear power +120%, IT +73%, buildings +62%, rail +39%, tunnels +37%, wind +13%, solar +1%.
+- **Immediately complicate it.** Chapman (2024), *Project Management Journal* 55(6), examined 228 road and 96 rail projects in Sweden and found a typical road cost overrun of **2.7%** and a rail **1.8% underrun**, with 93% of road and 70% of rail projects achieving their intended benefits. Chapman (2025), *International Journal of Project Management* 43(8) 102787, extended this to 125 rail and 280 road projects across Denmark, Norway and Sweden, 2008–2022, and found them delivered **on cost, over time**, with no evidence of systematic optimism bias or strategic misrepresentation. Base rates are not universal constants; they are properties of a governance regime.
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
@@ -131,9 +131,9 @@ Short essay: pick a well-documented project, score it on all five dimensions, an
 
 #### Core content
 
-**PMBOK Guide, Eighth Edition (PMI, November 2025).** The structure students need:
+**PMBOK Guide, Eighth Edition (PMI — released late 2025, general availability January 2026).** The structure students need:
 
-- **Six principles** (down from twelve in the 7th edition): adopt a holistic view; focus on value; embed quality into processes and deliverables; be an accountable leader; integrate sustainability across all project areas; build an empowered culture. *Sustainability is genuinely new* — it did not appear as a principle in the 7th edition.
+- **Six principles** (down from twelve in the 7th edition): adopt a holistic view; focus on value; embed quality into processes and deliverables; be an accountable leader; integrate sustainability across all project areas; build an empowered culture. *Sustainability is newly standalone* — in the 7th edition it sat inside Stewardship rather than carrying its own principle.
 - **Seven performance domains** (down from eight): Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk.
 - **40 processes**, reintroduced in a deliberately non-prescriptive form, consolidated down from the 49 in the 2022 *Process Groups: A Practice Guide*.
 - Expanded material on AI, PMO roles, and procurement.
@@ -144,7 +144,7 @@ Short essay: pick a well-documented project, score it on all five dimensions, an
 
 | Standard | What it claims to be | Governance stance |
 |---|---|---|
-| PMBOK 8 (PMI, 2025) | A body of knowledge + a standard; descriptive | Tailoring is mandatory |
+| PMBOK 8 (PMI, 2025–26) | A body of knowledge + a standard; descriptive | Tailoring is mandatory |
 | PRINCE2 (AXELOS/PeopleCert) | A *method* — prescriptive processes and roles | Strong: project board, stage boundaries, exception management |
 | ISO 21502:2020 | Guidance, deliberately generic and vendor-neutral | Light; designed to be referenced in contracts |
 | Scrum Guide (Nov 2020) | A *framework*, immutable, deliberately incomplete | None beyond the team; explicitly silent on portfolio |

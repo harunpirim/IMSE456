@@ -34,15 +34,9 @@ except Exception:                                    # pragma: no cover
 
 ROOT   = pathlib.Path(__file__).resolve().parent.parent
 BUILD  = ROOT / "_build"
-SKIP   = {"_build", "_site", ".quarto", "_freeze", ".git", "__pycache__", ".venv"}
+SKIP   = {"_build", "_site", ".quarto", "_freeze", ".git", "__pycache__", ".venv",
+          "private"}   # private/ holds answer keys — never let it near a build tree
 FM     = re.compile(r"\A---\n(.*?)\n---\n(.*)\Z", re.S)
-
-MONTHS = ["January","February","March","April","May","June","July",
-          "August","September","October","November","December"]
-
-
-def human(d: dt.date) -> str:
-    return f"{d.day} {MONTHS[d.month - 1]}"
 
 
 def read_fm(path: pathlib.Path):
@@ -74,7 +68,7 @@ def video_block(meta: dict) -> str:
             "**Recording** — posts after the session.\n:::\n")
 
 
-def stub(meta: dict, release: dt.date) -> str:
+def stub(meta: dict) -> str:
     a = meta.get("session-a") or ""
     b = meta.get("session-b") or ""
     plan = ""
@@ -88,9 +82,8 @@ def stub(meta: dict, release: dt.date) -> str:
             rows.append(f"<dt>Reading</dt><dd>{meta['reading']}</dd>")
         plan = ("\n\n::: {.week-meta}\n<dl>\n" + "\n".join(rows) + "\n</dl>\n:::\n")
     return ('::: {.gated}\n'
-            f'<span class="lock">Opens {human(release)}</span>\n\n'
-            f'Notes, slides, and the recording for this week publish on '
-            f'**{human(release)} {release.year}**.\n:::\n'
+            '<span class="lock">Not posted yet</span>\n\n'
+            'Notes, slides, and the recording for this week are not published yet.\n:::\n'
             f'{plan}\n'
             "See the [schedule](../schedule.qmd) for everything that is live now.\n")
 
@@ -121,8 +114,9 @@ def copy_tree() -> None:
                     ignore=lambda d, names: [n for n in names if n in SKIP])
 
 
-def gate(today: dt.date, ungate_all: bool) -> list[dict]:
+def gate(today: dt.date, ungate_all: bool) -> tuple[list[dict], dict]:
     weeks = []
+    assets: dict[str, dict[int, str]] = {"slides": {}, "labs": {}}
     for sub in ("weeks", "slides", "labs"):
         folder = BUILD / sub
         if not folder.is_dir():
@@ -137,26 +131,38 @@ def gate(today: dt.date, ungate_all: bool) -> list[dict]:
             if sub == "weeks":
                 weeks.append({"meta": meta, "file": path.name,
                               "release": rel, "gated": gated})
+            elif not gated:
+                # week number from the filename: slides/week-05.qmd, labs/lab-05.qmd
+                n = re.search(r"(\d+)", path.stem)
+                if n:
+                    assets[sub][int(n.group(1))] = path.name
 
             if gated:
-                body = stub(meta, rel)
+                body = stub(meta)
             else:
                 body = body.replace("<!-- VIDEO -->", video_block(meta))
             path.write_text(f"---\n{fm_text}\n---\n\n{body}", encoding="utf8")
-    return weeks
+    return weeks, assets
 
 
-def write_schedule(weeks: list[dict], today: dt.date) -> None:
+def write_schedule(weeks: list[dict], assets: dict) -> None:
     weeks.sort(key=lambda w: w["meta"].get("week", 0))
     rows = []
     for w in weeks:
         m, n = w["meta"], w["meta"].get("week", 0)
         title = re.sub(r"^Week \d+ · ", "", str(m.get("title", "")))
-        link = title if w["gated"] else f'[{title}](weeks/{w["file"]})'
+        links = []
+        if not w["gated"]:
+            links.append(f'[notes](weeks/{w["file"]})')
+            if assets["slides"].get(n):
+                links.append(f'[slides](slides/{assets["slides"][n]})')
+            if assets["labs"].get(n):
+                links.append(f'[studio](labs/{assets["labs"][n]})')
         rows.append(
             f'| <span class="tabular">{n:02d}</span> '
             f'| <span class="tabular">{m.get("dates","")}</span> '
-            f'| {link} | {m.get("reading","—") or "—"} |')
+            f'| {title} | {m.get("reading","—") or "—"} '
+            f'| {" · ".join(links)} |')
 
     body = f"""---
 title: "Schedule"
@@ -164,14 +170,14 @@ subtitle: "IMSE 456/656 · Fall 2026"
 toc: false
 ---
 
-Tuesday and Thursday, 3:30–4:45 p.m., Ag Hill Center 240. Each week's page opens on the Monday
-before its first session.
+Tuesday and Thursday, 3:30–4:45 p.m., Ag Hill Center 240. Notes, slides, and studio sheets
+appear in the last column as each week is posted.
 
-| Wk | Sessions | Topic | Reading |
-|:--|:--|:--|:--|
+| Wk | Sessions | Topic | Reading | Resources |
+|:--|:--|:--|:--|:--|
 {chr(10).join(rows)}
 
-: {{tbl-colwidths="[7,20,48,25]"}}
+: {{tbl-colwidths="[6,18,36,20,20]"}}
 
 ## Key dates
 
@@ -214,8 +220,8 @@ def main() -> None:
         today = dt.date.today()
 
     copy_tree()
-    weeks = gate(today, args.all)
-    write_schedule(weeks, today)
+    weeks, assets = gate(today, args.all)
+    write_schedule(weeks, assets)
 
     live = [w for w in weeks if not w["gated"]]
     print(f"gate.py · today={today} · {len(live)}/{len(weeks)} weeks live")
