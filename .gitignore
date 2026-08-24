@@ -10,3 +10,5 @@ _build/
 
 /.quarto/
 private/
+_pptx/
+node_modules/

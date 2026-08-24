@@ -67,9 +67,9 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 
 **Process.** Identify (checklists, prompt lists, assumption analysis, pre-mortem) → qualitative analysis (P × I matrix, ranking) → quantitative analysis (EMV, decision trees, Monte Carlo) → response planning (avoid / transfer / mitigate / accept for threats; exploit / share / enhance / accept for opportunities) → monitor.
 
-**EMV and decision trees.** EMV = Σ P(outcome) × value(outcome). Teach the decision tree with a make-vs-buy under uncertain demand — it forces students to price *information* (what would a market study have to cost to be worth it?).
+**EMV and decision trees.** EMV = Σ P(outcome) × value(outcome). Work the decision tree on a make-vs-buy under uncertain demand — it forces you to price *information* (what would a market study have to cost to be worth it?).
 
-**Monte Carlo.** Assign a distribution to each activity duration/cost, sample, recompute the network, repeat 10,000 times, read the output distribution. This is the answer to PERT's merge bias. Report **P80 dates**, not single-point dates, and teach students to say "we have an 80% chance of finishing by 12 March" instead of "we will finish 12 March."
+**Monte Carlo.** Assign a distribution to each activity duration/cost, sample, recompute the network, repeat 10,000 times, read the output distribution. This is the answer to PERT's merge bias. Report **P80 dates**, not single-point dates, and say "we have an 80% chance of finishing by 12 March" instead of "we will finish 12 March."
 
 **Behavioural biases — Flyvbjerg's top ten** (2021, *PMJ*, base rates from 2,062 projects). The critical framing: **behavioural bias ≠ cognitive bias.** Half the story is cognitive, half is political.
 
@@ -85,7 +85,7 @@ Flyvbjerg identifies **base-rate neglect** as the primary reason projects underp
 
 Endorsed by the American Planning Association; used on Edinburgh Tram and Crossrail (Flyvbjerg, 2008, *European Planning Studies*). Batselier & Vanhoucke (2016) showed folding RCF into EVM forecasting produced considerable accuracy improvement over the best previously identified methods.
 
-### Teach the controversy — this is the most valuable hour of the course
+### The controversy
 
 Do not present the planning-fallacy account as settled. It is actively contested, and the contest is instructive:
 
@@ -94,7 +94,7 @@ Do not present the planning-fallacy account as settled. It is actively contested
 - **Flyvbjerg** (2018, *World Development*) replies on the specific Hiding Hand question: yes, benefit overruns outweigh cost overruns in about **one fifth** of projects — but 80% show no such behaviour, so the planning fallacy remains the better general account.
 - **Ika & Pinto** (2020, *IEEE TEM*) propose accommodating both — the "Fifth Hand."
 
-**The pedagogical payload:** a field's most-cited empirical claim is under sustained methodological attack, and students should be able to say what evidence would settle it. (Answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
+**Why this matters:** a field's most-cited empirical claim is under sustained methodological attack, and you should be able to say what evidence would settle it. (One answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
@@ -119,7 +119,3 @@ Attack: if the cause is strategic (political), better technique changes nothing 
 
 **Weather forecasting.** Meteorologists moved from single-point predictions to probabilities ("70% chance of rain") and the public learned to consume them. Project management still overwhelmingly communicates single-point dates. Ask the class what institutional change would be needed for a sponsor to accept "P80: 12 March" — the technical work is done; the communication norm is the blocker.
 :::
-
-### In-class activity (40 min)
-
-**Pre-mortem.** "It is 18 months from now. The project has failed completely. Write the story of why." Individually, silently, 8 minutes — then pool. Klein's technique reliably surfaces risks that a P×I workshop misses, because it removes the social cost of predicting failure. Then have teams convert the stories into register entries with owners.

@@ -67,7 +67,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 
 Zwikael (2008, *IJMPB*, 700 project managers and their supervisors across seven industries and three countries) confirms the correlation and, more usefully, decomposes *which* support practices matter by industry. Ahmed et al. (2014, *Quality & Quantity*, n = 208) found the **"provide resources"** and **"power"** dimensions carry the significant effect — support that is verbal but not resourced does nothing.
 
-The honest caveat to give students: much of this literature is cross-sectional and self-reported, and "top management support" is partly endogenous — executives support projects that look like they'll succeed. Ask the class how they would design a study to break that endogeneity.
+The honest caveat: much of this literature is cross-sectional and self-reported, and "top management support" is partly endogenous — executives support projects that look like they'll succeed. Ask yourself how you would design a study to break that endogeneity.
 
 **Stakeholder analysis.** Power/interest grid (manage closely / keep satisfied / keep informed / monitor); salience model (power, legitimacy, urgency). Blaskovics et al. (2026, *SSHO*, LASSO regression on **3,153 projects** from 70 Hungarian companies) rank the top CSFs as: project manager competence and experience, precise definition of user requirements, effective stakeholder management, continuous monitoring and control, and a well-prepared coordinated team.
 
@@ -101,11 +101,11 @@ The teaching point: most PM advice implicitly assumes a strong matrix. In a func
 
 > "Project success depends primarily on the competence of the project manager."
 
-Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Have students identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
+Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
 :::
 
 ::: {.roommate}
 ### Roommate link
 
-**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask students what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
+**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
 :::

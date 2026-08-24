@@ -3,6 +3,8 @@ title: "Week 13 — Being an Effective Project Manager · Managing Project Teams
 subtitle: "IMSE 456/656 · Larson Ch. 10 + 11"
 author: Harun Pirim
 date: "2026-11-16"
+week: 13
+release: "2026-11-16"
 ---
 
 ## Where we are going
@@ -48,13 +50,13 @@ date: "2026-11-16"
 
 > "Project success depends primarily on the competence of the project manager."
 
-Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Have students identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
+Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
 
 ---
 
 ## Somewhere else entirely
 
-**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask students what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
+**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
 
 ---
 

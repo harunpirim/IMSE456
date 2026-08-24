@@ -3,6 +3,8 @@ title: "Week 7 — Managing Risk"
 subtitle: "IMSE 456/656 · Larson Ch. 7"
 author: Harun Pirim
 date: "2026-10-05"
+week: 7
+release: "2026-10-05"
 ---
 
 ## Where we are going
@@ -30,7 +32,7 @@ date: "2026-10-05"
 - **Chapman** (2024 *PMJ*, 2025 *IJPM*): 125 rail and 280 road projects across Scandinavia, 2008–2022, delivered generally on cost; no evidence of optimism bias or strategic misrepresentation. He argues prior work suffers methodological weaknesses in data provenance.
 - **Flyvbjerg** (2018, *World Development*) replies on the specific Hiding Hand question: yes, benefit overruns outweigh cost overruns in about **one fifth** of projects — but 80% show no such behaviour, so the planning fallacy remains the better general account.
 - **Ika & Pinto** (2020, *IEEE TEM*) propose accommodating both — the "Fifth Hand."
-**The pedagogical payload:** a field's most-cited empirical claim is under sustained methodological attack, and students should be able to say what evidence would settle it. (Answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
+**Why this matters:** a field's most-cited empirical claim is under sustained methodological attack, and you should be able to say what evidence would settle it. (One answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
 
 ---
 

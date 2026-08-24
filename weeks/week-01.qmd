@@ -1,7 +1,7 @@
 ---
 title: "Week 1 · Modern Project Management"
 week: 1
-release: "2026-08-24"
+release: "2026-08-25"
 chapter: "Larson Ch. 1"
 dates: "25 and 27 August"
 reading: "Larson Ch. 1"
@@ -27,6 +27,14 @@ lab: true
 
 <!-- VIDEO -->
 
+## What you should be able to do by Friday
+
+- Apply the temporary-and-unique test to real work, and name the cases where it returns the wrong answer.
+- State the iron triangle and give three specific reasons it misleads.
+- Score a project on five dimensions of success and defend the score that will be contested.
+- Tell a standard, a method, guidance and a framework apart, and say which one you could sue over.
+- Choose between an adaptive and a predictive approach using five questions rather than a preference.
+
 ## Concepts introduced
 
 ::: {.chips}
@@ -48,32 +56,59 @@ Name the stakeholder for whom this project failed. Now name the one for whom the
 ::: {.studio}
 #### Set up your toolchain, and classify what you are managing
 
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
+Individual work. Build the classification yourself, run two professional tools on the same six items, then explain where the tools disagree.
 
 **[Open the Week 1 lab sheet](../labs/lab-01.qmd)** · [slides](../slides/week-01.qmd)
 :::
 
-## Lecture notes
+## Notes
 
-### Learning objectives
+### 1 · What counts as a project
 
-- Distinguish project work from operational work using the temporary/unique test, and identify the boundary cases where the test fails.
-- State the iron triangle and articulate three specific ways it misleads.
-- Name at least four dimensions of project success and give a real project that scored high on one and low on another.
+A project is a temporary endeavour undertaken to create a unique product, service, or result. Two
+words carry the load: *temporary* (a definite start and end — bounded, not brief) and *unique* (not
+previously produced in this exact configuration). Operations are ongoing and repetitive.
 
-### Core content
+The distinction earns its keep because the techniques differ. Operations optimize a known process;
+projects execute an unrepeated one under uncertainty. Variance is the enemy of a production line.
+The thing nobody thought of is the enemy of a project.
 
-**Definition.** A project is a temporary endeavour undertaken to create a unique product, service, or result. Two words carry the load: *temporary* (definite start and end, not short) and *unique* (not previously produced in this exact configuration). Operations are ongoing and repetitive. The distinction matters because the management techniques differ: operations optimize a known process; projects execute an unrepeated one under uncertainty.
+Then there are the cases where the test returns an unhelpful answer. A film production is temporary
+and unique — but the studio makes one every year. A software release train ships something unique
+each time on an operational cadence. A refinery maintenance shutdown recurs on a schedule and is
+still planned as a project every time.
 
-**Boundary cases worth 10 minutes of lecture.** A film production (temporary, unique — but the studio does one every year). A software release train (each release is unique; the cadence is operational). Maintenance shutdowns at a refinery (recurring, but each is planned as a project). The lesson: "project vs. operation" is a *management choice about which toolkit to apply*, not a fact about the world.
+The conclusion to take from those is not that the definition is broken. It is that **project versus
+operation is a choice about which toolkit to apply**, not a fact about the world. Someone decides,
+and the decision has consequences you can predict.
 
-**The iron triangle and its problems.** Scope–time–cost, with quality either inside or floating. Three failures:
+::: {.roommate}
+#### Roommate link
 
-1. **It's a constraint model, not a success model.** Meeting all three says nothing about whether the output was worth building. The Sydney Opera House was estimated at A$7M and cost A$102M — over 1,300% over budget — and opened in 1973 against a scheduled 1963 completion. It is not remembered as a failure.
-2. **It hides the trade-off asymmetry.** The three legs are not symmetric — scope is usually the only one anyone will actually flex, and the flex is usually unacknowledged.
-3. **It has no stakeholder dimension.** The person who paid, the person who uses it, and the team who built it can disagree about success, and often do.
+**Cooking a dinner party vs. running a restaurant.** The dinner party is a project — fixed date,
+unique menu, guests who will remember it. The restaurant is operations. A chef who runs a restaurant
+well can still fail at a dinner party, because the failure modes differ: the restaurant's enemy is
+variance, the dinner party's is the thing you forgot to buy.
+:::
 
-**A multidimensional model instead.** Shenhar & Dvir's five dimensions, from *Reinventing Project Management* (2007) — the 2001 *Long Range Planning* paper has only four; *impact on the team* was added in the book:
+### 2 · Why the iron triangle is not a success model
+
+Scope–time–cost, with quality either inside the triangle or floating above it. It fails in three
+specific ways.
+
+1. **It is a constraint model, not a success model.** Meeting all three says nothing about whether
+   the output was worth building. The Sydney Opera House was estimated at A$7M and cost A$102M —
+   over 1,300% over — and opened in 1973 against a scheduled 1963 completion. Nobody remembers it
+   as a failure.
+2. **It hides the asymmetry between the legs.** They are not interchangeable. Scope is usually the
+   only one anyone will actually flex, and the flex usually goes unacknowledged.
+3. **It has no stakeholder dimension.** The person who paid, the person who uses it, and the team
+   who built it can disagree about success, and routinely do.
+
+### 3 · How success is actually measured
+
+Shenhar & Dvir's five dimensions, from *Reinventing Project Management* (2007). The 2001
+*Long Range Planning* paper has only four — *impact on the team* was added in the book.
 
 | Dimension | Question | Time horizon |
 |---|---|---|
@@ -83,64 +118,54 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 | Business/direct success | Did it produce commercial or mission value? | 1–2 years |
 | Preparing for the future | Did it create capability, technology, or market position? | 3–5 years |
 
-This model is what makes the agile-vs-predictive evidence legible: Gemino et al. (2021) found agile and hybrid approaches improved *stakeholder* success over traditional while achieving statistically **the same** budget, time, scope and quality outcomes. If you only measure the iron triangle, you conclude approach doesn't matter. That is a measurement artifact.
+Notice what the time horizons do to incentives. The dimension available on the day a project closes
+is the dimension you get judged on; the ones that would vindicate or condemn you arrive after
+everyone has moved on.
 
-### Evidence to put on the board
+This model is also what makes the agile-versus-predictive evidence legible. Gemino et al. (2021)
+found agile and hybrid approaches improved *stakeholder* success over traditional while achieving
+statistically **the same** budget, time, scope and quality outcomes. Measure only the iron triangle
+and you conclude approach doesn't matter. That conclusion is a measurement artifact.
 
-- Flyvbjerg's database (>16,000 projects): **0.5%** come in on budget, on time, and with the promised benefits. **8.5%** hit both budget and schedule. Cost overrun by category (mean): nuclear waste storage +238%, Olympic Games +157%, nuclear power +120%, IT +73%, buildings +62%, rail +39%, tunnels +37%, wind +13%, solar +1%.
-- **Immediately complicate it.** Chapman (2024), *Project Management Journal* 55(6), examined 228 road and 96 rail projects in Sweden and found a typical road cost overrun of **2.7%** and a rail **1.8% underrun**, with 93% of road and 70% of rail projects achieving their intended benefits. Chapman (2025), *International Journal of Project Management* 43(8) 102787, extended this to 125 rail and 280 road projects across Denmark, Norway and Sweden, 2008–2022, and found them delivered **on cost, over time**, with no evidence of systematic optimism bias or strategic misrepresentation. Base rates are not universal constants; they are properties of a governance regime.
+### 4 · The evidence, and why it argues with itself
 
-::: {.tutor}
-### Tutor check — one question at a time, no lecturing
+Flyvbjerg's database of more than 16,000 projects: **0.5%** come in on budget, on time, and with the
+promised benefits. **8.5%** hit budget and schedule. Mean cost overrun by category — nuclear waste
+storage +238%, Olympic Games +157%, nuclear power +120%, IT +73%, buildings +62%, rail +39%,
+tunnels +37%, wind +13%, solar +1%.
 
-1. A vendor tells you 71% of software projects fail. What would you need to know before repeating that number?
-2. Your project finished 20% over budget and the client renewed for three more years. Did it succeed?
-3. Give me a project that was an efficiency success and a business failure. Now the reverse.
-4. If the iron triangle is inadequate, why is it still on every slide deck in the industry?
-:::
+Now complicate it. Chapman (2024), *Project Management Journal* 55(6), examined 228 road and 96 rail
+projects in Sweden and found a typical road cost overrun of **2.7%** and a rail **1.8% underrun**,
+with 93% of road and 70% of rail projects achieving their intended benefits. Chapman (2025),
+*International Journal of Project Management* 43(8) 102787, extended this to 125 rail and 280 road
+projects across Denmark, Norway and Sweden, 2008–2022, and found them delivered **on cost, over
+time**, with no evidence of systematic optimism bias or strategic misrepresentation.
 
-::: {.editor}
-### Editor challenge — attack this claim
+Both cannot be a universal law. **Base rates are not constants of nature; they are properties of a
+governance regime.** Before you repeat a failure statistic, you need to know which regime produced
+it.
 
-> "Because 99.5% of large projects miss at least one of budget, schedule, or benefits, the discipline of project management has essentially failed."
+### 5 · The standards landscape
 
-Have students attack it. Available lines: selection effects in the database; the counterfactual is unmeasured (how bad would they be *without* PM?); "benefits shortfall" depends on who wrote the business case; the Scandinavian data contradicts universality; the base rate mixes project types with wildly different uncertainty.
-:::
+**PMBOK Guide, Eighth Edition** (PMI — released late 2025, general availability January 2026):
 
-::: {.roommate}
-### Roommate link
-
-**Cooking a dinner party vs. running a restaurant.** The dinner party is a project — fixed date, unique menu, guests who will remember it. The restaurant is operations. Notice that a chef who runs a restaurant well can still fail at a dinner party, because the failure modes are different: the restaurant's enemy is variance, the dinner party's enemy is the thing you forgot to buy.
-:::
-
-### In-class activity (25 min)
-
-Give teams four one-paragraph project vignettes (a vaccine rollout, a kitchen renovation, a university ERP migration, a research grant). Teams score each on the five success dimensions and must produce **one dimension where the project scored high and one where it scored low**. Debrief on disagreements — the disagreements *are* the lesson.
-
-### Assessment hook
-
-Short essay: pick a well-documented project, score it on all five dimensions, and defend the score that will be most contested.
-
-### The standards landscape
-
-#### Learning objectives
-
-- Describe what changed between PMBOK 7 and PMBOK 8, and infer what the change signals about the field.
-- Compare PMBOK, PRINCE2, ISO 21502 and the Scrum Guide on what each one actually claims to be.
-- Apply a tailoring heuristic instead of adopting a framework wholesale.
-
-#### Core content
-
-**PMBOK Guide, Eighth Edition (PMI — released late 2025, general availability January 2026).** The structure students need:
-
-- **Six principles** (down from twelve in the 7th edition): adopt a holistic view; focus on value; embed quality into processes and deliverables; be an accountable leader; integrate sustainability across all project areas; build an empowered culture. *Sustainability is newly standalone* — in the 7th edition it sat inside Stewardship rather than carrying its own principle.
-- **Seven performance domains** (down from eight): Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk.
-- **40 processes**, reintroduced in a deliberately non-prescriptive form, consolidated down from the 49 in the 2022 *Process Groups: A Practice Guide*.
+- **Six principles**, down from twelve in the 7th edition: adopt a holistic view; focus on value;
+  embed quality into processes and deliverables; be an accountable leader; integrate sustainability
+  across all project areas; build an empowered culture. Sustainability is newly *standalone* — in
+  the 7th edition it sat inside Stewardship rather than carrying its own principle.
+- **Seven performance domains**, down from eight: Governance, Scope, Schedule, Finance,
+  Stakeholders, Resources, Risk.
+- **40 processes**, reintroduced in deliberately non-prescriptive form, consolidated from the 49 in
+  the 2022 *Process Groups: A Practice Guide*.
 - Expanded material on AI, PMO roles, and procurement.
 
-**The pedagogically interesting part is the oscillation.** PMBOK 6 (2017) was process-heavy — 49 processes, five process groups, ten knowledge areas. PMBOK 7 (2021) threw the processes out and went principle-based. PMBOK 8 (2025) brought processes back, but framed as non-prescriptive. Ask students what that trajectory tells them: a standards body discovered that pure principles gave practitioners nothing to *do*, and pure processes gave them nothing to *think with*. The 8th edition is an attempt to hold both.
+The interesting part is the oscillation. PMBOK 6 (2017) was process-heavy — 49 processes, five
+process groups, ten knowledge areas. PMBOK 7 (2021) threw the processes out and went principle-based.
+PMBOK 8 (2025) brought them back, framed as non-prescriptive. Read that trajectory as a finding: pure
+principles gave practitioners nothing to *do*, pure processes gave them nothing to *think with*, and
+the 8th edition is an attempt to hold both.
 
-**The other standards, in one line each:**
+The other three, in a line each:
 
 | Standard | What it claims to be | Governance stance |
 |---|---|---|
@@ -149,9 +174,24 @@ Short essay: pick a well-documented project, score it on all five dimensions, an
 | ISO 21502:2020 | Guidance, deliberately generic and vendor-neutral | Light; designed to be referenced in contracts |
 | Scrum Guide (Nov 2020) | A *framework*, immutable, deliberately incomplete | None beyond the team; explicitly silent on portfolio |
 
-**The Scrum Guide is 13 pages and has not been revised since November 2020** — worth noting, because students assume standards churn. Scrum.org's own position is that the guide is updated rarely by design; the 2020 revision removed prescriptive language to make it "minimally sufficient," added the Product Goal, and made the three artifacts each carry one commitment.
+**The Scrum Guide is 13 pages and has not been revised since November 2020.** Standards are widely
+assumed to churn; this one does not. Scrum.org's position is that it is updated rarely by design.
+The 2020 revision removed prescriptive language to make it "minimally sufficient," added the Product
+Goal, and gave each of the three artifacts one commitment — Product Backlog → Product Goal, Sprint
+Backlog → Sprint Goal, Increment → Definition of Done.
 
-**Tailoring heuristic** (give students this and make them apply it every week thereafter):
+::: {.roommate}
+#### Roommate link
+
+**Building codes vs. architectural style.** A building code is prescriptive, legally enforceable,
+and says nothing about whether the building is good. A style is a set of principles a designer can
+violate deliberately. PRINCE2 is closer to a code; PMBOK 7/8 is closer to a style guide; Scrum is
+closer to a poetic form — a sonnet is 14 lines, and the constraint is the point.
+:::
+
+### 6 · Tailoring — five questions, every time
+
+Run these on every project in this course, starting with your final project:
 
 1. How much will requirements change between now and delivery? *(High → adaptive)*
 2. How expensive is a late change? *(Very expensive → predictive front-loading)*
@@ -159,29 +199,36 @@ Short essay: pick a well-documented project, score it on all five dimensions, an
 4. Is there a regulatory or contractual gate that requires a frozen baseline? *(Yes → predictive at least at the gate)*
 5. Is the team co-located enough, and empowered enough, for self-management? *(No → the agile ceremonies will be theatre)*
 
-::: {.tutor}
-#### Tutor check — one question at a time, no lecturing
+## Work with AI on this week
 
-1. PMBOK went from 49 processes → 0 → 40 in eight years. What problem was each swing solving?
-2. Which of these four documents could you actually sue someone over? Why does that matter?
-3. The Scrum Guide says Scrum is "purposefully incomplete." What is it incomplete *about*, and who fills the gap?
-4. Your organization mandates PRINCE2 and your team wants Scrum. Name the specific artifacts that collide.
+Three roles, three different jobs. See [AI Studio](../ai.qmd) for the full loop and the exact prompts.
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. A vendor tells you 71% of software projects fail. What would you need to know before repeating that number?
+2. Your project finished 20% over budget and the client renewed for three more years. Did it succeed?
+3. Give me a project that was an efficiency success and a business failure. Now the reverse.
+4. If the iron triangle is inadequate, why is it still on every slide deck in the industry?
+5. PMBOK went from 49 processes → 0 → 40 in eight years. What problem was each swing solving?
+6. Which of these four documents could you actually sue someone over? Why does that matter?
+7. The Scrum Guide says Scrum is "purposefully incomplete." What is it incomplete *about*, and who fills the gap?
+8. Your organization mandates PRINCE2 and your team wants Scrum. Name the specific artifacts that collide.
 :::
 
 ::: {.editor}
-#### Editor challenge — attack this claim
+### Editor challenge — attack these claims
+
+> "Because 99.5% of large projects miss at least one of budget, schedule, or benefits, the discipline of project management has essentially failed."
+
+Lines of attack: selection effects in the database; the counterfactual is unmeasured — how bad would
+these projects be *without* project management?; "benefits shortfall" depends on who wrote the
+business case; the Scandinavian data contradicts universality; the base rate mixes project types with
+wildly different uncertainty.
 
 > "Standards bodies revise their frameworks primarily to sell new certifications, not because knowledge advanced."
 
-This one is uncomfortable and partly defensible — make students separate the cynical claim (revenue motive) from the testable one (did practice improve?). Note that the Scrum Guide, which is free and unrevised for six years, is the counterexample that complicates the cynical reading.
+This one is uncomfortable and partly defensible. Separate the cynical claim (revenue motive) from the
+testable one (did practice improve?). The Scrum Guide — free, and unrevised for six years — is the
+counterexample that complicates the cynical reading.
 :::
-
-::: {.roommate}
-#### Roommate link
-
-**Building codes vs. architectural style.** A building code is prescriptive, legally enforceable, and says nothing about whether the building is good. A style is a set of principles a designer can violate deliberately. PRINCE2 is closer to a code; PMBOK 7/8 is closer to a style guide; Scrum is closer to a poetic form — a sonnet is 14 lines, and the constraint is the point.
-:::
-
-#### In-class activity (20 min)
-
-Hand out the same one-page project brief to four teams, each assigned a different standard. Each team produces the first three artifacts their standard would demand. Compare on the board. The visible divergence in *what gets written down first* is the lesson.

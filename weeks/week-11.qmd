@@ -80,7 +80,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 | VAC | BAC − EAC | Projected over/under at end |
 | TCPI | (BAC − EV)/(BAC − AC) | Efficiency required to still hit BAC |
 
-### Worked example — put this on the board
+### Worked example
 
 Project: BAC = $500,000, planned duration 20 weeks. **At end of week 8:** PV = $200,000, EV = $170,000, AC = $190,000.
 
@@ -95,7 +95,7 @@ Project: BAC = $500,000, planned duration 20 weeks. **At end of week 8:** PV = $
 - VAC = 500,000 − 558,824 = **−$58,824**
 - TCPI(BAC) = 330,000/310,000 = **1.065** → you now need 6.5% *better than planned* efficiency for the rest of the project, having averaged 10.5% worse. Ask the class whether that's plausible. It almost never is, and that is the single most useful thing EVM tells a manager.
 
-**The spread between $520k and $624k is the lesson.** The formula choice is a *judgement about causation*, not a computation. Make students defend a choice.
+**The spread between $520k and $624k is the lesson.** The formula choice is a *judgement about causation*, not a computation. Defend your choice.
 
 **The SPI pathology.** As a project approaches completion, EV → BAC and PV → BAC, so **SPI → 1 regardless of how late the project is**. A project delivering a year late shows SPI = 1.00 on its final day. SPI is also denominated in dollars, not time.
 
@@ -125,7 +125,3 @@ ES = 170,000/25,000 = **6.80 weeks**. AT = 8. SPI(t) = 6.80/8 = **0.850**. IEAC(
 
 Attack: EV depends on a subjective percent-complete judgement (0/100, 50/50, and level-of-effort rules all produce different EVs from the same work); the baseline is a forecast, so EVM measures deviation from a guess; it is silent on quality and value; and it can be gamed by claiming credit early.
 :::
-
-### In-class activity (30 min)
-
-Give teams three months of raw PV/EV/AC data with one anomaly seeded (e.g. a month where AC drops because an invoice was late). Teams must produce a forecast and identify the data-quality problem. Most produce the forecast and miss the anomaly — which is the debrief.

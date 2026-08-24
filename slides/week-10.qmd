@@ -3,6 +3,8 @@ title: "Week 10 — Reducing Project Duration"
 subtitle: "IMSE 456/656 · Larson Ch. 9"
 author: Harun Pirim
 date: "2026-10-26"
+week: 10
+release: "2026-10-26"
 ---
 
 ## Where we are going
@@ -51,13 +53,13 @@ date: "2026-10-26"
 
 > "Adding a buffer to each activity estimate is prudent risk management."
 
-Attack: aggregated variance is smaller than summed variance (√n effect); per-activity buffers get consumed regardless (Parkinson); the buffer is invisible to management so it can't be governed. This is the CCPM argument — make students construct it themselves before you name it.
+Attack: aggregated variance is smaller than summed variance (√n effect); per-activity buffers get consumed regardless (Parkinson); the buffer is invisible to management so it can't be governed. This is the CCPM argument — construct it yourself before you look it up.
 
 ---
 
 ## Studio preview
 
-Teams crash a fresh 10-activity network to a target date with an indirect cost of $2,000/day and a $10,000/day late penalty. They must find the **economically optimal** duration, not just the target. Most teams crash too far.
+Crash a fresh 10-activity network to a target date, against an indirect cost of $2,000/day and a $10,000/day late penalty. Find the **economically optimal** duration, not just the target — they are not the same date.
 
 ---
 

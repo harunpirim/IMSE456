@@ -3,6 +3,8 @@ title: "Week 12 — Agile Project Management"
 subtitle: "IMSE 456/656 · Larson Ch. 15"
 author: Harun Pirim
 date: "2026-11-09"
+week: 12
+release: "2026-11-09"
 ---
 
 ## Where we are going
@@ -125,7 +127,7 @@ Attack: they can equally give you the overhead of both — two planning systems,
 
 ## Studio preview
 
-Four project briefs of sharply different character (a satellite launch, a mobile banking app, a hospital records migration, a bridge retrofit). Teams design an approach for each using the tailoring table, then **defend one choice against a team assigned to attack it**.
+Four project briefs of sharply different character (a satellite launch, a mobile banking app, a hospital records migration, a bridge retrofit). Design an approach for each using the tailoring table, then **defend one choice against someone assigned to attack it**.
 
 ---
 

@@ -2,14 +2,14 @@
 title: "Studio 1 · Set up your toolchain, and classify what you are managing"
 subtitle: "Week 1 — Modern Project Management · Larson Ch. 1"
 week: 1
-release: "2026-08-24"
+release: "2026-08-25"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Deliverable</dt><dd><strong>SA1</strong> — your Taiga sandbox URL, the <code>.pod</code>, the classification table, the paragraph</dd>
+<dt>Deliverable</dt><dd><strong>SA1</strong> — your Taiga sandbox URL, your <code>.pod</code>, the classification table, the paragraph</dd>
 <dt>Due</dt><dd>SA1 · Sun 30 Aug</dd>
-<dt>Tools</dt><dd>Taiga · ProjectLibre · Colab · Gemini · Antigravity</dd>
+<dt>Tools</dt><dd>Taiga · ProjectLibre · Gemini</dd>
 <dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-01.qmd">Week 1 — Modern Project Management</a></dd>
 </dl>
@@ -20,88 +20,97 @@ release: "2026-08-24"
 in a team; the studio is where the mechanics get into your own hands.
 :::
 
-The session runs to a fixed clock: **Build** 25 minutes, **Use** 20, **Reconcile** 15, **peer check** 5.
-The move from Build to Use is called at minute 30 whether or not Build finished — an unfinished
-Build is a legitimate finding, reported as one.
+The session runs to a fixed clock: **Classify** 25 minutes, **Tool** 20, **Reconcile** 15, **peer
+check** 5. The move from Classify to Tool is called at minute 30 whether or not you finished — an
+unfinished classification is a legitimate finding, reported as one.
 
 ::: {.part}
 ### Part 1 · Before you arrive
 
-Accounts and data only. Nothing here needs software installed at home.
+Accounts and one install. Do this before Thursday, not during it.
 
 1. Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`.
-2. Create the cloud folder you will use all semester — Google Drive or OneDrive, named `IMSE456`. **Everything in this course is saved there, never to a local disk.**
-3. Open the access form linked on Blackboard and answer both questions: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
+2. Install [ProjectLibre](https://www.projectlibre.com/) and open it once to confirm it launches. If it fails on your machine it fails *today*, not in Week 4 — [GanttProject](https://www.ganttproject.biz/) is the sanctioned fallback and costs you nothing.
+3. Create the cloud folder you will use all semester — Google Drive or OneDrive, named `IMSE456`. **Everything in this course is saved there, never to a local disk.**
+4. Claim your AI access: register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible. If you are not, the free Gemini tier is sufficient for every studio in this course — say so in your submission so it is on record.
+5. Open the access form linked on Blackboard and answer both questions: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
 :::
 
 ::: {.part}
 ### Part 2 · What you will have at the end
 
-SA1 — your Taiga sandbox URL, the <code>.pod</code>, the classification table, the paragraph
+SA1 — your Taiga sandbox URL, your `.pod` file, the classification table for six initiatives, and
+one paragraph naming a specific field.
 :::
 
 ::: {.part}
-### Part 3 · Build it yourself — 25 minutes
+### Part 3 · Classify it yourself — 25 minutes
 
-1. Create your own Taiga account at <code>tree.taiga.io</code> and a private sandbox project named <code>IMSE456-yourlastname</code>. The team project comes later, at FP0.
-2. Install ProjectLibre and open the supplied <code>.pod</code>. If it fails on your machine it fails <em>today</em>, not in Week 4 — and GanttProject is the sanctioned fallback.
-3. Open the course Colab notebook and run the setup cell.
-4. Claim your AI access: register the free student year at <a href="https://gemini.google/students/">gemini.google/students</a> if you are eligible, and install <a href="https://antigravity.google/">Antigravity</a>, which is free to everyone. If neither is available to you, the free Gemini tier is sufficient for every studio in this course — tell the instructor so it is on record.
-5. Ask Gemini to generate six candidate initiatives for a campus organization. Classify each as project, operation, or hybrid using the temporary-and-unique test — and record every one the model classified wrongly.
+**You go first. The model goes second.** That order is the point of the exercise, and reversing it
+costs you the only data the studio generates.
+
+1. Pick a campus organization you actually know — a club, a lab, a team, an employer.
+2. Write down **six** things it is currently doing or could do in the next year. Real ones.
+3. Classify each as **project**, **operation**, or **hybrid** using the temporary-and-unique test. Write one sentence of justification for every one. No exceptions, including the obvious ones.
+4. *Now* ask Gemini to generate six candidate initiatives for the same organization, and to classify them the same way.
+5. Build the table: your six with your classifications, the model's six with its classifications. Mark every item where you and the model would disagree, and every model classification you judge **wrong**.
+
+The disagreements are the deliverable. A table with no disagreements means one of you was not
+paying attention, and it was probably not the model.
 :::
 
 ::: {.part}
-### Part 4 · Now the professional tool — 20 minutes
+### Part 4 · Now the professional tools — 20 minutes
 
-1. Enter the three you classified as projects into your Taiga sandbox as epics.
-2. Enter the same three into ProjectLibre as summary tasks with placeholder durations.
-3. Write down what each tool <em>forced</em> you to state that the other did not.
+1. Take the three items you classified as **projects**. Enter them into your Taiga sandbox as epics.
+2. Enter the same three into ProjectLibre as summary tasks with placeholder durations. Save as `SA1_yourlastname.pod`.
+3. Write down what each tool **forced** you to state that the other did not. Be specific — name the field, not the feeling.
 :::
 
 ::: {.part}
 ### Part 5 · Where do they disagree? — 15 minutes
 
-Which tool made you commit to something you did not yet know? One paragraph, naming the specific field.
+Which tool made you commit to something you did not yet know?
 
-Write one paragraph. **This is the graded part** — it is the only thing here a machine cannot check.
+One paragraph, naming the **specific field**. "ProjectLibre wanted a duration" is the beginning of
+an answer; "ProjectLibre would not let me save a task without a duration, so I invented three days
+for something I have never done" is the answer.
+
+**This is the graded part** — it is the only thing here a machine cannot check for you.
 :::
 
 ::: {.part}
-### Part 6 · Run the check
+### Part 6 · Done looks like — the checklist your neighbour runs on you at minute 70
 
-Run the `verify()` cell at the end of the notebook. It tests your own outputs against tolerances and
-prints a completion code. If it fails, you have found your error while it is still cheap to fix —
-that is the point of it. Paste the code into your submission.
-:::
-
-::: {.part}
-### Part 7 · Done looks like — the checklist your neighbour runs on you at minute 65
-
-- [ ] Taiga account created and the sandbox project exists
-- [ ] the .pod opens on your machine or you have reported the failure
-- [ ] AI access claimed or reported
-- [ ] six items classified with a written justification each
+- [ ] Taiga account created and the sandbox project exists, with three epics in it
+- [ ] ProjectLibre opens on your machine, or you have reported the failure and used GanttProject
+- [ ] AI access claimed, or reported
+- [ ] six items classified by you, each with a written justification
+- [ ] the model's six classified too, with disagreements marked
 - [ ] the paragraph names a specific field
 :::
 
 ::: {.part}
-### Part 8 · Where it is saved
+### Part 7 · Where it is saved
 
 `IMSE456/studio-01/` in your cloud folder. Name files `SA1_yourlastname.*`.
 
 **Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
-left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+left at home. Submit the PDF to Blackboard by the due date above.
 :::
 
 ::: {.browser-path}
 **Working on lab machines?**
 
-**No ProjectLibre?** Do the *Use* half in Smartsheet instead — indented WBS, Gantt, predecessors and critical path all work in a browser. Say so in your submission; it costs you nothing.
+**No ProjectLibre?** Do the *Tool* half in Smartsheet instead — indented WBS, Gantt, predecessors
+and critical path all work in a browser. Export to PDF in place of the `.pod`. Say so in your
+submission; it costs you nothing.
 :::
 
 ## Study loop for this week
 
-Run this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.
+Run this before you read the notes, and again after. It is not graded; it is the fastest way to find
+out what you have wrong.
 
 ```text
 Be my tutor on what "project success" means and why it's contested. Ask me
@@ -111,7 +120,6 @@ make me name the dimensions myself.
 ```
 
 See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.
-
 
 ::: {.callout-important appearance="simple"}
 **Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.

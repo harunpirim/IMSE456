@@ -2,7 +2,9 @@
 title: "Week 1 — Modern Project Management"
 subtitle: "IMSE 456/656 · Larson Ch. 1"
 author: Harun Pirim
-date: "2026-08-24"
+date: "2026-08-25"
+week: 1
+release: "2026-08-25"
 ---
 
 ## Where we are going
@@ -11,10 +13,6 @@ date: "2026-08-24"
 - State the iron triangle and name three specific ways it misleads.
 - Score a project on five dimensions of success and defend the one that will be contested.
 - Tell a standard, a method, guidance and a framework apart, and tailor rather than adopt.
-
-::: {.notes}
-Four objectives, four modules. The recorded modules cover all of this; Tuesday is the case.
-:::
 
 # 1 · What counts as a project
 
@@ -50,10 +48,6 @@ Projects are the kind of work you can be publicly wrong about in advance.
 - **Program** — related projects managed together *because of dependencies between them*.
 - **Portfolio** — projects and programs grouped *because they compete for the same money*.
 
-::: {.notes}
-If there are no dependencies, it is a portfolio and someone chose a more impressive word.
-:::
-
 # 2 · The iron triangle, and how it lies
 
 ## Failure 1 — a constraint model, not a success model
@@ -88,10 +82,6 @@ The failure is not that scope flexes. It is that it flexes **without anyone reco
 Time. Cost. Scope. *Whose?*
 
 The sponsor, the user, the team and the neighbour can read the same finished project and disagree. The triangle has no room to express that, so it silently adopts one view and calls it the answer.
-
-::: {.notes}
-Callback to the pavilion: same three numbers, opposite verdicts, and the disagreement was the case.
-:::
 
 ## So why does it survive?
 
@@ -135,7 +125,7 @@ Mean cost overrun: nuclear waste storage +238% · Olympics +157% · nuclear powe
 Flyvbjerg & Gardner, *How Big Things Get Done* (2023); method in Flyvbjerg (2014), *PMJ* 45(2), 6–19.
 :::
 
-## Now immediately complicate it
+## Now complicate it
 
 - **Chapman (2024)**, *PMJ* 55(6) — Swedish transport infrastructure, 228 road + 96 rail. Typical road overrun **2.7%**; rail a **1.8% underrun**. 93% of road and 70% of rail achieved intended benefits.
 - **Chapman (2025)**, *IJPM* 43(8) — 125 rail + 280 road projects across Denmark, Norway and Sweden, 2008–2022: delivered **on cost, over time**.
@@ -199,10 +189,6 @@ Which of these could you **sue** somebody over? That tells you where the account
 The **Scrum Guide**: 13 pages, free, last revised **November 2020**, still current.
 
 Added the Product Goal and gave each artifact one commitment — Product Backlog → Product Goal, Sprint Backlog → Sprint Goal, Increment → Definition of Done.
-
-::: {.notes}
-Students assume standards churn. The ones with exam revenue attached do. Separate "revised because knowledge advanced" from "revised because there is a certification."
-:::
 
 ## Tailoring — five questions, every time
 

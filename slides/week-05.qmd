@@ -3,6 +3,8 @@ title: "Week 5 — Estimating Project Times and Costs"
 subtitle: "IMSE 456/656 · Larson Ch. 5"
 author: Harun Pirim
 date: "2026-09-21"
+week: 5
+release: "2026-09-21"
 ---
 
 ## Where we are going
@@ -27,7 +29,7 @@ date: "2026-09-21"
 ## The argument
 
 - Estimating methods
-- Cost baseline structure — get this ordering right, students always garble it:
+- Cost baseline structure — the ordering is where this usually goes wrong:
 - Funding limit reconciliation
 
 ---

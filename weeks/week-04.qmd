@@ -36,7 +36,7 @@ lab: true
 ## Tuesday — The 500-person conference
 
 ::: {.case}
-A brief with enough detail to decompose and not so much that the decomposition is dictated. Teams build a WBS, then audit another team's.
+A brief with enough detail to decompose and not so much that the decomposition is dictated. You build a WBS, then audit someone else's.
 
 ::: {.qn}
 Four things are missing from nearly every student WBS: project management labour, contingency, post-event work, and sponsor management. Why <em>those four</em> specifically? What do they have in common?
@@ -101,7 +101,3 @@ Force precision: *how much* do they change, in which domains, and at what cost p
 
 **A restaurant menu.** The menu is the scope baseline. Specials are approved changes. A customer asking for an off-menu dish is a change request — and the kitchen's willingness to say yes without repricing is exactly scope creep. Note how restaurants solve it: a visible price for every modification.
 :::
-
-### In-class activity (35 min)
-
-Teams build a WBS for "run a 500-person academic conference" to three levels, then swap and audit against the 100% rule. Almost every team omits project management labour, contingency, and post-event work. That omission is the debrief.

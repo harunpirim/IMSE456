@@ -39,7 +39,7 @@ lab: true
 A team that crashed all the way to the maximum crashable duration, sailing past the economic optimum four steps earlier.
 
 ::: {.qn}
-The cheapest activity to crash in the whole table is not on the critical path. Teams crash it anyway, every single time. Why?
+The cheapest activity to crash in the whole table is not on the critical path. It gets crashed anyway. Why?
 :::
 :::
 
@@ -94,7 +94,7 @@ Project duration along a path ~ Normal(Σtₑ, Σσ²) by CLT.
 
 Target: 15 → 12 days.
 
-- **Step 1.** CP = B-D-F-H. Cheapest on CP: H at $1,200. Crash H by 1. Duration **14**. Cost $1,200. *(Note G is also $1,200 but is not on the CP — crashing it buys nothing. Students do this every time.)*
+- **Step 1.** CP = B-D-F-H. Cheapest on CP: H at $1,200. Crash H by 1. Duration **14**. Cost $1,200. *(Note G is also $1,200 but is not on the CP — crashing it buys nothing.)*
 - **Step 2.** CP still B-D-F-H. Cheapest available on CP: B at $2,000. Crash B by 1. Duration **13**. Cumulative $3,200.
 - **Step 3.** Now A-D-F-H = 13 **and** B-D-F-H = 13 — two critical paths. Crashing B alone no longer helps. Crash a **shared** activity: D at $2,500. Duration **12**. Cumulative **$5,700**.
 
@@ -102,7 +102,7 @@ Final path lengths: A-C-E-H = 9, A-D-F-H = 12, B-D-F-H = 12, B-G-H = 10. Total c
 
 **Resource levelling vs. smoothing.** Levelling: resolve over-allocation, *duration may extend*. Smoothing: even out usage *within existing float*, duration fixed. The resource-constrained critical path (sometimes "critical chain") can differ entirely from the CPM critical path.
 
-**Critical chain (Goldratt).** Strip padding from individual estimates, aggregate it into a **project buffer** at the end plus **feeding buffers** where non-critical chains join. The behavioural argument — that individual safety is wasted through Parkinson's Law and student syndrome — is intuitive and widely taught. **Be honest with students: controlled empirical support for CCPM's superiority is thin.** Teach the mechanism, flag the evidence gap.
+**Critical chain (Goldratt).** Strip padding from individual estimates, aggregate it into a **project buffer** at the end plus **feeding buffers** where non-critical chains join. The behavioural argument — that individual safety is wasted through Parkinson's Law and student syndrome — is intuitive and widely taught. **Controlled empirical support for CCPM's superiority is thin.** Learn the mechanism; keep the evidence gap in view.
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
@@ -118,9 +118,5 @@ Final path lengths: A-C-E-H = 9, A-D-F-H = 12, B-D-F-H = 12, B-G-H = 10. Total c
 
 > "Adding a buffer to each activity estimate is prudent risk management."
 
-Attack: aggregated variance is smaller than summed variance (√n effect); per-activity buffers get consumed regardless (Parkinson); the buffer is invisible to management so it can't be governed. This is the CCPM argument — make students construct it themselves before you name it.
+Attack: aggregated variance is smaller than summed variance (√n effect); per-activity buffers get consumed regardless (Parkinson); the buffer is invisible to management so it can't be governed. This is the CCPM argument — construct it yourself before you look it up.
 :::
-
-### In-class activity (35 min)
-
-Teams crash a fresh 10-activity network to a target date with an indirect cost of $2,000/day and a $10,000/day late penalty. They must find the **economically optimal** duration, not just the target. Most teams crash too far.
