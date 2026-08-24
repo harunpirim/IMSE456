@@ -55,7 +55,7 @@ Attack: if the cause is strategic (political), better technique changes nothing 
 
 ## Somewhere else entirely
 
-**Weather forecasting.** Meteorologists moved from single-point predictions to probabilities ("70% chance of rain") and the public learned to consume them. Project management still overwhelmingly communicates single-point dates. Ask the class what institutional change would be needed for a sponsor to accept "P80: 12 March" — the technical work is done; the communication norm is the blocker.
+**Weather forecasting.** Meteorologists moved from single-point predictions to probabilities ("70% chance of rain") and the public learned to consume them. Project management still overwhelmingly communicates single-point dates. What institutional change would be needed for a sponsor to accept "P80: 12 March" — the technical work is done; the communication norm is the blocker.
 
 ---
 

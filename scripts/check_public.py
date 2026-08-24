@@ -28,7 +28,9 @@ RULES: list[tuple[str, str]] = [
     (r"put this on the board", "instructor staging direction"),
     (r"\bdebrief\b(?! on the course)", "instructor facilitation language"),
     (r"\b(give|giv(e|ing)) students\b", "addresses the instructor, not the reader"),
-    (r"\b(make|have|ask|tell) students\b", "addresses the instructor, not the reader"),
+    (r"\b(make|have|ask|tell|show|give) students\b", "addresses the instructor, not the reader"),
+    # "the class" as an audience, but not "the class base rate" (a reference class)
+    (r"\b(ask|tell|show|give|remind|poll) the class\b", "addresses the instructor, not the reader"),
     (r"\bstudents (assume|always|conflate|garble|do this|should be able|making)\b",
      "talks about students in the third person"),
     (r"\bteams (must|build|crash|work|score|design)\b", "facilitation instruction"),

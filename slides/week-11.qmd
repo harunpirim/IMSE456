@@ -52,7 +52,7 @@ Project: BAC = $500,000, planned duration 20 weeks. **At end of week 8:** PV = $
 - EAC (both indices) = 190,000 + 330,000/(0.8947 × 0.85) = **$623,910**
 - ETC (typical) = 558,824 − 190,000 = **$368,824**
 - VAC = 500,000 − 558,824 = **−$58,824**
-- TCPI(BAC) = 330,000/310,000 = **1.065** → you now need 6.5% *better than planned* efficiency for the rest of the project, having averaged 10.5% worse. Ask the class whether that's plausible. It almost never is, and that is the single most useful thing EVM tells a manager.
+- TCPI(BAC) = 330,000/310,000 = **1.065** → you now need 6.5% *better than planned* efficiency for the rest of the project, having averaged 10.5% worse. Ask yourself whether that is plausible. It almost never is, and that is the single most useful thing EVM tells a manager.
 
 **The spread between $520k and $624k is the lesson.** The formula choice is a *judgement about causation*, not a computation. Defend your choice.
 
