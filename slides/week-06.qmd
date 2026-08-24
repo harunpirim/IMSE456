@@ -3,6 +3,8 @@ title: "Week 6 — Developing a Project Schedule"
 subtitle: "IMSE 456/656 · Larson Ch. 6"
 author: Harun Pirim
 date: "2026-09-28"
+week: 6
+release: "2026-09-28"
 ---
 
 ## Where we are going
@@ -51,7 +53,7 @@ Path lengths: A-C-E-H = 10, A-D-F-H = 14, B-D-F-H = **15**, B-G-H = 12.
 
 **Three teaching points from this specific table.**
 
-1. **A has TF = 1 but FF = 0.** Delay A by one day and no successor moves *and* the project doesn't move. Delay it by two and D slips. Students conflate the two floats constantly; this row separates them.
+1. **A has TF = 1 but FF = 0.** Delay A by one day and no successor moves *and* the project doesn't move. Delay it by two and D slips. The two floats are easy to conflate; this row separates them.
 2. **A-D-F-H is 14 days — one day of float on the whole path.** Near-critical paths are where projects actually fail, because monitoring attention follows the CP label.
 3. **The CP is a property of the estimates, not of the work.** Change D from 5 to 3 and the critical path becomes B-G-H. Nothing about the project changed except a number in a spreadsheet.
 
@@ -82,7 +84,7 @@ Attack lines: near-critical paths carry most of the realized risk; the CP assume
 
 ## Studio preview
 
-Give the same network but with one duration hidden. Teams must determine what values of that duration would change the critical path. This converts CPM from arithmetic into sensitivity analysis in one step.
+The same network, with one duration hidden. Work out which values of that duration would change the critical path — that one move turns CPM from arithmetic into sensitivity analysis.
 
 ---
 

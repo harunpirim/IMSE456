@@ -3,6 +3,8 @@ title: "Week 2 — Organization Strategy and Project Selection"
 subtitle: "IMSE 456/656 · Larson Ch. 2"
 author: Harun Pirim
 date: "2026-08-31"
+week: 2
+release: "2026-08-31"
 ---
 
 ## Where we are going
@@ -48,7 +50,7 @@ Attack lines: gates measure the forecast, not the reality; escalation of commitm
 
 ## Studio preview
 
-Four competing project proposals, one budget that funds two. Teams must fund, then are shown the true outcomes. Debrief: how much of the selection error was forecast error vs. criteria error?
+Four competing project proposals, one budget that funds two. You fund two — then you see what actually happened. How much of the error was forecasting, and how much was your criteria?
 
 ---
 

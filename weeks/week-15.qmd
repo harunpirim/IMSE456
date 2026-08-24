@@ -63,11 +63,11 @@ The synthesis material below — the eight-step protocol for diagnosing a failin
 
 ### Structure
 
-No new content. A single extended case, presented in stages, with students making decisions before seeing what happened next.
+No new content. A single extended case, presented in stages, with you making decisions before seeing what happened next.
 
 **Suggested cases** (all well documented, all with published post-mortems): Denver International Airport baggage system; the UK NHS National Programme for IT; Boeing 787 outsourcing; Berlin Brandenburg Airport; Healthcare.gov; a university ERP implementation.
 
-**The diagnostic protocol students should be able to run by now:**
+**The diagnostic protocol you should be able to run by now:**
 
 1. **What was the success definition, and whose?** (Week 1)
 2. **Was scope baselined, and was change controlled?** (Week 4)

@@ -36,7 +36,7 @@ lab: true
 ## Tuesday — The chain, argued backwards
 
 ::: {.case}
-Tuesday is not a lecture. Teams work the problems they got wrong and reconstruct the causal chain from Chapter 1 to Chapter 7 on the board, in both directions.
+Tuesday is not a lecture. You work the problems you got wrong and reconstruct the causal chain from Chapter 1 to Chapter 7 on the board, in both directions.
 
 ::: {.qn}
 Success is contested, so strategy decides what to select, so structure decides who can deliver it, so scope decides what <em>it</em> is, so estimates price it, so the network sequences it, so risk says how wrong all of that might be. Where in that chain does an error do the most damage, and why there?
@@ -73,4 +73,3 @@ retrieval practice work, and it is the one form of AI use that helps on a closed
 **What is not tested.** Memorized process catalogues, ITTO tables, or edition numbers. If you would
 look it up in thirty seconds on the job, it is not on the paper.
 :::
-

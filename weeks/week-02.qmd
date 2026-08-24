@@ -63,7 +63,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 
 ### Core content
 
-**Financial screens.** NPV = Σ Cₜ/(1+r)ᵗ − I₀. IRR = the r where NPV = 0. Payback = years to recover I₀ (ignores time value and everything after payback — teach it only to explain why it's dangerous). Benefit–cost ratio = PV(benefits)/PV(costs).
+**Financial screens.** NPV = Σ Cₜ/(1+r)ᵗ − I₀. IRR = the r where NPV = 0. Payback = years to recover I₀ (ignores time value and everything after payback, and survives mainly as a cautionary measure). Benefit–cost ratio = PV(benefits)/PV(costs).
 
 **Worked screen.** Project P: I₀ = $500k; net cash flows $180k/yr for 4 years; r = 10%.
 PV = 180(0.9091 + 0.8264 + 0.7513 + 0.6830) = 180 × 3.1699 = $570.6k. NPV = **+$70.6k**. Payback = 500/180 = **2.78 years**. Ask: what does the NPV *not* tell you? (Option value, strategic fit, whether the cash-flow estimate is itself biased — which is Week 9's subject.)
@@ -98,7 +98,3 @@ Attack lines: gates measure the forecast, not the reality; escalation of commitm
 
 **Venture capital portfolio construction.** A VC expects most investments to fail and prices for it — the portfolio, not the project, is the unit of success. Most organizations run project portfolios as if every project must succeed, which forces optimistic business cases and makes killing anything an admission of error.
 :::
-
-### In-class activity (30 min)
-
-Four competing project proposals, one budget that funds two. Teams must fund, then are shown the true outcomes. Debrief: how much of the selection error was forecast error vs. criteria error?

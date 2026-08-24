@@ -30,6 +30,16 @@ python3 scripts/gate.py --all             # ungate everything (end-of-term archi
 quarto preview _build                     # ALWAYS preview _build, never the repo root
 ```
 
+```bash
+python3 scripts/check_public.py           # fails if instructor content reached weeks/slides/labs
+```
+
+```bash
+npm install pptxgenjs                     # once
+node scripts/qmd2pptx.js 1                # slides/week-01.qmd -> _pptx/week-01.pptx
+node scripts/qmd2pptx.js --all
+```
+
 `gate.py` prints a per-week live/gated table. Read that output before pushing any change to a
 `release:` date. There are no tests; the gate output plus a visual pass in `quarto preview` is
 the verification loop.
@@ -94,9 +104,9 @@ lab: true                     # declarative only — not read by gate.py
 ```
 
 Labs carry `title`, `subtitle`, `week`, `release` — mirror the week's `release` date so the pair
-opens together. **Slide decks currently carry no `release:` key**, so they are never gated and a
-deck stays reachable by direct URL while its week is still locked; add `release:` to the deck if
-that matters.
+opens together. Slide decks now carry `week` and `release` too, so a deck gates with its week
+instead of staying reachable by direct URL while the week is locked. All three dates for a week
+must match; `check_public.py` does not verify this, so check it by eye when you move a date.
 
 `slides:`/`lab:` are documentation for the author, not wiring — the actual links are hand-written
 markdown in the week body (`../labs/lab-05.qmd`, `../slides/week-05.qmd`). Weeks 8 and 16 declare
@@ -140,6 +150,35 @@ you touch that policy, it appears in three places — `syllabus.qmd`, `ai.qmd`, 
 
 ## Content boundary
 
-The repository is public. Never add: solution keys, exam items, auto-marking scripts, anything
-derived from the Larson instructor manual or image library, or any student name, grade, submitted
-work, or recording (FERPA). Those live in a separate private repository.
+**Gating is a release schedule, not a privacy boundary.** Everything under `weeks/`, `slides/` and
+`labs/` compiles to public HTML that students read. Making the repo private would not change this —
+it would only hide the `.qmd` source (and on a Free plan it disables GitHub Pages outright, since
+Pages from a private repo needs Pro/Team/Enterprise; even on Pro the published site stays public).
+So the boundary is enforced by *what goes in the file*, not by repo visibility.
+
+Two consequences that have already bitten once:
+
+- **Revealjs speaker notes are public.** A `::: {.notes}` block ships inside the deck's own HTML and
+  any viewer can open it with `S`. Decks must contain no `.notes` blocks; the speaking script lives
+  in `private/teaching/`.
+- **Write for the student, always.** No facilitation plans, timings, "In-class activity" or
+  "Assessment hook" sections, and nothing in the third person about students. Activity write-ups
+  routinely name the answer they are meant to surface ("almost every team omits contingency"), which
+  is the actual leak. Those live in `private/teaching/week-NN.md`.
+
+`scripts/check_public.py` enforces both and runs in CI ahead of `gate.py`. If it fails, move the
+content to `private/` — do not loosen the pattern to get a green build.
+
+Never add: solution keys, exam items, auto-marking scripts, anything derived from the Larson
+instructor manual or image library, or any student name, grade, submitted work, or recording
+(FERPA). Those live in a separate private repository.
+
+## Slides: two outputs, one source
+
+`slides/week-NN.qmd` is the single source. Quarto renders it to revealjs for the site;
+`scripts/qmd2pptx.js` renders the same file to `_pptx/week-NN.pptx` for presenting offline. `_pptx/`
+is generated and gitignored — never commit or publish it, and never hand-edit a `.pptx` (the next
+run overwrites it). The converter reads `#`/`##` headings, lists, quotes, pipe tables, `.aside`
+callouts and inline `**bold**`/`*italic*`/`` `code` ``; it drops reveal's `. . .` fragment markers,
+since a printed slide has no increments. Its palette is pinned to `styles.scss` (`#0F5A4B`), using
+Cambria/Calibri as metric-safe stand-ins for Spectral/Source Sans 3.

@@ -74,7 +74,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 
 The AACE class system (Class 5 → Class 1) is the industry version. The key teaching point is that **estimate accuracy is a function of design maturity, not of estimator effort** — you cannot produce a Class 1 estimate from a Class 5 design no matter how many hours you spend.
 
-**Cost baseline structure — get this ordering right, students always garble it:**
+**Cost baseline structure — the ordering is where this usually goes wrong:**
 
 ```
 Work package cost estimates

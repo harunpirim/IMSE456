@@ -73,7 +73,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 - **Free float** FF = min{ES(successors)} − EF. Slack before any *successor* slips.
 - Critical path: the longest path; activities with TF = 0.
 
-### Worked example — put this on the board
+### Worked example
 
 | Activity | Duration (days) | Predecessors |
 |---|---|---|
@@ -104,7 +104,7 @@ Path lengths: A-C-E-H = 10, A-D-F-H = 14, B-D-F-H = **15**, B-G-H = 12.
 
 **Three teaching points from this specific table.**
 
-1. **A has TF = 1 but FF = 0.** Delay A by one day and no successor moves *and* the project doesn't move. Delay it by two and D slips. Students conflate the two floats constantly; this row separates them.
+1. **A has TF = 1 but FF = 0.** Delay A by one day and no successor moves *and* the project doesn't move. Delay it by two and D slips. The two floats are easy to conflate; this row separates them.
 2. **A-D-F-H is 14 days — one day of float on the whole path.** Near-critical paths are where projects actually fail, because monitoring attention follows the CP label.
 3. **The CP is a property of the estimates, not of the work.** Change D from 5 to 3 and the critical path becomes B-G-H. Nothing about the project changed except a number in a spreadsheet.
 
@@ -130,7 +130,3 @@ Attack lines: near-critical paths carry most of the realized risk; the CP assume
 
 **Cooking Thanksgiving dinner.** The turkey is the critical path. The cranberry sauce has enormous float. Every home cook knows intuitively that you start the turkey first and that a five-minute turkey delay is a five-minute dinner delay, while a five-minute cranberry delay is free — that's total float without free float, discovered without a textbook.
 :::
-
-### In-class activity (30 min)
-
-Give the same network but with one duration hidden. Teams must determine what values of that duration would change the critical path. This converts CPM from arithmetic into sensitivity analysis in one step.

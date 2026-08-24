@@ -3,6 +3,8 @@ title: "Week 7 — Managing Risk"
 subtitle: "IMSE 456/656 · Larson Ch. 7"
 author: Harun Pirim
 date: "2026-10-05"
+week: 7
+release: "2026-10-05"
 ---
 
 ## Where we are going
@@ -30,7 +32,7 @@ date: "2026-10-05"
 - **Chapman** (2024 *PMJ*, 2025 *IJPM*): 125 rail and 280 road projects across Scandinavia, 2008–2022, delivered generally on cost; no evidence of optimism bias or strategic misrepresentation. He argues prior work suffers methodological weaknesses in data provenance.
 - **Flyvbjerg** (2018, *World Development*) replies on the specific Hiding Hand question: yes, benefit overruns outweigh cost overruns in about **one fifth** of projects — but 80% show no such behaviour, so the planning fallacy remains the better general account.
 - **Ika & Pinto** (2020, *IEEE TEM*) propose accommodating both — the "Fifth Hand."
-**The pedagogical payload:** a field's most-cited empirical claim is under sustained methodological attack, and students should be able to say what evidence would settle it. (Answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
+**Why this matters:** a field's most-cited empirical claim is under sustained methodological attack, and you should be able to say what evidence would settle it. (One answer: homogeneous datasets with transparent provenance, consistent baseline definitions, and pre-registered analysis — which is what Chapman and Eliasson attempt.)
 
 ---
 
@@ -53,7 +55,7 @@ Attack: if the cause is strategic (political), better technique changes nothing 
 
 ## Somewhere else entirely
 
-**Weather forecasting.** Meteorologists moved from single-point predictions to probabilities ("70% chance of rain") and the public learned to consume them. Project management still overwhelmingly communicates single-point dates. Ask the class what institutional change would be needed for a sponsor to accept "P80: 12 March" — the technical work is done; the communication norm is the blocker.
+**Weather forecasting.** Meteorologists moved from single-point predictions to probabilities ("70% chance of rain") and the public learned to consume them. Project management still overwhelmingly communicates single-point dates. What institutional change would be needed for a sponsor to accept "P80: 12 March" — the technical work is done; the communication norm is the blocker.
 
 ---
 

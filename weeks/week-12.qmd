@@ -93,7 +93,7 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 ### The evidence, honestly stated
 
 - **Serrador & Pinto (2015)**, 1,002 projects: agile use positively affected both efficiency and overall stakeholder satisfaction; quality of the project vision/goals was a marginally significant moderator.
-- **Koch et al. (2023)**, pre-registered meta-analysis, k = 41, N = 73,825: small effects on job satisfaction, strain, and commitment; **medium-to-large** effects on performance and innovative behaviour; medium effect on psychological empowerment. Effects were **stronger outside software** (manufacturing, healthcare, logistics) and stronger in published than unpublished records — note the publication-bias signal to students.
+- **Koch et al. (2023)**, pre-registered meta-analysis, k = 41, N = 73,825: small effects on job satisfaction, strain, and commitment; **medium-to-large** effects on performance and innovative behaviour; medium effect on psychological empowerment. Effects were **stronger outside software** (manufacturing, healthcare, logistics) and stronger in published than unpublished records — note the publication-bias signal.
 - **Lieberum et al. (2022)**, *M&SOM*, controlled lab experiment with a 2×2 design: performance was higher with **time-boxed progression**, because under flexible progression people over-invest in early phases — the "**progression fallacy**." Adding self-imposed phase goals on top of time-boxing added nothing; combining phase goals with *flexible* progression (i.e. traditional PM) made things actively worse. This is the cleanest causal evidence available that the *timebox specifically* is doing work.
 - **Contra:** Badran et al. (2024), 392 construction project managers in Jordan: agile PM positively affected innovation, responsiveness, quality and client satisfaction but **negatively affected cost performance** and had no significant effect on time. Domain matters.
 
@@ -133,7 +133,7 @@ Force decomposition: better at *which* success dimension, in *which* domain, mea
 
 Ćirić Lalić et al. (2022, *IJMPB*, 227 professionals) found agile outperformed traditional on two of five success dimensions — *impact on the team* and *preparing for the future* — with no significant advantage on the others. Read alongside Week 1: the dimension you measure determines the answer you get.
 
-Agbejule et al. (2022, *IJOA*) add an important wrinkle via cluster analysis: **"traditional-leaning hybrid" scored highest on project success**, and organizations should have solid traditional practice *before* layering agile on top. That is an uncomfortable finding for agile-transformation consultancies and worth putting in front of students.
+Agbejule et al. (2022, *IJOA*) add an important wrinkle via cluster analysis: **"traditional-leaning hybrid" scored highest on project success**, and organizations should have solid traditional practice *before* layering agile on top. That is an uncomfortable finding for agile-transformation consultancies and worth sitting with.
 
 **Common hybrid patterns:**
 
@@ -144,7 +144,7 @@ Agbejule et al. (2022, *IJOA*) add an important wrinkle via cluster analysis: **
 | Water-Scrum-Fall | Up-front requirements + agile build + staged release | Common in practice; usually accidental, rarely designed |
 | Front-loaded discovery | Adaptive discovery phase → predictive execution | Construction, hardware |
 
-**Tailoring, formally.** PMBOK 8 treats tailoring as mandatory rather than optional. Give students a decision aid rather than a doctrine:
+**Tailoring, formally.** PMBOK 8 treats tailoring as mandatory rather than optional. Use a decision aid rather than a doctrine:
 
 | Factor | Push toward predictive | Push toward adaptive |
 |---|---|---|
@@ -156,7 +156,7 @@ Agbejule et al. (2022, *IJOA*) add an important wrinkle via cluster analysis: **
 | Technology novelty | Known | Novel |
 | Stakeholder availability | Low | High (PO must be present) |
 
-**Scaling frameworks (30 minutes, not a module).** SAFe, LeSS, Nexus, Scrum@Scale exist because Scrum is explicitly silent above the team. They add: cross-team synchronization, a portfolio layer, and architectural runway. The honest position for a lecture: adoption is wide, **controlled comparative evidence is thin**, and the most common failure mode reported qualitatively is "agile in name only" — ceremonies adopted, decision rights unchanged. Teach students to ask which *decision rights* moved, because that is the only variable that reliably distinguishes real transformation from theatre.
+**Scaling frameworks (30 minutes, not a module).** SAFe, LeSS, Nexus, Scrum@Scale exist because Scrum is explicitly silent above the team. They add: cross-team synchronization, a portfolio layer, and architectural runway. The honest position: adoption is wide, **controlled comparative evidence is thin**, and the most common failure mode reported qualitatively is "agile in name only" — ceremonies adopted, decision rights unchanged. Ask which *decision rights* moved, because that is the only variable that reliably distinguishes real transformation from theatre.
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
@@ -174,7 +174,3 @@ Agbejule et al. (2022, *IJOA*) add an important wrinkle via cluster analysis: **
 
 Attack: they can equally give you the overhead of both — two planning systems, two reporting cadences, and a team that satisfies neither. The Gemino evidence supports hybrid's *outcomes*, but says nothing about the cost of running two systems.
 :::
-
-### In-class activity (40 min)
-
-Four project briefs of sharply different character (a satellite launch, a mobile banking app, a hospital records migration, a bridge retrofit). Teams design an approach for each using the tailoring table, then **defend one choice against a team assigned to attack it**.

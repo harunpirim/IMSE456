@@ -3,6 +3,8 @@ title: "Week 15 — Project Closure · International Projects"
 subtitle: "IMSE 456/656 · Larson Ch. 14 + 16"
 author: Harun Pirim
 date: "2026-11-30"
+week: 15
+release: "2026-11-30"
 ---
 
 ## Next
