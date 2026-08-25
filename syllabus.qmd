@@ -175,7 +175,7 @@ Set up a cloud folder in Week 1 and keep everything there.
 | Component | Weight | What it is |
 |:--|--:|:--|
 | Conceptual assignments | 25% | CA1–CA8, online multiple choice on terms, theory and the reasoning behind the methods. Auto-graded, lowest score dropped. |
-| Studio assignments | 25% | SA1–SA14, **individual**, produced in and after Thursday studio. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case. |
+| Studio assignments | 25% | SA1–SA14, **individual**, produced and **evaluated during Thursday studio** — there is no deadline and nothing to submit afterwards. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case. |
 | Midterm examination | 20% | **Thursday 15 October, in class.** Closed book, closed notes, no computers or phones. Covers Chapters 1–7. |
 | Final project | 30% | A semester-long project with an industry partner, in teams of four or five, including a published Medium article on the AI-assisted workflow your team built. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See [Final Project](project.qmd). |
 
@@ -195,9 +195,15 @@ Set up a cloud folder in Week 1 and keep everything there.
 
 ### Late work
 
-**Late work is not accepted.** Deadlines are firm. The dropped scores are your margin for a bad
-week: the lowest conceptual assignment and the two lowest studio assignments are dropped
-automatically. If something serious happens, contact the instructor **before** the deadline.
+**Late work is not accepted.** Deadlines are firm for the work that has one — conceptual
+assignments and the final project deliverables.
+
+**Studio assignments have no deadline.** They are evaluated in the Thursday session itself, so
+the only way to miss one is to miss the session.
+
+The dropped scores are your margin for a bad week: the lowest conceptual assignment and the two
+lowest studio assignments are dropped automatically. If something serious happens, contact the
+instructor **before** the deadline, or before the studio you will miss.
 
 ## Attendance
 

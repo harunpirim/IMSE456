@@ -21,7 +21,7 @@ lab: true
 <dt>Tuesday</dt><dd>Fixed price, fixed scope, agile process — concept and case</dd>
 <dt>Thursday</dt><dd>Run a sprint, then measure the flow you produced</dd>
 <dt>Reading</dt><dd>Larson Ch. 15</dd>
-<dt>Due</dt><dd>SA11 · Sun 15 Nov</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

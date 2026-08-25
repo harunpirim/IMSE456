@@ -8,7 +8,8 @@ release: "2026-09-14"
 ::: {.week-meta}
 <dl>
 <dt>Deliverable</dt><dd><strong>SA4</strong> — generated WBS, checker code and output, corrected WBS, <code>.pod</code>, Taiga URL</dd>
-<dt>Due</dt><dd>CA2 (Ch 3–4) · SA4 · Sun 20 Sep</dd>
+<dt>Due</dt><dd>CA2 (Ch 3–4) · Sun 20 Sep</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 <dt>Tools</dt><dd>Gemini · Antigravity · Colab · ProjectLibre · Taiga · Smartsheet</dd>
 <dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-04.qmd">Week 4 — Defining the Project</a></dd>
@@ -87,7 +88,7 @@ that is the point of it. Paste the code into your submission.
 `IMSE456/studio-04/` in your cloud folder. Name files `SA4_yourlastname.*`.
 
 **Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
-left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+left at home. Your work is reviewed in the session itself — there is no separate submission afterwards.
 :::
 
 ::: {.browser-path}

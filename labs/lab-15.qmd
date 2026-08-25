@@ -8,7 +8,7 @@ release: "2026-11-30"
 ::: {.week-meta}
 <dl>
 <dt>Deliverable</dt><dd><strong>SA14</strong> — the close-out package and the evidenced-lessons list, each lesson with its data citation</dd>
-<dt>Due</dt><dd>SA14 · Sun 6 Dec</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 <dt>Tools</dt><dd>Taiga export · Colab · ProjectLibre · Power BI · Gemini · Antigravity</dd>
 <dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-15.qmd">Week 15 — Project Closure · International Projects</a></dd>
@@ -86,7 +86,7 @@ that is the point of it. Paste the code into your submission.
 `IMSE456/studio-15/` in your cloud folder. Name files `SA14_yourlastname.*`.
 
 **Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
-left at home. Submit the PDF and the completion code to Blackboard by the due date above.
+left at home. Your work is reviewed in the session itself — there is no separate submission afterwards.
 :::
 
 ::: {.browser-path}

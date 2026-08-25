@@ -21,7 +21,8 @@ lab: true
 <dt>Tuesday</dt><dd>The pre-mortem — concept and case</dd>
 <dt>Thursday</dt><dd>A register that argues back, and a schedule that admits it might slip</dd>
 <dt>Reading</dt><dd>Larson Ch. 7</dd>
-<dt>Due</dt><dd>CA5 (Ch 7) · SA7 · Sun 11 Oct</dd>
+<dt>Due</dt><dd>CA5 (Ch 7) · Sun 11 Oct</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

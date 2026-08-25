@@ -21,7 +21,8 @@ lab: true
 <dt>Tuesday</dt><dd>The 500-person conference — concept and case</dd>
 <dt>Thursday</dt><dd>Generate a WBS, then break it</dd>
 <dt>Reading</dt><dd>Larson Ch. 4</dd>
-<dt>Due</dt><dd>CA2 (Ch 3–4) · SA4 · Sun 20 Sep</dd>
+<dt>Due</dt><dd>CA2 (Ch 3–4) · Sun 20 Sep</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

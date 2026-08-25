@@ -21,7 +21,7 @@ lab: true
 <dt>Tuesday</dt><dd>A Day in the Life — what a project manager actually does</dd>
 <dt>Thursday</dt><dd>Set up your toolchain, and classify what you are managing</dd>
 <dt>Reading</dt><dd>Larson Ch. 1</dd>
-<dt>Due</dt><dd>SA1 · Sun 30 Aug</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

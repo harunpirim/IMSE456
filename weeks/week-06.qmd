@@ -21,7 +21,8 @@ lab: true
 <dt>Tuesday</dt><dd>The path that was not critical — concept and case</dd>
 <dt>Thursday</dt><dd>Write CPM yourself, then let the tool grade you</dd>
 <dt>Reading</dt><dd>Larson Ch. 6</dd>
-<dt>Due</dt><dd>CA4 (Ch 6) · SA6 · Sun 4 Oct</dd>
+<dt>Due</dt><dd>CA4 (Ch 6) · Sun 4 Oct</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

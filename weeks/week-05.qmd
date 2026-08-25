@@ -21,7 +21,8 @@ lab: true
 <dt>Tuesday</dt><dd>One scope, three numbers — concept and case</dd>
 <dt>Thursday</dt><dd>Three methods, one scope, and a distribution</dd>
 <dt>Reading</dt><dd>Larson Ch. 5</dd>
-<dt>Due</dt><dd>CA3 (Ch 5) · SA5 · Sun 27 Sep</dd>
+<dt>Due</dt><dd>CA3 (Ch 5) · Sun 27 Sep</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

@@ -21,7 +21,7 @@ lab: true
 <dt>Tuesday</dt><dd>The lessons-learned document nobody read — concept and case</dd>
 <dt>Thursday</dt><dd>Mine your own history, and close properly</dd>
 <dt>Reading</dt><dd>Larson Ch. 14 + 16</dd>
-<dt>Due</dt><dd>SA14 · Sun 6 Dec</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 

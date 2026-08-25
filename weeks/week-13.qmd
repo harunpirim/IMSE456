@@ -21,7 +21,8 @@ lab: true
 <dt>Tuesday</dt><dd>The sponsor who said yes — concept and case</dd>
 <dt>Thursday</dt><dd>Map the network you are actually working in</dd>
 <dt>Reading</dt><dd>Larson Ch. 10 + 11</dd>
-<dt>Due</dt><dd>CA8 (Ch 10–12, 15) · SA12 · <strong>FP3</strong> Fri 20 Nov</dd>
+<dt>Due</dt><dd>CA8 (Ch 10–12, 15) · <strong>FP3</strong> Fri 20 Nov</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 
