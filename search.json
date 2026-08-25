@@ -123,7 +123,7 @@
     "href": "syllabus.html#evaluation-procedures-and-criteria",
     "title": "Syllabus",
     "section": "Evaluation procedures and criteria",
-    "text": "Evaluation procedures and criteria\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat it is\n\n\n\n\nConceptual assignments\n25%\nCA1–CA8, online multiple choice on terms, theory and the reasoning behind the methods. Auto-graded, lowest score dropped.\n\n\nStudio assignments\n25%\nSA1–SA14, individual, produced in and after Thursday studio. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case.\n\n\nMidterm examination\n20%\nThursday 15 October, in class. Closed book, closed notes, no computers or phones. Covers Chapters 1–7.\n\n\nFinal project\n30%\nA semester-long project with an industry partner, in teams of four or five, including a published Medium article on the AI-assisted workflow your team built. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See Final Project.\n\n\n\n\nGrading scale\n\n\n\n\n\n\n\nGrade\nPercentage of total\n\n\n\n\nA\n≥ 90.00%\n\n\nB\n80.00 – 89.99%\n\n\nC\n70.00 – 79.99%\n\n\nD\n60.00 – 69.99%\n\n\nF\n&lt; 60.00%\n\n\n\n\n\nLate work\nLate work is not accepted. Deadlines are firm. The dropped scores are your margin for a bad week: the lowest conceptual assignment and the two lowest studio assignments are dropped automatically. If something serious happens, contact the instructor before the deadline."
+    "text": "Evaluation procedures and criteria\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat it is\n\n\n\n\nConceptual assignments\n25%\nCA1–CA8, online multiple choice on terms, theory and the reasoning behind the methods. Auto-graded, lowest score dropped.\n\n\nStudio assignments\n25%\nSA1–SA14, individual, produced and evaluated during Thursday studio — there is no deadline and nothing to submit afterwards. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case.\n\n\nMidterm examination\n20%\nThursday 15 October, in class. Closed book, closed notes, no computers or phones. Covers Chapters 1–7.\n\n\nFinal project\n30%\nA semester-long project with an industry partner, in teams of four or five, including a published Medium article on the AI-assisted workflow your team built. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See Final Project.\n\n\n\n\nGrading scale\n\n\n\n\n\n\n\nGrade\nPercentage of total\n\n\n\n\nA\n≥ 90.00%\n\n\nB\n80.00 – 89.99%\n\n\nC\n70.00 – 79.99%\n\n\nD\n60.00 – 69.99%\n\n\nF\n&lt; 60.00%\n\n\n\n\n\nLate work\nLate work is not accepted. Deadlines are firm for the work that has one — conceptual assignments and the final project deliverables.\nStudio assignments have no deadline. They are evaluated in the Thursday session itself, so the only way to miss one is to miss the session.\nThe dropped scores are your margin for a bad week: the lowest conceptual assignment and the two lowest studio assignments are dropped automatically. If something serious happens, contact the instructor before the deadline, or before the studio you will miss."
   },
   {
     "objectID": "syllabus.html#attendance",
@@ -214,98 +214,14 @@
     "href": "schedule.html#assignments",
     "title": "Schedule",
     "section": "Assignments",
-    "text": "Assignments\nConceptual assignments (CA1–CA8, 25%) close Sunday 11:59 p.m. Lowest score dropped.\nStudio assignments (SA1–SA14, 25%) are graded complete or incomplete. Two lowest dropped.\nLate work is not accepted."
+    "text": "Assignments\nConceptual assignments (CA1–CA8, 25%) close Sunday 11:59 p.m. Lowest score dropped.\nStudio assignments (SA1–SA14, 25%) are evaluated in the Thursday session — no deadline, nothing to submit afterwards. Graded complete or incomplete. Two lowest dropped.\nLate work is not accepted for the work that has a deadline: conceptual assignments and the final project deliverables."
   },
   {
-    "objectID": "labs/lab-15.html",
-    "href": "labs/lab-15.html",
-    "title": "Studio 15 · Mine your own history, and close properly",
+    "objectID": "labs/lab-01.html",
+    "href": "labs/lab-01.html",
+    "title": "Studio 1 · Answer Chapter 1 with a model, then check its work",
     "section": "",
     "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-13.html",
-    "href": "labs/lab-13.html",
-    "title": "Studio 13 · Map the network you are actually working in",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-11.html",
-    "href": "labs/lab-11.html",
-    "title": "Studio 11 · Build the dashboard, then find what it hides",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-09.html",
-    "href": "labs/lab-09.html",
-    "title": "Studio 9 · Heuristic versus optimal, and the price of the difference",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-06.html",
-    "href": "labs/lab-06.html",
-    "title": "Studio 6 · Write CPM yourself, then let the tool grade you",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-04.html",
-    "href": "labs/lab-04.html",
-    "title": "Studio 4 · Generate a WBS, then break it",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-02.html",
-    "href": "labs/lab-02.html",
-    "title": "Studio 2 · Build a selection model, then let it disagree with you",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "IMSE 456/656 — Project Management",
-    "section": "",
-    "text": "Project management the way it is practised now: the quantitative core — work breakdown, critical path, PERT, earned value — alongside agile and flow, with AI running through every week."
-  },
-  {
-    "objectID": "index.html#start-here",
-    "href": "index.html#start-here",
-    "title": "IMSE 456/656 — Project Management",
-    "section": "Start here",
-    "text": "Start here\n\nSyllabus — policies, grading, and how the week works\nSchedule — all sixteen weeks and every key date\nAI Studio — the tools, what they cost you (nothing), and how much AI is allowed where\nFinal Project — the company-partnered team project, 30% of the grade"
-  },
-  {
-    "objectID": "index.html#what-you-will-be-able-to-do",
-    "href": "index.html#what-you-will-be-able-to-do",
-    "title": "IMSE 456/656 — Project Management",
-    "section": "What you will be able to do",
-    "text": "What you will be able to do\n\nDecide which delivery approach fits a given project and defend the choice against a specific alternative.\nBuild and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, crash analysis, EVM report.\nRun the adaptive artifacts: product backlog, sprint mechanics, cumulative flow, Little’s Law.\nRead the evidence critically — distinguish a base rate from a vendor statistic, and name what a project-success number is actually measuring.\nDiagnose a failing project and propose interventions ranked by expected effect, not by convention.\nUse AI to produce project artifacts, check them, and describe clearly where it helped and where it was wrong."
-  },
-  {
-    "objectID": "index.html#textbook",
-    "href": "index.html#textbook",
-    "title": "IMSE 456/656 — Project Management",
-    "section": "Textbook",
-    "text": "Textbook\nLarson & Gray, Project Management: The Managerial Process (2024 Release), McGraw Hill — optional. The course follows the book’s chapter order with one displacement, so you can read along. Everything you are assessed on is on this site."
-  },
-  {
-    "objectID": "index.html#how-the-week-works",
-    "href": "index.html#how-the-week-works",
-    "title": "IMSE 456/656 — Project Management",
-    "section": "How the week works",
-    "text": "How the week works\nTuesday is concept — the chapter’s ideas, usually with a short case or discussion.\nThursday is studio: hands-on, at your own machine, and individual. Work the problem out yourself first, then do the same thing in the real tool, then compare. If the answers differ, explain how and why. Studios are graded complete or incomplete."
-  },
-  {
-    "objectID": "index.html#how-this-course-is-graded",
-    "href": "index.html#how-this-course-is-graded",
-    "title": "IMSE 456/656 — Project Management",
-    "section": "How this course is graded",
-    "text": "How this course is graded\n\n\n\n\n\n\n\nComponent\nWeight\n\n\n\n\nConceptual assignments (MCQ)\n25%\n\n\nStudio assignments — individual\n25%\n\n\nMidterm — in class, closed notes, no computers\n20%\n\n\nFinal project — team, with an industry partner and a published article\n30%\n\n\n\nFull detail, including the 656 differentiation and what to do if you work on lab computers only, is in the syllabus."
   },
   {
     "objectID": "ai.html",
@@ -364,53 +280,46 @@
     "text": "Course policy on AI\nStated in full in the syllabus."
   },
   {
-    "objectID": "labs/lab-01.html",
-    "href": "labs/lab-01.html",
-    "title": "Studio 1 · Set up your toolchain, and classify what you are managing",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IMSE 456/656 — Project Management",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "text": "Project management the way it is practised now: the quantitative core — work breakdown, critical path, PERT, earned value — alongside agile and flow, with AI running through every week."
   },
   {
-    "objectID": "labs/lab-03.html",
-    "href": "labs/lab-03.html",
-    "title": "Studio 3 · Instantiate a structure and watch it constrain you",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "objectID": "index.html#start-here",
+    "href": "index.html#start-here",
+    "title": "IMSE 456/656 — Project Management",
+    "section": "Start here",
+    "text": "Start here\n\nSyllabus — policies, grading, and how the week works\nSchedule — all sixteen weeks and every key date\nAI Studio — the tools, what they cost you (nothing), and how much AI is allowed where\nFinal Project — the company-partnered team project, 30% of the grade"
   },
   {
-    "objectID": "labs/lab-05.html",
-    "href": "labs/lab-05.html",
-    "title": "Studio 5 · Three methods, one scope, and a distribution",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "objectID": "index.html#what-you-will-be-able-to-do",
+    "href": "index.html#what-you-will-be-able-to-do",
+    "title": "IMSE 456/656 — Project Management",
+    "section": "What you will be able to do",
+    "text": "What you will be able to do\n\nDecide which delivery approach fits a given project and defend the choice against a specific alternative.\nBuild and interpret the core quantitative artifacts: WBS, CPM network, PERT distribution, crash analysis, EVM report.\nRun the adaptive artifacts: product backlog, sprint mechanics, cumulative flow, Little’s Law.\nRead the evidence critically — distinguish a base rate from a vendor statistic, and name what a project-success number is actually measuring.\nDiagnose a failing project and propose interventions ranked by expected effect, not by convention.\nUse AI to produce project artifacts, check them, and describe clearly where it helped and where it was wrong."
   },
   {
-    "objectID": "labs/lab-07.html",
-    "href": "labs/lab-07.html",
-    "title": "Studio 7 · A register that argues back, and a schedule that admits it might slip",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "objectID": "index.html#textbook",
+    "href": "index.html#textbook",
+    "title": "IMSE 456/656 — Project Management",
+    "section": "Textbook",
+    "text": "Textbook\nLarson & Gray, Project Management: The Managerial Process (2024 Release), McGraw Hill — optional. The course follows the book’s chapter order with one displacement, so you can read along. Everything you are assessed on is on this site."
   },
   {
-    "objectID": "labs/lab-10.html",
-    "href": "labs/lab-10.html",
-    "title": "Studio 10 · Find the economic optimum, not the earliest date",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "objectID": "index.html#how-the-week-works",
+    "href": "index.html#how-the-week-works",
+    "title": "IMSE 456/656 — Project Management",
+    "section": "How the week works",
+    "text": "How the week works\nTuesday is concept — the chapter’s ideas, usually with a short case or discussion.\nThursday is studio: hands-on, at your own machine, and individual. Work the problem out yourself first, then do the same thing in the real tool, then compare. If the answers differ, explain how and why. Studios are graded complete or incomplete."
   },
   {
-    "objectID": "labs/lab-12.html",
-    "href": "labs/lab-12.html",
-    "title": "Studio 12 · Run a sprint, then measure the flow you produced",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
-  },
-  {
-    "objectID": "labs/lab-14.html",
-    "href": "labs/lab-14.html",
-    "title": "Studio 14 · A contract-type decision tool — compressed, Tuesday only",
-    "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "objectID": "index.html#how-this-course-is-graded",
+    "href": "index.html#how-this-course-is-graded",
+    "title": "IMSE 456/656 — Project Management",
+    "section": "How this course is graded",
+    "text": "How this course is graded\n\n\n\n\n\n\n\nComponent\nWeight\n\n\n\n\nConceptual assignments (MCQ)\n25%\n\n\nStudio assignments — individual\n25%\n\n\nMidterm — in class, closed notes, no computers\n20%\n\n\nFinal project — team, with an industry partner and a published article\n30%\n\n\n\nFull detail, including the 656 differentiation and what to do if you work on lab computers only, is in the syllabus."
   },
   {
     "objectID": "project.html",
@@ -487,7 +396,7 @@
     "href": "weeks/week-01.html",
     "title": "Week 1 · Modern Project Management",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\n\n\n\nTuesday\n\n\nThe Farmers Market Pavilion\n\n\nThursday\n\n\nSet up your toolchain, and classify what you are managing\n\n\nReading\n\n\nLarson Ch. 1\n\n\n\nSee the schedule for everything that is live now."
+    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\n\n\n\nTuesday\n\n\nA Day in the Life — what a project manager actually does\n\n\nThursday\n\n\nAnswer Chapter 1 with a model, then check its work\n\n\nReading\n\n\nLarson Ch. 1\n\n\n\nSee the schedule for everything that is live now."
   },
   {
     "objectID": "weeks/week-03.html",
