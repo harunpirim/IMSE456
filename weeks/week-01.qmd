@@ -33,11 +33,11 @@ lab: true
 
 | | |
 |:--|:--|
-| **LO 1-1** | Understand why project management is crucial in today's world. |
-| **LO 1-2** | Distinguish a project from routine operations. |
-| **LO 1-3** | Identify the different stages of a project life cycle. |
-| **LO 1-4** | Describe how Agile PM is different from traditional PM. |
-| **LO 1-5** | Understand that managing projects involves balancing the technical and sociocultural dimensions of the project. |
+| **LO 1-1** | Say why project management matters so much in the current economy. |
+| **LO 1-2** | Tell a project apart from the routine operations around it. |
+| **LO 1-3** | Name the stages of a project life cycle and what each one produces. |
+| **LO 1-4** | Explain how agile differs from traditional project management. |
+| **LO 1-5** | Show why the work has a technical side and a human side, and why both must be managed. |
 
 : {tbl-colwidths="[12,88]"}
 
@@ -405,32 +405,32 @@ Managing projects is a **multidimensional process**.
   <text x="310" y="122" font-size="12" font-style="italic" fill="currentColor" text-anchor="middle" opacity="0.85">master</text>
   <text x="310" y="140" font-size="12" font-style="italic" fill="currentColor" text-anchor="middle" opacity="0.85">of both</text>
 </svg>
-<figcaption>Two sides of the same coin. To be successful, a manager must be a master of both.</figcaption>
+<figcaption>Two halves of one job. Strength in either one will not cover for weakness in the other.</figcaption>
 </figure>
 
 ## The technical dimension
 
-The first dimension is the **technical side of the management process**. This technical dimension consists of project management methodology: **planning, scheduling and controlling** projects.
+The technical side is the methodology — **planning, scheduling and controlling**. It is the orderly half of the job, and it produces documents.
 
-Clear project scope statements are written to link the project and customer and to facilitate planning and control. Creation of the deliverables and work breakdown structures facilitates planning and monitoring the progress of the project.
+A scope statement is what ties the project to the customer, and it is what makes planning and control possible at all: you cannot control against a target nobody wrote down. From it come the deliverables and the work breakdown structure, which is what you actually plan and monitor against.
 
-The **work breakdown structure serves as a database** that links all levels in the organisation, major deliverables, and all work — right down to the tasks in a work package. Effects of project changes are documented and traceable. Thus, **any change in one part of the project is traceable to the source by the integrated linkages of the system**.
+The WBS is worth thinking of as a **database rather than a diagram**. It links every level of the organisation to every major deliverable and to every piece of work, down to the individual tasks in a work package. Because those links are built in, a change anywhere is documented, and can be traced back to whatever caused it. That traceability is the whole payoff, and it is why the structure is worth the effort of building properly.
 
-A successful project manager will be well trained in the technical side of managing projects.
+Being well trained in this half is necessary. It is not sufficient.
 
 ## The sociocultural dimension
 
-In contrast to the orderly world of project planning, this dimension involves the much **messier, often contradictory and paradoxical world of implementation**.
+Where planning is orderly, implementation is not. It is **messy, frequently contradictory, and often paradoxical** — and no amount of documentation makes it otherwise.
 
-Project managers must try to shape a project culture that stimulates teamwork and high levels of personal motivation, as well as a capacity to quickly identify and resolve problems that threaten project work.
+The manager's task here is to build a project culture that keeps a team working together and personally invested, and that surfaces problems early enough to do something about them. A culture where bad news travels slowly is a culture that will hand you a surprise late, when it is expensive.
 
-**Things rarely go as planned**, and project managers must be able to steer the project back on track or alter directions when necessary.
+**Plans do not survive contact with reality.** The skill is not avoiding that; it is recognising the departure quickly and deciding whether to steer back to the plan or change direction.
 
-Overall, the manager must build a **cooperative social network** among an often divergent set of stakeholders with different standards, commitments and perspectives.
+Underneath all of it is a **social network the manager has to build deliberately** — across stakeholders who hold genuinely different standards, are committed to different things, and see the same project from incompatible angles. None of that is a failure of the people involved. It is the normal condition of the work.
 
 ## Master of both
 
-To be successful, a manager must be a master of both. Good project managers work with others to balance their attention to both the technical and sociocultural aspects of project management. Project managers have to **plan and budget projects as well as orchestrate the contributions of others**.
+Neither half substitutes for the other, and both have to be actively managed. The practical shape of the job is that you **produce a plan and a budget, and at the same time orchestrate the contributions of people you mostly do not control**. A manager strong in one half and weak in the other fails — just in a different way each time.
 
 ---
 
@@ -442,16 +442,16 @@ Marking its fiftieth anniversary, PMI named the projects it judged most influent
 - **Apollo 11**
 - **Intel 4004**
 - **Euro**
-- **Human Genome Project** — recognised for rising above usual silos, unlocking the building block of humanity, and enabling unparalleled innovation in medicine and life sciences.
+- **Human Genome Project** — cited for cutting across institutional silos to map human DNA, and for the wave of innovation in medicine and life sciences that followed.
 
 ---
 
 # Generative AI in project management
 
-GenAI's unique capabilities can be used for the following, keeping in mind that new applications and plugins are being developed every day [5]:
+The capabilities currently claimed for generative AI in project work are listed below. Treat the list as a snapshot — new applications and plugins appear constantly [5]:
 
 ::: {.chips}
-<span class="chip">enhanced project decision making</span><span class="chip">automation</span><span class="chip">innovative solutions</span><span class="chip">creativity of content</span><span class="chip">business and data modeling</span><span class="chip">personalized communication</span><span class="chip">enhanced stakeholder collaboration</span><span class="chip">scenario planning</span><span class="chip">training</span><span class="chip">continuous learning resource optimization</span><span class="chip">ethical considerations</span><span class="chip">new opportunities in the augmented workforce era</span>
+<span class="chip">decision support</span><span class="chip">automation</span><span class="chip">solution generation</span><span class="chip">content</span><span class="chip">data and business modelling</span><span class="chip">tailored communication</span><span class="chip">stakeholder collaboration</span><span class="chip">scenario planning</span><span class="chip">training</span><span class="chip">learning-resource optimisation</span><span class="chip">ethics</span><span class="chip">the augmented workforce</span>
 :::
 
 ## Across the five process groups
@@ -489,7 +489,7 @@ Downstairs to follow up on a status-report issue, her opening question — "Hi, 
 
 She tries her counterpart John at the client firm and cannot reach him. Eddie from finance drops by for lunch; half an hour in the cafeteria on internal politics, where she is surprised to hear that a powerful ally may be leaving. Back at her desk she reaches John and spends thirty minutes on the problem; he promises to investigate. She sits outside by the creek and meditates for thirty minutes. Then thirty minutes with the purchasing agent, exploring how to get equipment to the site earlier than planned; she authorises express delivery.
 
-A 2:30 Zoom meeting takes ten minutes to get everyone online, then an hour exchanging technical requirements for a new version of a software package. She walks the hallway, thanking Chandra for his analysis at the status meeting. John calls back: the firm's own marketing rep had made **promises about specific features** the system would provide. Troi takes the stairs to marketing, waits ten minutes for Mary, and leaves forty minutes later after a heated discussion, with Mary agreeing to talk to her people about what was and was not promised.
+A 2:30 Zoom meeting takes ten minutes to get everyone online, then an hour exchanging technical requirements for a new version of a software package. She walks the hallway, thanking Chandra for his analysis at the status meeting. John calls back: the firm's own marketing rep had made **promises about specific features** the system would provide. Troi takes the stairs to marketing, waits ten minutes for Mary, and leaves forty minutes later after a heated discussion — having got Mary to agree to straighten out with her own team which commitments were real.
 
 She updates her team on the schedule impact, briefs her manager for twenty minutes, reviews email and project documents for thirty, then spends thirty minutes in MS Project running "what-if" scenarios before writing tomorrow's reminders and starting her thirty-minute commute home.
 
@@ -517,19 +517,24 @@ Individual work. Build the tool yourself, run the professional tool on the same 
 1. Define a project. What are five characteristics that help differentiate projects from other functions carried out in the daily operations of the organisation?
 2. What are some of the key environmental forces that have changed the way projects are managed? What has been the effect of these forces on the management of projects?
 3. Describe the four phases of the traditional project life cycle. Which phase do you think would be the most difficult one to complete?
-4. What kinds of projects is Agile PM best suited for, and why?
+4. What kinds of projects is Agile PM best suited for and why?
 5. The technical and sociocultural dimensions of project management are two sides of the same coin. Explain.
 
 # Exercises
 
 1. Review the front page of your local newspaper and try to identify all the projects contained in the articles. How many were you able to find?
-2. Individually, identify what you consider to be humanity's greatest achievements in the last five decades. Now share your list with three to five others and come up with an expanded list. Review these great achievements in terms of the definition of a project. What does your review suggest about the importance of project management?
-3. Individually, identify projects assigned in previous terms. Were both sociocultural and technical elements factors in the success or the difficulties in those projects?
-4. Check out PMI's home page at [pmi.org](https://www.pmi.org):
+2. Individually, identify what you consider to be humanity's greatest achievements in the last five decades. Now share your list with three to five other students in the class and come up with an expanded list. Review these great achievements in terms of the definition of a project. What does your review suggest about the importance of project management?
+3. Individually, identify projects assigned in previous terms. Were both sociocultural and technical elements factors in the success or difficulties in the projects?
+4. Check out the Project Management Institute's home page at [pmi.org](https://www.pmi.org).
    a. Review general information about PMI as well as membership information.
    b. See if there is a local PMI chapter. If not, where is the closest one?
-   c. Use the search function to find information on the Project Management Body of Knowledge (PMBOK). What are the major knowledge areas of PMBOK?
+   c. Use the search function at the PMI home page to find information on Project Management Body of Knowledge (PMBOK). What are the major knowledge areas of PMBOK?
    d. Explore other links that PMI provides. What do these links tell you about the nature and future of project management?
+
+::: {.callout-note appearance="simple"}
+Review questions and exercises are reproduced from Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, Chapter 1 [1].
+:::
+
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
@@ -561,9 +566,13 @@ Now the second half. You cannot cook the dinner party in iterations — the gues
 
 # Where this sits in the course
 
-Chapter 2 focuses on how organisations go about evaluating and selecting projects. The organisational environment in which projects are implemented is the focus of Chapter 3. The next six chapters focus on developing a plan for the project: Chapter 4 deals with defining the scope of the project and developing a work breakdown structure (WBS); the challenge of formulating cost and time estimates is the subject of Chapter 5; Chapter 6 focuses on utilising the information from the WBS to create a project plan in the form of a timed and sequenced network of activities.
+The next two chapters set the context: how organisations choose which projects to fund (Chapter 2), and the organisational structure and culture a project has to survive inside (Chapter 3).
+
+Then six chapters build the plan. Chapter 4 defines what the project actually covers and decomposes it into a work breakdown structure. Chapter 5 takes on the hardest part — putting credible numbers on cost and time. Chapter 6 turns the WBS into a schedule: activities, sequenced and timed.
 
 > A true understanding of project management comes not from knowing what a scope statement is, or the critical path, or partnering with contractors, but from **comprehending how the different elements of the project management system interact** to determine the fate of a project.
+>
+> — Larson & Gray [1]
 
 # References
 

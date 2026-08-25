@@ -414,15 +414,15 @@ Scope statements link the project and customer, and facilitate planning and cont
 
 . . .
 
-The **WBS serves as a database** linking all levels of the organisation, major deliverables, and all work — right down to the tasks in a work package.
+Think of the **WBS as a database, not a diagram** — it links every level of the organisation to every deliverable and every piece of work, down to individual tasks.
 
-Any change in one part is **traceable to the source** by the integrated linkages of the system.
+Because the links are built in, a change anywhere can be **traced back to whatever caused it**. That traceability is the payoff.
 
 ## The sociocultural dimension
 
-In contrast to the orderly world of planning: the **messier, often contradictory and paradoxical world of implementation**.
+Where planning is orderly, implementation is **messy, frequently contradictory, often paradoxical**.
 
-Shape a culture that stimulates teamwork and motivation, and can quickly identify and resolve problems that threaten the work.
+Build a culture that keeps people working together and invested — and that surfaces problems early enough to act on.
 
 . . .
 
@@ -430,13 +430,13 @@ Shape a culture that stimulates teamwork and motivation, and can quickly identif
 
 ## The social network
 
-Build a **cooperative social network** among an often divergent set of stakeholders with different standards, commitments and perspectives.
+Build the **social network deliberately** — across stakeholders who hold different standards, are committed to different things, and see the same project from incompatible angles.
 
 . . .
 
-To be successful, a manager must be a **master of both**.
+Neither half covers for the other.
 
-Plan and budget projects — *and* orchestrate the contributions of others.
+Produce a plan and a budget — *and* orchestrate people you mostly do not control.
 
 # PMI's 50 most influential projects
 
@@ -446,16 +446,16 @@ Plan and budget projects — *and* orchestrate the contributions of others.
 - Apollo 11
 - Intel 4004
 - Euro
-- **Human Genome Project** — for rising above usual silos and unlocking the building block of humanity, enabling unparalleled innovation in medicine and life sciences
+- **Human Genome Project** — cited for cutting across institutional silos to map human DNA, and the wave of medical innovation that followed
 
 # Generative AI
 
 ## Capabilities claimed
 
-Enhanced project decision making · automation · innovative solutions · creativity of content · business and data modeling · personalized communication · enhanced stakeholder collaboration · scenario planning · training · continuous learning resource optimization · ethical considerations · new opportunities in the augmented workforce era
+Decision support · automation · solution generation · content · data and business modelling · tailored communication · stakeholder collaboration · scenario planning · training · learning-resource optimisation · the ethics that come with all of it · and whatever the augmented workforce turns out to mean
 
 ::: {.aside}
-New applications and plugins are being developed every day.
+Treat any such list as a snapshot — it moves constantly.
 :::
 
 ## Across the process groups
