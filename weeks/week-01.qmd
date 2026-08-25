@@ -6,7 +6,7 @@ chapter: "Larson Ch. 1"
 dates: "25 and 27 August"
 reading: "Larson Ch. 1"
 session-a: "A Day in the Life — what a project manager actually does"
-session-b: "Set up your toolchain, and classify what you are managing"
+session-b: "Answer Chapter 1 with a model, then check its work"
 video:
   provider: none
   id: ""
@@ -19,7 +19,7 @@ lab: true
 <dt>Sessions</dt><dd>25 &amp; 27 August</dd>
 <dt>Chapter</dt><dd>Larson Ch. 1</dd>
 <dt>Tuesday</dt><dd>A Day in the Life — what a project manager actually does</dd>
-<dt>Thursday</dt><dd>Set up your toolchain, and classify what you are managing</dd>
+<dt>Thursday</dt><dd>Answer Chapter 1 with a model, then check its work</dd>
 <dt>Reading</dt><dd>Larson Ch. 1</dd>
 <dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
@@ -521,9 +521,9 @@ How effectively do you think Troi spent her day? What does the case tell you abo
 # Thursday studio
 
 ::: {.studio}
-#### Set up your toolchain, and classify what you are managing
+#### Answer Chapter 1 with a model, then check its work
 
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
+Individual work. Answer the five review questions unaided first, then bring a model in — and account for every place it was wrong and every place it changed your mind. One page.
 
 **[Open the Week 1 lab sheet](../labs/lab-01.qmd)** · [slides](../slides/week-01.qmd)
 :::
