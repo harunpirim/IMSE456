@@ -26,35 +26,3 @@ lab: true
 :::
 
 <!-- VIDEO -->
-
-## Concepts introduced
-
-::: {.chips}
-<span class="chip">advantages and disadvantages of outsourcing</span><span class="chip">best practices — requirements, training, conflict management, frequent review, co-location, fair incentives</span><span class="chip">fixed price, cost-plus, incentive contracts and who carries the risk</span><span class="chip">interests not positions</span><span class="chip">options for mutual gain</span><span class="chip">objective criteria</span><span class="chip">BATNA</span><span class="chip">working with customers</span>
-:::
-
-## Tuesday — The incentive that produced the wrong behaviour
-
-::: {.case}
-A cost-plus contract with a schedule bonus, and a contractor who behaved entirely rationally.
-
-::: {.qn}
-Under each of the three contract types, who profits from a change request? Answer for all three before you pick one.
-:::
-:::
-
-## Thursday studio
-
-::: {.studio}
-#### A contract-type decision tool — compressed, Tuesday only
-
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
-
-**[Open the Week 14 lab sheet](../labs/lab-14.qmd)**
-:::
-
-## Lecture notes
-
-::: {.callout-note}
-Extended notes for this chapter are in preparation. The concepts above, the reading, and the studio are the assessable material for this week; the midterm and the conceptual assignments are drawn from them.
-:::

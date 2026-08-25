@@ -27,35 +27,3 @@ lab: true
 :::
 
 <!-- VIDEO -->
-
-## Concepts introduced
-
-::: {.chips}
-<span class="chip">people, material and equipment constraints</span><span class="chip">time-constrained versus resource-constrained</span><span class="chip">smoothing versus leveling</span><span class="chip">the minimum-slack heuristic</span><span class="chip">splitting and its cost</span><span class="chip">multi-project resource scheduling</span><span class="chip">the time-phased budget baseline</span><span class="chip">cost accounts</span>
-:::
-
-## Tuesday — Everyone is at 140% in November
-
-::: {.case}
-A resource histogram nobody opened until the sponsor asked why nothing had shipped since September.
-
-::: {.qn}
-Leveling made the schedule feasible and pushed the finish date out three weeks. Who has to be told, when, and what exactly do you say?
-:::
-:::
-
-## Thursday studio
-
-::: {.studio}
-#### Heuristic versus optimal, and the price of the difference
-
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
-
-**[Open the Week 9 lab sheet](../labs/lab-09.qmd)**
-:::
-
-## Lecture notes
-
-::: {.callout-note}
-Extended notes for this chapter are in preparation. The concepts above, the reading, and the studio are the assessable material for this week; the midterm and the conceptual assignments are drawn from them.
-:::

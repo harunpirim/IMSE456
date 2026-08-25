@@ -86,6 +86,24 @@ Consequences that bite:
   (marked-up chapter scans and the like) stays out of the repository; only the notes written from
   it are committed.
 
+## Current state of the content — read this before assuming a week exists
+
+**Only Week 1 has a body.** Weeks 2–16 are deliberately reduced to a skeleton: front matter, the
+`.week-meta` block, and the `<!-- VIDEO -->` marker, and nothing else. `labs/` and `slides/` hold
+only `lab-01.qmd` and `week-01.qmd`.
+
+Each week is written from its own marked-up chapter (dropped into the gitignored `raw_notes/`)
+shortly before it opens, following the Week 1 pattern: notes, deck and studio produced as one set.
+
+The skeleton exists because `write_schedule()` builds the schedule table from every week's front
+matter — so all sixteen rows keep showing week number, dates, title and chapter, and students keep
+the map of the semester, while the Resources column stays empty until the pieces exist. Do not
+delete those files, and do not "helpfully" fill them in.
+
+`slides:`/`lab:` still read `true` on weeks whose deck and studio have not been written yet. Those
+keys are documentation of intent, not wiring — nothing reads them, and the schedule's Resources
+column tests for the file on disk.
+
 ## Front matter contract
 
 Week pages (`weeks/week-NN.qmd`) drive everything downstream. All sixteen carry the same keys:
