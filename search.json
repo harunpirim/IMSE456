@@ -221,7 +221,14 @@
     "href": "labs/lab-01.html",
     "title": "Studio 1 · Answer Chapter 1 with a model, then check its work",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "text": "Deliverable\n\n\nSA1 — a one-page report, plus the AI acknowledgement\n\n\nStudio\n\n\nEvaluated in the Thursday session — nothing to submit afterwards\n\n\nTools\n\n\nGemini (or the assistant you have access to)\n\n\nAI use\n\n\nLevel 4 — full use with documentation · generate freely, verify everything, and append the AI acknowledgement\n\n\nWeek page\n\n\nWeek 1 — Modern Project Management\nThe session runs to a fixed clock: Answer 20 minutes, Generate 20, Reconcile 25, peer check 10. The move from Answer to Generate is called at minute 20 whether or not you finished — an unfinished answer is a legitimate finding, and you will report it as one."
+  },
+  {
+    "objectID": "labs/lab-01.html#study-loop-for-this-week",
+    "href": "labs/lab-01.html#study-loop-for-this-week",
+    "title": "Studio 1 · Answer Chapter 1 with a model, then check its work",
+    "section": "Study loop for this week",
+    "text": "Study loop for this week\nRun this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.\nBe my tutor on the difference between a project and an operation. Ask me\none question at a time. Don't lecture. Start by making me state the test,\nthen hand me cases that break it — a film studio, a release train, a\nrefinery shutdown — until I stop treating it as a fact about the world.\nSee AI Studio for the Editor and Roommate prompts and the full loop.\n\n\n\n\n\n\nLabel it, verify it, own it. Append the AI acknowledgement block from the syllabus: the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — the check is graded, not the output. “The model said so” is not a defence in this course or in a project review."
   },
   {
     "objectID": "ai.html",
@@ -392,11 +399,578 @@
     "text": "Team working\nTen teams. At 47 students that is seven teams of five and three of four; at 50, ten of five. Teams are formed by Week 3, at FP0.\n\nThe five responsibilities\nEach carries a duty that cannot be delegated, from the course operations guide:\n\n\n\n\n\n\n\n\nRole\nPrimary duty\nCannot be delegated\n\n\n\n\nCoordinator / Taiga owner\nCreates the project, manages members, submits URLs\nKeeping access working and preserving the record\n\n\nScope & backlog lead\nEpics, stories, acceptance criteria, priority\nConfirming backlog scope matches the approved project\n\n\nProcess facilitator\nRuns planning, review and retrospective\nSurfacing blockers and keeping the board truthful\n\n\nSchedule & resource lead\nMaster schedule file and its version history\nProtecting the baseline and reconciling changes\n\n\nQuality, risk & documentation lead\nEvidence, issues, risk responses, final archive\nVerifying completion criteria and submission integrity\n\n\n\nIn a four-person team, merge coordinator with process facilitator — both are keep-the-team-running jobs and the coordinator already owns membership. Scope, schedule and quality each keep a single owner; those three answer for artifacts and cannot be shared.\nEvery member still plans and performs project work. Each updates their own Taiga tasks weekly and completes at least one documented schedule action — adding dependencies, assigning resources, analysing the critical path, or recording actual progress.\nA confidential peer-contribution assessment is collected with FP4 and can adjust an individual’s project grade by up to ±15%. Persistent non-contribution is handled before FP3, not after — tell the instructor while there is still time to fix it."
   },
   {
+    "objectID": "slides/week-01.html#section",
+    "href": "slides/week-01.html#section",
+    "title": "Week 1 — Modern Project Management",
+    "section": "",
+    "text": "All of humankind’s greatest accomplishments — from building the great pyramids to discovering a cure for polio to putting a footprint on the moon — began as a project.\n\n\n\nLarson & Gray, Project Management: The Managerial Process, 2024 Release, Ch. 1"
+  },
+  {
+    "objectID": "slides/week-01.html#learning-objectives",
+    "href": "slides/week-01.html#learning-objectives",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\nLO 1-1\nWhy project management is crucial in today’s world\n\n\nLO 1-2\nDistinguish a project from routine operations\n\n\nLO 1-3\nIdentify the stages of a project life cycle\n\n\nLO 1-4\nHow Agile PM differs from traditional PM\n\n\nLO 1-5\nBalancing the technical and sociocultural dimensions"
+  },
+  {
+    "objectID": "slides/week-01.html#a-good-time-to-be-reading-this",
+    "href": "slides/week-01.html#a-good-time-to-be-reading-this",
+    "title": "Week 1 — Modern Project Management",
+    "section": "A good time to be reading this",
+    "text": "A good time to be reading this\nProject management is critical to sustainable economic growth.\nNew jobs and competitive advantage are achieved by constant innovation — new products and services, better productivity and quality of work."
+  },
+  {
+    "objectID": "slides/week-01.html#more-than-a-set-of-tools",
+    "href": "slides/week-01.html#more-than-a-set-of-tools",
+    "title": "Week 1 — Modern Project Management",
+    "section": "More than a set of tools",
+    "text": "More than a set of tools\nProject management gives people a powerful set of tools to plan, implement and manage activities to accomplish specific objectives.\n\nBut it is more than that:\n\nA contact sport that requires building collaborative relationships among a diverse cast of stakeholders."
+  },
+  {
+    "objectID": "slides/week-01.html#where-it-came-from",
+    "href": "slides/week-01.html#where-it-came-from",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Where it came from",
+    "text": "Where it came from\nLong the style of doing business in:\n\nThe construction industry\nThe U.S. Department of Defense\nHollywood\nBig consulting firms"
+  },
+  {
+    "objectID": "slides/week-01.html#where-it-went",
+    "href": "slides/week-01.html#where-it-went",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Where it went",
+    "text": "Where it went\nPort expansions · hospital restructuring · upgrading information systems.\nNext-generation fuel-efficient vehicles · sustainable energy · the farthest reaches of outer space.\n\n\nImpact is most profound in high-tech industries."
+  },
+  {
+    "objectID": "slides/week-01.html#not-just-the-private-sector",
+    "href": "slides/week-01.html#not-just-the-private-sector",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Not just the private sector",
+    "text": "Not just the private sector\nA vehicle for doing good deeds and solving social problems:\n\nEmergency aid to areas hit by natural disasters\nA strategy for reducing crime and drug abuse within a city\nA community effort to renovate a public playground"
+  },
+  {
+    "objectID": "slides/week-01.html#the-numbers",
+    "href": "slides/week-01.html#the-numbers",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The numbers",
+    "text": "The numbers\n\n\n\nPMI membership, 2002\n93,000\n\n\nPMI membership, 2021\n686,000+\n\n\nU.S. annual spend on projects\n~$2.5 trillion\n\n\nShare of U.S. gross national product\n~25%"
+  },
+  {
+    "objectID": "slides/week-01.html#most-never-hold-the-title",
+    "href": "slides/week-01.html#most-never-hold-the-title",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Most never hold the title",
+    "text": "Most never hold the title\nAccountants · lawyers · administrators · scientists · contractors · coaches · public health officials · teachers · community advocates.\n\nFor some the work is project driven — cases for lawyers, audits for accountants, events for artists, renovations for contractors."
+  },
+  {
+    "objectID": "slides/week-01.html#for-others-a-small-but-critical-part",
+    "href": "slides/week-01.html#for-others-a-small-but-critical-part",
+    "title": "Week 1 — Modern Project Management",
+    "section": "For others, a small but critical part",
+    "text": "For others, a small but critical part\n\nA teacher with four classes a day, coaching a national debate team\nA store manager developing an employee retention programme\nA sales exec launching daily deals into a new city\nA public health official organising a Homeless Youth Connect event\n\n\nNot a title. A job requirement."
+  },
+  {
+    "objectID": "slides/week-01.html#the-skill-transfers",
+    "href": "slides/week-01.html#the-skill-transfers",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The skill transfers",
+    "text": "The skill transfers\n\nIt is hard to think of a profession or a career path that would not benefit from being good at managing projects.\n\nProject management fundamentals are universal.\nEach person is likely to experience three to four career changes."
+  },
+  {
+    "objectID": "slides/week-01.html#and-it-shows-up-in-the-classroom",
+    "href": "slides/week-01.html#and-it-shows-up-in-the-classroom",
+    "title": "Week 1 — Modern Project Management",
+    "section": "And it shows up in the classroom",
+    "text": "And it shows up in the classroom\nTwenty years ago: one or two classes, primarily for engineers.\nToday: multiple sections — engineers supplemented by marketing, MIS and finance, plus oceanography, health sciences, computer sciences and liberal arts.\nEmployers are looking for graduates with project management skills."
+  },
+  {
+    "objectID": "slides/week-01.html#what-do-these-have-in-common",
+    "href": "slides/week-01.html#what-do-these-have-in-common",
+    "title": "Week 1 — Modern Project Management",
+    "section": "What do these have in common?",
+    "text": "What do these have in common?\n\nMillions Watch World Cup Finals\nCitywide WiFi System Set to Go Live\nHospitals Respond to New Healthcare Reforms\nApple’s New iPhone Hits the Market\nCity Receives Stimulus Funds to Expand Light Rail System\n\n\nAll of these events are projects."
+  },
+  {
+    "objectID": "slides/week-01.html#the-definition",
+    "href": "slides/week-01.html#the-definition",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The definition",
+    "text": "The definition\n\nA project is a temporary endeavour undertaken to create a unique product, service, or result.\n\nLike most organisational efforts, the major goal is to satisfy a customer’s need."
+  },
+  {
+    "objectID": "slides/week-01.html#five-characteristics",
+    "href": "slides/week-01.html#five-characteristics",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Five characteristics",
+    "text": "Five characteristics\n\n\n\n#\n\n\n\n\n\n1\nAn established objective\n\n\n2\nA defined lifespan with a beginning and an end\n\n\n3\nUsually several departments and professionals\n\n\n4\nTypically something never done before\n\n\n5\nSpecific time, cost and performance requirements"
+  },
+  {
+    "objectID": "slides/week-01.html#an-established-objective",
+    "href": "slides/week-01.html#an-established-objective",
+    "title": "Week 1 — Modern Project Management",
+    "section": "1 · An established objective",
+    "text": "1 · An established objective\nA 12-storey apartment complex by January 1.\nVersion 2.0 of a software package as quickly as possible.\nThis singular purpose is often lacking in daily organisational life, where workers perform repetitive operations each day."
+  },
+  {
+    "objectID": "slides/week-01.html#a-defined-endpoint",
+    "href": "slides/week-01.html#a-defined-endpoint",
+    "title": "Week 1 — Modern Project Management",
+    "section": "2 · A defined endpoint",
+    "text": "2 · A defined endpoint\nContrary to the ongoing duties of traditional jobs.\nInstead of staying in one job, individuals move from project to project, working with different groups of people.\nAfter installing a security system, an IT engineer may be assigned to develop a database for a different client."
+  },
+  {
+    "objectID": "slides/week-01.html#combined-effort-of-specialists",
+    "href": "slides/week-01.html#combined-effort-of-specialists",
+    "title": "Week 1 — Modern Project Management",
+    "section": "3 · Combined effort of specialists",
+    "text": "3 · Combined effort of specialists\nUnlike work segmented by functional speciality.\nEngineers · financial analysts · marketing professionals · quality control specialists.\nInstead of separate offices under separate managers, they work together under the guidance of a project manager."
+  },
+  {
+    "objectID": "slides/week-01.html#nonroutine-with-unique-elements",
+    "href": "slides/week-01.html#nonroutine-with-unique-elements",
+    "title": "Week 1 — Modern Project Management",
+    "section": "4 · Nonroutine, with unique elements",
+    "text": "4 · Nonroutine, with unique elements\nNot either/or — a matter of degree.\nAn electric automobile, or two rovers on Mars: previously unsolved problems and breakthrough technology.\n\nEven basic construction projects with established routines require some degree of customisation that makes them unique."
+  },
+  {
+    "objectID": "slides/week-01.html#time-cost-and-performance",
+    "href": "slides/week-01.html#time-cost-and-performance",
+    "title": "Week 1 — Modern Project Management",
+    "section": "5 · Time, cost and performance",
+    "text": "5 · Time, cost and performance\nProjects are evaluated according to accomplishment, cost and time spent.\nThese triple constraints impose a higher degree of accountability than is typically found in most jobs.\n\nAnd they name the primary function: balancing the trade-offs among time, cost and performance while ultimately satisfying the customer."
+  },
+  {
+    "objectID": "slides/week-01.html#what-a-project-is-not",
+    "href": "slides/week-01.html#what-a-project-is-not",
+    "title": "Week 1 — Modern Project Management",
+    "section": "What a project is not",
+    "text": "What a project is not\n\n\n\n\n\n\n\nRoutine, repetitive\nProject\n\n\n\n\nTaking class notes\nWriting a term paper\n\n\nEntering sales receipts\nSetting up a sales kiosk for a meeting\n\n\nResponding to a supply-chain request\nDeveloping a supply-chain information system\n\n\nPractising scales on the piano\nWriting a new piano piece\n\n\nRoutine manufacture of a music player\nDesigning one that stores 10,000 songs"
+  },
+  {
+    "objectID": "slides/week-01.html#why-the-distinction-earns-its-keep",
+    "href": "slides/week-01.html#why-the-distinction-earns-its-keep",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Why the distinction earns its keep",
+    "text": "Why the distinction earns its keep\nToo often resources can be used up on daily operations, which may not contribute to the longer-range organisation strategies that require innovative new products."
+  },
+  {
+    "objectID": "slides/week-01.html#program-versus-project",
+    "href": "slides/week-01.html#program-versus-project",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Program versus project",
+    "text": "Program versus project\n\nA program is a group of related projects designed to accomplish a common goal over an extended period of time.\n\nEach project within a program has a project manager.\nThe major differences lie in scale and time span. Program goals are closely related to broad strategic organisation goals."
+  },
+  {
+    "objectID": "slides/week-01.html#predictable-changes-in-effort-and-focus",
+    "href": "slides/week-01.html#predictable-changes-in-effort-and-focus",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Predictable changes in effort and focus",
+    "text": "Predictable changes in effort and focus\nMany life-cycle models are unique to an industry or project type.\nNew software development: definition · design · code · integration/test · maintenance.\nA generic cycle has four stages."
+  },
+  {
+    "objectID": "slides/week-01.html#defining",
+    "href": "slides/week-01.html#defining",
+    "title": "Week 1 — Modern Project Management",
+    "section": "1 · Defining",
+    "text": "1 · Defining\nSpecifications of the project are defined.\nProject objectives are established.\nTeams are formed.\nMajor responsibilities are assigned."
+  },
+  {
+    "objectID": "slides/week-01.html#planning",
+    "href": "slides/week-01.html#planning",
+    "title": "Week 1 — Modern Project Management",
+    "section": "2 · Planning",
+    "text": "2 · Planning\nThe level of effort increases.\nPlans are developed to determine what the project will entail, when it will be scheduled, whom it will benefit, what quality level should be maintained, and what the budget will be."
+  },
+  {
+    "objectID": "slides/week-01.html#executing",
+    "href": "slides/week-01.html#executing",
+    "title": "Week 1 — Modern Project Management",
+    "section": "3 · Executing",
+    "text": "3 · Executing\nA major portion of the project work — physical and mental.\nThe physical product is produced: a bridge, a report, a software program.\n\nTime, cost and specification measures are used for control. On schedule? On budget? Meeting specifications? What are the forecasts? What revisions are necessary?"
+  },
+  {
+    "objectID": "slides/week-01.html#closing",
+    "href": "slides/week-01.html#closing",
+    "title": "Week 1 — Modern Project Management",
+    "section": "4 · Closing",
+    "text": "4 · Closing\nThree activities:\n\nDelivering the project product to the customer — customer training, transferring documents\nRedeploying project resources — releasing equipment and materials, finding new assignments for team members\nPost-project review — assessing performance and capturing lessons learned"
+  },
+  {
+    "objectID": "slides/week-01.html#what-each-stage-produces",
+    "href": "slides/week-01.html#what-each-stage-produces",
+    "title": "Week 1 — Modern Project Management",
+    "section": "What each stage produces",
+    "text": "What each stage produces\n\n\n\nDefining\nPlanning\nExecuting\nClosing\n\n\n\n\nGoals\nSchedules\nStatus reports\nTrain customer\n\n\nSpecifications\nBudgets\nChanges\nTransfer documents\n\n\nTasks\nResources\nQuality\nRelease resources\n\n\nResponsibilities\nRisks\nForecasts\nEvaluation\n\n\n\nStaffing\n\nLessons learned"
+  },
+  {
+    "objectID": "slides/week-01.html#the-project-manager",
+    "href": "slides/week-01.html#the-project-manager",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The project manager",
+    "text": "The project manager\nProject managers are often stars in their organisation and well compensated.\nThey develop, or are given, a project charter or scope statement defining the objectives and parameters of the project.\nThey work with others to create a schedule and budget that guide execution — and must understand project priorities so they can make independent decisions."
+  },
+  {
+    "objectID": "slides/week-01.html#traditional-pm-assumes-predictability",
+    "href": "slides/week-01.html#traditional-pm-assumes-predictability",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Traditional PM assumes predictability",
+    "text": "Traditional PM assumes predictability\nTraditional project management focuses on thorough planning up front.\nPlanning requires predictability. Managers must understand what is to be accomplished and how to do it.\nBuilding a bridge, engineers draw upon proven technology and design principles.\n\nNot all projects enjoy such predictability."
+  },
+  {
+    "objectID": "slides/week-01.html#project-uncertainty",
+    "href": "slides/week-01.html#project-uncertainty",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Project uncertainty",
+    "text": "Project uncertainty\nUncertainty varies according to two things:\n\nThe extent the project scope (What) is known and stable\nThe extent the technology (How) is known and proven\n\n\nPredictable → unpredictable → unknown."
+  },
+  {
+    "objectID": "slides/week-01.html#where-planning-works",
+    "href": "slides/week-01.html#where-planning-works",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Where planning works",
+    "text": "Where planning works\nBridges · product extensions · events · marketing campaigns.\nWell-established scopes, proven technology — which provides predictability for effective planning.\n\nWhen scope and/or technology is not fully known, plan-driven methods suffer."
+  },
+  {
+    "objectID": "slides/week-01.html#the-cost-of-ignoring-it",
+    "href": "slides/week-01.html#the-cost-of-ignoring-it",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The cost of ignoring it",
+    "text": "The cost of ignoring it\n$81 billion — spent by American firms and agencies on cancelled software projects, 1995 (Standish Group)\n&gt; $2 trillion — cost of poor software quality in the U.S., 2021, from unsuccessful projects, software failure, and inferior quality legacy systems (Krasner, 2022)"
+  },
+  {
+    "objectID": "slides/week-01.html#rolling-wave",
+    "href": "slides/week-01.html#rolling-wave",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Rolling wave",
+    "text": "Rolling wave\nAn incremental, iterative process.\nInstead of planning everything up front, the scope evolves. The final design and outcome is not known in great detail, and is continuously developed through incremental iterations — waves.\nIterations typically last one to four weeks."
+  },
+  {
+    "objectID": "slides/week-01.html#each-iteration",
+    "href": "slides/week-01.html#each-iteration",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Each iteration",
+    "text": "Each iteration\nMakes tangible progress — defining a key requirement, solving a technical problem, creating features to demonstrate to the customer.\nAt the end, progress is reviewed, adjustments are made, a new cycle begins.\n\nEach new iteration subsumes the work of the previous ones until the project is complete and the customer satisfied."
+  },
+  {
+    "objectID": "slides/week-01.html#agile-in-one-line",
+    "href": "slides/week-01.html#agile-in-one-line",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Agile in one line",
+    "text": "Agile in one line\nActive collaboration between the project team and customer representatives · breaking projects into small functional pieces · adapting to changing requirements.\nAgile works best in small teams of four to eight members."
+  },
+  {
+    "objectID": "slides/week-01.html#not-simply-eitheror",
+    "href": "slides/week-01.html#not-simply-eitheror",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Not simply either/or",
+    "text": "Not simply either/or\nAgile up front in the defining phase to establish specifications and requirements.\nTraditional methods to plan, execute and close.\nAgile also used to address certain technical issues while most of the work is managed traditionally.\n\nHybrid project management is the name for this blending."
+  },
+  {
+    "objectID": "slides/week-01.html#compression-of-the-product-life-cycle",
+    "href": "slides/week-01.html#compression-of-the-product-life-cycle",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Compression of the product life cycle",
+    "text": "Compression of the product life cycle\nHigh-tech product life cycles now average six months to three years. Only 30 years ago, 10 to 15 years was not uncommon.\n\nRule of thumb: a six-month project delay can cost 33 percent of product revenue share.\nSpeed becomes a competitive advantage."
+  },
+  {
+    "objectID": "slides/week-01.html#knowledge-explosion",
+    "href": "slides/week-01.html#knowledge-explosion",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Knowledge explosion",
+    "text": "Knowledge explosion\nBuilding a road 30 years ago was somewhat simple.\nToday: materials, specifications, codes, aesthetics, equipment, required specialists — every area more complex.\nHard to find a new product without at least one microchip. The same is likely true for AI.\n\nProject management has emerged as the key discipline for integrating divergent technologies."
+  },
+  {
+    "objectID": "slides/week-01.html#triple-bottom-line",
+    "href": "slides/week-01.html#triple-bottom-line",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Triple bottom line",
+    "text": "Triple bottom line\nPlanet · people · profit.\nBusinesses can no longer simply focus on maximising profit to the detriment of the environment and society.\nReducing carbon imprints and using renewable resources are realised through effective project management — a high LEED certification is often an objective in its own right."
+  },
+  {
+    "objectID": "slides/week-01.html#small-projects-big-problems",
+    "href": "slides/week-01.html#small-projects-big-problems",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Small projects, big problems",
+    "text": "Small projects, big problems\nHundreds of projects implemented concurrently — a multiproject environment.\nSharing and prioritising resources across a portfolio is a major challenge for senior management."
+  },
+  {
+    "objectID": "slides/week-01.html#why-small-projects-hide",
+    "href": "slides/week-01.html#why-small-projects-hide",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Why small projects hide",
+    "text": "Why small projects hide\n\nThey carry the same or more risk as large projects\nThey are perceived as low-impact — they don’t demand scarce resources or money\nBecause so many run concurrently and each impact seems small, measuring inefficiency is usually nonexistent\nThey soon add up to large sums; customers and millions of dollars are lost each year\n\n\nHidden costs not measured in the accounting system."
+  },
+  {
+    "objectID": "slides/week-01.html#managing-projects-is-multidimensional",
+    "href": "slides/week-01.html#managing-projects-is-multidimensional",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Managing projects is multidimensional",
+    "text": "Managing projects is multidimensional\n\n\n\nTechnical\nSociocultural\n\n\n\n\nScope · WBS\nLeadership\n\n\nSchedules\nProblem solving\n\n\nResource allocation\nTeamwork\n\n\nBaseline budgets\nNegotiation · politics\n\n\nStatus reports\nCustomer expectations"
+  },
+  {
+    "objectID": "slides/week-01.html#the-technical-dimension",
+    "href": "slides/week-01.html#the-technical-dimension",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The technical dimension",
+    "text": "The technical dimension\nProject management methodology: planning, scheduling, controlling.\nScope statements link the project and customer, and facilitate planning and control.\n\nThink of the WBS as a database, not a diagram — it links every level of the organisation to every deliverable and every piece of work, down to individual tasks.\nBecause the links are built in, a change anywhere can be traced back to whatever caused it. That traceability is the payoff."
+  },
+  {
+    "objectID": "slides/week-01.html#the-sociocultural-dimension",
+    "href": "slides/week-01.html#the-sociocultural-dimension",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The sociocultural dimension",
+    "text": "The sociocultural dimension\nWhere planning is orderly, implementation is messy, frequently contradictory, often paradoxical.\nBuild a culture that keeps people working together and invested — and that surfaces problems early enough to act on.\n\nThings rarely go as planned. Steer back on track, or alter direction when necessary."
+  },
+  {
+    "objectID": "slides/week-01.html#the-social-network",
+    "href": "slides/week-01.html#the-social-network",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The social network",
+    "text": "The social network\nBuild the social network deliberately — across stakeholders who hold different standards, are committed to different things, and see the same project from incompatible angles.\n\nNeither half covers for the other.\nProduce a plan and a budget — and orchestrate people you mostly do not control."
+  },
+  {
+    "objectID": "slides/week-01.html#section-1",
+    "href": "slides/week-01.html#section-1",
+    "title": "Week 1 — Modern Project Management",
+    "section": "1969–2019",
+    "text": "1969–2019\n\n\nWorld Wide Web\nApollo 11\nIntel 4004\nEuro\nHuman Genome Project — cited for cutting across institutional silos to map human DNA, and the wave of medical innovation that followed\n\n\nReported in Larson & Gray, Ch. 1; originally PMI"
+  },
+  {
+    "objectID": "slides/week-01.html#capabilities-claimed",
+    "href": "slides/week-01.html#capabilities-claimed",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Capabilities claimed",
+    "text": "Capabilities claimed\nDecision support · automation · solution generation · content · data and business modelling · tailored communication · stakeholder collaboration · scenario planning · training · learning-resource optimisation · the ethics that come with all of it · and whatever the augmented workforce turns out to mean\n\n\nTreat any such list as a snapshot — it moves constantly."
+  },
+  {
+    "objectID": "slides/week-01.html#across-the-process-groups",
+    "href": "slides/week-01.html#across-the-process-groups",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Across the process groups",
+    "text": "Across the process groups\n\n\n\n\n\n\n\nGroup\nApplied to\n\n\n\n\nInitiating\nIdea generation · stakeholder content · requirement gathering\n\n\nPlanning\nPlan drafting · risk scenario modeling · scenario planning\n\n\nExecuting\nContent creation · code generation · dynamic reporting\n\n\nMonitoring\nRisk narratives · feedback loops · predictive models\n\n\nClosing\nAutomated summary reports"
+  },
+  {
+    "objectID": "slides/week-01.html#read-that-table-carefully",
+    "href": "slides/week-01.html#read-that-table-carefully",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Read that table carefully",
+    "text": "Read that table carefully\nEvery row describes a generated artefact.\nA generated artefact is a claim, not a result.\n\nA model produces a plausible, well-formatted WBS in seconds and quietly omits a stakeholder — because it does not know who is in your room."
+  },
+  {
+    "objectID": "slides/week-01.html#the-rule-for-this-course",
+    "href": "slides/week-01.html#the-rule-for-this-course",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The rule for this course",
+    "text": "The rule for this course\nThe check is graded, not the output."
+  },
+  {
+    "objectID": "slides/week-01.html#trois-day",
+    "href": "slides/week-01.html#trois-day",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Troi’s day",
+    "text": "Troi’s day\n10 min catching up with a fellow PM · 2 voicemails, 16 emails, 10 Slack posts · 25 min on reports, interrupted for 20 · a status meeting starting 15 min late · 30 min with another PM sharing personnel\n\n20 min of complaints downstairs — which surface that the client is requesting features not in the original scope statement"
+  },
+  {
+    "objectID": "slides/week-01.html#the-afternoon",
+    "href": "slides/week-01.html#the-afternoon",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The afternoon",
+    "text": "The afternoon\n30 min with her counterpart at the client firm · lunch and internal politics · 30 min meditating by the creek · 30 min with purchasing to pull equipment delivery forward\n\nThen the call back: her own firm’s marketing rep had promised features the system would provide. 40 minutes in marketing, heated."
+  },
+  {
+    "objectID": "slides/week-01.html#the-questions",
+    "href": "slides/week-01.html#the-questions",
+    "title": "Week 1 — Modern Project Management",
+    "section": "The questions",
+    "text": "The questions\n\nHow effectively do you think Troi spent her day?\n\n\nWhat does the case tell you about what it is like to be a project manager?"
+  },
+  {
+    "objectID": "slides/week-01.html#this-week",
+    "href": "slides/week-01.html#this-week",
+    "title": "Week 1 — Modern Project Management",
+    "section": "This week",
+    "text": "This week\n\nNotes: Week 1\nStudio: Lab 1\nReading: Larson Ch. 1\n\nThursday: answer Chapter 1 with a model, then check its work. One page.\n\n\nChapter 2 takes up how organisations evaluate and select projects."
+  },
+  {
+    "objectID": "slides/week-01.html#sources",
+    "href": "slides/week-01.html#sources",
+    "title": "Week 1 — Modern Project Management",
+    "section": "Sources",
+    "text": "Sources\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 1 — the source for this week’s structure and substance. Exposition reworded; figures redrawn.\nThe Standish Group (1995). The CHAOS Report.\nKrasner, H. (2022). The Cost of Poor Software Quality in the US: A 2022 Report. CISQ.\nProject Management Institute. PMBOK Guide, 7th ed.\nAI Driven Project Management — GenAI capabilities by process group."
+  },
+  {
     "objectID": "weeks/week-01.html",
     "href": "weeks/week-01.html",
     "title": "Week 1 · Modern Project Management",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\n\n\n\nTuesday\n\n\nA Day in the Life — what a project manager actually does\n\n\nThursday\n\n\nAnswer Chapter 1 with a model, then check its work\n\n\nReading\n\n\nLarson Ch. 1\n\n\n\nSee the schedule for everything that is live now."
+    "text": "Sessions\n\n\n25 & 27 August\n\n\nChapter\n\n\nLarson Ch. 1\n\n\nTuesday\n\n\nA Day in the Life — what a project manager actually does\n\n\nThursday\n\n\nAnswer Chapter 1 with a model, then check its work\n\n\nReading\n\n\nLarson Ch. 1\n\n\nStudio\n\n\nEvaluated in the Thursday session — nothing to submit afterwards"
+  },
+  {
+    "objectID": "weeks/week-01.html#learning-objectives",
+    "href": "weeks/week-01.html#learning-objectives",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\n\n\n\n\nLO 1-1\nSay why project management matters so much in the current economy.\n\n\nLO 1-2\nTell a project apart from the routine operations around it.\n\n\nLO 1-3\nName the stages of a project life cycle and what each one produces.\n\n\nLO 1-4\nExplain how agile differs from traditional project management.\n\n\nLO 1-5\nShow why the work has a technical side and a human side, and why both must be managed."
+  },
+  {
+    "objectID": "weeks/week-01.html#concepts-introduced",
+    "href": "weeks/week-01.html#concepts-introduced",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Concepts introduced",
+    "text": "Concepts introduced\n\nproject vs. operationsthe five characteristicstriple constraintprogram vs. projectproject life cyclelevel of effortproject charterproject uncertaintyrolling waveagile · hybridproduct life cycle compressionknowledge explosiontriple bottom linemultiproject environmenttechnical dimensionsociocultural dimensionGenAI by process group"
+  },
+  {
+    "objectID": "weeks/week-01.html#where-the-project-approach-came-from-and-where-it-went",
+    "href": "weeks/week-01.html#where-the-project-approach-came-from-and-where-it-went",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Where the project approach came from, and where it went",
+    "text": "Where the project approach came from, and where it went\nThe project approach has long been the style of doing business in the construction industry, the U.S. Department of Defense, Hollywood, and big consulting firms. It has now spread to all avenues of work.\nToday project teams carry out everything from port expansions to hospital restructuring to upgrading information systems. They are creating next-generation fuel-efficient vehicles, developing sustainable sources of energy, and exploring the farthest reaches of outer space.\nThe impact is most profound in high-tech industries, where the new folk heroes are young professionals whose Herculean efforts lead to the constant flow of new hardware and software products.\nProject management is not limited to the private sector. It is a vehicle for doing good deeds and solving social problems — providing emergency aid to areas hit by natural disasters, devising a strategy for reducing crime and drug abuse within a city, or organising a community effort to renovate a public playground. All would and do benefit from the application of modern project management techniques."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-numbers",
+    "href": "weeks/week-01.html#the-numbers",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The numbers",
+    "text": "The numbers\n\n\n\n\n\n\n\nIndicator\nFigure\n\n\n\n\nPMI membership, 2002\n93,000\n\n\nPMI membership, 2021\nmore than 686,000\n\n\nAnnual U.S. spend on projects\napproximately $2.5 trillion\n\n\nThat spend as a share of U.S. gross national product\nabout 25 percent\n\n\n\nOther countries are increasingly spending more on projects. Millions of people around the world consider project management the major task in their profession."
+  },
+  {
+    "objectID": "weeks/week-01.html#most-people-who-manage-projects-never-hold-the-title",
+    "href": "weeks/week-01.html#most-people-who-manage-projects-never-hold-the-title",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Most people who manage projects never hold the title",
+    "text": "Most people who manage projects never hold the title\nMany people who excel at managing projects never have the title project manager. They include accountants, lawyers, administrators, scientists, contractors, coaches, public health officials, teachers and community advocates whose success depends upon being able to lead and manage project work.\nFor some, the very nature of the work is project driven — cases for lawyers, audits for accountants, events for artists, renovations for contractors.\nFor others, projects are a small but critical part of the work:\n\nA high school teacher who teaches four classes a day is responsible for coaching a group of students to compete in a national debate competition.\nA store manager who oversees daily operations is charged with developing an employee retention programme.\nA sales account executive is given the additional assignment of team lead to launch daily deals into a new city.\nA public health official who manages a clinic is also responsible for organising a Homeless Youth Connect event.\n\nFor these and others, project management is not a title but a critical job requirement.\n\nIt is hard to think of a profession or a career path that would not benefit from being good at managing projects."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-skill-transfers",
+    "href": "weeks/week-01.html#the-skill-transfers",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The skill transfers",
+    "text": "The skill transfers\nNot only is project management critical to most careers, the skill set is transferable across most businesses and professions. Project management fundamentals are universal. The same methodology used to develop a new product can be adapted to create new services, organise events, refurbish ageing operations, and so forth.\nIn a world where it is estimated that each person is likely to experience three to four career changes, managing projects is a talent worthy of development."
+  },
+  {
+    "objectID": "weeks/week-01.html#and-it-shows-up-in-the-classroom",
+    "href": "weeks/week-01.html#and-it-shows-up-in-the-classroom",
+    "title": "Week 1 · Modern Project Management",
+    "section": "And it shows up in the classroom",
+    "text": "And it shows up in the classroom\nTwenty years ago, major universities offered one or two classes in project management, primarily for engineers. Today most universities offer multiple sections, with the core group of engineers supplemented by business students majoring in marketing, management information systems (MIS) and finance, as well as students from oceanography, health sciences, computer sciences and liberal arts.\nThese students are finding that their exposure to project management provides distinct advantages when it comes time to look for jobs. More and more employers are looking for graduates with project management skills."
+  },
+  {
+    "objectID": "weeks/week-01.html#start-here",
+    "href": "weeks/week-01.html#start-here",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Start here",
+    "text": "Start here\nWhat do the following headlines have in common?\n\nMillions Watch World Cup Finals\nCitywide WiFi System Set to Go Live\nHospitals Respond to New Healthcare Reforms\nApple’s New iPhone Hits the Market\nCity Receives Stimulus Funds to Expand Light Rail System\n\nAll of these events are projects."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-definition",
+    "href": "weeks/week-01.html#the-definition",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The definition",
+    "text": "The definition\nThe Project Management Institute provides the following definition [4]:\n\nA project is a temporary endeavour undertaken to create a unique product, service, or result.\n\nLike most organisational efforts, the major goal of a project is to satisfy a customer’s need. Beyond that fundamental similarity, the characteristics of a project help differentiate it from other endeavours of the organisation."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-five-characteristics",
+    "href": "weeks/week-01.html#the-five-characteristics",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The five characteristics",
+    "text": "The five characteristics\n\n\n\n\n\n\n\n#\nCharacteristic\n\n\n\n\n1\nAn established objective\n\n\n2\nA defined lifespan with a beginning and an end\n\n\n3\nUsually, the involvement of several departments and professionals\n\n\n4\nTypically, doing something that has never been done before\n\n\n5\nSpecific time, cost, and performance requirements\n\n\n\nFirst — a defined objective. Whether it is constructing a 12-storey apartment complex by January 1 or releasing version 2.0 of a specific software package as quickly as possible. This singular purpose is often lacking in daily organisational life, where workers perform repetitive operations each day.\nSecond — a defined endpoint. Because there is a specified objective, projects have an endpoint, contrary to the ongoing duties and responsibilities of traditional jobs. Instead of staying in one job, individuals often move from project to project, working with different groups of people. For example, after helping to install a security system, an IT engineer may be assigned to develop a database for a different client.\nThird — combined effort of specialists. Unlike much organisational work that is segmented according to functional speciality, projects typically require the combined efforts of a variety of specialists. Instead of working in separate offices under separate managers, project participants — whether engineers, financial analysts, marketing professionals or quality control specialists — work together under the guidance of a project manager to complete a project.\nFourth — nonroutine, with unique elements. This is not an either/or issue but a matter of degree. Accomplishing something that has never been done before — building an electric automobile, or landing two mechanical rovers on Mars — requires solving previously unsolved problems and using breakthrough technology. On the other hand, even basic construction projects that involve established sets of routines and procedures require some degree of customisation that makes them unique.\nFifth — specific time, cost and performance requirements. Projects are evaluated according to accomplishment, cost and time spent. These triple constraints impose a higher degree of accountability than is typically found in most jobs. They also highlight one of the primary functions of project management: balancing the trade-offs among time, cost and performance while ultimately satisfying the customer."
+  },
+  {
+    "objectID": "weeks/week-01.html#what-a-project-is-not",
+    "href": "weeks/week-01.html#what-a-project-is-not",
+    "title": "Week 1 · Modern Project Management",
+    "section": "What a project is not",
+    "text": "What a project is not\nProjects should not be confused with everyday work. A project is not routine, repetitive work. Ordinary daily work typically requires doing the same or similar work over and over, while a project is done only once — a new product or service exists when the project is completed.\n\n\n\n\n\n\n\nRoutine, repetitive work\nProjects\n\n\n\n\nTaking class notes\nWriting a term paper\n\n\nDaily entering sales receipts into the accounting ledger\nSetting up a sales kiosk for a professional accounting meeting\n\n\nResponding to a supply-chain request\nDeveloping a supply-chain information system\n\n\nPractising scales on the piano\nWriting a new piano piece\n\n\nRoutine manufacture of a portable music player\nDesigning a player roughly 2 × 4 inches that interfaces with a PC and stores 10,000 songs\n\n\nAttaching tags on a manufactured product\nWire-tag projects for large retailers\n\n\n\nRecognising the difference is important because too often resources can be used up on daily operations, which may not contribute to the longer-range organisation strategies that require innovative new products."
+  },
+  {
+    "objectID": "weeks/week-01.html#program-versus-project",
+    "href": "weeks/week-01.html#program-versus-project",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Program versus project",
+    "text": "Program versus project\nIn practice the terms project and program cause confusion. They are often used synonymously.\n\nA program is a group of related projects designed to accomplish a common goal over an extended period of time.\n\nEach project within a program has a project manager. The major differences lie in scale and time span. Individual projects within a program are motivated by the higher program goal, and program goals are closely related to broad strategic organisation goals."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-project-manager",
+    "href": "weeks/week-01.html#the-project-manager",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The project manager",
+    "text": "The project manager\nProject managers are often stars in their organisation and well compensated.\nThey develop, or are given, a project charter or scope statement that defines the objectives and parameters of the project. They work with others to create a project schedule and budget that will guide project execution. They need to understand project priorities so they can make independent decisions."
+  },
+  {
+    "objectID": "weeks/week-01.html#project-uncertainty",
+    "href": "weeks/week-01.html#project-uncertainty",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Project uncertainty",
+    "text": "Project uncertainty\nProject uncertainty varies according to the extent the project scope is known and stable, and the extent the technology to be used is known and proven.\n\n\n\nProject uncertainty as a function of scope and technology\n\n             Predictable Unpredictable Unknown   Known & stable Technology (How) → unknown Project scope (What) → unknown \n\n\nBridges, product extensions, events and marketing campaigns have well-established scopes and use proven technology, which provides predictability for effective planning.Figure redrawn from Larson & Gray, Ch. 1, Figure 1.2 [1].\n\n\nHowever, when the project scope and/or technology is not fully known, things become much less predictable and plan-driven methods suffer.\nSuch was the case for software development projects, where it was estimated that in 1995 American firms and agencies spent $81 billion on cancelled software projects [2]. Fast forward to 2021, and the cost of poor software quality in the United States was estimated to be over $2 trillion because of unsuccessful projects, software failure, and inferior quality legacy systems [3]."
+  },
+  {
+    "objectID": "weeks/week-01.html#rolling-wave",
+    "href": "weeks/week-01.html#rolling-wave",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Rolling wave",
+    "text": "Rolling wave\nFundamentally, Agile PM employs an incremental, iterative process sometimes referred to as a “rolling wave” approach to complete projects.\nInstead of trying to plan for everything up front, the scope of the project evolves. The final project design and outcome is not known in great detail and is continuously developed through a series of incremental iterations (waves). Iterations typically last from one to four weeks.\n\n\n\nRolling wave development across five iterations\n\n                Iteration 1Iteration 2Iteration 3 Iteration 4Iteration 5   Project initiationCloseout \n\n\nThe goal of each iteration is to make tangible progress. Each new iteration subsumes the work of the previous iterations until the project is completed and the customer is satisfied.Figure redrawn from Larson & Gray, Ch. 1, Figure 1.3 [1].\n\n\nThe goal of each iteration is to make tangible progress — defining a key requirement, solving a technical problem, or creating desired features to demonstrate to the customer. At the end of each iteration, progress is reviewed, adjustments are made, and a different iterative cycle begins.\nAgile PM focuses on active collaboration between the project team and customer representatives, breaking projects into small functional pieces, and adapting to changing requirements."
+  },
+  {
+    "objectID": "weeks/week-01.html#it-is-not-simply-a-question-of-eitheror",
+    "href": "weeks/week-01.html#it-is-not-simply-a-question-of-eitheror",
+    "title": "Week 1 · Modern Project Management",
+    "section": "It is not simply a question of either/or",
+    "text": "It is not simply a question of either/or\nAgile methods are often used up front in the defining phase to establish specifications and requirements, and then traditional methods are used to plan, execute and close the project. Agile methods are also used to address certain technical issues on a project while most of the project work is being managed in the traditional way.\nHybrid project management is the name given to this blending of traditional and agile methodologies.\nThe internal dynamics on Agile projects is quite different from the traditional PM approach. Agile works best in small teams of four to eight members."
+  },
+  {
+    "objectID": "weeks/week-01.html#compression-of-the-product-life-cycle",
+    "href": "weeks/week-01.html#compression-of-the-product-life-cycle",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Compression of the product life cycle",
+    "text": "Compression of the product life cycle\nOne of the most significant driving forces behind the demand for project management is the shortening of the product life cycle.\nToday in high-tech industries the product life cycle is averaging six months to three years. Only 30 years ago, life cycles of 10 to 15 years were not uncommon.\nTime-to-market for new products with short life cycles has become increasingly important. A common rule of thumb in the world of high-tech product development is that a six-month project delay can result in a 33 percent loss in product revenue share.\nSpeed, therefore, becomes a competitive advantage; more and more organisations are relying on cross-functional project teams to get new products and services to the market as quickly as possible."
+  },
+  {
+    "objectID": "weeks/week-01.html#knowledge-explosion",
+    "href": "weeks/week-01.html#knowledge-explosion",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Knowledge explosion",
+    "text": "Knowledge explosion\nThe growth in new knowledge has increased the complexity of projects, because projects encompass the latest advances.\nBuilding a road 30 years ago was a somewhat simple process. Today each area has increased in complexity — including materials, specifications, codes, aesthetics, equipment and required specialists.\nSimilarly, in today’s digital, electronic age it is becoming hard to find a new product that does not contain at least one microchip. The same is likely to be true for artificial intelligence.\nProduct complexity has increased the need to integrate divergent technologies. Project management has emerged as the key discipline for achieving this task."
+  },
+  {
+    "objectID": "weeks/week-01.html#triple-bottom-line-planet-people-profit",
+    "href": "weeks/week-01.html#triple-bottom-line-planet-people-profit",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Triple bottom line — planet, people, profit",
+    "text": "Triple bottom line — planet, people, profit\nThe threat of global warming has brought sustainable business practices to the forefront. Businesses can no longer simply focus on maximising profit to the detriment of the environment and society.\nEfforts to reduce carbon imprints and utilise renewable resources are realised through effective project management. The impact of this movement toward sustainability can be seen in changes in the objectives and techniques used to complete projects — for example, achieving a high LEED certification award is often an objective on construction projects."
+  },
+  {
+    "objectID": "weeks/week-01.html#small-projects-represent-big-problems",
+    "href": "weeks/week-01.html#small-projects-represent-big-problems",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Small projects represent big problems",
+    "text": "Small projects represent big problems\nThe velocity of change required to remain competitive, or simply keep up, has created an organisational climate in which hundreds of projects are implemented concurrently. This climate has created a multiproject environment and a plethora of new problems. Sharing and prioritising resources across a portfolio of projects is a major challenge for senior management.\nMany firms have no idea of the problems involved with the inefficient management of small projects:\n\nSmall projects typically carry the same or more risk as large projects.\nSmall projects are perceived as having little impact on the bottom line because they do not demand large amounts of scarce resources and/or money.\nBecause so many small projects are going on concurrently, and because the perception of the inefficiency impact is small, measuring inefficiency is usually nonexistent.\nMany small projects soon add up to large sums of money. Many customers and millions of dollars are lost each year on small projects in product and service organisations.\nSmall projects can represent hidden costs not measured in the accounting system.\n\nOrganisations with many small projects going on concurrently face the most difficult project management problems. A key question becomes one of how to create an organisational environment that supports multiproject management. A process is needed to prioritise and develop a portfolio of small projects that supports the mission of the organisation.\nIn summary, a variety of environmental forces interacting in today’s business world contribute to the increased demand for good project management across all industries and sectors."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-technical-dimension",
+    "href": "weeks/week-01.html#the-technical-dimension",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The technical dimension",
+    "text": "The technical dimension\nThe technical side is the methodology — planning, scheduling and controlling. It is the orderly half of the job, and it produces documents.\nA scope statement is what ties the project to the customer, and it is what makes planning and control possible at all: you cannot control against a target nobody wrote down. From it come the deliverables and the work breakdown structure, which is what you actually plan and monitor against.\nThe WBS is worth thinking of as a database rather than a diagram. It links every level of the organisation to every major deliverable and to every piece of work, down to the individual tasks in a work package. Because those links are built in, a change anywhere is documented, and can be traced back to whatever caused it. That traceability is the whole payoff, and it is why the structure is worth the effort of building properly.\nBeing well trained in this half is necessary. It is not sufficient."
+  },
+  {
+    "objectID": "weeks/week-01.html#the-sociocultural-dimension",
+    "href": "weeks/week-01.html#the-sociocultural-dimension",
+    "title": "Week 1 · Modern Project Management",
+    "section": "The sociocultural dimension",
+    "text": "The sociocultural dimension\nWhere planning is orderly, implementation is not. It is messy, frequently contradictory, and often paradoxical — and no amount of documentation makes it otherwise.\nThe manager’s task here is to build a project culture that keeps a team working together and personally invested, and that surfaces problems early enough to do something about them. A culture where bad news travels slowly is a culture that will hand you a surprise late, when it is expensive.\nPlans do not survive contact with reality. The skill is not avoiding that; it is recognising the departure quickly and deciding whether to steer back to the plan or change direction.\nUnderneath all of it is a social network the manager has to build deliberately — across stakeholders who hold genuinely different standards, are committed to different things, and see the same project from incompatible angles. None of that is a failure of the people involved. It is the normal condition of the work."
+  },
+  {
+    "objectID": "weeks/week-01.html#master-of-both",
+    "href": "weeks/week-01.html#master-of-both",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Master of both",
+    "text": "Master of both\nNeither half substitutes for the other, and both have to be actively managed. The practical shape of the job is that you produce a plan and a budget, and at the same time orchestrate the contributions of people you mostly do not control. A manager strong in one half and weak in the other fails — just in a different way each time."
+  },
+  {
+    "objectID": "weeks/week-01.html#across-the-five-process-groups",
+    "href": "weeks/week-01.html#across-the-five-process-groups",
+    "title": "Week 1 · Modern Project Management",
+    "section": "Across the five process groups",
+    "text": "Across the five process groups\n\n\n\n\n\n\n\n\nProcess group\nApplication\nWhat the AI does\n\n\n\n\nInitiating\nIdea generation\nProposes new project concepts based on historical patterns\n\n\n\nStakeholder engagement content\nGenerates preliminary content or tailored presentations\n\n\n\nAutomated requirement gathering\nGenerates a list of project requirements from past projects\n\n\nPlanning\nAutomated plan drafting\nCreates initial project plans using data from similar past projects\n\n\n\nRisk scenario modeling\nSimulates potential risk scenarios based on historical data\n\n\n\nGenerative scenario planning\nCreates multiple project execution scenarios\n\n\nExecuting\nContent creation\nGenerates designs or models for project-needed content\n\n\n\nCode generation\nGenerates code snippets or even modules\n\n\n\nDynamic reporting\nGenerates real-time dashboard reports with financial metrics\n\n\nMonitoring & controlling\nPredictive risk narratives\nGenerates descriptive risk scenarios for better understanding\n\n\n\nFeedback loop creation\nGenerates responses to common queries or concerns\n\n\n\nPredictive model generation\nGenerates models to predict future project states from current data\n\n\nClosing\nAutomated summary reports\nGenerates detailed project closure reports or feedback\n\n\n\nRead that table against this course’s standing rule. Every row describes a generated artefact, and a generated artefact is a claim, not a result. A model will produce a plausible, well-formatted work breakdown structure in seconds and quietly omit a stakeholder, because it does not know who is in your room. The check is graded, not the output."
   },
   {
     "objectID": "weeks/week-03.html",
