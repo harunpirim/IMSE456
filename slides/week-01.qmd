@@ -7,274 +7,464 @@ week: 1
 release: "2026-08-25"
 ---
 
-## Where we are going
+## {.center}
 
-- Say why project management became a mainstream skill, not a construction speciality.
-- Apply the temporary-and-unique test — and find where it fails.
-- Tell a project, a program and a portfolio apart.
-- Describe the life cycle and how effort is distributed across it.
-- Say what makes a project unsuitable for up-front planning.
-- Separate the technical from the sociocultural, and master both.
+> All of humankind's greatest accomplishments — from building the great pyramids to discovering a cure for polio to putting a footprint on the moon — began as a project.
 
-# 1 · Why this is a mainstream skill
+## Learning objectives
 
-## Two numbers
+| | |
+|---|---|
+| **LO 1-1** | Why project management is crucial in today's world |
+| **LO 1-2** | Distinguish a project from routine operations |
+| **LO 1-3** | Identify the stages of a project life cycle |
+| **LO 1-4** | How Agile PM differs from traditional PM |
+| **LO 1-5** | Balancing the technical and sociocultural dimensions |
 
-**$2.5 trillion** — roughly a quarter of US gross national product — is spent on projects each year.
+# LO 1-1 · Why this is crucial
 
-**93,000 → 686,000** — PMI membership, 2002 to 2021.
+## A good time to be reading this
+
+Project management is critical to **sustainable economic growth**.
+
+New jobs and competitive advantage are achieved by constant innovation — new products and services, better productivity and quality of work.
+
+## More than a set of tools
+
+Project management gives people a powerful set of tools to plan, implement and manage activities to accomplish specific objectives.
+
+. . .
+
+But it is more than that:
+
+> A **contact sport** that requires building collaborative relationships among a diverse cast of stakeholders.
+
+## Where it came from
+
+Long the style of doing business in:
+
+- The construction industry
+- The U.S. Department of Defense
+- Hollywood
+- Big consulting firms
+
+## Where it went
+
+Port expansions · hospital restructuring · upgrading information systems.
+
+Next-generation fuel-efficient vehicles · sustainable energy · the farthest reaches of outer space.
 
 ::: {.aside}
-Larson & Gray, Ch. 1
+Impact is most profound in high-tech industries.
 :::
 
-## The quieter observation
+## Not just the private sector
 
-Most people who manage projects **never hold the title**.
+A vehicle for doing good deeds and solving social problems:
 
-Accountants running an audit · lawyers running a case · teachers coaching a debate team · a clinician organising a health event.
+- Emergency aid to areas hit by natural disasters
+- A strategy for reducing crime and drug abuse within a city
+- A community effort to renovate a public playground
 
-For them project management is not a job title but a **job requirement**.
+## The numbers
 
-## Which is the argument for you
+| | |
+|---|---|
+| PMI membership, 2002 | 93,000 |
+| PMI membership, 2021 | **686,000+** |
+| U.S. annual spend on projects | **~$2.5 trillion** |
+| Share of U.S. gross national product | **~25%** |
 
-With three to four career changes now typical, the skill travels better than almost anything else you will learn.
+## Most never hold the title
+
+Accountants · lawyers · administrators · scientists · contractors · coaches · public health officials · teachers · community advocates.
+
+. . .
+
+For some the work *is* project driven — cases for lawyers, audits for accountants, events for artists, renovations for contractors.
+
+## For others, a small but critical part
+
+- A teacher with four classes a day, coaching a national debate team
+- A store manager developing an employee retention programme
+- A sales exec launching daily deals into a new city
+- A public health official organising a Homeless Youth Connect event
+
+. . .
+
+Not a title. A **job requirement**.
+
+## The skill transfers
+
+> It is hard to think of a profession or a career path that would not benefit from being good at managing projects.
 
 Project management fundamentals are **universal**.
 
-# 2 · What a project is
+Each person is likely to experience **three to four career changes**.
+
+## And it shows up in the classroom
+
+Twenty years ago: one or two classes, primarily for engineers.
+
+Today: multiple sections — engineers supplemented by marketing, MIS and finance, plus oceanography, health sciences, computer sciences and liberal arts.
+
+Employers are looking for graduates with project management skills.
+
+# LO 1-2 · What a project is
+
+## What do these have in common?
+
+- Millions Watch World Cup Finals
+- Citywide WiFi System Set to Go Live
+- Hospitals Respond to New Healthcare Reforms
+- Apple's New iPhone Hits the Market
+- City Receives Stimulus Funds to Expand Light Rail System
+
+. . .
+
+**All of these events are projects.**
 
 ## The definition
 
-> A temporary endeavour undertaken to create a unique product, service, or result.
+> A **project** is a temporary endeavour undertaken to create a unique product, service, or result.
 
-**Temporary** — a definite beginning and end. Bounded, not brief.
-
-**Unique** — not previously produced in this exact configuration.
+Like most organisational efforts, the major goal is to **satisfy a customer's need**.
 
 ## Five characteristics
 
-| # | Characteristic |
+| # | |
 |---|---|
 | 1 | An established objective |
-| 2 | A defined lifespan — beginning and end |
-| 3 | Usually several departments and professions |
-| 4 | Typically something not done before |
+| 2 | A defined lifespan with a beginning and an end |
+| 3 | Usually several departments and professionals |
+| 4 | Typically something never done before |
 | 5 | Specific time, cost and performance requirements |
 
-## The fifth one is the triple constraint
+## 1 · An established objective
 
-Time · cost · performance.
+A 12-storey apartment complex by January 1.
 
-They impose a level of accountability ordinary work rarely carries.
+Version 2.0 of a software package as quickly as possible.
 
-Balancing the trade-offs among them — while still satisfying the customer — is the job.
+This singular purpose is often **lacking in daily organisational life**, where workers perform repetitive operations each day.
 
-## What a project is not
+## 2 · A defined endpoint
+
+Contrary to the ongoing duties of traditional jobs.
+
+Instead of staying in one job, individuals move **from project to project**, working with different groups of people.
+
+After installing a security system, an IT engineer may be assigned to develop a database for a different client.
+
+## 3 · Combined effort of specialists
+
+Unlike work segmented by functional speciality.
+
+Engineers · financial analysts · marketing professionals · quality control specialists.
+
+Instead of separate offices under separate managers, they **work together under the guidance of a project manager**.
+
+## 4 · Nonroutine, with unique elements
+
+Not either/or — a matter of **degree**.
+
+An electric automobile, or two rovers on Mars: previously unsolved problems and breakthrough technology.
+
+. . .
+
+Even basic construction projects with established routines require some degree of customisation that makes them unique.
+
+## 5 · Time, cost and performance
+
+Projects are evaluated according to **accomplishment, cost and time spent**.
+
+These triple constraints impose a **higher degree of accountability** than is typically found in most jobs.
+
+. . .
+
+And they name the primary function: balancing the trade-offs among time, cost and performance while ultimately satisfying the customer.
+
+## What a project is *not*
 
 | Routine, repetitive | Project |
 |---|---|
-| Taking lecture notes | Writing the term paper |
-| Posting invoices | Standing up a new billing system |
-| Answering supply-chain queries | Building the dashboard they revealed a need for |
-| Running weekly ceremonies | Migrating off the legacy repository |
+| Taking class notes | Writing a term paper |
+| Entering sales receipts | Setting up a sales kiosk for a meeting |
+| Responding to a supply-chain request | Developing a supply-chain information system |
+| Practising scales on the piano | Writing a new piano piece |
+| Routine manufacture of a music player | Designing one that stores 10,000 songs |
 
 ## Why the distinction earns its keep
 
-Resources consumed by daily operations are resources **not spent** on the work that carries the organisation forward.
+Too often resources can be **used up on daily operations**, which may not contribute to the longer-range organisation strategies that require innovative new products.
 
-Organisations that cannot tell the two apart starve the second.
+## Program versus project
 
-## Where the test fails
+> A **program** is a group of related projects designed to accomplish a common goal over an extended period of time.
 
-- **A film production** — temporary and unique, but the studio makes one every year.
-- **A software release train** — each release unique, the cadence operational.
-- **A refinery shutdown** — recurring on a cycle, run as a project every time.
+Each project within a program has a project manager.
+
+The major differences lie in **scale and time span**. Program goals are closely related to broad strategic organisation goals.
+
+# LO 1-3 · The project life cycle
+
+## Predictable changes in effort and focus
+
+Many life-cycle models are unique to an industry or project type.
+
+New software development: definition · design · code · integration/test · maintenance.
+
+A generic cycle has four stages.
+
+## 1 · Defining
+
+Specifications of the project are defined.
+
+Project objectives are established.
+
+Teams are formed.
+
+Major responsibilities are assigned.
+
+## 2 · Planning
+
+The level of effort **increases**.
+
+Plans are developed to determine what the project will entail, when it will be scheduled, whom it will benefit, what quality level should be maintained, and what the budget will be.
+
+## 3 · Executing
+
+A major portion of the project work — **physical and mental**.
+
+The physical product is produced: a bridge, a report, a software program.
 
 . . .
 
-"Project vs. operation" is a decision about **which toolkit to apply** — not a fact about the world.
+Time, cost and specification measures are used for control. On schedule? On budget? Meeting specifications? What are the forecasts? What revisions are necessary?
 
-## Project · program · portfolio
+## 4 · Closing
 
-| Term | What it is |
-|---|---|
-| **Project** | A temporary endeavour producing a unique output |
-| **Program** | Related projects pursuing a common goal over an extended period |
-| **Portfolio** | The set of projects and programs the organisation funds |
+Three activities:
 
-. . .
+1. **Delivering** the project product to the customer — customer training, transferring documents
+2. **Redeploying** project resources — releasing equipment and materials, finding new assignments for team members
+3. **Post-project review** — assessing performance *and* capturing lessons learned
 
-No dependencies between the components? It is a portfolio, and somebody chose a more impressive word.
+## What each stage produces
 
-# 3 · The project life cycle
+| Defining | Planning | Executing | Closing |
+|---|---|---|---|
+| Goals | Schedules | Status reports | Train customer |
+| Specifications | Budgets | Changes | Transfer documents |
+| Tasks | Resources | Quality | Release resources |
+| Responsibilities | Risks | Forecasts | Evaluation |
+| | Staffing | | Lessons learned |
 
-## Four stages
+## The project manager
 
-| Stage | What comes out |
-|---|---|
-| **Defining** | Goals, specifications, tasks, responsibilities |
-| **Planning** | Schedules, budgets, resources, risks, staffing |
-| **Executing** | Status reports, changes, quality, forecasts |
-| **Closing** | Training, documents, released resources, lessons learned |
+Project managers are often **stars in their organisation and well compensated**.
 
-## Effort is not evenly distributed
+They develop, or are given, a **project charter** or scope statement defining the objectives and parameters of the project.
 
-Executing dominates the effort curve.
+They work with others to create a schedule and budget that guide execution — and must understand project priorities so they can make independent decisions.
 
-Defining is short and cheap — **and is where the leverage is**.
-
-. . .
-
-The two stages most often skipped are defining and closing. Both are cheap. Both are where the money is made or lost.
-
-## Closing is a real stage
-
-Three activities, not one:
-
-1. **Deliver** to the customer — training, transferred documents
-2. **Redeploy** — equipment and people have to land somewhere
-3. **Review** — assess performance *and* capture lessons
-
-Skip the review and the organisation relearns the lesson at full price.
-
-# 4 · When planning stops working
+# LO 1-4 · Agile project management
 
 ## Traditional PM assumes predictability
 
-An engineer building a bridge draws on proven technology and established design principles.
+Traditional project management focuses on **thorough planning up front**.
 
-**What** is to be accomplished and **how** are both well understood.
+Planning requires predictability. Managers must understand what is to be accomplished and how to do it.
 
-Not all projects enjoy that.
-
-## Uncertainty has two axes
-
-**Scope (what)** — how well is it known and stable?
-
-**Technology (how)** — how proven is it?
+Building a bridge, engineers draw upon proven technology and design principles.
 
 . . .
 
-Predictable → unpredictable → unknown. The further out you sit, the worse a fixed up-front plan performs.
+**Not all projects enjoy such predictability.**
+
+## Project uncertainty
+
+Uncertainty varies according to two things:
+
+- The extent the project **scope (What)** is known and stable
+- The extent the **technology (How)** is known and proven
+
+. . .
+
+Predictable → unpredictable → unknown.
+
+## Where planning works
+
+Bridges · product extensions · events · marketing campaigns.
+
+Well-established scopes, proven technology — which provides predictability for effective planning.
+
+. . .
+
+When scope and/or technology is not fully known, **plan-driven methods suffer**.
 
 ## The cost of ignoring it
 
-**$81 billion** — US spend on cancelled software projects, 1995 *(Standish Group)*
+**$81 billion** — spent by American firms and agencies on cancelled software projects, 1995 *(Standish Group)*
 
-**> $2 trillion** — cost of poor software quality in the US, 2020 *(Krasner, 2022)*
-
-::: {.aside}
-The first figure is historical. The problem is not.
-:::
+**> $2 trillion** — cost of poor software quality in the U.S., 2021, from unsuccessful projects, software failure, and inferior quality legacy systems *(Krasner, 2022)*
 
 ## Rolling wave
 
-An incremental, iterative process. Iterations of **one to four weeks**.
+An incremental, iterative process.
 
-Each makes tangible progress — a requirement settled, a technical problem solved, a feature demonstrated — then is reviewed and feeds the next.
+Instead of planning everything up front, **the scope evolves**. The final design and outcome is not known in great detail, and is continuously developed through incremental iterations — *waves*.
 
-Each iteration **subsumes** the work of the last.
+Iterations typically last **one to four weeks**.
+
+## Each iteration
+
+Makes tangible progress — defining a key requirement, solving a technical problem, creating features to demonstrate to the customer.
+
+At the end, progress is reviewed, adjustments are made, a new cycle begins.
+
+. . .
+
+Each new iteration **subsumes** the work of the previous ones until the project is complete and the customer satisfied.
 
 ## Agile in one line
 
-Active collaboration with customer representatives · small functional pieces · adapting to changing requirements.
+Active collaboration between the project team and customer representatives · breaking projects into small functional pieces · adapting to changing requirements.
 
-Works best in **small teams of four to eight**.
+**Agile works best in small teams of four to eight members.**
 
-## It is not either/or
+## Not simply either/or
 
-Agile up front to establish specifications and requirements.
+Agile up front in the **defining phase** to establish specifications and requirements.
 
-Traditional to plan, execute and close.
+Traditional methods to plan, execute and close.
+
+Agile also used to address certain technical issues while most of the work is managed traditionally.
 
 . . .
 
-**Hybrid project management** — and it is the common case in practice, not a compromise.
+**Hybrid project management** is the name for this blending.
 
-# 5 · What is driving demand
+# Forces driving demand
 
 ## Compression of the product life cycle
 
-High-tech product life cycles now average **six months to three years**. Thirty years ago, ten to fifteen years was unremarkable.
+High-tech product life cycles now average **six months to three years**. Only 30 years ago, 10 to 15 years was not uncommon.
 
 . . .
 
-A **six-month delay** in a high-tech product can cost **a third** of its potential revenue share.
+Rule of thumb: a **six-month project delay can cost 33 percent of product revenue share**.
+
+Speed becomes a competitive advantage.
 
 ## Knowledge explosion
 
-Building a road thirty years ago was comparatively simple.
+Building a road 30 years ago was somewhat simple.
 
-Today: materials, specifications, codes, aesthetics, equipment, specialists.
+Today: materials, specifications, codes, aesthetics, equipment, required specialists — every area more complex.
 
-Hard to find a new product without a microchip. Increasingly hard to find one without AI.
-
-**Integration is the problem. Project management is the discipline that does it.**
-
-## Triple bottom line
-
-Planet · people · profit.
-
-Sustainability moved from public relations to a **design constraint** — it shows up in project objectives and techniques.
-
-On construction projects, LEED certification is now routinely an objective in its own right.
-
-## Small projects, big problems
-
-Small projects carry the **same or more risk** than large ones.
-
-Because each inefficiency is small and unmeasured, it is invisible.
-
-In aggregate the losses are substantial — and sit outside the accounting system.
+Hard to find a new product without at least one microchip. The same is likely true for AI.
 
 . . .
 
-The problem is organisational: prioritising across a portfolio. That is Week 2.
+**Project management has emerged as the key discipline for integrating divergent technologies.**
 
-# 6 · The socio-technical dimension
+## Triple bottom line
 
-## Two dimensions, different in kind
+**Planet · people · profit.**
+
+Businesses can no longer simply focus on maximising profit to the detriment of the environment and society.
+
+Reducing carbon imprints and using renewable resources are realised through effective project management — a high **LEED certification** is often an objective in its own right.
+
+## Small projects, big problems
+
+Hundreds of projects implemented concurrently — a **multiproject environment**.
+
+Sharing and prioritising resources across a portfolio is a major challenge for senior management.
+
+## Why small projects hide
+
+- They carry the **same or more risk** as large projects
+- They are perceived as low-impact — they don't demand scarce resources or money
+- Because so many run concurrently and each impact seems small, **measuring inefficiency is usually nonexistent**
+- They soon add up to large sums; customers and millions of dollars are lost each year
+
+. . .
+
+**Hidden costs not measured in the accounting system.**
+
+# LO 1-5 · Two dimensions
+
+## Managing projects is multidimensional
 
 | Technical | Sociocultural |
 |---|---|
 | Scope · WBS | Leadership |
 | Schedules | Problem solving |
-| Resource allocation | Teamwork · negotiation |
-| Baseline budgets | Politics |
+| Resource allocation | Teamwork |
+| Baseline budgets | Negotiation · politics |
 | Status reports | Customer expectations |
 
-## The technical dimension is the orderly one
+## The technical dimension
 
-Scope statements link the project to the customer.
+Project management **methodology**: planning, scheduling, controlling.
 
-The WBS is the **database** connecting every level of the organisation to every deliverable, down to the tasks in a work package.
+Scope statements link the project and customer, and facilitate planning and control.
 
-Integrated linkages mean any change is documented and **traceable to its source**.
+. . .
 
-## The sociocultural dimension is not orderly
+The **WBS serves as a database** linking all levels of the organisation, major deliverables, and all work — right down to the tasks in a work package.
 
-Messy, often contradictory, paradoxical.
+Any change in one part is **traceable to the source** by the integrated linkages of the system.
 
-Shape a culture that sustains teamwork and motivation · spot problems before they threaten the work · steer back when — not if — things depart from plan.
+## The sociocultural dimension
 
-Build a cooperative network among stakeholders with genuinely **different standards, commitments and perspectives**.
+In contrast to the orderly world of planning: the **messier, often contradictory and paradoxical world of implementation**.
 
-## Master both
+Shape a culture that stimulates teamwork and motivation, and can quickly identify and resolve problems that threaten the work.
 
-Competence in one does not compensate for weakness in the other.
+. . .
 
-The failure modes look nothing alike.
+**Things rarely go as planned.** Steer back on track, or alter direction when necessary.
 
-# 7 · Where generative AI enters
+## The social network
+
+Build a **cooperative social network** among an often divergent set of stakeholders with different standards, commitments and perspectives.
+
+. . .
+
+To be successful, a manager must be a **master of both**.
+
+Plan and budget projects — *and* orchestrate the contributions of others.
+
+# PMI's 50 most influential projects
+
+## 1969–2019
+
+- World Wide Web
+- Apollo 11
+- Intel 4004
+- Euro
+- **Human Genome Project** — for rising above usual silos and unlocking the building block of humanity, enabling unparalleled innovation in medicine and life sciences
+
+# Generative AI
+
+## Capabilities claimed
+
+Enhanced project decision making · automation · innovative solutions · creativity of content · business and data modeling · personalized communication · enhanced stakeholder collaboration · scenario planning · training · continuous learning resource optimization · ethical considerations · new opportunities in the augmented workforce era
+
+::: {.aside}
+New applications and plugins are being developed every day.
+:::
 
 ## Across the process groups
 
 | Group | Applied to |
 |---|---|
-| **Initiating** | Idea generation · stakeholder content · requirements |
-| **Planning** | Plan drafting · risk scenarios · scenario planning |
-| **Executing** | Content · code generation · dynamic reporting |
+| **Initiating** | Idea generation · stakeholder content · requirement gathering |
+| **Planning** | Plan drafting · risk scenario modeling · scenario planning |
+| **Executing** | Content creation · code generation · dynamic reporting |
 | **Monitoring** | Risk narratives · feedback loops · predictive models |
 | **Closing** | Automated summary reports |
 
@@ -286,13 +476,35 @@ A generated artefact is a claim, not a result.
 
 . . .
 
-A model produces a plausible, well-formatted WBS in nine seconds and quietly omits a stakeholder — because it does not know who is in your room.
+A model produces a plausible, well-formatted WBS in seconds and quietly omits a stakeholder — because it does not know who is in your room.
 
 ## The rule for this course
 
 **The check is graded, not the output.**
 
-Generate the artifact with a model — then write the code that checks it.
+# Tuesday · A Day in the Life
+
+## Troi's day
+
+10 min catching up with a fellow PM · 2 voicemails, 16 emails, 10 Slack posts · 25 min on reports, interrupted for 20 · a status meeting starting 15 min late · 30 min with another PM sharing personnel
+
+. . .
+
+20 min of complaints downstairs — which surface that the client is requesting **features not in the original scope statement**
+
+## The afternoon
+
+30 min with her counterpart at the client firm · lunch and internal politics · 30 min meditating by the creek · 30 min with purchasing to pull equipment delivery forward
+
+. . .
+
+Then the call back: her own firm's **marketing rep had promised features** the system would provide. 40 minutes in marketing, heated.
+
+## The questions
+
+> How effectively do you think Troi spent her day?
+
+> What does the case tell you about what it is like to be a project manager?
 
 # Next
 
@@ -302,5 +514,8 @@ Generate the artifact with a model — then write the code that checks it.
 - Studio: [Lab 1](../labs/lab-01.qmd)
 - Reading: Larson Ch. 1
 
-**Tuesday:** The Farmers Market Pavilion.
 **Thursday:** set up your toolchain and classify what you are managing.
+
+::: {.aside}
+Chapter 2 takes up how organisations evaluate and select projects.
+:::

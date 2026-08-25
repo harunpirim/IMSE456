@@ -79,11 +79,12 @@ Consequences that bite:
 
 ## Directories that are not part of the site
 
-- `recording/` — iA Presenter markdown for the recorded modules. One file is both deck and
-  script: `---` starts a slide, tab-indented lines appear on screen, un-indented paragraphs are
-  spoken text. Not `.qmd`, not in the `render:` list, so Quarto ignores it.
 - `private/` — **gitignored and excluded from `_build`.** Holds the live-session decks with case
-  answers in them. Nothing here may ever be committed or published.
+  answers in them, and `private/teaching/week-NN.md`, the teaching plans. Nothing here may ever be
+  committed or published.
+- `raw_notes/` — gitignored, along with `*.pdf`. Source material a week is written *from*
+  (marked-up chapter scans and the like) stays out of the repository; only the notes written from
+  it are committed.
 
 ## Front matter contract
 
