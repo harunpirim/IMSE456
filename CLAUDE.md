@@ -79,11 +79,30 @@ Consequences that bite:
 
 ## Directories that are not part of the site
 
-- `recording/` — iA Presenter markdown for the recorded modules. One file is both deck and
-  script: `---` starts a slide, tab-indented lines appear on screen, un-indented paragraphs are
-  spoken text. Not `.qmd`, not in the `render:` list, so Quarto ignores it.
 - `private/` — **gitignored and excluded from `_build`.** Holds the live-session decks with case
-  answers in them. Nothing here may ever be committed or published.
+  answers in them, and `private/teaching/week-NN.md`, the teaching plans. Nothing here may ever be
+  committed or published.
+- `raw_notes/` — gitignored, along with `*.pdf`. Source material a week is written *from*
+  (marked-up chapter scans and the like) stays out of the repository; only the notes written from
+  it are committed.
+
+## Current state of the content — read this before assuming a week exists
+
+**Only Week 1 has a body.** Weeks 2–16 are deliberately reduced to a skeleton: front matter, the
+`.week-meta` block, and the `<!-- VIDEO -->` marker, and nothing else. `labs/` and `slides/` hold
+only `lab-01.qmd` and `week-01.qmd`.
+
+Each week is written from its own marked-up chapter (dropped into the gitignored `raw_notes/`)
+shortly before it opens, following the Week 1 pattern: notes, deck and studio produced as one set.
+
+The skeleton exists because `write_schedule()` builds the schedule table from every week's front
+matter — so all sixteen rows keep showing week number, dates, title and chapter, and students keep
+the map of the semester, while the Resources column stays empty until the pieces exist. Do not
+delete those files, and do not "helpfully" fill them in.
+
+`slides:`/`lab:` still read `true` on weeks whose deck and studio have not been written yet. Those
+keys are documentation of intent, not wiring — nothing reads them, and the schedule's Resources
+column tests for the file on disk.
 
 ## Front matter contract
 

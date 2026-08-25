@@ -21,61 +21,8 @@ lab: true
 <dt>Tuesday</dt><dd>The lessons-learned document nobody read — concept and case</dd>
 <dt>Thursday</dt><dd>Mine your own history, and close properly</dd>
 <dt>Reading</dt><dd>Larson Ch. 14 + 16</dd>
-<dt>Due</dt><dd>SA14 · Sun 6 Dec</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
-
-## Concepts introduced
-
-::: {.chips}
-<span class="chip">normal, premature, perpetual, failed and changed-priority closure</span><span class="chip">wrap-up activities</span><span class="chip">the close-out report</span><span class="chip">post-implementation evaluation</span><span class="chip">360-degree review</span><span class="chip">retrospectives</span><span class="chip">why lessons learned are rarely learned</span><span class="chip">archiving</span><span class="chip">legal-political, security, geographic, economic, infrastructure and cultural factors</span><span class="chip">site selection</span><span class="chip">Hofstede — uses and misuses</span><span class="chip">culture shock</span><span class="chip">selection and training</span>
-:::
-
-## Tuesday — The lessons-learned document nobody read
-
-::: {.case}
-Forty archived reports, and the one practice that finally made the forty-first change what the next team did.
-
-::: {.qn}
-Your organization has forty lessons-learned reports. Name the mechanism that would make the forty-first useful. "Write it better" is not a mechanism.
-:::
-:::
-
-## Thursday studio
-
-::: {.studio}
-#### Mine your own history, and close properly
-
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
-
-**[Open the Week 15 lab sheet](../labs/lab-15.qmd)** · [slides](../slides/week-15.qmd)
-:::
-
-## Lecture notes
-
-::: {.callout-note}
-The synthesis material below — the eight-step protocol for diagnosing a failing project — is the analytical spine of this week and of the final report. Extended notes specific to Larson Ch. 14 (closure mechanics) and Ch. 16 (international projects) are in preparation; the concepts list above and the reading are the assessable material for those.
-:::
-
-### Diagnosing a failing project — synthesis
-
-### Structure
-
-No new content. A single extended case, presented in stages, with you making decisions before seeing what happened next.
-
-**Suggested cases** (all well documented, all with published post-mortems): Denver International Airport baggage system; the UK NHS National Programme for IT; Boeing 787 outsourcing; Berlin Brandenburg Airport; Healthcare.gov; a university ERP implementation.
-
-**The diagnostic protocol you should be able to run by now:**
-
-1. **What was the success definition, and whose?** (Week 1)
-2. **Was scope baselined, and was change controlled?** (Week 4)
-3. **What did the schedule model assume, and was it ever true?** (Weeks 5–6)
-4. **What did the cost data say, and when did it first say it?** (Weeks 7–8)
-5. **Which risks were identified but unowned? Which bias is visible in the original estimate?** (Week 9)
-6. **Was the delivery approach fit for the requirement volatility?** (Weeks 10–11)
-7. **Where was top management, and what did they actually provide?** (Week 12)
-8. **Rank interventions by evidence strength, not by convention.**
-
-Step 8 is the assessment. A student who proposes "better communication" without evidence has not passed; a student who proposes "resource the sponsor's commitment or cancel" and cites Young & Poon has.

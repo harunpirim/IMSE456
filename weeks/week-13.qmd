@@ -21,91 +21,9 @@ lab: true
 <dt>Tuesday</dt><dd>The sponsor who said yes — concept and case</dd>
 <dt>Thursday</dt><dd>Map the network you are actually working in</dd>
 <dt>Reading</dt><dd>Larson Ch. 10 + 11</dd>
-<dt>Due</dt><dd>CA8 (Ch 10–12, 15) · SA12 · <strong>FP3</strong> Fri 20 Nov</dd>
+<dt>Due</dt><dd>CA8 (Ch 10–12, 15) · <strong>FP3</strong> Fri 20 Nov</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
-
-## Concepts introduced
-
-::: {.chips}
-<span class="chip">managing versus leading</span><span class="chip">mapping stakeholder dependencies</span><span class="chip">influence as exchange and its currencies</span><span class="chip">social network building</span><span class="chip">management by wandering around</span><span class="chip">managing upward</span><span class="chip">building trust</span><span class="chip">the five-stage team model</span><span class="chip">team norms</span><span class="chip">functional versus dysfunctional conflict</span><span class="chip">virtual teams</span><span class="chip">groupthink, bureaucratic bypass, entrepreneur's disease, team infatuation, going native</span>
-:::
-
-## Tuesday — The sponsor who said yes
-
-::: {.case}
-Enthusiastic verbal support in every meeting, and a quiet refusal to reassign the one engineer the project depends on.
-
-::: {.qn}
-That is a specific kind of support. Name it — and say what you do on Monday morning.
-:::
-:::
-
-## Thursday studio
-
-::: {.studio}
-#### Map the network you are actually working in
-
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
-
-**[Open the Week 13 lab sheet](../labs/lab-13.qmd)** · [slides](../slides/week-13.qmd)
-:::
-
-## Lecture notes
-
-### Learning objectives
-
-- Perform a stakeholder analysis and build an engagement strategy differentiated by stakeholder position.
-- State the evidence on top-management support and explain why it outranks methodology.
-- Describe the project manager's authority problem and the structures that resolve it.
-
-### Core content
-
-**Lead with the strongest finding in the field.** Young & Jordan (2008) provide evidence that **top management support is the most important critical success factor — not simply one among many**, and that conventional technical and project-management advice has less impact on project success than previously assumed. Young & Poon (2013, *IJPM*) replicated with fuzzy-set QCA across 15 cases: top management support was **much more necessary than any other success factor, and sometimes sufficient**. Their conclusion is deliberately provocative — that emphasis on project methodologies "may be misdirecting effort."
-
-Zwikael (2008, *IJMPB*, 700 project managers and their supervisors across seven industries and three countries) confirms the correlation and, more usefully, decomposes *which* support practices matter by industry. Ahmed et al. (2014, *Quality & Quantity*, n = 208) found the **"provide resources"** and **"power"** dimensions carry the significant effect — support that is verbal but not resourced does nothing.
-
-The honest caveat: much of this literature is cross-sectional and self-reported, and "top management support" is partly endogenous — executives support projects that look like they'll succeed. Ask yourself how you would design a study to break that endogeneity.
-
-**Stakeholder analysis.** Power/interest grid (manage closely / keep satisfied / keep informed / monitor); salience model (power, legitimacy, urgency). Blaskovics et al. (2026, *SSHO*, LASSO regression on **3,153 projects** from 70 Hungarian companies) rank the top CSFs as: project manager competence and experience, precise definition of user requirements, effective stakeholder management, continuous monitoring and control, and a well-prepared coordinated team.
-
-**Organizational structure and the PM's authority problem.**
-
-| Structure | PM authority | Resource control | Failure mode |
-|---|---|---|---|
-| Functional | Little to none | Functional manager | PM is a coordinator with no leverage |
-| Weak matrix | Limited | Functional manager | Responsibility without authority |
-| Balanced matrix | Moderate | Shared | Two bosses, ambiguous escalation |
-| Strong matrix | Moderate–high | PM | Functional skill erosion |
-| Projectized | High | PM | Resource inefficiency between projects |
-
-The teaching point: most PM advice implicitly assumes a strong matrix. In a functional organization, the same advice is malpractice — the PM's actual job there is influence and coalition-building, not control.
-
-**Team development.** Tuckman (forming/storming/norming/performing/adjourning) is memorable and empirically weak — say so, and use it as a vocabulary rather than a model. Stronger ground: Brooks's Law (adding people to a late software project makes it later) has a clear mechanism — communication paths grow as n(n−1)/2 and ramp-up consumes existing staff.
-
-**Closure.** Administrative closure, contract closure, lessons learned, benefits realization. The uncomfortable fact worth stating: most organizations run lessons-learned sessions and almost none feed them into the next project's estimates. **The estimate is where a lesson becomes real.** Everything else is a document.
-
-::: {.tutor}
-### Tutor check — one question at a time, no lecturing
-
-1. If top management support is the dominant success factor, what is the rational allocation of a new PM's first week?
-2. Your sponsor says "you have my full support" and declines to reassign a key engineer. What kind of support is that?
-3. You're in a weak matrix and a functional manager pulls your best developer. What are your actual options?
-4. Where does a lesson learned have to land to change anything?
-:::
-
-::: {.editor}
-### Editor challenge — attack this claim
-
-> "Project success depends primarily on the competence of the project manager."
-
-Attack with Young & Jordan directly: the evidence points above the PM. But then attack *that* — the studies are cross-sectional, self-reported, and mostly IS/IT; Blaskovics's 3,153-project LASSO puts PM competence first. Identify the actual disagreement (unit of analysis, project type, and how "support" was operationalized) rather than picking a side.
-:::
-
-::: {.roommate}
-### Roommate link
-
-**A film director's relationship with a studio.** The director has enormous creative authority and almost no financial authority. Films die because the studio stopped believing in them, not because the director lost competence. Ask what a director does about that — and notice that the answer is politics, relationships, and early visible wins, which is exactly what the CSF literature keeps finding.
-:::

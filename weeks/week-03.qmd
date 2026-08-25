@@ -21,40 +21,9 @@ lab: true
 <dt>Tuesday</dt><dd>Two managers, one engineer — concept and case</dd>
 <dt>Thursday</dt><dd>Instantiate a structure and watch it constrain you</dd>
 <dt>Reading</dt><dd>Larson Ch. 3</dd>
-<dt>Due</dt><dd>FP0 partner confirmed · Fri 11 Sep · SA3 · Sun 13 Sep</dd>
+<dt>Due</dt><dd>FP0 partner confirmed · Fri 11 Sep</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
-
-## Concepts introduced
-
-::: {.chips}
-<span class="chip">functional organization</span><span class="chip">dedicated project teams</span><span class="chip">matrix — weak, balanced, strong</span><span class="chip">network and virtual organizations</span><span class="chip">choosing a structure</span><span class="chip">the ten characteristics of culture</span><span class="chip">the structure–culture interaction</span>
-:::
-
-## Tuesday — Two managers, one engineer
-
-::: {.case}
-A balanced matrix in which a shared engineer is committed one hundred percent to two projects by two managers, each of whom has been told their project is the priority.
-
-::: {.qn}
-Nobody in this case did anything wrong. Name the structural feature that produced the failure — then say which structure would have prevented it, and what that structure costs.
-:::
-:::
-
-## Thursday studio
-
-::: {.studio}
-#### Instantiate a structure and watch it constrain you
-
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
-
-**[Open the Week 3 lab sheet](../labs/lab-03.qmd)**
-:::
-
-## Lecture notes
-
-::: {.callout-note}
-Extended notes for this chapter are in preparation. The concepts above, the reading, and the studio are the assessable material for this week; the midterm and the conceptual assignments are drawn from them.
-:::

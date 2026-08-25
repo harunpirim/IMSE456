@@ -1,5 +1,5 @@
 ---
-title: "Studio 1 · Set up your toolchain, and classify what you are managing"
+title: "Studio 1 · Answer Chapter 1 with a model, then check its work"
 subtitle: "Week 1 — Modern Project Management · Larson Ch. 1"
 week: 1
 release: "2026-08-25"
@@ -7,104 +7,124 @@ release: "2026-08-25"
 
 ::: {.week-meta}
 <dl>
-<dt>Deliverable</dt><dd><strong>SA1</strong> — your Taiga sandbox URL, your <code>.pod</code>, the classification table, the paragraph</dd>
-<dt>Due</dt><dd>SA1 · Sun 30 Aug</dd>
-<dt>Tools</dt><dd>Taiga · ProjectLibre · Gemini</dd>
+<dt>Deliverable</dt><dd><strong>SA1</strong> — a <strong>one-page report</strong>, plus the AI acknowledgement</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
+<dt>Tools</dt><dd>Gemini (or the assistant you have access to)</dd>
 <dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-01.qmd">Week 1 — Modern Project Management</a></dd>
 </dl>
 :::
 
 ::: {.callout-important appearance="simple"}
-**This is individual work.** Every student submits their own. The final project is where you work
-in a team; the studio is where the mechanics get into your own hands.
+**This is individual work.** Everyone produces their own page. The final project is where you work
+in a team; the studio is where the thinking gets into your own hands.
 :::
 
-The session runs to a fixed clock: **Classify** 25 minutes, **Tool** 20, **Reconcile** 15, **peer
-check** 5. The move from Classify to Tool is called at minute 30 whether or not you finished — an
-unfinished classification is a legitimate finding, reported as one.
+The session runs to a fixed clock: **Answer** 20 minutes, **Generate** 20, **Reconcile** 25, **peer
+check** 10. The move from Answer to Generate is called at minute 20 whether or not you finished — an
+unfinished answer is a legitimate finding, and you will report it as one.
 
 ::: {.part}
 ### Part 1 · Before you arrive
 
-Accounts and one install. Do this before Thursday, not during it.
+Accounts and installs. Do these before Thursday, not during it. Nothing here is graded, and nothing
+here is part of SA1 — but Week 3 and Week 4 assume it is already done.
 
-1. Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`.
-2. Install [ProjectLibre](https://www.projectlibre.com/) and open it once to confirm it launches. If it fails on your machine it fails *today*, not in Week 4 — [GanttProject](https://www.ganttproject.biz/) is the sanctioned fallback and costs you nothing.
-3. Create the cloud folder you will use all semester — Google Drive or OneDrive, named `IMSE456`. **Everything in this course is saved there, never to a local disk.**
-4. Claim your AI access: register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible. If you are not, the free Gemini tier is sufficient for every studio in this course — say so in your submission so it is on record.
-5. Open the access form linked on Blackboard and answer both questions: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
+1. Claim your AI access: register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible. If you are not, the free tier is sufficient for every studio in this course — say so on your page so it is on record.
+2. Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`. You will use it from Week 3.
+3. Install [ProjectLibre](https://www.projectlibre.com/) and open it once to confirm it launches. If it fails on your machine it fails *today*, not in Week 4 — [GanttProject](https://www.ganttproject.biz/) is the sanctioned fallback and costs you nothing.
+4. Create the cloud folder you will use all semester — Google Drive or OneDrive, named `IMSE456`. **Everything in this course is saved there, never to a local disk.**
+5. Open the access form linked on Blackboard: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
 :::
 
 ::: {.part}
-### Part 2 · What you will have at the end
+### Part 2 · What you leave with
 
-SA1 — your Taiga sandbox URL, your `.pod` file, the classification table for six initiatives, and
-one paragraph naming a specific field.
+**SA1 — one page.** Not two. The five review questions from the week page answered in your own
+words, a record of where the model helped and where it was wrong, and the acknowledgement block.
+
+The page limit is the exercise. Anyone can generate four pages in nine seconds.
 :::
 
 ::: {.part}
-### Part 3 · Classify it yourself — 25 minutes
+### Part 3 · Answer first, unaided — 20 minutes
 
-**You go first. The model goes second.** That order is the point of the exercise, and reversing it
-costs you the only data the studio generates.
+**You go first. The model goes second.** That order is the whole point, and reversing it destroys
+the only data this studio produces.
 
-1. Pick a campus organization you actually know — a club, a lab, a team, an employer.
-2. Write down **six** things it is currently doing or could do in the next year. Real ones.
-3. Classify each as **project**, **operation**, or **hybrid** using the temporary-and-unique test. Write one sentence of justification for every one. No exceptions, including the obvious ones.
-4. *Now* ask Gemini to generate six candidate initiatives for the same organization, and to classify them the same way.
-5. Build the table: your six with your classifications, the model's six with its classifications. Mark every item where you and the model would disagree, and every model classification you judge **wrong**.
+Open the [five review questions](../weeks/week-01.qmd#review-questions) on the week page. Close
+every other tab.
 
-The disagreements are the deliverable. A table with no disagreements means one of you was not
-paying attention, and it was probably not the model.
+1. Answer **all five** from the reading and the Tuesday session. Rough notes are fine — full
+   sentences are not required yet.
+2. Where you are unsure, write **"unsure"** and move on. Do not guess to fill the space.
+3. Where you cannot answer at all, write **"no answer"**.
+
+Those two marks are the most valuable thing on the page at minute 20. Keep this draft — you are
+going to compare against it, and you cannot reconstruct it afterwards.
 :::
 
 ::: {.part}
-### Part 4 · Now the professional tools — 20 minutes
+### Part 4 · Now bring the model in — 20 minutes
 
-1. Take the three items you classified as **projects**. Enter them into your Taiga sandbox as epics.
-2. Enter the same three into ProjectLibre as summary tasks with placeholder durations. Save as `SA1_yourlastname.pod`.
-3. Write down what each tool **forced** you to state that the other did not. Be specific — name the field, not the feeling.
+1. Give the model the same five questions. Ask for its answers.
+2. For **every** question — including the ones you were confident about — ask it one follow-up that
+   pushes on something specific: *"which of the five characteristics does that example actually
+   fail?"*, *"give me a counter-example"*, *"what would change your answer?"*
+3. Pick **one exercise** from the week page and work it with the model's help.
+4. Keep the transcript, or the link to it. You need it for the acknowledgement.
+
+Ask it for its sources on any factual claim — a number, a date, a study. Then check one of them
+against the chapter. Note what you find, whichever way it goes.
 :::
 
 ::: {.part}
-### Part 5 · Where do they disagree? — 15 minutes
+### Part 5 · Reconcile, and write the page — 25 minutes
 
-Which tool made you commit to something you did not yet know?
+This is the graded part. Everything before it was raw material.
 
-One paragraph, naming the **specific field**. "ProjectLibre wanted a duration" is the beginning of
-an answer; "ProjectLibre would not let me save a task without a duration, so I invented three days
-for something I have never done" is the answer.
+For each of the five questions, decide what you now believe and **write that** — your answer, not
+the model's, and not a merge of the two performed without deciding.
 
-**This is the graded part** — it is the only thing here a machine cannot check for you.
+Then account for the difference. On the page, name:
+
+- **At least one place the model was wrong**, incomplete, or confidently vague. Say what was wrong
+  with it. "It was generic" is not specific enough; "it defined a program as any set of projects and
+  dropped the common-goal requirement, which is what separates a program from a portfolio" is.
+- **At least one place it changed your mind**, and what specifically moved you.
+- **Every question you marked "unsure" at minute 20** — say whether you are still unsure, and if
+  not, what resolved it.
+
+If the model was right about everything, you did not push hard enough in Part 4, and you should say
+so on the page rather than pretend otherwise. That is a legitimate finding and it is graded as one.
 :::
 
 ::: {.part}
-### Part 6 · Done looks like — the checklist your neighbour runs on you at minute 70
+### Part 6 · Done looks like — the checklist your neighbour runs on you at minute 65
 
-- [ ] Taiga account created and the sandbox project exists, with three epics in it
-- [ ] ProjectLibre opens on your machine, or you have reported the failure and used GanttProject
-- [ ] AI access claimed, or reported
-- [ ] six items classified by you, each with a written justification
-- [ ] the model's six classified too, with disagreements marked
-- [ ] the paragraph names a specific field
+- [ ] one page, and genuinely one page
+- [ ] all five review questions answered in your own words
+- [ ] one exercise worked
+- [ ] at least one specific model error named, with what was wrong with it
+- [ ] at least one place the model changed your mind
+- [ ] every minute-20 "unsure" accounted for
+- [ ] the AI acknowledgement block, with tool and transcript link
 :::
 
 ::: {.part}
 ### Part 7 · Where it is saved
 
-`IMSE456/studio-01/` in your cloud folder. Name files `SA1_yourlastname.*`.
+`IMSE456/studio-01/` in your cloud folder. Name the file `SA1_yourlastname.pdf`.
 
 **Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
-left at home. Submit the PDF to Blackboard by the due date above.
+left at home. Your page is read in the session itself — there is no separate submission afterwards.
 :::
 
 ::: {.browser-path}
-**Working on lab machines?**
+**Working on a lab machine, or without your own device?**
 
-**No ProjectLibre?** Do the *Tool* half in Smartsheet instead — indented WBS, Gantt, predecessors
-and critical path all work in a browser. Export to PDF in place of the `.pod`. Say so in your
-submission; it costs you nothing.
+Everything in this studio runs in a browser. Write the page in Google Docs or Word Online and export
+to PDF at the end. No install is needed for SA1 — the installs in Part 1 are for later weeks.
 :::
 
 ## Study loop for this week
@@ -113,10 +133,10 @@ Run this before you read the notes, and again after. It is not graded; it is the
 out what you have wrong.
 
 ```text
-Be my tutor on what "project success" means and why it's contested. Ask me
-one question at a time. Don't lecture. Start by making me define success,
-then attack my definition. Push until I admit it's multidimensional, then
-make me name the dimensions myself.
+Be my tutor on the difference between a project and an operation. Ask me
+one question at a time. Don't lecture. Start by making me state the test,
+then hand me cases that break it — a film studio, a release train, a
+refinery shutdown — until I stop treating it as a fact about the world.
 ```
 
 See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.

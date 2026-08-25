@@ -21,86 +21,9 @@ lab: true
 <dt>Tuesday</dt><dd>One scope, three numbers — concept and case</dd>
 <dt>Thursday</dt><dd>Three methods, one scope, and a distribution</dd>
 <dt>Reading</dt><dd>Larson Ch. 5</dd>
-<dt>Due</dt><dd>CA3 (Ch 5) · SA5 · Sun 27 Sep</dd>
+<dt>Due</dt><dd>CA3 (Ch 5) · Sun 27 Sep</dd>
+<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
 </dl>
 :::
 
 <!-- VIDEO -->
-
-## Concepts introduced
-
-::: {.chips}
-<span class="chip">factors influencing estimate quality</span><span class="chip">estimating guidelines</span><span class="chip">top-down — consensus, ratio, apportion, function point, learning curve</span><span class="chip">bottom-up — template, parametric, WBS</span><span class="chip">phase estimating</span><span class="chip">level of detail</span><span class="chip">contingency versus padding</span><span class="chip">time and cost databases</span>
-:::
-
-## Tuesday — One scope, three numbers
-
-::: {.case}
-The same building fit-out estimated analogously, parametrically, and bottom-up. The three numbers differ by forty percent and all three estimators are competent.
-
-::: {.qn}
-Accuracy is a function of design maturity, not of estimator effort. If that is true, what is the honest thing to tell a sponsor who wants a number in week one — and what do you attach to it?
-:::
-:::
-
-## Thursday studio
-
-::: {.studio}
-#### Three methods, one scope, and a distribution
-
-Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
-
-**[Open the Week 5 lab sheet](../labs/lab-05.qmd)** · [slides](../slides/week-05.qmd)
-:::
-
-## Lecture notes
-
-### Learning objectives
-
-- Apply analogous, parametric, and bottom-up estimating and state each one's error profile.
-- Build a cost baseline including contingency and management reserve, and place each correctly.
-- Explain estimate ranges as a function of project phase.
-
-### Core content
-
-**Estimating methods.**
-
-| Method | Basis | Typical accuracy | When |
-|---|---|---|---|
-| Analogous (top-down) | Similar past project, scaled | −25% to +75% | Concept phase, minutes of effort |
-| Parametric | Statistical model on a driver (cost/m², cost/function point) | −15% to +30% | When you have a calibrated model |
-| Bottom-up (definitive) | Sum of work packages | −5% to +10% | After a validated WBS; expensive |
-| Three-point | (o + 4m + p)/6 per element | Depends | Layers on any of the above |
-
-The AACE class system (Class 5 → Class 1) is the industry version. The key teaching point is that **estimate accuracy is a function of design maturity, not of estimator effort** — you cannot produce a Class 1 estimate from a Class 5 design no matter how many hours you spend.
-
-**Cost baseline structure — the ordering is where this usually goes wrong:**
-
-```
-Work package cost estimates
-      + activity contingency reserve   → for identified ("known unknown") risks
-      = work package cost baseline
-      + control account rollup
-      = cost baseline                  ← this is what EV is measured against
-      + management reserve             → for unidentified ("unknown unknown") risk
-      = total project budget
-```
-
-Contingency reserve is **inside** the baseline and controlled by the PM. Management reserve is **outside** it and requires sponsor authorization to draw. Confusing the two is the most common exam and practice error.
-
-**Funding limit reconciliation.** Cash availability rarely matches the S-curve; the plan must be reshaped to the funding profile, which is itself a schedule constraint nobody put in the network.
-
-::: {.tutor}
-### Tutor check — one question at a time, no lecturing
-
-1. Your bottom-up estimate is 12% below your parametric estimate. Which do you trust and what do you do?
-2. A risk you identified materializes. Which reserve pays for it, and who approves?
-3. Why can't you produce a ±5% estimate at project initiation, no matter how skilled you are?
-4. What happens to EV metrics if management reserve is accidentally included in the baseline?
-:::
-
-::: {.roommate}
-### Roommate link
-
-**Insurance underwriting.** An underwriter doesn't estimate whether *your* house will burn; they price a portfolio using base rates and hold reserves against the distribution. Contingency reserve is the loss-cost provision; management reserve is capital held against tail events. Ask why project sponsors resist the framing that actuaries take for granted.
-:::
