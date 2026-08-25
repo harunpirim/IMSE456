@@ -11,6 +11,10 @@ release: "2026-08-25"
 
 > All of humankind's greatest accomplishments — from building the great pyramids to discovering a cure for polio to putting a footprint on the moon — began as a project.
 
+::: {.aside}
+Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, Ch. 1
+:::
+
 ## Learning objectives
 
 | | |
@@ -112,6 +116,10 @@ Employers are looking for graduates with project management skills.
 
 # LO 1-2 · What a project is
 
+::: {.aside}
+Following Larson & Gray, Ch. 1
+:::
+
 ## What do these have in common?
 
 - Millions Watch World Cup Finals
@@ -208,6 +216,10 @@ The major differences lie in **scale and time span**. Program goals are closely 
 
 # LO 1-3 · The project life cycle
 
+::: {.aside}
+Following Larson & Gray, Ch. 1
+:::
+
 ## Predictable changes in effort and focus
 
 Many life-cycle models are unique to an industry or project type.
@@ -269,6 +281,10 @@ They develop, or are given, a **project charter** or scope statement defining th
 They work with others to create a schedule and budget that guide execution — and must understand project priorities so they can make independent decisions.
 
 # LO 1-4 · Agile project management
+
+::: {.aside}
+Following Larson & Gray, Ch. 1
+:::
 
 ## Traditional PM assumes predictability
 
@@ -347,6 +363,10 @@ Agile also used to address certain technical issues while most of the work is ma
 
 # Forces driving demand
 
+::: {.aside}
+Following Larson & Gray, Ch. 1
+:::
+
 ## Compression of the product life cycle
 
 High-tech product life cycles now average **six months to three years**. Only 30 years ago, 10 to 15 years was not uncommon.
@@ -396,6 +416,10 @@ Sharing and prioritising resources across a portfolio is a major challenge for s
 
 # LO 1-5 · Two dimensions
 
+::: {.aside}
+Following Larson & Gray, Ch. 1
+:::
+
 ## Managing projects is multidimensional
 
 | Technical | Sociocultural |
@@ -441,6 +465,10 @@ Produce a plan and a budget — *and* orchestrate people you mostly do not contr
 # PMI's 50 most influential projects
 
 ## 1969–2019
+
+::: {.aside}
+Reported in Larson & Gray, Ch. 1; originally PMI
+:::
 
 - World Wide Web
 - Apollo 11
@@ -519,3 +547,11 @@ Then the call back: her own firm's **marketing rep had promised features** the s
 ::: {.aside}
 Chapter 2 takes up how organisations evaluate and select projects.
 :::
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. **Chapter 1** — the source for this week's structure and substance. Exposition reworded; figures redrawn.
+2. The Standish Group (1995). *The CHAOS Report.*
+3. Krasner, H. (2022). *The Cost of Poor Software Quality in the US: A 2022 Report.* CISQ.
+4. Project Management Institute. *PMBOK Guide*, 7th ed.
+5. *AI Driven Project Management* — GenAI capabilities by process group.

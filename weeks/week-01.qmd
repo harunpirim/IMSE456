@@ -28,6 +28,12 @@ lab: true
 <!-- VIDEO -->
 
 > All of humankind's greatest accomplishments — from building the great pyramids to discovering a cure for polio to putting a footprint on the moon — began as a project.
+>
+> — Larson & Gray, Ch. 1 [1]
+
+::: {.callout-note appearance="simple"}
+**Source.** This week's notes follow Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, **Chapter 1** [1]. The exposition is reworded, the structure and substance are the chapter's, and the figures are redrawn from it. Review questions and exercises are reproduced as written. Where a claim comes from elsewhere — the Standish Group, Krasner, PMI — it is cited separately.
+:::
 
 ## Learning objectives
 
@@ -117,6 +123,8 @@ These students are finding that their exposure to project management provides di
 
 # LO 1-2 · What a project is
 
+*Following Larson & Gray, Ch. 1 [1].*
+
 ## Start here
 
 What do the following headlines have in common?
@@ -188,6 +196,8 @@ Each project within a program has a project manager. The major differences lie i
 
 # LO 1-3 · The project life cycle
 
+*Following Larson & Gray, Ch. 1 [1].*
+
 Another way of illustrating the unique nature of project work is in terms of the **project life cycle**. The life cycle recognises that projects have a limited lifespan and that there are predictable changes in the level of effort and focus over the life of the project.
 
 There are a number of different life-cycle models in project management literature. Many are unique to a specific industry or type of project — for example, a new-software development project may consist of five phases: **definition, design, code, integration/test, and maintenance**. A generic cycle has four stages.
@@ -218,7 +228,7 @@ There are a number of different life-cycle models in project management literatu
     <text x="28" y="140" text-anchor="middle" transform="rotate(-90 28 140)">Level of effort</text>
   </g>
 </svg>
-<figcaption>The level of effort rises through planning, peaks during executing, and falls away at closing.</figcaption>
+<figcaption>The level of effort rises through planning, peaks during executing, and falls away at closing.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 1, Figure 1.1 [1].</em></figcaption>
 </figure>
 
 **1 · Defining stage.** Specifications of the project are defined; project objectives are established; teams are formed; major responsibilities are assigned.
@@ -248,6 +258,8 @@ They develop, or are given, a **project charter** or **scope statement** that de
 ---
 
 # LO 1-4 · Agile project management
+
+*Following Larson & Gray, Ch. 1 [1].*
 
 Traditional project management focuses on **thorough planning up front**. Planning requires predictability: for plans to be effective, managers have to have a good understanding of what is to be accomplished and how to do it. When it comes to building a bridge, engineers can draw upon proven technology and design principles to plan and build it.
 
@@ -283,7 +295,7 @@ Project uncertainty varies according to the extent the project **scope** is know
     <text x="18" y="150" text-anchor="middle" transform="rotate(-90 18 150)">Project scope (What) → unknown</text>
   </g>
 </svg>
-<figcaption>Bridges, product extensions, events and marketing campaigns have well-established scopes and use proven technology, which provides predictability for effective planning.</figcaption>
+<figcaption>Bridges, product extensions, events and marketing campaigns have well-established scopes and use proven technology, which provides predictability for effective planning.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 1, Figure 1.2 [1].</em></figcaption>
 </figure>
 
 However, when the project scope and/or technology is not fully known, things become much less predictable and **plan-driven methods suffer**.
@@ -322,7 +334,7 @@ Instead of trying to plan for everything up front, the scope of the project evol
     <text x="24" y="136">Project initiation</text><text x="736" y="136" text-anchor="end">Closeout</text>
   </g>
 </svg>
-<figcaption>The goal of each iteration is to make tangible progress. Each new iteration subsumes the work of the previous iterations until the project is completed and the customer is satisfied.</figcaption>
+<figcaption>The goal of each iteration is to make tangible progress. Each new iteration subsumes the work of the previous iterations until the project is completed and the customer is satisfied.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 1, Figure 1.3 [1].</em></figcaption>
 </figure>
 
 The goal of each iteration is to make tangible progress — defining a key requirement, solving a technical problem, or creating desired features to demonstrate to the customer. At the end of each iteration, progress is reviewed, adjustments are made, and a different iterative cycle begins.
@@ -340,6 +352,8 @@ The internal dynamics on Agile projects is quite different from the traditional 
 ---
 
 # Environmental forces driving demand
+
+*Following Larson & Gray, Ch. 1 [1].*
 
 ## Compression of the product life cycle
 
@@ -387,6 +401,8 @@ In summary, a variety of environmental forces interacting in today's business wo
 
 # LO 1-5 · The technical and sociocultural dimensions
 
+*Following Larson & Gray, Ch. 1 [1].*
+
 Managing projects is a **multidimensional process**.
 
 <figure>
@@ -405,7 +421,7 @@ Managing projects is a **multidimensional process**.
   <text x="310" y="122" font-size="12" font-style="italic" fill="currentColor" text-anchor="middle" opacity="0.85">master</text>
   <text x="310" y="140" font-size="12" font-style="italic" fill="currentColor" text-anchor="middle" opacity="0.85">of both</text>
 </svg>
-<figcaption>Two halves of one job. Strength in either one will not cover for weakness in the other.</figcaption>
+<figcaption>Two halves of one job. Strength in either one will not cover for weakness in the other.<br><em>Figure redrawn from the socio-technical diagram in Larson &amp; Gray, Ch. 1 [1].</em></figcaption>
 </figure>
 
 ## The technical dimension
@@ -435,6 +451,8 @@ Neither half substitutes for the other, and both have to be actively managed. Th
 ---
 
 # PMI's 50 most influential projects, 1969–2019
+
+*Reported in Larson & Gray, Ch. 1 [1]; originally PMI [4].*
 
 Marking its fiftieth anniversary, PMI named the projects it judged most influential over that half-century. Among them:
 
@@ -565,6 +583,8 @@ Now the second half. You cannot cook the dinner party in iterations — the gues
 ---
 
 # Where this sits in the course
+
+*Following Larson & Gray, Ch. 1 [1].*
 
 The next two chapters set the context: how organisations choose which projects to fund (Chapter 2), and the organisational structure and culture a project has to survive inside (Chapter 3).
 
