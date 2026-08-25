@@ -12,3 +12,5 @@ _build/
 private/
 _pptx/
 node_modules/
+raw_notes/
+*.pdf

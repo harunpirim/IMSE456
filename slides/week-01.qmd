@@ -9,215 +9,298 @@ release: "2026-08-25"
 
 ## Where we are going
 
-- Distinguish project work from operational work — and find the boundary cases where the test fails.
-- State the iron triangle and name three specific ways it misleads.
-- Score a project on five dimensions of success and defend the one that will be contested.
-- Tell a standard, a method, guidance and a framework apart, and tailor rather than adopt.
+- Say why project management became a mainstream skill, not a construction speciality.
+- Apply the temporary-and-unique test — and find where it fails.
+- Tell a project, a program and a portfolio apart.
+- Describe the life cycle and how effort is distributed across it.
+- Say what makes a project unsuitable for up-front planning.
+- Separate the technical from the sociocultural, and master both.
 
-# 1 · What counts as a project
+# 1 · Why this is a mainstream skill
 
-## Temporary and unique
+## Two numbers
+
+**$2.5 trillion** — roughly a quarter of US gross national product — is spent on projects each year.
+
+**93,000 → 686,000** — PMI membership, 2002 to 2021.
+
+::: {.aside}
+Larson & Gray, Ch. 1
+:::
+
+## The quieter observation
+
+Most people who manage projects **never hold the title**.
+
+Accountants running an audit · lawyers running a case · teachers coaching a debate team · a clinician organising a health event.
+
+For them project management is not a job title but a **job requirement**.
+
+## Which is the argument for you
+
+With three to four career changes now typical, the skill travels better than almost anything else you will learn.
+
+Project management fundamentals are **universal**.
+
+# 2 · What a project is
+
+## The definition
 
 > A temporary endeavour undertaken to create a unique product, service, or result.
 
-- **Temporary** — a definite beginning and end. Bounded, not brief.
-- **Unique** — not previously produced in *this configuration*. Not unprecedented.
+**Temporary** — a definite beginning and end. Bounded, not brief.
 
-Projects are the kind of work you can be publicly wrong about in advance.
+**Unique** — not previously produced in this exact configuration.
 
-## Operations are the other thing
+## Five characteristics
 
-| | Operations | Projects |
-|---|---|---|
-| Shape | Ongoing, repetitive | Bounded, unrepeated |
-| Task | Optimize a *known* process | Execute an *unrepeated* one |
-| Basis | You have data | You have inference |
-
-## The boundary cases
-
-- A **film production** — temporary and unique, but the studio makes one every year.
-- A **software release train** — each release unique, the cadence operational.
-- A **refinery turnaround** — recurring every four years, planned as a project every time.
-
-. . .
-
-"Project or operation?" is not a fact about the world. It is a **management choice about which toolkit to apply** — and you can be wrong about it.
-
-## Program and portfolio
-
-- **Program** — related projects managed together *because of dependencies between them*.
-- **Portfolio** — projects and programs grouped *because they compete for the same money*.
-
-# 2 · The iron triangle, and how it lies
-
-## Failure 1 — a constraint model, not a success model
-
-Meeting all three legs says nothing about whether the output was worth building.
-
-**Sydney Opera House**
-
-| | |
+| # | Characteristic |
 |---|---|
-| 1957 estimate | £3.5 million (≈ A$7 million) |
-| Scheduled completion | 26 January 1963 |
-| Actually opened | 20 October 1973 |
-| Final cost | A$102 million |
+| 1 | An established objective |
+| 2 | A defined lifespan — beginning and end |
+| 3 | Usually several departments and professions |
+| 4 | Typically something not done before |
+| 5 | Specific time, cost and performance requirements |
 
-Roughly fourteen times the estimate, ten years late — and not remembered as a failure.
+## The fifth one is the triple constraint
 
-## Failure 2 — it hides the asymmetry
+Time · cost · performance.
 
-The three legs are drawn as equals. They are not.
+They impose a level of accountability ordinary work rarely carries.
 
-- The **date** is contractual, regulatory, or attached to a season.
-- The **budget** was approved in public and must be re-approved in public.
-- **Scope** lives in a document, and documents can be edited quietly.
+Balancing the trade-offs among them — while still satisfying the customer — is the job.
+
+## What a project is not
+
+| Routine, repetitive | Project |
+|---|---|
+| Taking lecture notes | Writing the term paper |
+| Posting invoices | Standing up a new billing system |
+| Answering supply-chain queries | Building the dashboard they revealed a need for |
+| Running weekly ceremonies | Migrating off the legacy repository |
+
+## Why the distinction earns its keep
+
+Resources consumed by daily operations are resources **not spent** on the work that carries the organisation forward.
+
+Organisations that cannot tell the two apart starve the second.
+
+## Where the test fails
+
+- **A film production** — temporary and unique, but the studio makes one every year.
+- **A software release train** — each release unique, the cadence operational.
+- **A refinery shutdown** — recurring on a cycle, run as a project every time.
 
 . . .
 
-The failure is not that scope flexes. It is that it flexes **without anyone recording that it flexed**.
+"Project vs. operation" is a decision about **which toolkit to apply** — not a fact about the world.
 
-## Failure 3 — there is no stakeholder in it
+## Project · program · portfolio
 
-Time. Cost. Scope. *Whose?*
+| Term | What it is |
+|---|---|
+| **Project** | A temporary endeavour producing a unique output |
+| **Program** | Related projects pursuing a common goal over an extended period |
+| **Portfolio** | The set of projects and programs the organisation funds |
 
-The sponsor, the user, the team and the neighbour can read the same finished project and disagree. The triangle has no room to express that, so it silently adopts one view and calls it the answer.
+. . .
 
-## So why does it survive?
+No dependencies between the components? It is a portfolio, and somebody chose a more impressive word.
 
-Because it is the only success model you can put in a **contract**.
+# 3 · The project life cycle
 
-Scope, time and cost can be agreed in advance and adjudicated afterwards. "Did we produce value" cannot. The triangle is *legible*, not complete — keep it as the constraint set, not the scorecard.
+## Four stages
 
-# 3 · Success, in more than one dimension
+| Stage | What comes out |
+|---|---|
+| **Defining** | Goals, specifications, tasks, responsibilities |
+| **Planning** | Schedules, budgets, resources, risks, staffing |
+| **Executing** | Status reports, changes, quality, forecasts |
+| **Closing** | Training, documents, released resources, lessons learned |
 
-## Five dimensions, five clocks
+## Effort is not evenly distributed
 
-| Dimension | The question | When you can answer |
-|---|---|---|
-| Project efficiency | Did we hit time and budget? | Immediately |
-| Impact on the customer | Does it meet requirements — and get used? | Months |
-| Impact on the team | Did the team grow, or burn out? | Months |
-| Business / direct success | Commercial or mission value? | 1–2 years |
-| Preparing for the future | Capability, technology, position? | 3–5 years |
+Executing dominates the effort curve.
+
+Defining is short and cheap — **and is where the leverage is**.
+
+. . .
+
+The two stages most often skipped are defining and closing. Both are cheap. Both are where the money is made or lost.
+
+## Closing is a real stage
+
+Three activities, not one:
+
+1. **Deliver** to the customer — training, transferred documents
+2. **Redeploy** — equipment and people have to land somewhere
+3. **Review** — assess performance *and* capture lessons
+
+Skip the review and the organisation relearns the lesson at full price.
+
+# 4 · When planning stops working
+
+## Traditional PM assumes predictability
+
+An engineer building a bridge draws on proven technology and established design principles.
+
+**What** is to be accomplished and **how** are both well understood.
+
+Not all projects enjoy that.
+
+## Uncertainty has two axes
+
+**Scope (what)** — how well is it known and stable?
+
+**Technology (how)** — how proven is it?
+
+. . .
+
+Predictable → unpredictable → unknown. The further out you sit, the worse a fixed up-front plan performs.
+
+## The cost of ignoring it
+
+**$81 billion** — US spend on cancelled software projects, 1995 *(Standish Group)*
+
+**> $2 trillion** — cost of poor software quality in the US, 2020 *(Krasner, 2022)*
 
 ::: {.aside}
-Shenhar & Dvir, *Reinventing Project Management* (2007). The 2001 *Long Range Planning* paper has four; "impact on the team" was added in the book.
+The first figure is historical. The problem is not.
 :::
 
-## Row one is the whole iron triangle
+## Rolling wave
 
-The dimension you can measure **soonest** is the dimension you get **judged** on.
+An incremental, iterative process. Iterations of **one to four weeks**.
 
-The dimensions that would vindicate or condemn you arrive after everyone has moved on.
+Each makes tangible progress — a requirement settled, a technical problem solved, a feature demonstrated — then is reviewed and feeds the next.
 
-## The number everyone quotes
+Each iteration **subsumes** the work of the last.
 
-Flyvbjerg's database, **16,000+ projects**:
+## Agile in one line
 
-- **0.5%** — on budget, on time, *and* with the promised benefits
-- **8.5%** — on budget and on time
-- **47.9%** — on budget alone
+Active collaboration with customer representatives · small functional pieces · adapting to changing requirements.
 
-Mean cost overrun: nuclear waste storage +238% · Olympics +157% · nuclear power +120% · IT +73% · buildings +62% · rail +39% · tunnels +37% · wind +13% · **solar +1%**
+Works best in **small teams of four to eight**.
 
-::: {.aside}
-Flyvbjerg & Gardner, *How Big Things Get Done* (2023); method in Flyvbjerg (2014), *PMJ* 45(2), 6–19.
-:::
+## It is not either/or
 
-## Now complicate it
+Agile up front to establish specifications and requirements.
 
-- **Chapman (2024)**, *PMJ* 55(6) — Swedish transport infrastructure, 228 road + 96 rail. Typical road overrun **2.7%**; rail a **1.8% underrun**. 93% of road and 70% of rail achieved intended benefits.
-- **Chapman (2025)**, *IJPM* 43(8) — 125 rail + 280 road projects across Denmark, Norway and Sweden, 2008–2022: delivered **on cost, over time**.
+Traditional to plan, execute and close.
 
 . . .
 
-Base rates are not properties of *projects*. They are properties of a **governance regime**.
+**Hybrid project management** — and it is the common case in practice, not a compromise.
 
-## Four questions for any failure statistic
+# 5 · What is driving demand
 
-1. **Which** projects — sector, size, era?
-2. Failed against **what** — the triangle, or benefits?
-3. Who assembled the sample, and would the successes report themselves?
-4. Compared to **what** — what is the unmanaged counterfactual?
+## Compression of the product life cycle
 
-## Change the instrument, change the finding
-
-**Gemino, Horner Reich & Serrador (2021)**, *PMJ* 52(2), n = 477:
-
-Agile and hybrid approaches significantly improved **stakeholder success** over traditional — while producing statistically **the same** budget, time, scope and quality outcomes.
+High-tech product life cycles now average **six months to three years**. Thirty years ago, ten to fifteen years was unremarkable.
 
 . . .
 
-Measure only the triangle and you conclude approach doesn't matter. Nothing about the projects changed between those two conclusions. Only the instrument did.
+A **six-month delay** in a high-tech product can cost **a third** of its potential revenue share.
 
-# 4 · Standards, tailoring, and where the tools sit
+## Knowledge explosion
 
-## PMBOK 8 — and the interesting part
+Building a road thirty years ago was comparatively simple.
 
-Released by PMI late 2025; general availability January 2026.
+Today: materials, specifications, codes, aesthetics, equipment, specialists.
 
-- **6 principles** (down from 12) — including *integrate sustainability*, now standalone for the first time
-- **7 performance domains** (down from 8) — Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk
-- **40 processes**, reintroduced in deliberately non-prescriptive form
+Hard to find a new product without a microchip. Increasingly hard to find one without AI.
 
-## 49 → 0 → 40
+**Integration is the problem. Project management is the discipline that does it.**
 
-| Edition | Year | Shape |
-|---|---|---|
-| PMBOK 6 | 2017 | 49 processes, 5 process groups, 10 knowledge areas |
-| PMBOK 7 | 2021 | Processes removed; principle-based |
-| PMBOK 8 | 2025 | Processes back, non-prescriptive; tailoring mandatory |
+## Triple bottom line
 
-Processes give you something to **do** and nothing to **think with**. Principles give you the reverse. Version 8 is an attempt to hold both.
+Planet · people · profit.
 
-## Four different kinds of document
+Sustainability moved from public relations to a **design constraint** — it shows up in project objectives and techniques.
 
-| Document | Claims to be | Governance stance |
-|---|---|---|
-| PMBOK 8 (PMI, 2025) | Body of knowledge + standard; descriptive | Tailoring mandatory |
-| PRINCE2 (PeopleCert) | A **method** — prescriptive processes and roles | Strong: board, stage boundaries, exceptions |
-| ISO 21502:2020 | Guidance — generic, vendor-neutral, non-certifiable | Light; written for contracts |
-| Scrum Guide (Nov 2020) | A **framework** — immutable, deliberately incomplete | None beyond the team |
+On construction projects, LEED certification is now routinely an objective in its own right.
+
+## Small projects, big problems
+
+Small projects carry the **same or more risk** than large ones.
+
+Because each inefficiency is small and unmeasured, it is invisible.
+
+In aggregate the losses are substantial — and sit outside the accounting system.
 
 . . .
 
-Which of these could you **sue** somebody over? That tells you where the accountability sits.
+The problem is organisational: prioritising across a portfolio. That is Week 2.
 
-## The counterexample
+# 6 · The socio-technical dimension
 
-The **Scrum Guide**: 13 pages, free, last revised **November 2020**, still current.
+## Two dimensions, different in kind
 
-Added the Product Goal and gave each artifact one commitment — Product Backlog → Product Goal, Sprint Backlog → Sprint Goal, Increment → Definition of Done.
+| Technical | Sociocultural |
+|---|---|
+| Scope · WBS | Leadership |
+| Schedules | Problem solving |
+| Resource allocation | Teamwork · negotiation |
+| Baseline budgets | Politics |
+| Status reports | Customer expectations |
 
-## Tailoring — five questions, every time
+## The technical dimension is the orderly one
 
-1. How much will requirements change before delivery? *High → adaptive*
-2. How expensive is a late change? *Very → predictive front-loading*
-3. Can we deliver increments a stakeholder would accept? *No → predictive*
-4. Is there a gate requiring a frozen baseline? *Yes → predictive at the gate*
-5. Is the team co-located and empowered enough to self-manage? *No → the ceremonies are theatre*
+Scope statements link the project to the customer.
 
-## Where the tools in this course sit
+The WBS is the **database** connecting every level of the organisation to every deliverable, down to the tasks in a work package.
 
-| Layer | Tools | Fails as |
-|---|---|---|
-| **Record** | Taiga · ProjectLibre · Smartsheet | A lie about what happened |
-| **Analysis** | Python · Power BI | A lie about what it means |
-| **Decision** | The dashboard somebody acts on | An accurate rendering of a broken record |
+Integrated linkages mean any change is documented and **traceable to its source**.
 
-The third is the dangerous one. Nobody distrusts a chart.
+## The sociocultural dimension is not orderly
 
-## And the AI layer runs through all three
+Messy, often contradictory, paradoxical.
 
-Generate the artifact with a model — then write the code that checks it.
+Shape a culture that sustains teamwork and motivation · spot problems before they threaten the work · steer back when — not if — things depart from plan.
 
-A model will produce a plausible, well-formatted WBS in nine seconds and quietly omit a stakeholder, because it does not know who is in your room.
+Build a cooperative network among stakeholders with genuinely **different standards, commitments and perspectives**.
+
+## Master both
+
+Competence in one does not compensate for weakness in the other.
+
+The failure modes look nothing alike.
+
+# 7 · Where generative AI enters
+
+## Across the process groups
+
+| Group | Applied to |
+|---|---|
+| **Initiating** | Idea generation · stakeholder content · requirements |
+| **Planning** | Plan drafting · risk scenarios · scenario planning |
+| **Executing** | Content · code generation · dynamic reporting |
+| **Monitoring** | Risk narratives · feedback loops · predictive models |
+| **Closing** | Automated summary reports |
+
+## Read that table carefully
+
+Every row describes a **generated artefact**.
+
+A generated artefact is a claim, not a result.
+
+. . .
+
+A model produces a plausible, well-formatted WBS in nine seconds and quietly omits a stakeholder — because it does not know who is in your room.
+
+## The rule for this course
 
 **The check is graded, not the output.**
 
-## Next
+Generate the artifact with a model — then write the code that checks it.
+
+# Next
+
+## This week
 
 - Notes: [Week 1](../weeks/week-01.qmd)
 - Studio: [Lab 1](../labs/lab-01.qmd)
 - Reading: Larson Ch. 1
+
+**Tuesday:** The Farmers Market Pavilion.
+**Thursday:** set up your toolchain and classify what you are managing.
