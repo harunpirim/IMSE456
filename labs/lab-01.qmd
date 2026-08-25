@@ -7,8 +7,8 @@ release: "2026-08-25"
 
 ::: {.week-meta}
 <dl>
-<dt>Deliverable</dt><dd><strong>SA1</strong> — a <strong>one-page report</strong>, plus the AI acknowledgement</dd>
-<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
+<dt>Deliverable</dt><dd><strong>SA1</strong> — a <strong>one-page report</strong>, uploaded to Blackboard</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
 <dt>Tools</dt><dd>Gemini (or the assistant you have access to)</dd>
 <dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-01.qmd">Week 1 — Modern Project Management</a></dd>
@@ -20,9 +20,9 @@ release: "2026-08-25"
 in a team; the studio is where the thinking gets into your own hands.
 :::
 
-The session runs to a fixed clock: **Answer** 20 minutes, **Generate** 20, **Reconcile** 25, **peer
-check** 10. The move from Answer to Generate is called at minute 20 whether or not you finished — an
-unfinished answer is a legitimate finding, and you will report it as one.
+The session runs to a fixed clock: **Answer** 20 minutes, **Generate** 20, **Reconcile** 30, then
+save and upload. The move from Answer to Generate is called at minute 20 whether or not you
+finished — an unfinished answer is a legitimate finding, and you will report it as one.
 
 ::: {.part}
 ### Part 1 · Before you arrive
@@ -30,10 +30,10 @@ unfinished answer is a legitimate finding, and you will report it as one.
 Accounts and installs. Do these before Thursday, not during it. Nothing here is graded, and nothing
 here is part of SA1 — but Week 3 and Week 4 assume it is already done.
 
-1. Claim your AI access: register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible. If you are not, the free tier is sufficient for every studio in this course — say so on your page so it is on record.
+1. Claim your AI access. Register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible — a **Pro account is what this course assumes**, because the free tier runs out of capacity partway through a studio and leaves you stuck. **If you do not have a Pro account, or you try to register and cannot, come and see me or the TA before Thursday.** We will sort out access for you. Do not spend your own money on this.
 2. Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`. You will use it from Week 3.
 3. Install [ProjectLibre](https://www.projectlibre.com/) and open it once to confirm it launches. If it fails on your machine it fails *today*, not in Week 4 — [GanttProject](https://www.ganttproject.biz/) is the sanctioned fallback and costs you nothing.
-4. Create the cloud folder you will use all semester — Google Drive or OneDrive, named `IMSE456`. **Everything in this course is saved there, never to a local disk.**
+4. Create the cloud folder you will use all semester. Use the **Google Drive or OneDrive that comes with your NDSU account** — both are provided by the university and neither costs anything. Name it `IMSE456`. **Everything in this course is saved there, never to a local disk.**
 5. Open the access form linked on Blackboard: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
 :::
 
@@ -41,7 +41,7 @@ here is part of SA1 — but Week 3 and Week 4 assume it is already done.
 ### Part 2 · What you leave with
 
 **SA1 — one page.** Not two. The five review questions from the week page answered in your own
-words, a record of where the model helped and where it was wrong, and the acknowledgement block.
+words, and a record of where the model helped and where it was wrong.
 
 The page limit is the exercise. Anyone can generate four pages in nine seconds.
 :::
@@ -100,7 +100,7 @@ so on the page rather than pretend otherwise. That is a legitimate finding and i
 :::
 
 ::: {.part}
-### Part 6 · Done looks like — the checklist your neighbour runs on you at minute 65
+### Part 6 · Done looks like — check this before you upload
 
 - [ ] one page, and genuinely one page
 - [ ] all five review questions answered in your own words
@@ -108,23 +108,35 @@ so on the page rather than pretend otherwise. That is a legitimate finding and i
 - [ ] at least one specific model error named, with what was wrong with it
 - [ ] at least one place the model changed your mind
 - [ ] every minute-20 "unsure" accounted for
-- [ ] the AI acknowledgement block, with tool and transcript link
+- [ ] which AI tool you used, and a link to the transcript
 :::
 
 ::: {.part}
-### Part 7 · Where it is saved
+### Part 7 · Save it, then upload it
 
-`IMSE456/studio-01/` in your cloud folder. Name the file `SA1_yourlastname.pdf`.
+Two steps, in this order. They are not the same step, and skipping the first is how people lose a
+semester of work.
 
-**Nothing in this course is saved to a local disk.** Lab machines wipe on reboot and laptops get
-left at home. Your page is read in the session itself — there is no separate submission afterwards.
+**1 · Save your own copy to the cloud.** Use the **Google Drive or OneDrive that comes with your
+NDSU account** — both are provided to you by the university and neither costs anything. Make a
+folder `IMSE456/studio-01/` and save the file there as `SA1_yourlastname.pdf`.
+
+This copy is yours. It stays with you after the semester ends, and it is what you go back to when
+you want to show someone what you built.
+
+**Never save course work only to a local disk.** Lab machines wipe on reboot, laptops get left at
+home, and a drive that fails the night before a deadline is not an extension.
+
+**2 · Upload the PDF to Blackboard** before you leave the session. That copy is what gets graded,
+and you will get written feedback on it.
 :::
 
 ::: {.browser-path}
 **Working on a lab machine, or without your own device?**
 
-Everything in this studio runs in a browser. Write the page in Google Docs or Word Online and export
-to PDF at the end. No install is needed for SA1 — the installs in Part 1 are for later weeks.
+Everything in this studio runs in a browser. Write the page in Google Docs or Word Online — both
+come with your NDSU account — and export to PDF at the end. No install is needed for SA1; the
+installs in Part 1 are for later weeks.
 :::
 
 ## Study loop for this week
@@ -141,6 +153,3 @@ refinery shutdown — until I stop treating it as a fact about the world.
 
 See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.
 
-::: {.callout-important appearance="simple"}
-**Label it, verify it, own it.** Append the AI acknowledgement block from the [syllabus](../syllabus.qmd#how-to-disclose): the tool, the prompt or transcript link, what you changed after reviewing its output, and what it got wrong. Every quantitative result arrives with the check that proves it — **the check is graded, not the output**. "The model said so" is not a defence in this course or in a project review.
-:::

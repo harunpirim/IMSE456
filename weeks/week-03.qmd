@@ -22,7 +22,7 @@ lab: true
 <dt>Thursday</dt><dd>Instantiate a structure and watch it constrain you</dd>
 <dt>Reading</dt><dd>Larson Ch. 3</dd>
 <dt>Due</dt><dd>FP0 partner confirmed · Fri 11 Sep</dd>
-<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
 :::
 

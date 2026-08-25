@@ -46,18 +46,18 @@ on the same three movements:
    definition, a different assumption, a rounding choice, or a mistake in one of them. Either
    answer is fine. Not looking is not.
 
-**Then a five-minute pair check.** Swap screens with the person next to you and read each other's
-checklist out loud. You are only confirming that each item exists — not judging quality. If
-something is missing, there is still time to add it.
+**Then save and upload.** Save your own copy to your NDSU Google Drive or OneDrive, and upload the
+file to Blackboard before you leave the room. The saved copy is yours to keep; the uploaded one is
+what gets graded.
 
 ### How studios are graded
 
-**Complete or incomplete.** A studio is complete when every item on its checklist is present and
-your partner has confirmed it. That is the whole rubric.
+**Complete or incomplete.** A studio is complete when every item on its checklist is present in the
+file you uploaded. That is the whole rubric — and you get written feedback on what you submitted.
 
 | | |
 |:--|:--|
-| **Complete** | All checklist items present · reconciliation paragraph written · pair confirmed |
+| **Complete** | All checklist items present · reconciliation paragraph written · uploaded to Blackboard |
 | **Incomplete** | Something on the checklist is missing |
 
 : {tbl-colwidths="[24,76]"}
@@ -150,7 +150,7 @@ not be asked to buy software for this course.**
 | [Google Colab](https://colab.research.google.com) | Python: networkx, pandas, numpy, matplotlib, PuLP | Free, browser |
 | Excel or Numbers | Scoring models, crash tables, decision tools | Whichever you have; templates ship as `.xlsx` |
 | [draw.io](https://app.diagrams.net) | WBS trees, networks, org charts, stakeholder maps | Free, browser |
-| Gemini and Antigravity | Drafting, reasoning, and agent building | Free; the instructor supplies API keys to anyone who needs them |
+| Gemini and Antigravity | Drafting, reasoning, and agent building | Free to students, but a **Pro account is needed** — the free tier is not enough. Cannot get one? See the instructor or TA; API keys are supplied to anyone who needs them |
 
 : {tbl-colwidths="[18,46,36]"}
 
@@ -175,7 +175,7 @@ Set up a cloud folder in Week 1 and keep everything there.
 | Component | Weight | What it is |
 |:--|--:|:--|
 | Conceptual assignments | 25% | CA1–CA8, online multiple choice on terms, theory and the reasoning behind the methods. Auto-graded, lowest score dropped. |
-| Studio assignments | 25% | SA1–SA14, **individual**, produced and **evaluated during Thursday studio** — there is no deadline and nothing to submit afterwards. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case. |
+| Studio assignments | 25% | SA1–SA14, **individual**, produced during Thursday studio and **uploaded to Blackboard before you leave** — graded with written feedback, no deadline to miss. Lowest two dropped. Five are graded against a full rubric — announced in advance — and the rest complete/incomplete against the published checklist. The reconciliation paragraph is read in every case. |
 | Midterm examination | 20% | **Thursday 15 October, in class.** Closed book, closed notes, no computers or phones. Covers Chapters 1–7. |
 | Final project | 30% | A semester-long project with an industry partner, in teams of four or five, including a published Medium article on the AI-assisted workflow your team built. FP1 5% · FP2 7% · FP3 8% · FP4 10%. See [Final Project](project.qmd). |
 
@@ -198,8 +198,8 @@ Set up a cloud folder in Week 1 and keep everything there.
 **Late work is not accepted.** Deadlines are firm for the work that has one — conceptual
 assignments and the final project deliverables.
 
-**Studio assignments have no deadline.** They are evaluated in the Thursday session itself, so
-the only way to miss one is to miss the session.
+**Studio assignments have no deadline.** They are produced in the Thursday session and uploaded to
+Blackboard before you leave it, so the only way to miss one is to miss the session.
 
 The dropped scores are your margin for a bad week: the lowest conceptual assignment and the two
 lowest studio assignments are dropped automatically. If something serious happens, contact the

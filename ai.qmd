@@ -16,20 +16,26 @@ every time.
 
 | Tool | What you use it for | Access |
 |:--|:--|:--|
-| **Gemini** | Drafting work breakdowns, risk registers, status reports, and arguments you then have to check | **Free** — students get Gemini Pro at no cost |
+| **Gemini** | Drafting work breakdowns, risk registers, status reports, and arguments you then have to check | **Pro account needed** — free to students; the free tier is not enough |
 | **Antigravity** | Building and running small agents and code | **Free to everyone** |
 | **Google Colab** | Python notebooks for the studio work | **Free**, in a browser, no install |
 
 : {tbl-colwidths="[18,54,28]"}
 
 ::: {.callout-important}
-## You do not pay for anything
-Gemini Pro is free for students, and Antigravity and Colab are free to everyone. **If for any
-reason you cannot get access, tell the instructor** — API keys are supplied to anyone who needs
-them. No graded work in this course depends on being able to buy a subscription.
+## You do not pay for anything — but you do need a Pro account
+The studios assume a **Gemini Pro account**. The free tier will not carry you through a studio: it
+runs out of capacity partway and leaves you stuck halfway through the work.
 
-If you claim the free student year, note that it asks for a payment method and renews at full
-price when the year ends, so set yourself a reminder.
+Students can get Pro at no cost through the free student year. **If you do not have a Pro account,
+or you try to register and cannot, come and see the instructor or the TA.** Access will be sorted
+out for you, and API keys are supplied to anyone who needs them.
+
+**Do not spend your own money on this.** No graded work in this course depends on being able to buy
+a subscription — but it does depend on you telling us early if you cannot get access.
+
+If you claim the free student year, note that it asks for a payment method and renews at full price
+when the year ends, so set yourself a reminder.
 :::
 
 ## How much AI, on which assessment

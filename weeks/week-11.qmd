@@ -22,7 +22,7 @@ lab: true
 <dt>Thursday</dt><dd>Build the dashboard, then find what it hides</dd>
 <dt>Reading</dt><dd>Larson Ch. 13</dd>
 <dt>Due</dt><dd>CA7 (Ch 13) · Sun 8 Nov</dd>
-<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
 :::
 

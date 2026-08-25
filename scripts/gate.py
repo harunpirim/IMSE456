@@ -199,8 +199,8 @@ appear in the last column as each week is posted.
 
 **Conceptual assignments (CA1–CA8, 25%)** close Sunday 11:59 p.m. Lowest score dropped.
 
-**Studio assignments (SA1–SA14, 25%)** are evaluated **in the Thursday session** — no deadline,
-nothing to submit afterwards. Graded complete or incomplete. Two lowest dropped.
+**Studio assignments (SA1–SA14, 25%)** are produced **in the Thursday session** and uploaded to
+Blackboard before you leave — graded with feedback, no deadline to miss. Two lowest dropped.
 
 **Late work is not accepted** for the work that has a deadline: conceptual assignments and the
 final project deliverables.

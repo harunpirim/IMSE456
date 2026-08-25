@@ -126,12 +126,22 @@ deck's closing slide.
 
 ## The studio
 
-Studios are **evaluated inside the Thursday session** — no deadline, nothing
-submitted afterwards. Do not reintroduce a due date; the `.week-meta` row reads:
+Studios are **produced inside the Thursday session and uploaded to Blackboard before the student
+leaves**, then graded with written feedback. There is no deadline to miss, because the upload
+happens in the room. Do not reintroduce a due date; the `.week-meta` row reads:
 
 ```html
-<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 ```
+
+**No peer or pair check.** Studios used to end with a neighbour reading your checklist; they no
+longer do. The final checklist is something the student runs on themselves before uploading, and
+the feedback comes from the instructor or TA on what was submitted.
+
+**Saving and uploading are two separate steps, and the sheet must say so.** Students save their own
+copy to the **Google Drive or OneDrive that comes with their NDSU account** — that copy is theirs
+and outlives the course — and *then* upload to Blackboard for grading. People who conflate the two
+end a semester with nothing of their own to show.
 
 Conceptual assignments, final-project deliverables and the midterm **do** keep
 their dates. When a week's row lists both, the date belongs to the CA.
@@ -144,8 +154,13 @@ mind — because that is the part a machine cannot produce. A tight output limit
 thinking. Give the student an honest exit: if the model made no errors, they
 report that as the finding rather than inventing one.
 
-Every studio ends with the AI acknowledgement block from the syllabus, and the
-standing rule: **the check is graded, not the output.**
+Every studio requires the AI acknowledgement from the syllabus — name the tool and link the
+transcript — carried in the `.week-meta` AI-use row and the closing checklist rather than a
+repeated callout at the foot of the sheet.
+
+**The course assumes a Gemini Pro account, not the free tier**, which runs out of capacity partway
+through a studio. Any sheet that mentions AI access says so, and tells students who cannot get one
+to see the instructor or TA rather than paying for it themselves.
 
 Do not invent assets. If a sheet tells students to open a supplied file or run a
 `verify()` cell, that file must exist in the repo or the session stalls. Build

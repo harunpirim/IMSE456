@@ -21,7 +21,7 @@ lab: true
 <dt>Tuesday</dt><dd>The incentive that produced the wrong behaviour — concept and case</dd>
 <dt>Thursday</dt><dd>A contract-type decision tool — compressed, Tuesday only</dd>
 <dt>Reading</dt><dd>Larson Ch. 12</dd>
-<dt>Studio</dt><dd>Evaluated in the Thursday session — nothing to submit afterwards</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
 :::
 
