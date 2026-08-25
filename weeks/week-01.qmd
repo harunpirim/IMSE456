@@ -27,18 +27,19 @@ lab: true
 
 <!-- VIDEO -->
 
-## What you should be able to do by Friday
+## What you should be able to do after this week
 
-- Apply the temporary-and-unique test to real work, and name the cases where it returns the wrong answer.
-- State the iron triangle and give three specific reasons it misleads.
-- Score a project on five dimensions of success and defend the score that will be contested.
-- Tell a standard, a method, guidance and a framework apart, and say which one you could sue over.
-- Choose between an adaptive and a predictive approach using five questions rather than a preference.
+1. Say why project management became a mainstream skill rather than a construction speciality.
+2. Apply the temporary-and-unique test, and name the cases where it returns an unhelpful answer.
+3. Distinguish a project from a program and from a portfolio, and say what changes at each step.
+4. Describe the four stages of the project life cycle and how effort is distributed across them.
+5. Say what makes a project unsuitable for up-front planning, and what agile does about it.
+6. Separate the technical and sociocultural dimensions of the work, and explain why competence in one does not substitute for the other.
 
 ## Concepts introduced
 
 ::: {.chips}
-<span class="chip">project vs. operations — temporary and unique</span><span class="chip">program vs. portfolio</span><span class="chip">project life cycle</span><span class="chip">the iron triangle and its three failure modes</span><span class="chip">multidimensional success</span><span class="chip">the socio-technical dimension</span><span class="chip">why project work is expanding</span>
+<span class="chip">project vs. operations</span><span class="chip">the five characteristics</span><span class="chip">triple constraint</span><span class="chip">program vs. portfolio</span><span class="chip">project life cycle</span><span class="chip">level of effort</span><span class="chip">project uncertainty</span><span class="chip">rolling wave</span><span class="chip">agile and hybrid</span><span class="chip">compression of the product life cycle</span><span class="chip">triple bottom line</span><span class="chip">the socio-technical dimension</span>
 :::
 
 ## Tuesday — The Farmers Market Pavilion
@@ -56,179 +57,308 @@ Name the stakeholder for whom this project failed. Now name the one for whom the
 ::: {.studio}
 #### Set up your toolchain, and classify what you are managing
 
-Individual work. Build the classification yourself, run two professional tools on the same six items, then explain where the tools disagree.
+Individual work. Build the tool yourself, run the professional tool on the same data, then explain where they disagree.
 
 **[Open the Week 1 lab sheet](../labs/lab-01.qmd)** · [slides](../slides/week-01.qmd)
 :::
 
-## Notes
+---
 
-### 1 · What counts as a project
+## 1 · Why this is a mainstream skill
 
-A project is a temporary endeavour undertaken to create a unique product, service, or result. Two
-words carry the load: *temporary* (a definite start and end — bounded, not brief) and *unique* (not
-previously produced in this exact configuration). Operations are ongoing and repetitive.
+Project management used to be the property of construction, defence contracting and film production. It is now the ordinary way a large amount of work gets done, in the private sector and outside it — emergency aid after a natural disaster, a crime-reduction strategy, the renovation of a public playground.
 
-The distinction earns its keep because the techniques differ. Operations optimize a known process;
-projects execute an unrepeated one under uncertainty. Variance is the enemy of a production line.
-The thing nobody thought of is the enemy of a project.
+Two numbers give the scale. Roughly **$2.5 trillion**, about a quarter of US gross national product, is spent on projects each year. And membership of the Project Management Institute grew from **93,000 in 2002 to more than 686,000 in 2021** — a sevenfold increase in under two decades [1].
 
-Then there are the cases where the test returns an unhelpful answer. A film production is temporary
-and unique — but the studio makes one every year. A software release train ships something unique
-each time on an operational cadence. A refinery maintenance shutdown recurs on a schedule and is
-still planned as a project every time.
+The more useful observation is quieter: **most people who manage projects never hold the title.** Accountants running an audit, lawyers running a case, teachers coaching a debate team, a store manager building a retention programme, a clinician organising a community health event. For these people project management is not a job title but a job requirement. With three to four career changes now typical, the skill travels better than almost any other you will acquire [1].
 
-The conclusion to take from those is not that the definition is broken. It is that **project versus
-operation is a choice about which toolkit to apply**, not a fact about the world. Someone decides,
-and the decision has consequences you can predict.
+That is the argument for taking this seriously even if you never intend to be a project manager.
 
-::: {.roommate}
-#### Roommate link
+## 2 · What a project is
 
-**Cooking a dinner party vs. running a restaurant.** The dinner party is a project — fixed date,
-unique menu, guests who will remember it. The restaurant is operations. A chef who runs a restaurant
-well can still fail at a dinner party, because the failure modes differ: the restaurant's enemy is
-variance, the dinner party's is the thing you forgot to buy.
-:::
+The Project Management Institute's definition is the one to memorise:
 
-### 2 · Why the iron triangle is not a success model
+> A project is a temporary endeavour undertaken to create a unique product, service, or result.
 
-Scope–time–cost, with quality either inside the triangle or floating above it. It fails in three
-specific ways.
+Two words carry the weight. **Temporary** means a definite beginning and end — bounded, not necessarily brief. **Unique** means not previously produced in this exact configuration.
 
-1. **It is a constraint model, not a success model.** Meeting all three says nothing about whether
-   the output was worth building. The Sydney Opera House was estimated at A$7M and cost A$102M —
-   over 1,300% over — and opened in 1973 against a scheduled 1963 completion. Nobody remembers it
-   as a failure.
-2. **It hides the asymmetry between the legs.** They are not interchangeable. Scope is usually the
-   only one anyone will actually flex, and the flex usually goes unacknowledged.
-3. **It has no stakeholder dimension.** The person who paid, the person who uses it, and the team
-   who built it can disagree about success, and routinely do.
+Larson and Gray expand this into five characteristics [1]:
 
-### 3 · How success is actually measured
+| # | Characteristic | What it rules out |
+|:--|:--|:--|
+| 1 | An established objective | Open-ended work with no definition of done |
+| 2 | A defined lifespan, with a beginning and an end | Ongoing operational responsibility |
+| 3 | Usually involves several departments and professions | Work a single function can absorb alone |
+| 4 | Typically doing something not done before | Pure repetition |
+| 5 | Specific time, cost and performance requirements | Work nobody is measuring |
 
-Shenhar & Dvir's five dimensions, from *Reinventing Project Management* (2007). The 2001
-*Long Range Planning* paper has only four — *impact on the team* was added in the book.
+: {tbl-colwidths="[6,40,54]"}
 
-| Dimension | Question | Time horizon |
-|---|---|---|
-| Project efficiency | Did we hit time and budget? | Immediate |
-| Impact on customer | Does it meet requirements and get used? | Months |
-| Impact on team | Did the team grow, or burn out? | Months |
-| Business/direct success | Did it produce commercial or mission value? | 1–2 years |
-| Preparing for the future | Did it create capability, technology, or market position? | 3–5 years |
+The fifth deserves attention. Those three requirements — time, cost, performance — are the **triple constraint**, and they impose a level of accountability that ordinary work rarely carries. Balancing the trade-offs among them, while still satisfying the customer, is one of the primary functions of the role.
 
-Notice what the time horizons do to incentives. The dimension available on the day a project closes
-is the dimension you get judged on; the ones that would vindicate or condemn you arrive after
-everyone has moved on.
+The fourth is a matter of degree rather than a clean test. Landing a rover on Mars requires solving genuinely unsolved problems. A routine commercial fit-out uses established procedures throughout — and is still customised enough to count.
 
-This model is also what makes the agile-versus-predictive evidence legible. Gemino et al. (2021)
-found agile and hybrid approaches improved *stakeholder* success over traditional while achieving
-statistically **the same** budget, time, scope and quality outcomes. Measure only the iron triangle
-and you conclude approach doesn't matter. That conclusion is a measurement artifact.
+### What a project is not
 
-### 4 · The evidence, and why it argues with itself
+A project is not routine, repetitive work. Daily work does the same or similar thing repeatedly; a project is done once and leaves something new behind.
 
-Flyvbjerg's database of more than 16,000 projects: **0.5%** come in on budget, on time, and with the
-promised benefits. **8.5%** hit budget and schedule. Mean cost overrun by category — nuclear waste
-storage +238%, Olympic Games +157%, nuclear power +120%, IT +73%, buildings +62%, rail +39%,
-tunnels +37%, wind +13%, solar +1%.
+| Routine, repetitive work | Project |
+|:--|:--|
+| Taking lecture notes each week | Writing the term paper |
+| Posting invoices to the ledger | Standing up a new billing system |
+| Answering supply-chain queries | Building the supply-chain dashboard those queries revealed a need for |
+| Running the weekly sprint ceremonies | Migrating the team off the legacy repository |
+| Servicing machines on a maintenance rota | Commissioning the replacement line |
 
-Now complicate it. Chapman (2024), *Project Management Journal* 55(6), examined 228 road and 96 rail
-projects in Sweden and found a typical road cost overrun of **2.7%** and a rail **1.8% underrun**,
-with 93% of road and 70% of rail projects achieving their intended benefits. Chapman (2025),
-*International Journal of Project Management* 43(8) 102787, extended this to 125 rail and 280 road
-projects across Denmark, Norway and Sweden, 2008–2022, and found them delivered **on cost, over
-time**, with no evidence of systematic optimism bias or strategic misrepresentation.
+: {tbl-colwidths="[46,54]"}
 
-Both cannot be a universal law. **Base rates are not constants of nature; they are properties of a
-governance regime.** Before you repeat a failure statistic, you need to know which regime produced
-it.
+The distinction matters for a practical reason: resources consumed by daily operations are resources not spent on the innovative work that carries the organisation forward. Organisations that cannot tell the two apart tend to starve the second.
 
-### 5 · The standards landscape
+### The boundary is a management choice
 
-**PMBOK Guide, Eighth Edition** (PMI — released late 2025, general availability January 2026):
+Some cases resist the test, and they are the interesting ones.
 
-- **Six principles**, down from twelve in the 7th edition: adopt a holistic view; focus on value;
-  embed quality into processes and deliverables; be an accountable leader; integrate sustainability
-  across all project areas; build an empowered culture. Sustainability is newly *standalone* — in
-  the 7th edition it sat inside Stewardship rather than carrying its own principle.
-- **Seven performance domains**, down from eight: Governance, Scope, Schedule, Finance,
-  Stakeholders, Resources, Risk.
-- **40 processes**, reintroduced in deliberately non-prescriptive form, consolidated from the 49 in
-  the 2022 *Process Groups: A Practice Guide*.
-- Expanded material on AI, PMO roles, and procurement.
+- **A film production.** Temporary and unique — but the studio makes one every year.
+- **A software release train.** Each release is unique; the cadence is thoroughly operational.
+- **A refinery maintenance shutdown.** Recurring on a fixed cycle, yet planned and run as a project every time.
 
-The interesting part is the oscillation. PMBOK 6 (2017) was process-heavy — 49 processes, five
-process groups, ten knowledge areas. PMBOK 7 (2021) threw the processes out and went principle-based.
-PMBOK 8 (2025) brought them back, framed as non-prescriptive. Read that trajectory as a finding: pure
-principles gave practitioners nothing to *do*, pure processes gave them nothing to *think with*, and
-the 8th edition is an attempt to hold both.
+So "project vs. operation" is a decision about **which toolkit to apply**, not a fact about the world. The refinery treats the shutdown as a project because project controls give better answers than operational ones, not because the universe classified it that way.
 
-The other three, in a line each:
+### Project, program, portfolio
 
-| Standard | What it claims to be | Governance stance |
-|---|---|---|
-| PMBOK 8 (PMI, 2025–26) | A body of knowledge + a standard; descriptive | Tailoring is mandatory |
-| PRINCE2 (AXELOS/PeopleCert) | A *method* — prescriptive processes and roles | Strong: project board, stage boundaries, exception management |
-| ISO 21502:2020 | Guidance, deliberately generic and vendor-neutral | Light; designed to be referenced in contracts |
-| Scrum Guide (Nov 2020) | A *framework*, immutable, deliberately incomplete | None beyond the team; explicitly silent on portfolio |
+The terms are routinely used as synonyms. They are not.
 
-**The Scrum Guide is 13 pages and has not been revised since November 2020.** Standards are widely
-assumed to churn; this one does not. Scrum.org's position is that it is updated rarely by design.
-The 2020 revision removed prescriptive language to make it "minimally sufficient," added the Product
-Goal, and gave each of the three artifacts one commitment — Product Backlog → Product Goal, Sprint
-Backlog → Sprint Goal, Increment → Definition of Done.
+| Term | Definition | What changes |
+|:--|:--|:--|
+| **Project** | A temporary endeavour producing a unique output | The unit of delivery |
+| **Program** | A group of related projects pursuing a common goal over an extended period | Scale and time span; each project keeps its own manager, and program goals tie closely to broad strategic objectives |
+| **Portfolio** | The set of projects and programs an organisation chooses to fund | Selection and prioritisation — the question stops being "how" and becomes "which" |
 
-::: {.roommate}
-#### Roommate link
+: {tbl-colwidths="[16,48,36]"}
 
-**Building codes vs. architectural style.** A building code is prescriptive, legally enforceable,
-and says nothing about whether the building is good. A style is a set of principles a designer can
-violate deliberately. PRINCE2 is closer to a code; PMBOK 7/8 is closer to a style guide; Scrum is
-closer to a poetic form — a sonnet is 14 lines, and the constraint is the point.
-:::
+A quick diagnostic: if the components have no dependencies on each other, it is a portfolio and somebody chose a more impressive word.
 
-### 6 · Tailoring — five questions, every time
+## 3 · The project life cycle
 
-Run these on every project in this course, starting with your final project:
+Projects have a limited lifespan, and the level of effort across that lifespan changes in a predictable shape. Many industries define their own phase models — a software project might use definition, design, code, integration/test, maintenance — but the generic cycle has four stages [1].
 
-1. How much will requirements change between now and delivery? *(High → adaptive)*
-2. How expensive is a late change? *(Very expensive → predictive front-loading)*
-3. Can we deliver value in increments a stakeholder would actually accept? *(No → predictive)*
-4. Is there a regulatory or contractual gate that requires a frozen baseline? *(Yes → predictive at least at the gate)*
-5. Is the team co-located enough, and empowered enough, for self-management? *(No → the agile ceremonies will be theatre)*
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="lc-title" style="width:100%;height:auto">
+  <title id="lc-title">Level of effort across the four stages of the project life cycle</title>
+  <g fill="none" stroke="currentColor" stroke-width="1" opacity="0.35">
+    <line x1="60" y1="252" x2="726" y2="252"/>
+    <line x1="60" y1="252" x2="60" y2="26"/>
+  </g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="2.5" stroke-linecap="round">
+    <path d="M60,252 Q152,112 244,252"/>
+    <path d="M60,252 Q272,82 484,252"/>
+    <path d="M182,252 Q432,14 622,252"/>
+    <path d="M560,252 Q646,132 726,252"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="currentColor" text-anchor="middle">
+    <text x="152" y="150">Defining</text>
+    <text x="272" y="120">Planning</text>
+    <text x="432" y="52">Executing</text>
+    <text x="646" y="170">Closing</text>
+  </g>
+  <g font-size="12" fill="currentColor" opacity="0.75">
+    <text x="60" y="276">Start</text>
+    <text x="393" y="276" text-anchor="middle">Time</text>
+    <text x="726" y="276" text-anchor="end">End</text>
+    <text x="30" y="140" text-anchor="middle" transform="rotate(-90 30 140)">Level of effort</text>
+  </g>
+</svg>
+<figcaption>Effort is not evenly distributed. Executing dominates; defining is short and cheap, and is where the leverage is.</figcaption>
+</figure>
 
-## Work with AI on this week
+| Stage | What happens | What comes out |
+|:--|:--|:--|
+| **Defining** | Objectives set, specifications settled, teams formed, responsibilities assigned | Goals, specifications, tasks, responsibilities |
+| **Planning** | Effort rises; the schedule, budget, quality level and resourcing are worked out | Schedules, budgets, resources, risks, staffing |
+| **Executing** | The bulk of the work, physical and mental; progress measured against time, cost and specification | Status reports, changes, quality, forecasts |
+| **Closing** | Deliver to the customer, redeploy resources, review the project | Customer training, transferred documents, released resources, evaluation, lessons learned |
 
-Three roles, three different jobs. See [AI Studio](../ai.qmd) for the full loop and the exact prompts.
+: {tbl-colwidths="[14,52,34]"}
+
+Two things about closing are worth noticing, because they are the stages most often skipped. **Redeployment** is a real management task — equipment and people have to land somewhere. And the **post-project review** is where lessons become organisational rather than personal; skip it and the organisation relearns the same lesson at full price on the next project.
+
+## 4 · When planning stops working
+
+Traditional project management front-loads the planning, and that works precisely when the work is predictable. An engineer building a bridge draws on proven technology and established design principles: what is to be accomplished, and how, are both well understood.
+
+Not all projects enjoy that. Uncertainty rises along two independent axes — how well the **scope** is known, and how proven the **technology** is [1].
+
+<figure>
+<svg viewBox="0 0 430 330" role="img" aria-labelledby="unc-title" style="width:100%;height:auto;max-width:430px">
+  <title id="unc-title">Project uncertainty as a function of scope and technology</title>
+  <path d="M70,280 L320,280 A250,250 0 0 0 70,30 Z" fill="#0F5A4B" opacity="0.55"/>
+  <path d="M70,280 L245,280 A175,175 0 0 0 70,105 Z" fill="#0F5A4B" opacity="0.3"/>
+  <path d="M70,280 L170,280 A100,100 0 0 0 70,180 Z" fill="currentColor" opacity="0.06"/>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.6">
+    <path d="M320,280 A250,250 0 0 0 70,30"/>
+    <path d="M245,280 A175,175 0 0 0 70,105"/>
+    <path d="M170,280 A100,100 0 0 0 70,180"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <line x1="70" y1="280" x2="360" y2="280"/>
+    <line x1="70" y1="280" x2="70" y2="20"/>
+  </g>
+  <g font-size="13" fill="currentColor">
+    <text x="96" y="258">Predictable</text>
+    <text x="150" y="196">Unpredictable</text>
+    <text x="196" y="122" fill="#0F5A4B" font-weight="600">Unknown</text>
+  </g>
+  <g font-size="12" fill="currentColor" opacity="0.8">
+    <text x="70" y="302">Known &amp; stable</text>
+    <text x="360" y="302" text-anchor="end">Technology unknown →</text>
+    <text x="18" y="150" text-anchor="middle" transform="rotate(-90 18 150)">Scope unknown →</text>
+  </g>
+</svg>
+<figcaption>Bridges, product extensions, events and marketing campaigns sit in the predictable corner. The further out a project sits, the worse a fixed up-front plan performs.</figcaption>
+</figure>
+
+The cost of ignoring this is documented. The Standish Group estimated that in 1995 US firms and agencies spent **$81 billion on cancelled software projects** [2]. That figure is now historical, but the problem is not: Krasner put the **cost of poor software quality in the United States at over $2 trillion in 2020**, counting unsuccessful projects, software failure and inferior legacy systems [3].
+
+### Rolling wave
+
+Agile project management responds with an incremental, iterative process — a **rolling wave**. Rather than planning everything up front, the design and outcome develop through a series of iterations, each typically one to four weeks.
+
+<figure>
+<svg viewBox="0 0 760 190" role="img" aria-labelledby="rw-title" style="width:100%;height:auto">
+  <title id="rw-title">Rolling wave development across five iterations</title>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <line x1="24" y1="150" x2="736" y2="150" stroke="#0F5A4B" stroke-width="2.5" marker-end="url(#ah)"/>
+  <g>
+    <circle cx="150" cy="150" r="5" fill="#0F5A4B"/><circle cx="270" cy="150" r="5" fill="#0F5A4B"/>
+    <circle cx="390" cy="150" r="5" fill="#0F5A4B"/><circle cx="510" cy="150" r="5" fill="#0F5A4B"/>
+    <circle cx="630" cy="150" r="5" fill="#0F5A4B"/>
+  </g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="2.2" marker-end="url(#ah)">
+    <path d="M150,150 C120,92 180,66 210,104"/>
+    <path d="M270,150 C240,92 300,66 330,104"/>
+    <path d="M390,150 C360,92 420,66 450,104"/>
+    <path d="M510,150 C480,92 540,66 570,104"/>
+    <path d="M630,150 C600,92 660,66 690,104"/>
+  </g>
+  <g font-size="12" fill="currentColor" text-anchor="middle">
+    <text x="150" y="174">Iteration 1</text><text x="270" y="174">Iteration 2</text>
+    <text x="390" y="174">Iteration 3</text><text x="510" y="174">Iteration 4</text>
+    <text x="630" y="174">Iteration 5</text>
+  </g>
+  <g font-size="12" fill="currentColor" opacity="0.75">
+    <text x="24" y="136">Initiation</text>
+    <text x="736" y="136" text-anchor="end">Closeout</text>
+  </g>
+</svg>
+<figcaption>Each iteration makes tangible progress — a requirement settled, a technical problem solved, a feature demonstrated — is reviewed, and feeds the next. Each subsumes the work of the last.</figcaption>
+</figure>
+
+Agile centres on close collaboration between the team and customer representatives, breaking work into small functional pieces and adapting as requirements move. It works best in **small teams of four to eight**.
+
+**It is not an either/or.** Agile methods are often used up front to establish specifications and requirements, with traditional methods then used to plan, execute and close. They are also used on particular technical problems inside an otherwise traditional project. That blending has a name — **hybrid project management** — and it is the common case in practice, not a compromise position.
+
+## 5 · What is driving the demand
+
+Four forces explain why this discipline keeps expanding [1].
+
+**Compression of the product life cycle.** In high-tech industries the product life cycle now averages six months to three years; thirty years ago ten to fifteen years was unremarkable. Time-to-market has become a competitive weapon, and the rule of thumb is unforgiving — a **six-month delay in a high-tech product can cost a third of its potential revenue share**.
+
+**The knowledge explosion.** Products and infrastructure now integrate far more technologies than they did. Building a road was once comparatively simple; today it involves materials, specifications, codes, aesthetics, equipment and a long list of specialists. It is now hard to find a new product that does not contain at least one microchip, and increasingly hard to find one that contains no AI. Integration is the problem, and project management is the discipline that does it.
+
+**The triple bottom line — planet, people, profit.** Sustainability moved from a public-relations concern to a design constraint. Reducing carbon and using renewable resources shows up directly in project objectives and techniques; on construction projects, achieving a LEED certification is now routinely an objective in its own right.
+
+**Small projects, big problems.** Organisations run hundreds of projects concurrently. Small projects tend to be perceived as low-impact because they do not consume much scarce resource — yet they carry the same or more risk than large ones, and because the inefficiency of any one is small and unmeasured, it is usually invisible. In aggregate the losses are substantial and sit outside the accounting system entirely. The problem this creates is organisational: sharing and prioritising resources across a portfolio, which is where Week 2 begins.
+
+## 6 · The socio-technical dimension
+
+Managing projects is multidimensional, and the two dimensions are genuinely different in kind [1].
+
+<figure>
+<svg viewBox="0 0 620 250" role="img" aria-labelledby="st-title" style="width:100%;height:auto">
+  <title id="st-title">The technical and sociocultural dimensions of project management</title>
+  <circle cx="238" cy="125" r="104" fill="#0F5A4B" opacity="0.14" stroke="#0F5A4B" stroke-width="1.8"/>
+  <circle cx="382" cy="125" r="104" fill="currentColor" opacity="0.05" stroke="currentColor" stroke-width="1.6"/>
+  <text x="150" y="60" font-size="14" font-weight="700" fill="#0F5A4B" text-anchor="middle">Technical</text>
+  <text x="470" y="60" font-size="14" font-weight="700" fill="currentColor" text-anchor="middle">Sociocultural</text>
+  <g font-size="12" fill="currentColor" text-anchor="middle">
+    <text x="150" y="112">Scope · WBS</text>
+    <text x="150" y="132">Schedules</text>
+    <text x="150" y="152">Resource allocation</text>
+    <text x="150" y="172">Baseline budgets</text>
+    <text x="150" y="192">Status reports</text>
+    <text x="470" y="112">Leadership</text>
+    <text x="470" y="132">Problem solving</text>
+    <text x="470" y="152">Teamwork · negotiation</text>
+    <text x="470" y="172">Politics</text>
+    <text x="470" y="192">Customer expectations</text>
+  </g>
+  <text x="310" y="130" font-size="12" font-style="italic" fill="currentColor" text-anchor="middle" opacity="0.85">both,</text>
+  <text x="310" y="148" font-size="12" font-style="italic" fill="currentColor" text-anchor="middle" opacity="0.85">always</text>
+</svg>
+<figcaption>The overlap is the job. Neither dimension is a specialism you can delegate away.</figcaption>
+</figure>
+
+The **technical** dimension is the orderly one: the methodology of planning, scheduling and controlling. Scope statements link the project to the customer; the work breakdown structure serves as the database connecting every level of the organisation to every deliverable, right down to the tasks in a work package. Because those linkages are integrated, the effect of any change is documented and traceable back to its source.
+
+The **sociocultural** dimension is the messier, often contradictory world of implementation. It means shaping a project culture that sustains teamwork and motivation, spotting and resolving problems before they threaten the work, steering back on track when — not if — things depart from plan, and building a cooperative network among stakeholders holding genuinely different standards, commitments and perspectives.
+
+A manager must be a master of both. Competence in one does not compensate for weakness in the other, and the failure modes look nothing alike.
+
+## 7 · Where generative AI enters
+
+Generative AI now touches every process group. The capabilities most often claimed for it are enhanced decision making, automation, innovative solutions, content creativity, business and data modelling, personalised communication, stakeholder collaboration, scenario planning, training, continuous learning-resource optimisation, and the ethical questions that come with all of it [4].
+
+| Process group | Where GenAI is applied | What it produces |
+|:--|:--|:--|
+| **Initiating** | Idea generation · stakeholder engagement · requirement gathering | Project concepts from historical patterns; tailored preliminary content; requirement lists drawn from past projects |
+| **Planning** | Plan drafting · risk scenario modelling · generative scenario planning | Initial plans from similar past projects; simulated risk scenarios; multiple execution scenarios |
+| **Executing** | Content creation · code generation · dynamic reporting | Designs and models for project content; code snippets and modules; real-time dashboards with financial metrics |
+| **Monitoring &amp; controlling** | Predictive risk narratives · feedback loops · predictive models | Descriptive risk scenarios; responses to common queries; models predicting future project states |
+| **Closing** | Automated summary reports | Detailed closure reports and feedback |
+
+: {tbl-colwidths="[20,38,42]"}
+
+Read that table with the course's standing rule in mind. Every row describes a **generated artefact**, and a generated artefact is a claim, not a result. A model will produce a plausible, well-formatted work breakdown structure in nine seconds and quietly omit a stakeholder, because it does not know who is in your room. In this course the check is graded, not the output.
 
 ::: {.tutor}
 ### Tutor check — one question at a time, no lecturing
 
-1. A vendor tells you 71% of software projects fail. What would you need to know before repeating that number?
-2. Your project finished 20% over budget and the client renewed for three more years. Did it succeed?
-3. Give me a project that was an efficiency success and a business failure. Now the reverse.
-4. If the iron triangle is inadequate, why is it still on every slide deck in the industry?
-5. PMBOK went from 49 processes → 0 → 40 in eight years. What problem was each swing solving?
-6. Which of these four documents could you actually sue someone over? Why does that matter?
-7. The Scrum Guide says Scrum is "purposefully incomplete." What is it incomplete *about*, and who fills the gap?
-8. Your organization mandates PRINCE2 and your team wants Scrum. Name the specific artifacts that collide.
+1. Define a project. Which of the five characteristics does a refinery maintenance shutdown fail, and is it still a project?
+2. A vendor tells you 71% of software projects fail. What would you need to know before repeating that number?
+3. Give me a program that is really a portfolio. How did you tell?
+4. Effort peaks during executing, but the leverage is in defining. Explain that apparent contradiction.
+5. Which of the two dimensions — technical or sociocultural — is easier to teach? Which is easier to fake?
 :::
 
 ::: {.editor}
-### Editor challenge — attack these claims
+### Editor challenge — attack this claim
 
-> "Because 99.5% of large projects miss at least one of budget, schedule, or benefits, the discipline of project management has essentially failed."
+> "Agile is a response to bad planning. A team that understood its scope properly would not need iterations."
 
-Lines of attack: selection effects in the database; the counterfactual is unmeasured — how bad would
-these projects be *without* project management?; "benefits shortfall" depends on who wrote the
-business case; the Scandinavian data contradicts universality; the base rate mixes project types with
-wildly different uncertainty.
-
-> "Standards bodies revise their frameworks primarily to sell new certifications, not because knowledge advanced."
-
-This one is uncomfortable and partly defensible. Separate the cynical claim (revenue motive) from the
-testable one (did practice improve?). The Scrum Guide — free, and unrevised for six years — is the
-counterexample that complicates the cynical reading.
+Attack it. Some available lines: the uncertainty figure separates scope from technology, and a team can know one and not the other; iterations buy information that no amount of up-front thinking produces; but also — the claim is not entirely wrong, since "agile in name only" is a real failure mode where ceremonies change and decision rights do not.
 :::
+
+::: {.roommate}
+### Roommate link
+
+**Cooking a dinner party vs. running a restaurant.** The dinner party is a project — fixed date, unique menu, guests who will remember it. The restaurant is operations. A chef who runs a restaurant well can still fail at a dinner party, because the failure modes differ: the restaurant's enemy is variance, the dinner party's enemy is the thing you forgot to buy.
+
+Now notice the second lesson. You cannot cook the dinner party in iterations — the guests arrive once. That is what the uncertainty figure is telling you.
+:::
+
+## Where this sits in the course
+
+Chapter 2 takes up how organisations evaluate and select projects; Chapter 3, the organisational environment they run in. Chapters 4 through 9 build the plan — scope and work breakdown structure, cost and time estimates, the scheduled network of activities, risk, resources and duration.
+
+A real understanding of project management does not come from knowing what a scope statement is, or a critical path. It comes from seeing how the parts interact to determine what happens to a project.
+
+## References
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 1.
+2. The Standish Group (1995). *The CHAOS Report*.
+3. Krasner, H. (2022). *The Cost of Poor Software Quality in the US: A 2022 Report*. Consortium for Information & Software Quality.
+4. Project Management Institute. *A Guide to the Project Management Body of Knowledge (PMBOK Guide)*, 7th ed., and current practitioner literature on generative AI in project delivery.
