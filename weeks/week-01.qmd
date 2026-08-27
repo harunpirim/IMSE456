@@ -6,7 +6,7 @@ chapter: "Larson Ch. 1"
 dates: "25 and 27 August"
 reading: "Larson Ch. 1"
 session-a: "A Day in the Life — what a project manager actually does"
-session-b: "Answer Chapter 1 with a model, then check its work"
+session-b: "Chapter 1 review questions"
 video:
   provider: none
   id: ""
@@ -19,7 +19,7 @@ lab: true
 <dt>Sessions</dt><dd>25 &amp; 27 August</dd>
 <dt>Chapter</dt><dd>Larson Ch. 1</dd>
 <dt>Tuesday</dt><dd>A Day in the Life — what a project manager actually does</dd>
-<dt>Thursday</dt><dd>Answer Chapter 1 with a model, then check its work</dd>
+<dt>Thursday</dt><dd>Chapter 1 review questions</dd>
 <dt>Reading</dt><dd>Larson Ch. 1</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
@@ -521,7 +521,7 @@ How effectively do you think Troi spent her day? What does the case tell you abo
 # Thursday studio
 
 ::: {.studio}
-#### Answer Chapter 1 with a model, then check its work
+#### Chapter 1 review questions
 
 Individual work. Answer the five review questions unaided first, then bring a model in — and account for every place it was wrong and every place it changed your mind. One page.
 

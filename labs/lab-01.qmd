@@ -1,5 +1,5 @@
 ---
-title: "Studio 1 · Answer Chapter 1 with a model, then check its work"
+title: "Studio 1 · Chapter 1 review questions"
 subtitle: "Week 1 — Modern Project Management · Larson Ch. 1"
 week: 1
 release: "2026-08-25"
@@ -7,9 +7,10 @@ release: "2026-08-25"
 
 ::: {.week-meta}
 <dl>
-<dt>Deliverable</dt><dd><strong>SA1</strong> — a <strong>one-page report</strong>, uploaded to Blackboard</dd>
+<dt>Deliverable</dt><dd><strong>SA1</strong> — a <strong>one-page report</strong> ending in a reconciliation paragraph, uploaded to Blackboard</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
-<dt>Tools</dt><dd>Gemini (or the assistant you have access to)</dd>
+<dt>Session</dt><dd>Build, Use, Reconcile, then save and upload — roughly 25, 20 and 15 minutes. Pacing guidance, not a bell.</dd>
+<dt>Tools</dt><dd>Gemini and Antigravity</dd>
 <dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-01.qmd">Week 1 — Modern Project Management</a></dd>
 </dl>
@@ -20,34 +21,8 @@ release: "2026-08-25"
 in a team; the studio is where the thinking gets into your own hands.
 :::
 
-The session runs to a fixed clock: **Answer** 20 minutes, **Generate** 20, **Reconcile** 30, then
-save and upload. The move from Answer to Generate is called at minute 20 whether or not you
-finished — an unfinished answer is a legitimate finding, and you will report it as one.
-
 ::: {.part}
-### Part 1 · Before you arrive
-
-Accounts and installs. Do these before Thursday, not during it. Nothing here is graded, and nothing
-here is part of SA1 — but Week 3 and Week 4 assume it is already done.
-
-1. Claim your AI access. Register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible — a **Pro account is what this course assumes**, because the free tier runs out of capacity partway through a studio and leaves you stuck. **If you do not have a Pro account, or you try to register and cannot, come and see me or the TA before Thursday.** We will sort out access for you. Do not spend your own money on this.
-2. Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`. You will use it from Week 3.
-3. Install [ProjectLibre](https://www.projectlibre.com/) and open it once to confirm it launches. If it fails on your machine it fails *today*, not in Week 4 — [GanttProject](https://www.ganttproject.biz/) is the sanctioned fallback and costs you nothing.
-4. Create the cloud folder you will use all semester. Use the **Google Drive or OneDrive that comes with your NDSU account** — both are provided by the university and neither costs anything. Name it `IMSE456`. **Everything in this course is saved there, never to a local disk.**
-5. Open the access form linked on Blackboard: which machine you will work on, and which AI tooling you can reach. Two minutes, no effect on your grade — it decides which version of every later lab sheet you get.
-:::
-
-::: {.part}
-### Part 2 · What you leave with
-
-**SA1 — one page.** Not two. The five review questions from the week page answered in your own
-words, and a record of where the model helped and where it was wrong.
-
-The page limit is the exercise. Anyone can generate four pages in nine seconds.
-:::
-
-::: {.part}
-### Part 3 · Answer first, unaided — 20 minutes
+### Part 1 · Build — answer first, unaided
 
 **You go first. The model goes second.** That order is the whole point, and reversing it destroys
 the only data this studio produces.
@@ -60,26 +35,21 @@ every other tab.
 2. Where you are unsure, write **"unsure"** and move on. Do not guess to fill the space.
 3. Where you cannot answer at all, write **"no answer"**.
 
-Those two marks are the most valuable thing on the page at minute 20. Keep this draft — you are
-going to compare against it, and you cannot reconstruct it afterwards.
+Keep this draft. You are going to compare against it, and you cannot reconstruct it afterwards.
 :::
 
 ::: {.part}
-### Part 4 · Now bring the model in — 20 minutes
+### Part 2 · Use — now bring the model in
 
 1. Give the model the same five questions. Ask for its answers.
 2. For **every** question — including the ones you were confident about — ask it one follow-up that
    pushes on something specific: *"which of the five characteristics does that example actually
    fail?"*, *"give me a counter-example"*, *"what would change your answer?"*
-3. Pick **one exercise** from the week page and work it with the model's help.
-4. Keep the transcript, or the link to it. You need it for the acknowledgement.
-
-Ask it for its sources on any factual claim — a number, a date, a study. Then check one of them
-against the chapter. Note what you find, whichever way it goes.
+3. Keep the transcript, or the link to it. You need it for the acknowledgement.
 :::
 
 ::: {.part}
-### Part 5 · Reconcile, and write the page — 25 minutes
+### Part 3 · Reconcile, and write the page
 
 This is the graded part. Everything before it was raw material.
 
@@ -92,30 +62,20 @@ Then account for the difference. On the page, name:
   with it. "It was generic" is not specific enough; "it defined a program as any set of projects and
   dropped the common-goal requirement, which is what separates a program from a portfolio" is.
 - **At least one place it changed your mind**, and what specifically moved you.
-- **Every question you marked "unsure" at minute 20** — say whether you are still unsure, and if
-  not, what resolved it.
-
-If the model was right about everything, you did not push hard enough in Part 4, and you should say
-so on the page rather than pretend otherwise. That is a legitimate finding and it is graded as one.
 :::
 
 ::: {.part}
-### Part 6 · Done looks like — check this before you upload
+### Part 4 · Save it, then upload it
+
+Check this first:
 
 - [ ] one page, and genuinely one page
 - [ ] all five review questions answered in your own words
-- [ ] one exercise worked
-- [ ] at least one specific model error named, with what was wrong with it
-- [ ] at least one place the model changed your mind
-- [ ] every minute-20 "unsure" accounted for
+- [ ] a reconciliation paragraph naming one place the model was wrong and one place it changed your mind
 - [ ] which AI tool you used, and a link to the transcript
-:::
 
-::: {.part}
-### Part 7 · Save it, then upload it
-
-Two steps, in this order. They are not the same step, and skipping the first is how people lose a
-semester of work.
+Then two steps, in this order. They are not the same step, and skipping the first is how people lose
+a semester of work.
 
 **1 · Save your own copy to the cloud.** Use the **Google Drive or OneDrive that comes with your
 NDSU account** — both are provided to you by the university and neither costs anything. Make a
@@ -131,12 +91,13 @@ home, and a drive that fails the night before a deadline is not an extension.
 and you will get written feedback on it.
 :::
 
-::: {.browser-path}
-**Working on a lab machine, or without your own device?**
+::: {.callout-note appearance="simple"}
+**Accounts to set up before Thursday.** None of this is graded and none of it is part of SA1, but
+Week 3 and Week 4 assume it is already done.
 
-Everything in this studio runs in a browser. Write the page in Google Docs or Word Online — both
-come with your NDSU account — and export to PDF at the end. No install is needed for SA1; the
-installs in Part 1 are for later weeks.
+- Claim your AI access. Register the free student year at [gemini.google/students](https://gemini.google/students/) if you are eligible — a **Pro account is what this course assumes**, because the free tier runs out of capacity partway through a studio and leaves you stuck. **If you do not have a Pro account, or you try to register and cannot, come and see me or the TAs before Thursday.** We will sort out access for you. Do not spend your own money on this.
+- Create a Taiga account at [tree.taiga.io](https://tree.taiga.io) with your NDSU email, and a private project named `IMSE456-yourlastname`. You will use it from Week 3.
+- Create the cloud folder you will use all semester. Use the **Google Drive or OneDrive that comes with your NDSU account** — both are provided by the university and neither costs anything. Name it `IMSE456`. **Everything in this course is saved there, never to a local disk.**
 :::
 
 ## Study loop for this week
@@ -152,4 +113,3 @@ refinery shutdown — until I stop treating it as a fact about the world.
 ```
 
 See [AI Studio](../ai.qmd) for the Editor and Roommate prompts and the full loop.
-

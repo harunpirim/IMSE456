@@ -28,7 +28,7 @@ The studios assume a **Gemini Pro account**. The free tier will not carry you th
 runs out of capacity partway and leaves you stuck halfway through the work.
 
 Students can get Pro at no cost through the free student year. **If you do not have a Pro account,
-or you try to register and cannot, come and see the instructor or the TA.** Access will be sorted
+or you try to register and cannot, come and see the instructor or the TAs.** Access will be sorted
 out for you, and API keys are supplied to anyone who needs them.
 
 **Do not spend your own money on this.** No graded work in this course depends on being able to buy

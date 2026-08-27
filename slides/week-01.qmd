@@ -542,7 +542,7 @@ Then the call back: her own firm's **marketing rep had promised features** the s
 - Studio: [Lab 1](../labs/lab-01.qmd)
 - Reading: Larson Ch. 1
 
-**Thursday:** answer Chapter 1 with a model, then check its work. One page.
+**Thursday:** Chapter 1 review questions — answer them unaided, then bring a model in. One page.
 
 ::: {.aside}
 Chapter 2 takes up how organisations evaluate and select projects.

@@ -14,10 +14,14 @@ subtitle: "IMSE 456/656 · Project Management · Fall 2026"
 <dt>Instructor</dt><dd>Harun Pirim, PhD</dd>
 <dt>Email</dt><dd>harun.pirim@ndsu.edu</dd>
 <dt>Teaching assistant</dt><dd>Faria Farzana — faria.farzana@ndsu.edu</dd>
+<dt>Studio TA</dt><dd>Kazi Kibria — kazi.kibria@ndsu.edu</dd>
 <dt>TA office</dt><dd>Offerdahl 102</dd>
 <dt>TA office hours</dt><dd>Thursday 2–3 p.m., or by appointment</dd>
 </dl>
 :::
+
+**Anything about a studio goes to Kazi** — the Thursday session, the tools, the sheet, what you
+uploaded. Everything else goes to Faria.
 
 ## Catalog description
 
@@ -150,7 +154,7 @@ not be asked to buy software for this course.**
 | [Google Colab](https://colab.research.google.com) | Python: networkx, pandas, numpy, matplotlib, PuLP | Free, browser |
 | Excel or Numbers | Scoring models, crash tables, decision tools | Whichever you have; templates ship as `.xlsx` |
 | [draw.io](https://app.diagrams.net) | WBS trees, networks, org charts, stakeholder maps | Free, browser |
-| Gemini and Antigravity | Drafting, reasoning, and agent building | Free to students, but a **Pro account is needed** — the free tier is not enough. Cannot get one? See the instructor or TA; API keys are supplied to anyone who needs them |
+| Gemini and Antigravity | Drafting, reasoning, and agent building | Free to students, but a **Pro account is needed** — the free tier is not enough. Cannot get one? See the instructor or the TAs; API keys are supplied to anyone who needs them |
 
 : {tbl-colwidths="[18,46,36]"}
 
@@ -212,7 +216,7 @@ classes is expected. Students should contact the instructor as soon as possible 
 any extended illness or family emergency that might warrant an extension on assignments.
 
 Attendance is not a direct component of the grade. But studio deliverables are produced during
-Thursday sessions with the instructor and TA circulating, so an absence is expensive in practice
+Thursday sessions with the instructor and the TAs circulating, so an absence is expensive in practice
 even though it is not scored.
 
 Veterans and student service members with special circumstances or who are activated are encouraged
