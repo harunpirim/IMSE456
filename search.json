@@ -60,14 +60,14 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Course\n\n\nIMSE 456/656 — Project Management (3 credits)\n\n\nTerm\n\n\nFall 2026 · 25 August – 10 December 2026\n\n\nMeets\n\n\nTuesday & Thursday, 3:30 – 4:45 p.m.\n\n\nRoom\n\n\nAg Hill Center, Room 240\n\n\nInstructor\n\n\nHarun Pirim, PhD\n\n\nEmail\n\n\nharun.pirim@ndsu.edu\n\n\nTeaching assistant\n\n\nFaria Farzana — faria.farzana@ndsu.edu\n\n\nTA office\n\n\nOfferdahl 102\n\n\nTA office hours\n\n\nThursday 2–3 p.m., or by appointment"
+    "text": "Course\n\n\nIMSE 456/656 — Project Management (3 credits)\n\n\nTerm\n\n\nFall 2026 · 25 August – 10 December 2026\n\n\nMeets\n\n\nTuesday & Thursday, 3:30 – 4:45 p.m.\n\n\nRoom\n\n\nAg Hill Center, Room 240\n\n\nInstructor\n\n\nHarun Pirim, PhD\n\n\nEmail\n\n\nharun.pirim@ndsu.edu\n\n\nTeaching assistant\n\n\nFaria Farzana — faria.farzana@ndsu.edu\n\n\nStudio TA\n\n\nKazi Kibria — kazi.kibria@ndsu.edu\n\n\nTA office\n\n\nOfferdahl 102\n\n\nTA office hours\n\n\nThursday 2–3 p.m., or by appointment\n\n\n\nAnything about a studio goes to Kazi — the Thursday session, the tools, the sheet, what you uploaded. Everything else goes to Faria."
   },
   {
     "objectID": "syllabus.html#basic-information",
     "href": "syllabus.html#basic-information",
     "title": "Syllabus",
     "section": "",
-    "text": "Course\n\n\nIMSE 456/656 — Project Management (3 credits)\n\n\nTerm\n\n\nFall 2026 · 25 August – 10 December 2026\n\n\nMeets\n\n\nTuesday & Thursday, 3:30 – 4:45 p.m.\n\n\nRoom\n\n\nAg Hill Center, Room 240\n\n\nInstructor\n\n\nHarun Pirim, PhD\n\n\nEmail\n\n\nharun.pirim@ndsu.edu\n\n\nTeaching assistant\n\n\nFaria Farzana — faria.farzana@ndsu.edu\n\n\nTA office\n\n\nOfferdahl 102\n\n\nTA office hours\n\n\nThursday 2–3 p.m., or by appointment"
+    "text": "Course\n\n\nIMSE 456/656 — Project Management (3 credits)\n\n\nTerm\n\n\nFall 2026 · 25 August – 10 December 2026\n\n\nMeets\n\n\nTuesday & Thursday, 3:30 – 4:45 p.m.\n\n\nRoom\n\n\nAg Hill Center, Room 240\n\n\nInstructor\n\n\nHarun Pirim, PhD\n\n\nEmail\n\n\nharun.pirim@ndsu.edu\n\n\nTeaching assistant\n\n\nFaria Farzana — faria.farzana@ndsu.edu\n\n\nStudio TA\n\n\nKazi Kibria — kazi.kibria@ndsu.edu\n\n\nTA office\n\n\nOfferdahl 102\n\n\nTA office hours\n\n\nThursday 2–3 p.m., or by appointment\n\n\n\nAnything about a studio goes to Kazi — the Thursday session, the tools, the sheet, what you uploaded. Everything else goes to Faria."
   },
   {
     "objectID": "syllabus.html#catalog-description",
@@ -116,7 +116,7 @@
     "href": "syllabus.html#required-student-resources",
     "title": "Syllabus",
     "section": "Required student resources",
-    "text": "Required student resources\nEverything below is free to you, licensed by the university, or already on your machine. You will not be asked to buy software for this course.\n\n\n\n\n\n\n\n\nTool\nWhat for\nAccess\n\n\n\n\nTaiga\nBacklog, sprints, task ownership, evidence\nFree account, browser\n\n\nProjectLibre\nWBS, Gantt, network, critical path, resource levelling\nFree download; Smartsheet substitutes in a browser\n\n\nSmartsheet\nShared schedules, resource views, dashboards, forms, approvals\nLicensed by NDSU, browser\n\n\nPower BI\nDashboards and analytics over the project record\nFree in a browser at app.powerbi.com; Desktop is also available on campus Windows machines\n\n\nGoogle Colab\nPython: networkx, pandas, numpy, matplotlib, PuLP\nFree, browser\n\n\nExcel or Numbers\nScoring models, crash tables, decision tools\nWhichever you have; templates ship as .xlsx\n\n\ndraw.io\nWBS trees, networks, org charts, stakeholder maps\nFree, browser\n\n\nGemini and Antigravity\nDrafting, reasoning, and agent building\nFree to students, but a Pro account is needed — the free tier is not enough. Cannot get one? See the instructor or TA; API keys are supplied to anyone who needs them\n\n\n\nA non-programmable calculator is required for the midterm.\n\n\n\n\n\n\nIf you work on lab computers only, this course still works\n\n\n\nAlmost everything runs in a browser. Where an install is a problem, the lab sheet gives you a substitute — Smartsheet in place of ProjectLibre. Nothing is lost and nothing is graded differently.\nSoftware installation is never homework. Week 1’s access form asks which machine you will work on and which AI tools you can reach; your answer decides which version of every later lab sheet you receive. It has no effect on your grade.\nSave nothing to a local disk. Lab machines are wiped on reboot and laptops get left at home. Set up a cloud folder in Week 1 and keep everything there."
+    "text": "Required student resources\nEverything below is free to you, licensed by the university, or already on your machine. You will not be asked to buy software for this course.\n\n\n\n\n\n\n\n\nTool\nWhat for\nAccess\n\n\n\n\nTaiga\nBacklog, sprints, task ownership, evidence\nFree account, browser\n\n\nProjectLibre\nWBS, Gantt, network, critical path, resource levelling\nFree download; Smartsheet substitutes in a browser\n\n\nSmartsheet\nShared schedules, resource views, dashboards, forms, approvals\nLicensed by NDSU, browser\n\n\nPower BI\nDashboards and analytics over the project record\nFree in a browser at app.powerbi.com; Desktop is also available on campus Windows machines\n\n\nGoogle Colab\nPython: networkx, pandas, numpy, matplotlib, PuLP\nFree, browser\n\n\nExcel or Numbers\nScoring models, crash tables, decision tools\nWhichever you have; templates ship as .xlsx\n\n\ndraw.io\nWBS trees, networks, org charts, stakeholder maps\nFree, browser\n\n\nGemini and Antigravity\nDrafting, reasoning, and agent building\nFree to students, but a Pro account is needed — the free tier is not enough. Cannot get one? See the instructor or the TAs; API keys are supplied to anyone who needs them\n\n\n\nA non-programmable calculator is required for the midterm.\n\n\n\n\n\n\nIf you work on lab computers only, this course still works\n\n\n\nAlmost everything runs in a browser. Where an install is a problem, the lab sheet gives you a substitute — Smartsheet in place of ProjectLibre. Nothing is lost and nothing is graded differently.\nSoftware installation is never homework. Week 1’s access form asks which machine you will work on and which AI tools you can reach; your answer decides which version of every later lab sheet you receive. It has no effect on your grade.\nSave nothing to a local disk. Lab machines are wiped on reboot and laptops get left at home. Set up a cloud folder in Week 1 and keep everything there."
   },
   {
     "objectID": "syllabus.html#evaluation-procedures-and-criteria",
@@ -130,7 +130,7 @@
     "href": "syllabus.html#attendance",
     "title": "Syllabus",
     "section": "Attendance",
-    "text": "Attendance\nAccording to NDSU Policy 333, attendance in classes is expected. Students should contact the instructor as soon as possible to notify them of any extended illness or family emergency that might warrant an extension on assignments.\nAttendance is not a direct component of the grade. But studio deliverables are produced during Thursday sessions with the instructor and TA circulating, so an absence is expensive in practice even though it is not scored.\nVeterans and student service members with special circumstances or who are activated are encouraged to notify the instructor as soon as possible and are encouraged to provide Activation Orders."
+    "text": "Attendance\nAccording to NDSU Policy 333, attendance in classes is expected. Students should contact the instructor as soon as possible to notify them of any extended illness or family emergency that might warrant an extension on assignments.\nAttendance is not a direct component of the grade. But studio deliverables are produced during Thursday sessions with the instructor and the TAs circulating, so an absence is expensive in practice even though it is not scored.\nVeterans and student service members with special circumstances or who are activated are encouraged to notify the instructor as soon as possible and are encouraged to provide Activation Orders."
   },
   {
     "objectID": "syllabus.html#americans-with-disabilities-act-statement",
@@ -219,14 +219,14 @@
   {
     "objectID": "labs/lab-01.html",
     "href": "labs/lab-01.html",
-    "title": "Studio 1 · Answer Chapter 1 with a model, then check its work",
+    "title": "Studio 1 · Chapter 1 review questions",
     "section": "",
-    "text": "Deliverable\n\n\nSA1 — a one-page report, uploaded to Blackboard\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nTools\n\n\nGemini (or the assistant you have access to)\n\n\nAI use\n\n\nLevel 4 — full use with documentation · generate freely, verify everything, and append the AI acknowledgement\n\n\nWeek page\n\n\nWeek 1 — Modern Project Management\nThe session runs to a fixed clock: Answer 20 minutes, Generate 20, Reconcile 30, then save and upload. The move from Answer to Generate is called at minute 20 whether or not you finished — an unfinished answer is a legitimate finding, and you will report it as one."
+    "text": "Deliverable\n\n\nSA1 — a one-page report ending in a reconciliation paragraph, uploaded to Blackboard\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\nBuild, Use, Reconcile, then save and upload — roughly 25, 20 and 15 minutes. Pacing guidance, not a bell.\n\n\nTools\n\n\nGemini and Antigravity\n\n\nAI use\n\n\nLevel 4 — full use with documentation · generate freely, verify everything, and append the AI acknowledgement\n\n\nWeek page\n\n\nWeek 1 — Modern Project Management"
   },
   {
     "objectID": "labs/lab-01.html#study-loop-for-this-week",
     "href": "labs/lab-01.html#study-loop-for-this-week",
-    "title": "Studio 1 · Answer Chapter 1 with a model, then check its work",
+    "title": "Studio 1 · Chapter 1 review questions",
     "section": "Study loop for this week",
     "text": "Study loop for this week\nRun this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.\nBe my tutor on the difference between a project and an operation. Ask me\none question at a time. Don't lecture. Start by making me state the test,\nthen hand me cases that break it — a film studio, a release train, a\nrefinery shutdown — until I stop treating it as a fact about the world.\nSee AI Studio for the Editor and Roommate prompts and the full loop."
   },
@@ -242,7 +242,7 @@
     "href": "ai.html#what-you-have-and-what-it-costs-you",
     "title": "AI Studio",
     "section": "What you have, and what it costs you",
-    "text": "What you have, and what it costs you\n\n\n\n\n\n\n\n\nTool\nWhat you use it for\nAccess\n\n\n\n\nGemini\nDrafting work breakdowns, risk registers, status reports, and arguments you then have to check\nPro account needed — free to students; the free tier is not enough\n\n\nAntigravity\nBuilding and running small agents and code\nFree to everyone\n\n\nGoogle Colab\nPython notebooks for the studio work\nFree, in a browser, no install\n\n\n\n\n\n\n\n\n\nYou do not pay for anything — but you do need a Pro account\n\n\n\nThe studios assume a Gemini Pro account. The free tier will not carry you through a studio: it runs out of capacity partway and leaves you stuck halfway through the work.\nStudents can get Pro at no cost through the free student year. If you do not have a Pro account, or you try to register and cannot, come and see the instructor or the TA. Access will be sorted out for you, and API keys are supplied to anyone who needs them.\nDo not spend your own money on this. No graded work in this course depends on being able to buy a subscription — but it does depend on you telling us early if you cannot get access.\nIf you claim the free student year, note that it asks for a payment method and renews at full price when the year ends, so set yourself a reminder."
+    "text": "What you have, and what it costs you\n\n\n\n\n\n\n\n\nTool\nWhat you use it for\nAccess\n\n\n\n\nGemini\nDrafting work breakdowns, risk registers, status reports, and arguments you then have to check\nPro account needed — free to students; the free tier is not enough\n\n\nAntigravity\nBuilding and running small agents and code\nFree to everyone\n\n\nGoogle Colab\nPython notebooks for the studio work\nFree, in a browser, no install\n\n\n\n\n\n\n\n\n\nYou do not pay for anything — but you do need a Pro account\n\n\n\nThe studios assume a Gemini Pro account. The free tier will not carry you through a studio: it runs out of capacity partway and leaves you stuck halfway through the work.\nStudents can get Pro at no cost through the free student year. If you do not have a Pro account, or you try to register and cannot, come and see the instructor or the TAs. Access will be sorted out for you, and API keys are supplied to anyone who needs them.\nDo not spend your own money on this. No graded work in this course depends on being able to buy a subscription — but it does depend on you telling us early if you cannot get access.\nIf you claim the free student year, note that it asks for a payment method and renews at full price when the year ends, so set yourself a reminder."
   },
   {
     "objectID": "ai.html#how-much-ai-on-which-assessment",
@@ -788,7 +788,7 @@
     "href": "slides/week-01.html#this-week",
     "title": "Week 1 — Modern Project Management",
     "section": "This week",
-    "text": "This week\n\nNotes: Week 1\nStudio: Lab 1\nReading: Larson Ch. 1\n\nThursday: answer Chapter 1 with a model, then check its work. One page.\n\n\nChapter 2 takes up how organisations evaluate and select projects."
+    "text": "This week\n\nNotes: Week 1\nStudio: Lab 1\nReading: Larson Ch. 1\n\nThursday: Chapter 1 review questions — answer them unaided, then bring a model in. One page.\n\n\nChapter 2 takes up how organisations evaluate and select projects."
   },
   {
     "objectID": "slides/week-01.html#sources",
@@ -802,7 +802,7 @@
     "href": "weeks/week-01.html",
     "title": "Week 1 · Modern Project Management",
     "section": "",
-    "text": "Sessions\n\n\n25 & 27 August\n\n\nChapter\n\n\nLarson Ch. 1\n\n\nTuesday\n\n\nA Day in the Life — what a project manager actually does\n\n\nThursday\n\n\nAnswer Chapter 1 with a model, then check its work\n\n\nReading\n\n\nLarson Ch. 1\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave"
+    "text": "Sessions\n\n\n25 & 27 August\n\n\nChapter\n\n\nLarson Ch. 1\n\n\nTuesday\n\n\nA Day in the Life — what a project manager actually does\n\n\nThursday\n\n\nChapter 1 review questions\n\n\nReading\n\n\nLarson Ch. 1\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave"
   },
   {
     "objectID": "weeks/week-01.html#learning-objectives",
