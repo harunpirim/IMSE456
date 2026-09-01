@@ -36,6 +36,7 @@ python3 scripts/check_public.py           # fails if instructor content reached 
 
 ```bash
 npm install pptxgenjs                     # once
+npm install playwright                    # optional; draws the deck's SVG figures
 node scripts/qmd2pptx.js 1                # slides/week-01.qmd -> _pptx/week-01.pptx
 node scripts/qmd2pptx.js --all
 ```
@@ -207,6 +208,13 @@ run overwrites it). The converter reads `#`/`##` headings, lists, quotes, pipe t
 callouts and inline `**bold**`/`*italic*`/`` `code` ``; it drops reveal's `. . .` fragment markers,
 since a printed slide has no increments. Its palette is pinned to `styles.scss` (`#0F5A4B`), using
 Cambria/Calibri as metric-safe stand-ins for Spectral/Source Sans 3.
+
+A `<figure>` on a slide holds inline SVG, which PowerPoint has no equivalent for. If **playwright**
+is installed the converter rasterizes each one through its Chromium and embeds the PNG; if it is
+not, the figure becomes a placeholder box captioned with the SVG's `<title>` and the run prints a
+line saying so. Either way the export succeeds — read that line before presenting from the deck.
+The SVGs are sized in reveal's 1280x720 stage, which is the 13.33x7.5in slide at 96dpi, so a
+figure's px height carries over to PowerPoint unscaled unless the slide is too full to hold it.
 
 `scripts/qmd2docx.py` does the same job for a top-level page: `syllabus.qmd` → `_docx/syllabus.docx`,
 for anyone who asks for the syllabus as a document rather than a URL. `_docx/` is generated and

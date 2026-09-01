@@ -14,9 +14,12 @@
  * Understood from the source: `#` section divider, `##` slide, `-`/`1.` lists,
  * `>` quote, pipe tables, ::: {.aside} callouts, and **bold** / *italic* /
  * `code` inline. Reveal's `. . .` fragment markers are dropped — a printed
- * slide has no increments. A `<figure>` holding an inline SVG becomes a
- * captioned placeholder: there is no rasterizer here, so the diagram itself
- * stays on the web deck.
+ * slide has no increments. A `<figure>` holding an inline SVG is rasterized
+ * with Playwright's Chromium when that is installed, and falls back to a
+ * captioned placeholder box when it is not — so the export works either way,
+ * and says which you got.
+ *
+ *   npm install playwright     # optional: turns the placeholders into figures
  */
 const fs = require("fs");
 const path = require("path");
@@ -89,8 +92,11 @@ function parseBlocks(lines) {
       const buf = [];
       while (i < lines.length && !/<\/figure>/.test(lines[i])) buf.push(lines[i++]);
       if (i < lines.length) buf.push(lines[i++]);
-      const t = /<title[^>]*>([\s\S]*?)<\/title>/.exec(buf.join("\n"));
-      blocks.push({ type: "figure", text: t ? t[1].trim() : "Figure" });
+      const raw = buf.join("\n");
+      const t = /<title[^>]*>([\s\S]*?)<\/title>/.exec(raw);
+      const svg = /<svg[\s\S]*<\/svg>/.exec(raw);
+      blocks.push({ type: "figure", text: t ? t[1].trim() : "Figure",
+                    svg: svg ? svg[0] : null });
       continue;
     }
 
@@ -217,13 +223,20 @@ function contentSlide(pptx, slide, meta, num) {
         { x: M + 0.28, y, w: W - 2 * M - 0.28, h, valign: "middle", margin: 0 });
       y += h + 0.3;
     } else if (b.type === "figure") {
-      const h = Math.min(1.6, room - y);
-      s.addShape(pptx.ShapeType.rect, { x: M, y, w: W - 2 * M, h,
-        fill: { color: TINT }, line: { color: RULE, width: 1, dashType: "dash" } });
-      s.addText(runs(b.text + " — diagram, see the web deck",
-                     { fontSize: 15, italic: true, color: MUTED, fontFace: SANS }),
-        { x: M + 0.3, y, w: W - 2 * M - 0.6, h, valign: "middle", align: "center", margin: 0 });
-      y += h + 0.3;
+      if (b.png) {
+        const box = figureBox(b.svg, W - 2 * M, room - y - 0.15);
+        s.addImage({ data: b.png, x: (W - box.w) / 2, y, w: box.w, h: box.h,
+                     altText: b.text });
+        y += box.h + 0.3;
+      } else {
+        const h = Math.min(1.6, room - y);
+        s.addShape(pptx.ShapeType.rect, { x: M, y, w: W - 2 * M, h,
+          fill: { color: TINT }, line: { color: RULE, width: 1, dashType: "dash" } });
+        s.addText(runs(b.text + " — diagram, see the web deck",
+                       { fontSize: 15, italic: true, color: MUTED, fontFace: SANS }),
+          { x: M + 0.3, y, w: W - 2 * M - 0.6, h, valign: "middle", align: "center", margin: 0 });
+        y += h + 0.3;
+      }
     } else if (b.type === "list") {
       const items = b.items.map((it, i) => ({
         text: runs(it.text, { fontSize: 17, color: INK, fontFace: SANS }),
@@ -257,18 +270,96 @@ function contentSlide(pptx, slide, meta, num) {
     fontSize: 10, color: MUTED, fontFace: SANS, align: "right", margin: 0 });
 }
 
+// ---------------------------------------------------------------- figures
+
+/**
+ * Rasterize each figure's SVG to a PNG, in one browser for the whole run.
+ * Optional by design: without Playwright installed the blocks keep `png`
+ * unset and render as placeholder boxes instead.
+ *
+ * The deck's SVGs are sized in reveal's 1280x720 stage, which is exactly the
+ * 13.33x7.5in slide at 96dpi — so a figure's px height maps straight onto
+ * inches, and `figureBox` below can size it without guessing.
+ */
+async function renderFigures(blocks) {
+  const figs = blocks.filter((b) => b.type === "figure" && b.svg);
+  if (!figs.length) return true;
+
+  let chromium;
+  try { ({ chromium } = require("playwright")); } catch { return false; }
+
+  // Playwright pins a browser build its own version expects; this repo's
+  // container may carry a different one, so fall back to whatever is there.
+  let exe;
+  try {
+    exe = chromium.executablePath();
+    if (!fs.existsSync(exe)) exe = undefined;
+  } catch { /* not downloaded */ }
+  if (!exe) {
+    const root = process.env.PLAYWRIGHT_BROWSERS_PATH || "";
+    const dir = root && fs.existsSync(root)
+      ? fs.readdirSync(root).filter((d) => /^chromium-/.test(d)).sort().pop() : null;
+    if (dir) {
+      const c = path.join(root, dir, "chrome-linux", "chrome");
+      if (fs.existsSync(c)) exe = c;
+    }
+  }
+
+  let browser;
+  try { browser = await chromium.launch(exe ? { executablePath: exe } : {}); }
+  catch { return false; }
+
+  try {
+    const page = await browser.newPage({ deviceScaleFactor: 2 });
+    for (const b of figs) {
+      const [w, h] = svgBox(b.svg);
+      // INK resolves the SVGs' currentColor the way the deck's body text does
+      await page.setContent(
+        `<body style="margin:0;color:#${INK}">` +
+        `<div id="f" style="width:${w}px;height:${h}px">${b.svg}</div>`);
+      const shot = await page.locator("#f").screenshot({ omitBackground: true });
+      b.png = "data:image/png;base64," + shot.toString("base64");
+    }
+    return true;
+  } finally { await browser.close(); }
+}
+
+/** Natural px size of a figure: its inline height, and the viewBox ratio. */
+function svgBox(svg) {
+  const vb = /viewBox="0 0 ([\d.]+) ([\d.]+)"/.exec(svg);
+  const px = /height:\s*(\d+)px/.exec(svg);
+  const h = px ? Number(px[1]) : 400;
+  const ratio = vb ? Number(vb[1]) / Number(vb[2]) : 1.6;
+  return [Math.round(h * ratio), h];
+}
+
+/** Fit a figure into the room left on the slide, at 96dpi and centred. */
+function figureBox(svg, maxW, maxH) {
+  const [pw, ph] = svgBox(svg);
+  let w = pw / 96, h = ph / 96;
+  const k = Math.min(1, maxW / w, maxH / h);
+  return { w: w * k, h: h * k };
+}
+
 // ---------------------------------------------------------------- driver
 
-function build(src, destDir) {
+async function build(src, destDir) {
   const [meta, body] = frontMatter(fs.readFileSync(src, "utf8"));
   const pptx = new PptxGenJS();
   pptx.layout = "LAYOUT_WIDE";
   pptx.author = meta.author || "";
   pptx.title = meta.title || path.basename(src, ".qmd");
 
+  const slides = parseSlides(body);
+  const blocks = slides.flatMap((s) => s.blocks);
+  const drawn = await renderFigures(blocks);
+  const figs = blocks.filter((b) => b.type === "figure").length;
+  if (figs && !drawn)
+    console.warn(`  ${figs} figure(s) left as placeholders — \`npm install playwright\` to draw them`);
+
   titleSlide(pptx, meta);
   let n = 1;
-  for (const slide of parseSlides(body)) {
+  for (const slide of slides) {
     if (slide.section) sectionSlide(pptx, slide);
     else contentSlide(pptx, slide, meta, ++n);
   }
