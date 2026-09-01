@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A Quarto website — the course site for IMSE 456/656 (Project Management, NDSU, Fall 2026),
+A Quarto website — the course site for IMSE 456/656 (Program and Project Management, NDSU, Fall 2026),
 published to <https://harunpirim.github.io/IMSE456>. There is no application code: the "build"
 is a Python pre-processor (`scripts/gate.py`) followed by `quarto render`.
 

@@ -1,4 +1,4 @@
-# IMSE 456/656 — Project Management
+# IMSE 456/656 — Program and Project Management
 
 Course site for IMSE 456/656, Fall 2026, North Dakota State University.
 Live at **<https://harunpirim.github.io/IMSE456>**.

@@ -1,5 +1,5 @@
 ---
-title: "IMSE 456/656 — Project Management"
+title: "IMSE 456/656 — Program and Project Management"
 subtitle: "Fall 2026 · North Dakota State University"
 toc: false
 ---

@@ -9,7 +9,7 @@ project:
 
 website:
   title: "IMSE 456/656"
-  description: "Project Management in the AI Era — North Dakota State University"
+  description: "Program and Project Management in the AI Era — North Dakota State University"
   site-url: https://harunpirim.github.io/IMSE456
   repo-url: https://github.com/harunpirim/IMSE456
   repo-actions: [issue]
@@ -32,7 +32,7 @@ website:
         href: https://github.com/harunpirim/IMSE456
         aria-label: Course repository
   page-footer:
-    left: "IMSE 456/656 · Project Management · Fall 2026"
+    left: "IMSE 456/656 · Program and Project Management · Fall 2026"
     center: "Harun Pirim, PhD · North Dakota State University"
     right: "Built with [Quarto](https://quarto.org)"
 

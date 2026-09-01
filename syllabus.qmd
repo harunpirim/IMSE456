@@ -1,13 +1,13 @@
 ---
 title: "Syllabus"
-subtitle: "IMSE 456/656 · Project Management · Fall 2026"
+subtitle: "IMSE 456/656 · Program and Project Management · Fall 2026"
 ---
 
 ## Basic information
 
 ::: {.week-meta}
 <dl>
-<dt>Course</dt><dd>IMSE 456/656 — Project Management (3 credits)</dd>
+<dt>Course</dt><dd>IMSE 456/656 — Program and Project Management (3 credits)</dd>
 <dt>Term</dt><dd>Fall 2026 · 25 August – 10 December 2026</dd>
 <dt>Meets</dt><dd>Tuesday &amp; Thursday, 3:30 – 4:45 p.m.</dd>
 <dt>Room</dt><dd>Ag Hill Center, Room 240</dd>
