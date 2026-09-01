@@ -693,34 +693,6 @@ Exercises are reproduced from Larson & Gray, *Project Management: The Managerial
 
 ---
 
-::: {.tutor}
-### Tutor check — one question at a time, no lecturing
-
-1. An organization has a clear strategy, a competent priority system, and a portfolio full of the wrong projects. Give a mechanism by which that happens.
-2. Payback prefers Project B; NPV prefers Project A. Both are computed correctly. What question is each one answering?
-3. Why can a compliance project not be ranked against a strategic project on net present value? Answer without using the word "unfair".
-4. A weighted model's ranking flips when one weight moves ten points. Is the model broken? Defend either answer.
-5. White elephants are never approved as white elephants. So how does an organization end up with a herd of them?
-:::
-
-::: {.editor}
-### Editor challenge — attack this claim
-
-> "A weighted scoring model makes project selection objective. Once the criteria are agreed, the arithmetic decides, and politics is out of the process."
-
-Attack it. Available lines: the weights are themselves a judgement, and the Alpha–Gamma inversion shows how little movement it takes to change the answer; must objectives are set by someone; a proposal's impact scores are assigned by people who know what score their project needs. But the claim is not empty — something real does change when the criteria are published. Decide what survives.
-:::
-
-::: {.roommate}
-### Roommate link
-
-**Choosing courses for next semester.** You have a credit limit, a graduation requirement, a couple of courses you actually want, and one that fits your schedule badly but is only offered every other year. The requirement is a must objective — no weighting, no trade. The rest are want objectives, and your weights are things like *how much do I care about this subject* against *what does the schedule allow*.
-
-Now the portfolio half. A semester of four easy electives is bread and butter: you will pass, and you will not have moved. A semester of four brutal ones might be the year you drop something. The choice you make is not course by course; it is about the balance of the set. And the course you keep deferring because it never quite fits — check whether it is still worth taking, or whether it became a white elephant two semesters ago.
-:::
-
----
-
 # Where this sits in the course
 
 *Following Larson & Gray, Ch. 2 [1].*
