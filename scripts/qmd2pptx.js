@@ -14,7 +14,9 @@
  * Understood from the source: `#` section divider, `##` slide, `-`/`1.` lists,
  * `>` quote, pipe tables, ::: {.aside} callouts, and **bold** / *italic* /
  * `code` inline. Reveal's `. . .` fragment markers are dropped — a printed
- * slide has no increments.
+ * slide has no increments. A `<figure>` holding an inline SVG becomes a
+ * captioned placeholder: there is no rasterizer here, so the diagram itself
+ * stays on the web deck.
  */
 const fs = require("fs");
 const path = require("path");
@@ -80,6 +82,18 @@ function parseBlocks(lines) {
     }
     if (/^:::/.test(line)) { i++; continue; }
 
+    // A raw <figure> wraps an inline SVG, which has no PowerPoint equivalent
+    // here. Swallow the markup and keep the figure's accessible title, so the
+    // slide says what is missing instead of printing the SVG source.
+    if (/^\s*<figure\b/.test(line)) {
+      const buf = [];
+      while (i < lines.length && !/<\/figure>/.test(lines[i])) buf.push(lines[i++]);
+      if (i < lines.length) buf.push(lines[i++]);
+      const t = /<title[^>]*>([\s\S]*?)<\/title>/.exec(buf.join("\n"));
+      blocks.push({ type: "figure", text: t ? t[1].trim() : "Figure" });
+      continue;
+    }
+
     if (isTable(line)) {
       const rows = [];
       while (i < lines.length && isTable(lines[i])) {
@@ -115,6 +129,7 @@ function parseBlocks(lines) {
     const buf = [];
     while (i < lines.length && lines[i].trim() && !isTable(lines[i])
            && !/^\s*([-*]|\d+\.)\s+/.test(lines[i]) && !/^:::/.test(lines[i])
+           && !/^\s*<figure\b/.test(lines[i])
            && !/^\s*>/.test(lines[i]) && !/^\s*\.\s*\.\s*\.\s*$/.test(lines[i])) {
       buf.push(lines[i++]);
     }
@@ -200,6 +215,14 @@ function contentSlide(pptx, slide, meta, num) {
       s.addShape(pptx.ShapeType.rect, { x: M, y, w: 0.045, h, fill: { color: GREEN } });
       s.addText(runs(b.text, { fontSize: 19, italic: true, color: INK, fontFace: SERIF }),
         { x: M + 0.28, y, w: W - 2 * M - 0.28, h, valign: "middle", margin: 0 });
+      y += h + 0.3;
+    } else if (b.type === "figure") {
+      const h = Math.min(1.6, room - y);
+      s.addShape(pptx.ShapeType.rect, { x: M, y, w: W - 2 * M, h,
+        fill: { color: TINT }, line: { color: RULE, width: 1, dashType: "dash" } });
+      s.addText(runs(b.text + " — diagram, see the web deck",
+                     { fontSize: 15, italic: true, color: MUTED, fontFace: SANS }),
+        { x: M + 0.3, y, w: W - 2 * M - 0.6, h, valign: "middle", align: "center", margin: 0 });
       y += h + 0.3;
     } else if (b.type === "list") {
       const items = b.items.map((it, i) => ({

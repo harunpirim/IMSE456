@@ -12,3 +12,9 @@ $presentation-font-size-root: 34px !default;
 .reveal blockquote { font-family: "Spectral", Georgia, serif; font-style: italic; border-left: 3px solid #0F5A4B; }
 .reveal .slide-number { font-family: "IBM Plex Mono", monospace; }
 .reveal code { font-family: "IBM Plex Mono", monospace; }
+
+/* Figures ported from the week notes. The SVG carries its own height in the
+   1280x720 stage; width:100% plus the default preserveAspectRatio centres the
+   drawing inside that box. */
+.reveal figure.slide-fig { margin: 0 auto; }
+.reveal figure.slide-fig svg { display: block; margin: 0 auto; }
