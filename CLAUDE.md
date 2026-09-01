@@ -40,6 +40,11 @@ node scripts/qmd2pptx.js 1                # slides/week-01.qmd -> _pptx/week-01.
 node scripts/qmd2pptx.js --all
 ```
 
+```bash
+python3 scripts/qmd2docx.py               # syllabus.qmd -> _docx/syllabus.docx
+python3 scripts/qmd2docx.py project ai    # any top-level page
+```
+
 `gate.py` prints a per-week live/gated table. Read that output before pushing any change to a
 `release:` date. There are no tests; the gate output plus a visual pass in `quarto preview` is
 the verification loop.
@@ -202,3 +207,10 @@ run overwrites it). The converter reads `#`/`##` headings, lists, quotes, pipe t
 callouts and inline `**bold**`/`*italic*`/`` `code` ``; it drops reveal's `. . .` fragment markers,
 since a printed slide has no increments. Its palette is pinned to `styles.scss` (`#0F5A4B`), using
 Cambria/Calibri as metric-safe stand-ins for Spectral/Source Sans 3.
+
+`scripts/qmd2docx.py` does the same job for a top-level page: `syllabus.qmd` → `_docx/syllabus.docx`,
+for anyone who asks for the syllabus as a document rather than a URL. `_docx/` is generated and
+gitignored on the same terms. It fixes two things that are right on a web page and wrong in Word —
+relative `.qmd` links become published URLs, and the `.week-meta` `<dl>` becomes a two-column table
+instead of twenty loose paragraphs. Both happen in a temp copy, so the source tree is untouched.
+Word populates the table of contents when it opens the file; it looks empty until then.

@@ -11,6 +11,7 @@ _build/
 /.quarto/
 private/
 _pptx/
+_docx/
 node_modules/
 raw_notes/
 *.pdf
