@@ -652,42 +652,6 @@ That is a genuinely uncomfortable conclusion, and worth sitting with. It means t
 
 ---
 
-# Tuesday — Four proposals, two budgets
-
-::: {.case}
-Northline Instruments makes surgical measurement devices. Its governance team meets each March to set the year's portfolio, working to a capital envelope of \$1.4 million. Last autumn the team set a balance for the year: 30 percent to compliance and operational work, 70 percent to strategic work.
-
-Four proposals arrive.
-
-**P1 · Sterilisation logging.** A new regulatory requirement takes effect in fourteen months. Without the logging system Northline cannot ship into its second-largest market. Cost \$380,000. No revenue attached. The risk assessment is unremarkable: proven technology, skills in-house.
-
-**P2 · CNC controller replacement.** The controllers on three machining cells are eleven years old and failing more often each quarter. Cost \$300,000, saving an estimated \$95,000 a year in downtime and rework. Payback a little over three years.
-
-**P3 · Wireless sensor line.** A new product for a segment Northline has never sold into. Cost \$620,000. Marketing's estimate puts the net present value at \$410,000 if it succeeds. The technology is unproven in-house, and the engineering lead's confidence in the schedule is, in her own words, moderate.
-
-**P4 · Brand refresh.** New identity, brochures and trade-show stand. Cost \$160,000. No measurable return is offered, and the proposal form's "impact of not doing it" field reads *falling behind competitors in appearance*. The sponsor is the chief executive, who has mentioned it twice in company meetings.
-
-The weighted scoring model, run on all four, puts P3 first, P2 second, P4 third and P1 last — P1 scores almost nothing, because it opens no market and improves no operation.
-
-::: {.qn}
-Which budget does each proposal belong to, and what does the balance decision force the team to do? P1 ranks last and is not optional — what does that tell you about the scoring model? And how should the team handle P4, given who is sponsoring it?
-:::
-:::
-
----
-
-# Thursday studio
-
-::: {.studio}
-#### Build a selection model, then let it disagree with you
-
-Individual work. Rank four proposals on judgement first, then build a weighted scoring model and the financial screens, and account for every place the model contradicts your ranking. One page.
-
-**[Slides](../slides/week-02.qmd)**
-:::
-
----
-
 # Exercises
 
 1. You manage a hotel resort located on the South Beach on the Island of Kauai in Hawaii. You are shifting the focus of your resort from a traditional fun-in-the-sun destination to eco-tourism. (Eco-tourism focuses on environmental awareness and education.) How would you classify the following projects in terms of compliance, strategic, and operational?
