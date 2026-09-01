@@ -13,5 +13,7 @@ private/
 _pptx/
 _docx/
 node_modules/
+package.json
+package-lock.json
 raw_notes/
 *.pdf
