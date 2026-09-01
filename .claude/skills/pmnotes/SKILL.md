@@ -150,8 +150,12 @@ copy to the **Google Drive or OneDrive that comes with their NDSU account** — 
 and outlives the course — and *then* upload to Blackboard for grading. People who conflate the two
 end a semester with nothing of their own to show.
 
-Conceptual assignments, final-project deliverables and the midterm **do** keep
-their dates. When a week's row lists both, the date belongs to the CA.
+**No CA or SA dates anywhere on the site.** Conceptual and studio assignment
+dates are announced on Blackboard, separately from this site, so a week page
+must not carry one — the `.week-meta` `Due` row exists only for final-project
+deliverables and the midterm, and a week with neither has no `Due` row at all.
+Those two **do** keep their dates, on the week page and in the schedule's key
+dates table.
 
 The Week 1 studio is the pattern worth following: **do it unaided first, then
 bring the model in, then reconcile and account for the difference.** What gets

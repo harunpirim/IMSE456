@@ -197,7 +197,8 @@ appear in the last column as each week is posted.
 
 ## Assignments
 
-**Conceptual assignments (CA1–CA8, 25%)** close Sunday 11:59 p.m. Lowest score dropped.
+**Conceptual assignments (CA1–CA8, 25%)** are announced on Blackboard, which carries the open
+and close dates. Lowest score dropped.
 
 **Studio assignments (SA1–SA14, 25%)** are produced **in the Thursday session** and uploaded to
 Blackboard before you leave — graded with feedback, no deadline to miss. Two lowest dropped.

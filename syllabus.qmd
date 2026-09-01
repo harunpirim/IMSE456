@@ -138,7 +138,9 @@ for your project to use it, and agile arrives after the predictive methods it tr
 : {tbl-colwidths="[5,8,37,5,8,37]"}
 
 Everything you are assessed on is on this site. The book is a fuller treatment, not a requirement.
-The authoritative week-by-week schedule with all due dates is on the [Schedule](schedule.qmd) page.
+The week-by-week schedule is on the [Schedule](schedule.qmd) page, along with the midterm and the
+final project dates. **Conceptual assignment dates are announced on Blackboard**, which is
+authoritative for them.
 
 ## Required student resources
 

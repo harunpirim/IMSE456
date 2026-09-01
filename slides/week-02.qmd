@@ -775,7 +775,7 @@ It is also not optional.
 
 - Notes: [Week 2](../weeks/week-02.qmd)
 - Reading: Larson Ch. 2
-- **CA1 (Ch 1–2)** · Sun 6 Sep
+- **CA1 (Ch 1–2)** — see Blackboard
 
 **Thursday:** build a selection model, then let it disagree with you.
 

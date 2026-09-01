@@ -21,7 +21,7 @@ lab: true
 <dt>Tuesday</dt><dd>Everyone is at 140% in November — concept and case</dd>
 <dt>Thursday</dt><dd>Heuristic versus optimal, and the price of the difference</dd>
 <dt>Reading</dt><dd>Larson Ch. 8</dd>
-<dt>Due</dt><dd>CA6 (Ch 8–9) · Sun 25 Oct · <strong>FP2</strong> Fri 30 Oct</dd>
+<dt>Due</dt><dd><strong>FP2</strong> Fri 30 Oct</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
 :::
