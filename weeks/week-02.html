@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,63 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-2-1-why-a-project-manager-needs-the-strategy" id="toc-lo-2-1-why-a-project-manager-needs-the-strategy" class="nav-link" data-scroll-target="#lo-2-1-why-a-project-manager-needs-the-strategy">LO 2-1 · Why a project manager needs the strategy</a></li>
+  <li><a href="#lo-2-2-how-projects-carry-the-strategic-direction" id="toc-lo-2-2-how-projects-carry-the-strategic-direction" class="nav-link" data-scroll-target="#lo-2-2-how-projects-carry-the-strategic-direction">LO 2-2 · How projects carry the strategic direction</a>
+  <ul class="collapse">
+  <li><a href="#the-four-activities" id="toc-the-four-activities" class="nav-link" data-scroll-target="#the-four-activities">The four activities</a></li>
+  <li><a href="#a-mission-you-can-act-on" id="toc-a-mission-you-can-act-on" class="nav-link" data-scroll-target="#a-mission-you-can-act-on">A mission you can act on</a></li>
+  <li><a href="#objectives-worth-setting" id="toc-objectives-worth-setting" class="nav-link" data-scroll-target="#objectives-worth-setting">Objectives worth setting</a></li>
+  </ul></li>
+  <li><a href="#lo-2-3-why-a-priority-system-is-needed-at-all" id="toc-lo-2-3-why-a-priority-system-is-needed-at-all" class="nav-link" data-scroll-target="#lo-2-3-why-a-priority-system-is-needed-at-all">LO 2-3 · Why a priority system is needed at all</a>
+  <ul class="collapse">
+  <li><a href="#two-biases-that-keep-the-pipeline-overfull" id="toc-two-biases-that-keep-the-pipeline-overfull" class="nav-link" data-scroll-target="#two-biases-that-keep-the-pipeline-overfull">Two biases that keep the pipeline overfull</a></li>
+  <li><a href="#what-portfolio-management-buys" id="toc-what-portfolio-management-buys" class="nav-link" data-scroll-target="#what-portfolio-management-buys">What portfolio management buys</a></li>
+  </ul></li>
+  <li><a href="#lo-2-4-three-kinds-of-project" id="toc-lo-2-4-three-kinds-of-project" class="nav-link" data-scroll-target="#lo-2-4-three-kinds-of-project">LO 2-4 · Three kinds of project</a></li>
+  <li><a href="#lo-2-5-the-phase-gate-model" id="toc-lo-2-5-the-phase-gate-model" class="nav-link" data-scroll-target="#lo-2-5-the-phase-gate-model">LO 2-5 · The phase gate model</a></li>
+  <li><a href="#lo-2-6-what-a-project-is-worth-financial-criteria" id="toc-lo-2-6-what-a-project-is-worth-financial-criteria" class="nav-link" data-scroll-target="#lo-2-6-what-a-project-is-worth-financial-criteria">LO 2-6 · What a project is worth: financial criteria</a>
+  <ul class="collapse">
+  <li><a href="#payback" id="toc-payback" class="nav-link" data-scroll-target="#payback">Payback</a></li>
+  <li><a href="#net-present-value" id="toc-net-present-value" class="nav-link" data-scroll-target="#net-present-value">Net present value</a></li>
+  <li><a href="#the-two-disagreeing" id="toc-the-two-disagreeing" class="nav-link" data-scroll-target="#the-two-disagreeing">The two disagreeing</a></li>
+  <li><a href="#non-financial-criteria" id="toc-non-financial-criteria" class="nav-link" data-scroll-target="#non-financial-criteria">Non-financial criteria</a></li>
+  </ul></li>
+  <li><a href="#lo-2-7-multi-criteria-selection-models" id="toc-lo-2-7-multi-criteria-selection-models" class="nav-link" data-scroll-target="#lo-2-7-multi-criteria-selection-models">LO 2-7 · Multi-criteria selection models</a>
+  <ul class="collapse">
+  <li><a href="#a-model-and-how-much-its-weights-matter" id="toc-a-model-and-how-much-its-weights-matter" class="nav-link" data-scroll-target="#a-model-and-how-much-its-weights-matter">A model, and how much its weights matter</a></li>
+  </ul></li>
+  <li><a href="#lo-2-8-an-objective-priority-system-in-practice" id="toc-lo-2-8-an-objective-priority-system-in-practice" class="nav-link" data-scroll-target="#lo-2-8-an-objective-priority-system-in-practice">LO 2-8 · An objective priority system in practice</a>
+  <ul class="collapse">
+  <li><a href="#soliciting-proposals" id="toc-soliciting-proposals" class="nav-link" data-scroll-target="#soliciting-proposals">Soliciting proposals</a></li>
+  <li><a href="#risk-briefly-and-early" id="toc-risk-briefly-and-early" class="nav-link" data-scroll-target="#risk-briefly-and-early">Risk, briefly and early</a></li>
+  <li><a href="#screening-and-ranking" id="toc-screening-and-ranking" class="nav-link" data-scroll-target="#screening-and-ranking">Screening and ranking</a></li>
+  <li><a href="#keeping-the-system-honest" id="toc-keeping-the-system-honest" class="nav-link" data-scroll-target="#keeping-the-system-honest">Keeping the system honest</a></li>
+  </ul></li>
+  <li><a href="#lo-2-9-managing-the-portfolio-as-a-portfolio" id="toc-lo-2-9-managing-the-portfolio-as-a-portfolio" class="nav-link" data-scroll-target="#lo-2-9-managing-the-portfolio-as-a-portfolio">LO 2-9 · Managing the portfolio as a portfolio</a>
+  <ul class="collapse">
+  <li><a href="#governance-and-open-information" id="toc-governance-and-open-information" class="nav-link" data-scroll-target="#governance-and-open-information">Governance and open information</a></li>
+  <li><a href="#the-portfolio-matrix" id="toc-the-portfolio-matrix" class="nav-link" data-scroll-target="#the-portfolio-matrix">The portfolio matrix</a></li>
+  <li><a href="#what-follows-from-all-this" id="toc-what-follows-from-all-this" class="nav-link" data-scroll-target="#what-follows-from-all-this">What follows from all this</a></li>
+  </ul></li>
+  <li><a href="#tuesday-four-proposals-two-budgets" id="toc-tuesday-four-proposals-two-budgets" class="nav-link" data-scroll-target="#tuesday-four-proposals-two-budgets">Tuesday — Four proposals, two budgets</a></li>
+  <li><a href="#thursday-studio" id="toc-thursday-studio" class="nav-link" data-scroll-target="#thursday-studio">Thursday studio</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#tutor-check-one-question-at-a-time-no-lecturing" id="toc-tutor-check-one-question-at-a-time-no-lecturing" class="nav-link" data-scroll-target="#tutor-check-one-question-at-a-time-no-lecturing">Tutor check — one question at a time, no lecturing</a></li>
+  <li><a href="#editor-challenge-attack-this-claim" id="toc-editor-challenge-attack-this-claim" class="nav-link" data-scroll-target="#editor-challenge-attack-this-claim">Editor challenge — attack this claim</a></li>
+  <li><a href="#roommate-link" id="toc-roommate-link" class="nav-link" data-scroll-target="#roommate-link">Roommate link</a></li>
+  </ul></li>
+  <li><a href="#where-this-sits-in-the-course" id="toc-where-this-sits-in-the-course" class="nav-link" data-scroll-target="#where-this-sits-in-the-course">Where this sits in the course</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -207,8 +291,1007 @@ Produced in the Thursday session and uploaded to Blackboard before you leave
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>Organizations use projects to convert strategy into new products, services, and processes needed for success.</p>
+<p>— Larson &amp; Gray, Ch. 2 [1]</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 2</strong> [1]. The exposition is reworded, the structure and substance are the chapter’s, and the figures are redrawn from it. The end-of-chapter exercises are reproduced as written. Where a claim comes from elsewhere — Kahneman on optimism bias, Matheson and Matheson on the portfolio matrix — it is cited separately.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 88%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 2-1</strong></td>
+<td style="text-align: left;">Say why a project manager needs to understand the organization’s strategy.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 2-2</strong></td>
+<td style="text-align: left;">Describe the part projects play in setting the organization’s strategic direction.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 2-3</strong></td>
+<td style="text-align: left;">Explain why an organization needs a project priority system at all.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 2-4</strong></td>
+<td style="text-align: left;">Tell the three kinds of project apart.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 2-5</strong></td>
+<td style="text-align: left;">Say what the phase gate model does to a project’s path through approval.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 2-6</strong></td>
+<td style="text-align: left;">Judge what a project is worth, on financial and non-financial grounds.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 2-7</strong></td>
+<td style="text-align: left;">Rank competing proposals with a multi-criteria model.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 2-8</strong></td>
+<td style="text-align: left;">Put an objective priority system to work on a real set of proposals.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 2-9</strong></td>
+<td style="text-align: left;">Say why the portfolio has to be managed as a portfolio.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">strategy/project alignment</span><span class="chip">strategic management process</span><span class="chip">mission statement</span><span class="chip">SMART objectives</span><span class="chip">implementation gap</span><span class="chip">optimism bias</span><span class="chip">uniqueness bias</span><span class="chip">compliance · operational · strategic</span><span class="chip">phase gate model</span><span class="chip">go · kill · recycle</span><span class="chip">payback period</span><span class="chip">net present value</span><span class="chip">non-financial criteria</span><span class="chip">weighted scoring model</span><span class="chip">must and want objectives</span><span class="chip">priority team</span><span class="chip">governance team</span><span class="chip">portfolio balance</span><span class="chip">portfolio matrix</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-2-1-why-a-project-manager-needs-the-strategy" class="level1">
+<h1>LO 2-1 · Why a project manager needs the strategy</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>Week 1 treated a project as a thing to be managed well. This week asks the prior question: <strong>why does this project exist and not some other one?</strong> Nothing in Chapter 1 helps you answer that, and a project executed flawlessly in service of the wrong objective is still waste.</p>
+<p>Projects are how an organization turns intent into something real. A strategy that stays in the plan changes nothing; it becomes visible only as new products, new services, and new processes — and those arrive as projects.</p>
+<p>The current climate makes the fit between the two tighter than it used to be. Technology moves quickly, competition is global, finances are uncertain, and disease outbreaks have shown how fast the ground can shift. Each of those shortens the time an organization has to notice that its projects no longer serve its direction.</p>
+<p>Two practical reasons a project manager cannot treat strategy as somebody else’s business:</p>
+<p><strong>So you can make the right call when the plan runs out.</strong> Every project throws up decisions the plan did not anticipate. A project manager who knows what the organization is trying to become resolves those in the right direction. One who does not will optimise for the nearest visible target — usually cost or schedule — and can be locally efficient while pulling against the strategy.</p>
+<p><strong>So you can argue for the project.</strong> Resources are contested. Sooner or later you will have to say why your project deserves people and money that another project also wants. That case is made in the language of the organization’s objectives or it is not made at all.</p>
+<hr>
+</section>
+<section id="lo-2-2-how-projects-carry-the-strategic-direction" class="level1">
+<h1>LO 2-2 · How projects carry the strategic direction</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>Integration of projects with the strategic plan assumes two things exist: <strong>a strategic plan</strong>, and <strong>a process that ranks projects by how much they contribute to it</strong>. Where both are present, three things follow — the organization is focused on the same direction, scarce resources go where they are worth most, and communication across projects and departments improves.</p>
+<p>Note what that claims. The priority process is not administrative overhead bolted onto the real work. It is the mechanism through which strategy reaches the work at all.</p>
+<section id="the-four-activities" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-activities">The four activities</h2>
+<figure class="figure">
+<svg viewbox="0 0 760 452" role="img" aria-labelledby="smp-title" style="width:100%;height:auto">
+<title id="smp-title">
+The four activities of the strategic management process, and the question each answers
+</title>
+<defs> <marker id="smp-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <g fill="none" stroke="#0F5A4B" stroke-width="1.6" marker-end="url(#smp-ar)"> <path d="M300,52 L196,86"></path> <path d="M420,52 L524,86"></path> <path d="M196,146 L320,182"></path> <path d="M524,146 L400,182"></path> <path d="M360,232 L360,268"></path> <path d="M360,318 L360,354"></path> </g> <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.85"> <rect x="240" y="20" width="240" height="34" rx="4"></rect> <rect x="96" y="86" width="200" height="60" rx="4"></rect> <rect x="424" y="86" width="200" height="60" rx="4"></rect> <rect x="240" y="182" width="240" height="50" rx="4"></rect> <rect x="240" y="268" width="240" height="50" rx="4"></rect> </g> <rect x="240" y="354" width="240" height="50" rx="4" fill="#0F5A4B" opacity="0.12"></rect> <rect x="240" y="354" width="240" height="50" rx="4" fill="none" stroke="#0F5A4B" stroke-width="2"></rect> <g font-size="14" fill="currentColor" text-anchor="middle"> <text x="360" y="42" font-weight="600">Review and define the mission</text> <text x="196" y="110">External environment —</text> <text x="196" y="128">opportunities and threats</text> <text x="524" y="110">Internal environment —</text> <text x="524" y="128">strengths and weaknesses</text> <text x="360" y="205" font-weight="600">Analyse and formulate</text> <text x="360" y="222" font-weight="600">strategies</text> <text x="360" y="291" font-weight="600">Set objectives to reach</text> <text x="360" y="308" font-weight="600">the strategies</text> <text x="360" y="377" font-weight="600">Implement strategies</text> <text x="360" y="394" font-weight="600">through projects</text> </g> <g font-size="15" font-weight="700" fill="#0F5A4B" text-anchor="middle"> <text x="46" y="46">1</text> <text x="46" y="212">2</text> <text x="46" y="298">3</text> <text x="46" y="384">4</text> </g> <g font-size="13" fill="currentColor" opacity="0.75" text-anchor="start"> <text x="648" y="46">What are</text> <text x="648" y="62">we now?</text> <text x="648" y="212">What do we</text> <text x="648" y="228">intend to be?</text> <text x="648" y="378">How do we</text> <text x="648" y="394">get there?</text> </g>
+</svg>
+<figcaption>
+The four activities, and the question each one answers. Only the fourth produces anything a customer can see.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the strategic management process exhibit [1].</em>
+</figcaption>
+</figure>
+<p><strong>1 · Review and define the mission.</strong> The mission says what the organization wants to become. It is the reference every later choice is checked against.</p>
+<p><strong>2 · Analyse and formulate strategies.</strong> Strategy formulation answers what has to be done to reach the objectives — assessing what the outside world offers and threatens, and what the organization is actually good at.</p>
+<p><strong>3 · Set objectives.</strong> Strategies are turned into targets specific enough to be pursued and checked.</p>
+<p><strong>4 · Implement through projects.</strong> This is where the previous three either become real or do not.</p>
+</section>
+<section id="a-mission-you-can-act-on" class="level2">
+<h2 class="anchored" data-anchor-id="a-mission-you-can-act-on">A mission you can act on</h2>
+<p>More specific mission statements produce better results, because a tighter focus leaves less room for interpretation. Compare these four:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 70%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Mission statement</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Provide hospital design services</td>
+<td style="text-align: left;">tight</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Provide data mining and analysis services</td>
+<td style="text-align: left;">tight</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Provide information technology services</td>
+<td style="text-align: left;">loose</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Provide high-value products to our customers</td>
+<td style="text-align: left;">loose</td>
+</tr>
+</tbody>
+</table>
+<p>The first two rule things out. The last two rule almost nothing out: nearly any proposal can be argued to fit, which means the mission cannot settle an argument between two proposals — and settling that argument is what a mission is for.</p>
+</section>
+<section id="objectives-worth-setting" class="level2">
+<h2 class="anchored" data-anchor-id="objectives-worth-setting">Objectives worth setting</h2>
+<p>The chapter’s test for an objective is the SMART checklist.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 22%">
+<col style="width: 70%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>S</strong></td>
+<td style="text-align: left;">Specific</td>
+<td style="text-align: left;">Target one thing, precisely</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>M</strong></td>
+<td style="text-align: left;">Measurable</td>
+<td style="text-align: left;">Establish an indicator of progress</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>A</strong></td>
+<td style="text-align: left;">Assignable</td>
+<td style="text-align: left;">One person is responsible for completion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>R</strong></td>
+<td style="text-align: left;">Realistic</td>
+<td style="text-align: left;">Achievable with the resources actually available</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>T</strong></td>
+<td style="text-align: left;">Time related</td>
+<td style="text-align: left;">State when it will be achieved</td>
+</tr>
+</tbody>
+</table>
+<p><em>Checklist reproduced from Larson &amp; Gray, Ch. 2, Exhibit 2.1 [1].</em></p>
+<p>Assignable is the one that gets dropped. An objective owned by a department is owned by nobody, and it will still be unmet at the review with a good explanation attached.</p>
+<hr>
+</section>
+</section>
+<section id="lo-2-3-why-a-priority-system-is-needed-at-all" class="level1">
+<h1>LO 2-3 · Why a priority system is needed at all</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>An organization can have a clear strategy and still fund the wrong work. The gap between what the strategy says and what the projects actually are opens quietly, and it shows up as symptoms before anyone names the cause.</p>
+<p>Six symptoms of an organization whose projects have come loose from its strategy:</p>
+<ul>
+<li>Conflict between functional managers is frequent, and trust erodes with it.</li>
+<li>Meetings are called repeatedly to set or renegotiate priorities.</li>
+<li>People are moved between projects as the priority of the day changes.</li>
+<li>Employees cannot say which projects matter.</li>
+<li>People are on several projects at once and feel ineffective on all of them.</li>
+<li>Resources are not adequate.</li>
+</ul>
+<p>Read that list as diagnosis rather than complaint. Each item is what a missing priority system feels like from inside. The last one is the trap: <em>resources are not adequate</em> sounds like a budget problem, and organizations respond by asking for more. If the real cause is that too many projects were approved, more resources fund the same disorder at a larger scale.</p>
+<section id="two-biases-that-keep-the-pipeline-overfull" class="level2">
+<h2 class="anchored" data-anchor-id="two-biases-that-keep-the-pipeline-overfull">Two biases that keep the pipeline overfull</h2>
+<p>Approving too much is not only a process failure. Two well-documented habits of mind push in the same direction.</p>
+<p><strong>Optimism bias</strong> is the tendency to expect better outcomes from planned activity than the record justifies (Kahneman, 2011) [2]. Applied to a proposal, it produces costs that are too low and benefits that arrive too early.</p>
+<p><strong>Uniqueness bias</strong> was identified by psychologists as the tendency to see oneself as more singular than one is — healthier, or cleverer, than others (Alicke &amp; Govorun, 2005; Suls &amp; Wan, 1987) [3][4]. Applied to a proposal, it is the belief that the base rate belongs to other people’s projects. Every organization that has overrun a schedule knew about overruns in general.</p>
+<p>The two compound. Optimism bias makes the estimate flattering; uniqueness bias explains away the evidence that it is flattering. A priority system is partly a defence against your own judgement, which is why it has to be objective enough to be uncomfortable.</p>
+</section>
+<section id="what-portfolio-management-buys" class="level2">
+<h2 class="anchored" data-anchor-id="what-portfolio-management-buys">What portfolio management buys</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Benefits of project portfolio management</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Builds discipline into the project selection process</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Links project selection to strategic metrics</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prioritises proposals against a common set of criteria, rather than on politics or emotion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Allocates resources to projects that align with the strategic direction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Balances risk across all projects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Justifies killing projects that do not support the strategy</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Improves communication and supports agreement on project goals</td>
+</tr>
+</tbody>
+</table>
+<p><em>List reproduced from Larson &amp; Gray, Ch. 2, Exhibit 2.2 [1].</em></p>
+<p>The sixth is the one that is hard to buy any other way. Killing a project is a political act, and a person who kills one without a system is exposed. A published set of criteria moves the decision from a person to a process.</p>
+<hr>
+</section>
+</section>
+<section id="lo-2-4-three-kinds-of-project" class="level1">
+<h1>LO 2-4 · Three kinds of project</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<figure class="figure">
+<svg viewbox="0 0 700 300" role="img" aria-labelledby="cls-title" style="width:100%;height:auto">
+<title id="cls-title">
+The three kinds of project an organization funds
+</title>
+<ellipse cx="350" cy="150" rx="330" ry="138" fill="#0F5A4B" opacity="0.07"></ellipse> <ellipse cx="350" cy="150" rx="330" ry="138" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.6"></ellipse> <g fill="none" stroke="#0F5A4B" stroke-width="1.8"> <rect x="252" y="38" width="196" height="62" rx="4"></rect> <rect x="120" y="176" width="196" height="62" rx="4"></rect> <rect x="384" y="176" width="196" height="62" rx="4"></rect> </g> <g font-size="15" font-weight="600" fill="currentColor" text-anchor="middle"> <text x="350" y="64">Compliance</text> <text x="350" y="84">(must do)</text> <text x="218" y="202">Strategic</text> <text x="218" y="222">projects</text> <text x="482" y="202">Operational</text> <text x="482" y="222">projects</text> </g>
+</svg>
+<figcaption>
+Every project an organization funds is one of these three, and each is justified on a different basis.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the project classification exhibit [1].</em>
+</figcaption>
+</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 44%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Kind</th>
+<th style="text-align: left;">What it is</th>
+<th style="text-align: left;">How it is justified</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Compliance and emergency</strong></td>
+<td style="text-align: left;">Work the organization must do — a regulator requires it, or something has broken</td>
+<td style="text-align: left;">By the penalty for not doing it</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Operational</strong></td>
+<td style="text-align: left;">Work that keeps the current business efficient — total quality management efforts are the standard example</td>
+<td style="text-align: left;">By the saving or the improvement</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Strategic</strong></td>
+<td style="text-align: left;">Work that builds future capability — new products, new technologies, research and development</td>
+<td style="text-align: left;">By its contribution to the strategy</td>
+</tr>
+</tbody>
+</table>
+<p>The classification matters because the three cannot be compared on one scale. A compliance project has no return to speak of and is undertaken anyway, because the alternative is a penalty. An operational project competes on payback. A strategic project may lose to an operational one on every financial measure and still be the one the organization cannot skip.</p>
+<p>Rank all three together on net present value and compliance work always loses. That is not a finding about compliance work; it is a broken ranking. Chapter 2’s answer is to decide the split between the categories <em>before</em> ranking anything inside them.</p>
+<hr>
+</section>
+<section id="lo-2-5-the-phase-gate-model" class="level1">
+<h1>LO 2-5 · The phase gate model</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>Selection is not a single decision. A project passes through a series of <strong>gates</strong> on the way to completion, each attached to a phase and each a genuine decision point.</p>
+<figure class="figure">
+<svg viewbox="0 0 760 272" role="img" aria-labelledby="gate-title" style="width:100%;height:auto">
+<title id="gate-title">
+A gate has three possible outcomes: go, kill, or recycle
+</title>
+<defs> <marker id="gate-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <g fill="none" stroke="currentColor" stroke-width="1.4"> <rect x="30" y="98" width="150" height="54" rx="4"></rect> <rect x="540" y="30" width="206" height="48" rx="4"></rect> <rect x="540" y="176" width="206" height="48" rx="4"></rect> </g> <path d="M300,88 L390,88 L345,168 Z" fill="none" stroke="#0F5A4B" stroke-width="2"></path> <g fill="none" stroke="#0F5A4B" stroke-width="1.6" marker-end="url(#gate-ar)"> <path d="M180,125 L296,125"></path> <path d="M396,100 L534,58"></path> <path d="M372,146 L534,190"></path> <path d="M345,168 L345,230 L105,230 L105,156"></path> </g> <g font-size="14" fill="currentColor" text-anchor="middle"> <text x="105" y="120" font-weight="600">Phase</text> <text x="105" y="138">work and information</text> <text x="345" y="112" font-weight="700" fill="#0F5A4B">Gate</text> <text x="643" y="50" font-weight="600">Go</text> <text x="643" y="70" font-size="13">proceed to the next phase</text> <text x="643" y="196" font-weight="600">Kill</text> <text x="643" y="216" font-size="13">cancel the project</text> </g> <g font-size="13" fill="#0F5A4B" font-weight="600" text-anchor="middle"> <text x="225" y="252">Recycle — revise and resubmit</text> </g>
+</svg>
+<figcaption>
+The gate is a decision, not a formality. Only one of the three outcomes moves the project forward.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the phase gate exhibit [1].</em>
+</figcaption>
+</figure>
+<p>The six phases and their gates:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 40%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phase</th>
+<th style="text-align: left;">What it produces</th>
+<th style="text-align: left;">The gate asks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1 · Idea</strong></td>
+<td style="text-align: left;">A candidate worth writing down</td>
+<td style="text-align: left;">Is this worth a proposal?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2 · Proposal</strong></td>
+<td style="text-align: left;">A described project with cost, risk and fit</td>
+<td style="text-align: left;">Does it clear the screen?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3 · Screening and selection</strong></td>
+<td style="text-align: left;">A ranked position against everything else</td>
+<td style="text-align: left;">Is it funded, and at what priority?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4 · Implementation plan</strong></td>
+<td style="text-align: left;">A comprehensive plan, from an assigned manager and staff</td>
+<td style="text-align: left;">Does the plan hold up?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>5 · Progress evaluation</strong></td>
+<td style="text-align: left;">Evidence of performance against the plan</td>
+<td style="text-align: left;">Continue, or stop?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>6 · Closure</strong></td>
+<td style="text-align: left;">The delivered product and what was learned</td>
+<td style="text-align: left;">Is it genuinely finished?</td>
+</tr>
+</tbody>
+</table>
+<p>Gate 4 is where a proposal stops being a hope. Once a preliminary proposal is approved, a project manager and staff develop a fuller implementation plan, and the questions put to it at that gate are blunt:</p>
+<blockquote class="blockquote">
+<p>Does the plan make sense? Do the numbers add up? Is it worth the risk? How much confidence is there in the plan?</p>
+<p>— the gate 4 questions, Larson &amp; Gray, Ch. 2 [1]</p>
+</blockquote>
+<p>An affirmative answer launches the project.</p>
+<p>Gate 5 is the one organizations skip. It exists so that a project can be cancelled for poor performance or because it is no longer relevant — the “kill” outcome, applied to work already underway and already defended. Scrutiny scales with size: a three-year Department of Defense project has a progress review every six months, while small projects are usually approved and reviewed by immediate superiors and need nothing heavier.</p>
+<hr>
+</section>
+<section id="lo-2-6-what-a-project-is-worth-financial-criteria" class="level1">
+<h1>LO 2-6 · What a project is worth: financial criteria</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>Two financial models do most of the work in practice: <strong>payback</strong> and <strong>net present value</strong>. They answer different questions, and they disagree often enough that the disagreement is worth understanding before you meet it in a meeting.</p>
+<section id="payback" class="level2">
+<h2 class="anchored" data-anchor-id="payback">Payback</h2>
+<p>Payback asks how long the money is exposed:</p>
+<p><span class="math display">\[\text{Payback period} = \frac{\text{Estimated cost of the project}}{\text{Annual net cash inflow}}\]</span></p>
+<p>For uneven cash flows, accumulate until the cost is recovered. It is quick, it needs no assumption about a discount rate, and everyone in the room understands it.</p>
+<p>It is also blind twice over. It ignores the time value of money, and it ignores everything that happens after the cutoff — a project that pays back in two years and then collapses scores better than one that pays back in three and runs profitably for a decade.</p>
+</section>
+<section id="net-present-value" class="level2">
+<h2 class="anchored" data-anchor-id="net-present-value">Net present value</h2>
+<p>Net present value discounts every future cash flow back to what it is worth today, then subtracts what the project costs:</p>
+<p><span class="math display">\[\text{NPV} = -I_0 + \sum_{t=1}^{n} \frac{F_t}{(1+k)^t}\]</span></p>
+<p>where <span class="math inline">\(I_0\)</span> is the initial investment, <span class="math inline">\(F_t\)</span> the net cash flow in period <span class="math inline">\(t\)</span>, and <span class="math inline">\(k\)</span> the required rate of return. A positive NPV means the project earns more than the required return and is worth doing on financial grounds; a negative NPV means it does not.</p>
+</section>
+<section id="the-two-disagreeing" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-disagreeing">The two disagreeing</h2>
+<p>Two projects, each costing $180,000, required return 12 percent.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 22%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Year</th>
+<th style="text-align: right;">Project A net flow</th>
+<th style="text-align: right;">Discounted at 12%</th>
+<th style="text-align: right;">Project B net flow</th>
+<th style="text-align: right;">Discounted at 12%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">$60,000</td>
+<td style="text-align: right;">$53,571</td>
+<td style="text-align: right;">$90,000</td>
+<td style="text-align: right;">$80,357</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">$70,000</td>
+<td style="text-align: right;">$55,804</td>
+<td style="text-align: right;">$90,000</td>
+<td style="text-align: right;">$71,747</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">$70,000</td>
+<td style="text-align: right;">$49,825</td>
+<td style="text-align: right;">$10,000</td>
+<td style="text-align: right;">$7,118</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">$50,000</td>
+<td style="text-align: right;">$31,776</td>
+<td style="text-align: right;">$10,000</td>
+<td style="text-align: right;">$6,355</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>$250,000</strong></td>
+<td style="text-align: right;"><strong>$190,976</strong></td>
+<td style="text-align: right;"><strong>$200,000</strong></td>
+<td style="text-align: right;"><strong>$165,578</strong></td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Project A</th>
+<th style="text-align: right;">Project B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Payback</td>
+<td style="text-align: right;">2.71 years</td>
+<td style="text-align: right;"><strong>2.00 years</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NPV at 12%</td>
+<td style="text-align: right;"><strong>+$10,976</strong></td>
+<td style="text-align: right;">−$14,422</td>
+</tr>
+</tbody>
+</table>
+<p>Payback prefers B by nine months. NPV says B destroys about $14,000 of value while A creates about $11,000. Both calculations are correct; they are answers to different questions. B returns cash quickly and then stops, and payback cannot see the stopping.</p>
+<p>A firm short of cash may still choose B and be right to. What it cannot do is choose B <em>believing</em> B is the more valuable project.</p>
+</section>
+<section id="non-financial-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="non-financial-criteria">Non-financial criteria</h2>
+<p>A model that only counts money will systematically reject work the organization needs. Firms support projects with unremarkable profit margins for strategic reasons:</p>
+<ul>
+<li>To capture a larger share of the market.</li>
+<li>To make it harder for a competitor to enter.</li>
+<li>To develop an enabler product whose introduction lifts sales of more profitable products.</li>
+<li>To develop core technology for the next generation of products.</li>
+<li>To reduce dependence on an unreliable supplier.</li>
+<li>To head off government intervention and regulation.</li>
+</ul>
+<p>Less tangible reasons apply too. Organizations fund work to repair a damaged image or strengthen how well the brand is recognised, and many treat corporate citizenship as an obligation and back projects in the communities they operate in.</p>
+<p>The discipline runs the other way as well. Companies have to be capable of <strong>saying no to a profitable project that sits outside the mission</strong>. That is harder than it sounds, because the case for it is always concrete — real revenue, a real customer — while the case against it is the abstraction that the mission is supposed to protect.</p>
+<hr>
+</section>
+</section>
+<section id="lo-2-7-multi-criteria-selection-models" class="level1">
+<h1>LO 2-7 · Multi-criteria selection models</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>Once the criteria include things money cannot express, ranking needs a model that holds several dimensions at once. The chapter’s instrument separates two kinds of criterion.</p>
+<p><strong>Must objectives</strong> are pass or fail. Every project either meets them or is out — legal, safety and environmental standards are the usual examples, along with rules like <em>every new product has a complete market analysis</em>. A must objective is never traded against anything. Scoring it is a screen, not a contribution.</p>
+<p><strong>Want objectives</strong> are weighted. Each carries a relative importance, commonly on a 1–100 scale, and each project is scored for its impact on that objective against a published definition — typically 0, 1 or 2, with each value spelled out so that scoring is repeatable rather than a matter of taste. The weighted score is importance × impact, and the total weighted score sets the priority.</p>
+<p>The published impact definitions are what makes the model an instrument rather than a vote. <em>0 = does not address the problem, 1 = an opportunity to fix it, 2 = an urgent problem solved</em> can be applied by two people to the same proposal with the same result. “Rate the impact from 0 to 2” cannot.</p>
+<section id="a-model-and-how-much-its-weights-matter" class="level2">
+<h2 class="anchored" data-anchor-id="a-model-and-how-much-its-weights-matter">A model, and how much its weights matter</h2>
+<p>Three proposals, three want objectives, impact scored 0–2:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Want objective</th>
+<th style="text-align: right;">Weight</th>
+<th style="text-align: center;">Alpha</th>
+<th style="text-align: center;">Beta</th>
+<th style="text-align: center;">Gamma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Reduces unplanned downtime</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opens a new customer segment</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Improves regulatory margin</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total weighted score</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"><strong>235</strong></td>
+<td style="text-align: center;"><strong>230</strong></td>
+<td style="text-align: center;"><strong>250</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Gamma wins, Alpha second, Beta third — and the three sit within twenty points of each other.</p>
+<p>Now raise the weight on downtime from 90 to 100, a change most people would make without much thought:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Alpha</th>
+<th style="text-align: right;">Beta</th>
+<th style="text-align: right;">Gamma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Total weighted score</td>
+<td style="text-align: right;"><strong>255</strong></td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">250</td>
+</tr>
+</tbody>
+</table>
+<p>The ranking inverts. Alpha now beats Gamma, on identical proposals and identical impact scores, because one weight moved by ten points.</p>
+<p>This is the property to carry out of the chapter. A weighted model does not remove judgement from selection; it relocates judgement into the weights, where it is written down, visible, and arguable. That is a real gain — the argument now happens over the criteria rather than over the projects — but a total weighted score is not an objective fact, and a ranking whose order flips under a plausible change in weights has not actually separated its candidates.</p>
+<hr>
+</section>
+</section>
+<section id="lo-2-8-an-objective-priority-system-in-practice" class="level1">
+<h1>LO 2-8 · An objective priority system in practice</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<section id="soliciting-proposals" class="level2">
+<h2 class="anchored" data-anchor-id="soliciting-proposals">Soliciting proposals</h2>
+<p>Good proposals have to be asked for. Priority criteria are communicated to every stakeholder precisely so that they can be a source of new project ideas — people propose work that fits when they know what fitting means.</p>
+<p>A proposal form imposes the same questions on every candidate, which is what makes ranking possible at all. The chapter’s example is an automatic vehicle location project for a public transport agency, and the fields are worth reading as a checklist:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Proposal form asks</th>
+<th style="text-align: left;">Example entry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Project classification</td>
+<td style="text-align: left;">Strategic, operational, or compliance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">What business problem does the project solve?</td>
+<td style="text-align: left;">Improve rider satisfaction through kiosk, website and mobile applications; improve driver and traveller safety</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">How does this align with our strategy?</td>
+<td style="text-align: left;">Increase ridership through better travel planning and scheduling; faster response to accidents</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Major deliverables</td>
+<td style="text-align: left;">GPS vehicle tracking system, internet access, schedule screens</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Impact of <em>not</em> doing it</td>
+<td style="text-align: left;">Ridership goals are not met</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Three major risks</td>
+<td style="text-align: left;">Cost overruns; integrating rail, bus and streetcar systems; the system being hacked</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">How will success be measured?</td>
+<td style="text-align: left;">Increased ridership, rider satisfaction, meeting budget and schedule</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Internal resources required, and available?</td>
+<td style="text-align: left;">Yes / yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Estimated cost and duration</td>
+<td style="text-align: left;">$10 million, 22 weeks</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oversight action</td>
+<td style="text-align: left;">Accept or return</td>
+</tr>
+</tbody>
+</table>
+<p><em>Field structure and example entries follow Larson &amp; Gray, Ch. 2, the AVL proposal form exhibit [1].</em></p>
+<p>Two of those fields do unusual work. <strong>Impact of not doing it</strong> catches compliance projects that would otherwise score nothing. <strong>Three major risks</strong>, asked at proposal time, is the only point in the process where risk is cheap to admit — after funding, naming a risk means explaining why you asked for money without mentioning it.</p>
+</section>
+<section id="risk-briefly-and-early" class="level2">
+<h2 class="anchored" data-anchor-id="risk-briefly-and-early">Risk, briefly and early</h2>
+<p>The chapter pairs the proposal form with a short risk assessment, illustrated on a 500-acre wind farm. Its purpose is to draw attention to risks that will need management attention — not to analyse them, which is Chapter 7’s job.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 24%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Risk</th>
+<th style="text-align: left;">Probability</th>
+<th style="text-align: left;">Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Government incentives curtailed</td>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">High</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Land use injunction</td>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">High</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Energy price decrease</td>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">Medium</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New import tax</td>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">High</td>
+</tr>
+</tbody>
+</table>
+<p><em>Example reproduced from Larson &amp; Gray, Ch. 2, the wind farm risk assessment exhibit [1].</em></p>
+<p>Alongside it, three project factors are rated: complexity, resource skills, and technology. A proposal that is complex, short of skills and technically unproven is a different animal from one that is none of those, whatever its weighted score.</p>
+</section>
+<section id="screening-and-ranking" class="level2">
+<h2 class="anchored" data-anchor-id="screening-and-ranking">Screening and ranking</h2>
+<figure class="figure">
+<svg viewbox="0 0 760 400" role="img" aria-labelledby="scr-title" style="width:100%;height:auto">
+<title id="scr-title">
+The priority screening process, from proposal to project initiation
+</title>
+<defs> <marker id="scr-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <g fill="none" stroke="currentColor" stroke-width="1.4"> <rect x="266" y="46" width="230" height="58" rx="4"></rect> <rect x="266" y="160" width="230" height="58" rx="4"></rect> <rect x="266" y="274" width="230" height="50" rx="4"></rect> <rect x="30" y="58" width="120" height="34" rx="4"></rect> <rect x="612" y="58" width="128" height="34" rx="4"></rect> <rect x="30" y="172" width="120" height="34" rx="4"></rect> <rect x="612" y="172" width="128" height="34" rx="4"></rect> <rect x="30" y="280" width="120" height="38" rx="4"></rect> </g> <g fill="none" stroke="#0F5A4B" stroke-width="1.6" marker-end="url(#scr-ar)"> <path d="M381,16 L381,42"></path> <path d="M266,75 L154,75"></path> <path d="M496,75 L608,75"></path> <path d="M381,104 L381,156"></path> <path d="M266,189 L154,189"></path> <path d="M496,189 L608,189"></path> <path d="M381,218 L381,270"></path> <path d="M266,299 L154,299"></path> <path d="M381,324 L381,362"></path> </g> <g font-size="13" fill="currentColor" text-anchor="middle"> <text x="381" y="70">Priority team evaluates proposals</text> <text x="381" y="88">and reviews portfolio balance</text> <text x="381" y="184">Priority team evaluates the proposal</text> <text x="381" y="202">with its implementation plan</text> <text x="381" y="296">Charter issued, resources assigned</text> <text x="90" y="80">Reject</text> <text x="676" y="72">Return for more</text> <text x="676" y="88">information</text> <text x="90" y="194">Reject</text> <text x="676" y="186">Return for more</text> <text x="676" y="202">information</text> <text x="90" y="296">Hold for</text> <text x="90" y="312">resources</text> </g> <g font-size="13" font-weight="600" fill="#0F5A4B" text-anchor="middle"> <text x="381" y="12">Proposals</text> <text x="381" y="378">Project initiated</text> </g> <g font-size="12" fill="currentColor" opacity="0.7" text-anchor="start"> <text x="392" y="134">Pursue</text> <text x="392" y="248">Accept</text> </g>
+</svg>
+<figcaption>
+Two evaluations, not one: the second happens after a full implementation plan exists, and can still reject.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the project screening process exhibit [1].</em>
+</figcaption>
+</figure>
+<p>The important feature of that flow is that the same team evaluates twice. The first pass judges a proposal; the second judges a proposal that now has a real implementation plan attached, with real numbers.</p>
+<p>That is when the estimates change. Where the second look turns up significant negative differences — a cost first put at $10 million now standing at $12 million, or a feature that has quietly dropped out of what will be delivered — the proposal is normally referred up to more senior management, who decide whether it should still go ahead. Otherwise it is approved and given a priority.</p>
+<p>Notice what that treats as normal: estimates get worse as they get more detailed. The system is built to expect it and to force a second decision rather than let the project drift forward on the strength of the first one.</p>
+</section>
+<section id="keeping-the-system-honest" class="level2">
+<h2 class="anchored" data-anchor-id="keeping-the-system-honest">Keeping the system honest</h2>
+<p>A priority system is only as good as the willingness to be bound by it.</p>
+<ul>
+<li>Every significant project selected is ranked, and the results are <strong>published</strong>.</li>
+<li>Senior management has to take an active part in setting priorities and supporting the system. <strong>Going around it destroys it</strong> — one exception is enough to teach everyone that the route to funding is influence rather than merit.</li>
+<li>Review boards need experienced managers who will ask hard questions and separate fact from fiction.</li>
+<li>Resources for major projects are allocated explicitly, and must not collide with daily operations or land on people as an overload.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="lo-2-9-managing-the-portfolio-as-a-portfolio" class="level1">
+<h1>LO 2-9 · Managing the portfolio as a portfolio</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>The last move in the chapter is the one that changes how selection works: a project’s merits are judged <strong>in the context of the projects that already exist</strong>.</p>
+<p>Several pressures force this. Projects compete for the same skilled people; teams are dispersed and often virtual; time-to-market is compressed; capital is limited. Managing each project on its own merits cannot resolve any of those, because none of them is visible from inside a single project.</p>
+<p>Two things senior management has to supply:</p>
+<p><strong>Selection criteria that align with current strategy.</strong> Without this the priority system optimises something the organization is no longer trying to do.</p>
+<p><strong>An annual decision about balance.</strong> How should available people and capital be divided across the types of project? A preliminary split — say 20 percent compliance, 50 percent strategic, 30 percent operational — is decided <em>before</em> selection begins, though it may be revised once the actual proposals are in. This is what stops the three categories being ranked against each other on a single incomparable scale.</p>
+<section id="governance-and-open-information" class="level2">
+<h2 class="anchored" data-anchor-id="governance-and-open-information">Governance and open information</h2>
+<p>A governance team or project office publishes the priority of every project and keeps the process open. Most organizations doing this use an electronic bulletin board carrying the current portfolio, the status of each project, and the open issues.</p>
+<p>The stated reason is worth taking seriously: <strong>open communication discourages power plays.</strong> Influence works best unobserved. A published ranking does not eliminate politics, but it forces an argument about priority to happen in public and against stated criteria.</p>
+</section>
+<section id="the-portfolio-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="the-portfolio-matrix">The portfolio matrix</h2>
+<figure class="figure">
+<svg viewbox="0 0 620 440" role="img" aria-labelledby="mtx-title" style="width:100%;height:auto">
+<title id="mtx-title">
+The project portfolio matrix: technical feasibility against commercial value
+</title>
+<g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.8"> <rect x="110" y="30" width="470" height="330"></rect> <line x1="345" y1="30" x2="345" y2="360"></line> <line x1="110" y1="195" x2="580" y2="195"></line> </g> <g font-size="17" font-weight="600" fill="currentColor" text-anchor="middle"> <text x="227" y="105">Bread and butter</text> <text x="462" y="105">Pearl</text> <text x="227" y="270">White elephant</text> <text x="462" y="270">Oyster</text> </g> <g font-size="12" fill="currentColor" opacity="0.75" text-anchor="middle"> <text x="227" y="128">easy, modest value</text> <text x="462" y="128">easy, high value</text> <text x="227" y="293">hard, low value</text> <text x="462" y="293">hard, high value</text> </g> <g fill="none" stroke="#0F5A4B" stroke-width="2"> <line x1="82" y1="352" x2="82" y2="38"></line> <line x1="118" y1="390" x2="572" y2="390"></line> </g> <g fill="#0F5A4B"> <path d="M82,30 l-5,12 l10,0 z"></path> <path d="M580,390 l-12,-5 l0,10 z"></path> </g> <g font-size="13" fill="currentColor"> <text x="42" y="200" text-anchor="middle" transform="rotate(-90 42 200)">Technical feasibility — how easy is it?</text> <text x="345" y="416" text-anchor="middle">Commercial value if it succeeds — net present value</text> <text x="118" y="378" font-size="12" opacity="0.7">Low</text> <text x="572" y="378" font-size="12" opacity="0.7" text-anchor="end">High</text> <text x="96" y="44" font-size="12" opacity="0.7">High</text> <text x="96" y="352" font-size="12" opacity="0.7">Low</text> </g>
+</svg>
+<figcaption>
+A balanced portfolio holds all four in deliberate proportion. An unbalanced one usually holds too many of the bottom left.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the project portfolio matrix exhibit [1]; the matrix originates with Matheson &amp; Matheson [5].</em>
+</figcaption>
+</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 42%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Quadrant</th>
+<th style="text-align: left;">What it is</th>
+<th style="text-align: left;">Examples from the chapter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Bread and butter</strong></td>
+<td style="text-align: left;">Straightforward work producing modest commercial value, usually evolutionary improvement</td>
+<td style="text-align: left;">Software upgrades; manufacturing cost reduction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Pearl</strong></td>
+<td style="text-align: left;">Low-risk development with a high payoff — revolutionary commercial advance on proven technology</td>
+<td style="text-align: left;">Next-generation integrated circuits; subsurface imaging to locate oil and gas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Oyster</strong></td>
+<td style="text-align: left;">High risk, high value; a technological breakthrough with large commercial potential</td>
+<td style="text-align: left;">Embryonic DNA treatments; new metal alloys</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>White elephant</strong></td>
+<td style="text-align: left;">Once promising, no longer viable</td>
+<td style="text-align: left;">A product aimed at a market that is now saturated; a powerful energy source whose side effects turn out to be toxic</td>
+</tr>
+</tbody>
+</table>
+<p>The matrix is a balance instrument rather than a ranking. All-bread-and-butter is an organization with no future; all-oysters is one that may not have a present. White elephants are the interesting category, because no organization deliberately funds one — a white elephant is a pearl or an oyster that stopped being viable while nobody was looking, and it keeps its budget through the reputation it earned earlier.</p>
+<p>That is the argument for reviewing the portfolio rather than the project. Nothing inside a white elephant’s own status report says <em>this quadrant has changed</em>.</p>
+</section>
+<section id="what-follows-from-all-this" class="level2">
+<h2 class="anchored" data-anchor-id="what-follows-from-all-this">What follows from all this</h2>
+<p>A highly ranked project can still be deferred or turned down if it upsets the current balance among risk, resources and strategic initiatives. Selection rests on the merits of the project <strong>and</strong> on what it contributes to the mix already in flight.</p>
+<p>That is a genuinely uncomfortable conclusion, and worth sitting with. It means the best-scoring proposal in the room is not automatically the one to fund, and that the person whose proposal is deferred did nothing wrong.</p>
+<hr>
+</section>
+</section>
+<section id="tuesday-four-proposals-two-budgets" class="level1">
+<h1>Tuesday — Four proposals, two budgets</h1>
+<div class="case">
+<p>Northline Instruments makes surgical measurement devices. Its governance team meets each March to set the year’s portfolio, working to a capital envelope of $1.4 million. Last autumn the team set a balance for the year: 30 percent to compliance and operational work, 70 percent to strategic work.</p>
+<p>Four proposals arrive.</p>
+<p><strong>P1 · Sterilisation logging.</strong> A new regulatory requirement takes effect in fourteen months. Without the logging system Northline cannot ship into its second-largest market. Cost $380,000. No revenue attached. The risk assessment is unremarkable: proven technology, skills in-house.</p>
+<p><strong>P2 · CNC controller replacement.</strong> The controllers on three machining cells are eleven years old and failing more often each quarter. Cost $300,000, saving an estimated $95,000 a year in downtime and rework. Payback a little over three years.</p>
+<p><strong>P3 · Wireless sensor line.</strong> A new product for a segment Northline has never sold into. Cost $620,000. Marketing’s estimate puts the net present value at $410,000 if it succeeds. The technology is unproven in-house, and the engineering lead’s confidence in the schedule is, in her own words, moderate.</p>
+<p><strong>P4 · Brand refresh.</strong> New identity, brochures and trade-show stand. Cost $160,000. No measurable return is offered, and the proposal form’s “impact of not doing it” field reads <em>falling behind competitors in appearance</em>. The sponsor is the chief executive, who has mentioned it twice in company meetings.</p>
+<p>The weighted scoring model, run on all four, puts P3 first, P2 second, P4 third and P1 last — P1 scores almost nothing, because it opens no market and improves no operation.</p>
+<div class="qn">
+<p>Which budget does each proposal belong to, and what does the balance decision force the team to do? P1 ranks last and is not optional — what does that tell you about the scoring model? And how should the team handle P4, given who is sponsoring it?</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="thursday-studio" class="level1">
+<h1>Thursday studio</h1>
+<section id="build-a-selection-model-then-let-it-disagree-with-you" class="level4 studio">
+<h4 class="anchored" data-anchor-id="build-a-selection-model-then-let-it-disagree-with-you">Build a selection model, then let it disagree with you</h4>
+<p>Individual work. Rank four proposals on judgement first, then build a weighted scoring model and the financial screens, and account for every place the model contradicts your ranking. One page.</p>
+<p><strong><a href="../slides/week-02.html">Slides</a></strong></p>
+</section>
+<hr>
+</section>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
+<ol type="1">
+<li><p>You manage a hotel resort located on the South Beach on the Island of Kauai in Hawaii. You are shifting the focus of your resort from a traditional fun-in-the-sun destination to eco-tourism. (Eco-tourism focuses on environmental awareness and education.) How would you classify the following projects in terms of compliance, strategic, and operational?</p>
+<ol type="a">
+<li>Convert the pool heating system from electrical to solar power.</li>
+<li>Build a four-mile nature hiking trail.</li>
+<li>Renovate the horse barn.</li>
+<li>Launch a new promotional campaign with Hawaii Airlines.</li>
+<li>Convert 12 adjacent acres into a wildlife preserve.</li>
+<li>Update all the bathrooms in condos that are 10 years old or older.</li>
+<li>Change hotel brochures to reflect eco-tourism image.</li>
+<li>Test and revise disaster response plan based on new requirements.</li>
+</ol>
+<p>How easy was it to classify these projects? What made some projects more difficult than others? What do you think you now know that would be useful for managing projects at the hotel?</p></li>
+<li><p>Two new software projects are proposed to a young, start-up company. The Alpha project will cost $150,000 to develop and is expected to have an annual net cash flow of $40,000. The Beta project will cost $200,000 to develop and is expected to have an annual net cash flow of $50,000. The company is very concerned about their cash flow. Using the payback period, which project is better from a cash flow standpoint? Why?</p></li>
+<li><p>A five-year project has a projected net cash flow of $15,000, $25,000, $30,000, $20,000, and $15,000 in the next five years. It will cost $50,000 to implement the project. If the required rate of return is 20 percent, conduct a discounted cash flow calculation to determine the NPV.</p></li>
+<li><p>You work for the 3T company, which expects to earn at least 18 percent on its investments. You have to choose between two similar projects. The following chart shows the cash information for each project. Which of the two projects would you fund if the decision were based only on financial information? Why?</p></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 4%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omega Year</th>
+<th style="text-align: right;">Inflow</th>
+<th style="text-align: right;">Outflow</th>
+<th style="text-align: right;">Netflow</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Alpha Year</th>
+<th style="text-align: right;">Inflow</th>
+<th style="text-align: right;">Outflow</th>
+<th style="text-align: right;">Netflow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Y0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$225,000</td>
+<td style="text-align: right;">−225,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$300,000</td>
+<td style="text-align: right;">−300,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">190,000</td>
+<td style="text-align: right;">−190,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y1</td>
+<td style="text-align: right;">$50,000</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;">−50,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Y2</td>
+<td style="text-align: right;">$150,000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">150,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y2</td>
+<td style="text-align: right;">150,000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">150,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y3</td>
+<td style="text-align: right;">220,000</td>
+<td style="text-align: right;">30,000</td>
+<td style="text-align: right;">190,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y3</td>
+<td style="text-align: right;">250,000</td>
+<td style="text-align: right;">50,000</td>
+<td style="text-align: right;">200,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Y4</td>
+<td style="text-align: right;">215,000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">215,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y4</td>
+<td style="text-align: right;">250,000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">250,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y5</td>
+<td style="text-align: right;">205,000</td>
+<td style="text-align: right;">30,000</td>
+<td style="text-align: right;">175,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y5</td>
+<td style="text-align: right;">200,000</td>
+<td style="text-align: right;">50,000</td>
+<td style="text-align: right;">150,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Y6</td>
+<td style="text-align: right;">197,000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">197,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y6</td>
+<td style="text-align: right;">180,000</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">180,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y7</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;">30,000</td>
+<td style="text-align: right;">70,000</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Y7</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">30,000</td>
+<td style="text-align: right;">90,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>1,087,000</strong></td>
+<td style="text-align: right;"><strong>505,000</strong></td>
+<td style="text-align: right;"><strong>582,000</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>1,200,000</strong></td>
+<td style="text-align: right;"><strong>530,000</strong></td>
+<td style="text-align: right;"><strong>670,000</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Exercises are reproduced from Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, Chapter 2 [1].</p>
+</div>
+</div>
+</div>
+<hr>
+<section id="tutor-check-one-question-at-a-time-no-lecturing" class="level3 tutor">
+<h3 class="anchored" data-anchor-id="tutor-check-one-question-at-a-time-no-lecturing">Tutor check — one question at a time, no lecturing</h3>
+<ol type="1">
+<li>An organization has a clear strategy, a competent priority system, and a portfolio full of the wrong projects. Give a mechanism by which that happens.</li>
+<li>Payback prefers Project B; NPV prefers Project A. Both are computed correctly. What question is each one answering?</li>
+<li>Why can a compliance project not be ranked against a strategic project on net present value? Answer without using the word “unfair”.</li>
+<li>A weighted model’s ranking flips when one weight moves ten points. Is the model broken? Defend either answer.</li>
+<li>White elephants are never approved as white elephants. So how does an organization end up with a herd of them?</li>
+</ol>
+</section>
+<section id="editor-challenge-attack-this-claim" class="level3 editor">
+<h3 class="anchored" data-anchor-id="editor-challenge-attack-this-claim">Editor challenge — attack this claim</h3>
+<blockquote class="blockquote">
+<p>“A weighted scoring model makes project selection objective. Once the criteria are agreed, the arithmetic decides, and politics is out of the process.”</p>
+</blockquote>
+<p>Attack it. Available lines: the weights are themselves a judgement, and the Alpha–Gamma inversion shows how little movement it takes to change the answer; must objectives are set by someone; a proposal’s impact scores are assigned by people who know what score their project needs. But the claim is not empty — something real does change when the criteria are published. Decide what survives.</p>
+</section>
+<section id="roommate-link" class="level3 roommate">
+<h3 class="anchored" data-anchor-id="roommate-link">Roommate link</h3>
+<p><strong>Choosing courses for next semester.</strong> You have a credit limit, a graduation requirement, a couple of courses you actually want, and one that fits your schedule badly but is only offered every other year. The requirement is a must objective — no weighting, no trade. The rest are want objectives, and your weights are things like <em>how much do I care about this subject</em> against <em>what does the schedule allow</em>.</p>
+<p>Now the portfolio half. A semester of four easy electives is bread and butter: you will pass, and you will not have moved. A semester of four brutal ones might be the year you drop something. The choice you make is not course by course; it is about the balance of the set. And the course you keep deferring because it never quite fits — check whether it is still worth taking, or whether it became a white elephant two semesters ago.</p>
+</section>
+<hr>
+</section>
+<section id="where-this-sits-in-the-course" class="level1">
+<h1>Where this sits in the course</h1>
+<p><em>Following Larson &amp; Gray, Ch. 2 [1].</em></p>
+<p>Chapter 1 said what a project is. Chapter 2 says which ones get funded, and gives you the two instruments — the financial screen and the weighted model — that decide it.</p>
+<p>Chapter 3 takes the next constraint: the structure and culture the selected project has to survive inside. A project chosen correctly can still be crippled by the organization it lands in.</p>
+<p>From Chapter 4 the sequence turns to building the plan — defining scope, decomposing it into a work breakdown structure, and putting credible numbers on time and cost. The estimates you will produce there are the same estimates that arrive at the gate in this chapter, which is why Chapter 2 expects them to get worse as they get more detailed.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 2.</li>
+<li>Kahneman, D. (2011). <em>Thinking, Fast and Slow</em>. Farrar, Straus and Giroux.</li>
+<li>Alicke, M. D., &amp; Govorun, O. (2005). The better-than-average effect. In M. D. Alicke, D. A. Dunning, &amp; J. I. Krueger (Eds.), <em>The Self in Social Judgment</em>. Psychology Press.</li>
+<li>Suls, J., &amp; Wan, C. K. (1987). In search of the false uniqueness effect. <em>Journal of Personality and Social Psychology</em>, 52(1), 211–217.</li>
+<li>Matheson, D., &amp; Matheson, J. (1998). <em>The Smart Organization: Creating Value through Strategic R&amp;D</em>. Harvard Business School Press.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -641,7 +1724,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
