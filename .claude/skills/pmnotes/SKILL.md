@@ -99,8 +99,15 @@ students something to map onto the reading, and it stops the notes drifting into
 a personal reorganisation of the material.
 
 Use the site's classes rather than inventing markup: `.week-meta`, `.chips`,
-`.case` with a nested `.qn`, `.studio`, `.tutor` / `.editor` / `.roommate`,
-`.tabular`. Prose is plain, declarative and unhedged — match it.
+`.case` with a nested `.qn`, `.studio`, `.tabular`. Prose is plain, declarative
+and unhedged — match it.
+
+**The three AI-role callouts — `.tutor`, `.editor`, `.roommate` — belong to Week 1
+and nowhere else.** They introduced the three roles once, at the start of the
+course. The prompts and the full loop live in `ai.qmd`, which any week can link
+to in a sentence. Repeating the callouts every week turns a one-time
+introduction into boilerplate, and they were removed from Week 2 for that
+reason. Do not add them to a later week.
 
 Every week's front matter carries the same keys, and **the release date must be
 identical across the week, the deck and the studio**, or the three open on
