@@ -155,7 +155,8 @@ a small set of custom classes defined in `styles.scss`; use these rather than in
 - `.case` with a nested `.qn` — a case vignette and its discussion question
 - `.studio` — the Thursday studio callout on a week page
 - `.part` — a numbered section of a lab sheet
-- `.tutor` / `.editor` / `.roommate` — the three AI-role callouts
+- `.tutor` / `.editor` / `.roommate` — the three AI-role callouts, **Week 1 only**; they
+ introduce the roles once and the prompts live in `ai.qmd`
 - `.tabular` — tabular-nums wrapper for dates and numbers in tables
 - `.gated`, `.lock`, `.pill*` — generated or schedule-only; do not hand-author
 
