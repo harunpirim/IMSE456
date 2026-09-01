@@ -27,3 +27,750 @@ lab: true
 :::
 
 <!-- VIDEO -->
+
+> Organizations use projects to convert strategy into new products, services, and processes needed for success.
+>
+> — Larson & Gray, Ch. 2 [1]
+
+::: {.callout-note appearance="simple"}
+**Source.** This week's notes follow Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, **Chapter 2** [1]. The exposition is reworded, the structure and substance are the chapter's, and the figures are redrawn from it. The end-of-chapter exercises are reproduced as written. Where a claim comes from elsewhere — Kahneman on optimism bias, Matheson and Matheson on the portfolio matrix — it is cited separately.
+:::
+
+## Learning objectives
+
+| | |
+|:--|:--|
+| **LO 2-1** | Say why a project manager needs to understand the organization's strategy. |
+| **LO 2-2** | Describe the part projects play in setting the organization's strategic direction. |
+| **LO 2-3** | Explain why an organization needs a project priority system at all. |
+| **LO 2-4** | Tell the three kinds of project apart. |
+| **LO 2-5** | Say what the phase gate model does to a project's path through approval. |
+| **LO 2-6** | Judge what a project is worth, on financial and non-financial grounds. |
+| **LO 2-7** | Rank competing proposals with a multi-criteria model. |
+| **LO 2-8** | Put an objective priority system to work on a real set of proposals. |
+| **LO 2-9** | Say why the portfolio has to be managed as a portfolio. |
+
+: {tbl-colwidths="[12,88]"}
+
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">strategy/project alignment</span><span class="chip">strategic management process</span><span class="chip">mission statement</span><span class="chip">SMART objectives</span><span class="chip">implementation gap</span><span class="chip">optimism bias</span><span class="chip">uniqueness bias</span><span class="chip">compliance · operational · strategic</span><span class="chip">phase gate model</span><span class="chip">go · kill · recycle</span><span class="chip">payback period</span><span class="chip">net present value</span><span class="chip">non-financial criteria</span><span class="chip">weighted scoring model</span><span class="chip">must and want objectives</span><span class="chip">priority team</span><span class="chip">governance team</span><span class="chip">portfolio balance</span><span class="chip">portfolio matrix</span>
+:::
+
+---
+
+# LO 2-1 · Why a project manager needs the strategy
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+Week 1 treated a project as a thing to be managed well. This week asks the prior question: **why does this project exist and not some other one?** Nothing in Chapter 1 helps you answer that, and a project executed flawlessly in service of the wrong objective is still waste.
+
+Projects are how an organization turns intent into something real. A strategy that stays in the plan changes nothing; it becomes visible only as new products, new services, and new processes — and those arrive as projects.
+
+The current climate makes the fit between the two tighter than it used to be. Technology moves quickly, competition is global, finances are uncertain, and disease outbreaks have shown how fast the ground can shift. Each of those shortens the time an organization has to notice that its projects no longer serve its direction.
+
+Two practical reasons a project manager cannot treat strategy as somebody else's business:
+
+**So you can make the right call when the plan runs out.** Every project throws up decisions the plan did not anticipate. A project manager who knows what the organization is trying to become resolves those in the right direction. One who does not will optimise for the nearest visible target — usually cost or schedule — and can be locally efficient while pulling against the strategy.
+
+**So you can argue for the project.** Resources are contested. Sooner or later you will have to say why your project deserves people and money that another project also wants. That case is made in the language of the organization's objectives or it is not made at all.
+
+---
+
+# LO 2-2 · How projects carry the strategic direction
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+Integration of projects with the strategic plan assumes two things exist: **a strategic plan**, and **a process that ranks projects by how much they contribute to it**. Where both are present, three things follow — the organization is focused on the same direction, scarce resources go where they are worth most, and communication across projects and departments improves.
+
+Note what that claims. The priority process is not administrative overhead bolted onto the real work. It is the mechanism through which strategy reaches the work at all.
+
+## The four activities
+
+<figure>
+<svg viewBox="0 0 760 452" role="img" aria-labelledby="smp-title" style="width:100%;height:auto">
+  <title id="smp-title">The four activities of the strategic management process, and the question each answers</title>
+  <defs>
+    <marker id="smp-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.6" marker-end="url(#smp-ar)">
+    <path d="M300,52 L196,86"/>
+    <path d="M420,52 L524,86"/>
+    <path d="M196,146 L320,182"/>
+    <path d="M524,146 L400,182"/>
+    <path d="M360,232 L360,268"/>
+    <path d="M360,318 L360,354"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.85">
+    <rect x="240" y="20" width="240" height="34" rx="4"/>
+    <rect x="96" y="86" width="200" height="60" rx="4"/>
+    <rect x="424" y="86" width="200" height="60" rx="4"/>
+    <rect x="240" y="182" width="240" height="50" rx="4"/>
+    <rect x="240" y="268" width="240" height="50" rx="4"/>
+  </g>
+  <rect x="240" y="354" width="240" height="50" rx="4" fill="#0F5A4B" opacity="0.12"/>
+  <rect x="240" y="354" width="240" height="50" rx="4" fill="none" stroke="#0F5A4B" stroke-width="2"/>
+  <g font-size="14" fill="currentColor" text-anchor="middle">
+    <text x="360" y="42" font-weight="600">Review and define the mission</text>
+    <text x="196" y="110">External environment —</text>
+    <text x="196" y="128">opportunities and threats</text>
+    <text x="524" y="110">Internal environment —</text>
+    <text x="524" y="128">strengths and weaknesses</text>
+    <text x="360" y="205" font-weight="600">Analyse and formulate</text>
+    <text x="360" y="222" font-weight="600">strategies</text>
+    <text x="360" y="291" font-weight="600">Set objectives to reach</text>
+    <text x="360" y="308" font-weight="600">the strategies</text>
+    <text x="360" y="377" font-weight="600">Implement strategies</text>
+    <text x="360" y="394" font-weight="600">through projects</text>
+  </g>
+  <g font-size="15" font-weight="700" fill="#0F5A4B" text-anchor="middle">
+    <text x="46" y="46">1</text>
+    <text x="46" y="212">2</text>
+    <text x="46" y="298">3</text>
+    <text x="46" y="384">4</text>
+  </g>
+  <g font-size="13" fill="currentColor" opacity="0.75" text-anchor="start">
+    <text x="648" y="46">What are</text>
+    <text x="648" y="62">we now?</text>
+    <text x="648" y="212">What do we</text>
+    <text x="648" y="228">intend to be?</text>
+    <text x="648" y="378">How do we</text>
+    <text x="648" y="394">get there?</text>
+  </g>
+</svg>
+<figcaption>The four activities, and the question each one answers. Only the fourth produces anything a customer can see.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the strategic management process exhibit [1].</em></figcaption>
+</figure>
+
+**1 · Review and define the mission.** The mission says what the organization wants to become. It is the reference every later choice is checked against.
+
+**2 · Analyse and formulate strategies.** Strategy formulation answers what has to be done to reach the objectives — assessing what the outside world offers and threatens, and what the organization is actually good at.
+
+**3 · Set objectives.** Strategies are turned into targets specific enough to be pursued and checked.
+
+**4 · Implement through projects.** This is where the previous three either become real or do not.
+
+## A mission you can act on
+
+More specific mission statements produce better results, because a tighter focus leaves less room for interpretation. Compare these four:
+
+| Mission statement | |
+|:--|:--|
+| Provide hospital design services | tight |
+| Provide data mining and analysis services | tight |
+| Provide information technology services | loose |
+| Provide high-value products to our customers | loose |
+
+: {tbl-colwidths="[70,30]"}
+
+The first two rule things out. The last two rule almost nothing out: nearly any proposal can be argued to fit, which means the mission cannot settle an argument between two proposals — and settling that argument is what a mission is for.
+
+## Objectives worth setting
+
+The chapter's test for an objective is the SMART checklist.
+
+| | | |
+|:--|:--|:--|
+| **S** | Specific | Target one thing, precisely |
+| **M** | Measurable | Establish an indicator of progress |
+| **A** | Assignable | One person is responsible for completion |
+| **R** | Realistic | Achievable with the resources actually available |
+| **T** | Time related | State when it will be achieved |
+
+: {tbl-colwidths="[8,22,70]"}
+
+*Checklist reproduced from Larson & Gray, Ch. 2, Exhibit 2.1 [1].*
+
+Assignable is the one that gets dropped. An objective owned by a department is owned by nobody, and it will still be unmet at the review with a good explanation attached.
+
+---
+
+# LO 2-3 · Why a priority system is needed at all
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+An organization can have a clear strategy and still fund the wrong work. The gap between what the strategy says and what the projects actually are opens quietly, and it shows up as symptoms before anyone names the cause.
+
+Six symptoms of an organization whose projects have come loose from its strategy:
+
+- Conflict between functional managers is frequent, and trust erodes with it.
+- Meetings are called repeatedly to set or renegotiate priorities.
+- People are moved between projects as the priority of the day changes.
+- Employees cannot say which projects matter.
+- People are on several projects at once and feel ineffective on all of them.
+- Resources are not adequate.
+
+Read that list as diagnosis rather than complaint. Each item is what a missing priority system feels like from inside. The last one is the trap: *resources are not adequate* sounds like a budget problem, and organizations respond by asking for more. If the real cause is that too many projects were approved, more resources fund the same disorder at a larger scale.
+
+## Two biases that keep the pipeline overfull
+
+Approving too much is not only a process failure. Two well-documented habits of mind push in the same direction.
+
+**Optimism bias** is the tendency to expect better outcomes from planned activity than the record justifies (Kahneman, 2011) [2]. Applied to a proposal, it produces costs that are too low and benefits that arrive too early.
+
+**Uniqueness bias** was identified by psychologists as the tendency to see oneself as more singular than one is — healthier, or cleverer, than others (Alicke & Govorun, 2005; Suls & Wan, 1987) [3][4]. Applied to a proposal, it is the belief that the base rate belongs to other people's projects. Every organization that has overrun a schedule knew about overruns in general.
+
+The two compound. Optimism bias makes the estimate flattering; uniqueness bias explains away the evidence that it is flattering. A priority system is partly a defence against your own judgement, which is why it has to be objective enough to be uncomfortable.
+
+## What portfolio management buys
+
+| Benefits of project portfolio management |
+|:--|
+| Builds discipline into the project selection process |
+| Links project selection to strategic metrics |
+| Prioritises proposals against a common set of criteria, rather than on politics or emotion |
+| Allocates resources to projects that align with the strategic direction |
+| Balances risk across all projects |
+| Justifies killing projects that do not support the strategy |
+| Improves communication and supports agreement on project goals |
+
+: {tbl-colwidths="[100]"}
+
+*List reproduced from Larson & Gray, Ch. 2, Exhibit 2.2 [1].*
+
+The sixth is the one that is hard to buy any other way. Killing a project is a political act, and a person who kills one without a system is exposed. A published set of criteria moves the decision from a person to a process.
+
+---
+
+# LO 2-4 · Three kinds of project
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+<figure>
+<svg viewBox="0 0 700 300" role="img" aria-labelledby="cls-title" style="width:100%;height:auto">
+  <title id="cls-title">The three kinds of project an organization funds</title>
+  <ellipse cx="350" cy="150" rx="330" ry="138" fill="#0F5A4B" opacity="0.07"/>
+  <ellipse cx="350" cy="150" rx="330" ry="138" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.6"/>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.8">
+    <rect x="252" y="38" width="196" height="62" rx="4"/>
+    <rect x="120" y="176" width="196" height="62" rx="4"/>
+    <rect x="384" y="176" width="196" height="62" rx="4"/>
+  </g>
+  <g font-size="15" font-weight="600" fill="currentColor" text-anchor="middle">
+    <text x="350" y="64">Compliance</text>
+    <text x="350" y="84">(must do)</text>
+    <text x="218" y="202">Strategic</text>
+    <text x="218" y="222">projects</text>
+    <text x="482" y="202">Operational</text>
+    <text x="482" y="222">projects</text>
+  </g>
+</svg>
+<figcaption>Every project an organization funds is one of these three, and each is justified on a different basis.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the project classification exhibit [1].</em></figcaption>
+</figure>
+
+| Kind | What it is | How it is justified |
+|:--|:--|:--|
+| **Compliance and emergency** | Work the organization must do — a regulator requires it, or something has broken | By the penalty for not doing it |
+| **Operational** | Work that keeps the current business efficient — total quality management efforts are the standard example | By the saving or the improvement |
+| **Strategic** | Work that builds future capability — new products, new technologies, research and development | By its contribution to the strategy |
+
+: {tbl-colwidths="[24,44,32]"}
+
+The classification matters because the three cannot be compared on one scale. A compliance project has no return to speak of and is undertaken anyway, because the alternative is a penalty. An operational project competes on payback. A strategic project may lose to an operational one on every financial measure and still be the one the organization cannot skip.
+
+Rank all three together on net present value and compliance work always loses. That is not a finding about compliance work; it is a broken ranking. Chapter 2's answer is to decide the split between the categories *before* ranking anything inside them.
+
+---
+
+# LO 2-5 · The phase gate model
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+Selection is not a single decision. A project passes through a series of **gates** on the way to completion, each attached to a phase and each a genuine decision point.
+
+<figure>
+<svg viewBox="0 0 760 272" role="img" aria-labelledby="gate-title" style="width:100%;height:auto">
+  <title id="gate-title">A gate has three possible outcomes: go, kill, or recycle</title>
+  <defs>
+    <marker id="gate-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="30" y="98" width="150" height="54" rx="4"/>
+    <rect x="540" y="30" width="206" height="48" rx="4"/>
+    <rect x="540" y="176" width="206" height="48" rx="4"/>
+  </g>
+  <path d="M300,88 L390,88 L345,168 Z" fill="none" stroke="#0F5A4B" stroke-width="2"/>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.6" marker-end="url(#gate-ar)">
+    <path d="M180,125 L296,125"/>
+    <path d="M396,100 L534,58"/>
+    <path d="M372,146 L534,190"/>
+    <path d="M345,168 L345,230 L105,230 L105,156"/>
+  </g>
+  <g font-size="14" fill="currentColor" text-anchor="middle">
+    <text x="105" y="120" font-weight="600">Phase</text>
+    <text x="105" y="138">work and information</text>
+    <text x="345" y="112" font-weight="700" fill="#0F5A4B">Gate</text>
+    <text x="643" y="50" font-weight="600">Go</text>
+    <text x="643" y="70" font-size="13">proceed to the next phase</text>
+    <text x="643" y="196" font-weight="600">Kill</text>
+    <text x="643" y="216" font-size="13">cancel the project</text>
+  </g>
+  <g font-size="13" fill="#0F5A4B" font-weight="600" text-anchor="middle">
+    <text x="225" y="252">Recycle — revise and resubmit</text>
+  </g>
+</svg>
+<figcaption>The gate is a decision, not a formality. Only one of the three outcomes moves the project forward.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the phase gate exhibit [1].</em></figcaption>
+</figure>
+
+The six phases and their gates:
+
+| Phase | What it produces | The gate asks |
+|:--|:--|:--|
+| **1 · Idea** | A candidate worth writing down | Is this worth a proposal? |
+| **2 · Proposal** | A described project with cost, risk and fit | Does it clear the screen? |
+| **3 · Screening and selection** | A ranked position against everything else | Is it funded, and at what priority? |
+| **4 · Implementation plan** | A comprehensive plan, from an assigned manager and staff | Does the plan hold up? |
+| **5 · Progress evaluation** | Evidence of performance against the plan | Continue, or stop? |
+| **6 · Closure** | The delivered product and what was learned | Is it genuinely finished? |
+
+: {tbl-colwidths="[26,40,34]"}
+
+Gate 4 is where a proposal stops being a hope. Once a preliminary proposal is approved, a project manager and staff develop a fuller implementation plan, and the questions put to it at that gate are blunt:
+
+> Does the plan make sense? Do the numbers add up? Is it worth the risk? How much confidence is there in the plan?
+>
+> — the gate 4 questions, Larson & Gray, Ch. 2 [1]
+
+An affirmative answer launches the project.
+
+Gate 5 is the one organizations skip. It exists so that a project can be cancelled for poor performance or because it is no longer relevant — the "kill" outcome, applied to work already underway and already defended. Scrutiny scales with size: a three-year Department of Defense project has a progress review every six months, while small projects are usually approved and reviewed by immediate superiors and need nothing heavier.
+
+---
+
+# LO 2-6 · What a project is worth: financial criteria
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+Two financial models do most of the work in practice: **payback** and **net present value**. They answer different questions, and they disagree often enough that the disagreement is worth understanding before you meet it in a meeting.
+
+## Payback
+
+Payback asks how long the money is exposed:
+
+$$\text{Payback period} = \frac{\text{Estimated cost of the project}}{\text{Annual net cash inflow}}$$
+
+For uneven cash flows, accumulate until the cost is recovered. It is quick, it needs no assumption about a discount rate, and everyone in the room understands it.
+
+It is also blind twice over. It ignores the time value of money, and it ignores everything that happens after the cutoff — a project that pays back in two years and then collapses scores better than one that pays back in three and runs profitably for a decade.
+
+## Net present value
+
+Net present value discounts every future cash flow back to what it is worth today, then subtracts what the project costs:
+
+$$\text{NPV} = -I_0 + \sum_{t=1}^{n} \frac{F_t}{(1+k)^t}$$
+
+where $I_0$ is the initial investment, $F_t$ the net cash flow in period $t$, and $k$ the required rate of return. A positive NPV means the project earns more than the required return and is worth doing on financial grounds; a negative NPV means it does not.
+
+## The two disagreeing
+
+Two projects, each costing \$180,000, required return 12 percent.
+
+| Year | Project A net flow | Discounted at 12% | Project B net flow | Discounted at 12% |
+|:--|--:|--:|--:|--:|
+| 1 | \$60,000 | \$53,571 | \$90,000 | \$80,357 |
+| 2 | \$70,000 | \$55,804 | \$90,000 | \$71,747 |
+| 3 | \$70,000 | \$49,825 | \$10,000 | \$7,118 |
+| 4 | \$50,000 | \$31,776 | \$10,000 | \$6,355 |
+| **Total** | **\$250,000** | **\$190,976** | **\$200,000** | **\$165,578** |
+
+: {tbl-colwidths="[10,22,23,22,23]"}
+
+| | Project A | Project B |
+|:--|--:|--:|
+| Payback | 2.71 years | **2.00 years** |
+| NPV at 12% | **+\$10,976** | −\$14,422 |
+
+: {tbl-colwidths="[34,33,33]"}
+
+Payback prefers B by nine months. NPV says B destroys about \$14,000 of value while A creates about \$11,000. Both calculations are correct; they are answers to different questions. B returns cash quickly and then stops, and payback cannot see the stopping.
+
+A firm short of cash may still choose B and be right to. What it cannot do is choose B *believing* B is the more valuable project.
+
+## Non-financial criteria
+
+A model that only counts money will systematically reject work the organization needs. Firms support projects with unremarkable profit margins for strategic reasons:
+
+- To capture a larger share of the market.
+- To make it harder for a competitor to enter.
+- To develop an enabler product whose introduction lifts sales of more profitable products.
+- To develop core technology for the next generation of products.
+- To reduce dependence on an unreliable supplier.
+- To head off government intervention and regulation.
+
+Less tangible reasons apply too. Organizations fund work to repair a damaged image or strengthen how well the brand is recognised, and many treat corporate citizenship as an obligation and back projects in the communities they operate in.
+
+The discipline runs the other way as well. Companies have to be capable of **saying no to a profitable project that sits outside the mission**. That is harder than it sounds, because the case for it is always concrete — real revenue, a real customer — while the case against it is the abstraction that the mission is supposed to protect.
+
+---
+
+# LO 2-7 · Multi-criteria selection models
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+Once the criteria include things money cannot express, ranking needs a model that holds several dimensions at once. The chapter's instrument separates two kinds of criterion.
+
+**Must objectives** are pass or fail. Every project either meets them or is out — legal, safety and environmental standards are the usual examples, along with rules like *every new product has a complete market analysis*. A must objective is never traded against anything. Scoring it is a screen, not a contribution.
+
+**Want objectives** are weighted. Each carries a relative importance, commonly on a 1–100 scale, and each project is scored for its impact on that objective against a published definition — typically 0, 1 or 2, with each value spelled out so that scoring is repeatable rather than a matter of taste. The weighted score is importance × impact, and the total weighted score sets the priority.
+
+The published impact definitions are what makes the model an instrument rather than a vote. *0 = does not address the problem, 1 = an opportunity to fix it, 2 = an urgent problem solved* can be applied by two people to the same proposal with the same result. "Rate the impact from 0 to 2" cannot.
+
+## A model, and how much its weights matter
+
+Three proposals, three want objectives, impact scored 0–2:
+
+| Want objective | Weight | Alpha | Beta | Gamma |
+|:--|--:|:--:|:--:|:--:|
+| Reduces unplanned downtime | 90 | 2 | 1 | 0 |
+| Opens a new customer segment | 70 | 0 | 2 | 2 |
+| Improves regulatory margin | 55 | 1 | 0 | 2 |
+| **Total weighted score** | | **235** | **230** | **250** |
+
+: {tbl-colwidths="[40,12,16,16,16]"}
+
+Gamma wins, Alpha second, Beta third — and the three sit within twenty points of each other.
+
+Now raise the weight on downtime from 90 to 100, a change most people would make without much thought:
+
+| | Alpha | Beta | Gamma |
+|:--|--:|--:|--:|
+| Total weighted score | **255** | 240 | 250 |
+
+: {tbl-colwidths="[40,20,20,20]"}
+
+The ranking inverts. Alpha now beats Gamma, on identical proposals and identical impact scores, because one weight moved by ten points.
+
+This is the property to carry out of the chapter. A weighted model does not remove judgement from selection; it relocates judgement into the weights, where it is written down, visible, and arguable. That is a real gain — the argument now happens over the criteria rather than over the projects — but a total weighted score is not an objective fact, and a ranking whose order flips under a plausible change in weights has not actually separated its candidates.
+
+---
+
+# LO 2-8 · An objective priority system in practice
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+## Soliciting proposals
+
+Good proposals have to be asked for. Priority criteria are communicated to every stakeholder precisely so that they can be a source of new project ideas — people propose work that fits when they know what fitting means.
+
+A proposal form imposes the same questions on every candidate, which is what makes ranking possible at all. The chapter's example is an automatic vehicle location project for a public transport agency, and the fields are worth reading as a checklist:
+
+| Proposal form asks | Example entry |
+|:--|:--|
+| Project classification | Strategic, operational, or compliance |
+| What business problem does the project solve? | Improve rider satisfaction through kiosk, website and mobile applications; improve driver and traveller safety |
+| How does this align with our strategy? | Increase ridership through better travel planning and scheduling; faster response to accidents |
+| Major deliverables | GPS vehicle tracking system, internet access, schedule screens |
+| Impact of *not* doing it | Ridership goals are not met |
+| Three major risks | Cost overruns; integrating rail, bus and streetcar systems; the system being hacked |
+| How will success be measured? | Increased ridership, rider satisfaction, meeting budget and schedule |
+| Internal resources required, and available? | Yes / yes |
+| Estimated cost and duration | \$10 million, 22 weeks |
+| Oversight action | Accept or return |
+
+: {tbl-colwidths="[38,62]"}
+
+*Field structure and example entries follow Larson & Gray, Ch. 2, the AVL proposal form exhibit [1].*
+
+Two of those fields do unusual work. **Impact of not doing it** catches compliance projects that would otherwise score nothing. **Three major risks**, asked at proposal time, is the only point in the process where risk is cheap to admit — after funding, naming a risk means explaining why you asked for money without mentioning it.
+
+## Risk, briefly and early
+
+The chapter pairs the proposal form with a short risk assessment, illustrated on a 500-acre wind farm. Its purpose is to draw attention to risks that will need management attention — not to analyse them, which is Chapter 7's job.
+
+| Risk | Probability | Impact |
+|:--|:--|:--|
+| Government incentives curtailed | High | High |
+| Land use injunction | Medium | High |
+| Energy price decrease | Medium | Medium |
+| New import tax | Low | High |
+
+: {tbl-colwidths="[52,24,24]"}
+
+*Example reproduced from Larson & Gray, Ch. 2, the wind farm risk assessment exhibit [1].*
+
+Alongside it, three project factors are rated: complexity, resource skills, and technology. A proposal that is complex, short of skills and technically unproven is a different animal from one that is none of those, whatever its weighted score.
+
+## Screening and ranking
+
+<figure>
+<svg viewBox="0 0 760 400" role="img" aria-labelledby="scr-title" style="width:100%;height:auto">
+  <title id="scr-title">The priority screening process, from proposal to project initiation</title>
+  <defs>
+    <marker id="scr-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="266" y="46" width="230" height="58" rx="4"/>
+    <rect x="266" y="160" width="230" height="58" rx="4"/>
+    <rect x="266" y="274" width="230" height="50" rx="4"/>
+    <rect x="30" y="58" width="120" height="34" rx="4"/>
+    <rect x="612" y="58" width="128" height="34" rx="4"/>
+    <rect x="30" y="172" width="120" height="34" rx="4"/>
+    <rect x="612" y="172" width="128" height="34" rx="4"/>
+    <rect x="30" y="280" width="120" height="38" rx="4"/>
+  </g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.6" marker-end="url(#scr-ar)">
+    <path d="M381,16 L381,42"/>
+    <path d="M266,75 L154,75"/>
+    <path d="M496,75 L608,75"/>
+    <path d="M381,104 L381,156"/>
+    <path d="M266,189 L154,189"/>
+    <path d="M496,189 L608,189"/>
+    <path d="M381,218 L381,270"/>
+    <path d="M266,299 L154,299"/>
+    <path d="M381,324 L381,362"/>
+  </g>
+  <g font-size="13" fill="currentColor" text-anchor="middle">
+    <text x="381" y="70">Priority team evaluates proposals</text>
+    <text x="381" y="88">and reviews portfolio balance</text>
+    <text x="381" y="184">Priority team evaluates the proposal</text>
+    <text x="381" y="202">with its implementation plan</text>
+    <text x="381" y="296">Charter issued, resources assigned</text>
+    <text x="90" y="80">Reject</text>
+    <text x="676" y="72">Return for more</text>
+    <text x="676" y="88">information</text>
+    <text x="90" y="194">Reject</text>
+    <text x="676" y="186">Return for more</text>
+    <text x="676" y="202">information</text>
+    <text x="90" y="296">Hold for</text>
+    <text x="90" y="312">resources</text>
+  </g>
+  <g font-size="13" font-weight="600" fill="#0F5A4B" text-anchor="middle">
+    <text x="381" y="12">Proposals</text>
+    <text x="381" y="378">Project initiated</text>
+  </g>
+  <g font-size="12" fill="currentColor" opacity="0.7" text-anchor="start">
+    <text x="392" y="134">Pursue</text>
+    <text x="392" y="248">Accept</text>
+  </g>
+</svg>
+<figcaption>Two evaluations, not one: the second happens after a full implementation plan exists, and can still reject.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the project screening process exhibit [1].</em></figcaption>
+</figure>
+
+The important feature of that flow is that the same team evaluates twice. The first pass judges a proposal; the second judges a proposal that now has a real implementation plan attached, with real numbers.
+
+That is when the estimates change. Where the second look turns up significant negative differences — a cost first put at \$10 million now standing at \$12 million, or a feature that has quietly dropped out of what will be delivered — the proposal is normally referred up to more senior management, who decide whether it should still go ahead. Otherwise it is approved and given a priority.
+
+Notice what that treats as normal: estimates get worse as they get more detailed. The system is built to expect it and to force a second decision rather than let the project drift forward on the strength of the first one.
+
+## Keeping the system honest
+
+A priority system is only as good as the willingness to be bound by it.
+
+- Every significant project selected is ranked, and the results are **published**.
+- Senior management has to take an active part in setting priorities and supporting the system. **Going around it destroys it** — one exception is enough to teach everyone that the route to funding is influence rather than merit.
+- Review boards need experienced managers who will ask hard questions and separate fact from fiction.
+- Resources for major projects are allocated explicitly, and must not collide with daily operations or land on people as an overload.
+
+---
+
+# LO 2-9 · Managing the portfolio as a portfolio
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+The last move in the chapter is the one that changes how selection works: a project's merits are judged **in the context of the projects that already exist**.
+
+Several pressures force this. Projects compete for the same skilled people; teams are dispersed and often virtual; time-to-market is compressed; capital is limited. Managing each project on its own merits cannot resolve any of those, because none of them is visible from inside a single project.
+
+Two things senior management has to supply:
+
+**Selection criteria that align with current strategy.** Without this the priority system optimises something the organization is no longer trying to do.
+
+**An annual decision about balance.** How should available people and capital be divided across the types of project? A preliminary split — say 20 percent compliance, 50 percent strategic, 30 percent operational — is decided *before* selection begins, though it may be revised once the actual proposals are in. This is what stops the three categories being ranked against each other on a single incomparable scale.
+
+## Governance and open information
+
+A governance team or project office publishes the priority of every project and keeps the process open. Most organizations doing this use an electronic bulletin board carrying the current portfolio, the status of each project, and the open issues.
+
+The stated reason is worth taking seriously: **open communication discourages power plays.** Influence works best unobserved. A published ranking does not eliminate politics, but it forces an argument about priority to happen in public and against stated criteria.
+
+## The portfolio matrix
+
+<figure>
+<svg viewBox="0 0 620 440" role="img" aria-labelledby="mtx-title" style="width:100%;height:auto">
+  <title id="mtx-title">The project portfolio matrix: technical feasibility against commercial value</title>
+  <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.8">
+    <rect x="110" y="30" width="470" height="330"/>
+    <line x1="345" y1="30" x2="345" y2="360"/>
+    <line x1="110" y1="195" x2="580" y2="195"/>
+  </g>
+  <g font-size="17" font-weight="600" fill="currentColor" text-anchor="middle">
+    <text x="227" y="105">Bread and butter</text>
+    <text x="462" y="105">Pearl</text>
+    <text x="227" y="270">White elephant</text>
+    <text x="462" y="270">Oyster</text>
+  </g>
+  <g font-size="12" fill="currentColor" opacity="0.75" text-anchor="middle">
+    <text x="227" y="128">easy, modest value</text>
+    <text x="462" y="128">easy, high value</text>
+    <text x="227" y="293">hard, low value</text>
+    <text x="462" y="293">hard, high value</text>
+  </g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="2">
+    <line x1="82" y1="352" x2="82" y2="38"/>
+    <line x1="118" y1="390" x2="572" y2="390"/>
+  </g>
+  <g fill="#0F5A4B">
+    <path d="M82,30 l-5,12 l10,0 z"/>
+    <path d="M580,390 l-12,-5 l0,10 z"/>
+  </g>
+  <g font-size="13" fill="currentColor">
+    <text x="42" y="200" text-anchor="middle" transform="rotate(-90 42 200)">Technical feasibility — how easy is it?</text>
+    <text x="345" y="416" text-anchor="middle">Commercial value if it succeeds — net present value</text>
+    <text x="118" y="378" font-size="12" opacity="0.7">Low</text>
+    <text x="572" y="378" font-size="12" opacity="0.7" text-anchor="end">High</text>
+    <text x="96" y="44" font-size="12" opacity="0.7">High</text>
+    <text x="96" y="352" font-size="12" opacity="0.7">Low</text>
+  </g>
+</svg>
+<figcaption>A balanced portfolio holds all four in deliberate proportion. An unbalanced one usually holds too many of the bottom left.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 2, the project portfolio matrix exhibit [1]; the matrix originates with Matheson &amp; Matheson [5].</em></figcaption>
+</figure>
+
+| Quadrant | What it is | Examples from the chapter |
+|:--|:--|:--|
+| **Bread and butter** | Straightforward work producing modest commercial value, usually evolutionary improvement | Software upgrades; manufacturing cost reduction |
+| **Pearl** | Low-risk development with a high payoff — revolutionary commercial advance on proven technology | Next-generation integrated circuits; subsurface imaging to locate oil and gas |
+| **Oyster** | High risk, high value; a technological breakthrough with large commercial potential | Embryonic DNA treatments; new metal alloys |
+| **White elephant** | Once promising, no longer viable | A product aimed at a market that is now saturated; a powerful energy source whose side effects turn out to be toxic |
+
+: {tbl-colwidths="[20,42,38]"}
+
+The matrix is a balance instrument rather than a ranking. All-bread-and-butter is an organization with no future; all-oysters is one that may not have a present. White elephants are the interesting category, because no organization deliberately funds one — a white elephant is a pearl or an oyster that stopped being viable while nobody was looking, and it keeps its budget through the reputation it earned earlier.
+
+That is the argument for reviewing the portfolio rather than the project. Nothing inside a white elephant's own status report says *this quadrant has changed*.
+
+## What follows from all this
+
+A highly ranked project can still be deferred or turned down if it upsets the current balance among risk, resources and strategic initiatives. Selection rests on the merits of the project **and** on what it contributes to the mix already in flight.
+
+That is a genuinely uncomfortable conclusion, and worth sitting with. It means the best-scoring proposal in the room is not automatically the one to fund, and that the person whose proposal is deferred did nothing wrong.
+
+---
+
+# Tuesday — Four proposals, two budgets
+
+::: {.case}
+Northline Instruments makes surgical measurement devices. Its governance team meets each March to set the year's portfolio, working to a capital envelope of \$1.4 million. Last autumn the team set a balance for the year: 30 percent to compliance and operational work, 70 percent to strategic work.
+
+Four proposals arrive.
+
+**P1 · Sterilisation logging.** A new regulatory requirement takes effect in fourteen months. Without the logging system Northline cannot ship into its second-largest market. Cost \$380,000. No revenue attached. The risk assessment is unremarkable: proven technology, skills in-house.
+
+**P2 · CNC controller replacement.** The controllers on three machining cells are eleven years old and failing more often each quarter. Cost \$300,000, saving an estimated \$95,000 a year in downtime and rework. Payback a little over three years.
+
+**P3 · Wireless sensor line.** A new product for a segment Northline has never sold into. Cost \$620,000. Marketing's estimate puts the net present value at \$410,000 if it succeeds. The technology is unproven in-house, and the engineering lead's confidence in the schedule is, in her own words, moderate.
+
+**P4 · Brand refresh.** New identity, brochures and trade-show stand. Cost \$160,000. No measurable return is offered, and the proposal form's "impact of not doing it" field reads *falling behind competitors in appearance*. The sponsor is the chief executive, who has mentioned it twice in company meetings.
+
+The weighted scoring model, run on all four, puts P3 first, P2 second, P4 third and P1 last — P1 scores almost nothing, because it opens no market and improves no operation.
+
+::: {.qn}
+Which budget does each proposal belong to, and what does the balance decision force the team to do? P1 ranks last and is not optional — what does that tell you about the scoring model? And how should the team handle P4, given who is sponsoring it?
+:::
+:::
+
+---
+
+# Thursday studio
+
+::: {.studio}
+#### Build a selection model, then let it disagree with you
+
+Individual work. Rank four proposals on judgement first, then build a weighted scoring model and the financial screens, and account for every place the model contradicts your ranking. One page.
+
+**[Slides](../slides/week-02.qmd)**
+:::
+
+---
+
+# Exercises
+
+1. You manage a hotel resort located on the South Beach on the Island of Kauai in Hawaii. You are shifting the focus of your resort from a traditional fun-in-the-sun destination to eco-tourism. (Eco-tourism focuses on environmental awareness and education.) How would you classify the following projects in terms of compliance, strategic, and operational?
+
+   a. Convert the pool heating system from electrical to solar power.
+   b. Build a four-mile nature hiking trail.
+   c. Renovate the horse barn.
+   d. Launch a new promotional campaign with Hawaii Airlines.
+   e. Convert 12 adjacent acres into a wildlife preserve.
+   f. Update all the bathrooms in condos that are 10 years old or older.
+   g. Change hotel brochures to reflect eco-tourism image.
+   h. Test and revise disaster response plan based on new requirements.
+
+   How easy was it to classify these projects? What made some projects more difficult than others? What do you think you now know that would be useful for managing projects at the hotel?
+
+2. Two new software projects are proposed to a young, start-up company. The Alpha project will cost \$150,000 to develop and is expected to have an annual net cash flow of \$40,000. The Beta project will cost \$200,000 to develop and is expected to have an annual net cash flow of \$50,000. The company is very concerned about their cash flow. Using the payback period, which project is better from a cash flow standpoint? Why?
+
+3. A five-year project has a projected net cash flow of \$15,000, \$25,000, \$30,000, \$20,000, and \$15,000 in the next five years. It will cost \$50,000 to implement the project. If the required rate of return is 20 percent, conduct a discounted cash flow calculation to determine the NPV.
+
+4. You work for the 3T company, which expects to earn at least 18 percent on its investments. You have to choose between two similar projects. The following chart shows the cash information for each project. Which of the two projects would you fund if the decision were based only on financial information? Why?
+
+| Omega Year | Inflow | Outflow | Netflow | | Alpha Year | Inflow | Outflow | Netflow |
+|:--|--:|--:|--:|:--|:--|--:|--:|--:|
+| Y0 | 0 | \$225,000 | −225,000 | | Y0 | 0 | \$300,000 | −300,000 |
+| Y1 | 0 | 190,000 | −190,000 | | Y1 | \$50,000 | 100,000 | −50,000 |
+| Y2 | \$150,000 | 0 | 150,000 | | Y2 | 150,000 | 0 | 150,000 |
+| Y3 | 220,000 | 30,000 | 190,000 | | Y3 | 250,000 | 50,000 | 200,000 |
+| Y4 | 215,000 | 0 | 215,000 | | Y4 | 250,000 | 0 | 250,000 |
+| Y5 | 205,000 | 30,000 | 175,000 | | Y5 | 200,000 | 50,000 | 150,000 |
+| Y6 | 197,000 | 0 | 197,000 | | Y6 | 180,000 | 0 | 180,000 |
+| Y7 | 100,000 | 30,000 | 70,000 | | Y7 | 120,000 | 30,000 | 90,000 |
+| **Total** | **1,087,000** | **505,000** | **582,000** | | **Total** | **1,200,000** | **530,000** | **670,000** |
+
+: {tbl-colwidths="[10,11,11,11,4,10,11,11,11]"}
+
+::: {.callout-note appearance="simple"}
+Exercises are reproduced from Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, Chapter 2 [1].
+:::
+
+---
+
+::: {.tutor}
+### Tutor check — one question at a time, no lecturing
+
+1. An organization has a clear strategy, a competent priority system, and a portfolio full of the wrong projects. Give a mechanism by which that happens.
+2. Payback prefers Project B; NPV prefers Project A. Both are computed correctly. What question is each one answering?
+3. Why can a compliance project not be ranked against a strategic project on net present value? Answer without using the word "unfair".
+4. A weighted model's ranking flips when one weight moves ten points. Is the model broken? Defend either answer.
+5. White elephants are never approved as white elephants. So how does an organization end up with a herd of them?
+:::
+
+::: {.editor}
+### Editor challenge — attack this claim
+
+> "A weighted scoring model makes project selection objective. Once the criteria are agreed, the arithmetic decides, and politics is out of the process."
+
+Attack it. Available lines: the weights are themselves a judgement, and the Alpha–Gamma inversion shows how little movement it takes to change the answer; must objectives are set by someone; a proposal's impact scores are assigned by people who know what score their project needs. But the claim is not empty — something real does change when the criteria are published. Decide what survives.
+:::
+
+::: {.roommate}
+### Roommate link
+
+**Choosing courses for next semester.** You have a credit limit, a graduation requirement, a couple of courses you actually want, and one that fits your schedule badly but is only offered every other year. The requirement is a must objective — no weighting, no trade. The rest are want objectives, and your weights are things like *how much do I care about this subject* against *what does the schedule allow*.
+
+Now the portfolio half. A semester of four easy electives is bread and butter: you will pass, and you will not have moved. A semester of four brutal ones might be the year you drop something. The choice you make is not course by course; it is about the balance of the set. And the course you keep deferring because it never quite fits — check whether it is still worth taking, or whether it became a white elephant two semesters ago.
+:::
+
+---
+
+# Where this sits in the course
+
+*Following Larson & Gray, Ch. 2 [1].*
+
+Chapter 1 said what a project is. Chapter 2 says which ones get funded, and gives you the two instruments — the financial screen and the weighted model — that decide it.
+
+Chapter 3 takes the next constraint: the structure and culture the selected project has to survive inside. A project chosen correctly can still be crippled by the organization it lands in.
+
+From Chapter 4 the sequence turns to building the plan — defining scope, decomposing it into a work breakdown structure, and putting credible numbers on time and cost. The estimates you will produce there are the same estimates that arrive at the gate in this chapter, which is why Chapter 2 expects them to get worse as they get more detailed.
+
+# References
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 2.
+2. Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
+3. Alicke, M. D., & Govorun, O. (2005). The better-than-average effect. In M. D. Alicke, D. A. Dunning, & J. I. Krueger (Eds.), *The Self in Social Judgment*. Psychology Press.
+4. Suls, J., & Wan, C. K. (1987). In search of the false uniqueness effect. *Journal of Personality and Social Psychology*, 52(1), 211–217.
+5. Matheson, D., & Matheson, J. (1998). *The Smart Organization: Creating Value through Strategic R&D*. Harvard Business School Press.

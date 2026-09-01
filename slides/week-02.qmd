@@ -1,0 +1,605 @@
+---
+title: "Week 2 — Organization Strategy and Project Selection"
+subtitle: "IMSE 456/656 · Larson Ch. 2"
+author: Harun Pirim
+date: "2026-09-01"
+week: 2
+release: "2026-08-31"
+---
+
+## {.center}
+
+> Organizations use projects to convert strategy into new products, services, and processes needed for success.
+
+::: {.aside}
+Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, Ch. 2. Exposition reworded, figures redrawn.
+:::
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 2-1** | Why a project manager needs the strategy |
+| **LO 2-2** | How projects carry the strategic direction |
+| **LO 2-3** | Why a priority system is needed at all |
+| **LO 2-4** | Three kinds of project |
+| **LO 2-5** | The phase gate model |
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 2-6** | Financial and non-financial criteria |
+| **LO 2-7** | Multi-criteria selection models |
+| **LO 2-8** | An objective priority system |
+| **LO 2-9** | Managing the portfolio as a portfolio |
+
+# LO 2-1 · Why the strategy is your business
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## Last week, and this week
+
+**Week 1:** what a project is, and how to manage it well.
+
+. . .
+
+**This week:** why *this* project and not another one.
+
+. . .
+
+A project executed flawlessly against the wrong objective is still waste.
+
+## Strategy only becomes visible as projects
+
+A strategy that stays in the plan changes nothing.
+
+It becomes real as new products, new services, new processes — and those arrive as projects.
+
+## Why the climate tightened the fit
+
+- Rapid technology change
+- Global competition
+- Financial uncertainty
+- Disease outbreaks
+
+Each shortens the time you have to notice your projects no longer serve your direction.
+
+## Two reasons you cannot outsource this
+
+**Make the right call when the plan runs out.**
+Every project throws up decisions the plan did not anticipate.
+
+. . .
+
+**Argue for the project.**
+Resources are contested. That case is made in the language of the organization's objectives, or not at all.
+
+# LO 2-2 · Carrying the strategic direction
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## Integration assumes two things
+
+1. A strategic plan exists
+2. A process ranks projects by contribution to it
+
+. . .
+
+**Then:** shared focus · scarce resources well spent · better communication across projects
+
+## The four activities
+
+| | |
+|---|---|
+| **1** | Review and define the mission |
+| **2** | Analyse and formulate strategies |
+| **3** | Set objectives to reach the strategies |
+| **4** | Implement strategies through projects |
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 2, strategic management process exhibit
+:::
+
+## A mission you can act on
+
+| Mission statement | |
+|---|---|
+| Provide hospital design services | tight |
+| Provide data mining and analysis services | tight |
+| Provide information technology services | loose |
+| Provide high-value products to our customers | loose |
+
+. . .
+
+A loose mission cannot settle an argument between two proposals — which is what a mission is for.
+
+## SMART objectives
+
+| | | |
+|---|---|---|
+| **S** | Specific | Target one thing, precisely |
+| **M** | Measurable | An indicator of progress |
+| **A** | Assignable | One person completes it |
+| **R** | Realistic | With the resources you have |
+| **T** | Time related | State when |
+
+::: {.aside}
+Reproduced from Larson & Gray, Ch. 2, Exhibit 2.1
+:::
+
+## The one that gets dropped
+
+**Assignable.**
+
+An objective owned by a department is owned by nobody.
+
+It will still be unmet at the review, with a good explanation attached.
+
+# LO 2-3 · Why a priority system
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## Six symptoms of a disconnect
+
+- Frequent conflict between functional managers; trust erodes
+- Meetings called repeatedly to renegotiate priorities
+- People moved between projects as priorities shift
+- Nobody can say which projects matter
+- Several projects each, and ineffective on all of them
+- Resources are not adequate
+
+## The trap in the last one
+
+*Resources are not adequate* sounds like a budget problem.
+
+. . .
+
+If the cause is that too many projects were approved, more resources fund the same disorder at a larger scale.
+
+## Two biases that keep the pipeline full
+
+**Optimism bias** — expecting better outcomes than the record justifies.
+
+::: {.aside}
+Kahneman (2011), *Thinking, Fast and Slow*
+:::
+
+. . .
+
+**Uniqueness bias** — seeing yourself as more singular than you are.
+
+::: {.aside}
+Alicke & Govorun (2005); Suls & Wan (1987)
+:::
+
+## They compound
+
+Optimism bias makes the estimate flattering.
+
+Uniqueness bias explains away the evidence that it is flattering.
+
+. . .
+
+A priority system is partly a defence against your own judgement.
+
+## What portfolio management buys
+
+- Discipline in selection
+- Selection linked to strategic metrics
+- Common criteria, not politics or emotion
+- Resources aligned to direction
+- Risk balanced across projects
+- **Justification for killing projects**
+- Better communication on goals
+
+::: {.aside}
+Reproduced from Larson & Gray, Ch. 2, Exhibit 2.2
+:::
+
+# LO 2-4 · Three kinds of project
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## Compliance · Operational · Strategic
+
+| Kind | Justified by |
+|---|---|
+| **Compliance / emergency** | The penalty for not doing it |
+| **Operational** | The saving or improvement |
+| **Strategic** | Contribution to the strategy |
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 2, project classification exhibit
+:::
+
+## They cannot share a scale
+
+Rank all three on net present value and compliance work always loses.
+
+. . .
+
+That is not a finding about compliance work. It is a broken ranking.
+
+. . .
+
+**The fix:** decide the split between categories *before* ranking anything inside them.
+
+# LO 2-5 · The phase gate model
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## A gate has three outcomes
+
+| | |
+|---|---|
+| **Go** | Proceed to the next phase |
+| **Kill** | Cancel the project |
+| **Recycle** | Revise and resubmit |
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 2, phase gate exhibit
+:::
+
+## Six phases
+
+| Phase | The gate asks |
+|---|---|
+| 1 · Idea | Worth a proposal? |
+| 2 · Proposal | Does it clear the screen? |
+| 3 · Screening and selection | Funded, at what priority? |
+| 4 · Implementation plan | Does the plan hold up? |
+| 5 · Progress evaluation | Continue, or stop? |
+| 6 · Closure | Genuinely finished? |
+
+## Gate 4 · where hope meets numbers
+
+Once the preliminary proposal is approved, a manager and staff are assigned to build out the plan in full.
+
+. . .
+
+> Does the plan make sense? Do the numbers add up? Is it worth the risk? How much confidence is there in the plan?
+
+::: {.aside}
+The gate 4 questions, Larson & Gray, Ch. 2
+:::
+
+## Gate 5 · the one that gets skipped
+
+It exists so a project can be cancelled for poor performance or lost relevance.
+
+. . .
+
+Applied to work already underway, and already defended.
+
+. . .
+
+Scrutiny scales: a three-year DoD project reviews every six months; small projects need nothing heavier than a superior's approval.
+
+# LO 2-6 · What a project is worth
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## Payback
+
+$$\text{Payback} = \frac{\text{Estimated cost}}{\text{Annual net cash inflow}}$$
+
+Quick · no discount rate needed · everyone understands it
+
+. . .
+
+**Blind twice:** ignores the time value of money, and everything after the cutoff.
+
+## Net present value
+
+$$\text{NPV} = -I_0 + \sum_{t=1}^{n} \frac{F_t}{(1+k)^t}$$
+
+Positive NPV: earns more than the required return.
+
+Negative NPV: it does not.
+
+## Two projects, \$180,000 each, 12%
+
+| Year | A | B |
+|---|---|---|
+| 1 | \$60,000 | \$90,000 |
+| 2 | \$70,000 | \$90,000 |
+| 3 | \$70,000 | \$10,000 |
+| 4 | \$50,000 | \$10,000 |
+
+## They disagree
+
+| | A | B |
+|---|---|---|
+| Payback | 2.71 years | **2.00 years** |
+| NPV at 12% | **+\$10,976** | −\$14,422 |
+
+. . .
+
+Both are correct. They answer different questions.
+
+## What payback cannot see
+
+B returns cash quickly and then stops.
+
+. . .
+
+A cash-poor firm may still choose B and be right to.
+
+. . .
+
+What it cannot do is choose B **believing B is the more valuable project**.
+
+## Non-financial criteria
+
+Firms fund thin-margin projects to:
+
+- Capture market share
+- Raise the barrier to a competitor
+- Build an enabler product that lifts other sales
+- Develop core technology for the next generation
+- Reduce dependence on an unreliable supplier
+- Head off regulation
+
+## And the discipline runs both ways
+
+Companies must be able to **say no to a profitable project outside the mission**.
+
+. . .
+
+Hard, because the case for it is concrete — real revenue, a real customer.
+
+The case against it is the abstraction the mission exists to protect.
+
+# LO 2-7 · Multi-criteria models
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## Two kinds of criterion
+
+**Must objectives** — pass or fail. Never traded. A screen, not a contribution.
+
+. . .
+
+**Want objectives** — weighted 1–100, impact scored 0/1/2 against published definitions.
+
+## Published definitions are the point
+
+> 0 = does not address · 1 = opportunity to fix · 2 = urgent problem solved
+
+. . .
+
+Two people apply that to the same proposal and get the same score.
+
+"Rate the impact 0 to 2" does not.
+
+## A model
+
+| Want objective | Weight | Alpha | Beta | Gamma |
+|---|---|---|---|---|
+| Reduces unplanned downtime | 90 | 2 | 1 | 0 |
+| Opens a new customer segment | 70 | 0 | 2 | 2 |
+| Improves regulatory margin | 55 | 1 | 0 | 2 |
+| **Total** | | **235** | **230** | **250** |
+
+Gamma first, Alpha second, Beta third.
+
+## Now move one weight
+
+Downtime: 90 → 100
+
+| | Alpha | Beta | Gamma |
+|---|---|---|---|
+| **Total** | **255** | 240 | 250 |
+
+. . .
+
+**The ranking inverts.** Same proposals, same impact scores.
+
+## What that means
+
+A weighted model does not remove judgement.
+
+. . .
+
+It **relocates** judgement into the weights — written down, visible, arguable.
+
+. . .
+
+That is a real gain. But a total weighted score is not an objective fact.
+
+# LO 2-8 · The system in practice
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## The proposal form
+
+Same questions of every candidate — which is what makes ranking possible.
+
+| Field | Why it earns its place |
+|---|---|
+| Impact of **not** doing it | Catches compliance work that scores nothing |
+| Three major risks | The only moment risk is cheap to admit |
+
+::: {.aside}
+Field structure follows Larson & Gray, Ch. 2, AVL proposal form exhibit
+:::
+
+## Risk, briefly and early
+
+| Risk | Probability | Impact |
+|---|---|---|
+| Government incentives curtailed | High | High |
+| Land use injunction | Medium | High |
+| Energy price decrease | Medium | Medium |
+| New import tax | Low | High |
+
+::: {.aside}
+Reproduced from Larson & Gray, Ch. 2, wind farm risk assessment exhibit
+:::
+
+## Two evaluations, not one
+
+Proposals → priority team evaluates → reject · return for information · **pursue**
+
+. . .
+
+→ implementation plan → **priority team evaluates again** → charter issued
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 2, screening process exhibit
+:::
+
+## Estimates get worse as they get detailed
+
+\$10 million becomes \$12 million. A key feature drops out.
+
+. . .
+
+Significant negative differences go up to senior management to decide whether it is still approved.
+
+. . .
+
+The system **expects** this and forces a second decision.
+
+## Keeping the system honest
+
+- Every significant project ranked, and the ranking **published**
+- Senior management actively supports it
+- **Going around it destroys it**
+- Review boards ask hard questions
+- Resources allocated explicitly, not as overload
+
+# LO 2-9 · The portfolio as a portfolio
+
+::: {.aside}
+Following Larson & Gray, Ch. 2
+:::
+
+## A project is judged in context
+
+Merits are assessed **within the context of the projects that already exist**.
+
+. . .
+
+Competing for the same skilled people · dispersed teams · time-to-market pressure · limited capital
+
+None of it is visible from inside a single project.
+
+## Senior management supplies two things
+
+**Criteria aligned to current strategy.**
+
+. . .
+
+**An annual balance decision** — say 20% compliance, 50% strategic, 30% operational — made *before* selection begins.
+
+## Governance and open information
+
+A governance team publishes every project's priority, status and open issues.
+
+. . .
+
+> Open communication discourages power plays.
+
+Influence works best unobserved.
+
+## The portfolio matrix
+
+| | Low commercial value | High commercial value |
+|---|---|---|
+| **Easy** | Bread and butter | **Pearl** |
+| **Hard** | White elephant | **Oyster** |
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 2, portfolio matrix exhibit; matrix originates with Matheson & Matheson (1998)
+:::
+
+## Where white elephants come from
+
+No organization funds one deliberately.
+
+. . .
+
+A white elephant is a pearl or an oyster that **stopped being viable while nobody was looking**.
+
+. . .
+
+It keeps its budget through the reputation it earned earlier.
+
+## Which is the argument for reviewing the portfolio
+
+Nothing inside a white elephant's own status report says *this quadrant has changed*.
+
+## The uncomfortable conclusion
+
+A highly ranked project can be deferred or refused if it upsets the balance of risk, resources and strategy.
+
+. . .
+
+The best-scoring proposal in the room is not automatically the one to fund.
+
+. . .
+
+And the person whose proposal is deferred did nothing wrong.
+
+# Tuesday · Four proposals, two budgets
+
+## Northline Instruments
+
+\$1.4M envelope. Balance set last autumn: **30% compliance and operational, 70% strategic**.
+
+| | Proposal | Cost |
+|---|---|---|
+| **P1** | Sterilisation logging — new regulation, 14 months | \$380,000 |
+| **P2** | CNC controller replacement — saves \$95k/yr | \$300,000 |
+| **P3** | Wireless sensor line — NPV \$410k, unproven tech | \$620,000 |
+| **P4** | Brand refresh — no measurable return, CEO sponsor | \$160,000 |
+
+## The model's ranking
+
+**P3 · P2 · P4 · P1**
+
+. . .
+
+P1 scores almost nothing. It opens no market and improves no operation.
+
+. . .
+
+It is also not optional.
+
+## This week
+
+- Notes: [Week 2](../weeks/week-02.qmd)
+- Reading: Larson Ch. 2
+- **CA1 (Ch 1–2)** · Sun 6 Sep
+
+**Thursday:** build a selection model, then let it disagree with you.
+
+::: {.aside}
+Chapter 3 takes up the structure and culture a selected project has to survive inside.
+:::
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Ch. 2.
+2. Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
+3. Alicke, M. D., & Govorun, O. (2005). The better-than-average effect. In *The Self in Social Judgment*. Psychology Press.
+4. Suls, J., & Wan, C. K. (1987). In search of the false uniqueness effect. *J. Personality and Social Psychology*, 52(1), 211–217.
+5. Matheson, D., & Matheson, J. (1998). *The Smart Organization*. Harvard Business School Press.
