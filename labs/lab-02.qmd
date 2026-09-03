@@ -1,0 +1,135 @@
+---
+title: "Studio 2 · Build the same proposal form twice"
+subtitle: "Week 2 — Organization Strategy and Project Selection · Larson Ch. 2"
+week: 2
+release: "2026-08-31"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA2</strong> — a <strong>one-page reconciliation</strong> plus a page of screenshots, uploaded to Blackboard</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>AI form, Smartsheet form, reconcile, then save and upload — roughly 20, 30, 15 and 10 minutes. Pacing guidance, not a bell.</dd>
+<dt>Tools</dt><dd>Gemini and Smartsheet</dd>
+<dt>File</dt><dd><a href="../files/project-proposal-form.xlsx">project-proposal-form.xlsx</a> — download it before you start</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-02.qmd">Week 2 — Organization Strategy and Project Selection</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** You build both forms yourself. The comparison at the end is only
+worth something if you saw both tools behave.
+:::
+
+You are going to build **one proposal form, two ways**: once by asking a model for it, once by
+importing a spreadsheet into Smartsheet. Same fields, same example, both times — so that anything
+that differs is the tool, not the brief.
+
+::: {.part}
+### Part 1 · The AI form — 20 minutes
+
+Open the model and paste this prompt **exactly as written**. The field list is what keeps the two
+forms comparable.
+
+```text
+Build a modern, single-file HTML project proposal form.
+
+Fields, in this order:
+Project Title, Proposal #, Date Submitted, Sponsor, Project Classification,
+Business Problem Solved, Reference Link, Strategic Alignment, Major Deliverables,
+Impact of Not Doing Project, Risk 1, Risk 2, Risk 3, Success Measures,
+Requires Internal Resources?, Resources Available?, Estimated Cost,
+Duration (Weeks), Oversight Action.
+
+Rules:
+- Project Classification is a single-select: Strategic, Operational, Compliance.
+- Requires Internal Resources? and Resources Available? are single-select Yes/No.
+- Oversight Action is a single-select: Accept, Return, Pending.
+- Estimated Cost is currency. Duration (Weeks) is a number. Date Submitted is a date.
+- Business Problem Solved, Strategic Alignment, Major Deliverables,
+  Impact of Not Doing Project and Success Measures are multi-line.
+- Everything except Reference Link is required.
+- Inline CSS, no frameworks, no external files. It must open in a browser on its own.
+
+Pre-fill it with this example: Automated Vehicle Locator (AVL), proposal 11,
+sponsor J. Moran, Operational, $10,000,000, 22 weeks.
+```
+
+1. Save the result as `proposal-form-ai.html` and **open it in your browser**.
+2. Try to submit it with a required field empty. Note what happens.
+3. Screenshot the rendered form. You need this later.
+
+If the model returns something that will not open, or drops fields, say so and ask it to fix it.
+That round trip is worth recording — it is one of the differences you may end up writing about.
+:::
+
+::: {.part}
+### Part 2 · The Smartsheet form — 30 minutes
+
+Download [project-proposal-form.xlsx](../files/project-proposal-form.xlsx). It has two tabs: the
+column headers, and a **Setup Guide** tab with the steps and the column types. Follow the Setup
+Guide — it is the specification for this part.
+
+The short version, which the guide gives in full:
+
+1. In Smartsheet, **File → Import → Microsoft Excel**, with *My data has column headers* checked.
+   Smartsheet imports the first tab only; the Setup Guide tab is for you.
+2. Set each column to the type the guide lists — right-click the column header, **Edit Column
+   Properties**. The dropdowns and their values are in the guide's table.
+3. **Forms → Create Form.** Smartsheet builds one field per column.
+4. **Hide `Approved By` and `Oversight Decision Date`** on the form. Those are filled after review,
+   not by whoever submits.
+5. Mark the required fields, add help text where a field needs it, then **Save** and get the share
+   link.
+6. Open your own form link and submit the AVL example from the guide's *Example value* column.
+   Check the row landed on the sheet.
+
+Screenshot two things: the **form as a submitter sees it**, and the **sheet row** your submission
+created.
+:::
+
+::: {.part}
+### Part 3 · Reconcile — 15 minutes
+
+This is the graded part. One page, three questions, specific answers.
+
+1. **Similarities.** What did both tools get right without being told twice?
+2. **Differences.** Where did they diverge — field types, validation, what happens to a submission,
+   what you had to fix by hand? Name at least **two** differences and say which tool handled it
+   better, and why.
+3. **Integration.** Pick one PM system you have seen or used — Taiga, Jira, MS Project, a
+   Blackboard workflow, a shared spreadsheet. Which of these two forms could feed it, and what
+   would have to exist for that to work? One paragraph, concrete.
+
+"Smartsheet was easier" is not an answer. *"Smartsheet enforced the Accept/Return/Pending choice at
+the column level, so a bad value cannot reach the sheet; the AI form validated in the browser only,
+and the data has nowhere to go when you hit submit"* is.
+:::
+
+::: {.part}
+### Part 4 · Save it, then upload it
+
+Check this first:
+
+- [ ] one page of writing: similarities, differences (at least two, with which tool did it better),
+      integration
+- [ ] screenshot of the AI form rendered in a browser
+- [ ] screenshot of the Smartsheet form as a submitter sees it
+- [ ] screenshot of the sheet row your test submission created
+- [ ] which AI tool you used, and a link to the transcript
+
+Then two steps, in this order.
+
+**1 · Save your own copy to the cloud.** Use the **Google Drive or OneDrive that comes with your
+NDSU account**. Make a folder `IMSE456/studio-02/` and save the file there as
+`SA2_yourlastname.pdf`. Keep `proposal-form-ai.html` in the same folder.
+
+**2 · Upload the PDF to Blackboard** before you leave the session. That copy is what gets graded.
+:::
+
+::: {.callout-note appearance="simple"}
+**If Smartsheet will not let you in**, tell me or the TAs in the session rather than working around
+it. Do Part 1 and Part 3 on what you have, say in the reconciliation which part you could not run,
+and finish Part 2 before the next studio.
+:::

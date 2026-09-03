@@ -38,6 +38,12 @@ SKIP   = {"_build", "_site", ".quarto", "_freeze", ".git", "__pycache__", ".venv
           "private"}   # private/ holds answer keys — never let it near a build tree
 FM     = re.compile(r"\A---\n(.*?)\n---\n(.*)\Z", re.S)
 
+# Per-week downloads that are not a week page, deck or studio sheet. They join
+# the schedule's Resources column, and only once the week is released.
+EXTRAS: dict[int, list[tuple[str, str]]] = {
+    2: [("proposal form", "files/project-proposal-form.xlsx")],
+}
+
 
 def read_fm(path: pathlib.Path):
     m = FM.match(path.read_text(encoding="utf8"))
@@ -158,6 +164,7 @@ def write_schedule(weeks: list[dict], assets: dict) -> None:
                 links.append(f'[slides](slides/{assets["slides"][n]})')
             if assets["labs"].get(n):
                 links.append(f'[studio](labs/{assets["labs"][n]})')
+            links += [f"[{label}]({href})" for label, href in EXTRAS.get(n, [])]
         rows.append(
             f'| <span class="tabular">{n:02d}</span> '
             f'| <span class="tabular">{m.get("dates","")}</span> '

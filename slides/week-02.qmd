@@ -774,10 +774,11 @@ It is also not optional.
 ## This week
 
 - Notes: [Week 2](../weeks/week-02.qmd)
+- Studio: [Studio 2](../labs/lab-02.qmd)
 - Reading: Larson Ch. 2
 - **CA1 (Ch 1–2)** — see Blackboard
 
-**Thursday:** build a selection model, then let it disagree with you.
+**Thursday:** build the same proposal form twice — once with AI, once in Smartsheet.
 
 ::: {.aside}
 Chapter 3 takes up the structure and culture a selected project has to survive inside.

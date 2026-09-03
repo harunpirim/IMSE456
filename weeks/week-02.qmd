@@ -6,7 +6,7 @@ chapter: "Larson Ch. 2"
 dates: "1 and 3 September"
 reading: "Larson Ch. 2"
 session-a: "Four proposals, two budgets"
-session-b: "Build a selection model, then let it disagree with you"
+session-b: "Build the same proposal form twice"
 video:
   provider: none
   id: ""
@@ -19,7 +19,7 @@ lab: true
 <dt>Sessions</dt><dd>1 &amp; 3 September</dd>
 <dt>Chapter</dt><dd>Larson Ch. 2</dd>
 <dt>Tuesday</dt><dd>Four proposals, two budgets — concept and case</dd>
-<dt>Thursday</dt><dd>Build a selection model, then let it disagree with you</dd>
+<dt>Thursday</dt><dd>Build the same proposal form twice</dd>
 <dt>Reading</dt><dd>Larson Ch. 2</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
