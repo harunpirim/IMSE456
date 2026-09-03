@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Studio 1 · Chapter 1 review questions – IMSE 456/656</title>
+<title>Studio 2 · Build the same proposal form twice – IMSE 456/656</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,8 +132,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Studio 1 · Chapter 1 review questions</h1>
-<p class="subtitle lead">Week 1 — Modern Project Management · Larson Ch. 1</p>
+<h1 class="title">Studio 2 · Build the same proposal form twice</h1>
+<p class="subtitle lead">Week 2 — Organization Strategy and Project Selection · Larson Ch. 2</p>
 </div>
 
 
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 Deliverable
 </dt>
 <dd>
-<strong>SA1</strong> — a <strong>one-page report</strong> ending in a reconciliation paragraph, uploaded to Blackboard
+<strong>SA2</strong> — a <strong>one-page reconciliation</strong> plus a page of screenshots, uploaded to Blackboard
 </dd>
 <dt>
 Studio
@@ -168,13 +168,19 @@ Produced in the Thursday session and uploaded to Blackboard before you leave —
 Session
 </dt>
 <dd>
-Build, Use, Reconcile, then save and upload — roughly 25, 20 and 15 minutes. Pacing guidance, not a bell.
+AI form, Smartsheet form, reconcile, then save and upload — roughly 20, 30, 15 and 10 minutes. Pacing guidance, not a bell.
 </dd>
 <dt>
 Tools
 </dt>
 <dd>
-Gemini and Antigravity
+Gemini and Smartsheet
+</dd>
+<dt>
+File
+</dt>
+<dd>
+<a href="../files/project-proposal-form.xlsx">project-proposal-form.xlsx</a> — download it before you start
 </dd>
 <dt>
 AI use
@@ -186,7 +192,7 @@ AI use
 Week page
 </dt>
 <dd>
-<a href="../weeks/week-01.html">Week 1 — Modern Project Management</a>
+<a href="../weeks/week-02.html">Week 2 — Organization Strategy and Project Selection</a>
 </dd>
 </dl>
 </div>
@@ -196,53 +202,79 @@ Week page
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>This is individual work.</strong> Everyone produces their own page. The final project is where you work in a team; the studio is where the thinking gets into your own hands.</p>
+<p><strong>This is individual work.</strong> You build both forms yourself. The comparison at the end is only worth something if you saw both tools behave.</p>
 </div>
 </div>
 </div>
-<section id="part-1-build-answer-first-unaided" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-1-build-answer-first-unaided">Part 1 · Build — answer first, unaided</h3>
-<p><strong>You go first. The model goes second.</strong> That order is the whole point, and reversing it destroys the only data this studio produces.</p>
-<p>Open the <a href="../weeks/week-01.html#review-questions">five review questions</a> on the week page. Close every other tab.</p>
+<p>You are going to build <strong>one proposal form, two ways</strong>: once by asking a model for it, once by importing a spreadsheet into Smartsheet. Same fields, same example, both times — so that anything that differs is the tool, not the brief.</p>
+<section id="part-1-the-ai-form-20-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-the-ai-form-20-minutes">Part 1 · The AI form — 20 minutes</h3>
+<p>Open the model and paste this prompt <strong>exactly as written</strong>. The field list is what keeps the two forms comparable.</p>
+<pre class="text"><code>Build a modern, single-file HTML project proposal form.
+
+Fields, in this order:
+Project Title, Proposal #, Date Submitted, Sponsor, Project Classification,
+Business Problem Solved, Reference Link, Strategic Alignment, Major Deliverables,
+Impact of Not Doing Project, Risk 1, Risk 2, Risk 3, Success Measures,
+Requires Internal Resources?, Resources Available?, Estimated Cost,
+Duration (Weeks), Oversight Action.
+
+Rules:
+- Project Classification is a single-select: Strategic, Operational, Compliance.
+- Requires Internal Resources? and Resources Available? are single-select Yes/No.
+- Oversight Action is a single-select: Accept, Return, Pending.
+- Estimated Cost is currency. Duration (Weeks) is a number. Date Submitted is a date.
+- Business Problem Solved, Strategic Alignment, Major Deliverables,
+  Impact of Not Doing Project and Success Measures are multi-line.
+- Everything except Reference Link is required.
+- Inline CSS, no frameworks, no external files. It must open in a browser on its own.
+
+Pre-fill it with this example: Automated Vehicle Locator (AVL), proposal 11,
+sponsor J. Moran, Operational, $10,000,000, 22 weeks.</code></pre>
 <ol type="1">
-<li>Answer <strong>all five</strong> from the reading and the Tuesday session. Rough notes are fine — full sentences are not required yet.</li>
-<li>Where you are unsure, write <strong>“unsure”</strong> and move on. Do not guess to fill the space.</li>
-<li>Where you cannot answer at all, write <strong>“no answer”</strong>.</li>
+<li>Save the result as <code>proposal-form-ai.html</code> and <strong>open it in your browser</strong>.</li>
+<li>Try to submit it with a required field empty. Note what happens.</li>
+<li>Screenshot the rendered form. You need this later.</li>
 </ol>
-<p>Keep this draft. You are going to compare against it, and you cannot reconstruct it afterwards.</p>
+<p>If the model returns something that will not open, or drops fields, say so and ask it to fix it. That round trip is worth recording — it is one of the differences you may end up writing about.</p>
 </section>
-<section id="part-2-use-now-bring-the-model-in" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-2-use-now-bring-the-model-in">Part 2 · Use — now bring the model in</h3>
+<section id="part-2-the-smartsheet-form-30-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-the-smartsheet-form-30-minutes">Part 2 · The Smartsheet form — 30 minutes</h3>
+<p>Download <a href="../files/project-proposal-form.xlsx">project-proposal-form.xlsx</a>. It has two tabs: the column headers, and a <strong>Setup Guide</strong> tab with the steps and the column types. Follow the Setup Guide — it is the specification for this part.</p>
+<p>The short version, which the guide gives in full:</p>
 <ol type="1">
-<li>Give the model the same five questions. Ask for its answers.</li>
-<li>For <strong>every</strong> question — including the ones you were confident about — ask it one follow-up that pushes on something specific: <em>“which of the five characteristics does that example actually fail?”</em>, <em>“give me a counter-example”</em>, <em>“what would change your answer?”</em></li>
-<li>Keep the transcript, or the link to it. You need it for the acknowledgement.</li>
+<li>In Smartsheet, <strong>File → Import → Microsoft Excel</strong>, with <em>My data has column headers</em> checked. Smartsheet imports the first tab only; the Setup Guide tab is for you.</li>
+<li>Set each column to the type the guide lists — right-click the column header, <strong>Edit Column Properties</strong>. The dropdowns and their values are in the guide’s table.</li>
+<li><strong>Forms → Create Form.</strong> Smartsheet builds one field per column.</li>
+<li><strong>Hide <code>Approved By</code> and <code>Oversight Decision Date</code></strong> on the form. Those are filled after review, not by whoever submits.</li>
+<li>Mark the required fields, add help text where a field needs it, then <strong>Save</strong> and get the share link.</li>
+<li>Open your own form link and submit the AVL example from the guide’s <em>Example value</em> column. Check the row landed on the sheet.</li>
 </ol>
+<p>Screenshot two things: the <strong>form as a submitter sees it</strong>, and the <strong>sheet row</strong> your submission created.</p>
 </section>
-<section id="part-3-reconcile-and-write-the-page" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-3-reconcile-and-write-the-page">Part 3 · Reconcile, and write the page</h3>
-<p>This is the graded part. Everything before it was raw material.</p>
-<p>For each of the five questions, decide what you now believe and <strong>write that</strong> — your answer, not the model’s, and not a merge of the two performed without deciding.</p>
-<p>Then account for the difference. On the page, name:</p>
-<ul>
-<li><strong>At least one place the model was wrong</strong>, incomplete, or confidently vague. Say what was wrong with it. “It was generic” is not specific enough; “it defined a program as any set of projects and dropped the common-goal requirement, which is what separates a program from a portfolio” is.</li>
-<li><strong>At least one place it changed your mind</strong>, and what specifically moved you.</li>
-</ul>
+<section id="part-3-reconcile-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-3-reconcile-15-minutes">Part 3 · Reconcile — 15 minutes</h3>
+<p>This is the graded part. One page, three questions, specific answers.</p>
+<ol type="1">
+<li><strong>Similarities.</strong> What did both tools get right without being told twice?</li>
+<li><strong>Differences.</strong> Where did they diverge — field types, validation, what happens to a submission, what you had to fix by hand? Name at least <strong>two</strong> differences and say which tool handled it better, and why.</li>
+<li><strong>Integration.</strong> Pick one PM system you have seen or used — Taiga, Jira, MS Project, a Blackboard workflow, a shared spreadsheet. Which of these two forms could feed it, and what would have to exist for that to work? One paragraph, concrete.</li>
+</ol>
+<p>“Smartsheet was easier” is not an answer. <em>“Smartsheet enforced the Accept/Return/Pending choice at the column level, so a bad value cannot reach the sheet; the AI form validated in the browser only, and the data has nowhere to go when you hit submit”</em> is.</p>
 </section>
 <section id="part-4-save-it-then-upload-it" class="level3 part">
 <h3 class="anchored" data-anchor-id="part-4-save-it-then-upload-it">Part 4 · Save it, then upload it</h3>
 <p>Check this first:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">one page, and genuinely one page</label></li>
-<li><label><input type="checkbox">all five review questions answered in your own words</label></li>
-<li><label><input type="checkbox">a reconciliation paragraph naming one place the model was wrong and one place it changed your mind</label></li>
+<li><label><input type="checkbox">one page of writing: similarities, differences (at least two, with which tool did it better), integration</label></li>
+<li><label><input type="checkbox">screenshot of the AI form rendered in a browser</label></li>
+<li><label><input type="checkbox">screenshot of the Smartsheet form as a submitter sees it</label></li>
+<li><label><input type="checkbox">screenshot of the sheet row your test submission created</label></li>
 <li><label><input type="checkbox">which AI tool you used, and a link to the transcript</label></li>
 </ul>
-<p>Then two steps, in this order. They are not the same step, and skipping the first is how people lose a semester of work.</p>
-<p><strong>1 · Save your own copy to the cloud.</strong> Use the <strong>Google Drive or OneDrive that comes with your NDSU account</strong> — both are provided to you by the university and neither costs anything. Make a folder <code>IMSE456/studio-01/</code> and save the file there as <code>SA1_yourlastname.pdf</code>.</p>
-<p>This copy is yours. It stays with you after the semester ends, and it is what you go back to when you want to show someone what you built.</p>
-<p><strong>Never save course work only to a local disk.</strong> Lab machines wipe on reboot, laptops get left at home, and a drive that fails the night before a deadline is not an extension.</p>
-<p><strong>2 · Upload the PDF to Blackboard</strong> before you leave the session. That copy is what gets graded, and you will get written feedback on it.</p>
+<p>Then two steps, in this order.</p>
+<p><strong>1 · Save your own copy to the cloud.</strong> Use the <strong>Google Drive or OneDrive that comes with your NDSU account</strong>. Make a folder <code>IMSE456/studio-02/</code> and save the file there as <code>SA2_yourlastname.pdf</code>. Keep <code>proposal-form-ai.html</code> in the same folder.</p>
+<p><strong>2 · Upload the PDF to Blackboard</strong> before you leave the session. That copy is what gets graded.</p>
 </section>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
@@ -250,26 +282,12 @@ Week page
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Accounts to set up before Thursday.</strong> None of this is graded and none of it is part of SA1, but Week 3 and Week 4 assume it is already done.</p>
-<ul>
-<li>Claim your AI access. Register the free student year at <a href="https://gemini.google/students/">gemini.google/students</a> if you are eligible — a <strong>Pro account is what this course assumes</strong>, because the free tier runs out of capacity partway through a studio and leaves you stuck. <strong>If you do not have a Pro account, or you try to register and cannot, come and see me or the TAs before Thursday.</strong> We will sort out access for you. Do not spend your own money on this.</li>
-<li>Create a Taiga account at <a href="https://tree.taiga.io">tree.taiga.io</a> with your NDSU email, and a private project named <code>IMSE456-yourlastname</code>. You will use it from Week 3.</li>
-<li>Create the cloud folder you will use all semester. Use the <strong>Google Drive or OneDrive that comes with your NDSU account</strong> — both are provided by the university and neither costs anything. Name it <code>IMSE456</code>. <strong>Everything in this course is saved there, never to a local disk.</strong></li>
-</ul>
+<p><strong>If Smartsheet will not let you in</strong>, tell me or the TAs in the session rather than working around it. Do Part 1 and Part 3 on what you have, say in the reconciliation which part you could not run, and finish Part 2 before the next studio.</p>
 </div>
 </div>
 </div>
-<section id="study-loop-for-this-week" class="level2">
-<h2 class="anchored" data-anchor-id="study-loop-for-this-week">Study loop for this week</h2>
-<p>Run this before you read the notes, and again after. It is not graded; it is the fastest way to find out what you have wrong.</p>
-<pre class="text"><code>Be my tutor on the difference between a project and an operation. Ask me
-one question at a time. Don't lecture. Start by making me state the test,
-then hand me cases that break it — a film studio, a release train, a
-refinery shutdown — until I stop treating it as a fact about the world.</code></pre>
-<p>See <a href="../ai.html">AI Studio</a> for the Editor and Roommate prompts and the full loop.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
