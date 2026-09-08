@@ -1,0 +1,488 @@
+---
+title: "Week 3 — Organization: Structure and Culture"
+subtitle: "IMSE 456/656 · Larson Ch. 3"
+author: Harun Pirim
+date: "2026-09-08"
+week: 3
+release: "2026-09-07"
+---
+
+## {.center}
+
+> Culture eats strategy for breakfast.
+
+::: {.aside}
+The epigraph to Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, Ch. 3. Exposition reworded, figures redrawn.
+:::
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 3-1** | The three project management structures |
+| **LO 3-2** | Three kinds of matrix |
+| **LO 3-3** | What a project management office is for |
+| **LO 3-4** | Choosing a structure |
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 3-5** | Why culture belongs in this chapter |
+| **LO 3-6** | Reading a culture |
+| **LO 3-7** | Structure and culture together |
+
+# LO 3-1 · Three ways to organize a project
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## Where we are
+
+**Week 2** ended with a project selected, ranked and funded.
+
+. . .
+
+**This week:** it now lands inside an organization that already exists and already has other work to do.
+
+## What a structure has to settle
+
+> A good system appropriately balances the needs of both the parent organization and the project by defining the interface between the project and parent organization in terms of authority, allocation of resources, and eventual integration of project outcomes into mainstream operations.
+
+::: {.aside}
+Larson & Gray, Ch. 3
+:::
+
+## Three nouns, three arguments
+
+**Authority** — who can tell the engineer what to work on this week.
+
+. . .
+
+**Allocation of resources** — whose budget the engineer is paid from.
+
+. . .
+
+**Integration** — what happens to the result when the team disperses.
+
+## Answer 1 · Inside the functional organization
+
+Create nothing. Hand the project to the hierarchy that already exists.
+
+. . .
+
+Segments go to the units that own the expertise. Coordination rides on the management channels already running between them.
+
+. . .
+
+Where one function dominates, it gets the job of coordinating the whole.
+
+## Functional — the trade
+
+| Advantages | Disadvantages |
+|---|---|
+| No change to the organization | The project is nobody's core work |
+| Flexible use of specialists | Poor integration across segments |
+| In-depth expertise | Slow — up one function, down another |
+| Easy transition afterwards | No ownership of the whole |
+
+. . .
+
+The same fact from two directions: what makes it cheap is what leaves it unowned.
+
+## Answer 2 · A dedicated project team
+
+Pull a team out. Full-time project manager, full-time specialists, its own unit.
+
+## Dedicated team — the trade
+
+| Advantages | Disadvantages |
+|---|---|
+| Simple — functions left intact | Expensive — duplicates capability |
+| Fast — decisions made inside | Internal strife |
+| Cohesive — the project *is* the job | Cut off from functional depth |
+| Cross-functional integration | Hard to place people afterwards |
+
+## Projectitis
+
+The we-they split has a name.
+
+. . .
+
+The isolation that produces the team's **cohesion** produces its **estrangement**.
+
+. . .
+
+You cannot buy one without risking the other.
+
+## Skunkworks
+
+Separation taken to its logical end.
+
+. . .
+
+Team removed from the building, released from the organization's normal procedures — on the theory that the procedures are what is slowing it down.
+
+## Answer 3 · The matrix
+
+Refuse to choose. Lay a horizontal project structure over the functional hierarchy and run both.
+
+. . .
+
+Read a **row** and you see a project team. Read a **column** and you see a department.
+
+. . .
+
+The engineer at the intersection belongs to both. That is the design, and the problem.
+
+## Matrix — the trade
+
+| Advantages | Disadvantages |
+|---|---|
+| Efficient — resources shared | Functional/project conflict |
+| Strong project focus | Infighting over scarce people |
+| Easier transition afterwards | Two bosses is a real cost |
+| Flexible balance of authority | Slow — agreement across peers |
+
+# LO 3-2 · Three kinds of matrix
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## One variable changes the job
+
+| | Project manager | Functional managers |
+|---|---|---|
+| **Weak** | Coordinator — influence, not authority | Keep control of work and people |
+| **Balanced** | Defines **what** | Concerned with **how** |
+| **Strong** | Controls trade-offs and assignments; final say | Consulted, but do not direct |
+
+## The strong matrix, precisely
+
+It "attempts to create the *'feel'* of a project team within a matrix environment."
+
+::: {.aside}
+Larson & Gray, Ch. 3
+:::
+
+. . .
+
+The team never leaves the functional hierarchy. It is made to feel as though it has.
+
+## Why balanced is the hardest
+
+The **what / how** line is cleaner on the page than in a corridor.
+
+. . .
+
+Is the choice of database a requirement, or an implementation?
+
+. . .
+
+The line exists — but it gets drawn *during* the argument, not before it.
+
+# LO 3-3 · The project management office
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## Close to universal
+
+**79 percent** of U.S. organizations report having one.
+
+::: {.aside}
+Cabanis-Brewin, 2022, cited in Larson & Gray, Ch. 3
+:::
+
+. . .
+
+Matrix organizations did not arrive fully formed. PMOs are often what carried them from an arrangement on paper into one that delivered.
+
+## The boundary
+
+> the primary role of a PMO is to facilitate/enable projects, not do projects
+
+::: {.aside}
+Larson & Gray, Ch. 3
+:::
+
+. . .
+
+Scheduling, planning, budgeting stay with the **project manager**.
+
+## Why the boundary keeps getting breached
+
+It always looks like helpfulness.
+
+. . .
+
+The PMO owns the methodology → is asked to review a schedule → asked to fix it → owns it.
+
+. . .
+
+Now the project manager is accountable for a plan somebody else wrote.
+
+# LO 3-4 · Choosing a structure
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## Decided twice
+
+**Organization level.** How much of what we do arrives as projects?
+
+. . .
+
+**Project level.** How much autonomy does *this* project need to finish?
+
+## The seven factors
+
+1. Size of project
+2. Strategic importance
+3. Novelty and need for innovation
+4. Need for integration — departments involved
+5. Environmental complexity — external interfaces
+6. Budget and time constraints
+7. Stability of resource requirements
+
+::: {.aside}
+Hobbs & Ménard (1993), as presented in Larson & Gray, Ch. 3
+:::
+
+## The rule, and its two catches
+
+> The higher the levels of these seven factors, the more autonomy and authority the project manager and project team need to be successful.
+
+. . .
+
+**A direction, not a threshold.** No score converts into a structure.
+
+. . .
+
+**Factor 7 runs the other way.** Stable resource needs argue for *less* autonomy, not more.
+
+# LO 3-5 · Why culture belongs here
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## Structure is a poor predictor on its own
+
+Boxes and lines say who *may* instruct whom.
+
+. . .
+
+**Organizational culture** — the shared norms, beliefs, values and assumptions that give members a common understanding of how things are done here.
+
+## What culture does
+
+- Gives members an identity
+- Legitimises how the organization is managed
+- Sets standards of behaviour no document specifies
+- Produces social order
+
+. . .
+
+Culture is to an organization roughly what personality is to a person.
+
+## The blunt consequence
+
+You will spend the job asking people who do not report to you to do things that are not their first priority.
+
+. . .
+
+Whether that is **normal** or **presumptuous** is not in the org chart.
+
+# LO 3-6 · Reading a culture
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## Ten dimensions, each a continuum
+
+<svg viewBox="0 0 760 300" role="img" style="width:100%;height:auto">
+  <g font-size="13" fill="currentColor" text-anchor="end">
+    <text x="176" y="34">Job</text><text x="176" y="60">Individual</text><text x="176" y="86">Task</text>
+    <text x="176" y="112">Independent</text><text x="176" y="138">Loose</text><text x="176" y="164">Low</text>
+    <text x="176" y="190">Performance</text><text x="176" y="216">Low</text><text x="176" y="242">Means</text>
+    <text x="176" y="268">Internal</text>
+  </g>
+  <g stroke="#0F5A4B" stroke-width="2">
+    <line x1="190" y1="30" x2="560" y2="30"/><line x1="190" y1="56" x2="560" y2="56"/>
+    <line x1="190" y1="82" x2="560" y2="82"/><line x1="190" y1="108" x2="560" y2="108"/>
+    <line x1="190" y1="134" x2="560" y2="134"/><line x1="190" y1="160" x2="560" y2="160"/>
+    <line x1="190" y1="186" x2="560" y2="186"/><line x1="190" y1="212" x2="560" y2="212"/>
+    <line x1="190" y1="238" x2="560" y2="238"/><line x1="190" y1="264" x2="560" y2="264"/>
+  </g>
+  <g font-size="13" fill="currentColor" text-anchor="start">
+    <text x="574" y="34">Organization</text><text x="574" y="60">Group</text><text x="574" y="86">People</text>
+    <text x="574" y="112">Interdependent</text><text x="574" y="138">Tight</text><text x="574" y="164">High</text>
+    <text x="574" y="190">Other</text><text x="574" y="216">High</text><text x="574" y="242">Ends</text>
+    <text x="574" y="268">External</text>
+  </g>
+  <g font-size="11.5" fill="currentColor" opacity="0.75" text-anchor="middle">
+    <text x="375" y="22">1. Member identity</text><text x="375" y="48">2. Team emphasis</text>
+    <text x="375" y="74">3. Management focus</text><text x="375" y="100">4. Unit integration</text>
+    <text x="375" y="126">5. Control</text><text x="375" y="152">6. Risk tolerance</text>
+    <text x="375" y="178">7. Reward criteria</text><text x="375" y="204">8. Conflict tolerance</text>
+    <text x="375" y="230">9. Means-ends orientation</text><text x="375" y="256">10. Open-system focus</text>
+  </g>
+</svg>
+</figure>
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 3, Figure 3.5
+:::
+
+## "Bureaucratic" is three separate claims
+
+Tight on **control**. Low on **risk tolerance**. Internal on **open-system focus**.
+
+. . .
+
+Each can be checked. Any of them might be wrong.
+
+## Where the evidence comes from
+
+**Physical characteristics** — space is expensive, and gets spent on what is valued.
+
+. . .
+
+**Public documents** — what the organization wants to be seen valuing.
+
+. . .
+
+**How people behave** — who speaks, how disagreement goes, how fast bad news travels up.
+
+. . .
+
+**Stories and folklore** — who the heroes and villains are.
+
+# LO 3-7 · Structure and culture together
+
+::: {.aside}
+Following Larson & Gray, Ch. 3
+:::
+
+## The range that suits project work
+
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="d37-title" style="width:100%;height:auto">
+  <title id="d37-title">The range on each cultural dimension that suits project work</title>
+  <g font-size="13" fill="currentColor" text-anchor="end">
+    <text x="176" y="34">Job</text><text x="176" y="60">Individual</text><text x="176" y="86">Task</text>
+    <text x="176" y="112">Independent</text><text x="176" y="138">Loose</text><text x="176" y="164">Low</text>
+    <text x="176" y="190">Performance</text><text x="176" y="216">Low</text><text x="176" y="242">Means</text>
+    <text x="176" y="268">Internal</text>
+  </g>
+  <g fill="#0F5A4B" opacity="0.22">
+    <rect x="382" y="22" width="144" height="15" rx="2"/><rect x="382" y="48" width="144" height="15" rx="2"/>
+    <rect x="331" y="74" width="144" height="15" rx="2"/><rect x="419" y="100" width="137" height="15" rx="2"/>
+    <rect x="268" y="126" width="144" height="15" rx="2"/><rect x="405" y="152" width="144" height="15" rx="2"/>
+    <rect x="227" y="178" width="144" height="15" rx="2"/><rect x="405" y="204" width="144" height="15" rx="2"/>
+    <rect x="305" y="230" width="141" height="15" rx="2"/><rect x="405" y="256" width="144" height="15" rx="2"/>
+  </g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.2">
+    <rect x="382" y="22" width="144" height="15" rx="2"/><rect x="382" y="48" width="144" height="15" rx="2"/>
+    <rect x="331" y="74" width="144" height="15" rx="2"/><rect x="419" y="100" width="137" height="15" rx="2"/>
+    <rect x="268" y="126" width="144" height="15" rx="2"/><rect x="405" y="152" width="144" height="15" rx="2"/>
+    <rect x="227" y="178" width="144" height="15" rx="2"/><rect x="405" y="204" width="144" height="15" rx="2"/>
+    <rect x="305" y="230" width="141" height="15" rx="2"/><rect x="405" y="256" width="144" height="15" rx="2"/>
+  </g>
+  <g stroke="#0F5A4B" stroke-width="2">
+    <line x1="190" y1="30" x2="560" y2="30"/><line x1="190" y1="56" x2="560" y2="56"/>
+    <line x1="190" y1="82" x2="560" y2="82"/><line x1="190" y1="108" x2="560" y2="108"/>
+    <line x1="190" y1="134" x2="560" y2="134"/><line x1="190" y1="160" x2="560" y2="160"/>
+    <line x1="190" y1="186" x2="560" y2="186"/><line x1="190" y1="212" x2="560" y2="212"/>
+    <line x1="190" y1="238" x2="560" y2="238"/><line x1="190" y1="264" x2="560" y2="264"/>
+  </g>
+  <g font-size="13" fill="currentColor" text-anchor="start">
+    <text x="574" y="34">Organization</text><text x="574" y="60">Group</text><text x="574" y="86">People</text>
+    <text x="574" y="112">Interdependent</text><text x="574" y="138">Tight</text><text x="574" y="164">High</text>
+    <text x="574" y="190">Other</text><text x="574" y="216">High</text><text x="574" y="242">Ends</text>
+    <text x="574" y="268">External</text>
+  </g>
+</svg>
+</figure>
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 3, Figure 3.7; band positions measured from the source figure
+:::
+
+## Three rows do not want an extreme
+
+**Control** — loose, but not at the far end. Slack to absorb surprise; enough control that a schedule means something.
+
+. . .
+
+**Means-ends** — almost dead centre. Care only about results and the methodology is dropped the moment it is inconvenient.
+
+. . .
+
+**Management focus** — only slightly toward people. All task burns the team; all people does not ship.
+
+## The payoff
+
+**Structure and culture are substitutes.**
+
+. . .
+
+A dedicated team or strong matrix exists to supply focus, integration and authority.
+
+. . .
+
+A culture already in the supportive band supplies all three **at no cost**.
+
+## Which runs both ways
+
+A supportive culture can carry demanding projects on a **light** structure.
+
+. . .
+
+A task-focused, tightly controlled, conflict-averse organization **cannot**.
+
+. . .
+
+There, the project has to be separated out and given its own authority — not because the work is harder, but because the culture will otherwise metabolise it.
+
+## The chapter's last word
+
+> Regardless of how effective your strategy or project structure is supposed to be, the culture of your company ultimately determines success.
+
+::: {.aside}
+Larson & Gray, Ch. 3
+:::
+
+. . .
+
+Read the culture **before** choosing the structure.
+
+# Thursday
+
+## Studio 3 · Rate a culture the model has never seen
+
+You will score an organization you can actually observe on all ten dimensions, overlay the supportive band, and say which structure the gap forces on you.
+
+. . .
+
+Then you will hand the same ten dimensions to a model and ask it to rate the same organization.
+
+. . .
+
+**Bring:** the reading, and a Gemini account.
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 3.
+2. Cabanis-Brewin, J. (2022), cited in Larson & Gray, Ch. 3, for the 79 percent PMO figure.
+3. Hobbs, B., & Ménard, P. (1993). Organizational choices for project management. In P. C. Dinsmore (Ed.), *The AMA Handbook of Project Management*. AMACOM.
+
+::: {.aside}
+Exposition reworded; figures redrawn; review questions and exercises reproduced as written. The epigraph is widely attributed to Peter Drucker, though no original source has been established.
+:::

@@ -1,0 +1,187 @@
+---
+title: "Studio 3 · Rate a culture the model has never seen"
+subtitle: "Week 3 — Organization: Structure and Culture · Larson Ch. 3"
+week: 3
+release: "2026-09-07"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA3</strong> — a <strong>one-page reconciliation</strong> plus your completed ten-row rating table, uploaded to Blackboard</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>Rate, overlay, ask the model, reconcile, then save and upload — roughly 20, 10, 15, 20 and 10 minutes. Pacing guidance, not a bell.</dd>
+<dt>Tools</dt><dd>Gemini</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-03.qmd">Week 3 — Organization: Structure and Culture</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** You rate the organization yourself. The comparison at the end is only
+worth something if the first set of numbers is genuinely yours.
+:::
+
+Chapter 3 says culture decides whether a project structure works. This studio makes you act on that
+claim: rate a real organization on all ten dimensions, work out what structure its culture would
+force on a demanding project, and then find out what a model does with the same task.
+
+::: {.part}
+### Part 1 · Rate it yourself — 20 minutes
+
+**Pick one organization you can actually observe.** In order of preference:
+
+1. A current or former **employer**, or a place you interned.
+2. A **student organization, team or lab** you have been part of long enough to have seen it handle
+   a disagreement.
+3. **NDSU**, or your college within it — treat students as the employees and faculty as the
+   management, exactly as the chapter's own exercise does.
+
+Pick the one you have the most direct evidence about. You are going to be asked for that evidence.
+
+Now score all ten dimensions on a **1 to 5 scale**, where **1 is the left pole and 5 is the right
+pole**. The *supportive range* column is the band from Figure 3.7 — the positions that suit complex
+project work. Do not look at it while you score. Cover it, score the ten, then uncover it.
+
+| # | Dimension | 1 = | 5 = | Supportive | Your score | Your evidence |
+|:--|:--|:--|:--|:--|:--|:--|
+| 1 | Member identity | Job | Organization | 4–5 | | |
+| 2 | Team emphasis | Individual | Group | 4–5 | | |
+| 3 | Management focus | Task | People | 3–4 | | |
+| 4 | Unit integration | Independent | Interdependent | 4–5 | | |
+| 5 | Control | Loose | Tight | 2–3 | | |
+| 6 | Risk tolerance | Low | High | 4–5 | | |
+| 7 | Reward criteria | Performance | Other | 1–3 | | |
+| 8 | Conflict tolerance | Low | High | 4–5 | | |
+| 9 | Means-ends orientation | Means | Ends | 2–4 | | |
+| 10 | Open-system focus | Internal | External | 4–5 | | |
+
+: {tbl-colwidths="[5,20,11,13,10,10,31]"}
+
+**The evidence column is not optional and it is where most of the marks are.** One concrete
+observation per row — something you saw, not something you assume. *"Nobody outside the team knew
+the launch had slipped for three weeks"* is evidence for a low conflict-tolerance score. *"The
+culture is quite closed"* is not evidence, it is the score written twice.
+
+Where you genuinely cannot produce an observation, write **"no evidence"** and leave the score
+blank. A blank row you can defend is worth more than a number you invented, and you will want the
+contrast later.
+:::
+
+::: {.part}
+### Part 2 · Overlay, and name the gap — 10 minutes
+
+Now uncover the supportive column and compare.
+
+1. Mark every row where your score falls **outside** the supportive range.
+2. Pick the **two rows furthest outside it**. These are the two dimensions on which this
+   organization is least hospitable to project work.
+3. For each of the two, write one sentence on **what specifically would go wrong** for a project
+   manager here. Not "communication would suffer" — *"a project manager would not hear about a slip
+   until the milestone was already missed, because raising a problem early is treated as
+   complaining"*.
+
+Then the structural conclusion, in two or three sentences:
+
+> Given these ten scores, a large cross-disciplinary project in this organization would need
+> **[functional / weak matrix / balanced matrix / strong matrix / dedicated team]**, because …
+
+Use the argument from LO 3-7. A culture already sitting in the supportive band supplies focus,
+integration and cooperation for free, so a light structure will do. A culture well outside it does
+not, so the project has to be separated out and given its own authority to survive.
+:::
+
+::: {.part}
+### Part 3 · Now ask the model — 15 minutes
+
+Open Gemini and paste this **exactly as written**, filling in your organization's name. Do not give
+it your scores, and do not give it the supportive range — you are testing what it produces on its
+own.
+
+```text
+Rate the organizational culture of [ORGANIZATION NAME] on these ten
+dimensions. For each, give a score from 1 to 5, where 1 is the first pole
+and 5 is the second.
+
+1. Member identity: 1 = identify with their job, 5 = identify with the organization
+2. Team emphasis: 1 = individual, 5 = group
+3. Management focus: 1 = task, 5 = people
+4. Unit integration: 1 = units independent, 5 = units interdependent
+5. Control: 1 = loose, 5 = tight
+6. Risk tolerance: 1 = low, 5 = high
+7. Reward criteria: 1 = performance, 5 = other factors
+8. Conflict tolerance: 1 = low, 5 = high
+9. Means-ends orientation: 1 = means, 5 = ends
+10. Open-system focus: 1 = internal, 5 = external
+
+For every score, state the specific evidence you are basing it on.
+```
+
+Then ask it **one follow-up**, and keep the answer:
+
+```text
+For each of those ten ratings, tell me how you know. Which ones are based
+on something you have actually read about this organization, and which are
+inferred from organizations of this type?
+```
+
+Record its ten scores next to yours. Keep the transcript link.
+
+::: {.callout-note appearance="simple"}
+**If the model declines to rate**, saying it has no specific information about your organization —
+that is a legitimate result and possibly the most interesting one. Do not argue it into guessing.
+Record the refusal, note which of the two prompts produced it, and write your reconciliation about
+that instead. Say what the refusal tells you about where the ten dimensions have to come from.
+:::
+:::
+
+::: {.part}
+### Part 4 · Reconcile — 20 minutes
+
+This is the graded part. Everything before it was raw material. One page, four things:
+
+1. **The biggest disagreement.** Name a dimension where the two scores differ by **2 or more**. Say
+   which of you is right and why, using your evidence from Part 1. If the model is right and you
+   were wrong, say that.
+
+2. **What it claimed to know that it cannot know.** Quote the model. Most models will produce ten
+   confident scores for an organization they have never observed, and attach evidence that turns
+   out to be generic on inspection — true of any firm in the sector, or true of the organization's
+   public statements about itself rather than its behaviour. Find one and name exactly what is
+   wrong with it. If its second answer admitted which ratings were inferred, quote that instead and
+   say whether the admission matches where it actually went wrong.
+
+3. **Where it changed your mind.** At least one row, and what specifically moved you. If it changed
+   your mind nowhere, say so and defend that — but you must have asked the follow-up first.
+
+4. **Does the structure conclusion survive?** Feed the model's ten scores through the Part 2
+   argument. Does it land on the same structure you did? If it lands somewhere different, that is
+   the whole studio in one line: say what a manager who trusted those numbers would have built, and
+   what would have happened.
+:::
+
+::: {.part}
+### Part 5 · Save it, then upload it
+
+Check this first:
+
+- [ ] the ten-row table completed, with a concrete observation in every evidence cell you scored
+- [ ] the two dimensions furthest outside the supportive range, with what goes wrong for each
+- [ ] your structure conclusion, in the sentence form given in Part 2
+- [ ] one page of reconciliation covering all four points
+- [ ] which AI tool you used, and a link to the transcript
+
+Then two steps, in this order.
+
+**1 · Save your own copy to the cloud.** Use the **Google Drive or OneDrive that comes with your
+NDSU account**. Make a folder `IMSE456/studio-03/` and save the file there as
+`SA3_yourlastname.pdf`.
+
+**2 · Upload the PDF to Blackboard** before you leave the session. That copy is what gets graded,
+and you will get written feedback on it.
+:::
+
+::: {.callout-note appearance="simple"}
+**If you do not have a Gemini Pro account**, come and see me or the TAs in the session. The free
+tier runs out of capacity partway through a studio and leaves you stuck. Do not spend your own
+money on this.
+:::
