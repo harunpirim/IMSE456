@@ -57,7 +57,12 @@ function parseSlides(body) {
     const h = /^(#{1,2})\s+(.*)$/.exec(line);
     if (h) {
       if (cur) slides.push(cur);
-      cur = { section: h[1].length === 1, title: h[2].trim(), lines: [] };
+      // `## Title {.smaller}` and the bare `## {.center}` both carry a Pandoc
+      // attribute block that means something to revealjs and nothing to a
+      // printed slide. Drop it; a heading that was only an attribute block
+      // leaves an empty title, which contentSlide renders as no title at all.
+      const title = h[2].replace(/\{[^{}]*\}\s*$/, "").trim();
+      cur = { section: h[1].length === 1, title, lines: [] };
     } else if (cur) {
       cur.lines.push(line);
     }
@@ -193,10 +198,12 @@ function sectionSlide(pptx, slide) {
 function contentSlide(pptx, slide, meta, num) {
   const s = pptx.addSlide();
   s.background = { color: "FFFFFF" };
-  s.addText(runs(slide.title, { fontSize: 30, bold: true, color: GREEN, fontFace: SERIF }),
-    { x: M, y: 0.55, w: W - 2 * M, h: 0.85, valign: "top", margin: 0 });
+  if (slide.title) {
+    s.addText(runs(slide.title, { fontSize: 30, bold: true, color: GREEN, fontFace: SERIF }),
+      { x: M, y: 0.55, w: W - 2 * M, h: 0.85, valign: "top", margin: 0 });
+  }
 
-  let y = 1.65;
+  let y = slide.title ? 1.65 : 0.9;
   const bottom = H - 0.85;
   const asides = slide.blocks.filter((b) => b.type === "aside");
   const body = slide.blocks.filter((b) => b.type !== "aside");
