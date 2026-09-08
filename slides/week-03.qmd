@@ -306,7 +306,9 @@ Following Larson & Gray, Ch. 3
 
 ## Ten dimensions, each a continuum
 
-<svg viewBox="0 0 760 300" role="img" style="width:100%;height:auto">
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="d35-title" style="width:100%;height:auto">
+  <title id="d35-title">The ten cultural dimensions, each a continuum between two poles</title>
   <g font-size="13" fill="currentColor" text-anchor="end">
     <text x="176" y="34">Job</text><text x="176" y="60">Individual</text><text x="176" y="86">Task</text>
     <text x="176" y="112">Independent</text><text x="176" y="138">Loose</text><text x="176" y="164">Low</text>
@@ -327,11 +329,11 @@ Following Larson & Gray, Ch. 3
     <text x="574" y="268">External</text>
   </g>
   <g font-size="11.5" fill="currentColor" opacity="0.75" text-anchor="middle">
-    <text x="375" y="22">1. Member identity</text><text x="375" y="48">2. Team emphasis</text>
-    <text x="375" y="74">3. Management focus</text><text x="375" y="100">4. Unit integration</text>
-    <text x="375" y="126">5. Control</text><text x="375" y="152">6. Risk tolerance</text>
-    <text x="375" y="178">7. Reward criteria</text><text x="375" y="204">8. Conflict tolerance</text>
-    <text x="375" y="230">9. Means-ends orientation</text><text x="375" y="256">10. Open-system focus</text>
+    <text x="375" y="20">1. Member identity</text><text x="375" y="46">2. Team emphasis</text>
+    <text x="375" y="72">3. Management focus</text><text x="375" y="98">4. Unit integration</text>
+    <text x="375" y="124">5. Control</text><text x="375" y="150">6. Risk tolerance</text>
+    <text x="375" y="176">7. Reward criteria</text><text x="375" y="202">8. Conflict tolerance</text>
+    <text x="375" y="228">9. Means-ends orientation</text><text x="375" y="254">10. Open-system focus</text>
   </g>
 </svg>
 </figure>
@@ -407,6 +409,13 @@ Following Larson & Gray, Ch. 3
     <text x="574" y="112">Interdependent</text><text x="574" y="138">Tight</text><text x="574" y="164">High</text>
     <text x="574" y="190">Other</text><text x="574" y="216">High</text><text x="574" y="242">Ends</text>
     <text x="574" y="268">External</text>
+  </g>
+  <g font-size="11.5" fill="currentColor" opacity="0.75" text-anchor="middle">
+    <text x="375" y="20">1. Member identity</text><text x="375" y="46">2. Team emphasis</text>
+    <text x="375" y="72">3. Management focus</text><text x="375" y="98">4. Unit integration</text>
+    <text x="375" y="124">5. Control</text><text x="375" y="150">6. Risk tolerance</text>
+    <text x="375" y="176">7. Reward criteria</text><text x="375" y="202">8. Conflict tolerance</text>
+    <text x="375" y="228">9. Means-ends orientation</text><text x="375" y="254">10. Open-system focus</text>
   </g>
 </svg>
 </figure>
