@@ -1,0 +1,478 @@
+---
+title: "Week 4 — Defining the Project"
+subtitle: "IMSE 456/656 · Larson Ch. 4"
+author: Harun Pirim
+date: "2026-09-15"
+week: 4
+release: "2026-09-14"
+---
+
+## {.center}
+
+> We can control only what we have planned.
+
+*Larson & Gray, Ch. 4 [1]. Exposition reworded; figures redrawn or newly constructed.*
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 4-1** | A complete project scope statement |
+| **LO 4-2** | Causes and control of scope creep |
+| **LO 4-3** | Priorities among time, cost and performance |
+| **LO 4-4** | The WBS as a planning database |
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 4-5** | Accountability through the OBS |
+| **LO 4-6** | When to use a PBS |
+| **LO 4-7** | Responsibility matrices for small projects |
+| **LO 4-8** | Communication plans |
+
+# LO 4-1 · Define the result
+
+## Three decisions already made
+
+::: {.aside}
+Following Larson & Gray, Ch. 4
+:::
+
+**Week 2:** Which project should we do?
+
+. . .
+
+**Week 3:** Where should the project live?
+
+. . .
+
+**Week 4:** What exactly counts as finished?
+
+## Project scope
+
+The definition of the result or mission delivered to the customer.
+
+. . .
+
+It gives the team a boundary for planning and the customer a basis for acceptance.
+
+. . .
+
+Developed with the project manager, customer and significant stakeholders.
+
+## The scope statement checklist
+
+1. Project objective
+2. Product scope description
+3. Justification
+4. Deliverables
+5. Milestones
+6. Technical requirements
+7. Limits and exclusions
+8. Acceptance criteria
+
+## An objective that governs a plan
+
+> Deliver **what**, by **when**, within **what cost**, and at **what location** if location matters.
+
+. . .
+
+Plan and deliver a two-day manufacturing conference for 500 registered participants in Fargo by 15 October, at a total project cost not exceeding $180,000.
+
+## Four terms that get blurred
+
+| | What it is |
+|---|---|
+| **Deliverable** | An output |
+| **Milestone** | A recognizable control point |
+| **Requirement** | A performance or technical constraint |
+| **Acceptance criterion** | Evidence that permits acceptance |
+
+## The omission that becomes a dispute
+
+**Limits and exclusions** name what the project will not deliver.
+
+. . .
+
+Silence is not a boundary. It is room for two stakeholders to hold different assumptions.
+
+## Scope, SOW and charter
+
+**Scope statement / SOW:** What exactly has been authorized?
+
+. . .
+
+**Project charter:** May the project start, and may the manager form the team?
+
+# LO 4-2 · Control scope creep
+
+## Scope creep
+
+::: {.aside}
+Following Larson & Gray, Ch. 4
+:::
+
+The gradual expansion of requirements, specifications or priorities after work begins.
+
+. . .
+
+A change can improve a project.
+
+. . .
+
+It becomes creep when its consequences are not deliberately accepted with it.
+
+## Six common causes
+
+| | |
+|---|---|
+| Poor requirements analysis | "I will know it when I see it" |
+| Users involved too late | Real needs arrive after design hardens |
+| Complexity underestimated | Unknown interfaces appear |
+| Too many decision-makers | Compromise adds features |
+| No change control | Requests enter without a trade-off |
+| Gold plating | The team adds unrequested value |
+
+## Gold plating is not free quality
+
+It spends somebody else's budget.
+
+. . .
+
+It may make acceptance harder by changing the result the customer actually requested.
+
+## A controlled change has a path
+
+**Record request** → **analyse impact** → **authorize decision** → **update scope and plan together**
+
+. . .
+
+Impact means time, cost, performance and risk.
+
+. . .
+
+Decision means approve, reject or defer.
+
+# LO 4-3 · Decide which constraint wins
+
+## The project trade space
+
+<figure>
+<svg viewBox="0 0 640 330" role="img" aria-labelledby="s-tri-title" style="width:72%;height:auto;display:block;margin:0 auto">
+  <title id="s-tri-title">Scope and performance, cost and time around quality</title>
+  <path d="M320,48 L110,275 L530,275 Z" fill="#0F5A4B" opacity="0.08" stroke="#0F5A4B" stroke-width="2"/>
+  <g fill="white" stroke="#0F5A4B" stroke-width="2"><circle cx="320" cy="48" r="44"/><circle cx="110" cy="275" r="44"/><circle cx="530" cy="275" r="44"/></g>
+  <g fill="currentColor" font-size="19" text-anchor="middle"><text x="320" y="44" font-weight="600">Scope</text><text x="320" y="64" font-size="13">performance</text><text x="110" y="281" font-weight="600">Cost</text><text x="530" y="281" font-weight="600">Time</text><text x="320" y="194" font-size="23" font-weight="600">Quality</text></g>
+</svg>
+</figure>
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 4, Figure 4.1
+:::
+
+## Three priority labels
+
+| | Meaning |
+|---|---|
+| **Constrain** | The original target is fixed |
+| **Enhance** | Use opportunities to improve it |
+| **Accept** | It may move when a trade-off is unavoidable |
+
+## One possible conference decision
+
+| | Time | Performance | Cost |
+|---|:---:|:---:|:---:|
+| **Constrain** | ● | | |
+| **Enhance** | | ● | |
+| **Accept** | | | ● |
+
+. . .
+
+Hold the date. Improve participant value. Allow approved contingency to absorb trade-offs.
+
+## A matrix has to discriminate
+
+Marking all three **constrain** means the manager has no priorities.
+
+. . .
+
+Marking all three **enhance** is a wish list.
+
+. . .
+
+The matrix matters when it tells the manager what to protect first.
+
+# LO 4-4 · Work breakdown structure
+
+## From scope to manageable work
+
+<figure>
+<svg viewBox="0 0 760 350" role="img" aria-labelledby="s-wbs-title" style="width:100%;height:auto">
+  <title id="s-wbs-title">Project decomposed to deliverables, subdeliverables and work packages</title>
+  <defs><marker id="s-wbs-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/></marker></defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#s-wbs-ar)"><path d="M380,58 V85"/><path d="M380,132 V159"/><path d="M380,206 V233"/><path d="M380,280 V307"/></g>
+  <g fill="white" stroke="currentColor" stroke-width="1.4"><rect x="245" y="14" width="270" height="44" rx="4"/><rect x="245" y="88" width="270" height="44" rx="4"/><rect x="245" y="162" width="270" height="44" rx="4"/><rect x="245" y="236" width="270" height="44" rx="4"/></g>
+  <rect x="245" y="310" width="270" height="34" rx="4" fill="#0F5A4B" opacity="0.16" stroke="#0F5A4B" stroke-width="2"/>
+  <g fill="currentColor" font-size="15" text-anchor="middle"><text x="380" y="41" font-weight="600">Project</text><text x="380" y="115">Major deliverable</text><text x="380" y="189">Subdeliverable</text><text x="380" y="263">Lowest manageable subdeliverable</text><text x="380" y="333" font-weight="600">Work package</text></g>
+</svg>
+</figure>
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 4, Figures 4.3 and 4.4
+:::
+
+## The whole has to survive the breakdown
+
+The project is the sum of its lower-level elements.
+
+. . .
+
+If the children do not add up to the parent, work is missing or counted twice.
+
+. . .
+
+Different branches may stop at different depths.
+
+## A work package answers five questions
+
+| | |
+|---|---|
+| **What?** | Defined work |
+| **How long?** | Duration and dates |
+| **Cost?** | Time-phased budget |
+| **How much?** | Resources |
+| **Who?** | One responsible person |
+
+## Why the WBS is a database
+
+Schedule, budget, resources, responsibility and performance all attach to the same work-package code.
+
+. . .
+
+The diagram is the visible index. The management data beneath it is the point.
+
+## Coding position into identity
+
+```text
+1       Project
+1.1     Major deliverable
+1.1.1   Subdeliverable
+1.1.1.1 Work package
+```
+
+. . .
+
+Everything beginning `1.2.3` belongs to the same branch and can be reported together.
+
+## Smartsheet
+
+Import the E-Slim Tablet workbook from the Week 4 notes.
+
+. . .
+
+Keep **Task Name** as the primary column and **WBS** as Text/Number.
+
+. . .
+
+Use `Indent Level` and `Parent WBS` to create the parent-child hierarchy.
+
+# LO 4-5 · Organization breakdown structure
+
+## Two structures, two questions
+
+::: {.aside}
+Following Larson & Gray, Ch. 4
+:::
+
+**WBS:** What has to be delivered?
+
+. . .
+
+**OBS:** Which organization unit is accountable?
+
+. . .
+
+Their intersection is a **cost account** — a control point joining work and responsibility.
+
+## The conference intersection
+
+| Work package | Accountable unit |
+|---|---|
+| Confirm keynote speakers | Program committee |
+| Configure registration | Information systems |
+| Prepare venue rooms | Operations |
+| Launch campaign | Marketing |
+
+. . .
+
+Now the manager can ask whether the work is late, whether the unit is over budget, or both.
+
+# LO 4-6 · Process breakdown structure
+
+## When components are the wrong first question
+
+::: {.aside}
+Following Larson & Gray, Ch. 4
+:::
+
+Some projects become knowable through a sequence of phases.
+
+. . .
+
+Each phase changes what the next phase can do.
+
+. . .
+
+A **PBS** makes that process the hierarchy.
+
+## A software PBS
+
+<figure>
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="s-pbs-title" style="width:100%;height:auto">
+  <title id="s-pbs-title">A software project flows through five phases</title>
+  <defs><marker id="s-pbs-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/></marker></defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#s-pbs-ar)"><path d="M150,70 H190"/><path d="M290,70 H330"/><path d="M430,70 H470"/><path d="M570,70 H610"/></g>
+  <g fill="white" stroke="currentColor" stroke-width="1.4"><rect x="50" y="44" width="100" height="52" rx="4"/><rect x="190" y="44" width="100" height="52" rx="4"/><rect x="330" y="44" width="100" height="52" rx="4"/><rect x="470" y="44" width="100" height="52" rx="4"/><rect x="610" y="44" width="100" height="52" rx="4"/></g>
+  <g fill="currentColor" font-size="14" text-anchor="middle" font-weight="600"><text x="100" y="76">Analyse</text><text x="240" y="76">Design</text><text x="380" y="76">Construct</text><text x="520" y="76">Test</text><text x="660" y="76">Roll out</text></g>
+  <g fill="#0F5A4B" opacity="0.14" stroke="#0F5A4B" stroke-width="1.2"><rect x="50" y="150" width="100" height="55" rx="4"/><rect x="190" y="150" width="100" height="55" rx="4"/><rect x="330" y="150" width="100" height="55" rx="4"/><rect x="470" y="150" width="100" height="55" rx="4"/><rect x="610" y="150" width="100" height="55" rx="4"/></g>
+  <g fill="currentColor" font-size="12.5" text-anchor="middle"><text x="100" y="182">needs</text><text x="240" y="182">architecture</text><text x="380" y="182">build</text><text x="520" y="182">release</text><text x="660" y="182">system</text></g>
+  <g stroke="#0F5A4B" stroke-width="1.2"><path d="M100,96 V150"/><path d="M240,96 V150"/><path d="M380,96 V150"/><path d="M520,96 V150"/><path d="M660,96 V150"/></g>
+</svg>
+</figure>
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 4, Figure 4.6
+:::
+
+## Use a PBS when
+
+- phase completion is the natural control point;
+- outputs from one phase become inputs to the next;
+- the work is a repeatable process; and
+- a component-first breakdown would be artificial.
+
+. . .
+
+A project can combine phases, deliverables and work packages.
+
+# LO 4-7 · Responsibility matrix
+
+## Small work may need only one grid
+
+::: {.aside}
+Following Larson & Gray, Ch. 4
+:::
+
+Tasks in rows. People in columns.
+
+. . .
+
+**R** = responsible. **S** = supports.
+
+| Task | PM | Program | Operations | Marketing |
+|---|:---:|:---:|:---:|:---:|
+| Confirm audience | R | S | | S |
+| Contract venue | S | | R | |
+| Confirm speakers | S | R | | |
+| Open registration | S | | S | R |
+
+## The row test
+
+One unmistakable owner.
+
+. . .
+
+A row full of support marks and no `R` describes coordination without accountability.
+
+. . .
+
+The matrix is compact. Duration, cost and acceptance still have to live somewhere.
+
+# LO 4-8 · Communication plan
+
+## Not a list of meetings
+
+::: {.aside}
+Following Larson & Gray, Ch. 4
+:::
+
+For each information need:
+
+1. What is collected?
+2. Who receives it?
+3. When?
+4. By what method?
+5. Who may access it?
+6. Who provides it?
+
+## Power and interest
+
+<figure>
+<svg viewBox="0 0 650 390" role="img" aria-labelledby="s-pi-title" style="width:72%;height:auto;display:block;margin:0 auto">
+  <title id="s-pi-title">Four stakeholder communication strategies arranged by power and interest</title>
+  <rect x="150" y="45" width="400" height="290" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M350,45 V335 M150,190 H550" stroke="currentColor" stroke-width="1.2"/>
+  <g fill="currentColor" font-size="17" text-anchor="middle" font-weight="600"><text x="250" y="115">Keep satisfied</text><text x="450" y="115">Manage closely</text><text x="250" y="260">General information</text><text x="450" y="260">Keep informed</text></g>
+  <g fill="#0F5A4B" font-size="14" text-anchor="middle"><text x="350" y="375">Interest →</text><text x="80" y="195" transform="rotate(-90 80 195)">Power →</text></g>
+</svg>
+</figure>
+
+::: {.aside}
+Redrawn from Larson & Gray, Ch. 4, Figure 4.9
+:::
+
+## An operating table
+
+| Information | Audience | When | Method | Provider |
+|---|---|---|---|---|
+| Milestone report | Sponsor, PM | Biweekly | Dashboard | Project office |
+| Status and decisions | Team, sponsor | Weekly | Meeting record | PM |
+| Escalated issue | Affected leads | At threshold | Meeting + record | Issue owner |
+| Approved change | Team, vendors | As approved | Change log | Change authority |
+
+## The missing column
+
+Everybody expects information.
+
+. . .
+
+Nobody owns producing it.
+
+. . .
+
+The **provider** column prevents that failure. Access limits prevent a different one.
+
+# The chain
+
+1. Scope defines the result.
+2. Priorities settle trade-offs.
+3. WBS or PBS decomposes the work.
+4. OBS or responsibility matrix assigns it.
+5. Codes and cost accounts support control.
+6. The communication plan moves the information.
+
+. . .
+
+Busy without this chain is not the same as controlled.
+
+# Thursday
+
+## Studio 4 · Generate a WBS, then break it
+
+Build a three-level bicycle WBS yourself.
+
+. . .
+
+Ask a model for another, import it into Smartsheet, and try to break both.
+
+. . .
+
+**Bring:** the Chapter 4 reading, a laptop, and access to Smartsheet and Gemini.
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 4.
+
+::: {.aside}
+Exposition reworded; figures redrawn or newly constructed. The conference example is original to these course materials.
+:::
