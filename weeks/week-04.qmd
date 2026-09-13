@@ -26,3 +26,483 @@ lab: true
 :::
 
 <!-- VIDEO -->
+
+> We can control only what we have planned.
+>
+> — Larson & Gray, Ch. 4 [1]
+
+::: {.callout-note appearance="simple"}
+**Source.** This week's notes follow Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, **Chapter 4** [1]. The exposition is reworded, and the figures and examples are redrawn or newly constructed. The structure and substance are the chapter's.
+:::
+
+## Learning objectives
+
+| | |
+|:--|:--|
+| **LO 4-1** | Identify the elements of a complete project scope statement and explain why they matter. |
+| **LO 4-2** | Recognize the causes of scope creep and control changes to scope. |
+| **LO 4-3** | Establish project priorities among time, cost and performance. |
+| **LO 4-4** | Build a work breakdown structure and use it as the project's planning database. |
+| **LO 4-5** | Connect work packages to accountable organization units through an OBS. |
+| **LO 4-6** | Explain when a process breakdown structure is more useful than a deliverable-based WBS. |
+| **LO 4-7** | Construct a responsibility matrix for a small project. |
+| **LO 4-8** | Construct a communication plan around stakeholder information needs. |
+
+: {tbl-colwidths="[12,88]"}
+
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">project scope</span><span class="chip">project objective</span><span class="chip">deliverable</span><span class="chip">milestone</span><span class="chip">technical requirement</span><span class="chip">limits and exclusions</span><span class="chip">acceptance criteria</span><span class="chip">scope creep</span><span class="chip">gold plating</span><span class="chip">change control</span><span class="chip">constrain · enhance · accept</span><span class="chip">work breakdown structure</span><span class="chip">work package</span><span class="chip">organization breakdown structure</span><span class="chip">cost account</span><span class="chip">WBS code</span><span class="chip">process breakdown structure</span><span class="chip">responsibility matrix</span><span class="chip">communication plan</span><span class="chip">power · interest</span>
+:::
+
+---
+
+# LO 4-1 · Define the result before planning the work
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+Weeks 2 and 3 settled which project should be done and where it should live. Neither decision tells the team what **finished** means. Chapter 4 closes that gap.
+
+**Project scope** describes the result the project will deliver to its customer. A useful scope statement does two jobs at once: it gives the team a boundary for planning, and it gives the customer a basis for acceptance.
+
+The scope is developed with the project manager, customer and other significant stakeholders. It is not a private interpretation written by the team after work has begun.
+
+## The scope statement checklist
+
+| Element | Question it settles |
+|:--|:--|
+| **Project objective** | What will be delivered, by when, for how much and, where relevant, where? |
+| **Product scope description** | What characteristics must the product, service or result have? |
+| **Justification** | Why is the project worth doing? |
+| **Deliverables** | What measurable outputs will exist during and at the end of the project? |
+| **Milestones** | Which important control points will show recognizable progress? |
+| **Technical requirements** | Which specifications, standards or performance levels must be met? |
+| **Limits and exclusions** | What is outside the project, even if someone expects it? |
+| **Acceptance criteria** | What conditions must be satisfied before the customer accepts the result? |
+
+: {tbl-colwidths="[27,73]"}
+
+The checklist matters because the items are easy to confuse.
+
+- A **deliverable** is an output: an approved venue contract, a tested registration system, a finished prototype.
+- A **milestone** is a control point: venue selected, registration opened, final inspection passed. It has no duration of its own.
+- A **technical requirement** constrains how well the deliverable must perform.
+- An **acceptance criterion** is the evidence that lets the customer say yes.
+- A **limit or exclusion** prevents assumed work from entering the project by silence.
+
+## An objective that can govern a plan
+
+A project objective is strongest when one sentence answers four questions:
+
+> Deliver **what**, by **when**, within **what cost**, and at **what location** if location matters.
+
+For the running conference example:
+
+> Plan and deliver a two-day manufacturing conference for 500 registered participants in Fargo by 15 October, at a total project cost not exceeding $180,000.
+
+That sentence does not replace the rest of the scope statement. It makes the target visible. The product description still has to state what kind of conference is being promised, the deliverables still have to name the outputs, and the acceptance criteria still have to say how success will be judged.
+
+::: {.case}
+### The 500-person conference
+
+The sponsor asks for "a high-quality regional conference this fall." The organizing team assumes two days, an evening reception, hybrid streaming and space for 500 people. The sponsor assumes one day, no streaming and a hard ceiling of $120,000. Nobody has written the differences down.
+
+::: {.qn}
+Which entries in the scope checklist would expose the disagreement before contracts are signed? Which entries would still be needed after the disagreement is resolved?
+:::
+:::
+
+## Scope statement, statement of work and charter
+
+Organizations use overlapping labels, so read the document rather than trusting its name.
+
+**Scope statement** describes the agreed result and its boundaries. In contracted work, a similar document may be called a **statement of work (SOW)**. A **project charter** performs a different function: it authorizes the project and gives the project manager authority to form the team and begin.
+
+The practical distinction is simple. The charter answers **may this project start?** The scope statement answers **what exactly has been authorized?**
+
+---
+
+# LO 4-2 · Scope creep is unmanaged decision-making
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+**Scope creep** is the gradual expansion of requirements, specifications or priorities after the project begins. A change can improve a project. It becomes creep when its consequences are not deliberately accepted along with it.
+
+| Common cause | What it looks like |
+|:--|:--|
+| **Poor requirements analysis** | The customer can recognize the desired result but cannot describe it before seeing versions. |
+| **Users involved too late** | The team discovers real operating needs only after design choices have hardened. |
+| **Complexity underestimated** | Unknown interfaces and constraints appear as the work becomes concrete. |
+| **Too many decision-makers** | Compromise adds features because nobody has authority to reject them. |
+| **No change control** | Requests enter the plan without a visible decision on time, cost or performance. |
+| **Gold plating** | The team adds unrequested features because they appear valuable or interesting. |
+
+: {tbl-colwidths="[29,71]"}
+
+Gold plating is especially deceptive. It feels like craftsmanship, but it spends somebody else's budget and may make acceptance harder by changing a result the customer did not request.
+
+## A controlled change has a path
+
+<figure>
+<svg viewBox="0 0 760 170" role="img" aria-labelledby="cc-title" style="width:100%;height:auto">
+  <title id="cc-title">A scope change moves from request through impact analysis and a decision before the baseline changes</title>
+  <defs>
+    <marker id="cc-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#cc-ar)">
+    <path d="M150,70 L190,70"/><path d="M330,70 L370,70"/><path d="M510,70 L550,70"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="20" y="42" width="130" height="56" rx="5"/><rect x="190" y="42" width="140" height="56" rx="5"/>
+    <rect x="370" y="42" width="140" height="56" rx="5"/><rect x="550" y="42" width="190" height="56" rx="5"/>
+  </g>
+  <g fill="currentColor" font-size="13.5" text-anchor="middle">
+    <text x="85" y="65" font-weight="600">Request</text><text x="85" y="83">recorded</text>
+    <text x="260" y="65" font-weight="600">Impact</text><text x="260" y="83">analysed</text>
+    <text x="440" y="65" font-weight="600">Decision</text><text x="440" y="83">authorized</text>
+    <text x="645" y="65" font-weight="600">Scope and plan</text><text x="645" y="83">updated together</text>
+  </g>
+  <text x="260" y="124" font-size="12.5" fill="#0F5A4B" text-anchor="middle">time · cost · performance · risk</text>
+  <text x="440" y="124" font-size="12.5" fill="#0F5A4B" text-anchor="middle">approve · reject · defer</text>
+</svg>
+<figcaption>Change control does not prohibit change. It makes the trade visible before the baseline moves.<br><em>Process constructed from the change-control discussion in Larson &amp; Gray, Ch. 4 [1].</em></figcaption>
+</figure>
+
+The essential discipline is that scope and plan change together. Approving a new conference reception without changing budget, schedule, staffing or another deliverable does not remove the trade-off. It hides it.
+
+---
+
+# LO 4-3 · Decide which constraint wins
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+Every project balances **time**, **cost** and **performance**. The chapter's trade-off model places scope at the performance corner and quality inside the triangle: quality is the result of balancing all three rather than a fourth independent lever.
+
+<figure>
+<svg viewBox="0 0 640 340" role="img" aria-labelledby="tri-title" style="width:100%;height:auto">
+  <title id="tri-title">Project trade-off triangle linking scope and performance, cost and time around quality</title>
+  <path d="M320,48 L110,282 L530,282 Z" fill="#0F5A4B" opacity="0.07" stroke="#0F5A4B" stroke-width="2"/>
+  <g fill="white" stroke="#0F5A4B" stroke-width="2">
+    <circle cx="320" cy="48" r="45"/><circle cx="110" cy="282" r="45"/><circle cx="530" cy="282" r="45"/>
+  </g>
+  <g fill="currentColor" font-size="18" text-anchor="middle">
+    <text x="320" y="43" font-weight="600">Scope</text><text x="320" y="64" font-size="13">performance</text>
+    <text x="110" y="288" font-weight="600">Cost</text><text x="530" y="288" font-weight="600">Time</text>
+    <text x="320" y="202" font-size="22" font-weight="600">Quality</text>
+  </g>
+</svg>
+<figcaption>Scope and performance, cost and time define the project trade space. Quality depends on how coherently the three are balanced.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 4, Figure 4.1 [1].</em></figcaption>
+</figure>
+
+A priority matrix prevents the team from improvising the ranking every time pressure appears.
+
+| Priority | Meaning | Conference example |
+|:--|:--|:--|
+| **Constrain** | The original target is fixed. | The event date cannot move once the venue and speakers are contracted. |
+| **Enhance** | Use opportunities to improve this dimension. | Increase program quality or participant value when feasible. |
+| **Accept** | This dimension may move when a trade-off is unavoidable. | Spend within an approved contingency to protect the date and program. |
+
+: {tbl-colwidths="[16,35,49]"}
+
+<figure>
+<svg viewBox="0 0 650 360" role="img" aria-labelledby="pm-title" style="width:100%;height:auto">
+  <title id="pm-title">A project priority matrix with time constrained, performance enhanced and cost accepted</title>
+  <g fill="none" stroke="currentColor" stroke-width="1.3">
+    <rect x="155" y="65" width="420" height="240"/>
+    <path d="M295,65 V305 M435,65 V305 M155,145 H575 M155,225 H575"/>
+  </g>
+  <g fill="currentColor" font-size="16" text-anchor="middle">
+    <text x="225" y="48">Time</text><text x="365" y="48">Performance</text><text x="505" y="48">Cost</text>
+  </g>
+  <g fill="currentColor" font-size="16" text-anchor="end">
+    <text x="138" y="111">Constrain</text><text x="138" y="191">Enhance</text><text x="138" y="271">Accept</text>
+  </g>
+  <g fill="#0F5A4B" opacity="0.20" stroke="#0F5A4B" stroke-width="2">
+    <circle cx="225" cy="105" r="16"/><circle cx="365" cy="185" r="16"/><circle cx="505" cy="265" r="16"/>
+  </g>
+</svg>
+<figcaption>One possible priority decision for the conference: hold the date, improve performance where possible, and allow cost to absorb approved trade-offs.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 4, Figure 4.2 [1].</em></figcaption>
+</figure>
+
+The labels are comparative, not aspirational. Marking every criterion "constrain" is a refusal to set priorities; marking every criterion "enhance" is a wish list. The matrix becomes useful only when it tells a project manager what to protect first.
+
+---
+
+# LO 4-4 · The WBS turns scope into manageable work
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+Once the deliverables are known, the project is divided repeatedly into smaller pieces. The result is the **work breakdown structure (WBS)**: a hierarchy in which the complete project is represented by the sum of its lower-level elements.
+
+<figure>
+<svg viewBox="0 0 760 410" role="img" aria-labelledby="wbs-title" style="width:100%;height:auto">
+  <title id="wbs-title">A work breakdown structure decomposes the project through deliverables and subdeliverables to work packages</title>
+  <defs>
+    <marker id="wbs-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#wbs-ar)">
+    <path d="M380,62 V92"/><path d="M380,142 V172"/><path d="M380,222 V252"/><path d="M380,302 V332"/>
+  </g>
+  <g fill="white" stroke="currentColor" stroke-width="1.4">
+    <rect x="250" y="18" width="260" height="44" rx="4"/><rect x="250" y="98" width="260" height="44" rx="4"/>
+    <rect x="250" y="178" width="260" height="44" rx="4"/><rect x="250" y="258" width="260" height="44" rx="4"/>
+  </g>
+  <rect x="250" y="338" width="260" height="44" rx="4" fill="#0F5A4B" opacity="0.14" stroke="#0F5A4B" stroke-width="2"/>
+  <g fill="currentColor" font-size="15" text-anchor="middle">
+    <text x="380" y="45" font-weight="600">Project</text><text x="380" y="125">Major deliverable</text>
+    <text x="380" y="205">Subdeliverable</text><text x="380" y="285">Lowest manageable subdeliverable</text>
+    <text x="380" y="365" font-weight="600">Work package</text>
+  </g>
+  <g fill="#0F5A4B" font-size="13" text-anchor="start">
+    <text x="535" y="45">complete project</text><text x="535" y="125">measurable output</text>
+    <text x="535" y="205">supporting output</text><text x="535" y="285">management ownership point</text>
+    <text x="535" y="365">identifiable work</text>
+  </g>
+</svg>
+<figcaption>Decomposition stops where a unit of work can be estimated, budgeted, scheduled and owned. Different branches can stop at different depths.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 4, Figures 4.3 and 4.4 [1].</em></figcaption>
+</figure>
+
+## What a work package must support
+
+The lowest level is a **work package**. It is not merely the smallest phrase in the diagram. It is the level at which the project can answer five management questions.
+
+| Question | Work-package field |
+|:--|:--|
+| What work will be completed? | Defined result or activity |
+| How long will it take? | Duration and dates |
+| What will it cost, and when? | Time-phased budget |
+| What resources are required? | People, equipment and materials |
+| Who owns it? | One responsible person |
+
+: {tbl-colwidths="[38,62]"}
+
+This is why the WBS becomes a database for the project rather than a picture made at kickoff. Estimates, schedules, budgets, assignments and performance reports all attach to the same codes.
+
+## Two tests for decomposition
+
+**Coverage.** If the child elements do not add up to the parent, something is missing or counted twice. A conference WBS with program, venue and marketing but no registration does not describe the complete project.
+
+**Manageability.** Stop when the work can be estimated and controlled. Breaking "print badges" into "open the file," "select print" and "collect pages" creates detail without management value.
+
+## Coding the WBS
+
+Numeric indentation records both identity and position:
+
+```text
+1       Project
+1.1     Major deliverable
+1.1.1   Subdeliverable
+1.1.1.1 Work package
+```
+
+The code permits costs and progress to be consolidated at any level. Every element beginning `1.2.3` belongs to the same branch, so a system can report that branch alone or roll it into `1.2` and then the project total.
+
+::: {.callout-tip appearance="simple"}
+**Smartsheet practice file.** Download the [E-Slim Tablet WBS workbook](../files/e-slim-tablet-wbs-smartsheet-import.xlsx). Import it with **+ Create → Import → Microsoft Excel**. Keep **Task Name** as the primary column and **WBS** as Text/Number. The workbook includes `Indent Level` and `Parent WBS`; use them to create Smartsheet's parent-child hierarchy after import.
+:::
+
+---
+
+# LO 4-5 · The OBS puts an organization behind the work
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+The WBS answers **what** has to be delivered. The **organization breakdown structure (OBS)** answers which organizational unit is accountable for delivering it.
+
+The two structures intersect at a **cost account**: a control point that joins a defined portion of work with the unit responsible for it.
+
+| WBS work package | Accountable OBS unit | Cost account |
+|:--|:--|:--|
+| Confirm keynote speakers | Program committee | 1.1 / Program |
+| Configure registration | Information systems | 1.2 / IS |
+| Prepare venue rooms | Operations | 1.3 / Operations |
+| Launch campaign | Marketing | 1.4 / Marketing |
+
+: {tbl-colwidths="[42,32,26]"}
+
+The intersection matters because a budget without organizational ownership is only a number. Once work and unit are joined, the manager can ask whether the program branch is late, whether the program committee is over budget, or both.
+
+---
+
+# LO 4-6 · Use a PBS when phases organize the work
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+A deliverable-based WBS fits a tangible result whose pieces can be named early. Some projects are defined more naturally by a sequence of phases. Each phase changes the information available to the next.
+
+A **process breakdown structure (PBS)** organizes work around that evolving process.
+
+<figure>
+<svg viewBox="0 0 760 280" role="img" aria-labelledby="pbs-title" style="width:100%;height:auto">
+  <title id="pbs-title">A software project flows through analysis, design, construction, testing and rollout, with activities and outputs under each phase</title>
+  <defs>
+    <marker id="pbs-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#pbs-ar)">
+    <path d="M150,68 H190"/><path d="M290,68 H330"/><path d="M430,68 H470"/><path d="M570,68 H610"/>
+  </g>
+  <g fill="white" stroke="currentColor" stroke-width="1.4">
+    <rect x="50" y="42" width="100" height="52" rx="4"/><rect x="190" y="42" width="100" height="52" rx="4"/>
+    <rect x="330" y="42" width="100" height="52" rx="4"/><rect x="470" y="42" width="100" height="52" rx="4"/>
+    <rect x="610" y="42" width="100" height="52" rx="4"/>
+  </g>
+  <g fill="currentColor" font-size="14" text-anchor="middle" font-weight="600">
+    <text x="100" y="74">Analyse</text><text x="240" y="74">Design</text><text x="380" y="74">Construct</text>
+    <text x="520" y="74">Test</text><text x="660" y="74">Roll out</text>
+  </g>
+  <g fill="#0F5A4B" opacity="0.12" stroke="#0F5A4B" stroke-width="1.2">
+    <rect x="50" y="145" width="100" height="70" rx="4"/><rect x="190" y="145" width="100" height="70" rx="4"/>
+    <rect x="330" y="145" width="100" height="70" rx="4"/><rect x="470" y="145" width="100" height="70" rx="4"/>
+    <rect x="610" y="145" width="100" height="70" rx="4"/>
+  </g>
+  <g fill="currentColor" font-size="12.5" text-anchor="middle">
+    <text x="100" y="174">user needs</text><text x="100" y="193">defined</text>
+    <text x="240" y="174">architecture</text><text x="240" y="193">approved</text>
+    <text x="380" y="174">working</text><text x="380" y="193">build</text>
+    <text x="520" y="174">verified</text><text x="520" y="193">release</text>
+    <text x="660" y="174">operating</text><text x="660" y="193">system</text>
+  </g>
+  <g stroke="#0F5A4B" stroke-width="1.2"><path d="M100,94 V145"/><path d="M240,94 V145"/><path d="M380,94 V145"/><path d="M520,94 V145"/><path d="M660,94 V145"/></g>
+</svg>
+<figcaption>A PBS makes the phase sequence the first level and places activities and outputs beneath each phase.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 4, Figure 4.6 [1].</em></figcaption>
+</figure>
+
+The software industry often calls this sequential form a **waterfall**. The important point is not the label. It is that the hierarchy follows the logic by which the result becomes knowable.
+
+Use a PBS when:
+
+- the work is primarily a repeatable process;
+- phase completion is the natural management checkpoint;
+- outputs from one phase become inputs to the next; and
+- a component-first decomposition would be artificial or premature.
+
+A project can combine the two structures. Its first level may be phases, with deliverables and work packages beneath each phase. The choice should make ownership, estimating and control clearer.
+
+---
+
+# LO 4-7 · A responsibility matrix is enough for small work
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+Small projects do not always need a separate WBS and OBS. A **responsibility matrix** places tasks in rows and people in columns, then marks who is responsible and who supports.
+
+| Conference task | Project manager | Program lead | Operations lead | Marketing lead |
+|:--|:--:|:--:|:--:|:--:|
+| Confirm target audience | R | S |  | S |
+| Contract venue | S |  | R |  |
+| Confirm speakers | S | R |  |  |
+| Open registration | S |  | S | R |
+| Run event-day check | R | S | S | S |
+
+: {tbl-colwidths="[40,15,15,15,15]"}
+
+**R** means responsible. **S** means supports. The matrix is useful only if each task has one unmistakable owner. A row full of support marks and no `R` describes coordination without accountability.
+
+The matrix is compact, but it does not eliminate the work-package questions. Duration, budget and acceptance still have to live somewhere if the project needs them.
+
+---
+
+# LO 4-8 · Communication is part of the plan
+
+*Following Larson & Gray, Ch. 4 [1].*
+
+A communication plan is not a list of meetings. It is a set of decisions about information.
+
+1. What information must be collected, and when?
+2. Who needs it?
+3. How will it be gathered, stored and communicated?
+4. Who is permitted to access it?
+5. When and how often will it be sent?
+6. Who provides it?
+
+## Match attention to power and interest
+
+<figure>
+<svg viewBox="0 0 650 430" role="img" aria-labelledby="pi-title" style="width:100%;height:auto">
+  <title id="pi-title">Stakeholders with high power and high interest are managed closely; other quadrants receive proportionate attention</title>
+  <rect x="150" y="55" width="400" height="300" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M350,55 V355 M150,205 H550" stroke="currentColor" stroke-width="1.2"/>
+  <g fill="currentColor" font-size="17" text-anchor="middle" font-weight="600">
+    <text x="250" y="130">Keep satisfied</text><text x="450" y="130">Manage closely</text>
+    <text x="250" y="280">General information</text><text x="450" y="280">Keep informed</text>
+  </g>
+  <g fill="#0F5A4B" font-size="14" text-anchor="middle">
+    <text x="350" y="395">Interest →</text><text x="80" y="210" transform="rotate(-90 80 210)">Power →</text>
+  </g>
+  <g fill="currentColor" font-size="13">
+    <text x="145" y="375">Low</text><text x="530" y="375">High</text><text x="112" y="350">Low</text><text x="108" y="72">High</text>
+  </g>
+</svg>
+<figcaption>Power and interest determine the intensity of communication, not whether a stakeholder exists.<br><em>Figure redrawn from Larson &amp; Gray, Ch. 4, Figure 4.9 [1].</em></figcaption>
+</figure>
+
+The quadrant is a starting point. A regulator may have high power and low daily interest, but the content and timing of required reports are still fixed by regulation. A participant may have little formal power and high interest, making clear general information more useful than executive status meetings.
+
+## A communication plan is an operating table
+
+| Information | Audience | Timing | Method | Provider |
+|:--|:--|:--|:--|:--|
+| Milestone report | Sponsor and project manager | Biweekly | Dashboard and email | Project office |
+| Project status and decisions | Team and sponsor | Weekly | Meeting record | Project manager |
+| Issue and escalation report | Sponsor and affected leads | When threshold is crossed | Meeting and written record | Issue owner |
+| Approved change requests | Team, sponsor and affected vendors | As approved | Change log notification | Change authority |
+| Event-day operating update | All leads | Scheduled checkpoints | Shared channel | Operations lead |
+
+: {tbl-colwidths="[24,25,16,20,15]"}
+
+The last column prevents a familiar failure: everybody expects information, but nobody owns producing it. Access belongs in the plan too. Participant records, contract prices and incident details should not be distributed merely because a broad mailing list is convenient.
+
+---
+
+# From definition to control
+
+Chapter 4 is one chain, not eight unrelated tools.
+
+1. **Scope** defines the result and its boundary.
+2. **Priorities** say what wins when the boundary is pressured.
+3. **WBS or PBS** decomposes the result into controllable work.
+4. **OBS or responsibility matrix** assigns accountability.
+5. **Codes and cost accounts** let systems aggregate the plan and actual performance.
+6. **Communication plan** moves the right information to the people who must act on it.
+
+If any link is missing, the project can still be busy. It cannot be controlled in the same sense.
+
+::: {.studio}
+## Thursday · Generate a WBS, then break it
+
+Build a three-level WBS for a bicycle before asking a model to build one. Import the model's version into Smartsheet, test both structures for missing work, overlap, mixed decomposition and packages that cannot be owned, then reconcile them into one defensible hierarchy.
+
+[Open Studio 4 →](../labs/lab-04.qmd)
+:::
+
+---
+
+# Check your understanding
+
+1. A customer requests a new feature that adds two weeks and $12,000. Why is this not automatically scope creep, and what would make it scope creep?
+2. Distinguish a deliverable, milestone, technical requirement and acceptance criterion using one project of your choice.
+3. Why does marking time, cost and performance all as constrained leave the project manager without priorities?
+4. What information must exist at the work-package level before the WBS can support planning and control?
+5. What does a cost account join?
+6. When would a PBS produce a clearer plan than a deliverable-based WBS?
+7. What failure is visible in a responsibility-matrix row with three support marks and no responsible person?
+8. Why should access limits be specified in a communication plan?
+
+---
+
+# Where this sits in the course
+
+**Week 2** selected the work. **Week 3** placed it inside an organization. **Week 4** defines it tightly enough to estimate, assign and control. Week 5 will put durations and precedence relationships onto those work packages to create the project schedule.
+
+---
+
+# References
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 4.

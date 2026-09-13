@@ -1,0 +1,157 @@
+---
+title: "Studio 4 · Generate a WBS, then break it"
+subtitle: "Week 4 — Defining the Project · Larson Ch. 4"
+week: 4
+release: "2026-09-14"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA4</strong> — a <strong>one-page reconciliation</strong> plus your final WBS and screenshots, uploaded to Blackboard</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>Build unaided, ask the model, import and test, reconcile, then save and upload — roughly 15, 15, 25, 20 and 10 minutes. Pacing guidance, not a bell.</dd>
+<dt>Tools</dt><dd>Gemini and Smartsheet</dd>
+<dt>Example</dt><dd><a href="../files/e-slim-tablet-wbs-smartsheet-import.xlsx">E-Slim Tablet WBS workbook</a> — use it only to see the import format and hierarchy fields</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-04.qmd">Week 4 — Defining the Project</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Build your first WBS before opening the model. The comparison is only useful if the first hierarchy records your own decomposition.
+:::
+
+The project is to build **one safe, rideable adult bicycle from commercially available components**. The result includes assembly and a final safety check. It excludes designing a new bicycle frame, manufacturing components, retail packaging and accessories not required for safe operation.
+
+You will create the WBS twice: first yourself, then with a model. Smartsheet is where you test whether either hierarchy can actually support planning and control.
+
+::: {.part}
+### Part 1 · Build it yourself — 15 minutes
+
+Do not open Gemini yet.
+
+On paper or in a blank document, create a deliverable-oriented WBS with three levels:
+
+1. **Level 1:** the complete bicycle project;
+2. **Level 2:** the major deliverables that together make the bicycle complete; and
+3. **Level 3:** manageable subdeliverables or work packages beneath each major deliverable.
+
+Give every element a numeric WBS code: `1`, `1.1`, `1.1.1` and so on.
+
+Run two checks before moving on:
+
+- **Coverage:** do the children add up to the parent without missing required work?
+- **Manageability:** could you estimate duration, cost and resources and name one owner for every lowest-level item?
+
+Circle one branch you are least confident about. Keep this version unchanged; you will need the comparison later.
+:::
+
+::: {.part}
+### Part 2 · Ask the model — 15 minutes
+
+Open Gemini and paste this prompt exactly as written:
+
+```text
+Create a three-level, deliverable-oriented work breakdown structure for
+this project:
+
+Build one safe, rideable adult bicycle from commercially available
+components. Include assembly and a final safety check. Exclude designing
+or manufacturing components, retail packaging, and accessories not
+required for safe operation.
+
+Level 1 is the complete project. Level 2 contains the major deliverables.
+Level 3 contains manageable subdeliverables or work packages. Use numeric
+WBS codes. Do not organize the WBS by department or project phase.
+
+Return tab-separated columns in this order:
+Task Name, WBS, Indent Level, Parent WBS.
+
+Use Indent Level 0 for Level 1, 1 for Level 2, and 2 for Level 3. Preserve
+every WBS code as text. After the table, state any assumptions you made.
+```
+
+Keep the response and transcript link. Do not ask it to improve the WBS yet. A polished second response would hide what the first generation got wrong.
+
+Copy the model's tab-separated table into Excel and save it as `bicycle-wbs-ai.xlsx`.
+:::
+
+::: {.part}
+### Part 3 · Import it, then try to break both versions — 25 minutes
+
+#### Import the model's WBS
+
+1. In Smartsheet, select **+ Create → Import → Microsoft Excel**.
+2. Import `bicycle-wbs-ai.xlsx` and keep **Task Name** as the primary column.
+3. Set **WBS** and **Parent WBS** to **Text/Number** columns.
+4. Use **Indent Level** to build the hierarchy. Select a row and use **Indent / Make child row** until it is at the stated level.
+5. Collapse each parent and expand it again. Confirm the expected children move with it.
+
+Screenshot the completed hierarchy with all branches expanded.
+
+#### Test both WBS versions
+
+Use the same six tests on your unaided WBS and the model's WBS.
+
+| Test | Question |
+|:--|:--|
+| **Complete** | Do the child elements cover everything required by the parent? |
+| **No overlap** | Is any work represented in two branches? |
+| **One organizing rule** | Are branches deliverables, rather than a mixture of components, departments, phases and actions? |
+| **Consistent parent-child logic** | Is every child genuinely a part of its parent? |
+| **Manageable lowest level** | Can the lowest-level item be estimated, budgeted, resourced and owned? |
+| **Acceptance visible** | Is final integration and safety verification represented somewhere? |
+
+: {tbl-colwidths="[28,72]"}
+
+Mark every failed test directly on each version. A WBS can look complete and still fail. Typical signals are a component appearing under two parents, verbs mixed with nouns at the same level, or a lowest-level item such as "wheels" that is too broad to assign without another decision.
+
+Now give the model its own output and ask one follow-up:
+
+```text
+Audit this WBS against these six tests: complete coverage, no overlap,
+one organizing rule, valid parent-child logic, manageable lowest-level
+items, and visible final acceptance. Name every failure you can find.
+Do not rewrite the WBS.
+```
+
+Keep its audit. Check whether it notices the same failures you did.
+:::
+
+::: {.part}
+### Part 4 · Reconcile — 20 minutes
+
+This is the graded part. Write one page answering all four prompts.
+
+1. **The strongest branch in each version.** Name one branch from your WBS and one from the model's. Explain why each passes the six tests.
+2. **The most important failure in each version.** Quote the affected WBS codes. State what would go wrong later in estimating, assignment or acceptance if the failure survived.
+3. **What the model's audit missed.** Identify one failure you found that it did not, or explain why its audit was complete. Do not invent a miss if there was none.
+4. **Your final decision.** Describe the three most important changes you made when combining the two versions and why. At least one change must address the branch you circled in Part 1.
+
+Then revise the Smartsheet hierarchy into your final WBS. Keep the WBS, Parent WBS and Indent Level columns so the structure can be checked. Screenshot the final expanded hierarchy.
+
+The check is graded, not the number of rows. A short hierarchy that passes all six tests is stronger than a long hierarchy that merely looks detailed.
+:::
+
+::: {.part}
+### Part 5 · Save it, then upload it
+
+Check this first:
+
+- [ ] your original unaided WBS, with the uncertain branch circled
+- [ ] screenshot of the model's imported WBS in Smartsheet
+- [ ] both versions marked against all six tests
+- [ ] one-page reconciliation answering all four prompts
+- [ ] screenshot of the final expanded Smartsheet hierarchy
+- [ ] AI acknowledgement with the tool name, transcript link, changes and what it got wrong
+
+Then two steps, in this order.
+
+**1 · Save your working files.** Use the Google Drive or OneDrive supplied with your NDSU account. Make a folder `IMSE456/studio-04/` and save the Smartsheet export, `bicycle-wbs-ai.xlsx`, screenshots and reconciliation there.
+
+**2 · Upload one PDF to Blackboard** before you leave the session. Put the one-page reconciliation first, followed by the original WBS, test marks and screenshots. Name it `SA4_yourlastname.pdf`.
+:::
+
+::: {.callout-note appearance="simple"}
+**If Smartsheet will not let you in**, tell me or the TAs in the session. Complete the two WBS versions and the six-test comparison in Excel, state which Smartsheet checks you could not run, and finish the hierarchy after access is restored.
+:::
