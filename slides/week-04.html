@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bc515f276a0ec74e345b33f60fe37fd6.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -142,16 +207,687 @@ Harun Pirim
 
   <p class="date">2026-09-15</p>
 </section>
-<section class="slide level2">
-
-<div class="gated">
-<p><span class="lock">Not posted yet</span></p>
-<p>Notes, slides, and the recording for this week are not published yet.</p>
-</div>
-<p>See the <a href="../schedule.html">schedule</a> for everything that is live now.</p>
-
+<section id="section" class="slide level2 center">
+<h2></h2>
+<blockquote>
+<p>We can control only what we have planned.</p>
+</blockquote>
+<p><em>Larson &amp; Gray, Ch. 4 [1]. Exposition reworded; figures redrawn or newly constructed.</em></p>
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td><strong>LO 4-1</strong></td>
+<td>A complete project scope statement</td>
+</tr>
+<tr class="even">
+<td><strong>LO 4-2</strong></td>
+<td>Causes and control of scope creep</td>
+</tr>
+<tr class="odd">
+<td><strong>LO 4-3</strong></td>
+<td>Priorities among time, cost and performance</td>
+</tr>
+<tr class="even">
+<td><strong>LO 4-4</strong></td>
+<td>The WBS as a planning database</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="learning-objectives-1" class="slide level2">
+<h2>Learning objectives</h2>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td><strong>LO 4-5</strong></td>
+<td>Accountability through the OBS</td>
+</tr>
+<tr class="even">
+<td><strong>LO 4-6</strong></td>
+<td>When to use a PBS</td>
+</tr>
+<tr class="odd">
+<td><strong>LO 4-7</strong></td>
+<td>Responsibility matrices for small projects</td>
+</tr>
+<tr class="even">
+<td><strong>LO 4-8</strong></td>
+<td>Communication plans</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<section id="lo-4-1-define-the-result" class="title-slide slide level1 center">
+<h1>LO 4-1 · Define the result</h1>
 
 </section>
+<section id="three-decisions-already-made" class="slide level2">
+<h2>Three decisions already made</h2>
+
+<p><strong>Week 2:</strong> Which project should we do?</p>
+<div class="fragment">
+<p><strong>Week 3:</strong> Where should the project live?</p>
+</div>
+<div class="fragment">
+<p><strong>Week 4:</strong> What exactly counts as finished?</p>
+</div>
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 4</p>
+</div></aside></section>
+<section id="project-scope" class="slide level2">
+<h2>Project scope</h2>
+<p>The definition of the result or mission delivered to the customer.</p>
+<div class="fragment">
+<p>It gives the team a boundary for planning and the customer a basis for acceptance.</p>
+</div>
+<div class="fragment">
+<p>Developed with the project manager, customer and significant stakeholders.</p>
+</div>
+</section>
+<section id="the-scope-statement-checklist" class="slide level2">
+<h2>The scope statement checklist</h2>
+<ol type="1">
+<li>Project objective</li>
+<li>Product scope description</li>
+<li>Justification</li>
+<li>Deliverables</li>
+<li>Milestones</li>
+<li>Technical requirements</li>
+<li>Limits and exclusions</li>
+<li>Acceptance criteria</li>
+</ol>
+</section>
+<section id="an-objective-that-governs-a-plan" class="slide level2">
+<h2>An objective that governs a plan</h2>
+<blockquote>
+<p>Deliver <strong>what</strong>, by <strong>when</strong>, within <strong>what cost</strong>, and at <strong>what location</strong> if location matters.</p>
+</blockquote>
+<div class="fragment">
+<p>Plan and deliver a two-day manufacturing conference for 500 registered participants in Fargo by 15 October, at a total project cost not exceeding $180,000.</p>
+</div>
+</section>
+<section id="four-terms-that-get-blurred" class="slide level2">
+<h2>Four terms that get blurred</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deliverable</strong></td>
+<td>An output</td>
+</tr>
+<tr class="even">
+<td><strong>Milestone</strong></td>
+<td>A recognizable control point</td>
+</tr>
+<tr class="odd">
+<td><strong>Requirement</strong></td>
+<td>A performance or technical constraint</td>
+</tr>
+<tr class="even">
+<td><strong>Acceptance criterion</strong></td>
+<td>Evidence that permits acceptance</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-omission-that-becomes-a-dispute" class="slide level2">
+<h2>The omission that becomes a dispute</h2>
+<p><strong>Limits and exclusions</strong> name what the project will not deliver.</p>
+<div class="fragment">
+<p>Silence is not a boundary. It is room for two stakeholders to hold different assumptions.</p>
+</div>
+</section>
+<section id="scope-sow-and-charter" class="slide level2">
+<h2>Scope, SOW and charter</h2>
+<p><strong>Scope statement / SOW:</strong> What exactly has been authorized?</p>
+<div class="fragment">
+<p><strong>Project charter:</strong> May the project start, and may the manager form the team?</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-2-control-scope-creep" class="title-slide slide level1 center">
+<h1>LO 4-2 · Control scope creep</h1>
+
+</section>
+<section id="scope-creep" class="slide level2">
+<h2>Scope creep</h2>
+
+<p>The gradual expansion of requirements, specifications or priorities after work begins.</p>
+<div class="fragment">
+<p>A change can improve a project.</p>
+</div>
+<div class="fragment">
+<p>It becomes creep when its consequences are not deliberately accepted with it.</p>
+</div>
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 4</p>
+</div></aside></section>
+<section id="six-common-causes" class="slide level2">
+<h2>Six common causes</h2>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td>Poor requirements analysis</td>
+<td>“I will know it when I see it”</td>
+</tr>
+<tr class="even">
+<td>Users involved too late</td>
+<td>Real needs arrive after design hardens</td>
+</tr>
+<tr class="odd">
+<td>Complexity underestimated</td>
+<td>Unknown interfaces appear</td>
+</tr>
+<tr class="even">
+<td>Too many decision-makers</td>
+<td>Compromise adds features</td>
+</tr>
+<tr class="odd">
+<td>No change control</td>
+<td>Requests enter without a trade-off</td>
+</tr>
+<tr class="even">
+<td>Gold plating</td>
+<td>The team adds unrequested value</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gold-plating-is-not-free-quality" class="slide level2">
+<h2>Gold plating is not free quality</h2>
+<p>It spends somebody else’s budget.</p>
+<div class="fragment">
+<p>It may make acceptance harder by changing the result the customer actually requested.</p>
+</div>
+</section>
+<section id="a-controlled-change-has-a-path" class="slide level2">
+<h2>A controlled change has a path</h2>
+<p><strong>Record request</strong> → <strong>analyse impact</strong> → <strong>authorize decision</strong> → <strong>update scope and plan together</strong></p>
+<div class="fragment">
+<p>Impact means time, cost, performance and risk.</p>
+</div>
+<div class="fragment">
+<p>Decision means approve, reject or defer.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-3-decide-which-constraint-wins" class="title-slide slide level1 center">
+<h1>LO 4-3 · Decide which constraint wins</h1>
+
+</section>
+<section id="the-project-trade-space" class="slide level2">
+<h2>The project trade space</h2>
+<figure>
+<svg viewbox="0 0 640 330" role="img" aria-labelledby="s-tri-title" style="width:72%;height:auto;display:block;margin:0 auto">
+<title id="s-tri-title">
+Scope and performance, cost and time around quality
+</title>
+<path d="M320,48 L110,275 L530,275 Z" fill="#0F5A4B" opacity="0.08" stroke="#0F5A4B" stroke-width="2"></path> <g fill="white" stroke="#0F5A4B" stroke-width="2"><circle cx="320" cy="48" r="44"></circle><circle cx="110" cy="275" r="44"></circle><circle cx="530" cy="275" r="44"></circle></g> <g fill="currentColor" font-size="19" text-anchor="middle"><text x="320" y="44" font-weight="600">Scope</text><text x="320" y="64" font-size="13">performance</text><text x="110" y="281" font-weight="600">Cost</text><text x="530" y="281" font-weight="600">Time</text><text x="320" y="194" font-size="23" font-weight="600">Quality</text></g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Redrawn from Larson &amp; Gray, Ch. 4, Figure 4.1</p>
+</div></aside></section>
+<section id="three-priority-labels" class="slide level2">
+<h2>Three priority labels</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Constrain</strong></td>
+<td>The original target is fixed</td>
+</tr>
+<tr class="even">
+<td><strong>Enhance</strong></td>
+<td>Use opportunities to improve it</td>
+</tr>
+<tr class="odd">
+<td><strong>Accept</strong></td>
+<td>It may move when a trade-off is unavoidable</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="one-possible-conference-decision" class="slide level2">
+<h2>One possible conference decision</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Time</th>
+<th style="text-align: center;">Performance</th>
+<th style="text-align: center;">Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Constrain</strong></td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td><strong>Enhance</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">●</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td><strong>Accept</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">●</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Hold the date. Improve participant value. Allow approved contingency to absorb trade-offs.</p>
+</div>
+</section>
+<section id="a-matrix-has-to-discriminate" class="slide level2">
+<h2>A matrix has to discriminate</h2>
+<p>Marking all three <strong>constrain</strong> means the manager has no priorities.</p>
+<div class="fragment">
+<p>Marking all three <strong>enhance</strong> is a wish list.</p>
+</div>
+<div class="fragment">
+<p>The matrix matters when it tells the manager what to protect first.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-4-work-breakdown-structure" class="title-slide slide level1 center">
+<h1>LO 4-4 · Work breakdown structure</h1>
+
+</section>
+<section id="from-scope-to-manageable-work" class="slide level2">
+<h2>From scope to manageable work</h2>
+<figure>
+<svg viewbox="0 0 760 350" role="img" aria-labelledby="s-wbs-title" style="width:100%;height:auto">
+<title id="s-wbs-title">
+Project decomposed to deliverables, subdeliverables and work packages
+</title>
+<defs><marker id="s-wbs-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path></marker></defs> <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#s-wbs-ar)"><path d="M380,58 V85"></path><path d="M380,132 V159"></path><path d="M380,206 V233"></path><path d="M380,280 V307"></path></g> <g fill="white" stroke="currentColor" stroke-width="1.4"><rect x="245" y="14" width="270" height="44" rx="4"></rect><rect x="245" y="88" width="270" height="44" rx="4"></rect><rect x="245" y="162" width="270" height="44" rx="4"></rect><rect x="245" y="236" width="270" height="44" rx="4"></rect></g> <rect x="245" y="310" width="270" height="34" rx="4" fill="#0F5A4B" opacity="0.16" stroke="#0F5A4B" stroke-width="2"></rect> <g fill="currentColor" font-size="15" text-anchor="middle"><text x="380" y="41" font-weight="600">Project</text><text x="380" y="115">Major deliverable</text><text x="380" y="189">Subdeliverable</text><text x="380" y="263">Lowest manageable subdeliverable</text><text x="380" y="333" font-weight="600">Work package</text></g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Redrawn from Larson &amp; Gray, Ch. 4, Figures 4.3 and 4.4</p>
+</div></aside></section>
+<section id="the-whole-has-to-survive-the-breakdown" class="slide level2">
+<h2>The whole has to survive the breakdown</h2>
+<p>The project is the sum of its lower-level elements.</p>
+<div class="fragment">
+<p>If the children do not add up to the parent, work is missing or counted twice.</p>
+</div>
+<div class="fragment">
+<p>Different branches may stop at different depths.</p>
+</div>
+</section>
+<section id="a-work-package-answers-five-questions" class="slide level2">
+<h2>A work package answers five questions</h2>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td><strong>What?</strong></td>
+<td>Defined work</td>
+</tr>
+<tr class="even">
+<td><strong>How long?</strong></td>
+<td>Duration and dates</td>
+</tr>
+<tr class="odd">
+<td><strong>Cost?</strong></td>
+<td>Time-phased budget</td>
+</tr>
+<tr class="even">
+<td><strong>How much?</strong></td>
+<td>Resources</td>
+</tr>
+<tr class="odd">
+<td><strong>Who?</strong></td>
+<td>One responsible person</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-the-wbs-is-a-database" class="slide level2">
+<h2>Why the WBS is a database</h2>
+<p>Schedule, budget, resources, responsibility and performance all attach to the same work-package code.</p>
+<div class="fragment">
+<p>The diagram is the visible index. The management data beneath it is the point.</p>
+</div>
+</section>
+<section id="coding-position-into-identity" class="slide level2">
+<h2>Coding position into identity</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>1       Project</span>
+<span id="cb1-2"><a></a>1.1     Major deliverable</span>
+<span id="cb1-3"><a></a>1.1.1   Subdeliverable</span>
+<span id="cb1-4"><a></a>1.1.1.1 Work package</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Everything beginning <code>1.2.3</code> belongs to the same branch and can be reported together.</p>
+</div>
+</section>
+<section id="smartsheet" class="slide level2">
+<h2>Smartsheet</h2>
+<p>Import the E-Slim Tablet workbook from the Week 4 notes.</p>
+<div class="fragment">
+<p>Keep <strong>Task Name</strong> as the primary column and <strong>WBS</strong> as Text/Number.</p>
+</div>
+<div class="fragment">
+<p>Use <code>Indent Level</code> and <code>Parent WBS</code> to create the parent-child hierarchy.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-5-organization-breakdown-structure" class="title-slide slide level1 center">
+<h1>LO 4-5 · Organization breakdown structure</h1>
+
+</section>
+<section id="two-structures-two-questions" class="slide level2">
+<h2>Two structures, two questions</h2>
+
+<p><strong>WBS:</strong> What has to be delivered?</p>
+<div class="fragment">
+<p><strong>OBS:</strong> Which organization unit is accountable?</p>
+</div>
+<div class="fragment">
+<p>Their intersection is a <strong>cost account</strong> — a control point joining work and responsibility.</p>
+</div>
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 4</p>
+</div></aside></section>
+<section id="the-conference-intersection" class="slide level2">
+<h2>The conference intersection</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Work package</th>
+<th>Accountable unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Confirm keynote speakers</td>
+<td>Program committee</td>
+</tr>
+<tr class="even">
+<td>Configure registration</td>
+<td>Information systems</td>
+</tr>
+<tr class="odd">
+<td>Prepare venue rooms</td>
+<td>Operations</td>
+</tr>
+<tr class="even">
+<td>Launch campaign</td>
+<td>Marketing</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Now the manager can ask whether the work is late, whether the unit is over budget, or both.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-6-process-breakdown-structure" class="title-slide slide level1 center">
+<h1>LO 4-6 · Process breakdown structure</h1>
+
+</section>
+<section id="when-components-are-the-wrong-first-question" class="slide level2">
+<h2>When components are the wrong first question</h2>
+
+<p>Some projects become knowable through a sequence of phases.</p>
+<div class="fragment">
+<p>Each phase changes what the next phase can do.</p>
+</div>
+<div class="fragment">
+<p>A <strong>PBS</strong> makes that process the hierarchy.</p>
+</div>
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 4</p>
+</div></aside></section>
+<section id="a-software-pbs" class="slide level2">
+<h2>A software PBS</h2>
+<figure>
+<svg viewbox="0 0 760 250" role="img" aria-labelledby="s-pbs-title" style="width:100%;height:auto">
+<title id="s-pbs-title">
+A software project flows through five phases
+</title>
+<defs><marker id="s-pbs-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path></marker></defs> <g fill="none" stroke="#0F5A4B" stroke-width="1.5" marker-end="url(#s-pbs-ar)"><path d="M150,70 H190"></path><path d="M290,70 H330"></path><path d="M430,70 H470"></path><path d="M570,70 H610"></path></g> <g fill="white" stroke="currentColor" stroke-width="1.4"><rect x="50" y="44" width="100" height="52" rx="4"></rect><rect x="190" y="44" width="100" height="52" rx="4"></rect><rect x="330" y="44" width="100" height="52" rx="4"></rect><rect x="470" y="44" width="100" height="52" rx="4"></rect><rect x="610" y="44" width="100" height="52" rx="4"></rect></g> <g fill="currentColor" font-size="14" text-anchor="middle" font-weight="600"><text x="100" y="76">Analyse</text><text x="240" y="76">Design</text><text x="380" y="76">Construct</text><text x="520" y="76">Test</text><text x="660" y="76">Roll out</text></g> <g fill="#0F5A4B" opacity="0.14" stroke="#0F5A4B" stroke-width="1.2"><rect x="50" y="150" width="100" height="55" rx="4"></rect><rect x="190" y="150" width="100" height="55" rx="4"></rect><rect x="330" y="150" width="100" height="55" rx="4"></rect><rect x="470" y="150" width="100" height="55" rx="4"></rect><rect x="610" y="150" width="100" height="55" rx="4"></rect></g> <g fill="currentColor" font-size="12.5" text-anchor="middle"><text x="100" y="182">needs</text><text x="240" y="182">architecture</text><text x="380" y="182">build</text><text x="520" y="182">release</text><text x="660" y="182">system</text></g> <g stroke="#0F5A4B" stroke-width="1.2"><path d="M100,96 V150"></path><path d="M240,96 V150"></path><path d="M380,96 V150"></path><path d="M520,96 V150"></path><path d="M660,96 V150"></path></g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Redrawn from Larson &amp; Gray, Ch. 4, Figure 4.6</p>
+</div></aside></section>
+<section id="use-a-pbs-when" class="slide level2">
+<h2>Use a PBS when</h2>
+<ul>
+<li>phase completion is the natural control point;</li>
+<li>outputs from one phase become inputs to the next;</li>
+<li>the work is a repeatable process; and</li>
+<li>a component-first breakdown would be artificial.</li>
+</ul>
+<div class="fragment">
+<p>A project can combine phases, deliverables and work packages.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-7-responsibility-matrix" class="title-slide slide level1 center">
+<h1>LO 4-7 · Responsibility matrix</h1>
+
+</section>
+<section id="small-work-may-need-only-one-grid" class="slide level2">
+<h2>Small work may need only one grid</h2>
+
+<p>Tasks in rows. People in columns.</p>
+<div class="fragment">
+<p><strong>R</strong> = responsible. <strong>S</strong> = supports.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Task</th>
+<th style="text-align: center;">PM</th>
+<th style="text-align: center;">Program</th>
+<th style="text-align: center;">Operations</th>
+<th style="text-align: center;">Marketing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Confirm audience</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">S</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">S</td>
+</tr>
+<tr class="even">
+<td>Contract venue</td>
+<td style="text-align: center;">S</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td>Confirm speakers</td>
+<td style="text-align: center;">S</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td>Open registration</td>
+<td style="text-align: center;">S</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">S</td>
+<td style="text-align: center;">R</td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 4</p>
+</div></aside></section>
+<section id="the-row-test" class="slide level2">
+<h2>The row test</h2>
+<p>One unmistakable owner.</p>
+<div class="fragment">
+<p>A row full of support marks and no <code>R</code> describes coordination without accountability.</p>
+</div>
+<div class="fragment">
+<p>The matrix is compact. Duration, cost and acceptance still have to live somewhere.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-4-8-communication-plan" class="title-slide slide level1 center">
+<h1>LO 4-8 · Communication plan</h1>
+
+</section>
+<section id="not-a-list-of-meetings" class="slide level2">
+<h2>Not a list of meetings</h2>
+
+<p>For each information need:</p>
+<ol type="1">
+<li>What is collected?</li>
+<li>Who receives it?</li>
+<li>When?</li>
+<li>By what method?</li>
+<li>Who may access it?</li>
+<li>Who provides it?</li>
+</ol>
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 4</p>
+</div></aside></section>
+<section id="power-and-interest" class="slide level2">
+<h2>Power and interest</h2>
+<figure>
+<svg viewbox="0 0 650 390" role="img" aria-labelledby="s-pi-title" style="width:72%;height:auto;display:block;margin:0 auto">
+<title id="s-pi-title">
+Four stakeholder communication strategies arranged by power and interest
+</title>
+<rect x="150" y="45" width="400" height="290" fill="none" stroke="currentColor" stroke-width="1.5"></rect><path d="M350,45 V335 M150,190 H550" stroke="currentColor" stroke-width="1.2"></path> <g fill="currentColor" font-size="17" text-anchor="middle" font-weight="600"><text x="250" y="115">Keep satisfied</text><text x="450" y="115">Manage closely</text><text x="250" y="260">General information</text><text x="450" y="260">Keep informed</text></g> <g fill="#0F5A4B" font-size="14" text-anchor="middle"><text x="350" y="375">Interest →</text><text x="80" y="195" transform="rotate(-90 80 195)">Power →</text></g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Redrawn from Larson &amp; Gray, Ch. 4, Figure 4.9</p>
+</div></aside></section>
+<section id="an-operating-table" class="slide level2">
+<h2>An operating table</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Information</th>
+<th>Audience</th>
+<th>When</th>
+<th>Method</th>
+<th>Provider</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Milestone report</td>
+<td>Sponsor, PM</td>
+<td>Biweekly</td>
+<td>Dashboard</td>
+<td>Project office</td>
+</tr>
+<tr class="even">
+<td>Status and decisions</td>
+<td>Team, sponsor</td>
+<td>Weekly</td>
+<td>Meeting record</td>
+<td>PM</td>
+</tr>
+<tr class="odd">
+<td>Escalated issue</td>
+<td>Affected leads</td>
+<td>At threshold</td>
+<td>Meeting + record</td>
+<td>Issue owner</td>
+</tr>
+<tr class="even">
+<td>Approved change</td>
+<td>Team, vendors</td>
+<td>As approved</td>
+<td>Change log</td>
+<td>Change authority</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-missing-column" class="slide level2">
+<h2>The missing column</h2>
+<p>Everybody expects information.</p>
+<div class="fragment">
+<p>Nobody owns producing it.</p>
+</div>
+<div class="fragment">
+<p>The <strong>provider</strong> column prevents that failure. Access limits prevent a different one.</p>
+</div>
+</section></section>
+<section id="the-chain" class="title-slide slide level1 center">
+<h1>The chain</h1>
+<ol type="1">
+<li>Scope defines the result.</li>
+<li>Priorities settle trade-offs.</li>
+<li>WBS or PBS decomposes the work.</li>
+<li>OBS or responsibility matrix assigns it.</li>
+<li>Codes and cost accounts support control.</li>
+<li>The communication plan moves the information.</li>
+</ol>
+<div class="fragment">
+<p>Busy without this chain is not the same as controlled.</p>
+</div>
+</section>
+
+<section>
+<section id="thursday" class="title-slide slide level1 center">
+<h1>Thursday</h1>
+
+</section>
+<section id="studio-4-generate-a-wbs-then-break-it" class="slide level2">
+<h2>Studio 4 · Generate a WBS, then break it</h2>
+<p>Build a three-level bicycle WBS yourself.</p>
+<div class="fragment">
+<p>Ask a model for another, import it into Smartsheet, and try to break both.</p>
+</div>
+<div class="fragment">
+<p><strong>Bring:</strong> the Chapter 4 reading, a laptop, and access to Smartsheet and Gemini.</p>
+</div>
+</section>
+<section id="sources" class="slide level2">
+<h2>Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 4.</li>
+</ol>
+
+
+
+<aside><div>
+<p>Exposition reworded; figures redrawn or newly constructed. The conference example is original to these course materials.</p>
+</div></aside></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

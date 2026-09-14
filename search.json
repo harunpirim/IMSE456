@@ -46,7 +46,91 @@
     "href": "weeks/week-04.html",
     "title": "Week 4 · Defining the Project",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\n\n\n\nTuesday\n\n\nThe 500-person conference\n\n\nThursday\n\n\nGenerate a WBS, then break it\n\n\nReading\n\n\nLarson Ch. 4\n\n\n\nSee the schedule for everything that is live now."
+    "text": "Sessions\n\n\n15 & 17 September\n\n\nChapter\n\n\nLarson Ch. 4\n\n\nTuesday\n\n\nThe 500-person conference — concept and case\n\n\nThursday\n\n\nGenerate a WBS, then break it\n\n\nReading\n\n\nLarson Ch. 4\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave"
+  },
+  {
+    "objectID": "weeks/week-04.html#learning-objectives",
+    "href": "weeks/week-04.html#learning-objectives",
+    "title": "Week 4 · Defining the Project",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\n\n\n\n\nLO 4-1\nIdentify the elements of a complete project scope statement and explain why they matter.\n\n\nLO 4-2\nRecognize the causes of scope creep and control changes to scope.\n\n\nLO 4-3\nEstablish project priorities among time, cost and performance.\n\n\nLO 4-4\nBuild a work breakdown structure and use it as the project’s planning database.\n\n\nLO 4-5\nConnect work packages to accountable organization units through an OBS.\n\n\nLO 4-6\nExplain when a process breakdown structure is more useful than a deliverable-based WBS.\n\n\nLO 4-7\nConstruct a responsibility matrix for a small project.\n\n\nLO 4-8\nConstruct a communication plan around stakeholder information needs."
+  },
+  {
+    "objectID": "weeks/week-04.html#concepts-introduced",
+    "href": "weeks/week-04.html#concepts-introduced",
+    "title": "Week 4 · Defining the Project",
+    "section": "Concepts introduced",
+    "text": "Concepts introduced\n\nproject scopeproject objectivedeliverablemilestonetechnical requirementlimits and exclusionsacceptance criteriascope creepgold platingchange controlconstrain · enhance · acceptwork breakdown structurework packageorganization breakdown structurecost accountWBS codeprocess breakdown structureresponsibility matrixcommunication planpower · interest"
+  },
+  {
+    "objectID": "weeks/week-04.html#the-scope-statement-checklist",
+    "href": "weeks/week-04.html#the-scope-statement-checklist",
+    "title": "Week 4 · Defining the Project",
+    "section": "The scope statement checklist",
+    "text": "The scope statement checklist\n\n\n\n\n\n\n\nElement\nQuestion it settles\n\n\n\n\nProject objective\nWhat will be delivered, by when, for how much and, where relevant, where?\n\n\nProduct scope description\nWhat characteristics must the product, service or result have?\n\n\nJustification\nWhy is the project worth doing?\n\n\nDeliverables\nWhat measurable outputs will exist during and at the end of the project?\n\n\nMilestones\nWhich important control points will show recognizable progress?\n\n\nTechnical requirements\nWhich specifications, standards or performance levels must be met?\n\n\nLimits and exclusions\nWhat is outside the project, even if someone expects it?\n\n\nAcceptance criteria\nWhat conditions must be satisfied before the customer accepts the result?\n\n\n\nThe checklist matters because the items are easy to confuse.\n\nA deliverable is an output: an approved venue contract, a tested registration system, a finished prototype.\nA milestone is a control point: venue selected, registration opened, final inspection passed. It has no duration of its own.\nA technical requirement constrains how well the deliverable must perform.\nAn acceptance criterion is the evidence that lets the customer say yes.\nA limit or exclusion prevents assumed work from entering the project by silence."
+  },
+  {
+    "objectID": "weeks/week-04.html#an-objective-that-can-govern-a-plan",
+    "href": "weeks/week-04.html#an-objective-that-can-govern-a-plan",
+    "title": "Week 4 · Defining the Project",
+    "section": "An objective that can govern a plan",
+    "text": "An objective that can govern a plan\nA project objective is strongest when one sentence answers four questions:\n\nDeliver what, by when, within what cost, and at what location if location matters.\n\nFor the running conference example:\n\nPlan and deliver a two-day manufacturing conference for 500 registered participants in Fargo by 15 October, at a total project cost not exceeding $180,000.\n\nThat sentence does not replace the rest of the scope statement. It makes the target visible. The product description still has to state what kind of conference is being promised, the deliverables still have to name the outputs, and the acceptance criteria still have to say how success will be judged.\n\nThe 500-person conference\nThe sponsor asks for “a high-quality regional conference this fall.” The organizing team assumes two days, an evening reception, hybrid streaming and space for 500 people. The sponsor assumes one day, no streaming and a hard ceiling of $120,000. Nobody has written the differences down.\n\nWhich entries in the scope checklist would expose the disagreement before contracts are signed? Which entries would still be needed after the disagreement is resolved?"
+  },
+  {
+    "objectID": "weeks/week-04.html#scope-statement-statement-of-work-and-charter",
+    "href": "weeks/week-04.html#scope-statement-statement-of-work-and-charter",
+    "title": "Week 4 · Defining the Project",
+    "section": "Scope statement, statement of work and charter",
+    "text": "Scope statement, statement of work and charter\nOrganizations use overlapping labels, so read the document rather than trusting its name.\nScope statement describes the agreed result and its boundaries. In contracted work, a similar document may be called a statement of work (SOW). A project charter performs a different function: it authorizes the project and gives the project manager authority to form the team and begin.\nThe practical distinction is simple. The charter answers may this project start? The scope statement answers what exactly has been authorized?"
+  },
+  {
+    "objectID": "weeks/week-04.html#a-controlled-change-has-a-path",
+    "href": "weeks/week-04.html#a-controlled-change-has-a-path",
+    "title": "Week 4 · Defining the Project",
+    "section": "A controlled change has a path",
+    "text": "A controlled change has a path\n\n\n\nA scope change moves from request through impact analysis and a decision before the baseline changes\n\n             Requestrecorded Impactanalysed Decisionauthorized Scope and planupdated together  time · cost · performance · risk approve · reject · defer\n\n\nChange control does not prohibit change. It makes the trade visible before the baseline moves.Process constructed from the change-control discussion in Larson & Gray, Ch. 4 [1].\n\n\nThe essential discipline is that scope and plan change together. Approving a new conference reception without changing budget, schedule, staffing or another deliverable does not remove the trade-off. It hides it."
+  },
+  {
+    "objectID": "weeks/week-04.html#what-a-work-package-must-support",
+    "href": "weeks/week-04.html#what-a-work-package-must-support",
+    "title": "Week 4 · Defining the Project",
+    "section": "What a work package must support",
+    "text": "What a work package must support\nThe lowest level is a work package. It is not merely the smallest phrase in the diagram. It is the level at which the project can answer five management questions.\n\n\n\n\n\n\n\nQuestion\nWork-package field\n\n\n\n\nWhat work will be completed?\nDefined result or activity\n\n\nHow long will it take?\nDuration and dates\n\n\nWhat will it cost, and when?\nTime-phased budget\n\n\nWhat resources are required?\nPeople, equipment and materials\n\n\nWho owns it?\nOne responsible person\n\n\n\nThis is why the WBS becomes a database for the project rather than a picture made at kickoff. Estimates, schedules, budgets, assignments and performance reports all attach to the same codes."
+  },
+  {
+    "objectID": "weeks/week-04.html#two-tests-for-decomposition",
+    "href": "weeks/week-04.html#two-tests-for-decomposition",
+    "title": "Week 4 · Defining the Project",
+    "section": "Two tests for decomposition",
+    "text": "Two tests for decomposition\nCoverage. If the child elements do not add up to the parent, something is missing or counted twice. A conference WBS with program, venue and marketing but no registration does not describe the complete project.\nManageability. Stop when the work can be estimated and controlled. Breaking “print badges” into “open the file,” “select print” and “collect pages” creates detail without management value."
+  },
+  {
+    "objectID": "weeks/week-04.html#coding-the-wbs",
+    "href": "weeks/week-04.html#coding-the-wbs",
+    "title": "Week 4 · Defining the Project",
+    "section": "Coding the WBS",
+    "text": "Coding the WBS\nNumeric indentation records both identity and position:\n1       Project\n1.1     Major deliverable\n1.1.1   Subdeliverable\n1.1.1.1 Work package\nThe code permits costs and progress to be consolidated at any level. Every element beginning 1.2.3 belongs to the same branch, so a system can report that branch alone or roll it into 1.2 and then the project total.\n\n\n\n\n\n\nSmartsheet practice file. Download the E-Slim Tablet WBS workbook. Import it with + Create → Import → Microsoft Excel. Keep Task Name as the primary column and WBS as Text/Number. The workbook includes Indent Level and Parent WBS; use them to create Smartsheet’s parent-child hierarchy after import."
+  },
+  {
+    "objectID": "weeks/week-04.html#match-attention-to-power-and-interest",
+    "href": "weeks/week-04.html#match-attention-to-power-and-interest",
+    "title": "Week 4 · Defining the Project",
+    "section": "Match attention to power and interest",
+    "text": "Match attention to power and interest\n\n\n\nStakeholders with high power and high interest are managed closely; other quadrants receive proportionate attention\n\n   Keep satisfiedManage closely General informationKeep informed   Interest →Power →   LowHighLowHigh \n\n\nPower and interest determine the intensity of communication, not whether a stakeholder exists.Figure redrawn from Larson & Gray, Ch. 4, Figure 4.9 [1].\n\n\nThe quadrant is a starting point. A regulator may have high power and low daily interest, but the content and timing of required reports are still fixed by regulation. A participant may have little formal power and high interest, making clear general information more useful than executive status meetings."
+  },
+  {
+    "objectID": "weeks/week-04.html#a-communication-plan-is-an-operating-table",
+    "href": "weeks/week-04.html#a-communication-plan-is-an-operating-table",
+    "title": "Week 4 · Defining the Project",
+    "section": "A communication plan is an operating table",
+    "text": "A communication plan is an operating table\n\n\n\n\n\n\n\n\n\n\nInformation\nAudience\nTiming\nMethod\nProvider\n\n\n\n\nMilestone report\nSponsor and project manager\nBiweekly\nDashboard and email\nProject office\n\n\nProject status and decisions\nTeam and sponsor\nWeekly\nMeeting record\nProject manager\n\n\nIssue and escalation report\nSponsor and affected leads\nWhen threshold is crossed\nMeeting and written record\nIssue owner\n\n\nApproved change requests\nTeam, sponsor and affected vendors\nAs approved\nChange log notification\nChange authority\n\n\nEvent-day operating update\nAll leads\nScheduled checkpoints\nShared channel\nOperations lead\n\n\n\nThe last column prevents a familiar failure: everybody expects information, but nobody owns producing it. Access belongs in the plan too. Participant records, contract prices and incident details should not be distributed merely because a broad mailing list is convenient."
+  },
+  {
+    "objectID": "weeks/week-04.html#thursday-generate-a-wbs-then-break-it",
+    "href": "weeks/week-04.html#thursday-generate-a-wbs-then-break-it",
+    "title": "Week 4 · Defining the Project",
+    "section": "Thursday · Generate a WBS, then break it",
+    "text": "Thursday · Generate a WBS, then break it\nBuild a three-level WBS for a bicycle before asking a model to build one. Import the model’s version into Smartsheet, test both structures for missing work, overlap, mixed decomposition and packages that cannot be owned, then reconcile them into one defensible hierarchy.\nOpen Studio 4 →"
   },
   {
     "objectID": "weeks/week-02.html",
@@ -1180,7 +1264,7 @@
     "href": "labs/lab-04.html",
     "title": "Studio 4 · Generate a WBS, then break it",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "text": "Deliverable\n\n\nSA4 — a one-page reconciliation plus your final WBS and screenshots, uploaded to Blackboard\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\nBuild unaided, ask the model, import and test, reconcile, then save and upload — roughly 15, 15, 25, 20 and 10 minutes. Pacing guidance, not a bell.\n\n\nTools\n\n\nGemini and Smartsheet\n\n\nExample\n\n\nE-Slim Tablet WBS workbook — use it only to see the import format and hierarchy fields\n\n\nAI use\n\n\nLevel 4 — full use with documentation · generate freely, verify everything, and append the AI acknowledgement\n\n\nWeek page\n\n\nWeek 4 — Defining the Project\n\n\n\n\n\n\n\n\n\nThis is individual work. Build your first WBS before opening the model. The comparison is only useful if the first hierarchy records your own decomposition.\n\n\n\nThe project is to build one safe, rideable adult bicycle from commercially available components. The result includes assembly and a final safety check. It excludes designing a new bicycle frame, manufacturing components, retail packaging and accessories not required for safe operation.\nYou will create the WBS twice: first yourself, then with a model. Smartsheet is where you test whether either hierarchy can actually support planning and control.\n\nPart 1 · Build it yourself — 15 minutes\nDo not open Gemini yet.\nOn paper or in a blank document, create a deliverable-oriented WBS with three levels:\n\nLevel 1: the complete bicycle project;\nLevel 2: the major deliverables that together make the bicycle complete; and\nLevel 3: manageable subdeliverables or work packages beneath each major deliverable.\n\nGive every element a numeric WBS code: 1, 1.1, 1.1.1 and so on.\nRun two checks before moving on:\n\nCoverage: do the children add up to the parent without missing required work?\nManageability: could you estimate duration, cost and resources and name one owner for every lowest-level item?\n\nCircle one branch you are least confident about. Keep this version unchanged; you will need the comparison later.\n\n\nPart 2 · Ask the model — 15 minutes\nOpen Gemini and paste this prompt exactly as written:\nCreate a three-level, deliverable-oriented work breakdown structure for\nthis project:\n\nBuild one safe, rideable adult bicycle from commercially available\ncomponents. Include assembly and a final safety check. Exclude designing\nor manufacturing components, retail packaging, and accessories not\nrequired for safe operation.\n\nLevel 1 is the complete project. Level 2 contains the major deliverables.\nLevel 3 contains manageable subdeliverables or work packages. Use numeric\nWBS codes. Do not organize the WBS by department or project phase.\n\nReturn tab-separated columns in this order:\nTask Name, WBS, Indent Level, Parent WBS.\n\nUse Indent Level 0 for Level 1, 1 for Level 2, and 2 for Level 3. Preserve\nevery WBS code as text. After the table, state any assumptions you made.\nKeep the response and transcript link. Do not ask it to improve the WBS yet. A polished second response would hide what the first generation got wrong.\nCopy the model’s tab-separated table into Excel and save it as bicycle-wbs-ai.xlsx.\n\n\nPart 3 · Import it, then try to break both versions — 25 minutes\n\nImport the model’s WBS\n\nIn Smartsheet, select + Create → Import → Microsoft Excel.\nImport bicycle-wbs-ai.xlsx and keep Task Name as the primary column.\nSet WBS and Parent WBS to Text/Number columns.\nUse Indent Level to build the hierarchy. Select a row and use Indent / Make child row until it is at the stated level.\nCollapse each parent and expand it again. Confirm the expected children move with it.\n\nScreenshot the completed hierarchy with all branches expanded.\n\n\nTest both WBS versions\nUse the same six tests on your unaided WBS and the model’s WBS.\n\n\n\n\n\n\n\nTest\nQuestion\n\n\n\n\nComplete\nDo the child elements cover everything required by the parent?\n\n\nNo overlap\nIs any work represented in two branches?\n\n\nOne organizing rule\nAre branches deliverables, rather than a mixture of components, departments, phases and actions?\n\n\nConsistent parent-child logic\nIs every child genuinely a part of its parent?\n\n\nManageable lowest level\nCan the lowest-level item be estimated, budgeted, resourced and owned?\n\n\nAcceptance visible\nIs final integration and safety verification represented somewhere?\n\n\n\nMark every failed test directly on each version. A WBS can look complete and still fail. Typical signals are a component appearing under two parents, verbs mixed with nouns at the same level, or a lowest-level item such as “wheels” that is too broad to assign without another decision.\nNow give the model its own output and ask one follow-up:\nAudit this WBS against these six tests: complete coverage, no overlap,\none organizing rule, valid parent-child logic, manageable lowest-level\nitems, and visible final acceptance. Name every failure you can find.\nDo not rewrite the WBS.\nKeep its audit. Check whether it notices the same failures you did.\n\n\n\nPart 4 · Reconcile — 20 minutes\nThis is the graded part. Write one page answering all four prompts.\n\nThe strongest branch in each version. Name one branch from your WBS and one from the model’s. Explain why each passes the six tests.\nThe most important failure in each version. Quote the affected WBS codes. State what would go wrong later in estimating, assignment or acceptance if the failure survived.\nWhat the model’s audit missed. Identify one failure you found that it did not, or explain why its audit was complete. Do not invent a miss if there was none.\nYour final decision. Describe the three most important changes you made when combining the two versions and why. At least one change must address the branch you circled in Part 1.\n\nThen revise the Smartsheet hierarchy into your final WBS. Keep the WBS, Parent WBS and Indent Level columns so the structure can be checked. Screenshot the final expanded hierarchy.\nThe check is graded, not the number of rows. A short hierarchy that passes all six tests is stronger than a long hierarchy that merely looks detailed.\n\n\nPart 5 · Save it, then upload it\nCheck this first:\n\nyour original unaided WBS, with the uncertain branch circled\nscreenshot of the model’s imported WBS in Smartsheet\nboth versions marked against all six tests\none-page reconciliation answering all four prompts\nscreenshot of the final expanded Smartsheet hierarchy\nAI acknowledgement with the tool name, transcript link, changes and what it got wrong\n\nThen two steps, in this order.\n1 · Save your working files. Use the Google Drive or OneDrive supplied with your NDSU account. Make a folder IMSE456/studio-04/ and save the Smartsheet export, bicycle-wbs-ai.xlsx, screenshots and reconciliation there.\n2 · Upload one PDF to Blackboard before you leave the session. Put the one-page reconciliation first, followed by the original WBS, test marks and screenshots. Name it SA4_yourlastname.pdf.\n\n\n\n\n\n\n\nIf Smartsheet will not let you in, tell me or the TAs in the session. Complete the two WBS versions and the six-test comparison in Excel, state which Smartsheet checks you could not run, and finish the hierarchy after access is restored."
   },
   {
     "objectID": "schedule.html",
@@ -1566,6 +1650,265 @@
     "title": "Week 2 — Organization Strategy and Project Selection",
     "section": "Sources",
     "text": "Sources\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Ch. 2.\nKahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.\nAlicke, M. D., & Govorun, O. (2005). The better-than-average effect. In The Self in Social Judgment. Psychology Press.\nSuls, J., & Wan, C. K. (1987). In search of the false uniqueness effect. J. Personality and Social Psychology, 52(1), 211–217.\nMatheson, D., & Matheson, J. (1998). The Smart Organization. Harvard Business School Press."
+  },
+  {
+    "objectID": "slides/week-04.html#section",
+    "href": "slides/week-04.html#section",
+    "title": "Week 4 — Defining the Project",
+    "section": "",
+    "text": "We can control only what we have planned.\n\nLarson & Gray, Ch. 4 [1]. Exposition reworded; figures redrawn or newly constructed."
+  },
+  {
+    "objectID": "slides/week-04.html#learning-objectives",
+    "href": "slides/week-04.html#learning-objectives",
+    "title": "Week 4 — Defining the Project",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\nLO 4-1\nA complete project scope statement\n\n\nLO 4-2\nCauses and control of scope creep\n\n\nLO 4-3\nPriorities among time, cost and performance\n\n\nLO 4-4\nThe WBS as a planning database"
+  },
+  {
+    "objectID": "slides/week-04.html#learning-objectives-1",
+    "href": "slides/week-04.html#learning-objectives-1",
+    "title": "Week 4 — Defining the Project",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\nLO 4-5\nAccountability through the OBS\n\n\nLO 4-6\nWhen to use a PBS\n\n\nLO 4-7\nResponsibility matrices for small projects\n\n\nLO 4-8\nCommunication plans"
+  },
+  {
+    "objectID": "slides/week-04.html#three-decisions-already-made",
+    "href": "slides/week-04.html#three-decisions-already-made",
+    "title": "Week 4 — Defining the Project",
+    "section": "Three decisions already made",
+    "text": "Three decisions already made\n\nWeek 2: Which project should we do?\n\nWeek 3: Where should the project live?\n\n\nWeek 4: What exactly counts as finished?\n\n\nFollowing Larson & Gray, Ch. 4"
+  },
+  {
+    "objectID": "slides/week-04.html#project-scope",
+    "href": "slides/week-04.html#project-scope",
+    "title": "Week 4 — Defining the Project",
+    "section": "Project scope",
+    "text": "Project scope\nThe definition of the result or mission delivered to the customer.\n\nIt gives the team a boundary for planning and the customer a basis for acceptance.\n\n\nDeveloped with the project manager, customer and significant stakeholders."
+  },
+  {
+    "objectID": "slides/week-04.html#the-scope-statement-checklist",
+    "href": "slides/week-04.html#the-scope-statement-checklist",
+    "title": "Week 4 — Defining the Project",
+    "section": "The scope statement checklist",
+    "text": "The scope statement checklist\n\nProject objective\nProduct scope description\nJustification\nDeliverables\nMilestones\nTechnical requirements\nLimits and exclusions\nAcceptance criteria"
+  },
+  {
+    "objectID": "slides/week-04.html#an-objective-that-governs-a-plan",
+    "href": "slides/week-04.html#an-objective-that-governs-a-plan",
+    "title": "Week 4 — Defining the Project",
+    "section": "An objective that governs a plan",
+    "text": "An objective that governs a plan\n\nDeliver what, by when, within what cost, and at what location if location matters.\n\n\nPlan and deliver a two-day manufacturing conference for 500 registered participants in Fargo by 15 October, at a total project cost not exceeding $180,000."
+  },
+  {
+    "objectID": "slides/week-04.html#four-terms-that-get-blurred",
+    "href": "slides/week-04.html#four-terms-that-get-blurred",
+    "title": "Week 4 — Defining the Project",
+    "section": "Four terms that get blurred",
+    "text": "Four terms that get blurred\n\n\n\n\nWhat it is\n\n\n\n\nDeliverable\nAn output\n\n\nMilestone\nA recognizable control point\n\n\nRequirement\nA performance or technical constraint\n\n\nAcceptance criterion\nEvidence that permits acceptance"
+  },
+  {
+    "objectID": "slides/week-04.html#the-omission-that-becomes-a-dispute",
+    "href": "slides/week-04.html#the-omission-that-becomes-a-dispute",
+    "title": "Week 4 — Defining the Project",
+    "section": "The omission that becomes a dispute",
+    "text": "The omission that becomes a dispute\nLimits and exclusions name what the project will not deliver.\n\nSilence is not a boundary. It is room for two stakeholders to hold different assumptions."
+  },
+  {
+    "objectID": "slides/week-04.html#scope-sow-and-charter",
+    "href": "slides/week-04.html#scope-sow-and-charter",
+    "title": "Week 4 — Defining the Project",
+    "section": "Scope, SOW and charter",
+    "text": "Scope, SOW and charter\nScope statement / SOW: What exactly has been authorized?\n\nProject charter: May the project start, and may the manager form the team?"
+  },
+  {
+    "objectID": "slides/week-04.html#scope-creep",
+    "href": "slides/week-04.html#scope-creep",
+    "title": "Week 4 — Defining the Project",
+    "section": "Scope creep",
+    "text": "Scope creep\n\nThe gradual expansion of requirements, specifications or priorities after work begins.\n\nA change can improve a project.\n\n\nIt becomes creep when its consequences are not deliberately accepted with it.\n\n\nFollowing Larson & Gray, Ch. 4"
+  },
+  {
+    "objectID": "slides/week-04.html#six-common-causes",
+    "href": "slides/week-04.html#six-common-causes",
+    "title": "Week 4 — Defining the Project",
+    "section": "Six common causes",
+    "text": "Six common causes\n\n\n\nPoor requirements analysis\n“I will know it when I see it”\n\n\nUsers involved too late\nReal needs arrive after design hardens\n\n\nComplexity underestimated\nUnknown interfaces appear\n\n\nToo many decision-makers\nCompromise adds features\n\n\nNo change control\nRequests enter without a trade-off\n\n\nGold plating\nThe team adds unrequested value"
+  },
+  {
+    "objectID": "slides/week-04.html#gold-plating-is-not-free-quality",
+    "href": "slides/week-04.html#gold-plating-is-not-free-quality",
+    "title": "Week 4 — Defining the Project",
+    "section": "Gold plating is not free quality",
+    "text": "Gold plating is not free quality\nIt spends somebody else’s budget.\n\nIt may make acceptance harder by changing the result the customer actually requested."
+  },
+  {
+    "objectID": "slides/week-04.html#a-controlled-change-has-a-path",
+    "href": "slides/week-04.html#a-controlled-change-has-a-path",
+    "title": "Week 4 — Defining the Project",
+    "section": "A controlled change has a path",
+    "text": "A controlled change has a path\nRecord request → analyse impact → authorize decision → update scope and plan together\n\nImpact means time, cost, performance and risk.\n\n\nDecision means approve, reject or defer."
+  },
+  {
+    "objectID": "slides/week-04.html#the-project-trade-space",
+    "href": "slides/week-04.html#the-project-trade-space",
+    "title": "Week 4 — Defining the Project",
+    "section": "The project trade space",
+    "text": "The project trade space\n\n\n\nScope and performance, cost and time around quality\n\n  ScopeperformanceCostTimeQuality\n\n\n\n\nRedrawn from Larson & Gray, Ch. 4, Figure 4.1"
+  },
+  {
+    "objectID": "slides/week-04.html#three-priority-labels",
+    "href": "slides/week-04.html#three-priority-labels",
+    "title": "Week 4 — Defining the Project",
+    "section": "Three priority labels",
+    "text": "Three priority labels\n\n\n\n\nMeaning\n\n\n\n\nConstrain\nThe original target is fixed\n\n\nEnhance\nUse opportunities to improve it\n\n\nAccept\nIt may move when a trade-off is unavoidable"
+  },
+  {
+    "objectID": "slides/week-04.html#one-possible-conference-decision",
+    "href": "slides/week-04.html#one-possible-conference-decision",
+    "title": "Week 4 — Defining the Project",
+    "section": "One possible conference decision",
+    "text": "One possible conference decision\n\n\n\n\nTime\nPerformance\nCost\n\n\n\n\nConstrain\n●\n\n\n\n\nEnhance\n\n●\n\n\n\nAccept\n\n\n●\n\n\n\n\nHold the date. Improve participant value. Allow approved contingency to absorb trade-offs."
+  },
+  {
+    "objectID": "slides/week-04.html#a-matrix-has-to-discriminate",
+    "href": "slides/week-04.html#a-matrix-has-to-discriminate",
+    "title": "Week 4 — Defining the Project",
+    "section": "A matrix has to discriminate",
+    "text": "A matrix has to discriminate\nMarking all three constrain means the manager has no priorities.\n\nMarking all three enhance is a wish list.\n\n\nThe matrix matters when it tells the manager what to protect first."
+  },
+  {
+    "objectID": "slides/week-04.html#from-scope-to-manageable-work",
+    "href": "slides/week-04.html#from-scope-to-manageable-work",
+    "title": "Week 4 — Defining the Project",
+    "section": "From scope to manageable work",
+    "text": "From scope to manageable work\n\n\n\nProject decomposed to deliverables, subdeliverables and work packages\n\n    ProjectMajor deliverableSubdeliverableLowest manageable subdeliverableWork package\n\n\n\n\nRedrawn from Larson & Gray, Ch. 4, Figures 4.3 and 4.4"
+  },
+  {
+    "objectID": "slides/week-04.html#the-whole-has-to-survive-the-breakdown",
+    "href": "slides/week-04.html#the-whole-has-to-survive-the-breakdown",
+    "title": "Week 4 — Defining the Project",
+    "section": "The whole has to survive the breakdown",
+    "text": "The whole has to survive the breakdown\nThe project is the sum of its lower-level elements.\n\nIf the children do not add up to the parent, work is missing or counted twice.\n\n\nDifferent branches may stop at different depths."
+  },
+  {
+    "objectID": "slides/week-04.html#a-work-package-answers-five-questions",
+    "href": "slides/week-04.html#a-work-package-answers-five-questions",
+    "title": "Week 4 — Defining the Project",
+    "section": "A work package answers five questions",
+    "text": "A work package answers five questions\n\n\n\nWhat?\nDefined work\n\n\nHow long?\nDuration and dates\n\n\nCost?\nTime-phased budget\n\n\nHow much?\nResources\n\n\nWho?\nOne responsible person"
+  },
+  {
+    "objectID": "slides/week-04.html#why-the-wbs-is-a-database",
+    "href": "slides/week-04.html#why-the-wbs-is-a-database",
+    "title": "Week 4 — Defining the Project",
+    "section": "Why the WBS is a database",
+    "text": "Why the WBS is a database\nSchedule, budget, resources, responsibility and performance all attach to the same work-package code.\n\nThe diagram is the visible index. The management data beneath it is the point."
+  },
+  {
+    "objectID": "slides/week-04.html#coding-position-into-identity",
+    "href": "slides/week-04.html#coding-position-into-identity",
+    "title": "Week 4 — Defining the Project",
+    "section": "Coding position into identity",
+    "text": "Coding position into identity\n1       Project\n1.1     Major deliverable\n1.1.1   Subdeliverable\n1.1.1.1 Work package\n\nEverything beginning 1.2.3 belongs to the same branch and can be reported together."
+  },
+  {
+    "objectID": "slides/week-04.html#smartsheet",
+    "href": "slides/week-04.html#smartsheet",
+    "title": "Week 4 — Defining the Project",
+    "section": "Smartsheet",
+    "text": "Smartsheet\nImport the E-Slim Tablet workbook from the Week 4 notes.\n\nKeep Task Name as the primary column and WBS as Text/Number.\n\n\nUse Indent Level and Parent WBS to create the parent-child hierarchy."
+  },
+  {
+    "objectID": "slides/week-04.html#two-structures-two-questions",
+    "href": "slides/week-04.html#two-structures-two-questions",
+    "title": "Week 4 — Defining the Project",
+    "section": "Two structures, two questions",
+    "text": "Two structures, two questions\n\nWBS: What has to be delivered?\n\nOBS: Which organization unit is accountable?\n\n\nTheir intersection is a cost account — a control point joining work and responsibility.\n\n\nFollowing Larson & Gray, Ch. 4"
+  },
+  {
+    "objectID": "slides/week-04.html#the-conference-intersection",
+    "href": "slides/week-04.html#the-conference-intersection",
+    "title": "Week 4 — Defining the Project",
+    "section": "The conference intersection",
+    "text": "The conference intersection\n\n\n\nWork package\nAccountable unit\n\n\n\n\nConfirm keynote speakers\nProgram committee\n\n\nConfigure registration\nInformation systems\n\n\nPrepare venue rooms\nOperations\n\n\nLaunch campaign\nMarketing\n\n\n\n\nNow the manager can ask whether the work is late, whether the unit is over budget, or both."
+  },
+  {
+    "objectID": "slides/week-04.html#when-components-are-the-wrong-first-question",
+    "href": "slides/week-04.html#when-components-are-the-wrong-first-question",
+    "title": "Week 4 — Defining the Project",
+    "section": "When components are the wrong first question",
+    "text": "When components are the wrong first question\n\nSome projects become knowable through a sequence of phases.\n\nEach phase changes what the next phase can do.\n\n\nA PBS makes that process the hierarchy.\n\n\nFollowing Larson & Gray, Ch. 4"
+  },
+  {
+    "objectID": "slides/week-04.html#a-software-pbs",
+    "href": "slides/week-04.html#a-software-pbs",
+    "title": "Week 4 — Defining the Project",
+    "section": "A software PBS",
+    "text": "A software PBS\n\n\n\nA software project flows through five phases\n\n   AnalyseDesignConstructTestRoll out  needsarchitecturebuildreleasesystem \n\n\n\n\nRedrawn from Larson & Gray, Ch. 4, Figure 4.6"
+  },
+  {
+    "objectID": "slides/week-04.html#use-a-pbs-when",
+    "href": "slides/week-04.html#use-a-pbs-when",
+    "title": "Week 4 — Defining the Project",
+    "section": "Use a PBS when",
+    "text": "Use a PBS when\n\nphase completion is the natural control point;\noutputs from one phase become inputs to the next;\nthe work is a repeatable process; and\na component-first breakdown would be artificial.\n\n\nA project can combine phases, deliverables and work packages."
+  },
+  {
+    "objectID": "slides/week-04.html#small-work-may-need-only-one-grid",
+    "href": "slides/week-04.html#small-work-may-need-only-one-grid",
+    "title": "Week 4 — Defining the Project",
+    "section": "Small work may need only one grid",
+    "text": "Small work may need only one grid\n\nTasks in rows. People in columns.\n\nR = responsible. S = supports.\n\n\n\nTask\nPM\nProgram\nOperations\nMarketing\n\n\n\n\nConfirm audience\nR\nS\n\nS\n\n\nContract venue\nS\n\nR\n\n\n\nConfirm speakers\nS\nR\n\n\n\n\nOpen registration\nS\n\nS\nR\n\n\n\n\n\nFollowing Larson & Gray, Ch. 4"
+  },
+  {
+    "objectID": "slides/week-04.html#the-row-test",
+    "href": "slides/week-04.html#the-row-test",
+    "title": "Week 4 — Defining the Project",
+    "section": "The row test",
+    "text": "The row test\nOne unmistakable owner.\n\nA row full of support marks and no R describes coordination without accountability.\n\n\nThe matrix is compact. Duration, cost and acceptance still have to live somewhere."
+  },
+  {
+    "objectID": "slides/week-04.html#not-a-list-of-meetings",
+    "href": "slides/week-04.html#not-a-list-of-meetings",
+    "title": "Week 4 — Defining the Project",
+    "section": "Not a list of meetings",
+    "text": "Not a list of meetings\n\nFor each information need:\n\nWhat is collected?\nWho receives it?\nWhen?\nBy what method?\nWho may access it?\nWho provides it?\n\n\nFollowing Larson & Gray, Ch. 4"
+  },
+  {
+    "objectID": "slides/week-04.html#power-and-interest",
+    "href": "slides/week-04.html#power-and-interest",
+    "title": "Week 4 — Defining the Project",
+    "section": "Power and interest",
+    "text": "Power and interest\n\n\n\nFour stakeholder communication strategies arranged by power and interest\n\n Keep satisfiedManage closelyGeneral informationKeep informed Interest →Power →\n\n\n\n\nRedrawn from Larson & Gray, Ch. 4, Figure 4.9"
+  },
+  {
+    "objectID": "slides/week-04.html#an-operating-table",
+    "href": "slides/week-04.html#an-operating-table",
+    "title": "Week 4 — Defining the Project",
+    "section": "An operating table",
+    "text": "An operating table\n\n\n\n\n\n\n\n\n\n\nInformation\nAudience\nWhen\nMethod\nProvider\n\n\n\n\nMilestone report\nSponsor, PM\nBiweekly\nDashboard\nProject office\n\n\nStatus and decisions\nTeam, sponsor\nWeekly\nMeeting record\nPM\n\n\nEscalated issue\nAffected leads\nAt threshold\nMeeting + record\nIssue owner\n\n\nApproved change\nTeam, vendors\nAs approved\nChange log\nChange authority"
+  },
+  {
+    "objectID": "slides/week-04.html#the-missing-column",
+    "href": "slides/week-04.html#the-missing-column",
+    "title": "Week 4 — Defining the Project",
+    "section": "The missing column",
+    "text": "The missing column\nEverybody expects information.\n\nNobody owns producing it.\n\n\nThe provider column prevents that failure. Access limits prevent a different one."
+  },
+  {
+    "objectID": "slides/week-04.html#studio-4-generate-a-wbs-then-break-it",
+    "href": "slides/week-04.html#studio-4-generate-a-wbs-then-break-it",
+    "title": "Week 4 — Defining the Project",
+    "section": "Studio 4 · Generate a WBS, then break it",
+    "text": "Studio 4 · Generate a WBS, then break it\nBuild a three-level bicycle WBS yourself.\n\nAsk a model for another, import it into Smartsheet, and try to break both.\n\n\nBring: the Chapter 4 reading, a laptop, and access to Smartsheet and Gemini."
+  },
+  {
+    "objectID": "slides/week-04.html#sources",
+    "href": "slides/week-04.html#sources",
+    "title": "Week 4 — Defining the Project",
+    "section": "Sources",
+    "text": "Sources\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 4.\n\n\n\n\n\nExposition reworded; figures redrawn or newly constructed. The conference example is original to these course materials."
   },
   {
     "objectID": "weeks/week-01.html",

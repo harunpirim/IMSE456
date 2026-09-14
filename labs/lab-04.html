@@ -150,11 +150,204 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="gated">
-<p><span class="lock">Not posted yet</span></p>
-<p>Notes, slides, and the recording for this week are not published yet.</p>
+<div class="week-meta">
+<dl>
+<dt>
+Deliverable
+</dt>
+<dd>
+<strong>SA4</strong> — a <strong>one-page reconciliation</strong> plus your final WBS and screenshots, uploaded to Blackboard
+</dd>
+<dt>
+Studio
+</dt>
+<dd>
+Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback
+</dd>
+<dt>
+Session
+</dt>
+<dd>
+Build unaided, ask the model, import and test, reconcile, then save and upload — roughly 15, 15, 25, 20 and 10 minutes. Pacing guidance, not a bell.
+</dd>
+<dt>
+Tools
+</dt>
+<dd>
+Gemini and Smartsheet
+</dd>
+<dt>
+Example
+</dt>
+<dd>
+<a href="../files/e-slim-tablet-wbs-smartsheet-import.xlsx">E-Slim Tablet WBS workbook</a> — use it only to see the import format and hierarchy fields
+</dd>
+<dt>
+AI use
+</dt>
+<dd>
+<strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
+</dd>
+<dt>
+Week page
+</dt>
+<dd>
+<a href="../weeks/week-04.html">Week 4 — Defining the Project</a>
+</dd>
+</dl>
 </div>
-<p>See the <a href="../schedule.html">schedule</a> for everything that is live now.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>This is individual work.</strong> Build your first WBS before opening the model. The comparison is only useful if the first hierarchy records your own decomposition.</p>
+</div>
+</div>
+</div>
+<p>The project is to build <strong>one safe, rideable adult bicycle from commercially available components</strong>. The result includes assembly and a final safety check. It excludes designing a new bicycle frame, manufacturing components, retail packaging and accessories not required for safe operation.</p>
+<p>You will create the WBS twice: first yourself, then with a model. Smartsheet is where you test whether either hierarchy can actually support planning and control.</p>
+<section id="part-1-build-it-yourself-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-build-it-yourself-15-minutes">Part 1 · Build it yourself — 15 minutes</h3>
+<p>Do not open Gemini yet.</p>
+<p>On paper or in a blank document, create a deliverable-oriented WBS with three levels:</p>
+<ol type="1">
+<li><strong>Level 1:</strong> the complete bicycle project;</li>
+<li><strong>Level 2:</strong> the major deliverables that together make the bicycle complete; and</li>
+<li><strong>Level 3:</strong> manageable subdeliverables or work packages beneath each major deliverable.</li>
+</ol>
+<p>Give every element a numeric WBS code: <code>1</code>, <code>1.1</code>, <code>1.1.1</code> and so on.</p>
+<p>Run two checks before moving on:</p>
+<ul>
+<li><strong>Coverage:</strong> do the children add up to the parent without missing required work?</li>
+<li><strong>Manageability:</strong> could you estimate duration, cost and resources and name one owner for every lowest-level item?</li>
+</ul>
+<p>Circle one branch you are least confident about. Keep this version unchanged; you will need the comparison later.</p>
+</section>
+<section id="part-2-ask-the-model-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-ask-the-model-15-minutes">Part 2 · Ask the model — 15 minutes</h3>
+<p>Open Gemini and paste this prompt exactly as written:</p>
+<pre class="text"><code>Create a three-level, deliverable-oriented work breakdown structure for
+this project:
+
+Build one safe, rideable adult bicycle from commercially available
+components. Include assembly and a final safety check. Exclude designing
+or manufacturing components, retail packaging, and accessories not
+required for safe operation.
+
+Level 1 is the complete project. Level 2 contains the major deliverables.
+Level 3 contains manageable subdeliverables or work packages. Use numeric
+WBS codes. Do not organize the WBS by department or project phase.
+
+Return tab-separated columns in this order:
+Task Name, WBS, Indent Level, Parent WBS.
+
+Use Indent Level 0 for Level 1, 1 for Level 2, and 2 for Level 3. Preserve
+every WBS code as text. After the table, state any assumptions you made.</code></pre>
+<p>Keep the response and transcript link. Do not ask it to improve the WBS yet. A polished second response would hide what the first generation got wrong.</p>
+<p>Copy the model’s tab-separated table into Excel and save it as <code>bicycle-wbs-ai.xlsx</code>.</p>
+</section>
+<section id="part-3-import-it-then-try-to-break-both-versions-25-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-3-import-it-then-try-to-break-both-versions-25-minutes">Part 3 · Import it, then try to break both versions — 25 minutes</h3>
+<section id="import-the-models-wbs" class="level4">
+<h4 class="anchored" data-anchor-id="import-the-models-wbs">Import the model’s WBS</h4>
+<ol type="1">
+<li>In Smartsheet, select <strong>+ Create → Import → Microsoft Excel</strong>.</li>
+<li>Import <code>bicycle-wbs-ai.xlsx</code> and keep <strong>Task Name</strong> as the primary column.</li>
+<li>Set <strong>WBS</strong> and <strong>Parent WBS</strong> to <strong>Text/Number</strong> columns.</li>
+<li>Use <strong>Indent Level</strong> to build the hierarchy. Select a row and use <strong>Indent / Make child row</strong> until it is at the stated level.</li>
+<li>Collapse each parent and expand it again. Confirm the expected children move with it.</li>
+</ol>
+<p>Screenshot the completed hierarchy with all branches expanded.</p>
+</section>
+<section id="test-both-wbs-versions" class="level4">
+<h4 class="anchored" data-anchor-id="test-both-wbs-versions">Test both WBS versions</h4>
+<p>Use the same six tests on your unaided WBS and the model’s WBS.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Test</th>
+<th style="text-align: left;">Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Complete</strong></td>
+<td style="text-align: left;">Do the child elements cover everything required by the parent?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>No overlap</strong></td>
+<td style="text-align: left;">Is any work represented in two branches?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>One organizing rule</strong></td>
+<td style="text-align: left;">Are branches deliverables, rather than a mixture of components, departments, phases and actions?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Consistent parent-child logic</strong></td>
+<td style="text-align: left;">Is every child genuinely a part of its parent?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Manageable lowest level</strong></td>
+<td style="text-align: left;">Can the lowest-level item be estimated, budgeted, resourced and owned?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Acceptance visible</strong></td>
+<td style="text-align: left;">Is final integration and safety verification represented somewhere?</td>
+</tr>
+</tbody>
+</table>
+<p>Mark every failed test directly on each version. A WBS can look complete and still fail. Typical signals are a component appearing under two parents, verbs mixed with nouns at the same level, or a lowest-level item such as “wheels” that is too broad to assign without another decision.</p>
+<p>Now give the model its own output and ask one follow-up:</p>
+<pre class="text"><code>Audit this WBS against these six tests: complete coverage, no overlap,
+one organizing rule, valid parent-child logic, manageable lowest-level
+items, and visible final acceptance. Name every failure you can find.
+Do not rewrite the WBS.</code></pre>
+<p>Keep its audit. Check whether it notices the same failures you did.</p>
+</section>
+</section>
+<section id="part-4-reconcile-20-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-4-reconcile-20-minutes">Part 4 · Reconcile — 20 minutes</h3>
+<p>This is the graded part. Write one page answering all four prompts.</p>
+<ol type="1">
+<li><strong>The strongest branch in each version.</strong> Name one branch from your WBS and one from the model’s. Explain why each passes the six tests.</li>
+<li><strong>The most important failure in each version.</strong> Quote the affected WBS codes. State what would go wrong later in estimating, assignment or acceptance if the failure survived.</li>
+<li><strong>What the model’s audit missed.</strong> Identify one failure you found that it did not, or explain why its audit was complete. Do not invent a miss if there was none.</li>
+<li><strong>Your final decision.</strong> Describe the three most important changes you made when combining the two versions and why. At least one change must address the branch you circled in Part 1.</li>
+</ol>
+<p>Then revise the Smartsheet hierarchy into your final WBS. Keep the WBS, Parent WBS and Indent Level columns so the structure can be checked. Screenshot the final expanded hierarchy.</p>
+<p>The check is graded, not the number of rows. A short hierarchy that passes all six tests is stronger than a long hierarchy that merely looks detailed.</p>
+</section>
+<section id="part-5-save-it-then-upload-it" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-5-save-it-then-upload-it">Part 5 · Save it, then upload it</h3>
+<p>Check this first:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">your original unaided WBS, with the uncertain branch circled</label></li>
+<li><label><input type="checkbox">screenshot of the model’s imported WBS in Smartsheet</label></li>
+<li><label><input type="checkbox">both versions marked against all six tests</label></li>
+<li><label><input type="checkbox">one-page reconciliation answering all four prompts</label></li>
+<li><label><input type="checkbox">screenshot of the final expanded Smartsheet hierarchy</label></li>
+<li><label><input type="checkbox">AI acknowledgement with the tool name, transcript link, changes and what it got wrong</label></li>
+</ul>
+<p>Then two steps, in this order.</p>
+<p><strong>1 · Save your working files.</strong> Use the Google Drive or OneDrive supplied with your NDSU account. Make a folder <code>IMSE456/studio-04/</code> and save the Smartsheet export, <code>bicycle-wbs-ai.xlsx</code>, screenshots and reconciliation there.</p>
+<p><strong>2 · Upload one PDF to Blackboard</strong> before you leave the session. Put the one-page reconciliation first, followed by the original WBS, test marks and screenshots. Name it <code>SA4_yourlastname.pdf</code>.</p>
+</section>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>If Smartsheet will not let you in</strong>, tell me or the TAs in the session. Complete the two WBS versions and the six-test comparison in Excel, state which Smartsheet checks you could not run, and finish the hierarchy after access is restored.</p>
+</div>
+</div>
+</div>
 
 
 
