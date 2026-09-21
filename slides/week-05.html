@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.43">
+
+  <meta name="author" content="Harun Pirim">
+  <meta name="dcterms.date" content="2026-09-22">
+  <title>IMSE 456/656 – Week 5 — Estimating Project Times and Costs</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bc515f276a0ec74e345b33f60fe37fd6.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 5 — Estimating Project Times and Costs</h1>
+  <p class="subtitle">IMSE 456/656 · Larson Ch. 5</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Harun Pirim 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-09-22</p>
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<blockquote>
+<p>Plans are of little importance, but planning is essential.</p>
+</blockquote>
+<p><em>Larson &amp; Gray, Ch. 5 [1]. Exposition reworded; figures redrawn or newly constructed.</em></p>
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>LO 5-1</strong></td>
+<td>Why time and cost estimates support planning and control</td>
+</tr>
+<tr class="even">
+<td><strong>LO 5-2</strong></td>
+<td>Range, accuracy, precision and confidence</td>
+</tr>
+<tr class="odd">
+<td><strong>LO 5-3</strong></td>
+<td>Practical guidelines for estimating</td>
+</tr>
+<tr class="even">
+<td><strong>LO 5-4</strong></td>
+<td>Top-down, bottom-up and hybrid methods</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="learning-objectives-1" class="slide level2">
+<h2>Learning objectives</h2>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td><strong>LO 5-5</strong></td>
+<td>Direct cost and overhead classifications</td>
+</tr>
+<tr class="even">
+<td><strong>LO 5-6</strong></td>
+<td>Reusable estimating databases</td>
+</tr>
+<tr class="odd">
+<td><strong>LO 5-7</strong></td>
+<td>Megaproject estimates and the outside view</td>
+</tr>
+<tr class="even">
+<td><strong>LO 5-8</strong></td>
+<td>White elephants</td>
+</tr>
+<tr class="odd">
+<td><strong>LO A5-1</strong></td>
+<td>Learning curves for repeated work</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<section id="lo-5-1-estimates-support-decisions" class="title-slide slide level1 center">
+<h1>LO 5-1 · Estimates support decisions</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="from-the-wbs-to-a-plan" class="slide level2">
+<h2>From the WBS to a plan</h2>
+<p>Week 4 defined work packages that could be estimated, budgeted, resourced and owned.</p>
+<div class="fragment">
+<p>Week 5 supplies the time, effort and cost.</p>
+</div>
+<div class="fragment">
+<p>Without credible estimates, the WBS remains a classification of work rather than a plan.</p>
+</div>
+</section>
+<section id="what-estimates-make-possible" class="slide level2">
+<h2>What estimates make possible</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Before approval</th>
+<th>During delivery</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test whether expected benefits justify the cost</td>
+<td>Sequence and schedule work</td>
+</tr>
+<tr class="even">
+<td>Compare alternatives</td>
+<td>Plan people, equipment and materials</td>
+</tr>
+<tr class="odd">
+<td>Forecast funding and cash needs</td>
+<td>Measure progress against a baseline</td>
+</tr>
+<tr class="even">
+<td>Set an authorization boundary</td>
+<td>Forecast the likely finish</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-planning-horizon" class="slide level2">
+<h2>The planning horizon</h2>
+<figure>
+<svg viewbox="0 0 760 250" role="img" aria-labelledby="slide-horizon-title" style="width:100%;height:auto">
+<title id="slide-horizon-title">
+Estimate ranges widen as the planning horizon becomes more distant
+</title>
+<defs> <marker id="slide-hz-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <path d="M95,125 H675" fill="none" stroke="#0F5A4B" stroke-width="2" marker-end="url(#slide-hz-ar)"></path> <path d="M120,110 L640,45 L640,205 L120,140 Z" fill="#0F5A4B" opacity="0.11" stroke="#0F5A4B" stroke-width="1.4"></path> <g fill="currentColor" font-size="15"> <text x="90" y="225">near-term work</text><text x="585" y="225">distant work</text> <text x="145" y="88">narrower range</text><text x="525" y="30">wider range</text> </g> <text x="380" y="244" fill="#0F5A4B" font-size="14" text-anchor="middle">time and unresolved assumptions</text>
+</svg>
+</figure>
+
+<aside><div>
+<p>Constructed from the planning-horizon discussion in Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="an-estimate-is-a-decision-input" class="slide level2">
+<h2>An estimate is a decision input</h2>
+<p>An estimate states what the team expects under defined conditions.</p>
+<div class="fragment">
+<p>It does not promise that uncertainty has disappeared.</p>
+</div>
+<div class="fragment">
+<p>A decision maker needs the number, the evidence, the assumptions and the possible outcomes.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-5-2-four-dimensions-of-an-estimate" class="title-slide slide level1 center">
+<h1>LO 5-2 · Four dimensions of an estimate</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="four-dimensions-answer-four-questions" class="slide level2">
+<h2>Four dimensions answer four questions</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Question</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Range</strong></td>
+<td>What outcomes could occur?</td>
+<td>10 to 15 days</td>
+</tr>
+<tr class="even">
+<td><strong>Accuracy</strong></td>
+<td>How close was the estimate to the outcome?</td>
+<td>Estimated $2,500, actual $2,500</td>
+</tr>
+<tr class="odd">
+<td><strong>Precision</strong></td>
+<td>How exact is the statement?</td>
+<td>15 days instead of by month-end</td>
+</tr>
+<tr class="even">
+<td><strong>Confidence</strong></td>
+<td>How much trust do we place in it?</td>
+<td>90% chance of finishing by Friday</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="range-states-possible-outcomes" class="slide level2">
+<h2>Range states possible outcomes</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Wider range</th>
+<th>Narrower range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 to 15 days</td>
+<td>11 to 13 days</td>
+</tr>
+<tr class="even">
+<td>$2,000 to $3,000</td>
+<td>$2,400 to $2,600</td>
+</tr>
+<tr class="odd">
+<td>Signals greater uncertainty</td>
+<td>Requires stronger evidence</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>For a low estimate of 4 days and a high estimate of 12 days:</p>
+<p><span class="math display">\[
+\text{range width}=12-4=8\text{ days}
+\]</span></p>
+</div>
+</section>
+<section id="accuracy-compares-estimate-with-outcome" class="slide level2">
+<h2>Accuracy compares estimate with outcome</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Estimate</th>
+<th style="text-align: right;">Outcome</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10 to 15 days</td>
+<td style="text-align: right;">12 days</td>
+<td>Accurate</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10 to 15 days</td>
+<td style="text-align: right;">9 days</td>
+<td>Inaccurate</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Finishing early can still expose an inaccurate estimate when the result sits outside the stated range.</p>
+</div>
+</section>
+<section id="precision-states-exactness" class="slide level2">
+<h2>Precision states exactness</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Less precise</th>
+<th>More precise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>By the end of the month</td>
+<td>15 days</td>
+</tr>
+<tr class="even">
+<td>Less than $1,000</td>
+<td>$850</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>A precise estimate can still be wrong.</p>
+</div>
+<div class="fragment">
+<p>A less precise range can be more useful when uncertainty remains high.</p>
+</div>
+</section>
+<section id="confidence-states-trust" class="slide level2">
+<h2>Confidence states trust</h2>
+<p><strong>90% chance the work finishes by Friday</strong></p>
+<div class="fragment">
+<p><strong>Less than 50% chance the work costs under $2,000</strong></p>
+</div>
+<div class="fragment">
+<p>The confidence claim must name the outcome and rest on evidence such as comparable work, historical error, simulation or informed judgment.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-5-3-conditions-for-better-estimates" class="title-slide slide level1 center">
+<h1>LO 5-3 · Conditions for better estimates</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="what-shapes-estimate-quality" class="slide level2">
+<h2>What shapes estimate quality</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Project conditions</th>
+<th>Human and organizational conditions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Planning horizon</td>
+<td>Experience and skill</td>
+</tr>
+<tr class="even">
+<td>Complexity and interfaces</td>
+<td>Optimism and incentives</td>
+</tr>
+<tr class="odd">
+<td>New technology</td>
+<td>Private padding</td>
+</tr>
+<tr class="even">
+<td>Scope clarity</td>
+<td>Organizational culture</td>
+</tr>
+<tr class="odd">
+<td>Team structure and availability</td>
+<td>Pressure to suppress bad news</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="responsibility-and-evidence" class="slide level2">
+<h2>Responsibility and evidence</h2>
+<ol type="1">
+<li>Put responsibility near the work.</li>
+<li>Use more than one informed view.</li>
+<li>State normal operating conditions.</li>
+<li>Use consistent units.</li>
+</ol>
+<div class="fragment">
+<p>Senior review can challenge assumptions. Authority does not replace task knowledge.</p>
+</div>
+</section>
+<section id="independence-contingency-and-risk" class="slide level2">
+<h2>Independence, contingency and risk</h2>
+<ol start="5" type="1">
+<li>Estimate each work package independently.</li>
+<li>Keep contingency visible.</li>
+<li>Add risk assessment before commitment.</li>
+</ol>
+<div class="fragment">
+<p>Hidden reserves destroy the relationship between a risk and the allowance created for it.</p>
+</div>
+</section>
+<section id="effort-and-duration-answer-different-questions" class="slide level2">
+<h2>Effort and duration answer different questions</h2>
+<p><strong>40 labor hours</strong> describes effort.</p>
+<div class="fragment">
+<p><strong>5 working days</strong> describes elapsed project time under staffing and calendar assumptions.</p>
+</div>
+<div class="fragment">
+<p>Two people do not automatically complete forty hours of effort in two and a half days.</p>
+</div>
+</section>
+<section id="a-useful-estimate-record" class="slide level2">
+<h2>A useful estimate record</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Record</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identity</td>
+<td>Scope, WBS code, estimator and date</td>
+</tr>
+<tr class="even">
+<td>Method</td>
+<td>Top-down, bottom-up or hybrid</td>
+</tr>
+<tr class="odd">
+<td>Values</td>
+<td>Low, likely and high values with units</td>
+</tr>
+<tr class="even">
+<td>Conditions</td>
+<td>Assumptions, exclusions and normal conditions</td>
+</tr>
+<tr class="odd">
+<td>Risk</td>
+<td>Drivers, contingency and source of rates</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="lo-5-4-method-follows-the-decision" class="title-slide slide level1 center">
+<h1>LO 5-4 · Method follows the decision</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="context-decides-the-method" class="slide level2">
+<h2>Context decides the method</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th style="text-align: center;">Top-down</th>
+<th style="text-align: center;">Bottom-up</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Strategic decision making</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td>Cost and time are critical commitments</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td>High uncertainty</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td>Internal, small project</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td>Fixed-price contract</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="even">
+<td>Customer requires detail</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td>Unstable scope</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="top-down-methods-start-with-the-whole" class="slide level2">
+<h2>Top-down methods start with the whole</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Consensus</strong></td>
+<td>Experts discuss and agree on one estimate</td>
+</tr>
+<tr class="even">
+<td><strong>Delphi</strong></td>
+<td>Experts estimate independently through anonymous rounds</td>
+</tr>
+<tr class="odd">
+<td><strong>Ratio</strong></td>
+<td>A historical relationship scales to the new project</td>
+</tr>
+<tr class="even">
+<td><strong>Apportion</strong></td>
+<td>A total is distributed through the WBS</td>
+</tr>
+<tr class="odd">
+<td><strong>Function points</strong></td>
+<td>System functions become a size estimate</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="consensus-and-delphi" class="slide level2">
+<h2>Consensus and Delphi</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Consensus</th>
+<th>Delphi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open discussion</td>
+<td>Independent estimates</td>
+</tr>
+<tr class="even">
+<td>Fast exchange of evidence</td>
+<td>Anonymous feedback and revision</td>
+</tr>
+<tr class="odd">
+<td>Dominant voices can pull the result</td>
+<td>Expertise still determines quality</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ratio-estimating" class="slide level2">
+<h2>Ratio estimating</h2>
+<p>If comparable conferences cost about <strong>$180 per attendee</strong>, a rough estimate for 300 attendees is:</p>
+<p><span class="math display">\[
+300\text{ attendees}\times\$180/\text{attendee}=\$54{,}000
+\]</span></p>
+<div class="fragment">
+<p>The relationship must come from comparable work and use consistent units.</p>
+</div>
+</section>
+<section id="apportioning-a-total-through-the-wbs" class="slide level2">
+<h2>Apportioning a total through the WBS</h2>
+<figure>
+<svg viewbox="0 0 760 310" role="img" aria-labelledby="slide-apportion-title" style="width:100%;height:auto">
+<title id="slide-apportion-title">
+A total project estimate is apportioned across major WBS branches and into work packages
+</title>
+<g fill="none" stroke="#0F5A4B" stroke-width="1.4"> <path d="M380,72 V105 M125,105 H635 M125,105 V135 M300,105 V135 M470,105 V135 M635,105 V135"></path> <path d="M125,195 V225 M80,225 H170 M80,225 V245 M170,225 V245"></path> </g> <g fill="white" stroke="currentColor" stroke-width="1.3"> <rect x="270" y="25" width="220" height="48" rx="4"></rect> <rect x="45" y="135" width="160" height="60" rx="4"></rect><rect x="220" y="135" width="160" height="60" rx="4"></rect> <rect x="390" y="135" width="160" height="60" rx="4"></rect><rect x="565" y="135" width="140" height="60" rx="4"></rect> <rect x="25" y="245" width="110" height="45" rx="4"></rect><rect x="145" y="245" width="110" height="45" rx="4"></rect> </g> <g fill="currentColor" font-size="14" text-anchor="middle"> <text x="380" y="47" font-weight="600">Project estimate</text><text x="380" y="64">$500,000</text> <text x="125" y="160" font-weight="600">Design</text><text x="125" y="181">20% · $100,000</text> <text x="300" y="160" font-weight="600">Program</text><text x="300" y="181">30% · $150,000</text> <text x="470" y="160" font-weight="600">Test</text><text x="470" y="181">40% · $200,000</text> <text x="635" y="160" font-weight="600">Other</text><text x="635" y="181">10% · $50,000</text> <text x="80" y="273">D-1 · 10%</text><text x="200" y="273">D-2 · 10%</text> </g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Simplified redrawing of Larson &amp; Gray, Ch. 5, Figure 5.1</p>
+</div></aside></section>
+<section id="function-points" class="slide level2">
+<h2>Function points</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Element</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;">Average</th>
+<th style="text-align: right;">High</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inputs</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>Outputs</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td>Inquiries</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td>Files</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td>Interfaces</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>The weighted count becomes effort only after it is paired with historical productivity.</p>
+</div>
+</section>
+<section id="effort-does-not-determine-duration" class="slide level2">
+<h2>Effort does not determine duration</h2>
+<p>If five function points normally require one person-month:</p>
+<p><span class="math display">\[
+500\text{ function points}\div5=100\text{ person-months}
+\]</span></p>
+<div class="fragment">
+<p>The result does not mean that 100 people can finish in one month. Work may be sequential, and coordination grows with team size.</p>
+</div>
+</section>
+<section id="bottom-up-methods-start-with-work-packages" class="slide level2">
+<h2>Bottom-up methods start with work packages</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Template</strong></td>
+<td>Adjust a completed, comparable work package</td>
+</tr>
+<tr class="even">
+<td><strong>Parametric</strong></td>
+<td>Multiply a task quantity by a measured rate</td>
+</tr>
+<tr class="odd">
+<td><strong>Range</strong></td>
+<td>Record low, likely and high values</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Bottom-up estimates require stable detail but support budgeting, scheduling, resources and accountability.</p>
+</div>
+</section>
+<section id="template-estimating" class="slide level2">
+<h2>Template estimating</h2>
+<p>Reuse grows stronger when the prior record contains:</p>
+<ul>
+<li>scope and conditions;</li>
+<li>the original estimate and method;</li>
+<li>actual duration, effort and cost; and</li>
+<li>changes and realized risks.</li>
+</ul>
+<div class="fragment">
+<p>Copy the evidence, not the old number alone.</p>
+</div>
+</section>
+<section id="parametric-estimating" class="slide level2">
+<h2>Parametric estimating</h2>
+<p><span class="math display">\[
+120\text{ screens}\times0.75\text{ labor hours per screen}=90\text{ labor hours}
+\]</span></p>
+<div class="fragment">
+<p>Validate the unit, the rate and the comparability of the work before multiplying.</p>
+</div>
+</section>
+<section id="range-estimating" class="slide level2">
+<h2>Range estimating</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>WBS</th>
+<th>Work package</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;">Likely</th>
+<th style="text-align: right;">High</th>
+<th style="text-align: right;">Width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.2.1</td>
+<td>Select venue</td>
+<td style="text-align: right;">3 d</td>
+<td style="text-align: right;">5 d</td>
+<td style="text-align: right;">8 d</td>
+<td style="text-align: right;">5 d</td>
+</tr>
+<tr class="even">
+<td>1.3.1</td>
+<td>Configure registration</td>
+<td style="text-align: right;">4 d</td>
+<td style="text-align: right;">6 d</td>
+<td style="text-align: right;">10 d</td>
+<td style="text-align: right;">6 d</td>
+</tr>
+<tr class="odd">
+<td>1.4.1</td>
+<td>Confirm speakers</td>
+<td style="text-align: right;">6 d</td>
+<td style="text-align: right;">10 d</td>
+<td style="text-align: right;">18 d</td>
+<td style="text-align: right;">12 d</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>The likely value is the most plausible outcome, not automatically the arithmetic midpoint.</p>
+</div>
+</section>
+<section id="phase-estimating" class="slide level2">
+<h2>Phase estimating</h2>
+<figure>
+<svg viewbox="0 0 760 330" role="img" aria-labelledby="slide-phase-title" style="width:100%;height:auto">
+<title id="slide-phase-title">
+Detailed estimating advances one phase at a time while later phases retain macro estimates
+</title>
+<g fill="none" stroke="currentColor" stroke-width="1.2"> <rect x="90" y="50" width="600" height="220"></rect> <path d="M210,50 V270 M330,50 V270 M450,50 V270 M570,50 V270"></path> <path d="M90,94 H690 M90,138 H690 M90,182 H690 M90,226 H690"></path> </g> <g fill="currentColor" font-size="13" text-anchor="middle"> <text x="150" y="38">Need</text><text x="270" y="38">Specifications</text><text x="390" y="38">Design</text><text x="510" y="38">Produce</text><text x="630" y="38">Deliver</text> </g> <g font-size="12.5" text-anchor="middle"> <rect x="95" y="101" width="110" height="30" fill="#0F5A4B" opacity="0.16"></rect><text x="150" y="121">detailed</text> <rect x="215" y="101" width="465" height="30" fill="#0F5A4B" opacity="0.07"></rect><text x="445" y="121">macro estimate</text> <rect x="215" y="145" width="110" height="30" fill="#0F5A4B" opacity="0.16"></rect><text x="270" y="165">detailed</text> <rect x="335" y="145" width="345" height="30" fill="#0F5A4B" opacity="0.07"></rect><text x="505" y="165">macro estimate</text> <rect x="335" y="189" width="110" height="30" fill="#0F5A4B" opacity="0.16"></rect><text x="390" y="209">detailed</text> <rect x="455" y="189" width="225" height="30" fill="#0F5A4B" opacity="0.07"></rect><text x="565" y="209">macro estimate</text> </g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Simplified redrawing of Larson &amp; Gray, Ch. 5, Figure 5.3</p>
+</div></aside></section>
+<section id="phase-estimating-is-a-hybrid" class="slide level2">
+<h2>Phase estimating is a hybrid</h2>
+<p>The next phase receives a detailed estimate.</p>
+<div class="fragment">
+<p>Later phases retain a rough macro estimate.</p>
+</div>
+<div class="fragment">
+<p>Each completed phase supplies evidence for the next detailed estimate and revises the remainder.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-5-5-cost-classification" class="title-slide slide level1 center">
+<h1>LO 5-5 · Cost classification</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="three-cost-categories" class="slide level2">
+<h2>Three cost categories</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Meaning</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Direct cost</strong></td>
+<td>Traceable to one work package</td>
+<td>Task labor, materials, equipment rental</td>
+</tr>
+<tr class="even">
+<td><strong>Direct project overhead</strong></td>
+<td>Supports the project as a whole</td>
+<td>Project manager, temporary project office</td>
+</tr>
+<tr class="odd">
+<td><strong>G&amp;A overhead</strong></td>
+<td>Supports the organization</td>
+<td>HR, finance, legal, facilities</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="classification-follows-causality" class="slide level2">
+<h2>Classification follows causality</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>Likely classification</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conference catering</td>
+<td>Direct</td>
+<td>Traceable to the event deliverable</td>
+</tr>
+<tr class="even">
+<td>Project manager salary</td>
+<td>Project overhead</td>
+<td>Supports the whole project</td>
+</tr>
+<tr class="odd">
+<td>Corporate HR service</td>
+<td>G&amp;A overhead</td>
+<td>Supports many projects and operations</td>
+</tr>
+<tr class="even">
+<td>Registration laptop rental</td>
+<td>Direct</td>
+<td>Traceable to a work package</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>The same object can receive a different classification under another organization’s cost system.</p>
+</div>
+</section>
+<section id="three-views-of-project-cost" class="slide level2">
+<h2>Three views of project cost</h2>
+<figure>
+<svg viewbox="0 0 760 360" role="img" aria-labelledby="slide-cost-title" style="width:100%;height:auto">
+<title id="slide-cost-title">
+Committed cost rises before actual cost and the scheduled budget, while all approach the same total
+</title>
+<g stroke="currentColor" stroke-width="1.3" fill="none"><path d="M90,30 V300 H690"></path></g> <g fill="none" stroke="#0F5A4B" stroke-width="3"> <path d="M95,292 C180,260 230,205 310,135 S455,55 680,45"></path> <path d="M95,296 C200,285 270,240 355,185 S505,85 680,47" stroke-dasharray="10 7"></path> <path d="M95,298 C220,295 330,265 420,205 S560,90 680,50" stroke-dasharray="3 7"></path> </g> <g fill="currentColor" font-size="13"> <text x="115" y="326">project duration</text><text x="25" y="175" transform="rotate(-90 25 175)">cost</text> <line x1="500" y1="235" x2="545" y2="235" stroke="#0F5A4B" stroke-width="3"></line><text x="555" y="240">committed cost</text> <line x1="500" y1="260" x2="545" y2="260" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="10 7"></line><text x="555" y="265">actual cost</text> <line x1="500" y1="285" x2="545" y2="285" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="3 7"></line><text x="555" y="290">scheduled budget</text> </g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Concept redrawn from Larson &amp; Gray, Ch. 5, Figure 5.6</p>
+</div></aside></section>
+<section id="commitment-can-lead-the-invoice" class="slide level2">
+<h2>Commitment can lead the invoice</h2>
+<p><strong>Scheduled budget</strong> shows what the baseline planned to spend.</p>
+<div class="fragment">
+<p><strong>Actual cost</strong> shows what the accounting system has recorded.</p>
+</div>
+<div class="fragment">
+<p><strong>Committed cost</strong> includes contracts and purchase orders even when the invoice has not arrived.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-5-6-estimating-memory" class="title-slide slide level1 center">
+<h1>LO 5-6 · Estimating memory</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="what-the-database-preserves" class="slide level2">
+<h2>What the database preserves</h2>
+<ul>
+<li>WBS code and completed scope</li>
+<li>original estimate, range and method</li>
+<li>estimator, date, units and assumptions</li>
+<li>actual duration, labor, equipment and cost</li>
+<li>changes in conditions or scope</li>
+<li>realized risks and contingency used</li>
+<li>reusable productivity measures</li>
+</ul>
+</section>
+<section id="from-actuals-to-the-next-estimate" class="slide level2">
+<h2>From actuals to the next estimate</h2>
+<figure>
+<svg viewbox="0 0 760 290" role="img" aria-labelledby="slide-db-title" style="width:100%;height:auto">
+<title id="slide-db-title">
+Estimates and actual outcomes cycle back into templates, rates and future ranges
+</title>
+<defs><marker id="slide-db-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path></marker></defs> <g fill="none" stroke="#0F5A4B" stroke-width="1.7" marker-end="url(#slide-db-ar)"> <path d="M180,120 H250"></path><path d="M390,120 H460"></path><path d="M600,150 C600,240 160,240 160,170"></path> </g> <g stroke="currentColor" stroke-width="1.3"> <rect x="35" y="85" width="145" height="70" rx="4" fill="white"></rect><rect x="250" y="85" width="140" height="70" rx="4" fill="white"></rect> <rect x="460" y="85" width="140" height="70" rx="4" fill="white"></rect><rect x="605" y="85" width="120" height="70" rx="4" fill="#0F5A4B" opacity="0.12"></rect> </g> <g fill="currentColor" font-size="14" text-anchor="middle"> <text x="108" y="112" font-weight="600">Estimate</text><text x="108" y="134">method · range · assumptions</text> <text x="320" y="112" font-weight="600">Execute</text><text x="320" y="134">conditions · changes</text> <text x="530" y="112" font-weight="600">Compare</text><text x="530" y="134">estimate · actual</text> <text x="665" y="112" font-weight="600">Update</text><text x="665" y="134">rates · templates</text> </g>
+</svg>
+</figure>
+
+<aside><div>
+<p>Process constructed from Larson &amp; Gray, Ch. 5, Figure 5.7</p>
+</div></aside></section>
+<section id="scope-and-conditions-travel-with-the-number" class="slide level2">
+<h2>Scope and conditions travel with the number</h2>
+<p><code>Registration system: 120 hours</code> cannot support a new estimate by itself.</p>
+<div class="fragment">
+<p>The next estimator also needs the included functions, platform, team, operating conditions and changes during execution.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-5-7-the-outside-view" class="title-slide slide level1 center">
+<h1>LO 5-7 · The outside view</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="why-megaproject-estimates-fail" class="slide level2">
+<h2>Why megaproject estimates fail</h2>
+<ul>
+<li>Long horizons multiply unresolved assumptions.</li>
+<li>Novel interfaces make omissions more likely.</li>
+<li>Optimism favors a successful internal story.</li>
+<li>Strategic understatement can improve the chance of approval.</li>
+<li>Sunk costs make later cancellation politically difficult.</li>
+</ul>
+</section>
+<section id="reference-class-forecasting" class="slide level2">
+<h2>Reference class forecasting</h2>
+<ol type="1">
+<li>Select a class of comparable completed projects.</li>
+<li>Build a distribution of actual outcomes.</li>
+<li>Adjust the proposed forecast using that distribution.</li>
+</ol>
+<div class="fragment">
+<p>The outside view asks what happened to projects like this one.</p>
+</div>
+</section>
+<section id="a-reference-class-uplift" class="slide level2">
+<h2>A reference-class uplift</h2>
+<p>If comparable tunnels averaged a 34% overrun:</p>
+<p><span class="math display">\[
+\$100\text{ million}\times1.34=\$134\text{ million}
+\]</span></p>
+<div class="fragment">
+<p>The uplift changes the burden of proof. Advocates need evidence before assuming the current project will outperform its reference class.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-5-8-white-elephants" class="title-slide slide level1 center">
+<h1>LO 5-8 · White elephants</h1>
+
+<aside><div>
+<p>Following Larson &amp; Gray, Ch. 5</p>
+</div></aside></section>
+<section id="signals" class="slide level2">
+<h2>Signals</h2>
+<ul>
+<li>Benefits have fallen below the original case.</li>
+<li>Operating and maintenance costs require continuing subsidy.</li>
+<li>Prestige or political commitment replaces evidence.</li>
+<li>Sunk cost is used to justify future spending.</li>
+<li>No credible stop, exit or repurpose rule exists.</li>
+</ul>
+</section>
+<section id="the-forward-looking-decision" class="slide level2">
+<h2>The forward-looking decision</h2>
+<blockquote>
+<p>With the evidence available today, would we spend the remaining money to obtain the remaining benefit?</p>
+</blockquote>
+<div class="fragment">
+<p>Money already spent explains how the project reached the decision point. It does not justify the next dollar.</p>
+</div>
+</section></section>
+<section>
+<section id="lo-a5-1-learning-curves" class="title-slide slide level1 center">
+<h1>LO A5-1 · Learning curves</h1>
+
+<aside><div>
+<p>Following the Chapter 5 appendix in Larson &amp; Gray [1]</p>
+</div></aside></section>
+<section id="repetition-changes-the-estimate" class="slide level2">
+<h2>Repetition changes the estimate</h2>
+<p><span class="math display">\[
+T_n=T_1n^b
+\]</span></p>
+<p>where <span class="math inline">\(T_n\)</span> is the time for the <span class="math inline">\(n\)</span>th unit and <span class="math inline">\(b=\ln(r)/\ln(2)\)</span> for learning rate <span class="math inline">\(r\)</span>.</p>
+<div class="fragment">
+<p>With an 80% learning rate and a 10-hour first unit, the second takes 8 hours and the fourth takes 6.4 hours under the unit-time model.</p>
+</div>
+</section>
+<section id="the-limit-of-the-curve" class="slide level2">
+<h2>The limit of the curve</h2>
+<p>Learning curves fit genuinely repeated work under comparable conditions.</p>
+<div class="fragment">
+<p>They do not justify reducing the estimate for unique design work.</p>
+</div>
+<div class="fragment">
+<p>A changed process or technology may reset the curve.</p>
+</div>
+</section></section>
+<section id="the-chain" class="title-slide slide level1 center">
+<h1>The chain</h1>
+<ol type="1">
+<li>Define the work.</li>
+<li>Choose a method that fits the decision.</li>
+<li>State units, range and confidence.</li>
+<li>Keep assumptions and contingency visible.</li>
+<li>Classify costs consistently.</li>
+<li>Return actual results to the estimating database.</li>
+<li>Use the outside view for large commitments.</li>
+</ol>
+</section>
+
+<section>
+<section id="thursday" class="title-slide slide level1 center">
+<h1>Thursday</h1>
+
+</section>
+<section id="studio-5-build-and-challenge-an-estimate" class="slide level2">
+<h2>Studio 5 · Build and challenge an estimate</h2>
+<p>Import the conference workbook into Smartsheet and reconstruct its hierarchy.</p>
+<div class="fragment">
+<p>Apply the formulas, strengthen weak assumptions and estimate one high-risk work package with a second method.</p>
+</div>
+<div class="fragment">
+<p>Compare the revised bottom-up total with the sponsor’s <strong>$80,000 cap</strong>.</p>
+</div>
+</section>
+<section id="the-starting-case" class="slide level2">
+<h2>The starting case</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>View</th>
+<th style="text-align: right;">Amount</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sponsor cap</td>
+<td style="text-align: right;">$80,000</td>
+<td>Top-down decision threshold</td>
+</tr>
+<tr class="even">
+<td>Starting estimate</td>
+<td style="text-align: right;">$82,511</td>
+<td>Bottom-up work-package total</td>
+</tr>
+<tr class="odd">
+<td>Variance</td>
+<td style="text-align: right;">$2,511 over</td>
+<td>Evidence must support the next action</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>A smaller number is not automatically a better estimate.</p>
+</div>
+</section>
+<section id="studio-submission" class="slide level2">
+<h2>Studio submission</h2>
+<ul>
+<li>working Smartsheet hierarchy and formulas;</li>
+<li>three strengthened assumptions;</li>
+<li>one high-risk work package estimated with a second method;</li>
+<li>one evidence screenshot;</li>
+<li>a recommendation of no more than 100 words; and</li>
+<li>the required AI acknowledgement.</li>
+</ul>
+</section>
+<section id="sources" class="slide level2">
+<h2>Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 5 and Appendix 5.1.</li>
+<li>Smartsheet Learning Center. <em>Import file data to new sheets</em>.</li>
+<li>Smartsheet Learning Center. <em>Hierarchy: indent or outdent rows</em>.</li>
+</ol>
+
+
+
+<aside><div>
+<p>The conference examples are original to these course materials.</p>
+</div></aside></section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>IMSE 456/656 · Program and Project Management · NDSU</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/harunpirim\.github\.io\/IMSE456");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
