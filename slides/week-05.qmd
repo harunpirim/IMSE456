@@ -1,0 +1,671 @@
+---
+title: "Week 5 — Estimating Project Times and Costs"
+subtitle: "IMSE 456/656 · Larson Ch. 5"
+author: Harun Pirim
+date: "2026-09-22"
+week: 5
+release: "2026-09-21"
+---
+
+## {.center}
+
+> Plans are of little importance, but planning is essential.
+
+*Larson & Gray, Ch. 5 [1]. Exposition reworded; figures redrawn or newly constructed.*
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 5-1** | Why time and cost estimates support planning and control |
+| **LO 5-2** | Range, accuracy, precision and confidence |
+| **LO 5-3** | Practical guidelines for estimating |
+| **LO 5-4** | Top-down, bottom-up and hybrid methods |
+
+## Learning objectives
+
+| | |
+|---|---|
+| **LO 5-5** | Direct cost and overhead classifications |
+| **LO 5-6** | Reusable estimating databases |
+| **LO 5-7** | Megaproject estimates and the outside view |
+| **LO 5-8** | White elephants |
+| **LO A5-1** | Learning curves for repeated work |
+
+# LO 5-1 · Estimates support decisions
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## From the WBS to a plan
+
+Week 4 defined work packages that could be estimated, budgeted, resourced and owned.
+
+. . .
+
+Week 5 supplies the time, effort and cost.
+
+. . .
+
+Without credible estimates, the WBS remains a classification of work rather than a plan.
+
+## What estimates make possible
+
+| Before approval | During delivery |
+|---|---|
+| Test whether expected benefits justify the cost | Sequence and schedule work |
+| Compare alternatives | Plan people, equipment and materials |
+| Forecast funding and cash needs | Measure progress against a baseline |
+| Set an authorization boundary | Forecast the likely finish |
+
+## The planning horizon
+
+<figure>
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="slide-horizon-title" style="width:100%;height:auto">
+  <title id="slide-horizon-title">Estimate ranges widen as the planning horizon becomes more distant</title>
+  <defs>
+    <marker id="slide-hz-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <path d="M95,125 H675" fill="none" stroke="#0F5A4B" stroke-width="2" marker-end="url(#slide-hz-ar)"/>
+  <path d="M120,110 L640,45 L640,205 L120,140 Z" fill="#0F5A4B" opacity="0.11" stroke="#0F5A4B" stroke-width="1.4"/>
+  <g fill="currentColor" font-size="15">
+    <text x="90" y="225">near-term work</text><text x="585" y="225">distant work</text>
+    <text x="145" y="88">narrower range</text><text x="525" y="30">wider range</text>
+  </g>
+  <text x="380" y="244" fill="#0F5A4B" font-size="14" text-anchor="middle">time and unresolved assumptions</text>
+</svg>
+</figure>
+
+::: {.aside}
+Constructed from the planning-horizon discussion in Larson & Gray, Ch. 5
+:::
+
+## An estimate is a decision input
+
+An estimate states what the team expects under defined conditions.
+
+. . .
+
+It does not promise that uncertainty has disappeared.
+
+. . .
+
+A decision maker needs the number, the evidence, the assumptions and the possible outcomes.
+
+# LO 5-2 · Four dimensions of an estimate
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## Four dimensions answer four questions
+
+| Dimension | Question | Example |
+|---|---|---|
+| **Range** | What outcomes could occur? | 10 to 15 days |
+| **Accuracy** | How close was the estimate to the outcome? | Estimated $2,500, actual $2,500 |
+| **Precision** | How exact is the statement? | 15 days instead of by month-end |
+| **Confidence** | How much trust do we place in it? | 90% chance of finishing by Friday |
+
+## Range states possible outcomes
+
+| Wider range | Narrower range |
+|---|---|
+| 10 to 15 days | 11 to 13 days |
+| $2,000 to $3,000 | $2,400 to $2,600 |
+| Signals greater uncertainty | Requires stronger evidence |
+
+. . .
+
+For a low estimate of 4 days and a high estimate of 12 days:
+
+$$
+\text{range width}=12-4=8\text{ days}
+$$
+
+## Accuracy compares estimate with outcome
+
+| Estimate | Outcome | Assessment |
+|---:|---:|---|
+| 10 to 15 days | 12 days | Accurate |
+| 10 to 15 days | 9 days | Inaccurate |
+
+. . .
+
+Finishing early can still expose an inaccurate estimate when the result sits outside the stated range.
+
+## Precision states exactness
+
+| Less precise | More precise |
+|---|---|
+| By the end of the month | 15 days |
+| Less than $1,000 | $850 |
+
+. . .
+
+A precise estimate can still be wrong.
+
+. . .
+
+A less precise range can be more useful when uncertainty remains high.
+
+## Confidence states trust
+
+**90% chance the work finishes by Friday**
+
+. . .
+
+**Less than 50% chance the work costs under $2,000**
+
+. . .
+
+The confidence claim must name the outcome and rest on evidence such as comparable work, historical error, simulation or informed judgment.
+
+# LO 5-3 · Conditions for better estimates
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## What shapes estimate quality
+
+| Project conditions | Human and organizational conditions |
+|---|---|
+| Planning horizon | Experience and skill |
+| Complexity and interfaces | Optimism and incentives |
+| New technology | Private padding |
+| Scope clarity | Organizational culture |
+| Team structure and availability | Pressure to suppress bad news |
+
+## Responsibility and evidence
+
+1. Put responsibility near the work.
+2. Use more than one informed view.
+3. State normal operating conditions.
+4. Use consistent units.
+
+. . .
+
+Senior review can challenge assumptions. Authority does not replace task knowledge.
+
+## Independence, contingency and risk
+
+5. Estimate each work package independently.
+6. Keep contingency visible.
+7. Add risk assessment before commitment.
+
+. . .
+
+Hidden reserves destroy the relationship between a risk and the allowance created for it.
+
+## Effort and duration answer different questions
+
+**40 labor hours** describes effort.
+
+. . .
+
+**5 working days** describes elapsed project time under staffing and calendar assumptions.
+
+. . .
+
+Two people do not automatically complete forty hours of effort in two and a half days.
+
+## A useful estimate record
+
+| Record | Evidence |
+|---|---|
+| Identity | Scope, WBS code, estimator and date |
+| Method | Top-down, bottom-up or hybrid |
+| Values | Low, likely and high values with units |
+| Conditions | Assumptions, exclusions and normal conditions |
+| Risk | Drivers, contingency and source of rates |
+
+# LO 5-4 · Method follows the decision
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## Context decides the method
+
+| Condition | Top-down | Bottom-up |
+|---|:---:|:---:|
+| Strategic decision making | ✓ | |
+| Cost and time are critical commitments | | ✓ |
+| High uncertainty | ✓ | |
+| Internal, small project | ✓ | |
+| Fixed-price contract | | ✓ |
+| Customer requires detail | | ✓ |
+| Unstable scope | ✓ | |
+
+## Top-down methods start with the whole
+
+| Method | Basis |
+|---|---|
+| **Consensus** | Experts discuss and agree on one estimate |
+| **Delphi** | Experts estimate independently through anonymous rounds |
+| **Ratio** | A historical relationship scales to the new project |
+| **Apportion** | A total is distributed through the WBS |
+| **Function points** | System functions become a size estimate |
+
+## Consensus and Delphi
+
+| Consensus | Delphi |
+|---|---|
+| Open discussion | Independent estimates |
+| Fast exchange of evidence | Anonymous feedback and revision |
+| Dominant voices can pull the result | Expertise still determines quality |
+
+## Ratio estimating
+
+If comparable conferences cost about **$180 per attendee**, a rough estimate for 300 attendees is:
+
+$$
+300\text{ attendees}\times\$180/\text{attendee}=\$54{,}000
+$$
+
+. . .
+
+The relationship must come from comparable work and use consistent units.
+
+## Apportioning a total through the WBS
+
+<figure>
+<svg viewBox="0 0 760 310" role="img" aria-labelledby="slide-apportion-title" style="width:100%;height:auto">
+  <title id="slide-apportion-title">A total project estimate is apportioned across major WBS branches and into work packages</title>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.4">
+    <path d="M380,72 V105 M125,105 H635 M125,105 V135 M300,105 V135 M470,105 V135 M635,105 V135"/>
+    <path d="M125,195 V225 M80,225 H170 M80,225 V245 M170,225 V245"/>
+  </g>
+  <g fill="white" stroke="currentColor" stroke-width="1.3">
+    <rect x="270" y="25" width="220" height="48" rx="4"/>
+    <rect x="45" y="135" width="160" height="60" rx="4"/><rect x="220" y="135" width="160" height="60" rx="4"/>
+    <rect x="390" y="135" width="160" height="60" rx="4"/><rect x="565" y="135" width="140" height="60" rx="4"/>
+    <rect x="25" y="245" width="110" height="45" rx="4"/><rect x="145" y="245" width="110" height="45" rx="4"/>
+  </g>
+  <g fill="currentColor" font-size="14" text-anchor="middle">
+    <text x="380" y="47" font-weight="600">Project estimate</text><text x="380" y="64">$500,000</text>
+    <text x="125" y="160" font-weight="600">Design</text><text x="125" y="181">20% · $100,000</text>
+    <text x="300" y="160" font-weight="600">Program</text><text x="300" y="181">30% · $150,000</text>
+    <text x="470" y="160" font-weight="600">Test</text><text x="470" y="181">40% · $200,000</text>
+    <text x="635" y="160" font-weight="600">Other</text><text x="635" y="181">10% · $50,000</text>
+    <text x="80" y="273">D-1 · 10%</text><text x="200" y="273">D-2 · 10%</text>
+  </g>
+</svg>
+</figure>
+
+::: {.aside}
+Simplified redrawing of Larson & Gray, Ch. 5, Figure 5.1
+:::
+
+## Function points
+
+| Element | Low | Average | High |
+|---|---:|---:|---:|
+| Inputs | 2 | 3 | 4 |
+| Outputs | 3 | 6 | 9 |
+| Inquiries | 2 | 4 | 6 |
+| Files | 4 | 8 | 12 |
+| Interfaces | 5 | 10 | 15 |
+
+. . .
+
+The weighted count becomes effort only after it is paired with historical productivity.
+
+## Effort does not determine duration
+
+If five function points normally require one person-month:
+
+$$
+500\text{ function points}\div5=100\text{ person-months}
+$$
+
+. . .
+
+The result does not mean that 100 people can finish in one month. Work may be sequential, and coordination grows with team size.
+
+## Bottom-up methods start with work packages
+
+| Method | Basis |
+|---|---|
+| **Template** | Adjust a completed, comparable work package |
+| **Parametric** | Multiply a task quantity by a measured rate |
+| **Range** | Record low, likely and high values |
+
+. . .
+
+Bottom-up estimates require stable detail but support budgeting, scheduling, resources and accountability.
+
+## Template estimating
+
+Reuse grows stronger when the prior record contains:
+
+- scope and conditions;
+- the original estimate and method;
+- actual duration, effort and cost; and
+- changes and realized risks.
+
+. . .
+
+Copy the evidence, not the old number alone.
+
+## Parametric estimating
+
+$$
+120\text{ screens}\times0.75\text{ labor hours per screen}=90\text{ labor hours}
+$$
+
+. . .
+
+Validate the unit, the rate and the comparability of the work before multiplying.
+
+## Range estimating
+
+| WBS | Work package | Low | Likely | High | Width |
+|---|---|---:|---:|---:|---:|
+| 1.2.1 | Select venue | 3 d | 5 d | 8 d | 5 d |
+| 1.3.1 | Configure registration | 4 d | 6 d | 10 d | 6 d |
+| 1.4.1 | Confirm speakers | 6 d | 10 d | 18 d | 12 d |
+
+. . .
+
+The likely value is the most plausible outcome, not automatically the arithmetic midpoint.
+
+## Phase estimating
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="slide-phase-title" style="width:100%;height:auto">
+  <title id="slide-phase-title">Detailed estimating advances one phase at a time while later phases retain macro estimates</title>
+  <g fill="none" stroke="currentColor" stroke-width="1.2">
+    <rect x="90" y="50" width="600" height="220"/>
+    <path d="M210,50 V270 M330,50 V270 M450,50 V270 M570,50 V270"/>
+    <path d="M90,94 H690 M90,138 H690 M90,182 H690 M90,226 H690"/>
+  </g>
+  <g fill="currentColor" font-size="13" text-anchor="middle">
+    <text x="150" y="38">Need</text><text x="270" y="38">Specifications</text><text x="390" y="38">Design</text><text x="510" y="38">Produce</text><text x="630" y="38">Deliver</text>
+  </g>
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="95" y="101" width="110" height="30" fill="#0F5A4B" opacity="0.16"/><text x="150" y="121">detailed</text>
+    <rect x="215" y="101" width="465" height="30" fill="#0F5A4B" opacity="0.07"/><text x="445" y="121">macro estimate</text>
+    <rect x="215" y="145" width="110" height="30" fill="#0F5A4B" opacity="0.16"/><text x="270" y="165">detailed</text>
+    <rect x="335" y="145" width="345" height="30" fill="#0F5A4B" opacity="0.07"/><text x="505" y="165">macro estimate</text>
+    <rect x="335" y="189" width="110" height="30" fill="#0F5A4B" opacity="0.16"/><text x="390" y="209">detailed</text>
+    <rect x="455" y="189" width="225" height="30" fill="#0F5A4B" opacity="0.07"/><text x="565" y="209">macro estimate</text>
+  </g>
+</svg>
+</figure>
+
+::: {.aside}
+Simplified redrawing of Larson & Gray, Ch. 5, Figure 5.3
+:::
+
+## Phase estimating is a hybrid
+
+The next phase receives a detailed estimate.
+
+. . .
+
+Later phases retain a rough macro estimate.
+
+. . .
+
+Each completed phase supplies evidence for the next detailed estimate and revises the remainder.
+
+# LO 5-5 · Cost classification
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## Three cost categories
+
+| Category | Meaning | Examples |
+|---|---|---|
+| **Direct cost** | Traceable to one work package | Task labor, materials, equipment rental |
+| **Direct project overhead** | Supports the project as a whole | Project manager, temporary project office |
+| **G&A overhead** | Supports the organization | HR, finance, legal, facilities |
+
+## Classification follows causality
+
+| Cost | Likely classification | Reason |
+|---|---|---|
+| Conference catering | Direct | Traceable to the event deliverable |
+| Project manager salary | Project overhead | Supports the whole project |
+| Corporate HR service | G&A overhead | Supports many projects and operations |
+| Registration laptop rental | Direct | Traceable to a work package |
+
+. . .
+
+The same object can receive a different classification under another organization's cost system.
+
+## Three views of project cost
+
+<figure>
+<svg viewBox="0 0 760 360" role="img" aria-labelledby="slide-cost-title" style="width:100%;height:auto">
+  <title id="slide-cost-title">Committed cost rises before actual cost and the scheduled budget, while all approach the same total</title>
+  <g stroke="currentColor" stroke-width="1.3" fill="none"><path d="M90,30 V300 H690"/></g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="3">
+    <path d="M95,292 C180,260 230,205 310,135 S455,55 680,45"/>
+    <path d="M95,296 C200,285 270,240 355,185 S505,85 680,47" stroke-dasharray="10 7"/>
+    <path d="M95,298 C220,295 330,265 420,205 S560,90 680,50" stroke-dasharray="3 7"/>
+  </g>
+  <g fill="currentColor" font-size="13">
+    <text x="115" y="326">project duration</text><text x="25" y="175" transform="rotate(-90 25 175)">cost</text>
+    <line x1="500" y1="235" x2="545" y2="235" stroke="#0F5A4B" stroke-width="3"/><text x="555" y="240">committed cost</text>
+    <line x1="500" y1="260" x2="545" y2="260" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="10 7"/><text x="555" y="265">actual cost</text>
+    <line x1="500" y1="285" x2="545" y2="285" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="3 7"/><text x="555" y="290">scheduled budget</text>
+  </g>
+</svg>
+</figure>
+
+::: {.aside}
+Concept redrawn from Larson & Gray, Ch. 5, Figure 5.6
+:::
+
+## Commitment can lead the invoice
+
+**Scheduled budget** shows what the baseline planned to spend.
+
+. . .
+
+**Actual cost** shows what the accounting system has recorded.
+
+. . .
+
+**Committed cost** includes contracts and purchase orders even when the invoice has not arrived.
+
+# LO 5-6 · Estimating memory
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## What the database preserves
+
+- WBS code and completed scope
+- original estimate, range and method
+- estimator, date, units and assumptions
+- actual duration, labor, equipment and cost
+- changes in conditions or scope
+- realized risks and contingency used
+- reusable productivity measures
+
+## From actuals to the next estimate
+
+<figure>
+<svg viewBox="0 0 760 290" role="img" aria-labelledby="slide-db-title" style="width:100%;height:auto">
+  <title id="slide-db-title">Estimates and actual outcomes cycle back into templates, rates and future ranges</title>
+  <defs><marker id="slide-db-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/></marker></defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.7" marker-end="url(#slide-db-ar)">
+    <path d="M180,120 H250"/><path d="M390,120 H460"/><path d="M600,150 C600,240 160,240 160,170"/>
+  </g>
+  <g stroke="currentColor" stroke-width="1.3">
+    <rect x="35" y="85" width="145" height="70" rx="4" fill="white"/><rect x="250" y="85" width="140" height="70" rx="4" fill="white"/>
+    <rect x="460" y="85" width="140" height="70" rx="4" fill="white"/><rect x="605" y="85" width="120" height="70" rx="4" fill="#0F5A4B" opacity="0.12"/>
+  </g>
+  <g fill="currentColor" font-size="14" text-anchor="middle">
+    <text x="108" y="112" font-weight="600">Estimate</text><text x="108" y="134">method · range · assumptions</text>
+    <text x="320" y="112" font-weight="600">Execute</text><text x="320" y="134">conditions · changes</text>
+    <text x="530" y="112" font-weight="600">Compare</text><text x="530" y="134">estimate · actual</text>
+    <text x="665" y="112" font-weight="600">Update</text><text x="665" y="134">rates · templates</text>
+  </g>
+</svg>
+</figure>
+
+::: {.aside}
+Process constructed from Larson & Gray, Ch. 5, Figure 5.7
+:::
+
+## Scope and conditions travel with the number
+
+`Registration system: 120 hours` cannot support a new estimate by itself.
+
+. . .
+
+The next estimator also needs the included functions, platform, team, operating conditions and changes during execution.
+
+# LO 5-7 · The outside view
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## Why megaproject estimates fail
+
+- Long horizons multiply unresolved assumptions.
+- Novel interfaces make omissions more likely.
+- Optimism favors a successful internal story.
+- Strategic understatement can improve the chance of approval.
+- Sunk costs make later cancellation politically difficult.
+
+## Reference class forecasting
+
+1. Select a class of comparable completed projects.
+2. Build a distribution of actual outcomes.
+3. Adjust the proposed forecast using that distribution.
+
+. . .
+
+The outside view asks what happened to projects like this one.
+
+## A reference-class uplift
+
+If comparable tunnels averaged a 34% overrun:
+
+$$
+\$100\text{ million}\times1.34=\$134\text{ million}
+$$
+
+. . .
+
+The uplift changes the burden of proof. Advocates need evidence before assuming the current project will outperform its reference class.
+
+# LO 5-8 · White elephants
+
+::: {.aside}
+Following Larson & Gray, Ch. 5
+:::
+
+## Signals
+
+- Benefits have fallen below the original case.
+- Operating and maintenance costs require continuing subsidy.
+- Prestige or political commitment replaces evidence.
+- Sunk cost is used to justify future spending.
+- No credible stop, exit or repurpose rule exists.
+
+## The forward-looking decision
+
+> With the evidence available today, would we spend the remaining money to obtain the remaining benefit?
+
+. . .
+
+Money already spent explains how the project reached the decision point. It does not justify the next dollar.
+
+# LO A5-1 · Learning curves
+
+::: {.aside}
+Following the Chapter 5 appendix in Larson & Gray [1]
+:::
+
+## Repetition changes the estimate
+
+$$
+T_n=T_1n^b
+$$
+
+where $T_n$ is the time for the $n$th unit and $b=\ln(r)/\ln(2)$ for learning rate $r$.
+
+. . .
+
+With an 80% learning rate and a 10-hour first unit, the second takes 8 hours and the fourth takes 6.4 hours under the unit-time model.
+
+## The limit of the curve
+
+Learning curves fit genuinely repeated work under comparable conditions.
+
+. . .
+
+They do not justify reducing the estimate for unique design work.
+
+. . .
+
+A changed process or technology may reset the curve.
+
+# The chain
+
+1. Define the work.
+2. Choose a method that fits the decision.
+3. State units, range and confidence.
+4. Keep assumptions and contingency visible.
+5. Classify costs consistently.
+6. Return actual results to the estimating database.
+7. Use the outside view for large commitments.
+
+# Thursday
+
+## Studio 5 · Build and challenge an estimate
+
+Import the conference workbook into Smartsheet and reconstruct its hierarchy.
+
+. . .
+
+Apply the formulas, strengthen weak assumptions and estimate one high-risk work package with a second method.
+
+. . .
+
+Compare the revised bottom-up total with the sponsor's **$80,000 cap**.
+
+## The starting case
+
+| View | Amount | Meaning |
+|---|---:|---|
+| Sponsor cap | $80,000 | Top-down decision threshold |
+| Starting estimate | $82,511 | Bottom-up work-package total |
+| Variance | $2,511 over | Evidence must support the next action |
+
+. . .
+
+A smaller number is not automatically a better estimate.
+
+## Studio submission
+
+- working Smartsheet hierarchy and formulas;
+- three strengthened assumptions;
+- one high-risk work package estimated with a second method;
+- one evidence screenshot;
+- a recommendation of no more than 100 words; and
+- the required AI acknowledgement.
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 5 and Appendix 5.1.
+2. Smartsheet Learning Center. *Import file data to new sheets*.
+3. Smartsheet Learning Center. *Hierarchy: indent or outdent rows*.
+
+::: {.aside}
+The conference examples are original to these course materials.
+:::
