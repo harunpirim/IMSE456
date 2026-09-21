@@ -26,3 +26,600 @@ lab: true
 :::
 
 <!-- VIDEO -->
+
+> Plans are of little importance, but planning is essential.
+>
+> — Winston Churchill, quoted in Larson & Gray, Ch. 5 [1]
+
+::: {.callout-note appearance="simple"}
+**Source.** This week's notes follow Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, **Chapter 5** [1]. The exposition is reworded, and the conference examples are constructed for this course. The structure and substance are the chapter's.
+:::
+
+## Learning objectives
+
+| | |
+|:--|:--|
+| **LO 5-1** | Explain why time and cost estimates are the foundation for planning and control. |
+| **LO 5-2** | Distinguish range, accuracy, precision and confidence. |
+| **LO 5-3** | Apply practical guidelines for estimating time, cost and resources. |
+| **LO 5-4** | Select and defend a top-down, bottom-up or hybrid estimating method. |
+| **LO 5-5** | Distinguish direct costs, direct project overhead and general overhead. |
+| **LO 5-6** | Describe an estimating database that improves future estimates. |
+| **LO 5-7** | Explain why megaproject estimates fail and how reference class forecasting improves decisions. |
+| **LO 5-8** | Recognize a white elephant and the commitments that keep it alive. |
+| **LO A5-1** | Use learning-curve logic when work is repeated. |
+
+: {tbl-colwidths="[13,87]"}
+
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">range</span><span class="chip">accuracy</span><span class="chip">precision</span><span class="chip">confidence</span><span class="chip">planning horizon</span><span class="chip">estimate padding</span><span class="chip">normal conditions</span><span class="chip">contingency</span><span class="chip">top-down estimate</span><span class="chip">bottom-up estimate</span><span class="chip">consensus</span><span class="chip">Delphi</span><span class="chip">ratio</span><span class="chip">apportion</span><span class="chip">function points</span><span class="chip">template method</span><span class="chip">parametric estimate</span><span class="chip">range estimate</span><span class="chip">phase estimate</span><span class="chip">direct cost</span><span class="chip">project overhead</span><span class="chip">G&amp;A overhead</span><span class="chip">committed cost</span><span class="chip">estimating database</span><span class="chip">reference class forecasting</span><span class="chip">white elephant</span><span class="chip">learning curve</span>
+:::
+
+---
+
+# LO 5-1 · An estimate is a decision input
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+Week 4 stopped the WBS at work packages that could be estimated, budgeted, resourced and owned. Chapter 5 supplies the numbers. Without credible time and cost estimates, the WBS remains a classification of work rather than a plan.
+
+Estimates support six recurring decisions.
+
+| Decision | What the estimate provides |
+|:--|:--|
+| **Authorization** | Evidence that the expected benefit justifies the expected time and cost. |
+| **Scheduling** | Durations and effort that allow work to be sequenced and staffed. |
+| **Funding** | Total cost, timing of cash needs and a basis for reserves. |
+| **Capacity** | The people, equipment and materials required by each work package. |
+| **Control** | A baseline against which progress and spending can be compared. |
+| **Forecasting** | A current view of where the project is likely to finish. |
+
+: {tbl-colwidths="[24,76]"}
+
+An estimate is not a promise that uncertainty has disappeared. It is a structured statement of what the team expects under stated conditions. Its quality depends on whether a decision maker can understand the evidence, the assumptions and the possible outcomes.
+
+## The planning horizon changes what can be known
+
+Near-term work usually has better information: the scope is clearer, suppliers can quote, and the people doing the work can inspect the actual conditions. Work farther into the future depends on more assumptions.
+
+<figure>
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="horizon-title" style="width:100%;height:auto">
+  <title id="horizon-title">Estimate ranges widen as the planning horizon becomes more distant</title>
+  <defs>
+    <marker id="hz-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <path d="M95,125 H675" fill="none" stroke="#0F5A4B" stroke-width="2" marker-end="url(#hz-ar)"/>
+  <path d="M120,110 L640,45 L640,205 L120,140 Z" fill="#0F5A4B" opacity="0.11" stroke="#0F5A4B" stroke-width="1.4"/>
+  <g fill="currentColor" font-size="15">
+    <text x="90" y="225">near-term work</text><text x="585" y="225">distant work</text>
+    <text x="145" y="88">narrower range</text><text x="525" y="30">wider range</text>
+  </g>
+  <text x="380" y="244" fill="#0F5A4B" font-size="14" text-anchor="middle">time and unresolved assumptions →</text>
+</svg>
+<figcaption>A wider range can be more honest than a precise point estimate when the work is distant or poorly defined.<br><em>Diagram constructed from the planning-horizon discussion in Larson &amp; Gray, Ch. 5 [1].</em></figcaption>
+</figure>
+
+The estimate should therefore mature with the project. Early estimates support selection and rough funding. Later estimates should use the WBS, current design, actual productivity and supplier information.
+
+---
+
+# LO 5-2 · Four dimensions describe an estimate
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+Range, accuracy, precision and confidence answer different questions. Treating them as synonyms hides what the estimate actually claims.
+
+| Dimension | Question | Example |
+|:--|:--|:--|
+| **Range** | What outcomes could occur? | The work should take 10–15 days. |
+| **Accuracy** | How close was the estimate to the outcome? | The final bill was $2,500 after an estimate of $2,500. |
+| **Precision** | How exact is the statement? | Fifteen days rather than “by the end of the month.” |
+| **Confidence** | How much trust is placed in the estimate? | There is a 90% chance of finishing by Friday. |
+
+: {tbl-colwidths="[17,35,48]"}
+
+## Range
+
+A **range** states the set of outcomes considered plausible. “10–15 days” carries more information than “about two weeks” because it exposes the endpoints. A narrow range is useful only when the available evidence justifies it.
+
+For a task with a low estimate of 4 days and a high estimate of 12 days:
+
+$$
+\text{range width}=12-4=8\text{ days}
+$$
+
+The width is not a probability distribution by itself. It is a signal that this task needs discussion, risk analysis or better information.
+
+## Accuracy
+
+**Accuracy** can be judged only after an outcome exists. An estimate of 10–15 days is accurate when the task takes 12 days. If it takes 9 days, the team finished early, but the estimate was still inaccurate because the actual result sat outside the stated range.
+
+That distinction matters for organizational learning. Calling every early finish “good estimating” prevents the estimating system from being calibrated.
+
+## Precision
+
+**Precision** is the degree of exactness. `$850` is more precise than “less than $1,000.” `15 days` is more precise than “by month-end.” Precision says nothing about whether the number is correct.
+
+A point estimate such as `17.4 days` can be highly precise and badly wrong. A range such as `15–22 days` can be less precise and much more useful.
+
+## Confidence
+
+**Confidence** states the level of trust placed in the estimate. It is often expressed as a probability, but the probability should be supported by evidence: comparable work, historical error, simulation or informed expert judgment.
+
+“We are 90% confident” is incomplete unless the claim states what is 90% likely: finishing by a date, staying below a cost, or landing inside a range.
+
+::: {.case}
+### The conference registration system
+
+The system lead says configuration will take exactly six days. The vendor has changed the payment interface, no one on the team has used the new version, and the six-day number comes from last year's installation.
+
+::: {.qn}
+Which parts of the statement concern precision, accuracy and confidence? What range and assumptions would make the estimate more useful?
+:::
+:::
+
+---
+
+# LO 5-3 · Better estimates come from disciplined conditions
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+Estimate quality is shaped before anyone enters a number in a spreadsheet.
+
+## Factors that influence quality
+
+| Factor | Why it changes the estimate |
+|:--|:--|
+| **Planning horizon** | Distant work contains more unresolved decisions and assumptions. |
+| **Project complexity** | Interactions create nonlinear effort and make omissions more likely. |
+| **People** | Experience, skill, optimism and incentives affect judgment. |
+| **Project structure** | Dedicated teams and clear ownership provide different information from fragmented, part-time work. |
+| **Padding** | Private reserves hide where uncertainty sits and can inflate the total. |
+| **Organizational culture** | A culture that punishes bad news receives optimistic numbers rather than honest ranges. |
+| **Other conditions** | Downtime, holidays, staff availability, currency, inflation and supplier constraints can alter the result. |
+
+: {tbl-colwidths="[25,75]"}
+
+New technology deserves special attention. Its difficulty does not always grow in a straight line. A small increase in integration or performance requirements can create a much larger increase in testing and coordination.
+
+## Seven guidelines
+
+### 1 · Put responsibility near the work
+
+At the work-package level, the people most familiar with the task should prepare or materially contribute to the estimate. Senior review can challenge assumptions, but authority does not replace task knowledge.
+
+### 2 · Use more than one informed view
+
+Several estimators can expose missing work and individual bias. Independence matters: a second estimate adds little when it merely repeats the first person's reasoning.
+
+### 3 · State normal conditions
+
+An estimate should represent the conditions under which the work is expected to occur. If overtime, a specialist, uninterrupted equipment access or expedited shipping is assumed, say so.
+
+### 4 · Use consistent units
+
+Hours, days and weeks are not interchangeable labels. Distinguish **effort** from **duration**.
+
+- `40 labor hours` describes effort.
+- `5 working days` describes elapsed project time under a staffing and calendar assumption.
+
+Two people do not automatically complete forty hours of effort in two and a half days. The work may be indivisible, require coordination or depend on a resource available only part of the day.
+
+### 5 · Estimate work packages independently
+
+Estimate each WBS task from its own content and conditions before schedule dependencies are applied. Chapter 6 will connect tasks into a network. Combining the steps too early makes it difficult to see whether a long duration comes from the work itself or from waiting for other work.
+
+### 6 · Keep contingency visible
+
+Do not hide an allowance inside every work package. Private padding destroys the relationship between risk and reserve. Estimate the expected task, assess uncertainty explicitly, and place contingency where it can be seen and governed.
+
+### 7 · Add risk assessment before commitment
+
+The estimate should name the events and assumptions that could move it. A range without its drivers is difficult to manage; a risk register without cost and schedule effects is disconnected from the baseline.
+
+::: {.callout-tip appearance="simple"}
+**A useful estimate record** contains the scope and WBS code, method, estimator, date, units, low/likely/high values, assumptions, exclusions, risk drivers and the source of any rates or ratios.
+:::
+
+---
+
+# LO 5-4 · Method follows the decision
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+No estimating method is best in every condition. The choice depends on the decision, the available detail, the uncertainty and the cost of preparing the estimate.
+
+| Condition | Top-down tends to fit | Bottom-up tends to fit |
+|:--|:--:|:--:|
+| Strategic decision making | ✓ | |
+| Cost and time are critical commitments | | ✓ |
+| High uncertainty | ✓ | |
+| Internal, small project | ✓ | |
+| Fixed-price contract | | ✓ |
+| Customer requires detail | | ✓ |
+| Unstable scope | ✓ | |
+
+: {tbl-colwidths="[60,20,20]"}
+
+The table describes tendencies, not rules. A project can use a top-down estimate for authorization, then replace it with a bottom-up estimate as the WBS becomes stable.
+
+## Top-down methods
+
+Top-down estimates begin with the project, a major deliverable or a comparable whole. They are fast and useful before detailed design, but they reveal less about individual work packages.
+
+### Consensus
+
+Several knowledgeable people discuss the work and agree on one estimate. The method uses distributed experience, but visible authority and dominant personalities can pull the result toward one view.
+
+### Delphi
+
+Experts estimate independently. A facilitator returns the anonymous range and reasoning, and the experts revise through additional rounds. Anonymity reduces pressure to agree with the most senior or forceful person.
+
+Delphi does not remove the need for relevant expertise. A group can reach a stable answer with the same missing assumption.
+
+### Ratio
+
+A ratio applies a historical relationship to the new project.
+
+If comparable conferences cost about `$180 per attendee`, a rough estimate for 300 attendees is:
+
+$$
+300\text{ attendees}\times\$180/\text{attendee}=\$54{,}000
+$$
+
+The result is only as comparable as the projects behind the ratio. Venue type, service level, location and inflation can make “cost per attendee” unstable.
+
+### Apportion
+
+The **apportion method** starts with a total project estimate and allocates percentages through the WBS. If historical software projects spend 20% on design, 30% on programming and 40% on testing, those shares provide an early budget structure.
+
+<figure>
+<svg viewBox="0 0 760 310" role="img" aria-labelledby="ap-title" style="width:100%;height:auto">
+  <title id="ap-title">A total project estimate is apportioned across major WBS branches and then into work packages</title>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.4">
+    <path d="M380,72 V105 M125,105 H635 M125,105 V135 M300,105 V135 M470,105 V135 M635,105 V135"/>
+    <path d="M125,195 V225 M80,225 H170 M80,225 V245 M170,225 V245"/>
+  </g>
+  <g fill="white" stroke="currentColor" stroke-width="1.3">
+    <rect x="270" y="25" width="220" height="48" rx="4"/>
+    <rect x="45" y="135" width="160" height="60" rx="4"/><rect x="220" y="135" width="160" height="60" rx="4"/>
+    <rect x="390" y="135" width="160" height="60" rx="4"/><rect x="565" y="135" width="140" height="60" rx="4"/>
+    <rect x="25" y="245" width="110" height="45" rx="4"/><rect x="145" y="245" width="110" height="45" rx="4"/>
+  </g>
+  <g fill="currentColor" font-size="14" text-anchor="middle">
+    <text x="380" y="47" font-weight="600">Project estimate</text><text x="380" y="64">$500,000</text>
+    <text x="125" y="160" font-weight="600">Design</text><text x="125" y="181">20% · $100,000</text>
+    <text x="300" y="160" font-weight="600">Program</text><text x="300" y="181">30% · $150,000</text>
+    <text x="470" y="160" font-weight="600">Test</text><text x="470" y="181">40% · $200,000</text>
+    <text x="635" y="160" font-weight="600">Other</text><text x="635" y="181">10% · $50,000</text>
+    <text x="80" y="273">D-1 · 10%</text><text x="200" y="273">D-2 · 10%</text>
+  </g>
+</svg>
+<figcaption>Apportioning preserves the total while distributing it to WBS branches. Each parent's children must reconcile to the parent.<br><em>Simplified redrawing of the method in Larson &amp; Gray, Ch. 5, Figure 5.1 [1].</em></figcaption>
+</figure>
+
+The percentages need a relevant history. Allocating last year's pattern to a project with a different architecture merely makes an unsupported estimate look structured.
+
+### Function points
+
+Software and information-system projects can estimate size through **function points**. The estimator counts user-facing elements such as inputs, outputs, inquiries, files and interfaces, then applies complexity weights.
+
+| Element | Low | Average | High |
+|:--|--:|--:|--:|
+| Inputs | 2 | 3 | 4 |
+| Outputs | 3 | 6 | 9 |
+| Inquiries | 2 | 4 | 6 |
+| Files | 4 | 8 | 12 |
+| Interfaces | 5 | 10 | 15 |
+
+: {tbl-colwidths="[40,20,20,20]"}
+
+The weighted count becomes effort only after it is paired with historical productivity. If five function points normally require one person-month, 500 function points imply about 100 person-months under comparable conditions.
+
+Effort and duration remain different. Adding people does not always divide duration proportionally because the work may be sequential and coordination grows with the team.
+
+## Bottom-up methods
+
+Bottom-up estimates begin with work packages and aggregate upward. They cost more to prepare and require stable detail, but they support budgeting, scheduling, resource planning and accountability.
+
+### Template method
+
+A completed work package becomes a template for similar work. Reuse is strongest when the record contains scope, conditions and actual results rather than a number alone.
+
+### Parametric procedure
+
+A task-level parameter applies a measured rate to a quantity.
+
+$$
+120\text{ screens}\times0.75\text{ labor hours per screen}=90\text{ labor hours}
+$$
+
+The unit must match the work, and the rate must come from comparable conditions. A blended rate from simple screens should not be applied to a set dominated by complex interfaces.
+
+### Range estimate
+
+Range estimating records a low, likely and high value for each work package. The spread directs attention to tasks whose uncertainty can materially affect the plan.
+
+| WBS | Work package | Low | Likely | High | Width | Risk driver |
+|:--|:--|--:|--:|--:|--:|:--|
+| 1.2.1 | Select venue | 3 d | 5 d | 8 d | 5 d | Contract review |
+| 1.3.1 | Configure registration | 4 d | 6 d | 10 d | 6 d | New payment interface |
+| 1.4.1 | Confirm speakers | 6 d | 10 d | 18 d | 12 d | Travel and availability |
+
+The likely value is not automatically the arithmetic midpoint. It is the outcome considered most plausible under the stated conditions.
+
+## Phase estimating is a hybrid
+
+**Phase estimating** uses a detailed estimate for the next phase and a rough macro estimate for later phases. When the current phase finishes, the next phase receives a detailed estimate and the remainder is revised.
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="phase-title" style="width:100%;height:auto">
+  <title id="phase-title">Detailed estimating advances one phase at a time while later phases retain macro estimates</title>
+  <g fill="none" stroke="currentColor" stroke-width="1.2">
+    <rect x="90" y="50" width="600" height="220"/>
+    <path d="M210,50 V270 M330,50 V270 M450,50 V270 M570,50 V270"/>
+    <path d="M90,94 H690 M90,138 H690 M90,182 H690 M90,226 H690"/>
+  </g>
+  <g fill="currentColor" font-size="13" text-anchor="middle">
+    <text x="150" y="38">Need</text><text x="270" y="38">Specifications</text><text x="390" y="38">Design</text><text x="510" y="38">Produce</text><text x="630" y="38">Deliver</text>
+  </g>
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="95" y="101" width="110" height="30" fill="#0F5A4B" opacity="0.16"/><text x="150" y="121">detailed</text>
+    <rect x="215" y="101" width="465" height="30" fill="#0F5A4B" opacity="0.07"/><text x="445" y="121">macro estimate</text>
+    <rect x="215" y="145" width="110" height="30" fill="#0F5A4B" opacity="0.16"/><text x="270" y="165">detailed</text>
+    <rect x="335" y="145" width="345" height="30" fill="#0F5A4B" opacity="0.07"/><text x="505" y="165">macro estimate</text>
+    <rect x="335" y="189" width="110" height="30" fill="#0F5A4B" opacity="0.16"/><text x="390" y="209">detailed</text>
+    <rect x="455" y="189" width="225" height="30" fill="#0F5A4B" opacity="0.07"/><text x="565" y="209">macro estimate</text>
+  </g>
+</svg>
+<figcaption>Phase estimating purchases detail when it becomes useful instead of pretending that distant phases are already known.<br><em>Simplified redrawing of Larson &amp; Gray, Ch. 5, Figure 5.3 [1].</em></figcaption>
+</figure>
+
+This hybrid fits projects in which later work cannot be specified responsibly until earlier results are known.
+
+---
+
+# LO 5-5 · Cost classification changes what the number means
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+Project costs fall into three broad categories. The label follows the causal relationship and the organization's cost system.
+
+| Category | Meaning | Examples |
+|:--|:--|:--|
+| **Direct cost** | Can be traced to a specific work package. | Task labor, materials, equipment rental, vendor service. |
+| **Direct project overhead** | Supports the project as a whole rather than one work package. | Project manager, temporary project office, project-specific systems. |
+| **General and administrative overhead** | Supports the organization across projects and operations. | Corporate HR, finance, legal service, executive management, facilities. |
+
+: {tbl-colwidths="[25,40,35]"}
+
+The same object can receive different classifications in different organizations. A dedicated conference laptop charged to registration is direct. The standard laptops used by a central IT department across every project are overhead.
+
+## Three views of project cost
+
+A cost report can answer three different questions.
+
+- **Scheduled budget:** what the baseline planned to spend by this date.
+- **Actual cost:** what has already been recorded as spent.
+- **Committed cost:** what the project has obligated through contracts, purchase orders or other commitments, even if the invoice has not arrived.
+
+<figure>
+<svg viewBox="0 0 760 360" role="img" aria-labelledby="cost-title" style="width:100%;height:auto">
+  <title id="cost-title">Committed cost rises before actual cost and the scheduled budget, while all approach the same total</title>
+  <g stroke="currentColor" stroke-width="1.3" fill="none">
+    <path d="M90,30 V300 H690"/>
+  </g>
+  <g fill="none" stroke="#0F5A4B" stroke-width="3">
+    <path d="M95,292 C180,260 230,205 310,135 S455,55 680,45"/>
+    <path d="M95,296 C200,285 270,240 355,185 S505,85 680,47" stroke-dasharray="10 7"/>
+    <path d="M95,298 C220,295 330,265 420,205 S560,90 680,50" stroke-dasharray="3 7"/>
+  </g>
+  <g fill="currentColor" font-size="13">
+    <text x="115" y="326">project duration</text><text x="25" y="175" transform="rotate(-90 25 175)">cost</text>
+  </g>
+  <g fill="currentColor" font-size="13">
+    <line x1="500" y1="235" x2="545" y2="235" stroke="#0F5A4B" stroke-width="3"/><text x="555" y="240">committed cost</text>
+    <line x1="500" y1="260" x2="545" y2="260" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="10 7"/><text x="555" y="265">actual cost</text>
+    <line x1="500" y1="285" x2="545" y2="285" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="3 7"/><text x="555" y="290">scheduled budget</text>
+  </g>
+</svg>
+<figcaption>A purchase commitment can reveal future spending before the invoice appears in actual cost.<br><em>Concept redrawn from Larson &amp; Gray, Ch. 5, Figure 5.6 [1].</em></figcaption>
+</figure>
+
+Looking only at actual cost can create false comfort. A project may appear under budget while signed contracts have already consumed the remaining authorization.
+
+---
+
+# LO 5-6 · Actuals create estimating memory
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+An estimating database stores the connection between what was expected and what happened. It should serve the way work is estimated: by project type, WBS branch, cost code, technology, location or another useful class.
+
+At minimum, preserve:
+
+- the WBS code and scope of the completed work;
+- the original estimate, range and method;
+- the estimator, date, units and assumptions;
+- actual labor, material, equipment, duration and cost;
+- changes in scope or operating conditions;
+- realized risks and the contingency used; and
+- ratios or productivity measures that can be reused.
+
+<figure>
+<svg viewBox="0 0 760 290" role="img" aria-labelledby="db-title" style="width:100%;height:auto">
+  <title id="db-title">Estimates and actual outcomes cycle back into templates, rates and future ranges</title>
+  <defs>
+    <marker id="db-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.7" marker-end="url(#db-ar)">
+    <path d="M180,120 H250"/><path d="M390,120 H460"/><path d="M600,150 C600,240 160,240 160,170"/>
+  </g>
+  <g stroke="currentColor" stroke-width="1.3">
+    <rect x="35" y="85" width="145" height="70" rx="4" fill="white"/><rect x="250" y="85" width="140" height="70" rx="4" fill="white"/>
+    <rect x="460" y="85" width="140" height="70" rx="4" fill="white"/><rect x="605" y="85" width="120" height="70" rx="4" fill="#0F5A4B" opacity="0.12"/>
+  </g>
+  <g fill="currentColor" font-size="14" text-anchor="middle">
+    <text x="108" y="112" font-weight="600">Estimate</text><text x="108" y="134">method · range · assumptions</text>
+    <text x="320" y="112" font-weight="600">Execute</text><text x="320" y="134">conditions · changes</text>
+    <text x="530" y="112" font-weight="600">Compare</text><text x="530" y="134">estimate · actual</text>
+    <text x="665" y="112" font-weight="600">Update</text><text x="665" y="134">rates · templates</text>
+  </g>
+</svg>
+<figcaption>An estimate becomes reusable evidence only when the actual outcome and its conditions return to the database.<br><em>Process constructed from Larson &amp; Gray, Ch. 5, Figure 5.7 [1].</em></figcaption>
+</figure>
+
+A record that says only “registration system: 120 hours” cannot support a new estimate. The next estimator must know what functions were included, who performed the work, which platform was used and what changed during execution.
+
+---
+
+# LO 5-7 · Megaprojects need an outside view
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+Large projects combine long horizons, political commitment, novel interfaces and enormous sunk costs. Their estimates can be distorted by optimism, strategic understatement and the belief that the current project is unlike the failed projects in the historical record.
+
+**Reference class forecasting (RCF)** counters that inside view with outcomes from comparable completed projects.
+
+## Three steps
+
+1. **Select a reference class.** Identify completed projects similar enough to inform the current decision: rail tunnels, cargo ships, hospitals or enterprise-system replacements.
+2. **Build an outcome distribution.** Arrange actual results, such as cost overrun as a percentage of the original estimate, from low to high.
+3. **Adjust the forecast.** Place the proposed project against that distribution and require evidence before assuming it will outperform the class.
+
+If a proposed tunnel carries a `$100 million` estimate and comparable regional tunnels averaged a `34%` overrun, the outside-view forecast is:
+
+$$
+\$100\text{ million}\times1.34=\$134\text{ million}
+$$
+
+The uplift does not prove that the project will cost exactly $134 million. It changes the burden of proof. Project advocates must explain why the current project should beat the observed base rate.
+
+## What the outside view changes
+
+RCF can:
+
+- reduce optimism and uniqueness bias;
+- make political or strategic understatement harder to ignore;
+- test whether funding is adequate;
+- provide a basis for contingency;
+- improve accountability for the original forecast; and
+- make alternatives comparable on a more realistic basis.
+
+The reference class must be selected carefully. A broad class may hide important differences; a class narrowed until the current project looks unique defeats the method.
+
+---
+
+# LO 5-8 · A white elephant survives its business case
+
+*Following Larson & Gray, Ch. 5 [1].*
+
+A **white elephant** is a project or asset whose cost of completion, ownership or operation is out of proportion to the value it delivers, yet which remains difficult to abandon.
+
+Common signals include:
+
+- demand or benefits have fallen below the original case;
+- operating and maintenance costs require a continuing subsidy;
+- prestige or political commitment replaces evidence;
+- sunk cost is used to justify additional future spending; and
+- no credible exit, repurpose or stop rule exists.
+
+The key decision is forward-looking:
+
+> With the evidence available today, would we spend the remaining money to obtain the remaining benefit?
+
+Money already spent may explain how the project arrived at the decision point. It does not by itself justify the next dollar.
+
+::: {.case}
+### The event venue
+
+A city begins a large event venue after forecasting strong regional demand. Construction costs rise, two anchor events withdraw, and the revised operating forecast requires an annual subsidy. Cancelling would make the partially completed structure highly visible.
+
+::: {.qn}
+Which evidence should determine whether the city completes, reduces, repurposes or stops the project? Which parts of the original estimate no longer belong in the decision?
+:::
+:::
+
+---
+
+# LO A5-1 · Learning changes repeated-task estimates
+
+*Following the Chapter 5 appendix in Larson & Gray [1].*
+
+When a task is repeated, people and systems often become faster. Setup improves, unnecessary motion disappears and coordination becomes routine. A **learning curve** estimates that improvement.
+
+One common unit-time form is:
+
+$$
+T_n=T_1n^b
+$$
+
+where:
+
+- $T_n$ is the time for the $n$th unit;
+- $T_1$ is the time for the first unit;
+- $b=\ln(r)/\ln(2)$; and
+- $r$ is the learning rate, written as a decimal.
+
+With an 80% learning rate, doubling cumulative output reduces the modeled unit time to 80% of its previous level. If the first unit takes 10 hours, the second takes 8 hours and the fourth takes 6.4 hours under this unit-time model.
+
+Learning curves require genuinely repeated work under comparable conditions. They do not justify reducing the estimate for unique design work, and a process or technology change may reset the curve.
+
+State which model is being used. A unit-time curve and a cumulative-average curve use related mathematics but answer different questions.
+
+---
+
+# From scope to a defendable estimate
+
+Chapter 5 joins the WBS to the budget and schedule.
+
+1. **Start with defined work.** Estimating a vague scope produces a precise-looking guess.
+2. **Choose a method that fits the decision.** Early authorization and fixed-price commitment need different evidence.
+3. **State range, units and confidence.** A point estimate alone hides the claim being made.
+4. **Keep assumptions and contingency visible.** Hidden padding cannot be governed.
+5. **Classify costs consistently.** Direct cost, project overhead and G&A answer different questions.
+6. **Compare estimate with actual.** Completed work improves the next estimate only when the outcome returns to the database.
+7. **Use the outside view for large commitments.** Reference classes test whether the project is relying on optimism.
+
+::: {.studio}
+## Thursday · Build and challenge a conference estimate
+
+Import the conference workbook into Smartsheet, recreate its parent-child hierarchy, apply the supplied column formulas, improve weak assumptions and re-estimate one high-risk work package. Then compare the revised bottom-up total with the sponsor's top-down cap and recommend an action.
+
+[Open Studio 5 →](../labs/lab-05.qmd)
+:::
+
+---
+
+# Check your understanding
+
+1. Why can an early finish still reveal an inaccurate estimate?
+2. Distinguish range, precision and confidence using one estimate.
+3. Why should work-package estimators state normal operating conditions?
+4. What is lost when every estimator hides contingency inside a task estimate?
+5. Under which conditions would a top-down estimate be preferable to a bottom-up estimate?
+6. What makes a historical ratio transferable to a new project?
+7. Why does an effort estimate not determine duration by itself?
+8. Distinguish a direct cost, direct project overhead and G&A overhead.
+9. Why can committed cost be more informative than actual cost early in a project?
+10. What information must accompany an actual result before it belongs in an estimating database?
+11. How does reference class forecasting change the burden of proof for a megaproject estimate?
+12. Why should a sunk cost not determine whether the next dollar is spent?
+
+---
+
+# Where this sits in the course
+
+**Week 4** defined the result and decomposed it into work packages. **Week 5** attaches credible time, effort and cost to those packages. Week 6 will sequence the work into a network and calculate the schedule.
+
+---
+
+# References
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 5 and Appendix 5.1.

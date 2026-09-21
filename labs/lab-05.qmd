@@ -1,0 +1,180 @@
+---
+title: "Studio 5 · Build and challenge a project estimate"
+subtitle: "Week 5 — Estimating Project Times and Costs · Larson Ch. 5"
+week: 5
+release: "2026-09-21"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA5</strong> — the revised Smartsheet estimate, one evidence screenshot and a 100-word recommendation, uploaded to Blackboard</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>Import and structure, validate formulas, challenge assumptions, re-estimate, then decide — roughly 15, 15, 20, 20 and 10 minutes. Pacing guidance, not a bell.</dd>
+<dt>Tools</dt><dd>Smartsheet and Gemini</dd>
+<dt>Workbook</dt><dd><a href="../files/week-05-smartsheet-estimating-studio.xlsx">Week 5 conference estimating workbook</a></dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · generate freely, verify everything, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-05.qmd">Week 5 — Estimating Project Times and Costs</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Gemini can challenge an assumption or propose a second method. You remain responsible for the units, formulas, evidence and recommendation.
+:::
+
+The project is a **two-day manufacturing conference**. A top-down sponsor decision set an **$80,000 cap**. The starting bottom-up estimate is **$82,511**. The difference is intentionally small enough that weak reasoning in either direction can change the decision.
+
+The goal is not to force the estimate below the cap. The goal is to produce a more defensible estimate and state what the sponsor should do next.
+
+::: {.part}
+### Part 1 · Import and reconstruct the hierarchy — 15 minutes
+
+Download the [Week 5 conference estimating workbook](../files/week-05-smartsheet-estimating-studio.xlsx).
+
+1. In Smartsheet, select **+ Create → Import → Microsoft Excel**.
+2. Select the workbook and import the **Smartsheet Import** worksheet.
+3. Keep **Task Name** as the primary column.
+4. Set **WBS** and **Parent WBS** to **Text/Number** so codes such as `1.2.1` remain intact.
+5. Use **Indent Level** and **Parent WBS** to reconstruct the hierarchy:
+   - level `0` is the project;
+   - level `1` rows sit beneath the project; and
+   - level `2` rows sit beneath the matching level `1` parent.
+6. Collapse each parent and expand it again. Confirm that the expected work packages move with it.
+
+Do not alter estimates yet. First preserve the starting case so later changes remain visible.
+:::
+
+::: {.part}
+### Part 2 · Add Smartsheet formulas — 15 minutes
+
+The import sheet contains calculated values because Excel and Smartsheet use different formula syntax. Open the workbook's **Formula Guide** worksheet and recreate these calculations as Smartsheet column formulas.
+
+| Target column | Leaf-row formula |
+|:--|:--|
+| **Duration Range (days)** | `=[High Duration (days)]@row - [Low Duration (days)]@row` |
+| **Labor Cost** | `=[Planned Effort (hours)]@row * [Labor Rate]@row` |
+| **Total Estimate** | `=([Labor Cost]@row + [Nonlabor Cost]@row) * (1 + [Contingency %]@row)` |
+
+For additive fields on parent rows, use `=SUM(CHILDREN())`. Apply it to:
+
+- Planned Effort (hours);
+- Labor Cost;
+- Nonlabor Cost; and
+- Total Estimate.
+
+Run three checks.
+
+1. Change one leaf-row labor rate by `$1`. Confirm that Labor Cost, Total Estimate and every affected parent update.
+2. Restore the original rate.
+3. Compare the project total with the starting value `$82,511`. If it does not reconcile, locate the first parent where the rollup differs.
+
+Format labor rate, labor cost, nonlabor cost and total estimate as currency. Format contingency as a percentage.
+:::
+
+::: {.part}
+### Part 3 · Challenge the evidence — 20 minutes
+
+Filter **Risk Level** to `High`. Read the range, method and assumption for each high-risk work package.
+
+Improve at least three assumptions. Each revised assumption must contain one of the following:
+
+- a measurable condition;
+- a named source;
+- a validity date;
+- a capacity or quantity limit; or
+- a threshold that would trigger re-estimation.
+
+Weak:
+
+> Speakers should respond quickly.
+
+Stronger:
+
+> Twelve invited speakers will accept or decline by 6 October; re-estimate travel and schedule effort if fewer than eight accept.
+
+Use Gemini to challenge one assumption. Paste this prompt, replacing the bracketed fields.
+
+```text
+Act as an independent estimator. Challenge this project assumption:
+
+[assumption]
+
+The associated work package is:
+[work package, scope, low/likely/high duration, cost, and method]
+
+Identify missing conditions, quantities, evidence, and expiration dates.
+Propose a more testable assumption. Do not change the estimate and do not
+claim access to historical data that I have not provided.
+```
+
+Record the original assumption, the model's challenge and your final wording. Reject any suggested evidence that cannot be verified.
+:::
+
+::: {.part}
+### Part 4 · Re-estimate one high-risk package — 20 minutes
+
+Choose one high-risk work package and estimate it with a **second method**.
+
+Acceptable pairs include:
+
+- expert judgment and Delphi;
+- ratio and bottom-up detail;
+- template and parametric;
+- point estimate and low/likely/high range; or
+- internal estimate and an external supplier quote.
+
+Document the second method in a new column or attached row note. Include:
+
+1. the method;
+2. the source or calculation;
+3. the units;
+4. the result;
+5. the reason the two estimates differ; and
+6. the value you chose for the revised plan.
+
+Update the Smartsheet row only after documenting the comparison. Do not average two estimates merely because they differ. Select the value supported by the stronger evidence and explain the decision.
+:::
+
+::: {.part}
+### Part 5 · Make the cap decision — 10 minutes
+
+Compare the revised bottom-up total with the `$80,000` sponsor cap. Write a recommendation of no more than 100 words.
+
+Choose one action:
+
+- accept the revised estimate and approve additional funding;
+- reduce or change defined scope;
+- obtain better evidence before commitment; or
+- retain the cap because the revised estimate supports it.
+
+Your recommendation must state:
+
+- the revised total and variance from the cap;
+- the work package that contributes the most decision-relevant uncertainty;
+- the evidence that changed your view; and
+- the next authorized action.
+
+A smaller number is not automatically a better estimate. A decision with visible evidence is stronger than an unsupported total that happens to fit the cap.
+:::
+
+::: {.part}
+### Part 6 · Save and upload
+
+Check the submission package.
+
+- [ ] Smartsheet hierarchy with all parent-child relationships working
+- [ ] column formulas for duration range, labor cost and total estimate
+- [ ] parent rollups that reconcile to the project total
+- [ ] at least three strengthened assumptions
+- [ ] one work package estimated with a second method
+- [ ] one screenshot showing hierarchy, formulas and risk fields
+- [ ] recommendation of no more than 100 words
+- [ ] AI acknowledgement with tool, transcript link, changes and verification
+
+Save the Smartsheet export, screenshot and recommendation in `IMSE456/studio-05/` on your NDSU Google Drive or OneDrive.
+
+Upload one PDF to Blackboard before you leave the session. Put the recommendation first, followed by the evidence screenshot, second-method comparison and AI acknowledgement. Name it `SA5_yourlastname.pdf`.
+:::
+
+::: {.callout-note appearance="simple"}
+**If Smartsheet is unavailable**, complete the calculations and evidence challenge in Excel. State which hierarchy and formula checks could not be performed, preserve the file, and complete those checks after access is restored.
+:::
