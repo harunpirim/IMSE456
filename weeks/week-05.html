@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,83 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-5-1-an-estimate-is-a-decision-input" id="toc-lo-5-1-an-estimate-is-a-decision-input" class="nav-link" data-scroll-target="#lo-5-1-an-estimate-is-a-decision-input">LO 5-1 · An estimate is a decision input</a>
+  <ul class="collapse">
+  <li><a href="#the-planning-horizon-changes-what-can-be-known" id="toc-the-planning-horizon-changes-what-can-be-known" class="nav-link" data-scroll-target="#the-planning-horizon-changes-what-can-be-known">The planning horizon changes what can be known</a></li>
+  </ul></li>
+  <li><a href="#lo-5-2-four-dimensions-describe-an-estimate" id="toc-lo-5-2-four-dimensions-describe-an-estimate" class="nav-link" data-scroll-target="#lo-5-2-four-dimensions-describe-an-estimate">LO 5-2 · Four dimensions describe an estimate</a>
+  <ul class="collapse">
+  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">Accuracy</a></li>
+  <li><a href="#precision" id="toc-precision" class="nav-link" data-scroll-target="#precision">Precision</a></li>
+  <li><a href="#confidence" id="toc-confidence" class="nav-link" data-scroll-target="#confidence">Confidence</a>
+  <ul class="collapse">
+  <li><a href="#the-conference-registration-system" id="toc-the-conference-registration-system" class="nav-link" data-scroll-target="#the-conference-registration-system">The conference registration system</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-5-3-better-estimates-come-from-disciplined-conditions" id="toc-lo-5-3-better-estimates-come-from-disciplined-conditions" class="nav-link" data-scroll-target="#lo-5-3-better-estimates-come-from-disciplined-conditions">LO 5-3 · Better estimates come from disciplined conditions</a>
+  <ul class="collapse">
+  <li><a href="#factors-that-influence-quality" id="toc-factors-that-influence-quality" class="nav-link" data-scroll-target="#factors-that-influence-quality">Factors that influence quality</a></li>
+  <li><a href="#seven-guidelines" id="toc-seven-guidelines" class="nav-link" data-scroll-target="#seven-guidelines">Seven guidelines</a>
+  <ul class="collapse">
+  <li><a href="#put-responsibility-near-the-work" id="toc-put-responsibility-near-the-work" class="nav-link" data-scroll-target="#put-responsibility-near-the-work">1 · Put responsibility near the work</a></li>
+  <li><a href="#use-more-than-one-informed-view" id="toc-use-more-than-one-informed-view" class="nav-link" data-scroll-target="#use-more-than-one-informed-view">2 · Use more than one informed view</a></li>
+  <li><a href="#state-normal-conditions" id="toc-state-normal-conditions" class="nav-link" data-scroll-target="#state-normal-conditions">3 · State normal conditions</a></li>
+  <li><a href="#use-consistent-units" id="toc-use-consistent-units" class="nav-link" data-scroll-target="#use-consistent-units">4 · Use consistent units</a></li>
+  <li><a href="#estimate-work-packages-independently" id="toc-estimate-work-packages-independently" class="nav-link" data-scroll-target="#estimate-work-packages-independently">5 · Estimate work packages independently</a></li>
+  <li><a href="#keep-contingency-visible" id="toc-keep-contingency-visible" class="nav-link" data-scroll-target="#keep-contingency-visible">6 · Keep contingency visible</a></li>
+  <li><a href="#add-risk-assessment-before-commitment" id="toc-add-risk-assessment-before-commitment" class="nav-link" data-scroll-target="#add-risk-assessment-before-commitment">7 · Add risk assessment before commitment</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-5-4-method-follows-the-decision" id="toc-lo-5-4-method-follows-the-decision" class="nav-link" data-scroll-target="#lo-5-4-method-follows-the-decision">LO 5-4 · Method follows the decision</a>
+  <ul class="collapse">
+  <li><a href="#top-down-methods" id="toc-top-down-methods" class="nav-link" data-scroll-target="#top-down-methods">Top-down methods</a>
+  <ul class="collapse">
+  <li><a href="#consensus" id="toc-consensus" class="nav-link" data-scroll-target="#consensus">Consensus</a></li>
+  <li><a href="#delphi" id="toc-delphi" class="nav-link" data-scroll-target="#delphi">Delphi</a></li>
+  <li><a href="#ratio" id="toc-ratio" class="nav-link" data-scroll-target="#ratio">Ratio</a></li>
+  <li><a href="#apportion" id="toc-apportion" class="nav-link" data-scroll-target="#apportion">Apportion</a></li>
+  <li><a href="#function-points" id="toc-function-points" class="nav-link" data-scroll-target="#function-points">Function points</a></li>
+  </ul></li>
+  <li><a href="#bottom-up-methods" id="toc-bottom-up-methods" class="nav-link" data-scroll-target="#bottom-up-methods">Bottom-up methods</a>
+  <ul class="collapse">
+  <li><a href="#template-method" id="toc-template-method" class="nav-link" data-scroll-target="#template-method">Template method</a></li>
+  <li><a href="#parametric-procedure" id="toc-parametric-procedure" class="nav-link" data-scroll-target="#parametric-procedure">Parametric procedure</a></li>
+  <li><a href="#range-estimate" id="toc-range-estimate" class="nav-link" data-scroll-target="#range-estimate">Range estimate</a></li>
+  </ul></li>
+  <li><a href="#phase-estimating-is-a-hybrid" id="toc-phase-estimating-is-a-hybrid" class="nav-link" data-scroll-target="#phase-estimating-is-a-hybrid">Phase estimating is a hybrid</a></li>
+  </ul></li>
+  <li><a href="#lo-5-5-cost-classification-changes-what-the-number-means" id="toc-lo-5-5-cost-classification-changes-what-the-number-means" class="nav-link" data-scroll-target="#lo-5-5-cost-classification-changes-what-the-number-means">LO 5-5 · Cost classification changes what the number means</a>
+  <ul class="collapse">
+  <li><a href="#three-views-of-project-cost" id="toc-three-views-of-project-cost" class="nav-link" data-scroll-target="#three-views-of-project-cost">Three views of project cost</a></li>
+  </ul></li>
+  <li><a href="#lo-5-6-actuals-create-estimating-memory" id="toc-lo-5-6-actuals-create-estimating-memory" class="nav-link" data-scroll-target="#lo-5-6-actuals-create-estimating-memory">LO 5-6 · Actuals create estimating memory</a></li>
+  <li><a href="#lo-5-7-megaprojects-need-an-outside-view" id="toc-lo-5-7-megaprojects-need-an-outside-view" class="nav-link" data-scroll-target="#lo-5-7-megaprojects-need-an-outside-view">LO 5-7 · Megaprojects need an outside view</a>
+  <ul class="collapse">
+  <li><a href="#three-steps" id="toc-three-steps" class="nav-link" data-scroll-target="#three-steps">Three steps</a></li>
+  <li><a href="#what-the-outside-view-changes" id="toc-what-the-outside-view-changes" class="nav-link" data-scroll-target="#what-the-outside-view-changes">What the outside view changes</a></li>
+  </ul></li>
+  <li><a href="#lo-5-8-a-white-elephant-survives-its-business-case" id="toc-lo-5-8-a-white-elephant-survives-its-business-case" class="nav-link" data-scroll-target="#lo-5-8-a-white-elephant-survives-its-business-case">LO 5-8 · A white elephant survives its business case</a>
+  <ul class="collapse">
+  <li><a href="#the-event-venue" id="toc-the-event-venue" class="nav-link" data-scroll-target="#the-event-venue">The event venue</a></li>
+  </ul></li>
+  <li><a href="#lo-a5-1-learning-changes-repeated-task-estimates" id="toc-lo-a5-1-learning-changes-repeated-task-estimates" class="nav-link" data-scroll-target="#lo-a5-1-learning-changes-repeated-task-estimates">LO A5-1 · Learning changes repeated-task estimates</a></li>
+  <li><a href="#from-scope-to-a-defendable-estimate" id="toc-from-scope-to-a-defendable-estimate" class="nav-link" data-scroll-target="#from-scope-to-a-defendable-estimate">From scope to a defendable estimate</a>
+  <ul class="collapse">
+  <li><a href="#thursday-build-and-challenge-a-conference-estimate" id="toc-thursday-build-and-challenge-a-conference-estimate" class="nav-link" data-scroll-target="#thursday-build-and-challenge-a-conference-estimate">Thursday · Build and challenge a conference estimate</a></li>
+  </ul></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check your understanding</a></li>
+  <li><a href="#where-this-sits-in-the-course" id="toc-where-this-sits-in-the-course" class="nav-link" data-scroll-target="#where-this-sits-in-the-course">Where this sits in the course</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -201,8 +305,761 @@ Produced in the Thursday session and uploaded to Blackboard before you leave
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>Plans are of little importance, but planning is essential.</p>
+<p>— Winston Churchill, quoted in Larson &amp; Gray, Ch. 5 [1]</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 5</strong> [1]. The exposition is reworded, and the conference examples are constructed for this course. The structure and substance are the chapter’s.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 87%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 5-1</strong></td>
+<td style="text-align: left;">Explain why time and cost estimates are the foundation for planning and control.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 5-2</strong></td>
+<td style="text-align: left;">Distinguish range, accuracy, precision and confidence.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 5-3</strong></td>
+<td style="text-align: left;">Apply practical guidelines for estimating time, cost and resources.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 5-4</strong></td>
+<td style="text-align: left;">Select and defend a top-down, bottom-up or hybrid estimating method.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 5-5</strong></td>
+<td style="text-align: left;">Distinguish direct costs, direct project overhead and general overhead.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 5-6</strong></td>
+<td style="text-align: left;">Describe an estimating database that improves future estimates.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 5-7</strong></td>
+<td style="text-align: left;">Explain why megaproject estimates fail and how reference class forecasting improves decisions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 5-8</strong></td>
+<td style="text-align: left;">Recognize a white elephant and the commitments that keep it alive.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO A5-1</strong></td>
+<td style="text-align: left;">Use learning-curve logic when work is repeated.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">range</span><span class="chip">accuracy</span><span class="chip">precision</span><span class="chip">confidence</span><span class="chip">planning horizon</span><span class="chip">estimate padding</span><span class="chip">normal conditions</span><span class="chip">contingency</span><span class="chip">top-down estimate</span><span class="chip">bottom-up estimate</span><span class="chip">consensus</span><span class="chip">Delphi</span><span class="chip">ratio</span><span class="chip">apportion</span><span class="chip">function points</span><span class="chip">template method</span><span class="chip">parametric estimate</span><span class="chip">range estimate</span><span class="chip">phase estimate</span><span class="chip">direct cost</span><span class="chip">project overhead</span><span class="chip">G&amp;A overhead</span><span class="chip">committed cost</span><span class="chip">estimating database</span><span class="chip">reference class forecasting</span><span class="chip">white elephant</span><span class="chip">learning curve</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-5-1-an-estimate-is-a-decision-input" class="level1">
+<h1>LO 5-1 · An estimate is a decision input</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>Week 4 stopped the WBS at work packages that could be estimated, budgeted, resourced and owned. Chapter 5 supplies the numbers. Without credible time and cost estimates, the WBS remains a classification of work rather than a plan.</p>
+<p>Estimates support six recurring decisions.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Decision</th>
+<th style="text-align: left;">What the estimate provides</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Authorization</strong></td>
+<td style="text-align: left;">Evidence that the expected benefit justifies the expected time and cost.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Scheduling</strong></td>
+<td style="text-align: left;">Durations and effort that allow work to be sequenced and staffed.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Funding</strong></td>
+<td style="text-align: left;">Total cost, timing of cash needs and a basis for reserves.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Capacity</strong></td>
+<td style="text-align: left;">The people, equipment and materials required by each work package.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Control</strong></td>
+<td style="text-align: left;">A baseline against which progress and spending can be compared.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Forecasting</strong></td>
+<td style="text-align: left;">A current view of where the project is likely to finish.</td>
+</tr>
+</tbody>
+</table>
+<p>An estimate is not a promise that uncertainty has disappeared. It is a structured statement of what the team expects under stated conditions. Its quality depends on whether a decision maker can understand the evidence, the assumptions and the possible outcomes.</p>
+<section id="the-planning-horizon-changes-what-can-be-known" class="level2">
+<h2 class="anchored" data-anchor-id="the-planning-horizon-changes-what-can-be-known">The planning horizon changes what can be known</h2>
+<p>Near-term work usually has better information: the scope is clearer, suppliers can quote, and the people doing the work can inspect the actual conditions. Work farther into the future depends on more assumptions.</p>
+<figure class="figure">
+<svg viewbox="0 0 760 250" role="img" aria-labelledby="horizon-title" style="width:100%;height:auto">
+<title id="horizon-title">
+Estimate ranges widen as the planning horizon becomes more distant
+</title>
+<defs> <marker id="hz-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <path d="M95,125 H675" fill="none" stroke="#0F5A4B" stroke-width="2" marker-end="url(#hz-ar)"></path> <path d="M120,110 L640,45 L640,205 L120,140 Z" fill="#0F5A4B" opacity="0.11" stroke="#0F5A4B" stroke-width="1.4"></path> <g fill="currentColor" font-size="15"> <text x="90" y="225">near-term work</text><text x="585" y="225">distant work</text> <text x="145" y="88">narrower range</text><text x="525" y="30">wider range</text> </g> <text x="380" y="244" fill="#0F5A4B" font-size="14" text-anchor="middle">time and unresolved assumptions →</text>
+</svg>
+<figcaption>
+A wider range can be more honest than a precise point estimate when the work is distant or poorly defined.<br><em>Diagram constructed from the planning-horizon discussion in Larson &amp; Gray, Ch. 5 [1].</em>
+</figcaption>
+</figure>
+<p>The estimate should therefore mature with the project. Early estimates support selection and rough funding. Later estimates should use the WBS, current design, actual productivity and supplier information.</p>
+<hr>
+</section>
+</section>
+<section id="lo-5-2-four-dimensions-describe-an-estimate" class="level1">
+<h1>LO 5-2 · Four dimensions describe an estimate</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>Range, accuracy, precision and confidence answer different questions. Treating them as synonyms hides what the estimate actually claims.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 35%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Range</strong></td>
+<td style="text-align: left;">What outcomes could occur?</td>
+<td style="text-align: left;">The work should take 10–15 days.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Accuracy</strong></td>
+<td style="text-align: left;">How close was the estimate to the outcome?</td>
+<td style="text-align: left;">The final bill was $2,500 after an estimate of $2,500.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Precision</strong></td>
+<td style="text-align: left;">How exact is the statement?</td>
+<td style="text-align: left;">Fifteen days rather than “by the end of the month.”</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Confidence</strong></td>
+<td style="text-align: left;">How much trust is placed in the estimate?</td>
+<td style="text-align: left;">There is a 90% chance of finishing by Friday.</td>
+</tr>
+</tbody>
+</table>
+<section id="range" class="level2">
+<h2 class="anchored" data-anchor-id="range">Range</h2>
+<p>A <strong>range</strong> states the set of outcomes considered plausible. “10–15 days” carries more information than “about two weeks” because it exposes the endpoints. A narrow range is useful only when the available evidence justifies it.</p>
+<p>For a task with a low estimate of 4 days and a high estimate of 12 days:</p>
+<p><span class="math display">\[
+\text{range width}=12-4=8\text{ days}
+\]</span></p>
+<p>The width is not a probability distribution by itself. It is a signal that this task needs discussion, risk analysis or better information.</p>
+</section>
+<section id="accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="accuracy">Accuracy</h2>
+<p><strong>Accuracy</strong> can be judged only after an outcome exists. An estimate of 10–15 days is accurate when the task takes 12 days. If it takes 9 days, the team finished early, but the estimate was still inaccurate because the actual result sat outside the stated range.</p>
+<p>That distinction matters for organizational learning. Calling every early finish “good estimating” prevents the estimating system from being calibrated.</p>
+</section>
+<section id="precision" class="level2">
+<h2 class="anchored" data-anchor-id="precision">Precision</h2>
+<p><strong>Precision</strong> is the degree of exactness. <code>$850</code> is more precise than “less than $1,000.” <code>15 days</code> is more precise than “by month-end.” Precision says nothing about whether the number is correct.</p>
+<p>A point estimate such as <code>17.4 days</code> can be highly precise and badly wrong. A range such as <code>15–22 days</code> can be less precise and much more useful.</p>
+</section>
+<section id="confidence" class="level2">
+<h2 class="anchored" data-anchor-id="confidence">Confidence</h2>
+<p><strong>Confidence</strong> states the level of trust placed in the estimate. It is often expressed as a probability, but the probability should be supported by evidence: comparable work, historical error, simulation or informed expert judgment.</p>
+<p>“We are 90% confident” is incomplete unless the claim states what is 90% likely: finishing by a date, staying below a cost, or landing inside a range.</p>
+<section id="the-conference-registration-system" class="level3 case">
+<h3 class="anchored" data-anchor-id="the-conference-registration-system">The conference registration system</h3>
+<p>The system lead says configuration will take exactly six days. The vendor has changed the payment interface, no one on the team has used the new version, and the six-day number comes from last year’s installation.</p>
+<div class="qn">
+<p>Which parts of the statement concern precision, accuracy and confidence? What range and assumptions would make the estimate more useful?</p>
+</div>
+</section>
+<hr>
+</section>
+</section>
+<section id="lo-5-3-better-estimates-come-from-disciplined-conditions" class="level1">
+<h1>LO 5-3 · Better estimates come from disciplined conditions</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>Estimate quality is shaped before anyone enters a number in a spreadsheet.</p>
+<section id="factors-that-influence-quality" class="level2">
+<h2 class="anchored" data-anchor-id="factors-that-influence-quality">Factors that influence quality</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Why it changes the estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Planning horizon</strong></td>
+<td style="text-align: left;">Distant work contains more unresolved decisions and assumptions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Project complexity</strong></td>
+<td style="text-align: left;">Interactions create nonlinear effort and make omissions more likely.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>People</strong></td>
+<td style="text-align: left;">Experience, skill, optimism and incentives affect judgment.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Project structure</strong></td>
+<td style="text-align: left;">Dedicated teams and clear ownership provide different information from fragmented, part-time work.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Padding</strong></td>
+<td style="text-align: left;">Private reserves hide where uncertainty sits and can inflate the total.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Organizational culture</strong></td>
+<td style="text-align: left;">A culture that punishes bad news receives optimistic numbers rather than honest ranges.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Other conditions</strong></td>
+<td style="text-align: left;">Downtime, holidays, staff availability, currency, inflation and supplier constraints can alter the result.</td>
+</tr>
+</tbody>
+</table>
+<p>New technology deserves special attention. Its difficulty does not always grow in a straight line. A small increase in integration or performance requirements can create a much larger increase in testing and coordination.</p>
+</section>
+<section id="seven-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="seven-guidelines">Seven guidelines</h2>
+<section id="put-responsibility-near-the-work" class="level3">
+<h3 class="anchored" data-anchor-id="put-responsibility-near-the-work">1 · Put responsibility near the work</h3>
+<p>At the work-package level, the people most familiar with the task should prepare or materially contribute to the estimate. Senior review can challenge assumptions, but authority does not replace task knowledge.</p>
+</section>
+<section id="use-more-than-one-informed-view" class="level3">
+<h3 class="anchored" data-anchor-id="use-more-than-one-informed-view">2 · Use more than one informed view</h3>
+<p>Several estimators can expose missing work and individual bias. Independence matters: a second estimate adds little when it merely repeats the first person’s reasoning.</p>
+</section>
+<section id="state-normal-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="state-normal-conditions">3 · State normal conditions</h3>
+<p>An estimate should represent the conditions under which the work is expected to occur. If overtime, a specialist, uninterrupted equipment access or expedited shipping is assumed, say so.</p>
+</section>
+<section id="use-consistent-units" class="level3">
+<h3 class="anchored" data-anchor-id="use-consistent-units">4 · Use consistent units</h3>
+<p>Hours, days and weeks are not interchangeable labels. Distinguish <strong>effort</strong> from <strong>duration</strong>.</p>
+<ul>
+<li><code>40 labor hours</code> describes effort.</li>
+<li><code>5 working days</code> describes elapsed project time under a staffing and calendar assumption.</li>
+</ul>
+<p>Two people do not automatically complete forty hours of effort in two and a half days. The work may be indivisible, require coordination or depend on a resource available only part of the day.</p>
+</section>
+<section id="estimate-work-packages-independently" class="level3">
+<h3 class="anchored" data-anchor-id="estimate-work-packages-independently">5 · Estimate work packages independently</h3>
+<p>Estimate each WBS task from its own content and conditions before schedule dependencies are applied. Chapter 6 will connect tasks into a network. Combining the steps too early makes it difficult to see whether a long duration comes from the work itself or from waiting for other work.</p>
+</section>
+<section id="keep-contingency-visible" class="level3">
+<h3 class="anchored" data-anchor-id="keep-contingency-visible">6 · Keep contingency visible</h3>
+<p>Do not hide an allowance inside every work package. Private padding destroys the relationship between risk and reserve. Estimate the expected task, assess uncertainty explicitly, and place contingency where it can be seen and governed.</p>
+</section>
+<section id="add-risk-assessment-before-commitment" class="level3">
+<h3 class="anchored" data-anchor-id="add-risk-assessment-before-commitment">7 · Add risk assessment before commitment</h3>
+<p>The estimate should name the events and assumptions that could move it. A range without its drivers is difficult to manage; a risk register without cost and schedule effects is disconnected from the baseline.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>A useful estimate record</strong> contains the scope and WBS code, method, estimator, date, units, low/likely/high values, assumptions, exclusions, risk drivers and the source of any rates or ratios.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="lo-5-4-method-follows-the-decision" class="level1">
+<h1>LO 5-4 · Method follows the decision</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>No estimating method is best in every condition. The choice depends on the decision, the available detail, the uncertainty and the cost of preparing the estimate.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 60%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Condition</th>
+<th style="text-align: center;">Top-down tends to fit</th>
+<th style="text-align: center;">Bottom-up tends to fit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Strategic decision making</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cost and time are critical commitments</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">High uncertainty</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Internal, small project</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fixed-price contract</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Customer requires detail</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unstable scope</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>The table describes tendencies, not rules. A project can use a top-down estimate for authorization, then replace it with a bottom-up estimate as the WBS becomes stable.</p>
+<section id="top-down-methods" class="level2">
+<h2 class="anchored" data-anchor-id="top-down-methods">Top-down methods</h2>
+<p>Top-down estimates begin with the project, a major deliverable or a comparable whole. They are fast and useful before detailed design, but they reveal less about individual work packages.</p>
+<section id="consensus" class="level3">
+<h3 class="anchored" data-anchor-id="consensus">Consensus</h3>
+<p>Several knowledgeable people discuss the work and agree on one estimate. The method uses distributed experience, but visible authority and dominant personalities can pull the result toward one view.</p>
+</section>
+<section id="delphi" class="level3">
+<h3 class="anchored" data-anchor-id="delphi">Delphi</h3>
+<p>Experts estimate independently. A facilitator returns the anonymous range and reasoning, and the experts revise through additional rounds. Anonymity reduces pressure to agree with the most senior or forceful person.</p>
+<p>Delphi does not remove the need for relevant expertise. A group can reach a stable answer with the same missing assumption.</p>
+</section>
+<section id="ratio" class="level3">
+<h3 class="anchored" data-anchor-id="ratio">Ratio</h3>
+<p>A ratio applies a historical relationship to the new project.</p>
+<p>If comparable conferences cost about <code>$180 per attendee</code>, a rough estimate for 300 attendees is:</p>
+<p><span class="math display">\[
+300\text{ attendees}\times\$180/\text{attendee}=\$54{,}000
+\]</span></p>
+<p>The result is only as comparable as the projects behind the ratio. Venue type, service level, location and inflation can make “cost per attendee” unstable.</p>
+</section>
+<section id="apportion" class="level3">
+<h3 class="anchored" data-anchor-id="apportion">Apportion</h3>
+<p>The <strong>apportion method</strong> starts with a total project estimate and allocates percentages through the WBS. If historical software projects spend 20% on design, 30% on programming and 40% on testing, those shares provide an early budget structure.</p>
+<figure class="figure">
+<svg viewbox="0 0 760 310" role="img" aria-labelledby="ap-title" style="width:100%;height:auto">
+<title id="ap-title">
+A total project estimate is apportioned across major WBS branches and then into work packages
+</title>
+<g fill="none" stroke="#0F5A4B" stroke-width="1.4"> <path d="M380,72 V105 M125,105 H635 M125,105 V135 M300,105 V135 M470,105 V135 M635,105 V135"></path> <path d="M125,195 V225 M80,225 H170 M80,225 V245 M170,225 V245"></path> </g> <g fill="white" stroke="currentColor" stroke-width="1.3"> <rect x="270" y="25" width="220" height="48" rx="4"></rect> <rect x="45" y="135" width="160" height="60" rx="4"></rect><rect x="220" y="135" width="160" height="60" rx="4"></rect> <rect x="390" y="135" width="160" height="60" rx="4"></rect><rect x="565" y="135" width="140" height="60" rx="4"></rect> <rect x="25" y="245" width="110" height="45" rx="4"></rect><rect x="145" y="245" width="110" height="45" rx="4"></rect> </g> <g fill="currentColor" font-size="14" text-anchor="middle"> <text x="380" y="47" font-weight="600">Project estimate</text><text x="380" y="64">$500,000</text> <text x="125" y="160" font-weight="600">Design</text><text x="125" y="181">20% · $100,000</text> <text x="300" y="160" font-weight="600">Program</text><text x="300" y="181">30% · $150,000</text> <text x="470" y="160" font-weight="600">Test</text><text x="470" y="181">40% · $200,000</text> <text x="635" y="160" font-weight="600">Other</text><text x="635" y="181">10% · $50,000</text> <text x="80" y="273">D-1 · 10%</text><text x="200" y="273">D-2 · 10%</text> </g>
+</svg>
+<figcaption>
+Apportioning preserves the total while distributing it to WBS branches. Each parent’s children must reconcile to the parent.<br><em>Simplified redrawing of the method in Larson &amp; Gray, Ch. 5, Figure 5.1 [1].</em>
+</figcaption>
+</figure>
+<p>The percentages need a relevant history. Allocating last year’s pattern to a project with a different architecture merely makes an unsupported estimate look structured.</p>
+</section>
+<section id="function-points" class="level3">
+<h3 class="anchored" data-anchor-id="function-points">Function points</h3>
+<p>Software and information-system projects can estimate size through <strong>function points</strong>. The estimator counts user-facing elements such as inputs, outputs, inquiries, files and interfaces, then applies complexity weights.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Element</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;">Average</th>
+<th style="text-align: right;">High</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Inputs</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outputs</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Inquiries</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Files</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Interfaces</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<p>The weighted count becomes effort only after it is paired with historical productivity. If five function points normally require one person-month, 500 function points imply about 100 person-months under comparable conditions.</p>
+<p>Effort and duration remain different. Adding people does not always divide duration proportionally because the work may be sequential and coordination grows with the team.</p>
+</section>
+</section>
+<section id="bottom-up-methods" class="level2">
+<h2 class="anchored" data-anchor-id="bottom-up-methods">Bottom-up methods</h2>
+<p>Bottom-up estimates begin with work packages and aggregate upward. They cost more to prepare and require stable detail, but they support budgeting, scheduling, resource planning and accountability.</p>
+<section id="template-method" class="level3">
+<h3 class="anchored" data-anchor-id="template-method">Template method</h3>
+<p>A completed work package becomes a template for similar work. Reuse is strongest when the record contains scope, conditions and actual results rather than a number alone.</p>
+</section>
+<section id="parametric-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="parametric-procedure">Parametric procedure</h3>
+<p>A task-level parameter applies a measured rate to a quantity.</p>
+<p><span class="math display">\[
+120\text{ screens}\times0.75\text{ labor hours per screen}=90\text{ labor hours}
+\]</span></p>
+<p>The unit must match the work, and the rate must come from comparable conditions. A blended rate from simple screens should not be applied to a set dominated by complex interfaces.</p>
+</section>
+<section id="range-estimate" class="level3">
+<h3 class="anchored" data-anchor-id="range-estimate">Range estimate</h3>
+<p>Range estimating records a low, likely and high value for each work package. The spread directs attention to tasks whose uncertainty can materially affect the plan.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">WBS</th>
+<th style="text-align: left;">Work package</th>
+<th style="text-align: right;">Low</th>
+<th style="text-align: right;">Likely</th>
+<th style="text-align: right;">High</th>
+<th style="text-align: right;">Width</th>
+<th style="text-align: left;">Risk driver</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1.2.1</td>
+<td style="text-align: left;">Select venue</td>
+<td style="text-align: right;">3 d</td>
+<td style="text-align: right;">5 d</td>
+<td style="text-align: right;">8 d</td>
+<td style="text-align: right;">5 d</td>
+<td style="text-align: left;">Contract review</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.3.1</td>
+<td style="text-align: left;">Configure registration</td>
+<td style="text-align: right;">4 d</td>
+<td style="text-align: right;">6 d</td>
+<td style="text-align: right;">10 d</td>
+<td style="text-align: right;">6 d</td>
+<td style="text-align: left;">New payment interface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.4.1</td>
+<td style="text-align: left;">Confirm speakers</td>
+<td style="text-align: right;">6 d</td>
+<td style="text-align: right;">10 d</td>
+<td style="text-align: right;">18 d</td>
+<td style="text-align: right;">12 d</td>
+<td style="text-align: left;">Travel and availability</td>
+</tr>
+</tbody>
+</table>
+<p>The likely value is not automatically the arithmetic midpoint. It is the outcome considered most plausible under the stated conditions.</p>
+</section>
+</section>
+<section id="phase-estimating-is-a-hybrid" class="level2">
+<h2 class="anchored" data-anchor-id="phase-estimating-is-a-hybrid">Phase estimating is a hybrid</h2>
+<p><strong>Phase estimating</strong> uses a detailed estimate for the next phase and a rough macro estimate for later phases. When the current phase finishes, the next phase receives a detailed estimate and the remainder is revised.</p>
+<figure class="figure">
+<svg viewbox="0 0 760 330" role="img" aria-labelledby="phase-title" style="width:100%;height:auto">
+<title id="phase-title">
+Detailed estimating advances one phase at a time while later phases retain macro estimates
+</title>
+<g fill="none" stroke="currentColor" stroke-width="1.2"> <rect x="90" y="50" width="600" height="220"></rect> <path d="M210,50 V270 M330,50 V270 M450,50 V270 M570,50 V270"></path> <path d="M90,94 H690 M90,138 H690 M90,182 H690 M90,226 H690"></path> </g> <g fill="currentColor" font-size="13" text-anchor="middle"> <text x="150" y="38">Need</text><text x="270" y="38">Specifications</text><text x="390" y="38">Design</text><text x="510" y="38">Produce</text><text x="630" y="38">Deliver</text> </g> <g font-size="12.5" text-anchor="middle"> <rect x="95" y="101" width="110" height="30" fill="#0F5A4B" opacity="0.16"></rect><text x="150" y="121">detailed</text> <rect x="215" y="101" width="465" height="30" fill="#0F5A4B" opacity="0.07"></rect><text x="445" y="121">macro estimate</text> <rect x="215" y="145" width="110" height="30" fill="#0F5A4B" opacity="0.16"></rect><text x="270" y="165">detailed</text> <rect x="335" y="145" width="345" height="30" fill="#0F5A4B" opacity="0.07"></rect><text x="505" y="165">macro estimate</text> <rect x="335" y="189" width="110" height="30" fill="#0F5A4B" opacity="0.16"></rect><text x="390" y="209">detailed</text> <rect x="455" y="189" width="225" height="30" fill="#0F5A4B" opacity="0.07"></rect><text x="565" y="209">macro estimate</text> </g>
+</svg>
+<figcaption>
+Phase estimating purchases detail when it becomes useful instead of pretending that distant phases are already known.<br><em>Simplified redrawing of Larson &amp; Gray, Ch. 5, Figure 5.3 [1].</em>
+</figcaption>
+</figure>
+<p>This hybrid fits projects in which later work cannot be specified responsibly until earlier results are known.</p>
+<hr>
+</section>
+</section>
+<section id="lo-5-5-cost-classification-changes-what-the-number-means" class="level1">
+<h1>LO 5-5 · Cost classification changes what the number means</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>Project costs fall into three broad categories. The label follows the causal relationship and the organization’s cost system.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 40%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Direct cost</strong></td>
+<td style="text-align: left;">Can be traced to a specific work package.</td>
+<td style="text-align: left;">Task labor, materials, equipment rental, vendor service.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Direct project overhead</strong></td>
+<td style="text-align: left;">Supports the project as a whole rather than one work package.</td>
+<td style="text-align: left;">Project manager, temporary project office, project-specific systems.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>General and administrative overhead</strong></td>
+<td style="text-align: left;">Supports the organization across projects and operations.</td>
+<td style="text-align: left;">Corporate HR, finance, legal service, executive management, facilities.</td>
+</tr>
+</tbody>
+</table>
+<p>The same object can receive different classifications in different organizations. A dedicated conference laptop charged to registration is direct. The standard laptops used by a central IT department across every project are overhead.</p>
+<section id="three-views-of-project-cost" class="level2">
+<h2 class="anchored" data-anchor-id="three-views-of-project-cost">Three views of project cost</h2>
+<p>A cost report can answer three different questions.</p>
+<ul>
+<li><strong>Scheduled budget:</strong> what the baseline planned to spend by this date.</li>
+<li><strong>Actual cost:</strong> what has already been recorded as spent.</li>
+<li><strong>Committed cost:</strong> what the project has obligated through contracts, purchase orders or other commitments, even if the invoice has not arrived.</li>
+</ul>
+<figure class="figure">
+<svg viewbox="0 0 760 360" role="img" aria-labelledby="cost-title" style="width:100%;height:auto">
+<title id="cost-title">
+Committed cost rises before actual cost and the scheduled budget, while all approach the same total
+</title>
+<g stroke="currentColor" stroke-width="1.3" fill="none"> <path d="M90,30 V300 H690"></path> </g> <g fill="none" stroke="#0F5A4B" stroke-width="3"> <path d="M95,292 C180,260 230,205 310,135 S455,55 680,45"></path> <path d="M95,296 C200,285 270,240 355,185 S505,85 680,47" stroke-dasharray="10 7"></path> <path d="M95,298 C220,295 330,265 420,205 S560,90 680,50" stroke-dasharray="3 7"></path> </g> <g fill="currentColor" font-size="13"> <text x="115" y="326">project duration</text><text x="25" y="175" transform="rotate(-90 25 175)">cost</text> </g> <g fill="currentColor" font-size="13"> <line x1="500" y1="235" x2="545" y2="235" stroke="#0F5A4B" stroke-width="3"></line><text x="555" y="240">committed cost</text> <line x1="500" y1="260" x2="545" y2="260" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="10 7"></line><text x="555" y="265">actual cost</text> <line x1="500" y1="285" x2="545" y2="285" stroke="#0F5A4B" stroke-width="3" stroke-dasharray="3 7"></line><text x="555" y="290">scheduled budget</text> </g>
+</svg>
+<figcaption>
+A purchase commitment can reveal future spending before the invoice appears in actual cost.<br><em>Concept redrawn from Larson &amp; Gray, Ch. 5, Figure 5.6 [1].</em>
+</figcaption>
+</figure>
+<p>Looking only at actual cost can create false comfort. A project may appear under budget while signed contracts have already consumed the remaining authorization.</p>
+<hr>
+</section>
+</section>
+<section id="lo-5-6-actuals-create-estimating-memory" class="level1">
+<h1>LO 5-6 · Actuals create estimating memory</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>An estimating database stores the connection between what was expected and what happened. It should serve the way work is estimated: by project type, WBS branch, cost code, technology, location or another useful class.</p>
+<p>At minimum, preserve:</p>
+<ul>
+<li>the WBS code and scope of the completed work;</li>
+<li>the original estimate, range and method;</li>
+<li>the estimator, date, units and assumptions;</li>
+<li>actual labor, material, equipment, duration and cost;</li>
+<li>changes in scope or operating conditions;</li>
+<li>realized risks and the contingency used; and</li>
+<li>ratios or productivity measures that can be reused.</li>
+</ul>
+<figure class="figure">
+<svg viewbox="0 0 760 290" role="img" aria-labelledby="db-title" style="width:100%;height:auto">
+<title id="db-title">
+Estimates and actual outcomes cycle back into templates, rates and future ranges
+</title>
+<defs> <marker id="db-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <g fill="none" stroke="#0F5A4B" stroke-width="1.7" marker-end="url(#db-ar)"> <path d="M180,120 H250"></path><path d="M390,120 H460"></path><path d="M600,150 C600,240 160,240 160,170"></path> </g> <g stroke="currentColor" stroke-width="1.3"> <rect x="35" y="85" width="145" height="70" rx="4" fill="white"></rect><rect x="250" y="85" width="140" height="70" rx="4" fill="white"></rect> <rect x="460" y="85" width="140" height="70" rx="4" fill="white"></rect><rect x="605" y="85" width="120" height="70" rx="4" fill="#0F5A4B" opacity="0.12"></rect> </g> <g fill="currentColor" font-size="14" text-anchor="middle"> <text x="108" y="112" font-weight="600">Estimate</text><text x="108" y="134">method · range · assumptions</text> <text x="320" y="112" font-weight="600">Execute</text><text x="320" y="134">conditions · changes</text> <text x="530" y="112" font-weight="600">Compare</text><text x="530" y="134">estimate · actual</text> <text x="665" y="112" font-weight="600">Update</text><text x="665" y="134">rates · templates</text> </g>
+</svg>
+<figcaption>
+An estimate becomes reusable evidence only when the actual outcome and its conditions return to the database.<br><em>Process constructed from Larson &amp; Gray, Ch. 5, Figure 5.7 [1].</em>
+</figcaption>
+</figure>
+<p>A record that says only “registration system: 120 hours” cannot support a new estimate. The next estimator must know what functions were included, who performed the work, which platform was used and what changed during execution.</p>
+<hr>
+</section>
+<section id="lo-5-7-megaprojects-need-an-outside-view" class="level1">
+<h1>LO 5-7 · Megaprojects need an outside view</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>Large projects combine long horizons, political commitment, novel interfaces and enormous sunk costs. Their estimates can be distorted by optimism, strategic understatement and the belief that the current project is unlike the failed projects in the historical record.</p>
+<p><strong>Reference class forecasting (RCF)</strong> counters that inside view with outcomes from comparable completed projects.</p>
+<section id="three-steps" class="level2">
+<h2 class="anchored" data-anchor-id="three-steps">Three steps</h2>
+<ol type="1">
+<li><strong>Select a reference class.</strong> Identify completed projects similar enough to inform the current decision: rail tunnels, cargo ships, hospitals or enterprise-system replacements.</li>
+<li><strong>Build an outcome distribution.</strong> Arrange actual results, such as cost overrun as a percentage of the original estimate, from low to high.</li>
+<li><strong>Adjust the forecast.</strong> Place the proposed project against that distribution and require evidence before assuming it will outperform the class.</li>
+</ol>
+<p>If a proposed tunnel carries a <code>$100 million</code> estimate and comparable regional tunnels averaged a <code>34%</code> overrun, the outside-view forecast is:</p>
+<p><span class="math display">\[
+\$100\text{ million}\times1.34=\$134\text{ million}
+\]</span></p>
+<p>The uplift does not prove that the project will cost exactly $134 million. It changes the burden of proof. Project advocates must explain why the current project should beat the observed base rate.</p>
+</section>
+<section id="what-the-outside-view-changes" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-outside-view-changes">What the outside view changes</h2>
+<p>RCF can:</p>
+<ul>
+<li>reduce optimism and uniqueness bias;</li>
+<li>make political or strategic understatement harder to ignore;</li>
+<li>test whether funding is adequate;</li>
+<li>provide a basis for contingency;</li>
+<li>improve accountability for the original forecast; and</li>
+<li>make alternatives comparable on a more realistic basis.</li>
+</ul>
+<p>The reference class must be selected carefully. A broad class may hide important differences; a class narrowed until the current project looks unique defeats the method.</p>
+<hr>
+</section>
+</section>
+<section id="lo-5-8-a-white-elephant-survives-its-business-case" class="level1">
+<h1>LO 5-8 · A white elephant survives its business case</h1>
+<p><em>Following Larson &amp; Gray, Ch. 5 [1].</em></p>
+<p>A <strong>white elephant</strong> is a project or asset whose cost of completion, ownership or operation is out of proportion to the value it delivers, yet which remains difficult to abandon.</p>
+<p>Common signals include:</p>
+<ul>
+<li>demand or benefits have fallen below the original case;</li>
+<li>operating and maintenance costs require a continuing subsidy;</li>
+<li>prestige or political commitment replaces evidence;</li>
+<li>sunk cost is used to justify additional future spending; and</li>
+<li>no credible exit, repurpose or stop rule exists.</li>
+</ul>
+<p>The key decision is forward-looking:</p>
+<blockquote class="blockquote">
+<p>With the evidence available today, would we spend the remaining money to obtain the remaining benefit?</p>
+</blockquote>
+<p>Money already spent may explain how the project arrived at the decision point. It does not by itself justify the next dollar.</p>
+<section id="the-event-venue" class="level3 case">
+<h3 class="anchored" data-anchor-id="the-event-venue">The event venue</h3>
+<p>A city begins a large event venue after forecasting strong regional demand. Construction costs rise, two anchor events withdraw, and the revised operating forecast requires an annual subsidy. Cancelling would make the partially completed structure highly visible.</p>
+<div class="qn">
+<p>Which evidence should determine whether the city completes, reduces, repurposes or stops the project? Which parts of the original estimate no longer belong in the decision?</p>
+</div>
+</section>
+<hr>
+</section>
+<section id="lo-a5-1-learning-changes-repeated-task-estimates" class="level1">
+<h1>LO A5-1 · Learning changes repeated-task estimates</h1>
+<p><em>Following the Chapter 5 appendix in Larson &amp; Gray [1].</em></p>
+<p>When a task is repeated, people and systems often become faster. Setup improves, unnecessary motion disappears and coordination becomes routine. A <strong>learning curve</strong> estimates that improvement.</p>
+<p>One common unit-time form is:</p>
+<p><span class="math display">\[
+T_n=T_1n^b
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(T_n\)</span> is the time for the <span class="math inline">\(n\)</span>th unit;</li>
+<li><span class="math inline">\(T_1\)</span> is the time for the first unit;</li>
+<li><span class="math inline">\(b=\ln(r)/\ln(2)\)</span>; and</li>
+<li><span class="math inline">\(r\)</span> is the learning rate, written as a decimal.</li>
+</ul>
+<p>With an 80% learning rate, doubling cumulative output reduces the modeled unit time to 80% of its previous level. If the first unit takes 10 hours, the second takes 8 hours and the fourth takes 6.4 hours under this unit-time model.</p>
+<p>Learning curves require genuinely repeated work under comparable conditions. They do not justify reducing the estimate for unique design work, and a process or technology change may reset the curve.</p>
+<p>State which model is being used. A unit-time curve and a cumulative-average curve use related mathematics but answer different questions.</p>
+<hr>
+</section>
+<section id="from-scope-to-a-defendable-estimate" class="level1">
+<h1>From scope to a defendable estimate</h1>
+<p>Chapter 5 joins the WBS to the budget and schedule.</p>
+<ol type="1">
+<li><strong>Start with defined work.</strong> Estimating a vague scope produces a precise-looking guess.</li>
+<li><strong>Choose a method that fits the decision.</strong> Early authorization and fixed-price commitment need different evidence.</li>
+<li><strong>State range, units and confidence.</strong> A point estimate alone hides the claim being made.</li>
+<li><strong>Keep assumptions and contingency visible.</strong> Hidden padding cannot be governed.</li>
+<li><strong>Classify costs consistently.</strong> Direct cost, project overhead and G&amp;A answer different questions.</li>
+<li><strong>Compare estimate with actual.</strong> Completed work improves the next estimate only when the outcome returns to the database.</li>
+<li><strong>Use the outside view for large commitments.</strong> Reference classes test whether the project is relying on optimism.</li>
+</ol>
+<section id="thursday-build-and-challenge-a-conference-estimate" class="level2 studio">
+<h2 class="anchored" data-anchor-id="thursday-build-and-challenge-a-conference-estimate">Thursday · Build and challenge a conference estimate</h2>
+<p>Import the conference workbook into Smartsheet, recreate its parent-child hierarchy, apply the supplied column formulas, improve weak assumptions and re-estimate one high-risk work package. Then compare the revised bottom-up total with the sponsor’s top-down cap and recommend an action.</p>
+<p><a href="../labs/lab-05.html">Open Studio 5 →</a></p>
+</section>
+<hr>
+</section>
+<section id="check-your-understanding" class="level1">
+<h1>Check your understanding</h1>
+<ol type="1">
+<li>Why can an early finish still reveal an inaccurate estimate?</li>
+<li>Distinguish range, precision and confidence using one estimate.</li>
+<li>Why should work-package estimators state normal operating conditions?</li>
+<li>What is lost when every estimator hides contingency inside a task estimate?</li>
+<li>Under which conditions would a top-down estimate be preferable to a bottom-up estimate?</li>
+<li>What makes a historical ratio transferable to a new project?</li>
+<li>Why does an effort estimate not determine duration by itself?</li>
+<li>Distinguish a direct cost, direct project overhead and G&amp;A overhead.</li>
+<li>Why can committed cost be more informative than actual cost early in a project?</li>
+<li>What information must accompany an actual result before it belongs in an estimating database?</li>
+<li>How does reference class forecasting change the burden of proof for a megaproject estimate?</li>
+<li>Why should a sunk cost not determine whether the next dollar is spent?</li>
+</ol>
+<hr>
+</section>
+<section id="where-this-sits-in-the-course" class="level1">
+<h1>Where this sits in the course</h1>
+<p><strong>Week 4</strong> defined the result and decomposed it into work packages. <strong>Week 5</strong> attaches credible time, effort and cost to those packages. Week 6 will sequence the work into a network and calculate the schedule.</p>
+<hr>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 5 and Appendix 5.1.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,7 +1492,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
