@@ -24,6 +24,7 @@
 const fs = require("fs");
 const path = require("path");
 const PptxGenJS = require("pptxgenjs");
+const JSZip = require("jszip");
 
 const GREEN = "0F5A4B";      // $primary, matches styles.scss
 const INK = "1A2022";        // $body-color
@@ -100,8 +101,9 @@ function parseBlocks(lines) {
       const raw = buf.join("\n");
       const t = /<title[^>]*>([\s\S]*?)<\/title>/.exec(raw);
       const svg = /<svg[\s\S]*<\/svg>/.exec(raw);
+      const img = /<img\b[^>]*\bsrc="([^"]+\.svg)"/.exec(raw);
       blocks.push({ type: "figure", text: t ? t[1].trim() : "Figure",
-                    svg: svg ? svg[0] : null });
+                    svg: svg ? svg[0] : null, svgSource: img ? img[1] : null });
       continue;
     }
 
@@ -350,6 +352,26 @@ function figureBox(svg, maxW, maxH) {
 
 // ---------------------------------------------------------------- driver
 
+/**
+ * PptxGenJS 4.0.1 can emit content-type declarations for one slide master per
+ * slide even though the package contains only slideMaster1.xml. PowerPoint is
+ * tolerant of those stale declarations, but they are invalid OPC targets.
+ * Remove only declarations whose slide-master part is genuinely absent.
+ */
+async function removePhantomSlideMasterDeclarations(fileName) {
+  const zip = await JSZip.loadAsync(fs.readFileSync(fileName));
+  const typesPath = "[Content_Types].xml";
+  const types = await zip.file(typesPath).async("string");
+  const cleaned = types.replace(
+    /<Override PartName="\/(ppt\/slideMasters\/slideMaster\d+\.xml)" ContentType="application\/vnd\.openxmlformats-officedocument\.presentationml\.slideMaster\+xml"\/>/g,
+    (declaration, partName) => (zip.file(partName) ? declaration : ""),
+  );
+  if (cleaned === types) return;
+  zip.file(typesPath, cleaned);
+  const buffer = await zip.generateAsync({ type: "nodebuffer", compression: "DEFLATE" });
+  fs.writeFileSync(fileName, buffer);
+}
+
 async function build(src, destDir) {
   const [meta, body] = frontMatter(fs.readFileSync(src, "utf8"));
   const pptx = new PptxGenJS();
@@ -359,6 +381,11 @@ async function build(src, destDir) {
 
   const slides = parseSlides(body);
   const blocks = slides.flatMap((s) => s.blocks);
+  for (const block of blocks.filter((b) => b.svgSource)) {
+    block.svg = fs.readFileSync(path.resolve(path.dirname(src), block.svgSource), "utf8");
+    const title = /<title[^>]*>([\s\S]*?)<\/title>/.exec(block.svg);
+    if (title) block.text = title[1].trim();
+  }
   const drawn = await renderFigures(blocks);
   const figs = blocks.filter((b) => b.type === "figure").length;
   if (figs && !drawn)
@@ -372,7 +399,9 @@ async function build(src, destDir) {
   }
   fs.mkdirSync(destDir, { recursive: true });
   const out = path.join(destDir, path.basename(src, ".qmd") + ".pptx");
-  return pptx.writeFile({ fileName: out }).then(() => out);
+  await pptx.writeFile({ fileName: out });
+  await removePhantomSlideMasterDeclarations(out);
+  return out;
 }
 
 const root = path.resolve(__dirname, "..");

@@ -1,0 +1,220 @@
+---
+title: "Studio 6 · Build and audit a CPM schedule"
+subtitle: "Week 6 · Developing a Project Schedule · Larson Ch. 6"
+week: 6
+release: "2026-09-28"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA6</strong> — one PDF containing the completed CPM table, network sketch, Smartsheet evidence and schedule recommendation</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>Build the network, calculate both passes, diagnose slack, validate in Smartsheet and explain one schedule decision</dd>
+<dt>Tools</dt><dd>Week 6 workbook, paper or tablet for the network sketch, Smartsheet and Gemini</dd>
+<dt>Workbook</dt><dd><a href="../files/week-06-cpm-studio.xlsx">Week 6 CPM studio workbook</a></dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · complete the manual pass first, then use AI to audit reasoning, verify every claim, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-06.qmd">Week 6 — Developing a Project Schedule</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Complete the forward and backward passes before asking Gemini or Smartsheet to check the result. You remain responsible for every dependency, calculation and recommendation.
+:::
+
+The project is the same manufacturing conference used in Week 5. The estimates have now become durations. Your task is to convert the work into a defensible schedule and explain which delay deserves attention.
+
+Use the [annotated network and worked calculations](../weeks/week-06.qmd#lo-6-2-activity-on-node-networks) as a reference. Reconstruct each number from its predecessors and successors so that you can explain a change without relying on a memorized baseline.
+
+| Symbol | Enter in the workbook | Rule for the baseline |
+|:--:|:--|:--|
+| ES, EF | Earliest feasible activity window | Largest predecessor EF; then add duration |
+| LS, LF | Latest window that preserves the finish | Smallest successor LS; then subtract duration |
+| TS | Total slack | LS − ES = LF − EF |
+| FS | Free slack | Smallest successor ES − EF |
+
+Assume fixed workday durations, sufficient resources, and finish-to-start relationships with zero lag unless a scenario explicitly changes them. Time zero is an elapsed-time boundary. Do not add one day at a handoff. For I's free slack, use a zero-duration finish milestone at the calculated project finish.
+
+::: {.part}
+### Part 1 · Draw the network — 15 minutes
+
+Download the [Week 6 CPM studio workbook](../files/week-06-cpm-studio.xlsx) and open **CPM Worksheet**.
+
+1. Read all nine activities, immediate predecessors and durations.
+2. Draw one activity-on-node network from left to right.
+3. Label every node with its activity ID.
+4. Mark burst and merge activities.
+5. Run the construction checks:
+   - every activity has a unique ID;
+   - no activity begins before every required predecessor finishes;
+   - no loops appear;
+   - every activity connects to the project start and finish; and
+   - the network contains no conditional branch.
+
+Write one sentence explaining why activity G needs both listed predecessors.
+
+Add a short definition of done for G. Then identify one dependency that is required by the work and one resource assumption that must hold for parallel work to be feasible.
+:::
+
+::: {.part}
+### Part 2 · Complete the forward pass — 15 minutes
+
+Use time zero as the project start. Enter **ES** and **EF** for every activity in the yellow cells.
+
+For each activity:
+
+$$
+EF=ES+D
+$$
+
+At a merge, use the largest predecessor early finish.
+
+$$
+ES=\max(EF_1,EF_2,\ldots,EF_n)
+$$
+
+Record the earliest project finish. Then list every complete start-to-finish path and calculate its duration. Do not identify the critical path by appearance. Use the path durations.
+
+Show the candidate predecessor EF values at G and H. Underline the controlling value at each merge and explain in one sentence why the smaller value would violate the model.
+:::
+
+::: {.part}
+### Part 3 · Complete the backward pass and slack — 20 minutes
+
+Set the last activity's late finish equal to the earliest project finish. Work from right to left.
+
+$$
+LS=LF-D
+$$
+
+When an activity has several successors, use the smallest successor late start.
+
+$$
+LF=\min(LS_1,LS_2,\ldots,LS_n)
+$$
+
+Calculate both forms of slack.
+
+$$
+TS=LS-ES=LF-EF
+$$
+
+$$
+FS=\min(ES_{successors})-EF
+$$
+
+Mark the critical activities and answer these questions in the workbook.
+
+1. Which path controls the project finish?
+2. Which noncritical activity has total slack but no free slack?
+3. Which activities can use all of their slack without changing an immediate successor's early start?
+4. Why must total slack be coordinated across a path?
+
+Before moving to software, check EF − ES = duration, LF − LS = duration, and LS − ES = LF − EF for every row. Show the successor LS values considered at C and explain why the minimum controls.
+:::
+
+::: {.part}
+### Part 4 · Use Smartsheet as an audit — 15 minutes
+
+Open **Smartsheet Import** in the workbook.
+
+1. In Smartsheet, select **+ Create → Import → Microsoft Excel**.
+2. Import the **Smartsheet Import** worksheet.
+3. Keep **Activity** as the primary column.
+4. Confirm that **Duration** and **Predecessors** imported as project columns.
+5. Open Project Settings, enable dependencies and use a Monday-to-Friday workweek.
+6. Set the project start to **1 October 2026**.
+7. Compare the calculated finish and critical path with your manual result.
+
+The imported predecessor values are **Smartsheet row numbers**, not the letter IDs. A must remain the first data row, B the second, and so on. If import inserts a title or an extra row, verify every predecessor against the letter-based activity list before trusting the result. Set the two date columns to Date type and designate them as the project start and end columns when enabling dependencies. Leave holidays empty for this exercise and record that choice.
+
+Compare the manual elapsed **workday duration** with the number of scheduled working days. Do not compare it with a simple subtraction of calendar dates. Weekends and inclusive date displays can otherwise look like arithmetic errors.
+
+Record every difference before changing your work. Classify the cause as one of these:
+
+- arithmetic error;
+- wrong predecessor;
+- wrong duration;
+- work-calendar difference; or
+- software configuration.
+
+Smartsheet validates the schedule you entered. A matching result does not prove that the dependency logic is complete. See the [Smartsheet dependency guide](https://help.smartsheet.com/articles/765727-enabling-dependencies-using-predecessors) for the settings and predecessor conventions.
+:::
+
+::: {.part}
+### Part 5 · Test individual and combined delays — 15 minutes
+
+Return to the original schedule before each test.
+
+**Test A.** Increase activity D from 4 to 7 days.
+
+**Test B.** Increase activity E from 8 to 11 days.
+
+**Test C.** Increase B from 5 to 8 days **and** D from 4 to 7 days in the same scenario. This tests whether two activities can each use the branch's original slack independently.
+
+For each test, record:
+
+- the new project duration;
+- the activity that controls the next merge;
+- whether the critical path changes; and
+- the amount of project delay.
+
+Explain why equal duration increases can produce different project effects.
+
+Use this comparison structure in the **Reflection** worksheet. Leave each scenario independent of the preceding test.
+
+| Scenario | Changed duration(s) | Project duration | Project delay | Controlling predecessor at G | Critical path |
+|:--|:--|:--|:--|:--|:--|
+| Baseline | Original values | Your result | — | Your result | Your result |
+| Test A | D = 7 | Your result | Your result | Your result | Your result |
+| Test B | E = 11 | Your result | Your result | Your result | Your result |
+| Test C | B = 8, D = 7 | Your result | Your result | Your result | Your result |
+
+For Test C, state how much extra time was requested from the venue branch and compare it with the branch's original total slack.
+:::
+
+::: {.part}
+### Part 6 · Challenge one overlap proposal — 10 minutes
+
+The program lead proposes starting speaker invitations two days after program drafting begins instead of waiting for the draft to finish.
+
+Represent the proposal as a relationship and lag. Then use Gemini as an independent reviewer.
+
+Calculate the earliest start of E permitted by this relationship using C's baseline ES. State what usable program information must exist by that time. A start-to-start link alone does not guarantee that later changes in the program will be reflected in completed speaker work.
+
+```text
+Audit this proposed project-schedule relationship:
+
+Predecessor: Draft program, duration 6 workdays
+Successor: Confirm speakers, duration 8 workdays
+Proposal: Begin the successor 2 workdays after the predecessor starts
+
+State the relationship type and lag. Identify the assumption required for the
+overlap to be feasible, one rework risk, and one observable condition that
+should trigger a return to finish-to-start. Do not calculate a new project
+finish unless I provide the complete network.
+```
+
+Accept, revise or reject the proposal. Support the decision with the work logic, not the desire for an earlier finish.
+:::
+
+::: {.part}
+### Part 7 · Save and upload
+
+Create one PDF in this order.
+
+- [ ] completed CPM table with ES, EF, LS, LF, total slack and free slack
+- [ ] activity-on-node network sketch
+- [ ] path calculations and identified critical path
+- [ ] Smartsheet screenshot showing dependencies, dates and critical path
+- [ ] results of all three delay scenarios, including the shared-slack explanation
+- [ ] overlap recommendation of no more than 100 words
+- [ ] AI acknowledgement with tool, transcript link, changes and verification
+
+Save the workbook, Smartsheet export, screenshot and PDF in `IMSE456/studio-06/` on your NDSU Google Drive or OneDrive.
+
+Upload the PDF to Blackboard before you leave the session. Name it `SA6_yourlastname.pdf`.
+:::
+
+::: {.callout-note appearance="simple"}
+**If Smartsheet is unavailable**, complete the manual schedule and all three delay scenarios in the workbook. State which software checks could not be performed, preserve the file, and complete those checks after access is restored.
+:::
