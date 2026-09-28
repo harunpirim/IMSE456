@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Schedule – IMSE 456/656</title>
+<title>Studio 6 · Build and audit a CPM schedule – IMSE 456/656</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1923bcff4dd3134c996d2ac37cc691ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cfab33a6bf2d0065be96bcd7a6150913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1923bcff4dd3134c996d2ac37cc691ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cfab33a6bf2d0065be96bcd7a6150913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">IMSE 456/656</span>
     </a>
   </div>
@@ -89,23 +118,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./schedule.html" aria-current="page"> 
+    <a class="nav-link" href="../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ai.html"> 
+    <a class="nav-link" href="../ai.html"> 
 <span class="menu-text">AI Studio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project.html"> 
+    <a class="nav-link" href="../project.html"> 
 <span class="menu-text">Final Project</span></a>
   </li>  
 </ul>
@@ -132,8 +161,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Schedule</h1>
-<p class="subtitle lead">IMSE 456/656 · Fall 2026</p>
+<h1 class="title">Studio 6 · Build and audit a CPM schedule</h1>
+<p class="subtitle lead">Week 6 · Developing a Project Schedule · Larson Ch. 6</p>
 </div>
 
 
@@ -150,200 +179,300 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Tuesday and Thursday, 3:30–4:45 p.m., Ag Hill Center 240. Notes, slides, and studio sheets appear in the last column as each week is posted.</p>
+<div class="week-meta">
+<dl>
+<dt>
+Deliverable
+</dt>
+<dd>
+<strong>SA6</strong> — one PDF containing the completed CPM table, network sketch, Smartsheet evidence and schedule recommendation
+</dd>
+<dt>
+Studio
+</dt>
+<dd>
+Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback
+</dd>
+<dt>
+Session
+</dt>
+<dd>
+Build the network, calculate both passes, diagnose slack, validate in Smartsheet and explain one schedule decision
+</dd>
+<dt>
+Tools
+</dt>
+<dd>
+Week 6 workbook, paper or tablet for the network sketch, Smartsheet and Gemini
+</dd>
+<dt>
+Workbook
+</dt>
+<dd>
+<a href="../files/week-06-cpm-studio.xlsx">Week 6 CPM studio workbook</a>
+</dd>
+<dt>
+AI use
+</dt>
+<dd>
+<strong>Level 4 — full use with documentation</strong> · complete the manual pass first, then use AI to audit reasoning, verify every claim, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
+</dd>
+<dt>
+Week page
+</dt>
+<dd>
+<a href="../weeks/week-06.html">Week 6 — Developing a Project Schedule</a>
+</dd>
+</dl>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>This is individual work.</strong> Complete the forward and backward passes before asking Gemini or Smartsheet to check the result. You remain responsible for every dependency, calculation and recommendation.</p>
+</div>
+</div>
+</div>
+<p>The project is the same manufacturing conference used in Week 5. The estimates have now become durations. Your task is to convert the work into a defensible schedule and explain which delay deserves attention.</p>
+<p>Use the <a href="../weeks/week-06.html#lo-6-2-activity-on-node-networks">annotated network and worked calculations</a> as a reference. Reconstruct each number from its predecessors and successors so that you can explain a change without relying on a memorized baseline.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 6%">
-<col style="width: 18%">
-<col style="width: 36%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 30%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Wk</th>
-<th style="text-align: left;">Sessions</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Reading</th>
-<th style="text-align: left;">Resources</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Enter in the workbook</th>
+<th style="text-align: left;">Rule for the baseline</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="tabular">01</span></td>
-<td style="text-align: left;"><span class="tabular">25 and 27 August</span></td>
-<td style="text-align: left;">Modern Project Management</td>
-<td style="text-align: left;">Larson Ch. 1</td>
-<td style="text-align: left;"><a href="./weeks/week-01.html">notes</a> · <a href="./slides/week-01.html">slides</a> · <a href="./labs/lab-01.html">studio</a></td>
+<td style="text-align: center;">ES, EF</td>
+<td style="text-align: left;">Earliest feasible activity window</td>
+<td style="text-align: left;">Largest predecessor EF; then add duration</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="tabular">02</span></td>
-<td style="text-align: left;"><span class="tabular">1 and 3 September</span></td>
-<td style="text-align: left;">Organization Strategy and Project Selection</td>
-<td style="text-align: left;">Larson Ch. 2</td>
-<td style="text-align: left;"><a href="./weeks/week-02.html">notes</a> · <a href="./slides/week-02.html">slides</a> · <a href="./labs/lab-02.html">studio</a> · <a href="files/project-proposal-form.xlsx">proposal form</a></td>
+<td style="text-align: center;">LS, LF</td>
+<td style="text-align: left;">Latest window that preserves the finish</td>
+<td style="text-align: left;">Smallest successor LS; then subtract duration</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="tabular">03</span></td>
-<td style="text-align: left;"><span class="tabular">8 and 10 September</span></td>
-<td style="text-align: left;">Organization: Structure and Culture</td>
-<td style="text-align: left;">Larson Ch. 3</td>
-<td style="text-align: left;"><a href="./weeks/week-03.html">notes</a> · <a href="./slides/week-03.html">slides</a> · <a href="./labs/lab-03.html">studio</a></td>
+<td style="text-align: center;">TS</td>
+<td style="text-align: left;">Total slack</td>
+<td style="text-align: left;">LS − ES = LF − EF</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="tabular">04</span></td>
-<td style="text-align: left;"><span class="tabular">15 and 17 September</span></td>
-<td style="text-align: left;">Defining the Project</td>
-<td style="text-align: left;">Larson Ch. 4</td>
-<td style="text-align: left;"><a href="./weeks/week-04.html">notes</a> · <a href="./slides/week-04.html">slides</a> · <a href="./labs/lab-04.html">studio</a></td>
+<td style="text-align: center;">FS</td>
+<td style="text-align: left;">Free slack</td>
+<td style="text-align: left;">Smallest successor ES − EF</td>
 </tr>
+</tbody>
+</table>
+<p>Assume fixed workday durations, sufficient resources, and finish-to-start relationships with zero lag unless a scenario explicitly changes them. Time zero is an elapsed-time boundary. Do not add one day at a handoff. For I’s free slack, use a zero-duration finish milestone at the calculated project finish.</p>
+<section id="part-1-draw-the-network-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-draw-the-network-15-minutes">Part 1 · Draw the network — 15 minutes</h3>
+<p>Download the <a href="../files/week-06-cpm-studio.xlsx">Week 6 CPM studio workbook</a> and open <strong>CPM Worksheet</strong>.</p>
+<ol type="1">
+<li>Read all nine activities, immediate predecessors and durations.</li>
+<li>Draw one activity-on-node network from left to right.</li>
+<li>Label every node with its activity ID.</li>
+<li>Mark burst and merge activities.</li>
+<li>Run the construction checks:
+<ul>
+<li>every activity has a unique ID;</li>
+<li>no activity begins before every required predecessor finishes;</li>
+<li>no loops appear;</li>
+<li>every activity connects to the project start and finish; and</li>
+<li>the network contains no conditional branch.</li>
+</ul></li>
+</ol>
+<p>Write one sentence explaining why activity G needs both listed predecessors.</p>
+<p>Add a short definition of done for G. Then identify one dependency that is required by the work and one resource assumption that must hold for parallel work to be feasible.</p>
+</section>
+<section id="part-2-complete-the-forward-pass-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-complete-the-forward-pass-15-minutes">Part 2 · Complete the forward pass — 15 minutes</h3>
+<p>Use time zero as the project start. Enter <strong>ES</strong> and <strong>EF</strong> for every activity in the yellow cells.</p>
+<p>For each activity:</p>
+<p><span class="math display">\[
+EF=ES+D
+\]</span></p>
+<p>At a merge, use the largest predecessor early finish.</p>
+<p><span class="math display">\[
+ES=\max(EF_1,EF_2,\ldots,EF_n)
+\]</span></p>
+<p>Record the earliest project finish. Then list every complete start-to-finish path and calculate its duration. Do not identify the critical path by appearance. Use the path durations.</p>
+<p>Show the candidate predecessor EF values at G and H. Underline the controlling value at each merge and explain in one sentence why the smaller value would violate the model.</p>
+</section>
+<section id="part-3-complete-the-backward-pass-and-slack-20-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-3-complete-the-backward-pass-and-slack-20-minutes">Part 3 · Complete the backward pass and slack — 20 minutes</h3>
+<p>Set the last activity’s late finish equal to the earliest project finish. Work from right to left.</p>
+<p><span class="math display">\[
+LS=LF-D
+\]</span></p>
+<p>When an activity has several successors, use the smallest successor late start.</p>
+<p><span class="math display">\[
+LF=\min(LS_1,LS_2,\ldots,LS_n)
+\]</span></p>
+<p>Calculate both forms of slack.</p>
+<p><span class="math display">\[
+TS=LS-ES=LF-EF
+\]</span></p>
+<p><span class="math display">\[
+FS=\min(ES_{successors})-EF
+\]</span></p>
+<p>Mark the critical activities and answer these questions in the workbook.</p>
+<ol type="1">
+<li>Which path controls the project finish?</li>
+<li>Which noncritical activity has total slack but no free slack?</li>
+<li>Which activities can use all of their slack without changing an immediate successor’s early start?</li>
+<li>Why must total slack be coordinated across a path?</li>
+</ol>
+<p>Before moving to software, check EF − ES = duration, LF − LS = duration, and LS − ES = LF − EF for every row. Show the successor LS values considered at C and explain why the minimum controls.</p>
+</section>
+<section id="part-4-use-smartsheet-as-an-audit-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-4-use-smartsheet-as-an-audit-15-minutes">Part 4 · Use Smartsheet as an audit — 15 minutes</h3>
+<p>Open <strong>Smartsheet Import</strong> in the workbook.</p>
+<ol type="1">
+<li>In Smartsheet, select <strong>+ Create → Import → Microsoft Excel</strong>.</li>
+<li>Import the <strong>Smartsheet Import</strong> worksheet.</li>
+<li>Keep <strong>Activity</strong> as the primary column.</li>
+<li>Confirm that <strong>Duration</strong> and <strong>Predecessors</strong> imported as project columns.</li>
+<li>Open Project Settings, enable dependencies and use a Monday-to-Friday workweek.</li>
+<li>Set the project start to <strong>1 October 2026</strong>.</li>
+<li>Compare the calculated finish and critical path with your manual result.</li>
+</ol>
+<p>The imported predecessor values are <strong>Smartsheet row numbers</strong>, not the letter IDs. A must remain the first data row, B the second, and so on. If import inserts a title or an extra row, verify every predecessor against the letter-based activity list before trusting the result. Set the two date columns to Date type and designate them as the project start and end columns when enabling dependencies. Leave holidays empty for this exercise and record that choice.</p>
+<p>Compare the manual elapsed <strong>workday duration</strong> with the number of scheduled working days. Do not compare it with a simple subtraction of calendar dates. Weekends and inclusive date displays can otherwise look like arithmetic errors.</p>
+<p>Record every difference before changing your work. Classify the cause as one of these:</p>
+<ul>
+<li>arithmetic error;</li>
+<li>wrong predecessor;</li>
+<li>wrong duration;</li>
+<li>work-calendar difference; or</li>
+<li>software configuration.</li>
+</ul>
+<p>Smartsheet validates the schedule you entered. A matching result does not prove that the dependency logic is complete. See the <a href="https://help.smartsheet.com/articles/765727-enabling-dependencies-using-predecessors">Smartsheet dependency guide</a> for the settings and predecessor conventions.</p>
+</section>
+<section id="part-5-test-individual-and-combined-delays-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-5-test-individual-and-combined-delays-15-minutes">Part 5 · Test individual and combined delays — 15 minutes</h3>
+<p>Return to the original schedule before each test.</p>
+<p><strong>Test A.</strong> Increase activity D from 4 to 7 days.</p>
+<p><strong>Test B.</strong> Increase activity E from 8 to 11 days.</p>
+<p><strong>Test C.</strong> Increase B from 5 to 8 days <strong>and</strong> D from 4 to 7 days in the same scenario. This tests whether two activities can each use the branch’s original slack independently.</p>
+<p>For each test, record:</p>
+<ul>
+<li>the new project duration;</li>
+<li>the activity that controls the next merge;</li>
+<li>whether the critical path changes; and</li>
+<li>the amount of project delay.</li>
+</ul>
+<p>Explain why equal duration increases can produce different project effects.</p>
+<p>Use this comparison structure in the <strong>Reflection</strong> worksheet. Leave each scenario independent of the preceding test.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Scenario</th>
+<th style="text-align: left;">Changed duration(s)</th>
+<th style="text-align: left;">Project duration</th>
+<th style="text-align: left;">Project delay</th>
+<th style="text-align: left;">Controlling predecessor at G</th>
+<th style="text-align: left;">Critical path</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="tabular">05</span></td>
-<td style="text-align: left;"><span class="tabular">22 and 24 September</span></td>
-<td style="text-align: left;">Estimating Project Times and Costs</td>
-<td style="text-align: left;">Larson Ch. 5</td>
-<td style="text-align: left;"><a href="./weeks/week-05.html">notes</a> · <a href="./slides/week-05.html">slides</a> · <a href="./labs/lab-05.html">studio</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">06</span></td>
-<td style="text-align: left;"><span class="tabular">29 September and 1 October</span></td>
-<td style="text-align: left;">Developing a Project Schedule</td>
-<td style="text-align: left;">Larson Ch. 6</td>
-<td style="text-align: left;"><a href="./weeks/week-06.html">notes</a> · <a href="./slides/week-06.html">slides</a> · <a href="./labs/lab-06.html">studio</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">07</span></td>
-<td style="text-align: left;"><span class="tabular">6 and 8 October</span></td>
-<td style="text-align: left;">Managing Risk</td>
-<td style="text-align: left;">Larson Ch. 7</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">08</span></td>
-<td style="text-align: left;"><span class="tabular">13 and 15 October</span></td>
-<td style="text-align: left;">Integration, review, and the midterm</td>
-<td style="text-align: left;">Weeks 1–7, for the midterm</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">09</span></td>
-<td style="text-align: left;"><span class="tabular">20 and 22 October</span></td>
-<td style="text-align: left;">Scheduling Resources and Costs</td>
-<td style="text-align: left;">Larson Ch. 8</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">10</span></td>
-<td style="text-align: left;"><span class="tabular">27 and 29 October</span></td>
-<td style="text-align: left;">Reducing Project Duration</td>
-<td style="text-align: left;">Larson Ch. 9</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">11</span></td>
-<td style="text-align: left;"><span class="tabular">3 and 5 November</span></td>
-<td style="text-align: left;">Progress and Performance Measurement</td>
-<td style="text-align: left;">Larson Ch. 13</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">12</span></td>
-<td style="text-align: left;"><span class="tabular">10 and 12 November</span></td>
-<td style="text-align: left;">Agile Project Management</td>
-<td style="text-align: left;">Larson Ch. 15</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">13</span></td>
-<td style="text-align: left;"><span class="tabular">17 and 19 November</span></td>
-<td style="text-align: left;">Being an Effective Project Manager · Managing Project Teams</td>
-<td style="text-align: left;">Larson Ch. 10 + 11</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">14</span></td>
-<td style="text-align: left;"><span class="tabular">24 November</span></td>
-<td style="text-align: left;">Outsourcing: Managing Interorganizational Relations</td>
-<td style="text-align: left;">Larson Ch. 12</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">15</span></td>
-<td style="text-align: left;"><span class="tabular">1 and 3 December</span></td>
-<td style="text-align: left;">Project Closure · International Projects</td>
-<td style="text-align: left;">Larson Ch. 14 + 16</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">16</span></td>
-<td style="text-align: left;"><span class="tabular">8 and 10 December</span></td>
-<td style="text-align: left;">Final presentations</td>
+<td style="text-align: left;">Baseline</td>
+<td style="text-align: left;">Original values</td>
+<td style="text-align: left;">Your result</td>
 <td style="text-align: left;">—</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Test A</td>
+<td style="text-align: left;">D = 7</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Test B</td>
+<td style="text-align: left;">E = 11</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Test C</td>
+<td style="text-align: left;">B = 8, D = 7</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
+<td style="text-align: left;">Your result</td>
 </tr>
 </tbody>
 </table>
-<section id="key-dates" class="level2">
-<h2 class="anchored" data-anchor-id="key-dates">Key dates</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 76%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Date</th>
-<th style="text-align: left;">What</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">Tue 25 Aug</span></td>
-<td style="text-align: left;">First class</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">Fri 11 Sep</span></td>
-<td style="text-align: left;">FP0 — team formed, industry partner confirmed</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">Fri 2 Oct</span></td>
-<td style="text-align: left;">FP1 — project charter and WBS</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">Thu 15 Oct</span></td>
-<td style="text-align: left;"><strong>Midterm</strong>, in class, closed notes, no computers</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">Fri 30 Oct</span></td>
-<td style="text-align: left;">FP2 — schedule model and budget baseline</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">Fri 20 Nov</span></td>
-<td style="text-align: left;">FP3 — risk register and EVM status report</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">Thu 26 Nov</span></td>
-<td style="text-align: left;"><em>No class — Thanksgiving</em></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="tabular">Tue 8 &amp; Thu 10 Dec</span></td>
-<td style="text-align: left;">Final presentations</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="tabular">Fri 11 Dec</span></td>
-<td style="text-align: left;">Final report and Medium article due, 11:59 p.m.</td>
-</tr>
-</tbody>
-</table>
+<p>For Test C, state how much extra time was requested from the venue branch and compare it with the branch’s original total slack.</p>
 </section>
-<section id="assignments" class="level2">
-<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
-<p><strong>Conceptual assignments (CA1–CA8, 25%)</strong> are announced on Blackboard, which carries the open and close dates. Lowest score dropped.</p>
-<p><strong>Studio assignments (SA1–SA14, 25%)</strong> are produced <strong>in the Thursday session</strong> and uploaded to Blackboard before you leave — graded with feedback, no deadline to miss. Two lowest dropped.</p>
-<p><strong>Late work is not accepted</strong> for the work that has a deadline: conceptual assignments and the final project deliverables.</p>
+<section id="part-6-challenge-one-overlap-proposal-10-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-6-challenge-one-overlap-proposal-10-minutes">Part 6 · Challenge one overlap proposal — 10 minutes</h3>
+<p>The program lead proposes starting speaker invitations two days after program drafting begins instead of waiting for the draft to finish.</p>
+<p>Represent the proposal as a relationship and lag. Then use Gemini as an independent reviewer.</p>
+<p>Calculate the earliest start of E permitted by this relationship using C’s baseline ES. State what usable program information must exist by that time. A start-to-start link alone does not guarantee that later changes in the program will be reflected in completed speaker work.</p>
+<pre class="text"><code>Audit this proposed project-schedule relationship:
+
+Predecessor: Draft program, duration 6 workdays
+Successor: Confirm speakers, duration 8 workdays
+Proposal: Begin the successor 2 workdays after the predecessor starts
+
+State the relationship type and lag. Identify the assumption required for the
+overlap to be feasible, one rework risk, and one observable condition that
+should trigger a return to finish-to-start. Do not calculate a new project
+finish unless I provide the complete network.</code></pre>
+<p>Accept, revise or reject the proposal. Support the decision with the work logic, not the desire for an earlier finish.</p>
+</section>
+<section id="part-7-save-and-upload" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-7-save-and-upload">Part 7 · Save and upload</h3>
+<p>Create one PDF in this order.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">completed CPM table with ES, EF, LS, LF, total slack and free slack</label></li>
+<li><label><input type="checkbox">activity-on-node network sketch</label></li>
+<li><label><input type="checkbox">path calculations and identified critical path</label></li>
+<li><label><input type="checkbox">Smartsheet screenshot showing dependencies, dates and critical path</label></li>
+<li><label><input type="checkbox">results of all three delay scenarios, including the shared-slack explanation</label></li>
+<li><label><input type="checkbox">overlap recommendation of no more than 100 words</label></li>
+<li><label><input type="checkbox">AI acknowledgement with tool, transcript link, changes and verification</label></li>
+</ul>
+<p>Save the workbook, Smartsheet export, screenshot and PDF in <code>IMSE456/studio-06/</code> on your NDSU Google Drive or OneDrive.</p>
+<p>Upload the PDF to Blackboard before you leave the session. Name it <code>SA6_yourlastname.pdf</code>.</p>
+</section>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>If Smartsheet is unavailable</strong>, complete the manual schedule and all three delay scenarios in the workbook. State which software checks could not be performed, preserve the file, and complete those checks after access is restored.</p>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

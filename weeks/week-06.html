@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,79 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-6-1-the-network-adds-sequence-to-the-wbs" id="toc-lo-6-1-the-network-adds-sequence-to-the-wbs" class="nav-link" data-scroll-target="#lo-6-1-the-network-adds-sequence-to-the-wbs">LO 6-1 · The network adds sequence to the WBS</a>
+  <ul class="collapse">
+  <li><a href="#work-packages-activities-and-milestones" id="toc-work-packages-activities-and-milestones" class="nav-link" data-scroll-target="#work-packages-activities-and-milestones">Work packages, activities and milestones</a></li>
+  <li><a href="#continuity-matters" id="toc-continuity-matters" class="nav-link" data-scroll-target="#continuity-matters">Continuity matters</a></li>
+  <li><a href="#what-a-useful-network-provides" id="toc-what-a-useful-network-provides" class="nav-link" data-scroll-target="#what-a-useful-network-provides">What a useful network provides</a></li>
+  <li><a href="#assumptions-behind-the-first-cpm-calculation" id="toc-assumptions-behind-the-first-cpm-calculation" class="nav-link" data-scroll-target="#assumptions-behind-the-first-cpm-calculation">Assumptions behind the first CPM calculation</a>
+  <ul class="collapse">
+  <li><a href="#a-complete-wbs-with-no-schedule" id="toc-a-complete-wbs-with-no-schedule" class="nav-link" data-scroll-target="#a-complete-wbs-with-no-schedule">A complete WBS with no schedule</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-6-2-activity-on-node-networks" id="toc-lo-6-2-activity-on-node-networks" class="nav-link" data-scroll-target="#lo-6-2-activity-on-node-networks">LO 6-2 · Activity-on-node networks</a>
+  <ul class="collapse">
+  <li><a href="#network-vocabulary" id="toc-network-vocabulary" class="nav-link" data-scroll-target="#network-vocabulary">Network vocabulary</a></li>
+  <li><a href="#eight-construction-rules" id="toc-eight-construction-rules" class="nav-link" data-scroll-target="#eight-construction-rules">Eight construction rules</a></li>
+  <li><a href="#conference-launch-network" id="toc-conference-launch-network" class="nav-link" data-scroll-target="#conference-launch-network">Conference launch network</a></li>
+  <li><a href="#immediate-predecessors-and-complete-paths" id="toc-immediate-predecessors-and-complete-paths" class="nav-link" data-scroll-target="#immediate-predecessors-and-complete-paths">Immediate predecessors and complete paths</a>
+  <ul class="collapse">
+  <li><a href="#the-missing-predecessor" id="toc-the-missing-predecessor" class="nav-link" data-scroll-target="#the-missing-predecessor">The missing predecessor</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-6-3-forward-and-backward-passes" id="toc-lo-6-3-forward-and-backward-passes" class="nav-link" data-scroll-target="#lo-6-3-forward-and-backward-passes">LO 6-3 · Forward and backward passes</a>
+  <ul class="collapse">
+  <li><a href="#time-zero-and-the-four-activity-times" id="toc-time-zero-and-the-four-activity-times" class="nav-link" data-scroll-target="#time-zero-and-the-four-activity-times">Time zero and the four activity times</a></li>
+  <li><a href="#forward-pass-earliest-times" id="toc-forward-pass-earliest-times" class="nav-link" data-scroll-target="#forward-pass-earliest-times">Forward pass: earliest times</a>
+  <ul class="collapse">
+  <li><a href="#conference-forward-pass" id="toc-conference-forward-pass" class="nav-link" data-scroll-target="#conference-forward-pass">Conference forward pass</a></li>
+  <li><a href="#why-the-merge-cannot-use-the-smaller-value" id="toc-why-the-merge-cannot-use-the-smaller-value" class="nav-link" data-scroll-target="#why-the-merge-cannot-use-the-smaller-value">Why the merge cannot use the smaller value</a></li>
+  </ul></li>
+  <li><a href="#backward-pass-latest-times" id="toc-backward-pass-latest-times" class="nav-link" data-scroll-target="#backward-pass-latest-times">Backward pass: latest times</a>
+  <ul class="collapse">
+  <li><a href="#conference-backward-pass" id="toc-conference-backward-pass" class="nav-link" data-scroll-target="#conference-backward-pass">Conference backward pass</a></li>
+  </ul></li>
+  <li><a href="#a-compact-activity-record" id="toc-a-compact-activity-record" class="nav-link" data-scroll-target="#a-compact-activity-record">A compact activity record</a></li>
+  <li><a href="#arithmetic-and-logic-checks" id="toc-arithmetic-and-logic-checks" class="nav-link" data-scroll-target="#arithmetic-and-logic-checks">Arithmetic and logic checks</a></li>
+  </ul></li>
+  <li><a href="#lo-6-4-the-critical-path" id="toc-lo-6-4-the-critical-path" class="nav-link" data-scroll-target="#lo-6-4-the-critical-path">LO 6-4 · The critical path</a>
+  <ul class="collapse">
+  <li><a href="#why-the-critical-path-needs-active-management" id="toc-why-the-critical-path-needs-active-management" class="nav-link" data-scroll-target="#why-the-critical-path-needs-active-management">Why the critical path needs active management</a></li>
+  <li><a href="#why-the-longest-path-sets-the-finish" id="toc-why-the-longest-path-sets-the-finish" class="nav-link" data-scroll-target="#why-the-longest-path-sets-the-finish">Why the longest path sets the finish</a></li>
+  <li><a href="#the-path-that-was-not-critical" id="toc-the-path-that-was-not-critical" class="nav-link" data-scroll-target="#the-path-that-was-not-critical">The path that was not critical</a></li>
+  <li><a href="#a-new-critical-path-can-emerge" id="toc-a-new-critical-path-can-emerge" class="nav-link" data-scroll-target="#a-new-critical-path-can-emerge">A new critical path can emerge</a></li>
+  </ul></li>
+  <li><a href="#lo-6-5-total-slack-and-free-slack" id="toc-lo-6-5-total-slack-and-free-slack" class="nav-link" data-scroll-target="#lo-6-5-total-slack-and-free-slack">LO 6-5 · Total slack and free slack</a>
+  <ul class="collapse">
+  <li><a href="#total-slack" id="toc-total-slack" class="nav-link" data-scroll-target="#total-slack">Total slack</a></li>
+  <li><a href="#free-slack" id="toc-free-slack" class="nav-link" data-scroll-target="#free-slack">Free slack</a></li>
+  <li><a href="#comparing-the-two-kinds-of-slack" id="toc-comparing-the-two-kinds-of-slack" class="nav-link" data-scroll-target="#comparing-the-two-kinds-of-slack">Comparing the two kinds of slack</a></li>
+  <li><a href="#deadlines-and-negative-total-slack" id="toc-deadlines-and-negative-total-slack" class="nav-link" data-scroll-target="#deadlines-and-negative-total-slack">Deadlines and negative total slack</a></li>
+  </ul></li>
+  <li><a href="#lo-6-6-lags-and-extended-relationships" id="toc-lo-6-6-lags-and-extended-relationships" class="nav-link" data-scroll-target="#lo-6-6-lags-and-extended-relationships">LO 6-6 · Lags and extended relationships</a>
+  <ul class="collapse">
+  <li><a href="#common-relationships" id="toc-common-relationships" class="nav-link" data-scroll-target="#common-relationships">Common relationships</a></li>
+  <li><a href="#calculating-with-a-lag" id="toc-calculating-with-a-lag" class="nav-link" data-scroll-target="#calculating-with-a-lag">Calculating with a lag</a></li>
+  <li><a href="#laddering" id="toc-laddering" class="nav-link" data-scroll-target="#laddering">Laddering</a></li>
+  <li><a href="#use-lags-carefully" id="toc-use-lags-carefully" class="nav-link" data-scroll-target="#use-lags-carefully">Use lags carefully</a></li>
+  <li><a href="#hammock-activities" id="toc-hammock-activities" class="nav-link" data-scroll-target="#hammock-activities">Hammock activities</a></li>
+  <li><a href="#common-mistakes-and-how-to-catch-them" id="toc-common-mistakes-and-how-to-catch-them" class="nav-link" data-scroll-target="#common-mistakes-and-how-to-catch-them">Common mistakes and how to catch them</a></li>
+  <li><a href="#a-practical-schedule-review" id="toc-a-practical-schedule-review" class="nav-link" data-scroll-target="#a-practical-schedule-review">A practical schedule review</a></li>
+  </ul></li>
+  <li><a href="#thursday-studio" id="toc-thursday-studio" class="nav-link" data-scroll-target="#thursday-studio">Thursday studio</a>
+  <ul class="collapse">
+  <li><a href="#studio-6-build-and-audit-a-cpm-schedule" id="toc-studio-6-build-and-audit-a-cpm-schedule" class="nav-link" data-scroll-target="#studio-6-build-and-audit-a-cpm-schedule">Studio 6 · Build and audit a CPM schedule</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -201,8 +301,1316 @@ Produced in the Thursday session and uploaded to Blackboard before you leave
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>The project network turns a list of work into a time-based plan.</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 6</strong> [1]. The exposition is reworded, and the conference example is constructed for this course.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 87%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 6-1</strong></td>
+<td style="text-align: left;">Explain how work packages from the WBS become activities in a project network.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 6-2</strong></td>
+<td style="text-align: left;">Construct and interpret an activity-on-node network.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 6-3</strong></td>
+<td style="text-align: left;">Calculate early start, early finish, late start, late finish and slack.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 6-4</strong></td>
+<td style="text-align: left;">Identify the critical path and explain why it requires active management.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 6-5</strong></td>
+<td style="text-align: left;">Distinguish total slack from free slack.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 6-6</strong></td>
+<td style="text-align: left;">Use lags and extended relationships to model realistic overlap and waiting.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">project network</span><span class="chip">activity-on-node</span><span class="chip">precedence</span><span class="chip">parallel activity</span><span class="chip">burst activity</span><span class="chip">merge activity</span><span class="chip">path</span><span class="chip">forward pass</span><span class="chip">backward pass</span><span class="chip">early start</span><span class="chip">early finish</span><span class="chip">late start</span><span class="chip">late finish</span><span class="chip">critical path</span><span class="chip">total slack</span><span class="chip">free slack</span><span class="chip">finish-to-start</span><span class="chip">start-to-start</span><span class="chip">finish-to-finish</span><span class="chip">lag</span><span class="chip">laddering</span><span class="chip">hammock activity</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-6-1-the-network-adds-sequence-to-the-wbs" class="level1">
+<h1>LO 6-1 · The network adds sequence to the WBS</h1>
+<p><em>Following Larson &amp; Gray, Ch. 6 [1].</em></p>
+<p>The WBS defines <strong>what</strong> the project must deliver. Its work packages have scope, ownership, resource needs and estimates. The WBS does not show the order in which that work must occur.</p>
+<div id="fig-planning-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-planning-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/planning-flow.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-planning-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Work packages become a schedule through explicit activity definitions and dependency logic.
+</figcaption>
+</figure>
+</div>
+<p>A schedule is a model of how the project can be completed. Its dates are consequences of the activity durations, dependencies and calendar entered into that model. A desired completion date is a target to test against the model; entering the target does not establish that the work can fit.</p>
+<p>The project network adds three kinds of schedule information.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Network information</th>
+<th style="text-align: left;">Question answered</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Dependency</strong></td>
+<td style="text-align: left;">What must happen before this activity can start or finish?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Sequence</strong></td>
+<td style="text-align: left;">In what logical order will the work proceed?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Timing</strong></td>
+<td style="text-align: left;">When can each activity start and finish, and how much delay can it absorb?</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>network activity</strong> consumes time. It may represent productive work, such as configuring a registration system, or waiting, such as allowing a permit review to finish. One activity can contain one work package or combine several closely related packages.</p>
+<section id="work-packages-activities-and-milestones" class="level2">
+<h2 class="anchored" data-anchor-id="work-packages-activities-and-milestones">Work packages, activities and milestones</h2>
+<p>The relationship between a work package and an activity need not be one-to-one. A work package can require several activities when separate handoffs or approvals matter. Several small work packages can be represented by one activity when they share an owner and their internal sequence does not affect the rest of the project. Preserve traceability to the WBS in either case.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Planning element</th>
+<th style="text-align: left;">What it describes</th>
+<th style="text-align: left;">Conference example</th>
+<th style="text-align: left;">Scheduling implication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Work package</td>
+<td style="text-align: left;">A bounded part of project scope</td>
+<td style="text-align: left;">Registration capability</td>
+<td style="text-align: left;">Defines the result and accountability</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Activity</td>
+<td style="text-align: left;">Work or waiting that consumes time</td>
+<td style="text-align: left;">Configure registration</td>
+<td style="text-align: left;">Has a duration and predecessors</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Milestone</td>
+<td style="text-align: left;">A significant event with zero duration</td>
+<td style="text-align: left;">Registration opens</td>
+<td style="text-align: left;">Marks a result or decision; contains no work duration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dependency</td>
+<td style="text-align: left;">A required relationship between activities</td>
+<td style="text-align: left;">Venue agreement before registration setup</td>
+<td style="text-align: left;">Restricts a start or finish</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Resource assignment</td>
+<td style="text-align: left;">Who or what performs the work</td>
+<td style="text-align: left;">One analyst configures the system</td>
+<td style="text-align: left;">May limit which activities can actually run together</td>
+</tr>
+</tbody>
+</table>
+<p>An activity description should make completion observable. <strong>Configure registration</strong> is more useful than <strong>registration</strong> because the verb names the work. Its definition of done might require a working registration form, tested payment processing and an approved confirmation email.</p>
+<p>For each dependency, record the reason. Some are technically required, some come from an external party, and some reflect a preferred working method. A preference may be changed to accelerate a schedule; a technical requirement usually needs a change in the work itself.</p>
+</section>
+<section id="continuity-matters" class="level2">
+<h2 class="anchored" data-anchor-id="continuity-matters">Continuity matters</h2>
+<p>The people who defined the work packages should participate in building the network. A handoff to a separate scheduling group can create two failures.</p>
+<ol type="1">
+<li>The scheduler may invent activities that do not match the defined deliverables.</li>
+<li>The project team may omit dependencies that were obvious to the people who decomposed the work.</li>
+</ol>
+<p>A deliverable-oriented WBS makes the connection easier. Each work package has a defined result, and the network asks what must precede that result and what can follow it.</p>
+</section>
+<section id="what-a-useful-network-provides" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-useful-network-provides">What a useful network provides</h2>
+<ul>
+<li>an estimate of project duration based on the work rather than a preferred date;</li>
+<li>earliest and latest activity times;</li>
+<li>a basis for scheduling people and equipment;</li>
+<li>visibility into activities that cannot slip without affecting the finish;</li>
+<li>a basis for cash-flow timing and schedule control; and</li>
+<li>a structure that can be revised when conditions change.</li>
+</ul>
+<p>The network does not make uncertainty disappear. It makes the logic visible enough to test.</p>
+</section>
+<section id="assumptions-behind-the-first-cpm-calculation" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-behind-the-first-cpm-calculation">Assumptions behind the first CPM calculation</h2>
+<p>The <strong>critical path method (CPM)</strong> calculates timing for a specified set of durations and relationships. Our initial model uses the assumptions below. These assumptions explain what the result means and when it must be revised.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Assumption</th>
+<th style="text-align: left;">Meaning in this chapter’s example</th>
+<th style="text-align: left;">If the assumption fails</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Fixed durations for this calculation</td>
+<td style="text-align: left;">Each activity has one stated workday duration</td>
+<td style="text-align: left;">Recalculate after estimates or remaining durations change</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Finish-to-start, zero lag</td>
+<td style="text-align: left;">Every immediate predecessor finishes before its successor starts</td>
+<td style="text-align: left;">Apply the specific start/finish constraint and lag</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Resources are available</td>
+<td style="text-align: left;">Parallel work is feasible whenever the logic permits it</td>
+<td style="text-align: left;">Resolve resource conflicts before promising dates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">One common work calendar</td>
+<td style="text-align: left;">All durations use the same unit and working periods</td>
+<td style="text-align: left;">Convert calendars carefully; calendar days and workdays differ</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No imposed early deadline</td>
+<td style="text-align: left;">The backward pass starts at the earliest project finish</td>
+<td style="text-align: left;">A separate deadline can produce positive or negative total slack</td>
+</tr>
+</tbody>
+</table>
+<p>For example, B and C may be logically parallel after A. If the same person must do both full time, they cannot run together as drawn. The unconstrained network provides a starting point for resource scheduling, not proof that staffing is sufficient.</p>
+<section id="a-complete-wbs-with-no-schedule" class="level3 case">
+<h3 class="anchored" data-anchor-id="a-complete-wbs-with-no-schedule">A complete WBS with no schedule</h3>
+<p>The conference team has approved work packages for the venue, program, speakers, registration, exhibitor materials and rehearsal. Each package has an owner and duration estimate. The sponsor asks for the opening date.</p>
+<div class="qn">
+<p>What information is still missing before the team can defend a completion date?</p>
+</div>
+</section>
+<hr>
+</section>
+</section>
+<section id="lo-6-2-activity-on-node-networks" class="level1">
+<h1>LO 6-2 · Activity-on-node networks</h1>
+<p><em>Following Larson &amp; Gray, Ch. 6 [1].</em></p>
+<p>In an <strong>activity-on-node</strong> network, each activity appears as a node. Lines between nodes show precedence and flow. The line does not consume time under the basic finish-to-start model.</p>
+<section id="network-vocabulary" class="level2">
+<h2 class="anchored" data-anchor-id="network-vocabulary">Network vocabulary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Activity</strong></td>
+<td style="text-align: left;">A project element that consumes time. Descriptions normally use a verb and noun.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Parallel activities</strong></td>
+<td style="text-align: left;">Activities that may occur at the same time. The manager may still schedule them at different times.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Burst activity</strong></td>
+<td style="text-align: left;">An activity with more than one immediate successor.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Merge activity</strong></td>
+<td style="text-align: left;">An activity with more than one immediate predecessor.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Path</strong></td>
+<td style="text-align: left;">A connected sequence of dependent activities.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Critical path</strong></td>
+<td style="text-align: left;">The longest-duration path through the network under the current logic and durations.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="eight-construction-rules" class="level2">
+<h2 class="anchored" data-anchor-id="eight-construction-rules">Eight construction rules</h2>
+<ol type="1">
+<li>Draw the network from left to right.</li>
+<li>Do not start an activity until all connected predecessors have finished under the basic finish-to-start model.</li>
+<li>Use lines to show precedence and flow. Lines may cross when necessary.</li>
+<li>Give every activity a unique identifier.</li>
+<li>Use identifiers that increase after their predecessors when the numbering system supports that convention.</li>
+<li>Do not create loops. A valid schedule cannot cycle back to an earlier activity.</li>
+<li>Do not place conditional branches such as “if approved” inside the deterministic network.</li>
+<li>Use one project start and one project finish when multiple starts or finishes would obscure the boundary.</li>
+</ol>
+<p>Conditional outcomes belong in risk analysis, decision trees or separate scenarios. The project network represents one defined plan.</p>
+</section>
+<section id="conference-launch-network" class="level2">
+<h2 class="anchored" data-anchor-id="conference-launch-network">Conference launch network</h2>
+<p>The course example uses nine activities.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: center;">Immediate predecessor(s)</th>
+<th style="text-align: right;">Duration, days</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">Approve event brief</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">Contract venue</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">Draft program</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Configure registration</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: left;">Confirm speakers</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: left;">Recruit exhibitors</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: left;">Publish program</td>
+<td style="text-align: center;">D, E</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: left;">Prepare on-site materials</td>
+<td style="text-align: center;">F, G</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Complete rehearsal</td>
+<td style="text-align: center;">H</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-conference-network" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-conference-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/conference-network.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conference-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The conference AON network. Each box shows an activity and its duration; arrows show immediate precedence. The highlighted path will be established by the calculations below.
+</figcaption>
+</figure>
+</div>
+<p>The drawing shows precedence, not elapsed time. A long arrow does not mean a long delay, and the horizontal location of a node does not by itself establish its start date. Read the activity durations and dependency links before interpreting the geometry.</p>
+<p>Activity A is a burst because B and C follow it. Activity G is a merge because D and E must both finish before G can begin. Activity H is another merge because it waits for F and G.</p>
+<p>Activity C is also a burst. An activity can be both a merge and a burst in a larger network. These terms describe the count of immediate incoming and outgoing links; they do not identify whether the activity is critical.</p>
+</section>
+<section id="immediate-predecessors-and-complete-paths" class="level2">
+<h2 class="anchored" data-anchor-id="immediate-predecessors-and-complete-paths">Immediate predecessors and complete paths</h2>
+<p>An <strong>immediate predecessor</strong> connects directly to an activity. Earlier activities farther back on the same chain are predecessors too, but their effects already flow through the immediate links. G lists D and E. It need not also list A, B and C because the network already carries those requirements forward.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Check</th>
+<th style="text-align: left;">Application to the conference network</th>
+<th style="text-align: left;">Error it prevents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Read every incoming arrow</td>
+<td style="text-align: left;">G needs both D and E</td>
+<td style="text-align: left;">Starting after only one required input arrives</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Follow one connected route at a time</td>
+<td style="text-align: left;">A–C–F–H–I is a complete path</td>
+<td style="text-align: left;">Adding activities from unrelated parallel branches</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Include a common completion point</td>
+<td style="text-align: left;">All work reaches I</td>
+<td style="text-align: left;">Leaving an unfinished branch outside the project finish</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Separate logic from resources</td>
+<td style="text-align: left;">B and C can overlap only if capacity permits</td>
+<td style="text-align: left;">Treating parallel eligibility as guaranteed availability</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Explain every dependency</td>
+<td style="text-align: left;">G needs registration ready and speakers confirmed</td>
+<td style="text-align: left;">Entering arbitrary predecessor numbers to force preferred dates</td>
+</tr>
+</tbody>
+</table>
+<section id="the-missing-predecessor" class="level3 case">
+<h3 class="anchored" data-anchor-id="the-missing-predecessor">The missing predecessor</h3>
+<p>The team originally connected G only to E. The software then allowed the program to publish before registration was configured.</p>
+<div class="qn">
+<p>Why can a schedule calculate correctly and still represent the wrong project?</p>
+</div>
+</section>
+<hr>
+</section>
+</section>
+<section id="lo-6-3-forward-and-backward-passes" class="level1">
+<h1>LO 6-3 · Forward and backward passes</h1>
+<p><em>Following Larson &amp; Gray, Ch. 6 [1].</em></p>
+<p>Once the activities, logic and durations are in place, two passes calculate the schedule.</p>
+<section id="time-zero-and-the-four-activity-times" class="level2">
+<h2 class="anchored" data-anchor-id="time-zero-and-the-four-activity-times">Time zero and the four activity times</h2>
+<p>We measure elapsed <strong>working time</strong> from zero. An activity with ES = 0 and duration 2 occupies the interval from time 0 to time 2. Its EF is 2. A successor can start at time 2 without adding another day. Do not mix this convention with a calendar display that labels the first workday as day 1 and displays inclusive start and end dates.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Duration</td>
+<td style="text-align: left;">How much working time does the activity require?</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ES</td>
+<td style="text-align: left;">Early start</td>
+<td style="text-align: left;">What is its earliest feasible start under the network logic?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">EF</td>
+<td style="text-align: left;">Early finish</td>
+<td style="text-align: left;">When would it finish if it starts at ES?</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">LS</td>
+<td style="text-align: left;">Late start</td>
+<td style="text-align: left;">How late can it start while preserving the chosen project finish?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">LF</td>
+<td style="text-align: left;">Late finish</td>
+<td style="text-align: left;">How late can it finish while preserving the chosen project finish?</td>
+</tr>
+</tbody>
+</table>
+<p>Early and late dates are feasible timing limits under the model. They are not two different estimates of activity duration. Both windows must have the same length: EF − ES = LF − LS = D.</p>
+</section>
+<section id="forward-pass-earliest-times" class="level2">
+<h2 class="anchored" data-anchor-id="forward-pass-earliest-times">Forward pass: earliest times</h2>
+<p>The forward pass begins at time zero and moves from predecessors to successors.</p>
+<p>For an activity with one predecessor:</p>
+<p><span class="math display">\[
+EF=ES+D
+\]</span></p>
+<p>For a merge activity:</p>
+<p><span class="math display">\[
+ES=\max(EF_1,EF_2,\ldots,EF_n)
+\]</span></p>
+<p>The largest predecessor early finish controls the merge because every required predecessor must be complete.</p>
+<p>Work through the network in precedence order. Start A at zero, add its duration, and pass its EF to B and C. Continue only when the early finishes of all predecessors of the next activity are known. At a merge, write the candidate values before choosing the largest; this makes a missing predecessor easier to detect.</p>
+<section id="conference-forward-pass" class="level3">
+<h3 class="anchored" data-anchor-id="conference-forward-pass">Conference forward pass</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Predecessor EF values</th>
+<th style="text-align: right;">ES</th>
+<th style="text-align: right;">Duration</th>
+<th style="text-align: right;">EF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">project start</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">A = 2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">A = 2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">B = 7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: left;">C = 8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: left;">C = 8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: left;">D = 11, E = 16</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: left;">F = 13, G = 19</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">H = 23</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">25</td>
+</tr>
+</tbody>
+</table>
+<p>The earliest project finish is day <strong>25</strong>. At G, activity E controls the early start because 16 is later than D’s early finish of 11. At H, G controls because 19 is later than F’s early finish of 13.</p>
+</section>
+<section id="why-the-merge-cannot-use-the-smaller-value" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-merge-cannot-use-the-smaller-value">Why the merge cannot use the smaller value</h3>
+<p>If G started at D’s EF of 11, E would still need five days to finish. The plan would violate the dependency from E to G. Choosing 16 satisfies both requirements: G starts after D is complete and after E is complete. Its own duration then gives EF(G) = 16 + 3 = 19.</p>
+<p>The wait between D finishing at 11 and G starting at 16 is created by the other branch. It is not an extra five-day duration entered into D or a required five-day lag on D→G.</p>
+</section>
+</section>
+<section id="backward-pass-latest-times" class="level2">
+<h2 class="anchored" data-anchor-id="backward-pass-latest-times">Backward pass: latest times</h2>
+<p>The backward pass begins at the project finish and moves from successors to predecessors. When no separate deadline has been imposed, set the final activity’s late finish equal to its early finish.</p>
+<p><span class="math display">\[
+LS=LF-D
+\]</span></p>
+<p>When an activity has more than one immediate successor:</p>
+<p><span class="math display">\[
+LF=\min(LS_1,LS_2,\ldots,LS_n)
+\]</span></p>
+<p>The smallest successor late start controls because the activity must finish in time for every required successor.</p>
+<section id="conference-backward-pass" class="level3">
+<h3 class="anchored" data-anchor-id="conference-backward-pass">Conference backward pass</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Successor LS values</th>
+<th style="text-align: right;">LF</th>
+<th style="text-align: right;">Duration</th>
+<th style="text-align: right;">LS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">project finish = 25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: left;">I = 23</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: left;">H = 19</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: left;">H = 19</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: left;">G = 16</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">G = 16</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">E = 8, F = 14</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">D = 12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">B = 7, C = 2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>At C, the smaller successor late start controls. C must finish by day 8 for E even though F could wait until day 14.</p>
+<p>If C finished at day 14, E could not start at its LS of 8. The backward pass therefore chooses LF(C) = min(8, 14) = 8, then subtracts C’s duration: LS(C) = 8 − 6 = 2. This protects both successor commitments.</p>
+<div id="fig-pass-logic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pass-logic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/pass-logic.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pass-logic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The two selection rules use different logic. The forward pass waits for the last required input; the backward pass preserves the earliest required handoff. Arrows here show the direction of calculation.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="a-compact-activity-record" class="level2">
+<h2 class="anchored" data-anchor-id="a-compact-activity-record">A compact activity record</h2>
+<p>Node layouts vary by textbook and software. Use the labels to distinguish timing limits, duration and slack.</p>
+<div id="fig-activity-node" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-activity-node-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/activity-node.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-activity-node-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: An activity-node legend and the completed record for D. The early and late windows are both four days long.
+</figcaption>
+</figure>
+</div>
+<p>The values matter more than the box design. A project manager should be able to reconstruct each value from the network logic.</p>
+</section>
+<section id="arithmetic-and-logic-checks" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-and-logic-checks">Arithmetic and logic checks</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Check</th>
+<th style="text-align: left;">Expected result in the baseline</th>
+<th style="text-align: left;">What a failure suggests</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">EF − ES and LF − LS</td>
+<td style="text-align: left;">Both equal the duration</td>
+<td style="text-align: left;">Mixed time conventions or a subtraction error</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ES of a successor</td>
+<td style="text-align: left;">At least every predecessor EF</td>
+<td style="text-align: left;">A missed dependency or incorrect merge rule</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LF of a predecessor</td>
+<td style="text-align: left;">No later than every successor LS</td>
+<td style="text-align: left;">An incorrect backward-pass rule</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LS − ES and LF − EF</td>
+<td style="text-align: left;">Equal total slack values</td>
+<td style="text-align: left;">Inconsistent early or late dates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Longest complete path</td>
+<td style="text-align: left;">Equals the project duration of 25</td>
+<td style="text-align: left;">An omitted branch or a path-summing error</td>
+</tr>
+</tbody>
+</table>
+<p>These checks test the basic finish-to-start model. When lags or other relationships are present, substitute the appropriate relationship constraint for the simple predecessor EF comparison.</p>
+<hr>
+</section>
+</section>
+<section id="lo-6-4-the-critical-path" class="level1">
+<h1>LO 6-4 · The critical path</h1>
+<p><em>Following Larson &amp; Gray, Ch. 6 [1].</em></p>
+<p>The <strong>critical path</strong> is the longest-duration path through the network. When the project finish and the final activity’s late finish are equal, activities on the critical path normally have zero total slack.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Complete path</th>
+<th style="text-align: right;">Duration, days</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A – B – D – G – H – I</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A – C – E – G – H – I</td>
+<td style="text-align: right;"><strong>25</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A – C – F – H – I</td>
+<td style="text-align: right;">19</td>
+</tr>
+</tbody>
+</table>
+<p>The critical path is <strong>A – C – E – G – H – I</strong>. A one-day delay on this path delays the planned finish by one day unless the team recovers time elsewhere on the path.</p>
+<section id="why-the-critical-path-needs-active-management" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-critical-path-needs-active-management">Why the critical path needs active management</h2>
+<ul>
+<li>Critical activities have no schedule reserve under the current plan.</li>
+<li>A duration or dependency change can create a different critical path.</li>
+<li>More than one path can be critical.</li>
+<li>A nearly critical path can become controlling after a small delay.</li>
+<li>Compression efforts must shorten the controlling path to shorten the project.</li>
+</ul>
+<p>The critical path does not identify the most expensive, difficult or strategically important work. It identifies the sequence currently controlling project duration.</p>
+</section>
+<section id="why-the-longest-path-sets-the-finish" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-longest-path-sets-the-finish">Why the longest path sets the finish</h2>
+<p>Every complete path must finish before the project is complete. The 20-day venue path and the 19-day exhibitor path can finish within a 25-day plan because they overlap with work on the 25-day program path. Adding all nine activity durations gives 39 days of activity time, but much of that work can occur in parallel. The project duration is therefore 25 workdays under the stated resource assumptions.</p>
+<p>Shortening a noncritical activity does not necessarily shorten the project. Reducing B by two days makes registration ready sooner, but G still waits for speakers. Reducing E by two days moves the program branch to 23 days and shortens the project to 23 because it remains longer than the 20-day venue and 19-day exhibitor branches.</p>
+</section>
+<section id="the-path-that-was-not-critical" class="level2">
+<h2 class="anchored" data-anchor-id="the-path-that-was-not-critical">The path that was not critical</h2>
+<p>The venue branch looks prominent because the contract is expensive and registration depends on it. Its path lasts 20 days, five days less than the controlling path.</p>
+<p>If activity D takes three extra days, it finishes on day 14 instead of day 11. G still waits until day 16 for E. The project finish remains day 25.</p>
+<p>If activity E takes three extra days, G starts on day 19 and the project finishes on day 28. The same delay produces a different project effect because E sits on the critical path.</p>
+</section>
+<section id="a-new-critical-path-can-emerge" class="level2">
+<h2 class="anchored" data-anchor-id="a-new-critical-path-can-emerge">A new critical path can emerge</h2>
+<p>The critical path is a result to recalculate, not a permanent label attached to activities. The following separate scenarios all start from the original network.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Change from baseline</th>
+<th style="text-align: right;">Venue path</th>
+<th style="text-align: right;">Program path</th>
+<th style="text-align: right;">Exhibitor path</th>
+<th style="text-align: right;">Project duration</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">No change</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">Program path controls</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D grows by 3 days</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">Venue branch uses three days of slack</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">D grows by 5 days</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">Venue and program paths are both critical</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D grows by 6 days</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">Venue path becomes controlling</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E shrinks by 6 days</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Venue path limits the benefit of compression</td>
+</tr>
+</tbody>
+</table>
+<p>All values are workdays. A tie creates multiple critical paths. At that point, shortening only one tied path leaves the other path controlling the finish. This is why schedule compression requires repeated recalculation.</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>A schedule risk discussion needs both probability and network position.</strong> A likely delay on a flexible activity can be less urgent than a smaller delay on a critical or nearly critical activity.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="lo-6-5-total-slack-and-free-slack" class="level1">
+<h1>LO 6-5 · Total slack and free slack</h1>
+<p><em>Following Larson &amp; Gray, Ch. 6 [1].</em></p>
+<section id="total-slack" class="level2">
+<h2 class="anchored" data-anchor-id="total-slack">Total slack</h2>
+<p><strong>Total slack</strong> is the amount of time an activity can be delayed without delaying the project finish or an imposed completion date.</p>
+<p><span class="math display">\[
+TS=LS-ES=LF-EF
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: right;">ES</th>
+<th style="text-align: right;">EF</th>
+<th style="text-align: right;">LS</th>
+<th style="text-align: right;">LF</th>
+<th style="text-align: right;">Total slack</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Total slack belongs to a path, not to each activity as an independent allowance. If B uses three days of slack, D’s remaining slack falls from five days to two. Managers of downstream activities need to coordinate its use.</p>
+<div id="fig-schedule-slack" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-schedule-slack-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/schedule-slack.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schedule-slack-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The baseline early-start schedule. Pale dashed extensions show total slack at each activity; B and D share the same five-day allowance on their branch.
+</figcaption>
+</figure>
+</div>
+<p>The chart places activities on a working-time axis. It complements the AON network: the network makes precedence visible, while the chart makes overlap and waiting visible. The dashed areas are flexibility, not extra work.</p>
+</section>
+<section id="free-slack" class="level2">
+<h2 class="anchored" data-anchor-id="free-slack">Free slack</h2>
+<p><strong>Free slack</strong> is the amount of time an activity can be delayed without delaying the early start of any immediate successor.</p>
+<p>For finish-to-start relationships with zero lag:</p>
+<p><span class="math display">\[
+FS=\min(ES_{successors})-EF
+\]</span></p>
+<p>In a feasible earliest-start schedule with these relationships, free slack is nonnegative: no successor starts before its predecessor finishes. It often appears at the end of a noncontrolling branch before a merge. For the terminal activity I, use a zero-duration project-finish milestone at time 25 as the successor; its free slack is zero.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Activity</th>
+<th style="text-align: right;">Total slack</th>
+<th style="text-align: right;">Free slack</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Delaying B immediately delays D, even when the project finish remains unchanged.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">D can finish five days later before G’s early start moves.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">F can finish six days later before H’s early start moves.</td>
+</tr>
+</tbody>
+</table>
+<p>Free slack is operationally useful because it can be used without rescheduling an immediate successor. Total slack may still require coordination across the rest of the path.</p>
+</section>
+<section id="comparing-the-two-kinds-of-slack" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-the-two-kinds-of-slack">Comparing the two kinds of slack</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Total slack</th>
+<th style="text-align: left;">Free slack</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">What is protected?</td>
+<td style="text-align: left;">The project finish used in the backward pass</td>
+<td style="text-align: left;">Every immediate successor’s early start</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Baseline calculation</td>
+<td style="text-align: left;">LS − ES, or LF − EF</td>
+<td style="text-align: left;">Smallest successor ES − EF</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">What can change when it is used?</td>
+<td style="text-align: left;">Downstream activity dates may move</td>
+<td style="text-align: left;">Immediate successors retain their early starts</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Who needs to coordinate?</td>
+<td style="text-align: left;">Owners of affected activities along the path</td>
+<td style="text-align: left;">Usually the activity owner, with resource and risk checks</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Example B</td>
+<td style="text-align: left;">Five days of total slack</td>
+<td style="text-align: left;">Zero free slack because D starts at B’s EF</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Example D</td>
+<td style="text-align: left;">Five days of total slack</td>
+<td style="text-align: left;">Five days of free slack before G begins</td>
+</tr>
+</tbody>
+</table>
+<p>Suppose B’s start is postponed by three days. B then occupies days 5–10, and D occupies days 10–14. G can still start at 16. Only two days of flexibility remain on that branch. Giving D a separate five-day allowance would count the same reserve twice.</p>
+</section>
+<section id="deadlines-and-negative-total-slack" class="level2">
+<h2 class="anchored" data-anchor-id="deadlines-and-negative-total-slack">Deadlines and negative total slack</h2>
+<p>Zero total slack identifies the baseline critical activities because the backward pass uses the earliest finish of 25. A different required finish changes the late dates without changing the earliest dates.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Backward-pass finish</th>
+<th style="text-align: right;">Total slack on A–C–E–G–H–I</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">+3</td>
+<td style="text-align: left;">The longest path has three days before the required finish</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">The required finish matches the earliest feasible finish</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">−2</td>
+<td style="text-align: left;">The present plan misses the requirement by two workdays</td>
+</tr>
+</tbody>
+</table>
+<p>Negative total slack indicates a schedule conflict that requires action: recover duration, change feasible logic, revise scope, or negotiate the deadline. It is not additional time available to use. With constraints or deadlines, inspect the controlling logic and the software’s criticality definition instead of relying only on a zero-slack filter.</p>
+<hr>
+</section>
+</section>
+<section id="lo-6-6-lags-and-extended-relationships" class="level1">
+<h1>LO 6-6 · Lags and extended relationships</h1>
+<p><em>Following Larson &amp; Gray, Ch. 6 [1].</em></p>
+<p>The basic network uses a <strong>finish-to-start</strong> relationship: the successor starts after the predecessor finishes. Real projects sometimes need overlap or waiting that this relationship cannot express cleanly.</p>
+<p>A <strong>lag</strong> is the minimum amount of time between specified points in two related activities. A lag models a constraint or overlap. It is not hidden work.</p>
+<section id="common-relationships" class="level2">
+<h2 class="anchored" data-anchor-id="common-relationships">Common relationships</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 39%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Relationship</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Finish-to-start with lag</strong></td>
+<td style="text-align: left;">The successor starts a defined time after the predecessor finishes.</td>
+<td style="text-align: left;">Remove concrete forms two days after the pour finishes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Start-to-start with lag</strong></td>
+<td style="text-align: left;">The successor starts a defined time after the predecessor starts.</td>
+<td style="text-align: left;">Begin speaker invitations two days after program drafting starts.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Finish-to-finish with lag</strong></td>
+<td style="text-align: left;">The successor cannot finish until a defined time after the predecessor finishes.</td>
+<td style="text-align: left;">Complete final documentation two days after system testing finishes.</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-lag-relationships" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lag-relationships-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/lag-relationships.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lag-relationships-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: A two-day lag constrains different endpoints in FS, SS and FF relationships. Each constraint is a minimum separation.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="calculating-with-a-lag" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-with-a-lag">Calculating with a lag</h2>
+<p>Let activity i be the predecessor, j the successor, and L the lag. These are minimum-time constraints, so the successor can be scheduled later when another dependency controls.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Relationship</th>
+<th style="text-align: left;">Forward-pass requirement</th>
+<th style="text-align: left;">Equivalent bound on successor ES</th>
+<th style="text-align: left;">Backward-pass requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">FS + L</td>
+<td style="text-align: left;">ES(j) ≥ EF(i) + L</td>
+<td style="text-align: left;">EF(i) + L</td>
+<td style="text-align: left;">LF(i) ≤ LS(j) − L</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SS + L</td>
+<td style="text-align: left;">ES(j) ≥ ES(i) + L</td>
+<td style="text-align: left;">ES(i) + L</td>
+<td style="text-align: left;">LS(i) ≤ LS(j) − L</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FF + L</td>
+<td style="text-align: left;">EF(j) ≥ EF(i) + L</td>
+<td style="text-align: left;">EF(i) + L − D(j)</td>
+<td style="text-align: left;">LF(i) ≤ LF(j) − L</td>
+</tr>
+</tbody>
+</table>
+<p>Evaluate <strong>every</strong> applicable bound. In the forward pass, choose the largest candidate start. In the backward pass, choose the tightest permitted late time, translating between start and finish with the activity duration. Also honor project-start, calendar and any other scheduling constraints.</p>
+<p>For the conference proposal, C has ES = 2 and duration 6. If the C→E relationship changes from FS to SS + 2, that link permits E to start at 2 + 2 = 4 instead of 8. E’s eight-day duration would put its EF at 12. Whether the overlap is credible depends on what C has produced by day 4, not on the notation alone. The rest of the network must then be recalculated.</p>
+<p>A finish constraint can control even when a start constraint is satisfied. Suppose coding starts at 0 and finishes at 10. Debugging lasts 4 days, must start at least 2 days after coding starts, and must finish at least 1 day after coding finishes. SS + 2 gives a candidate ES of 2. FF + 1 requires EF ≥ 11, hence ES ≥ 11 − 4 = 7. The combined earliest debugging window is 7–11. Using only SS would incorrectly allow debugging to finish before the full code is ready.</p>
+</section>
+<section id="laddering" class="level2">
+<h2 class="anchored" data-anchor-id="laddering">Laddering</h2>
+<p>Long activities can sometimes overlap in repeated segments. A pipeline crew can dig one section, lay pipe in that section and begin refill while digging continues elsewhere. Splitting the work into segments creates a ladder-shaped network.</p>
+<p>Laddering exposes the repeated handoffs. A start-to-start lag can represent the same overlap with less network detail when the relationship is stable and well understood.</p>
+<div id="fig-laddering" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-laddering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week06/laddering.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-laddering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: A laddered network for three pipeline segments. Vertical links require each segment’s prior task; horizontal links keep each crew in sequence.
+</figcaption>
+</figure>
+</div>
+<p>If every box in this illustration takes two days and the three crews are independent, the ladder finishes in 10 days. Digging segment 2 can overlap with laying pipe in segment 1. Treating the entire pipeline as three sequential six-day activities would require 18 days. The eight-day reduction comes from a feasible change in overlap, not from assuming that individual tasks take less time.</p>
+<p>Laddering is especially useful when intermediate handoffs must be tracked. A simpler SS relationship may be enough when production rates and the separation between crews stay stable. If crews catch up, segment quality varies or rework interrupts the flow, explicit segments make those conditions easier to manage.</p>
+</section>
+<section id="use-lags-carefully" class="level2">
+<h2 class="anchored" data-anchor-id="use-lags-carefully">Use lags carefully</h2>
+<ul>
+<li>State the relationship type and lag value.</li>
+<li>Keep actual work as an activity with an owner, duration and cost.</li>
+<li>Do not use a lag to hide procurement, review or testing work.</li>
+<li>Recheck both forward and backward passes because the constraint can control a start or finish.</li>
+<li>Confirm that the overlap is technically feasible and does not create rework.</li>
+</ul>
+</section>
+<section id="hammock-activities" class="level2">
+<h2 class="anchored" data-anchor-id="hammock-activities">Hammock activities</h2>
+<p>A <strong>hammock activity</strong> spans a segment of the network. Its duration is determined by the scheduled start of the first activity and finish of the last activity in that segment. Project management support, site security and equipment rental can be modeled this way when their cost depends on the time spanned.</p>
+<p>For example, support that begins with C at time 2 and ends with H at time 23 spans 21 workdays in the baseline. That duration is derived from the two anchor dates. If the network changes, the hammock duration changes too. It is not an additional sequential task that should be added to a path’s duration.</p>
+</section>
+<section id="common-mistakes-and-how-to-catch-them" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes-and-how-to-catch-them">Common mistakes and how to catch them</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Mistake</th>
+<th style="text-align: left;">Consequence</th>
+<th style="text-align: left;">Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Add every activity duration</td>
+<td style="text-align: left;">Double-count parallel time</td>
+<td style="text-align: left;">Trace complete dependency paths</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Use the smallest EF at a merge</td>
+<td style="text-align: left;">Start before a required input exists</td>
+<td style="text-align: left;">Take the largest predecessor EF</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Use the largest LS in the backward pass</td>
+<td style="text-align: left;">Miss an earlier successor commitment</td>
+<td style="text-align: left;">Take the smallest successor LS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add one to EF at each handoff</td>
+<td style="text-align: left;">Insert unplanned time between activities</td>
+<td style="text-align: left;">Use one consistent elapsed-time convention</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Give each branch activity its own slack reserve</td>
+<td style="text-align: left;">Spend shared slack more than once</td>
+<td style="text-align: left;">Recalculate after any use of path slack</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Treat SS as a finish guarantee</td>
+<td style="text-align: left;">Permit work to finish before a required final input</td>
+<td style="text-align: left;">Add the justified finish constraint where needed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Replace managed work with lag</td>
+<td style="text-align: left;">Hide responsibility and progress</td>
+<td style="text-align: left;">Keep observable work as an activity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Trust matching software dates</td>
+<td style="text-align: left;">Overlook a logically incomplete model</td>
+<td style="text-align: left;">Audit predecessors and definitions of done</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="a-practical-schedule-review" class="level2">
+<h2 class="anchored" data-anchor-id="a-practical-schedule-review">A practical schedule review</h2>
+<p>Read the work definitions first, then trace the links, and only then evaluate the dates. Confirm which calendars apply and whether parallel work has the necessary resources. Identify the longest and nearly longest paths, explain the slack available to each branch, and record which changes would make another path controlling. After a duration, dependency or progress update, rerun the calculations before promising a revised finish.</p>
+<hr>
+</section>
+</section>
+<section id="thursday-studio" class="level1">
+<h1>Thursday studio</h1>
+<section id="studio-6-build-and-audit-a-cpm-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="studio-6-build-and-audit-a-cpm-schedule">Studio 6 · Build and audit a CPM schedule</h2>
+<p>Complete the <a href="../labs/lab-06.html">Week 6 studio</a>.</p>
+<p>You will draw the conference network, calculate the forward and backward passes, identify total and free slack, and then use Smartsheet to audit the result.</p>
+<p>The manual calculation comes first. Software can detect arithmetic differences. It cannot decide whether a missing dependency represents the project correctly.</p>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 6.</li>
+</ol>
+<p>The conference activity names, durations and calculations are original to these course materials.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,7 +2043,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
