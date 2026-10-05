@@ -111,7 +111,7 @@ function parseBlocks(lines) {
       const rows = [];
       while (i < lines.length && isTable(lines[i])) {
         const cells = lines[i].trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
-        if (!cells.every((c) => /^:?-{2,}:?$/.test(c) || c === "")) rows.push(cells);
+        if (!cells.every((c) => /^:?-+:?$/.test(c) || c === "")) rows.push(cells);
         i++;
       }
       blocks.push({ type: "table", rows });
@@ -200,12 +200,15 @@ function sectionSlide(pptx, slide) {
 function contentSlide(pptx, slide, meta, num) {
   const s = pptx.addSlide();
   s.background = { color: "FFFFFF" };
+  // ~58 characters of 30pt Cambria bold fit on one 11.5in line; every extra
+  // line of title moves the body down by its own height instead of overprinting it.
+  const titleLines = slide.title ? Math.max(1, Math.ceil(plain(slide.title).length / 58)) : 0;
   if (slide.title) {
     s.addText(runs(slide.title, { fontSize: 30, bold: true, color: GREEN, fontFace: SERIF }),
-      { x: M, y: 0.55, w: W - 2 * M, h: 0.85, valign: "top", margin: 0 });
+      { x: M, y: 0.55, w: W - 2 * M, h: 0.85 + 0.5 * (titleLines - 1), valign: "top", margin: 0 });
   }
 
-  let y = slide.title ? 1.65 : 0.9;
+  let y = slide.title ? 1.65 + 0.5 * (titleLines - 1) : 0.9;
   const bottom = H - 0.85;
   const asides = slide.blocks.filter((b) => b.type === "aside");
   const body = slide.blocks.filter((b) => b.type !== "aside");

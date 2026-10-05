@@ -39,7 +39,7 @@ release: "2026-10-05"
 Following Larson & Gray, Ch. 7, Section 7.1
 :::
 
-## Two curves that cross
+## Risk falls, the cost of a surprise rises
 
 <figure>
 <img src="../images/week07/risk-cost-curve.svg" style="max-height:510px;width:auto;display:block;margin:0 auto" alt="The chance of a risk event falls over the life cycle while the cost of dealing with one rises.">
@@ -211,6 +211,8 @@ Impact weighs more than likelihood.
 
 **RPN = Impact × Likelihood × Detection difficulty**
 
+Each rating runs 1 to 5. Detection: 1 = seen weeks ahead, 5 = found only when it hits.
+
 | Risk | L | I | D | RPN |
 |---|:-:|:-:|:-:|--:|
 | R1 Keynote cancels | 2 | 5 | 2 | 20 |
@@ -225,7 +227,9 @@ R1 has the lowest RPN and the worst impact.
 
 . . .
 
-1 × 5 × 5 = 5 × 5 × 1 = 25.
+Trivial, likely, invisible: 1 × 5 × 5 = 25.
+
+Catastrophic, likely, obvious: 5 × 5 × 1 = 25.
 
 . . .
 
@@ -414,6 +418,8 @@ Following Larson & Gray, Ch. 7, Appendix 7.1
 
 **Z = (Tₛ − Tₑ) / σ(path)**
 
+a, m, b: optimistic, most likely and pessimistic estimates. Tₛ: the date being asked about.
+
 Add variances, never standard deviations.
 
 ## The conference with ranges
@@ -457,6 +463,10 @@ Tₑ = 29, σ = 3. Four days longer than Week 6's 25-day plan.
 A date set at Tₑ is a coin toss.
 
 ## The 90% date
+
+Z = 1.28 leaves 90% of the curve to its left.
+
+. . .
 
 Tₛ = 29 + 1.28 × 3 ≈ 33 workdays.
 
@@ -505,9 +515,9 @@ CPM calls B and D noncritical. One run in four, they decide the finish.
 
 ## Spend now or hold a reserve?
 
-Option 1: pay now to cut E to (5, 6, 11).
+Option 1: pay a vendor now to cut E's estimates to a = 5, m = 6, b = 11.
 
-Option 2: hold $3,000 to expedite if E is not complete by day 15.
+Option 2: hold $3,000 in contingency, spent only if E is not complete by day 15.
 
 . . .
 
