@@ -1,0 +1,140 @@
+---
+title: "Studio 7 · A register that argues back, and a schedule that admits it might slip"
+subtitle: "Week 7 · Managing Risk · Larson Ch. 7"
+week: 7
+release: "2026-10-05"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA7</strong> — one PDF containing the risk register, severity matrix, PERT calculations, buffer recommendation and AI reconciliation</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>Identify, rate and respond to conference risks; turn the schedule into a probability; let a model attack the register and decide which objections hold</dd>
+<dt>Tools</dt><dd>Week 7 workbook, Excel or Google Sheets, and Gemini (NDSU Gemini Pro account)</dd>
+<dt>Workbook</dt><dd><a href="../files/week-07-risk-studio.xlsx">Week 7 risk studio workbook</a></dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · write the register and the PERT calculations yourself first, then use AI to review them, verify every claim, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-07.qmd">Week 7 — Managing Risk</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5: your judgement about which of the model's objections are right for this project.
+:::
+
+The project is the conference you scheduled in Week 6. Its plan now exists; this studio asks what could break it and how sure anyone can be of the date. Use the [Week 7 notes](../weeks/week-07.qmd) as your reference, especially the RBS, the severity matrix and the PERT section. Do not reuse the five example risks from the notes. Find your own.
+
+Download the [Week 7 risk studio workbook](../files/week-07-risk-studio.xlsx). It has five sheets: **Register**, **Scales**, **Matrix**, **PERT** and **Reconciliation**. Fill the yellow cells.
+
+::: {.part}
+### Part 1 · Identify — 15 minutes
+
+Start from the failure story you wrote in Tuesday's pre-mortem and from the conference RBS in the notes.
+
+1. Enter **eight** risks in the **Register**, R1 to R8.
+2. Write each one as cause, event and effect, in its three columns. The event must be something that could happen, not an outcome you fear. "Opening is late" is an outcome; "the AV vendor withdraws two weeks out" is an event.
+3. Cover at least **three** RBS categories.
+4. Include at least **one opportunity**.
+
+Before moving on, read each event column alone. If an event could not appear in a news report about the conference, rewrite it.
+:::
+
+::: {.part}
+### Part 2 · Assess — 15 minutes
+
+1. Rate each risk's likelihood (L), impact (I) and detection difficulty (D) from 1 to 5 using the **Scales** sheet. Rate impact on the objective the event hurts most.
+2. The workbook calculates the RPN and the severity zone, and places each risk on the **Matrix** sheet.
+3. Rank your risks by RPN. Compare that order with the zones.
+
+Find one pair of risks where the RPN order and the zones disagree. In two or three sentences, say which ranking you would act on for this conference and why. If no pair disagrees, change nothing and explain what the agreement tells you about your ratings.
+
+For an opportunity, rate impact as the size of the benefit, on the same 1–5 scale.
+:::
+
+::: {.part}
+### Part 3 · Respond — 20 minutes
+
+For every risk in the **major** or **moderate** zone, complete the rest of the row.
+
+| Column | What a good entry looks like |
+|:--|:--|
+| Response type | One of mitigate, avoid, transfer, escalate, retain, or for an opportunity exploit, share, enhance, escalate, accept |
+| Response (done now) | Work that happens whether or not the event occurs, with its cost if any |
+| Contingency plan | What runs only if the event happens |
+| Trigger | An observable condition with a date or threshold that someone can check |
+| Owner | One role, not "the team" |
+| Reserve (\$) | The contingency money the plan would need, or 0 with a reason |
+
+: {tbl-colwidths="[22,78]"}
+
+Check three things before moving on:
+
+- an escalated risk has no reserve and no project owner, because the project no longer manages it;
+- a transferred risk still has a contingency plan, because transfer moves the cost, not the event; and
+- no trigger depends on someone's opinion.
+
+Record the total contingency reserve the register calls for.
+:::
+
+::: {.part}
+### Part 4 · PERT — 20 minutes
+
+The **PERT** sheet holds the team's revised three-point estimates. They differ from the estimates in the notes.
+
+1. Enter formulas for $t_e = (a + 4m + b)/6$ and variance $= ((b - a)/6)^2$ for each activity.
+2. Complete the three paths: the sum of $t_e$, the sum of variances, $\sigma$, $Z$ at $T_S = 32$, and the probability of finishing by day 32. Use `=NORM.S.DIST(Z, TRUE)`.
+3. Identify the critical path from the expected durations. State $T_E$ and $\sigma_{T_E}$.
+4. Calculate the date that gives 90% confidence on the critical path, $T_E + 1.28\,\sigma_{T_E}$.
+
+Then answer three questions in no more than 150 words in total:
+
+- Which path has the higher probability of finishing by day 32 on its own, and why is that not the same as the critical path?
+- Is the true chance of finishing by day 32 higher or lower than the critical-path figure? Explain using the merge at G.
+- How many days of time buffer would you hold, and where in the network? Use one of the four placements in the notes.
+:::
+
+::: {.part}
+### Part 5 · Let the model argue back — 15 minutes
+
+Paste your completed register into Gemini with the prompt below. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.
+
+```text
+You are a sceptical project sponsor reviewing a risk register for a
+one-day professional conference. Attack it. For each problem you find,
+name the risk ID and say which of these it is:
+
+- an outcome written as if it were an event
+- a likelihood, impact or detection rating inconsistent with the scale I give you
+- a response type that is misclassified (e.g. transfer that is really mitigation)
+- a contingency plan that is really a response, or the reverse
+- a trigger that is not observable or has no threshold
+- an owner who could not act on the trigger
+- a reserve that is missing, double-counted or unjustified
+- an important risk that is missing entirely
+
+Do not rewrite the register. List objections only, most serious first.
+
+[paste the Scales sheet and the Register here]
+```
+
+In the **Reconciliation** sheet, record each objection. Mark it **accept**, **reject** or **partly**, give a reason tied to this conference, and note what you changed in the register. Make the changes.
+
+Keep the reconciliation to one page. If none of the model's objections hold, say so in the first row and describe what you checked to be sure. That is a finding, not a failure.
+:::
+
+::: {.part}
+### Part 6 · Save and upload
+
+Create one PDF in this order.
+
+- [ ] risk register, after your Part 5 changes
+- [ ] severity matrix sheet
+- [ ] RPN-versus-zone comparison from Part 2
+- [ ] PERT table, path calculations and 90% date
+- [ ] answers to the three PERT questions, at most 150 words
+- [ ] reconciliation table, at most one page
+- [ ] AI acknowledgement with tool, transcript link, changes and verification
+
+Save the workbook, the transcript link and the PDF in `IMSE456/studio-07/` on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.
+
+Then upload the PDF to Blackboard before you leave the session. Name it `SA7_yourlastname.pdf`.
+:::

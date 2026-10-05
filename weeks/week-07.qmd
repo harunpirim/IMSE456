@@ -26,3 +26,525 @@ lab: true
 :::
 
 <!-- VIDEO -->
+
+> A plan states what should happen. A risk plan states what you will do when it does not.
+
+::: {.callout-note appearance="simple"}
+**Source.** This week's notes follow Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, **Chapter 7 and its Appendix 7.1** [1]. The exposition is reworded; the structure, the four-step process, the five threat responses, the five opportunity responses and the PERT method are the chapter's. Figures 1, 2, 4, 5 and 7 are redrawn from the chapter's figures and say so in their captions. The conference risks, budget, three-point estimates and simulation are original to these course materials. The two appendix exercises are reproduced as written. The pre-mortem comes from Klein [2], the opportunity responses from PMI [3], and the critique of PERT's single-path probability from MacCrimmon and Ryavec [4].
+:::
+
+## Learning objectives
+
+| | |
+|:--|:--|
+| **LO 7-1** | Describe the risk management process. |
+| **LO 7-2** | Identify project risks as events rather than outcomes. |
+| **LO 7-3** | Assess and rank risks by likelihood, impact and detectability. |
+| **LO 7-4** | Choose among the five responses to a threat. |
+| **LO 7-5** | Separate a risk response from a contingency plan, and give each a trigger and an owner. |
+| **LO 7-6** | Choose among the five responses to an opportunity. |
+| **LO 7-7** | Size and hold contingency funds and time buffers. |
+| **LO 7-8** | Keep risk management running for the life of the project. |
+| **LO 7-9** | Route changes through a change control process. |
+| **LO A7-1** | Calculate PERT expected durations and the probability of meeting a date. |
+
+: {tbl-colwidths="[13,87]"}
+
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">risk event</span><span class="chip">risk register</span><span class="chip">risk breakdown structure</span><span class="chip">risk profile</span><span class="chip">pre-mortem</span><span class="chip">scenario analysis</span><span class="chip">impact scale</span><span class="chip">risk severity matrix</span><span class="chip">FMEA</span><span class="chip">risk priority number</span><span class="chip">mitigate</span><span class="chip">avoid</span><span class="chip">transfer</span><span class="chip">escalate</span><span class="chip">retain</span><span class="chip">contingency plan</span><span class="chip">trigger</span><span class="chip">opportunity</span><span class="chip">exploit</span><span class="chip">share</span><span class="chip">enhance</span><span class="chip">contingency reserve</span><span class="chip">management reserve</span><span class="chip">time buffer</span><span class="chip">change control</span><span class="chip">PERT</span><span class="chip">criticality index</span>
+:::
+
+---
+
+# LO 7-1 · Risk management is a process, not a list
+
+*Following Larson & Gray, Ch. 7, Section 7.1 [1].*
+
+Every estimate in Weeks 5 and 6 rested on assumptions. Risk management asks which of those assumptions could fail, what that would cost, and what the team will do about it — before the failure, while the options are still cheap.
+
+![The chance that something goes wrong is highest early, when most questions are open. The cost of dealing with it is highest late, when work has to be undone. Redrawn from Larson & Gray, Ch. 7, Figure 7.1 [1].](../images/week07/risk-cost-curve.svg){#fig-risk-cost width=100%}
+
+The two curves in @fig-risk-cost cross. Early in the project, uncertainty is high but a change of plan costs little: a design flaw found on paper is an edit. After a prototype is built, the same flaw means scrapping and rebuilding. The practical consequence is that risk work is front-loaded. The planning phase is when the team buys the most protection for the least money.
+
+Risk management is **proactive**. Its purpose is to reduce surprises, limit the damage of the ones that still arrive, and leave the project manager with prepared moves rather than improvisation. A team that has done it can also act faster on good news, because it has already thought about what an early finish or a lower price would allow.
+
+Some risks sit outside the project entirely: inflation, exchange rates, new regulation, a collapse in market demand. These are usually weighed before the project is approved and are funded, if at all, from a reserve that senior management controls. They matter, but they are not the project team's to manage. This week concentrates on risks inside the project's reach.
+
+## Four steps, one loop
+
+![The four-step process. Control is not the last step: it produces new risks that feed back into identification. Redrawn from Larson & Gray, Ch. 7, Figure 7.2 [1].](../images/week07/risk-process.svg){#fig-risk-process width=100%}
+
+| Step | Question | Output |
+|:--|:--|:--|
+| **1 · Identify** | What events could affect the project? | A list of candidate risk events |
+| **2 · Assess** | How likely is each, how much would it hurt, and how early would we see it coming? | A ranked list |
+| **3 · Plan responses** | What will we do before it happens, and what will we do if it happens anyway? | The risk register: responses, contingency plans, triggers, owners |
+| **4 · Control** | Is the plan working, and what has changed? | Executed responses, new risks, change requests |
+
+: {tbl-colwidths="[18,46,36]"}
+
+The **risk register** is the document that carries all four steps. One row per risk event: what it is, how it was rated, the response chosen, the contingency plan, the trigger that activates it and the person responsible. A register that is written once and filed has stopped being risk management.
+
+---
+
+# LO 7-2 · Identify events, not outcomes
+
+*Following Larson & Gray, Ch. 7, Section 7.2 [1].*
+
+Identification is done by a group, not by the project manager alone. Core team members and the stakeholders who know particular parts of the work produce better risk judgements together than any one of them does individually [5]. The early aim is breadth. An event that sounds absurd in the first meeting is cheap to discard later; an event nobody mentioned cannot be planned for. Projects have been derailed by risks that were dismissed early as unthinkable.
+
+The commonest identification error is to list the outcome you fear instead of the event that would cause it. "We miss the opening date" is not a risk event. It is a consequence, and it suggests no action. The events behind it do.
+
+| Outcome stated as a risk | Events that could cause it |
+|:--|:--|
+| The conference opens late | Venue contract signed late; keynote cancels; registration site fails at launch |
+| We go over budget | Catering minimums rise; AV vendor adds a livestream surcharge; speaker travel rebooked at short notice |
+| Attendance is low | A competing event is announced for the same week; early-bird pricing launches late |
+
+: {tbl-colwidths="[30,70]"}
+
+A usable risk statement names the event, its cause and its effect: *because the venue's legal team reviews contracts monthly, the contract may be signed late, which would delay registration opening.*
+
+## Two structured prompts
+
+A **risk breakdown structure (RBS)** does for risk what the WBS does for scope: it divides the sources of risk into categories so the team looks in every direction. At the start, the team should work at the level of the whole project — funding, market, sponsor support — before descending into individual work packages.
+
+![An RBS for the conference. The five top-level categories follow the generic RBS in Larson & Gray, Ch. 7, Figure 7.3 [1]; the sources beneath them are specific to this project.](../images/week07/conference-rbs.svg){#fig-conference-rbs width=100%}
+
+A **risk profile** is a standing checklist of questions an organization refines from one project to the next. It turns past failures into prompts. A few questions an events team might keep:
+
+| Area | Question |
+|:--|:--|
+| Requirements | Has the sponsor agreed what a successful conference looks like, in numbers? |
+| Suppliers | Which vendor, if it failed, would leave us with no substitute within two weeks? |
+| Schedule | Does anything we need depend on another project or another organization's calendar? |
+| Budget | Which costs are quoted, and which are still guesses? |
+| Staffing | Who on the team has done this kind of event before? |
+| Authority | Who can sign a contract, and how long does that take? |
+
+: {tbl-colwidths="[22,78]"}
+
+The chapter's own example profile, for a product development project, asks similar questions about technical requirements, design, testing, schedule, budget, quality, management, staffing, customers and contractors [1].
+
+## The pre-mortem
+
+A **pre-mortem** reverses the usual question [2]. Instead of asking what *might* go wrong, the team is told that the project *has* failed — it is six months from now, the conference was a disaster — and each person writes, independently and for a few minutes, the story of why. The stories are then pooled.
+
+The device works because it changes what is socially permitted. Raising doubts about a plan the group has just approved feels disloyal; explaining a failure that has been declared a fact does not. It also forces specificity: a story of failure has a cause and a sequence, which is exactly the event-level description identification needs. The output of a pre-mortem is raw material for step 1, not a register. Every story still has to be converted into events, assessed and given a response.
+
+::: {.case}
+### The conference pre-mortem
+
+It is the morning after the conference. Attendance was half the target, the keynote spoke to an empty overflow room, and the sponsor has asked for a written account of what went wrong.
+
+::: {.qn}
+Write the failure story in five sentences. Then rewrite each sentence as a risk event with a cause and an effect. Which of your events appear nowhere in the RBS in @fig-conference-rbs?
+:::
+:::
+
+---
+
+# LO 7-3 · Assess what deserves attention
+
+*Following Larson & Gray, Ch. 7, Section 7.3 [1].*
+
+Identification produces too many risks to manage. Assessment sorts them: some are trivial, some duplicate each other, and a few could sink the project. **Scenario analysis** is the most common method. For each event the team describes what would happen and rates two things: the **likelihood** that the event occurs and its **impact** on the project's objectives.
+
+## Make the scales mean something
+
+A rating of "4" is useless unless everyone means the same thing by it. Define the scales against the project's objectives before rating anything.
+
+| Objective | 1 · Very low | 2 · Low | 3 · Moderate | 4 · High | 5 · Very high |
+|:--|:--|:--|:--|:--|:--|
+| **Cost** | Negligible | Under 10% over | 10–20% over | 20–40% over | Over 40% over |
+| **Time** | Negligible | Under 5% late | 5–10% late | 10–20% late | Over 20% late |
+| **Scope** | Barely noticed | Minor areas affected | Major areas affected | Sponsor would reject the reduction | Deliverable effectively useless |
+| **Quality** | Barely noticed | Only the most demanding uses affected | Sponsor must approve the reduction | Sponsor would reject the reduction | Deliverable effectively useless |
+
+: Impact scale for negative risks. Thresholds follow Larson & Gray, Ch. 7, Figure 7.5 [1]; a team should set its own. {tbl-colwidths="[13,15,18,18,18,18]"}
+
+The thresholds are a policy choice. A conference with a fixed date and a flexible budget would set tight time thresholds and loose cost ones. When an event affects more than one objective, rate it on the worst one.
+
+## The severity matrix
+
+Plotting each risk by likelihood and impact gives the **risk severity matrix**. Its zones set priorities: major risks are acted on first, moderate risks get a plan and a watch, minor risks are logged and revisited only if their ratings change.
+
+![A severity matrix with five conference risks. The zones are not symmetric: the major zone runs further down the high-impact column than along the high-likelihood row. Layout redrawn from Larson & Gray, Ch. 7, Figure 7.7 [1]; the risks and zone boundaries are this course's.](../images/week07/severity-matrix.svg){#fig-severity width=100%}
+
+The asymmetry in @fig-severity is deliberate. Most organizations weigh impact above likelihood: a one-in-ten chance of losing the entire sponsorship is worse than a nine-in-ten chance of a catering overrun. That is why R1, a keynote cancellation rated unlikely, still lands in the major zone.
+
+## Adding detection: FMEA
+
+**Failure mode and effects analysis (FMEA)** adds a third rating: how hard the event would be to detect in time to act. The three ratings multiply into a **risk priority number**:
+
+$$
+\text{RPN} = \text{Impact} \times \text{Likelihood} \times \text{Detection difficulty}
+$$
+
+A registration site that fails silently overnight is worse than one that fails during a monitored launch, even if impact and likelihood are equal.
+
+| Risk | L | I | D | RPN |
+|:--|:--:|:--:|:--:|--:|
+| R1 Keynote speaker cancels | 2 | 5 | 2 | 20 |
+| R2 Venue contract signed late | 4 | 4 | 2 | 32 |
+| R3 Registration site fails at launch | 2 | 4 | 4 | 32 |
+| R4 Fewer than 150 registrations | 3 | 3 | 3 | 27 |
+| R5 Livestream drops during keynote | 3 | 2 | 5 | 30 |
+
+: {tbl-colwidths="[52,12,12,12,12]"}
+
+The table shows the method's weakness as clearly as its strength. R1 has the lowest RPN of the five and the most damaging impact. Multiplication treats a trivial event that is likely and invisible exactly like a catastrophic one that is likely and obvious: 1 × 5 × 5 and 5 × 5 × 1 both give 25. The chapter's conclusion is the right one — the numbers organize the discussion; they do not make the decision [1].
+
+::: {.case}
+### Two risks, one number
+
+The venue contract (R2) and the registration site (R3) both score 32. The venue risk is visible weeks ahead. The registration failure would be discovered by attendees at 9 a.m. on launch day.
+
+::: {.qn}
+Should the two risks receive the same response budget? What does the RPN hide that the conversation about them would reveal?
+:::
+:::
+
+## Probability analysis
+
+Some techniques assess risk at the level of the whole project rather than event by event: decision trees compare courses of action by expected value, and probabilistic versions of net present value and cost S-curves assess cash-flow risk. For schedules, the chapter's tool is **PERT** and its simulated form. Instead of asking whether a particular event will occur, PERT asks how likely the project is to finish by a given date. That number informs how much contingency time and money to hold. The method is set out in the [appendix section](#lo-a7-1-pert-how-likely-is-the-date) below.
+
+---
+
+# LO 7-4 · Five responses to a threat
+
+*Following Larson & Gray, Ch. 7, Section 7.4 [1].*
+
+Once a risk is ranked, the team chooses how to respond. There are five options.
+
+| Response | What it does | Conference example |
+|:--|:--|:--|
+| **Mitigate** | Lowers the likelihood, the impact, or both | Book a backup keynote on standby (impact); send the venue contract to legal in week 1 (likelihood) |
+| **Avoid** | Changes the plan so the event cannot occur | Drop the livestream and record the keynote for later release |
+| **Transfer** | Moves the financial consequence to another party, at a price | Buy event cancellation insurance; put a fixed-price clause in the AV contract |
+| **Escalate** | Passes a threat outside the project's scope or the manager's authority to the people who own it | A rumoured hiring freeze would cut the sponsor's travel budget: tell the sponsor's executive, not the volunteer team |
+| **Retain** | Accepts the risk deliberately, with or without a fund to absorb it | A severe winter storm on the day: too unlikely and too expensive to insure fully |
+
+: {tbl-colwidths="[13,37,50]"}
+
+Four points separate a good choice from a label.
+
+**Mitigation usually targets likelihood first.** If the event becomes unlikely enough, the more expensive impact-reducing measures may never be needed.
+
+**Transfer does not remove the risk.** Insurance and fixed-price contracts move who pays; the event can still happen. A contractor who accepts a fixed price adds a premium to cover the risk it has taken on, so transfer always costs something.
+
+**Escalation ends the team's ownership.** An escalated threat is handed to someone with the authority to act on it and is no longer tracked in the project's register. Escalating is not the same as asking the sponsor for help with a risk you still own.
+
+**Retention is a decision, not an omission.** A retained risk appears in the register with the reason it was retained. A risk nobody listed has not been retained; it has been missed.
+
+---
+
+# LO 7-5 · Contingency plans, triggers and owners
+
+*Following Larson & Gray, Ch. 7, Section 7.5 [1].*
+
+A **response** is part of the plan and is carried out *before* the event, whether or not the event ever happens. A **contingency plan** stays outside the baseline. It waits, ready, and runs only *if* the event occurs.
+
+The distinction matters because the two are paid for differently. A response is scheduled work with a budget line. A contingency plan is drawn against a reserve only when needed.
+
+Every contingency plan needs a **trigger**: an observable condition that says the event has happened and the plan now runs. "If the speaker seems unreliable" is not a trigger. "If the keynote has not confirmed travel by 15 September" is. Every plan also needs one named **owner** who watches the trigger and has the authority to act.
+
+| Risk event | Response (now) | Contingency plan (if) | Trigger | Owner |
+|:--|:--|:--|:--|:--|
+| R1 Keynote cancels | Mitigate: standby speaker paid a holding fee | Promote standby; reprint program insert | No travel confirmation 21 days out | Program lead |
+| R2 Venue contract late | Mitigate: submit contract in week 1 | Release hold on second-choice venue | Unsigned 10 workdays after submission | Project manager |
+| R3 Registration fails | Mitigate: load test one week before launch | Switch to the backup form and email confirmations | Error rate above 2% in first hour | Systems lead |
+| R5 Livestream drops | Transfer: AV contract with service-level penalty | Switch to local recording; post within 24 hours | Stream down for more than 2 minutes | AV vendor contact |
+
+: Risk response matrix for the conference. Column structure follows Larson & Gray, Ch. 7, Figure 7.8 [1]. {tbl-colwidths="[16,22,22,22,18]"}
+
+---
+
+# LO 7-6 · Opportunities get the same process
+
+*Following Larson & Gray, Ch. 7, Section 7.6 [1].*
+
+Risk includes events that would help. An **opportunity** is an uncertain event with a positive effect: a vendor cuts prices, an extra sponsor appears, a task finishes early. Opportunities are identified, assessed and planned for exactly like threats. The difference is in the responses. The profession recognizes five [3].
+
+| Response | Threat counterpart | What it does | Conference example |
+|:--|:--|:--|:--|
+| **Exploit** | Avoid | Removes the uncertainty so the opportunity definitely happens | Put the most experienced coordinator on speaker confirmation, a burst activity that releases three branches |
+| **Share** | Transfer | Gives some ownership to a party better placed to capture it | Offer a co-hosting role to a professional society that can bring 100 registrations |
+| **Enhance** | Mitigate | Raises the likelihood or the benefit | Choose the venue whose rate falls if booked before a stated date |
+| **Escalate** | Escalate | Passes an opportunity beyond the project's scope or authority upward | A sponsor wants a second regional event next spring: refer it to the department head |
+| **Accept** | Retain | Takes the benefit if it arrives but spends nothing to pursue it | If a local company offers free coffee, say yes |
+
+: {tbl-colwidths="[12,15,33,40]"}
+
+---
+
+# LO 7-7 · Contingency funds and time buffers
+
+*Following Larson & Gray, Ch. 7, Section 7.7 [1].*
+
+Responses and contingency plans need money and time that the baseline does not contain. Two kinds of reserve hold that money, and they differ in what they cover and who controls them.
+
+| | Contingency reserve | Management reserve |
+|:--|:--|:--|
+| **Covers** | Identified risks in the register | Risks nobody identified, and threats from outside the project |
+| **Sized from** | The expected cost of specific contingency plans | A policy percentage or senior judgement |
+| **Controlled by** | The project manager, against a named risk | Senior management; release needs approval |
+| **Part of the project budget?** | Yes | Held above it |
+
+: {tbl-colwidths="[22,39,39]"}
+
+Both reserves are shown openly, in their own columns. A reserve buried inside activity estimates cannot be tracked, tends to be spent whether or not the risk occurs, and repeats the padding problem from Week 5.
+
+| Work package | Baseline | Contingency reserve | Basis | Project budget |
+|:--|--:|--:|:--|--:|
+| Venue and catering | \$34,000 | \$3,400 | R2: second-venue deposit | \$37,400 |
+| Speakers and travel | 18,000 | 2,700 | R1: standby fee and rebooked travel | 20,700 |
+| Registration and AV | 12,000 | 1,800 | R3, R5: backup form, local recording | 13,800 |
+| Materials and rehearsal | 6,000 | 300 | Reprint program insert | 6,300 |
+| **Subtotal** | **\$70,000** | **\$8,200** | | **\$78,200** |
+| Management reserve | — | — | Held by the department | 4,000 |
+| **Total authorized** | | | | **\$82,200** |
+
+: Illustrative conference budget with both reserves. The layout follows Larson & Gray, Ch. 7, Table 7.1 [1]; the figures are invented for this example. {tbl-colwidths="[26,15,16,26,17]"}
+
+## Time buffers
+
+Time works the same way. A **time buffer** is schedule time held against delay, and like contingency money it is sized to the uncertainty and placed deliberately. The chapter names four places where a buffer earns its keep [1]:
+
+1. **After activities with severe risk**, so a known hazard cannot ripple straight into the finish.
+2. **At merge activities**, which wait for the last of several predecessors and so inherit every one of their delays. Week 6's activity G waits for both registration and speakers.
+3. **On noncritical paths**, to stop a branch with little slack from becoming the critical path.
+4. **Before activities that need scarce resources**, so the resource is not lost because the preceding work ran late.
+
+A buffer is shown in the schedule as its own visible block, owned by the project manager. Hiding it inside an activity's duration invites the activity to expand into it.
+
+---
+
+# LO 7-8 · Risk management keeps running
+
+*Following Larson & Gray, Ch. 7, Figure 7.2 [1].*
+
+Step 4 of @fig-risk-process is where most risk plans fail: the register is filed and nobody looks at it again. Control means four recurring actions.
+
+- **Watch the triggers.** Each owner checks the trigger on a fixed cadence and reports, even when nothing has happened.
+- **Re-rate.** Likelihood and impact change as the project learns. The venue risk falls to minor once the contract is signed; the livestream risk rises if the vendor changes.
+- **Add and retire.** New risks enter the register as they appear; risks that can no longer occur are closed, and their contingency reserve is released.
+- **Record what happened.** When a contingency plan runs, it changes the baseline, so it goes through change control. Afterwards, the lesson goes into the organization's risk profile for the next project.
+
+A risk review belongs in the regular status meeting, not in a separate ceremony held once a quarter.
+
+---
+
+# LO 7-9 · Change control
+
+*Following Larson & Gray, Ch. 7, Section 7.9 [1].*
+
+Plans change. The changes come from the customer, the sponsor, the team and from risk events themselves, and they fall into three broad kinds:
+
+- **Scope changes**, such as a new feature or a redesign — usually the largest;
+- **Contingency plans being executed**, which move the cost and schedule baselines; and
+- **Improvements** proposed by the team.
+
+A **change control system** records, evaluates and tracks every change to the baseline. It should be in place before the first change request arrives, which means setting it up during planning.
+
+![Every change follows the same route. Rejected or deferred requests go back to the originator; only approved changes update the baseline. Redrawn from Larson & Gray, Ch. 7, Figure 7.9 [1].](../images/week07/change-control.svg){#fig-change-control width=100%}
+
+The system's jobs, in the order a request meets them:
+
+1. capture the proposed change;
+2. estimate its effect on schedule, cost and risk;
+3. review it and approve, amend, reject or defer it formally;
+4. resolve any conflict over conditions and cost;
+5. tell everyone the change affects;
+6. assign who will implement it;
+7. update the master schedule and budget; and
+8. track it to completion.
+
+A change request form makes those jobs routine. The chapter's sample [1] records the originator, the description and reason, the objectives affected, the disposition, the priority, the **funding source** and the sign-offs. The funding source is the field that ties change control to this week's reserves: a change is paid for by the customer, the contingency reserve or the management reserve, and the form forces that choice to be made explicitly.
+
+::: {.case}
+### A second keynote
+
+Six weeks out, the sponsor asks to add a second keynote and livestream it to two partner campuses. The request arrives by email to the program lead, who says yes.
+
+::: {.qn}
+List what the change control process would have required before that yes. Which objectives does the request affect, and which reserve, if any, should pay for it?
+:::
+:::
+
+---
+
+# LO A7-1 · PERT: how likely is the date? {#lo-a7-1-pert-how-likely-is-the-date}
+
+*Following Larson & Gray, Ch. 7, Appendix 7.1 [1].*
+
+PERT was developed in the late 1950s to schedule the U.S. Navy's Polaris missile program, where thousands of contractors were doing work no one had done before [1]. It keeps the CPM network from Week 6 but replaces each single duration with a range.
+
+## Three estimates per activity
+
+Each activity gets an **optimistic** time *a*, a **most likely** time *m* and a **pessimistic** time *b*. Activity durations are assumed to follow a beta distribution, which can be lopsided: work that falls behind tends to stay behind, so the pessimistic tail is usually longer than the optimistic one.
+
+![Left: one activity's duration, skewed to the right, with its expected time to the right of the most likely value. Right: the sum of many activities on a path, close to symmetric. Redrawn from Larson & Gray, Ch. 7, Figure A7.1 [1].](../images/week07/pert-distributions.svg){#fig-pert-distributions width=100%}
+
+The three estimates give an expected time and a standard deviation for each activity:
+
+$$
+t_e = \frac{a + 4m + b}{6} \qquad \sigma_{t_e} = \frac{b - a}{6}
+$$
+
+The expected times go into the network and the forward and backward passes run exactly as in Week 6. The **expected project duration** $T_E$ is the length of the critical path. Along that path, variances add:
+
+$$
+\sigma_{T_E} = \sqrt{\sum \sigma_{t_e}^2}
+$$
+
+Add **variances**, never standard deviations. And add only the activities on the path being examined.
+
+Because $T_E$ is a sum of several independent activity times, it is treated as normally distributed. The probability of finishing by a scheduled time $T_S$ comes from the standard normal value
+
+$$
+Z = \frac{T_S - T_E}{\sigma_{T_E}}
+$$
+
+read from a normal table or computed with `=NORM.S.DIST(Z, TRUE)` in Excel or Google Sheets.
+
+## The conference with ranges
+
+Here is the Week 6 conference network again, now with three-point estimates. The single durations from Week 6 were close to the most likely values. The ranges are what the team actually believes.
+
+| ID | Activity | *a* | *m* | *b* | $t_e$ | $\sigma^2$ |
+|:--:|:--|--:|--:|--:|--:|--:|
+| A | Event brief | 2 | 2 | 8 | 3 | 1 |
+| B | Venue | 5 | 5 | 17 | 7 | 4 |
+| C | Program draft | 3 | 6 | 9 | 6 | 1 |
+| D | Registration | 4 | 4 | 16 | 6 | 4 |
+| E | Speakers | 5 | 8 | 17 | 9 | 4 |
+| F | Exhibitors | 2 | 5 | 8 | 5 | 1 |
+| G | Publish program | 3 | 3 | 9 | 4 | 1 |
+| H | Materials | 1 | 4 | 7 | 4 | 1 |
+| I | Rehearsal | 2 | 2 | 8 | 3 | 1 |
+
+: Conference three-point estimates, in workdays. Predecessors are unchanged from Week 6. {tbl-colwidths="[7,33,10,10,10,15,15]"}
+
+Running the passes on the $t_e$ values gives three complete paths:
+
+| Path | $\sum t_e$ | $\sum \sigma^2$ | $\sigma$ |
+|:--|--:|--:|--:|
+| A–C–E–G–H–I | **29** | 9 | 3.00 |
+| A–B–D–G–H–I | 27 | 12 | 3.46 |
+| A–C–F–H–I | 21 | 5 | 2.24 |
+
+: {tbl-colwidths="[40,20,20,20]"}
+
+The critical path is A–C–E–G–H–I, with $T_E = 29$ and $\sigma_{T_E} = 3$. The ranges have added four days to Week 6's 25-day plan, because most activities can run long by more than they can run short.
+
+| Scheduled time $T_S$ | $Z$ | Probability of finishing by $T_S$ |
+|--:|--:|--:|
+| 26 | −1.00 | 16% |
+| 29 | 0.00 | 50% |
+| 32 | +1.00 | 84% |
+| 33 | +1.33 | 91% |
+
+: {tbl-colwidths="[30,20,50]"}
+
+A date set at $T_E$ is a coin toss. To be 90% confident, the team needs $T_S = T_E + 1.28\,\sigma = 29 + 3.8 \approx 33$ workdays: a four-day time buffer over the expected duration.
+
+## What the single-path calculation leaves out
+
+PERT's probability looks only at the critical path. The venue path, A–B–D–G–H–I, is two days shorter on average but has the largest variance of the three. On a bad run of the venue and registration activities, it becomes the longer path, and the project waits for it at the merge, G. The standard formula ignores that possibility, so it overstates the chance of finishing on time. The bias always runs in the optimistic direction [4].
+
+**PERT simulation** removes the single-path assumption. It draws a duration for every activity from its distribution, runs the forward pass, records the finish, and repeats thousands of times. For the conference, 200,000 simulated projects give:
+
+| Question | PERT formula | Simulation |
+|:--|--:|--:|
+| Chance of finishing by day 29 | 50% | 44% |
+| Chance of finishing by day 32 | 84% | 80% |
+| Duration with 90% confidence | 33 days | 34 days |
+
+: {tbl-colwidths="[50,25,25]"}
+
+![The PERT curve for the conference critical path. The shaded area left of day 32 is 84%. A simulation that lets the venue path become critical gives 80%. Layout follows Larson & Gray, Ch. 7, Figure A7.3 [1]; the conference figures are this course's.](../images/week07/pert-probability.svg){#fig-pert-probability width=100%}
+
+Simulation also reports a **criticality index**: the share of runs in which each activity lay on the longest path. A, G, H and I are critical in every run, because every path passes through them. C and E are critical in 73% of runs; B and D, which CPM reports as noncritical with two days of slack, are critical in 27%. That number is the strongest argument for a time buffer at the merge into G. It is the "merge activity" rule from LO 7-7, expressed as a probability.
+
+::: {.case}
+### Spend now or hold a reserve?
+
+The sponsor wants a 90% chance of opening by day 32. One option is to pay a vendor now to cut the speaker-confirmation estimates, E, to (5, 6, 11). The other is to hold \$3,000 in contingency for expediting if the trigger "E not complete by day 15" fires.
+
+::: {.qn}
+Recompute $T_E$ and $\sigma_{T_E}$ for the first option. Does it reach 90% by day 32? Which path would then deserve the team's attention? The chapter calls the second option "more prudent"; under what conditions would you disagree?
+:::
+:::
+
+## Practice exercises
+
+::: {#appendix-exercises}
+1. Given the project information in the following table, what is the probability of completing the National Holiday Toy project in 93 time units?
+
+| Act. ID | Description | Predecessor | Optm. (*a*) | Most likely (*m*) | Pess. (*b*) | Act time $t_e$ | Variance $[(b-a)/6]^2$ | Critical |
+|:--|:--|:--|--:|--:|--:|:--|:--|:--|
+| 1 | Design package | None | 6 | 12 | 24 | | | |
+| 2 | Design product | 1 | 16 | 19 | 28 | | | |
+| 3 | Build package | 1 | 4 | 7 | 10 | | | |
+| 4 | Secure patent | 2 | 24 | 27 | 36 | | | |
+| 5 | Build product | 2 | 17 | 29 | 47 | | | |
+| 6 | Paint | 3, 4, 5 | 4 | 7 | 10 | | | |
+| 7 | Test market | 6 | 13 | 16 | 19 | | | |
+
+
+2. The Global Tea and Organic Juice companies have merged. The following information has been collected for the "Consolidation Project."
+
+| Activity | Description | Predecessor | *a* opt | *m* ml | *b* pess |
+|:--|:--|:--|--:|--:|--:|
+| 1 | Codify accounts | None | 16 | 19 | 28 |
+| 2 | File articles of unification | None | 30 | 30 | 30 |
+| 3 | Unify price and credit policy | None | 60 | 72 | 90 |
+| 4 | Unify personnel policies | None | 18 | 27 | 30 |
+| 5 | Unify data processing | 1 | 17 | 29 | 47 |
+| 6 | Train accounting staff | 1 | 4 | 7 | 10 |
+| 7 | Pilot run data processing | 5 | 12 | 15 | 18 |
+| 8 | Calculate P & L and balance sheet | 6, 7 | 6 | 12 | 24 |
+| 9 | Transfer real property | 2 | 18 | 27 | 30 |
+| 10 | Train salesforce | 3 | 20 | 35 | 50 |
+| 11 | Negotiate with unions | 4 | 40 | 55 | 100 |
+| 12 | Determine capital needs | 8 | 11 | 20 | 29 |
+| 13 | Explain personnel policies | 11 | 14 | 23 | 26 |
+| 14 | Secure line of credit | 9, 12 | 13 | 16 | 19 |
+| 15 | End | 10, 13, 14 | 0 | 0 | 0 |
+
+
+   1. Compute the expected time for each activity.
+   2. Compute the variance for each activity.
+   3. Compute the expected project duration.
+   4. What is the probability of completing the project by day 112? Within 116 days?
+   5. What is the probability of completing "Negotiate with unions" by day 90?
+:::
+
+::: {.callout-note appearance="simple"}
+Exercises are reproduced from Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, Chapter 7, Appendix 7.1 [1]. After you answer exercise 2, look at the other paths' variances. Which answer does the single-path calculation make look better than it is?
+:::
+
+---
+
+# Thursday studio
+
+## Studio 7 · A register that argues back, and a schedule that admits it might slip
+
+Complete the [Week 7 studio](../labs/lab-07.qmd).
+
+You will build a risk register for the conference: identify events from the RBS, rate them, choose responses, and write contingency plans with triggers and owners. You will then turn the conference schedule into a probability with PERT and size a time buffer. Finally, an AI reviewer will attack your register, and you will decide which of its objections hold.
+
+Write the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this project.
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 7 and Appendix 7.1.
+2. Klein, G. (2007). Performing a project premortem. *Harvard Business Review*, 85(9), 18–19.
+3. Project Management Institute. (2017). *A Guide to the Project Management Body of Knowledge (PMBOK® Guide)* (6th ed.). Section 11.5.
+4. MacCrimmon, K. R., & Ryavec, C. A. (1964). An analytical study of the PERT assumptions. *Operations Research*, 12(1), 16–37.
+5. Sniezek, J. A., & Henry, R. A. (1989). Accuracy and confidence in group judgment. *Organizational Behavior and Human Decision Processes*, 43(1), 1–28.
+
+The conference risks, ratings, budget, three-point estimates and simulation are original to these course materials.
