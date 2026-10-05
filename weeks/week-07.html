@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,64 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-7-1-risk-management-is-a-process-not-a-list" id="toc-lo-7-1-risk-management-is-a-process-not-a-list" class="nav-link" data-scroll-target="#lo-7-1-risk-management-is-a-process-not-a-list">LO 7-1 · Risk management is a process, not a list</a>
+  <ul class="collapse">
+  <li><a href="#four-steps-one-loop" id="toc-four-steps-one-loop" class="nav-link" data-scroll-target="#four-steps-one-loop">Four steps, one loop</a></li>
+  </ul></li>
+  <li><a href="#lo-7-2-identify-events-not-outcomes" id="toc-lo-7-2-identify-events-not-outcomes" class="nav-link" data-scroll-target="#lo-7-2-identify-events-not-outcomes">LO 7-2 · Identify events, not outcomes</a>
+  <ul class="collapse">
+  <li><a href="#two-structured-prompts" id="toc-two-structured-prompts" class="nav-link" data-scroll-target="#two-structured-prompts">Two structured prompts</a></li>
+  <li><a href="#the-pre-mortem" id="toc-the-pre-mortem" class="nav-link" data-scroll-target="#the-pre-mortem">The pre-mortem</a>
+  <ul class="collapse">
+  <li><a href="#the-conference-pre-mortem" id="toc-the-conference-pre-mortem" class="nav-link" data-scroll-target="#the-conference-pre-mortem">The conference pre-mortem</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-7-3-assess-what-deserves-attention" id="toc-lo-7-3-assess-what-deserves-attention" class="nav-link" data-scroll-target="#lo-7-3-assess-what-deserves-attention">LO 7-3 · Assess what deserves attention</a>
+  <ul class="collapse">
+  <li><a href="#make-the-scales-mean-something" id="toc-make-the-scales-mean-something" class="nav-link" data-scroll-target="#make-the-scales-mean-something">Make the scales mean something</a></li>
+  <li><a href="#the-severity-matrix" id="toc-the-severity-matrix" class="nav-link" data-scroll-target="#the-severity-matrix">The severity matrix</a></li>
+  <li><a href="#adding-detection-fmea" id="toc-adding-detection-fmea" class="nav-link" data-scroll-target="#adding-detection-fmea">Adding detection: FMEA</a>
+  <ul class="collapse">
+  <li><a href="#two-risks-one-number" id="toc-two-risks-one-number" class="nav-link" data-scroll-target="#two-risks-one-number">Two risks, one number</a></li>
+  </ul></li>
+  <li><a href="#probability-analysis" id="toc-probability-analysis" class="nav-link" data-scroll-target="#probability-analysis">Probability analysis</a></li>
+  </ul></li>
+  <li><a href="#lo-7-4-five-responses-to-a-threat" id="toc-lo-7-4-five-responses-to-a-threat" class="nav-link" data-scroll-target="#lo-7-4-five-responses-to-a-threat">LO 7-4 · Five responses to a threat</a></li>
+  <li><a href="#lo-7-5-contingency-plans-triggers-and-owners" id="toc-lo-7-5-contingency-plans-triggers-and-owners" class="nav-link" data-scroll-target="#lo-7-5-contingency-plans-triggers-and-owners">LO 7-5 · Contingency plans, triggers and owners</a></li>
+  <li><a href="#lo-7-6-opportunities-get-the-same-process" id="toc-lo-7-6-opportunities-get-the-same-process" class="nav-link" data-scroll-target="#lo-7-6-opportunities-get-the-same-process">LO 7-6 · Opportunities get the same process</a></li>
+  <li><a href="#lo-7-7-contingency-funds-and-time-buffers" id="toc-lo-7-7-contingency-funds-and-time-buffers" class="nav-link" data-scroll-target="#lo-7-7-contingency-funds-and-time-buffers">LO 7-7 · Contingency funds and time buffers</a>
+  <ul class="collapse">
+  <li><a href="#time-buffers" id="toc-time-buffers" class="nav-link" data-scroll-target="#time-buffers">Time buffers</a></li>
+  </ul></li>
+  <li><a href="#lo-7-8-risk-management-keeps-running" id="toc-lo-7-8-risk-management-keeps-running" class="nav-link" data-scroll-target="#lo-7-8-risk-management-keeps-running">LO 7-8 · Risk management keeps running</a></li>
+  <li><a href="#lo-7-9-change-control" id="toc-lo-7-9-change-control" class="nav-link" data-scroll-target="#lo-7-9-change-control">LO 7-9 · Change control</a>
+  <ul class="collapse">
+  <li><a href="#a-second-keynote" id="toc-a-second-keynote" class="nav-link" data-scroll-target="#a-second-keynote">A second keynote</a></li>
+  </ul></li>
+  <li><a href="#lo-a7-1-pert-how-likely-is-the-date" id="toc-lo-a7-1-pert-how-likely-is-the-date" class="nav-link" data-scroll-target="#lo-a7-1-pert-how-likely-is-the-date">LO A7-1 · PERT: how likely is the date?</a>
+  <ul class="collapse">
+  <li><a href="#three-estimates-per-activity" id="toc-three-estimates-per-activity" class="nav-link" data-scroll-target="#three-estimates-per-activity">Three estimates per activity</a></li>
+  <li><a href="#the-conference-with-ranges" id="toc-the-conference-with-ranges" class="nav-link" data-scroll-target="#the-conference-with-ranges">The conference with ranges</a></li>
+  <li><a href="#what-the-single-path-calculation-leaves-out" id="toc-what-the-single-path-calculation-leaves-out" class="nav-link" data-scroll-target="#what-the-single-path-calculation-leaves-out">What the single-path calculation leaves out</a>
+  <ul class="collapse">
+  <li><a href="#spend-now-or-hold-a-reserve" id="toc-spend-now-or-hold-a-reserve" class="nav-link" data-scroll-target="#spend-now-or-hold-a-reserve">Spend now or hold a reserve?</a></li>
+  </ul></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice exercises</a></li>
+  </ul></li>
+  <li><a href="#thursday-studio" id="toc-thursday-studio" class="nav-link" data-scroll-target="#thursday-studio">Thursday studio</a>
+  <ul class="collapse">
+  <li><a href="#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip" id="toc-studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip" class="nav-link" data-scroll-target="#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip">Studio 7 · A register that argues back, and a schedule that admits it might slip</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -201,8 +286,1305 @@ Produced in the Thursday session and uploaded to Blackboard before you leave
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>A plan states what should happen. A risk plan states what you will do when it does not.</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 7 and its Appendix 7.1</strong> [1]. The exposition is reworded; the structure, the four-step process, the five threat responses, the five opportunity responses and the PERT method are the chapter’s. Figures 1, 2, 4, 5 and 7 are redrawn from the chapter’s figures and say so in their captions. The conference risks, budget, three-point estimates and simulation are original to these course materials. The two appendix exercises are reproduced as written. The pre-mortem comes from Klein [2], the opportunity responses from PMI [3], and the critique of PERT’s single-path probability from MacCrimmon and Ryavec [4].</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 87%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 7-1</strong></td>
+<td style="text-align: left;">Describe the risk management process.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 7-2</strong></td>
+<td style="text-align: left;">Identify project risks as events rather than outcomes.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 7-3</strong></td>
+<td style="text-align: left;">Assess and rank risks by likelihood, impact and detectability.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 7-4</strong></td>
+<td style="text-align: left;">Choose among the five responses to a threat.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 7-5</strong></td>
+<td style="text-align: left;">Separate a risk response from a contingency plan, and give each a trigger and an owner.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 7-6</strong></td>
+<td style="text-align: left;">Choose among the five responses to an opportunity.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 7-7</strong></td>
+<td style="text-align: left;">Size and hold contingency funds and time buffers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 7-8</strong></td>
+<td style="text-align: left;">Keep risk management running for the life of the project.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 7-9</strong></td>
+<td style="text-align: left;">Route changes through a change control process.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO A7-1</strong></td>
+<td style="text-align: left;">Calculate PERT expected durations and the probability of meeting a date.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">risk event</span><span class="chip">risk register</span><span class="chip">risk breakdown structure</span><span class="chip">risk profile</span><span class="chip">pre-mortem</span><span class="chip">scenario analysis</span><span class="chip">impact scale</span><span class="chip">risk severity matrix</span><span class="chip">FMEA</span><span class="chip">risk priority number</span><span class="chip">mitigate</span><span class="chip">avoid</span><span class="chip">transfer</span><span class="chip">escalate</span><span class="chip">retain</span><span class="chip">contingency plan</span><span class="chip">trigger</span><span class="chip">opportunity</span><span class="chip">exploit</span><span class="chip">share</span><span class="chip">enhance</span><span class="chip">contingency reserve</span><span class="chip">management reserve</span><span class="chip">time buffer</span><span class="chip">change control</span><span class="chip">PERT</span><span class="chip">criticality index</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-7-1-risk-management-is-a-process-not-a-list" class="level1">
+<h1>LO 7-1 · Risk management is a process, not a list</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.1 [1].</em></p>
+<p>Every estimate in Weeks 5 and 6 rested on assumptions. Risk management asks which of those assumptions could fail, what that would cost, and what the team will do about it — before the failure, while the options are still cheap.</p>
+<div id="fig-risk-cost" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-risk-cost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/risk-cost-curve.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-risk-cost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The chance that something goes wrong is highest early, when most questions are open. The cost of dealing with it is highest late, when work has to be undone. Redrawn from Larson &amp; Gray, Ch. 7, Figure 7.1 [1].
+</figcaption>
+</figure>
+</div>
+<p>The two curves in <a href="#fig-risk-cost" class="quarto-xref">Figure&nbsp;1</a> cross. Early in the project, uncertainty is high but a change of plan costs little: a design flaw found on paper is an edit. After a prototype is built, the same flaw means scrapping and rebuilding. The practical consequence is that risk work is front-loaded. The planning phase is when the team buys the most protection for the least money.</p>
+<p>Risk management is <strong>proactive</strong>. Its purpose is to reduce surprises, limit the damage of the ones that still arrive, and leave the project manager with prepared moves rather than improvisation. A team that has done it can also act faster on good news, because it has already thought about what an early finish or a lower price would allow.</p>
+<p>Some risks sit outside the project entirely: inflation, exchange rates, new regulation, a collapse in market demand. These are usually weighed before the project is approved and are funded, if at all, from a reserve that senior management controls. They matter, but they are not the project team’s to manage. This week concentrates on risks inside the project’s reach.</p>
+<section id="four-steps-one-loop" class="level2">
+<h2 class="anchored" data-anchor-id="four-steps-one-loop">Four steps, one loop</h2>
+<div id="fig-risk-process" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-risk-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/risk-process.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-risk-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The four-step process. Control is not the last step: it produces new risks that feed back into identification. Redrawn from Larson &amp; Gray, Ch. 7, Figure 7.2 [1].
+</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 46%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1 · Identify</strong></td>
+<td style="text-align: left;">What events could affect the project?</td>
+<td style="text-align: left;">A list of candidate risk events</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2 · Assess</strong></td>
+<td style="text-align: left;">How likely is each, how much would it hurt, and how early would we see it coming?</td>
+<td style="text-align: left;">A ranked list</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3 · Plan responses</strong></td>
+<td style="text-align: left;">What will we do before it happens, and what will we do if it happens anyway?</td>
+<td style="text-align: left;">The risk register: responses, contingency plans, triggers, owners</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4 · Control</strong></td>
+<td style="text-align: left;">Is the plan working, and what has changed?</td>
+<td style="text-align: left;">Executed responses, new risks, change requests</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>risk register</strong> is the document that carries all four steps. One row per risk event: what it is, how it was rated, the response chosen, the contingency plan, the trigger that activates it and the person responsible. A register that is written once and filed has stopped being risk management.</p>
+<hr>
+</section>
+</section>
+<section id="lo-7-2-identify-events-not-outcomes" class="level1">
+<h1>LO 7-2 · Identify events, not outcomes</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.2 [1].</em></p>
+<p>Identification is done by a group, not by the project manager alone. Core team members and the stakeholders who know particular parts of the work produce better risk judgements together than any one of them does individually [5]. The early aim is breadth. An event that sounds absurd in the first meeting is cheap to discard later; an event nobody mentioned cannot be planned for. Projects have been derailed by risks that were dismissed early as unthinkable.</p>
+<p>The commonest identification error is to list the outcome you fear instead of the event that would cause it. “We miss the opening date” is not a risk event. It is a consequence, and it suggests no action. The events behind it do.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Outcome stated as a risk</th>
+<th style="text-align: left;">Events that could cause it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">The conference opens late</td>
+<td style="text-align: left;">Venue contract signed late; keynote cancels; registration site fails at launch</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">We go over budget</td>
+<td style="text-align: left;">Catering minimums rise; AV vendor adds a livestream surcharge; speaker travel rebooked at short notice</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attendance is low</td>
+<td style="text-align: left;">A competing event is announced for the same week; early-bird pricing launches late</td>
+</tr>
+</tbody>
+</table>
+<p>A usable risk statement names the event, its cause and its effect: <em>because the venue’s legal team reviews contracts monthly, the contract may be signed late, which would delay registration opening.</em></p>
+<section id="two-structured-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="two-structured-prompts">Two structured prompts</h2>
+<p>A <strong>risk breakdown structure (RBS)</strong> does for risk what the WBS does for scope: it divides the sources of risk into categories so the team looks in every direction. At the start, the team should work at the level of the whole project — funding, market, sponsor support — before descending into individual work packages.</p>
+<div id="fig-conference-rbs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-conference-rbs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/conference-rbs.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conference-rbs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: An RBS for the conference. The five top-level categories follow the generic RBS in Larson &amp; Gray, Ch. 7, Figure 7.3 [1]; the sources beneath them are specific to this project.
+</figcaption>
+</figure>
+</div>
+<p>A <strong>risk profile</strong> is a standing checklist of questions an organization refines from one project to the next. It turns past failures into prompts. A few questions an events team might keep:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Area</th>
+<th style="text-align: left;">Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Requirements</td>
+<td style="text-align: left;">Has the sponsor agreed what a successful conference looks like, in numbers?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Suppliers</td>
+<td style="text-align: left;">Which vendor, if it failed, would leave us with no substitute within two weeks?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Schedule</td>
+<td style="text-align: left;">Does anything we need depend on another project or another organization’s calendar?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Budget</td>
+<td style="text-align: left;">Which costs are quoted, and which are still guesses?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Staffing</td>
+<td style="text-align: left;">Who on the team has done this kind of event before?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Authority</td>
+<td style="text-align: left;">Who can sign a contract, and how long does that take?</td>
+</tr>
+</tbody>
+</table>
+<p>The chapter’s own example profile, for a product development project, asks similar questions about technical requirements, design, testing, schedule, budget, quality, management, staffing, customers and contractors [1].</p>
+</section>
+<section id="the-pre-mortem" class="level2">
+<h2 class="anchored" data-anchor-id="the-pre-mortem">The pre-mortem</h2>
+<p>A <strong>pre-mortem</strong> reverses the usual question [2]. Instead of asking what <em>might</em> go wrong, the team is told that the project <em>has</em> failed — it is six months from now, the conference was a disaster — and each person writes, independently and for a few minutes, the story of why. The stories are then pooled.</p>
+<p>The device works because it changes what is socially permitted. Raising doubts about a plan the group has just approved feels disloyal; explaining a failure that has been declared a fact does not. It also forces specificity: a story of failure has a cause and a sequence, which is exactly the event-level description identification needs. The output of a pre-mortem is raw material for step 1, not a register. Every story still has to be converted into events, assessed and given a response.</p>
+<section id="the-conference-pre-mortem" class="level3 case">
+<h3 class="anchored" data-anchor-id="the-conference-pre-mortem">The conference pre-mortem</h3>
+<p>It is the morning after the conference. Attendance was half the target, the keynote spoke to an empty overflow room, and the sponsor has asked for a written account of what went wrong.</p>
+<div class="qn">
+<p>Write the failure story in five sentences. Then rewrite each sentence as a risk event with a cause and an effect. Which of your events appear nowhere in the RBS in <a href="#fig-conference-rbs" class="quarto-xref">Figure&nbsp;3</a>?</p>
+</div>
+</section>
+<hr>
+</section>
+</section>
+<section id="lo-7-3-assess-what-deserves-attention" class="level1">
+<h1>LO 7-3 · Assess what deserves attention</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.3 [1].</em></p>
+<p>Identification produces too many risks to manage. Assessment sorts them: some are trivial, some duplicate each other, and a few could sink the project. <strong>Scenario analysis</strong> is the most common method. For each event the team describes what would happen and rates two things: the <strong>likelihood</strong> that the event occurs and its <strong>impact</strong> on the project’s objectives.</p>
+<section id="make-the-scales-mean-something" class="level2">
+<h2 class="anchored" data-anchor-id="make-the-scales-mean-something">Make the scales mean something</h2>
+<p>A rating of “4” is useless unless everyone means the same thing by it. Define the scales against the project’s objectives before rating anything.</p>
+<table class="caption-top table">
+<caption>Impact scale for negative risks. Thresholds follow Larson &amp; Gray, Ch. 7, Figure 7.5 [1]; a team should set its own.</caption>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Objective</th>
+<th style="text-align: left;">1 · Very low</th>
+<th style="text-align: left;">2 · Low</th>
+<th style="text-align: left;">3 · Moderate</th>
+<th style="text-align: left;">4 · High</th>
+<th style="text-align: left;">5 · Very high</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Cost</strong></td>
+<td style="text-align: left;">Negligible</td>
+<td style="text-align: left;">Under 10% over</td>
+<td style="text-align: left;">10–20% over</td>
+<td style="text-align: left;">20–40% over</td>
+<td style="text-align: left;">Over 40% over</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Time</strong></td>
+<td style="text-align: left;">Negligible</td>
+<td style="text-align: left;">Under 5% late</td>
+<td style="text-align: left;">5–10% late</td>
+<td style="text-align: left;">10–20% late</td>
+<td style="text-align: left;">Over 20% late</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Scope</strong></td>
+<td style="text-align: left;">Barely noticed</td>
+<td style="text-align: left;">Minor areas affected</td>
+<td style="text-align: left;">Major areas affected</td>
+<td style="text-align: left;">Sponsor would reject the reduction</td>
+<td style="text-align: left;">Deliverable effectively useless</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Quality</strong></td>
+<td style="text-align: left;">Barely noticed</td>
+<td style="text-align: left;">Only the most demanding uses affected</td>
+<td style="text-align: left;">Sponsor must approve the reduction</td>
+<td style="text-align: left;">Sponsor would reject the reduction</td>
+<td style="text-align: left;">Deliverable effectively useless</td>
+</tr>
+</tbody>
+</table>
+<p>The thresholds are a policy choice. A conference with a fixed date and a flexible budget would set tight time thresholds and loose cost ones. When an event affects more than one objective, rate it on the worst one.</p>
+</section>
+<section id="the-severity-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="the-severity-matrix">The severity matrix</h2>
+<p>Plotting each risk by likelihood and impact gives the <strong>risk severity matrix</strong>. Its zones set priorities: major risks are acted on first, moderate risks get a plan and a watch, minor risks are logged and revisited only if their ratings change.</p>
+<div id="fig-severity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-severity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/severity-matrix.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-severity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: A severity matrix with five conference risks. The zones are not symmetric: the major zone runs further down the high-impact column than along the high-likelihood row. Layout redrawn from Larson &amp; Gray, Ch. 7, Figure 7.7 [1]; the risks and zone boundaries are this course’s.
+</figcaption>
+</figure>
+</div>
+<p>The asymmetry in <a href="#fig-severity" class="quarto-xref">Figure&nbsp;4</a> is deliberate. Most organizations weigh impact above likelihood: a one-in-ten chance of losing the entire sponsorship is worse than a nine-in-ten chance of a catering overrun. That is why R1, a keynote cancellation rated unlikely, still lands in the major zone.</p>
+</section>
+<section id="adding-detection-fmea" class="level2">
+<h2 class="anchored" data-anchor-id="adding-detection-fmea">Adding detection: FMEA</h2>
+<p><strong>Failure mode and effects analysis (FMEA)</strong> adds a third rating: how hard the event would be to detect in time to act. The three ratings multiply into a <strong>risk priority number</strong>:</p>
+<p><span class="math display">\[
+\text{RPN} = \text{Impact} \times \text{Likelihood} \times \text{Detection difficulty}
+\]</span></p>
+<p>A registration site that fails silently overnight is worse than one that fails during a monitored launch, even if impact and likelihood are equal.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Risk</th>
+<th style="text-align: center;">L</th>
+<th style="text-align: center;">I</th>
+<th style="text-align: center;">D</th>
+<th style="text-align: right;">RPN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">R1 Keynote speaker cancels</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R2 Venue contract signed late</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R3 Registration site fails at launch</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R4 Fewer than 150 registrations</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: right;">27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R5 Livestream drops during keynote</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: right;">30</td>
+</tr>
+</tbody>
+</table>
+<p>The table shows the method’s weakness as clearly as its strength. R1 has the lowest RPN of the five and the most damaging impact. Multiplication treats a trivial event that is likely and invisible exactly like a catastrophic one that is likely and obvious: 1 × 5 × 5 and 5 × 5 × 1 both give 25. The chapter’s conclusion is the right one — the numbers organize the discussion; they do not make the decision [1].</p>
+<section id="two-risks-one-number" class="level3 case">
+<h3 class="anchored" data-anchor-id="two-risks-one-number">Two risks, one number</h3>
+<p>The venue contract (R2) and the registration site (R3) both score 32. The venue risk is visible weeks ahead. The registration failure would be discovered by attendees at 9 a.m. on launch day.</p>
+<div class="qn">
+<p>Should the two risks receive the same response budget? What does the RPN hide that the conversation about them would reveal?</p>
+</div>
+</section>
+</section>
+<section id="probability-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="probability-analysis">Probability analysis</h2>
+<p>Some techniques assess risk at the level of the whole project rather than event by event: decision trees compare courses of action by expected value, and probabilistic versions of net present value and cost S-curves assess cash-flow risk. For schedules, the chapter’s tool is <strong>PERT</strong> and its simulated form. Instead of asking whether a particular event will occur, PERT asks how likely the project is to finish by a given date. That number informs how much contingency time and money to hold. The method is set out in the <a href="#lo-a7-1-pert-how-likely-is-the-date">appendix section</a> below.</p>
+<hr>
+</section>
+</section>
+<section id="lo-7-4-five-responses-to-a-threat" class="level1">
+<h1>LO 7-4 · Five responses to a threat</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.4 [1].</em></p>
+<p>Once a risk is ranked, the team chooses how to respond. There are five options.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 37%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Response</th>
+<th style="text-align: left;">What it does</th>
+<th style="text-align: left;">Conference example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Mitigate</strong></td>
+<td style="text-align: left;">Lowers the likelihood, the impact, or both</td>
+<td style="text-align: left;">Book a backup keynote on standby (impact); send the venue contract to legal in week 1 (likelihood)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Avoid</strong></td>
+<td style="text-align: left;">Changes the plan so the event cannot occur</td>
+<td style="text-align: left;">Drop the livestream and record the keynote for later release</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Transfer</strong></td>
+<td style="text-align: left;">Moves the financial consequence to another party, at a price</td>
+<td style="text-align: left;">Buy event cancellation insurance; put a fixed-price clause in the AV contract</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Escalate</strong></td>
+<td style="text-align: left;">Passes a threat outside the project’s scope or the manager’s authority to the people who own it</td>
+<td style="text-align: left;">A rumoured hiring freeze would cut the sponsor’s travel budget: tell the sponsor’s executive, not the volunteer team</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Retain</strong></td>
+<td style="text-align: left;">Accepts the risk deliberately, with or without a fund to absorb it</td>
+<td style="text-align: left;">A severe winter storm on the day: too unlikely and too expensive to insure fully</td>
+</tr>
+</tbody>
+</table>
+<p>Four points separate a good choice from a label.</p>
+<p><strong>Mitigation usually targets likelihood first.</strong> If the event becomes unlikely enough, the more expensive impact-reducing measures may never be needed.</p>
+<p><strong>Transfer does not remove the risk.</strong> Insurance and fixed-price contracts move who pays; the event can still happen. A contractor who accepts a fixed price adds a premium to cover the risk it has taken on, so transfer always costs something.</p>
+<p><strong>Escalation ends the team’s ownership.</strong> An escalated threat is handed to someone with the authority to act on it and is no longer tracked in the project’s register. Escalating is not the same as asking the sponsor for help with a risk you still own.</p>
+<p><strong>Retention is a decision, not an omission.</strong> A retained risk appears in the register with the reason it was retained. A risk nobody listed has not been retained; it has been missed.</p>
+<hr>
+</section>
+<section id="lo-7-5-contingency-plans-triggers-and-owners" class="level1">
+<h1>LO 7-5 · Contingency plans, triggers and owners</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.5 [1].</em></p>
+<p>A <strong>response</strong> is part of the plan and is carried out <em>before</em> the event, whether or not the event ever happens. A <strong>contingency plan</strong> stays outside the baseline. It waits, ready, and runs only <em>if</em> the event occurs.</p>
+<p>The distinction matters because the two are paid for differently. A response is scheduled work with a budget line. A contingency plan is drawn against a reserve only when needed.</p>
+<p>Every contingency plan needs a <strong>trigger</strong>: an observable condition that says the event has happened and the plan now runs. “If the speaker seems unreliable” is not a trigger. “If the keynote has not confirmed travel by 15 September” is. Every plan also needs one named <strong>owner</strong> who watches the trigger and has the authority to act.</p>
+<table class="caption-top table">
+<caption>Risk response matrix for the conference. Column structure follows Larson &amp; Gray, Ch. 7, Figure 7.8 [1].</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Risk event</th>
+<th style="text-align: left;">Response (now)</th>
+<th style="text-align: left;">Contingency plan (if)</th>
+<th style="text-align: left;">Trigger</th>
+<th style="text-align: left;">Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">R1 Keynote cancels</td>
+<td style="text-align: left;">Mitigate: standby speaker paid a holding fee</td>
+<td style="text-align: left;">Promote standby; reprint program insert</td>
+<td style="text-align: left;">No travel confirmation 21 days out</td>
+<td style="text-align: left;">Program lead</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R2 Venue contract late</td>
+<td style="text-align: left;">Mitigate: submit contract in week 1</td>
+<td style="text-align: left;">Release hold on second-choice venue</td>
+<td style="text-align: left;">Unsigned 10 workdays after submission</td>
+<td style="text-align: left;">Project manager</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R3 Registration fails</td>
+<td style="text-align: left;">Mitigate: load test one week before launch</td>
+<td style="text-align: left;">Switch to the backup form and email confirmations</td>
+<td style="text-align: left;">Error rate above 2% in first hour</td>
+<td style="text-align: left;">Systems lead</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R5 Livestream drops</td>
+<td style="text-align: left;">Transfer: AV contract with service-level penalty</td>
+<td style="text-align: left;">Switch to local recording; post within 24 hours</td>
+<td style="text-align: left;">Stream down for more than 2 minutes</td>
+<td style="text-align: left;">AV vendor contact</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="lo-7-6-opportunities-get-the-same-process" class="level1">
+<h1>LO 7-6 · Opportunities get the same process</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.6 [1].</em></p>
+<p>Risk includes events that would help. An <strong>opportunity</strong> is an uncertain event with a positive effect: a vendor cuts prices, an extra sponsor appears, a task finishes early. Opportunities are identified, assessed and planned for exactly like threats. The difference is in the responses. The profession recognizes five [3].</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 33%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Response</th>
+<th style="text-align: left;">Threat counterpart</th>
+<th style="text-align: left;">What it does</th>
+<th style="text-align: left;">Conference example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Exploit</strong></td>
+<td style="text-align: left;">Avoid</td>
+<td style="text-align: left;">Removes the uncertainty so the opportunity definitely happens</td>
+<td style="text-align: left;">Put the most experienced coordinator on speaker confirmation, a burst activity that releases three branches</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Share</strong></td>
+<td style="text-align: left;">Transfer</td>
+<td style="text-align: left;">Gives some ownership to a party better placed to capture it</td>
+<td style="text-align: left;">Offer a co-hosting role to a professional society that can bring 100 registrations</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Enhance</strong></td>
+<td style="text-align: left;">Mitigate</td>
+<td style="text-align: left;">Raises the likelihood or the benefit</td>
+<td style="text-align: left;">Choose the venue whose rate falls if booked before a stated date</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Escalate</strong></td>
+<td style="text-align: left;">Escalate</td>
+<td style="text-align: left;">Passes an opportunity beyond the project’s scope or authority upward</td>
+<td style="text-align: left;">A sponsor wants a second regional event next spring: refer it to the department head</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Accept</strong></td>
+<td style="text-align: left;">Retain</td>
+<td style="text-align: left;">Takes the benefit if it arrives but spends nothing to pursue it</td>
+<td style="text-align: left;">If a local company offers free coffee, say yes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="lo-7-7-contingency-funds-and-time-buffers" class="level1">
+<h1>LO 7-7 · Contingency funds and time buffers</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.7 [1].</em></p>
+<p>Responses and contingency plans need money and time that the baseline does not contain. Two kinds of reserve hold that money, and they differ in what they cover and who controls them.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 39%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Contingency reserve</th>
+<th style="text-align: left;">Management reserve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Covers</strong></td>
+<td style="text-align: left;">Identified risks in the register</td>
+<td style="text-align: left;">Risks nobody identified, and threats from outside the project</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Sized from</strong></td>
+<td style="text-align: left;">The expected cost of specific contingency plans</td>
+<td style="text-align: left;">A policy percentage or senior judgement</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Controlled by</strong></td>
+<td style="text-align: left;">The project manager, against a named risk</td>
+<td style="text-align: left;">Senior management; release needs approval</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Part of the project budget?</strong></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Held above it</td>
+</tr>
+</tbody>
+</table>
+<p>Both reserves are shown openly, in their own columns. A reserve buried inside activity estimates cannot be tracked, tends to be spent whether or not the risk occurs, and repeats the padding problem from Week 5.</p>
+<table class="caption-top table">
+<caption>Illustrative conference budget with both reserves. The layout follows Larson &amp; Gray, Ch. 7, Table 7.1 [1]; the figures are invented for this example.</caption>
+<colgroup>
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 26%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Work package</th>
+<th style="text-align: right;">Baseline</th>
+<th style="text-align: right;">Contingency reserve</th>
+<th style="text-align: left;">Basis</th>
+<th style="text-align: right;">Project budget</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Venue and catering</td>
+<td style="text-align: right;">$34,000</td>
+<td style="text-align: right;">$3,400</td>
+<td style="text-align: left;">R2: second-venue deposit</td>
+<td style="text-align: right;">$37,400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Speakers and travel</td>
+<td style="text-align: right;">18,000</td>
+<td style="text-align: right;">2,700</td>
+<td style="text-align: left;">R1: standby fee and rebooked travel</td>
+<td style="text-align: right;">20,700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Registration and AV</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;">1,800</td>
+<td style="text-align: left;">R3, R5: backup form, local recording</td>
+<td style="text-align: right;">13,800</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Materials and rehearsal</td>
+<td style="text-align: right;">6,000</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: left;">Reprint program insert</td>
+<td style="text-align: right;">6,300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Subtotal</strong></td>
+<td style="text-align: right;"><strong>$70,000</strong></td>
+<td style="text-align: right;"><strong>$8,200</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"><strong>$78,200</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Management reserve</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: left;">Held by the department</td>
+<td style="text-align: right;">4,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total authorized</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"><strong>$82,200</strong></td>
+</tr>
+</tbody>
+</table>
+<section id="time-buffers" class="level2">
+<h2 class="anchored" data-anchor-id="time-buffers">Time buffers</h2>
+<p>Time works the same way. A <strong>time buffer</strong> is schedule time held against delay, and like contingency money it is sized to the uncertainty and placed deliberately. The chapter names four places where a buffer earns its keep [1]:</p>
+<ol type="1">
+<li><strong>After activities with severe risk</strong>, so a known hazard cannot ripple straight into the finish.</li>
+<li><strong>At merge activities</strong>, which wait for the last of several predecessors and so inherit every one of their delays. Week 6’s activity G waits for both registration and speakers.</li>
+<li><strong>On noncritical paths</strong>, to stop a branch with little slack from becoming the critical path.</li>
+<li><strong>Before activities that need scarce resources</strong>, so the resource is not lost because the preceding work ran late.</li>
+</ol>
+<p>A buffer is shown in the schedule as its own visible block, owned by the project manager. Hiding it inside an activity’s duration invites the activity to expand into it.</p>
+<hr>
+</section>
+</section>
+<section id="lo-7-8-risk-management-keeps-running" class="level1">
+<h1>LO 7-8 · Risk management keeps running</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Figure 7.2 [1].</em></p>
+<p>Step 4 of <a href="#fig-risk-process" class="quarto-xref">Figure&nbsp;2</a> is where most risk plans fail: the register is filed and nobody looks at it again. Control means four recurring actions.</p>
+<ul>
+<li><strong>Watch the triggers.</strong> Each owner checks the trigger on a fixed cadence and reports, even when nothing has happened.</li>
+<li><strong>Re-rate.</strong> Likelihood and impact change as the project learns. The venue risk falls to minor once the contract is signed; the livestream risk rises if the vendor changes.</li>
+<li><strong>Add and retire.</strong> New risks enter the register as they appear; risks that can no longer occur are closed, and their contingency reserve is released.</li>
+<li><strong>Record what happened.</strong> When a contingency plan runs, it changes the baseline, so it goes through change control. Afterwards, the lesson goes into the organization’s risk profile for the next project.</li>
+</ul>
+<p>A risk review belongs in the regular status meeting, not in a separate ceremony held once a quarter.</p>
+<hr>
+</section>
+<section id="lo-7-9-change-control" class="level1">
+<h1>LO 7-9 · Change control</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Section 7.9 [1].</em></p>
+<p>Plans change. The changes come from the customer, the sponsor, the team and from risk events themselves, and they fall into three broad kinds:</p>
+<ul>
+<li><strong>Scope changes</strong>, such as a new feature or a redesign — usually the largest;</li>
+<li><strong>Contingency plans being executed</strong>, which move the cost and schedule baselines; and</li>
+<li><strong>Improvements</strong> proposed by the team.</li>
+</ul>
+<p>A <strong>change control system</strong> records, evaluates and tracks every change to the baseline. It should be in place before the first change request arrives, which means setting it up during planning.</p>
+<div id="fig-change-control" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-change-control-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/change-control.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-change-control-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Every change follows the same route. Rejected or deferred requests go back to the originator; only approved changes update the baseline. Redrawn from Larson &amp; Gray, Ch. 7, Figure 7.9 [1].
+</figcaption>
+</figure>
+</div>
+<p>The system’s jobs, in the order a request meets them:</p>
+<ol type="1">
+<li>capture the proposed change;</li>
+<li>estimate its effect on schedule, cost and risk;</li>
+<li>review it and approve, amend, reject or defer it formally;</li>
+<li>resolve any conflict over conditions and cost;</li>
+<li>tell everyone the change affects;</li>
+<li>assign who will implement it;</li>
+<li>update the master schedule and budget; and</li>
+<li>track it to completion.</li>
+</ol>
+<p>A change request form makes those jobs routine. The chapter’s sample [1] records the originator, the description and reason, the objectives affected, the disposition, the priority, the <strong>funding source</strong> and the sign-offs. The funding source is the field that ties change control to this week’s reserves: a change is paid for by the customer, the contingency reserve or the management reserve, and the form forces that choice to be made explicitly.</p>
+<section id="a-second-keynote" class="level3 case">
+<h3 class="anchored" data-anchor-id="a-second-keynote">A second keynote</h3>
+<p>Six weeks out, the sponsor asks to add a second keynote and livestream it to two partner campuses. The request arrives by email to the program lead, who says yes.</p>
+<div class="qn">
+<p>List what the change control process would have required before that yes. Which objectives does the request affect, and which reserve, if any, should pay for it?</p>
+</div>
+</section>
+<hr>
+</section>
+<section id="lo-a7-1-pert-how-likely-is-the-date" class="level1">
+<h1>LO A7-1 · PERT: how likely is the date?</h1>
+<p><em>Following Larson &amp; Gray, Ch. 7, Appendix 7.1 [1].</em></p>
+<p>PERT was developed in the late 1950s to schedule the U.S. Navy’s Polaris missile program, where thousands of contractors were doing work no one had done before [1]. It keeps the CPM network from Week 6 but replaces each single duration with a range.</p>
+<section id="three-estimates-per-activity" class="level2">
+<h2 class="anchored" data-anchor-id="three-estimates-per-activity">Three estimates per activity</h2>
+<p>Each activity gets an <strong>optimistic</strong> time <em>a</em>, a <strong>most likely</strong> time <em>m</em> and a <strong>pessimistic</strong> time <em>b</em>. Activity durations are assumed to follow a beta distribution, which can be lopsided: work that falls behind tends to stay behind, so the pessimistic tail is usually longer than the optimistic one.</p>
+<div id="fig-pert-distributions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pert-distributions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/pert-distributions.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pert-distributions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Left: one activity’s duration, skewed to the right, with its expected time to the right of the most likely value. Right: the sum of many activities on a path, close to symmetric. Redrawn from Larson &amp; Gray, Ch. 7, Figure A7.1 [1].
+</figcaption>
+</figure>
+</div>
+<p>The three estimates give an expected time and a standard deviation for each activity:</p>
+<p><span class="math display">\[
+t_e = \frac{a + 4m + b}{6} \qquad \sigma_{t_e} = \frac{b - a}{6}
+\]</span></p>
+<p>The expected times go into the network and the forward and backward passes run exactly as in Week 6. The <strong>expected project duration</strong> <span class="math inline">\(T_E\)</span> is the length of the critical path. Along that path, variances add:</p>
+<p><span class="math display">\[
+\sigma_{T_E} = \sqrt{\sum \sigma_{t_e}^2}
+\]</span></p>
+<p>Add <strong>variances</strong>, never standard deviations. And add only the activities on the path being examined.</p>
+<p>Because <span class="math inline">\(T_E\)</span> is a sum of several independent activity times, it is treated as normally distributed. The probability of finishing by a scheduled time <span class="math inline">\(T_S\)</span> comes from the standard normal value</p>
+<p><span class="math display">\[
+Z = \frac{T_S - T_E}{\sigma_{T_E}}
+\]</span></p>
+<p>read from a normal table or computed with <code>=NORM.S.DIST(Z, TRUE)</code> in Excel or Google Sheets.</p>
+</section>
+<section id="the-conference-with-ranges" class="level2">
+<h2 class="anchored" data-anchor-id="the-conference-with-ranges">The conference with ranges</h2>
+<p>Here is the Week 6 conference network again, now with three-point estimates. The single durations from Week 6 were close to the most likely values. The ranges are what the team actually believes.</p>
+<table class="caption-top table">
+<caption>Conference three-point estimates, in workdays. Predecessors are unchanged from Week 6.</caption>
+<colgroup>
+<col style="width: 7%">
+<col style="width: 33%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: right;"><em>a</em></th>
+<th style="text-align: right;"><em>m</em></th>
+<th style="text-align: right;"><em>b</em></th>
+<th style="text-align: right;"><span class="math inline">\(t_e\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\sigma^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">Event brief</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">Venue</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">Program draft</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Registration</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: left;">Speakers</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: left;">Exhibitors</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: left;">Publish program</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: left;">Materials</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Rehearsal</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<p>Running the passes on the <span class="math inline">\(t_e\)</span> values gives three complete paths:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Path</th>
+<th style="text-align: right;"><span class="math inline">\(\sum t_e\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\sum \sigma^2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\sigma\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A–C–E–G–H–I</td>
+<td style="text-align: right;"><strong>29</strong></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A–B–D–G–H–I</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">3.46</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A–C–F–H–I</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2.24</td>
+</tr>
+</tbody>
+</table>
+<p>The critical path is A–C–E–G–H–I, with <span class="math inline">\(T_E = 29\)</span> and <span class="math inline">\(\sigma_{T_E} = 3\)</span>. The ranges have added four days to Week 6’s 25-day plan, because most activities can run long by more than they can run short.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 20%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Scheduled time <span class="math inline">\(T_S\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(Z\)</span></th>
+<th style="text-align: right;">Probability of finishing by <span class="math inline">\(T_S\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">−1.00</td>
+<td style="text-align: right;">16%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">+1.00</td>
+<td style="text-align: right;">84%</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">+1.33</td>
+<td style="text-align: right;">91%</td>
+</tr>
+</tbody>
+</table>
+<p>A date set at <span class="math inline">\(T_E\)</span> is a coin toss. To be 90% confident, the team needs <span class="math inline">\(T_S = T_E + 1.28\,\sigma = 29 + 3.8 \approx 33\)</span> workdays: a four-day time buffer over the expected duration.</p>
+</section>
+<section id="what-the-single-path-calculation-leaves-out" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-single-path-calculation-leaves-out">What the single-path calculation leaves out</h2>
+<p>PERT’s probability looks only at the critical path. The venue path, A–B–D–G–H–I, is two days shorter on average but has the largest variance of the three. On a bad run of the venue and registration activities, it becomes the longer path, and the project waits for it at the merge, G. The standard formula ignores that possibility, so it overstates the chance of finishing on time. The bias always runs in the optimistic direction [4].</p>
+<p><strong>PERT simulation</strong> removes the single-path assumption. It draws a duration for every activity from its distribution, runs the forward pass, records the finish, and repeats thousands of times. For the conference, 200,000 simulated projects give:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Question</th>
+<th style="text-align: right;">PERT formula</th>
+<th style="text-align: right;">Simulation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Chance of finishing by day 29</td>
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;">44%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chance of finishing by day 32</td>
+<td style="text-align: right;">84%</td>
+<td style="text-align: right;">80%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duration with 90% confidence</td>
+<td style="text-align: right;">33 days</td>
+<td style="text-align: right;">34 days</td>
+</tr>
+</tbody>
+</table>
+<div id="fig-pert-probability" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pert-probability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week07/pert-probability.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pert-probability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: The PERT curve for the conference critical path. The shaded area left of day 32 is 84%. A simulation that lets the venue path become critical gives 80%. Layout follows Larson &amp; Gray, Ch. 7, Figure A7.3 [1]; the conference figures are this course’s.
+</figcaption>
+</figure>
+</div>
+<p>Simulation also reports a <strong>criticality index</strong>: the share of runs in which each activity lay on the longest path. A, G, H and I are critical in every run, because every path passes through them. C and E are critical in 73% of runs; B and D, which CPM reports as noncritical with two days of slack, are critical in 27%. That number is the strongest argument for a time buffer at the merge into G. It is the “merge activity” rule from LO 7-7, expressed as a probability.</p>
+<section id="spend-now-or-hold-a-reserve" class="level3 case">
+<h3 class="anchored" data-anchor-id="spend-now-or-hold-a-reserve">Spend now or hold a reserve?</h3>
+<p>The sponsor wants a 90% chance of opening by day 32. One option is to pay a vendor now to cut the speaker-confirmation estimates, E, to (5, 6, 11). The other is to hold $3,000 in contingency for expediting if the trigger “E not complete by day 15” fires.</p>
+<div class="qn">
+<p>Recompute <span class="math inline">\(T_E\)</span> and <span class="math inline">\(\sigma_{T_E}\)</span> for the first option. Does it reach 90% by day 32? Which path would then deserve the team’s attention? The chapter calls the second option “more prudent”; under what conditions would you disagree?</p>
+</div>
+</section>
+</section>
+<section id="practice-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="practice-exercises">Practice exercises</h2>
+<div id="appendix-exercises">
+<ol type="1">
+<li>Given the project information in the following table, what is the probability of completing the National Holiday Toy project in 93 time units?</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Act. ID</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Predecessor</th>
+<th style="text-align: right;">Optm. (<em>a</em>)</th>
+<th style="text-align: right;">Most likely (<em>m</em>)</th>
+<th style="text-align: right;">Pess. (<em>b</em>)</th>
+<th style="text-align: left;">Act time <span class="math inline">\(t_e\)</span></th>
+<th style="text-align: left;">Variance <span class="math inline">\([(b-a)/6]^2\)</span></th>
+<th style="text-align: left;">Critical</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Design package</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Design product</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Build package</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Secure patent</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Build product</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Paint</td>
+<td style="text-align: left;">3, 4, 5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Test market</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li>The Global Tea and Organic Juice companies have merged. The following information has been collected for the “Consolidation Project.”</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Activity</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Predecessor</th>
+<th style="text-align: right;"><em>a</em> opt</th>
+<th style="text-align: right;"><em>m</em> ml</th>
+<th style="text-align: right;"><em>b</em> pess</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Codify accounts</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">File articles of unification</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Unify price and credit policy</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Unify personnel policies</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Unify data processing</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Train accounting staff</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Pilot run data processing</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Calculate P &amp; L and balance sheet</td>
+<td style="text-align: left;">6, 7</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Transfer real property</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Train salesforce</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">Negotiate with unions</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Determine capital needs</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Explain personnel policies</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">Secure line of credit</td>
+<td style="text-align: left;">9, 12</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">End</td>
+<td style="text-align: left;">10, 13, 14</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Compute the expected time for each activity.</li>
+<li>Compute the variance for each activity.</li>
+<li>Compute the expected project duration.</li>
+<li>What is the probability of completing the project by day 112? Within 116 days?</li>
+<li>What is the probability of completing “Negotiate with unions” by day 90?</li>
+</ol>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Exercises are reproduced from Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, Chapter 7, Appendix 7.1 [1]. After you answer exercise 2, look at the other paths’ variances. Which answer does the single-path calculation make look better than it is?</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="thursday-studio" class="level1">
+<h1>Thursday studio</h1>
+<section id="studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip" class="level2">
+<h2 class="anchored" data-anchor-id="studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip">Studio 7 · A register that argues back, and a schedule that admits it might slip</h2>
+<p>Complete the <a href="../labs/lab-07.html">Week 7 studio</a>.</p>
+<p>You will build a risk register for the conference: identify events from the RBS, rate them, choose responses, and write contingency plans with triggers and owners. You will then turn the conference schedule into a probability with PERT and size a time buffer. Finally, an AI reviewer will attack your register, and you will decide which of its objections hold.</p>
+<p>Write the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this project.</p>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 7 and Appendix 7.1.</li>
+<li>Klein, G. (2007). Performing a project premortem. <em>Harvard Business Review</em>, 85(9), 18–19.</li>
+<li>Project Management Institute. (2017). <em>A Guide to the Project Management Body of Knowledge (PMBOK® Guide)</em> (6th ed.). Section 11.5.</li>
+<li>MacCrimmon, K. R., &amp; Ryavec, C. A. (1964). An analytical study of the PERT assumptions. <em>Operations Research</em>, 12(1), 16–37.</li>
+<li>Sniezek, J. A., &amp; Henry, R. A. (1989). Accuracy and confidence in group judgment. <em>Organizational Behavior and Human Decision Processes</em>, 43(1), 1–28.</li>
+</ol>
+<p>The conference risks, ratings, budget, three-point estimates and simulation are original to these course materials.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,7 +2017,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
