@@ -2902,42 +2902,63 @@
     "href": "slides/week-07.html#section",
     "title": "Week 7 · Managing Risk",
     "section": "",
-    "text": "A plan states what should happen. A risk plan states what you will do when it does not.\n\nFollowing Larson & Gray, Ch. 7 and Appendix 7.1 [1]. Conference examples are original to this course."
+    "text": "A plan states what should happen. A risk plan states what you will do when it does not.\n\nFollowing Larson & Gray, Ch. 7 and Appendix 7.1 [1]. Figures are redrawn from the chapter. The conference examples are original to this course."
+  },
+  {
+    "objectID": "slides/week-07.html#what-this-week-adds-to-the-plan",
+    "href": "slides/week-07.html#what-this-week-adds-to-the-plan",
+    "title": "Week 7 · Managing Risk",
+    "section": "What this week adds to the plan",
+    "text": "What this week adds to the plan\nWeeks 5 and 6 produced estimates and a schedule. Every number in them rests on an assumption.\n\nRisk management asks three questions about those assumptions:\n\nWhich of them could fail?\nWhat would it cost if one did?\nWhat will we do about it, before and after?"
   },
   {
     "objectID": "slides/week-07.html#learning-objectives",
     "href": "slides/week-07.html#learning-objectives",
     "title": "Week 7 · Managing Risk",
     "section": "Learning objectives",
-    "text": "Learning objectives\n\n\n\nLO 7-1\nDescribe the risk management process\n\n\nLO 7-2\nIdentify risks as events, not outcomes\n\n\nLO 7-3\nAssess likelihood, impact and detectability\n\n\nLO 7-4\nChoose among five threat responses\n\n\nLO 7-5\nPair contingency plans with triggers and owners"
+    "text": "Learning objectives\n\n\n\nLO 7-1\nDescribe the risk management process\n\n\nLO 7-2\nIdentify project risks as events\n\n\nLO 7-3\nAssess which risks deserve attention\n\n\nLO 7-4\nDescribe the five responses to a threat\n\n\nLO 7-5\nExplain what a contingency plan adds"
   },
   {
     "objectID": "slides/week-07.html#learning-objectives-1",
     "href": "slides/week-07.html#learning-objectives-1",
     "title": "Week 7 · Managing Risk",
     "section": "Learning objectives",
-    "text": "Learning objectives\n\n\n\nLO 7-6\nChoose among five opportunity responses\n\n\nLO 7-7\nSize contingency funds and time buffers\n\n\nLO 7-8\nKeep risk management running\n\n\nLO 7-9\nRoute changes through change control\n\n\nLO A7-1\nCalculate PERT probabilities"
+    "text": "Learning objectives\n\n\n\nLO 7-6\nDescribe the five responses to an opportunity\n\n\nLO 7-7\nUse contingency funds and time buffers\n\n\nLO 7-8\nKeep risk management running\n\n\nLO 7-9\nDescribe the change control process\n\n\nLO A7-1\nCalculate PERT probabilities"
   },
   {
-    "objectID": "slides/week-07.html#two-curves-that-cross",
-    "href": "slides/week-07.html#two-curves-that-cross",
+    "objectID": "slides/week-07.html#a-risk-is-an-uncertain-event",
+    "href": "slides/week-07.html#a-risk-is-an-uncertain-event",
     "title": "Week 7 · Managing Risk",
-    "section": "Two curves that cross",
-    "text": "Two curves that cross"
+    "section": "A risk is an uncertain event",
+    "text": "A risk is an uncertain event\nA risk event is something that may happen and would change the project’s cost, time or scope if it did.\n\nNot a certainty. A problem you already have is solved now, not planned for.\n\n\nNot an outcome. “The project is late” is a result, not an event."
+  },
+  {
+    "objectID": "slides/week-07.html#risk-falls-the-cost-of-a-surprise-rises",
+    "href": "slides/week-07.html#risk-falls-the-cost-of-a-surprise-rises",
+    "title": "Week 7 · Managing Risk",
+    "section": "Risk falls, the cost of a surprise rises",
+    "text": "Risk falls, the cost of a surprise rises"
   },
   {
     "objectID": "slides/week-07.html#why-risk-work-is-front-loaded",
     "href": "slides/week-07.html#why-risk-work-is-front-loaded",
     "title": "Week 7 · Managing Risk",
     "section": "Why risk work is front-loaded",
-    "text": "Why risk work is front-loaded\nEarly: uncertainty is high, but a change of plan is cheap.\n\nLate: uncertainty is low, but a surprise means rework.\n\n\nPlanning buys the most protection for the least money."
+    "text": "Why risk work is front-loaded\nEarly: most questions are still open, but a change of plan is cheap. A design flaw found on paper is an edit.\n\nLate: few questions remain, but a surprise means rework. The same flaw found after the prototype means rebuilding.\n\n\nPlanning buys the most protection for the least money."
   },
   {
-    "objectID": "slides/week-07.html#inside-and-outside-the-project",
-    "href": "slides/week-07.html#inside-and-outside-the-project",
+    "objectID": "slides/week-07.html#proactive-not-reactive",
+    "href": "slides/week-07.html#proactive-not-reactive",
     "title": "Week 7 · Managing Risk",
-    "section": "Inside and outside the project",
-    "text": "Inside and outside the project\n\n\n\n\n\n\n\nRisk source\nWho manages it\n\n\n\n\nInflation, exchange rates, regulation\nSenior management, before approval\n\n\nVenue, speakers, registration, budget\nThe project team\n\n\n\nThis week concentrates on risks inside the project’s reach."
+    "section": "Proactive, not reactive",
+    "text": "Proactive, not reactive\nRisk management is preventive work. Done well, it gives the project:\n\nfewer surprises;\nsmaller damage when one still arrives;\nprepared moves instead of improvisation; and\nthe readiness to act on good news as well as bad."
+  },
+  {
+    "objectID": "slides/week-07.html#whose-risk-is-it",
+    "href": "slides/week-07.html#whose-risk-is-it",
+    "title": "Week 7 · Managing Risk",
+    "section": "Whose risk is it?",
+    "text": "Whose risk is it?\n\n\n\n\n\n\n\n\nRisk source\nWho manages it\nPaid from\n\n\n\n\nInflation, exchange rates, regulation, market demand\nSenior management, before approval\nManagement reserve\n\n\nVenue, speakers, registration, vendors, estimates\nThe project team\nProject budget and contingency reserve\n\n\n\nThe first row is weighed before the project is approved. This week concentrates on the second."
   },
   {
     "objectID": "slides/week-07.html#four-steps-one-loop",
@@ -2947,53 +2968,67 @@
     "text": "Four steps, one loop"
   },
   {
+    "objectID": "slides/week-07.html#what-each-step-produces",
+    "href": "slides/week-07.html#what-each-step-produces",
+    "title": "Week 7 · Managing Risk",
+    "section": "What each step produces",
+    "text": "What each step produces\n\n\n\n\n\n\n\n\nStep\nQuestion\nOutput\n\n\n\n\n1 · Identify\nWhat events could affect the project?\nA list of candidate events\n\n\n2 · Assess\nHow likely, how damaging, how hard to see coming?\nA ranked list\n\n\n3 · Plan responses\nWhat do we do before, and what if it happens anyway?\nThe risk register\n\n\n4 · Control\nIs the plan working, and what has changed?\nExecuted plans, new risks, change requests"
+  },
+  {
     "objectID": "slides/week-07.html#the-risk-register",
     "href": "slides/week-07.html#the-risk-register",
     "title": "Week 7 · Managing Risk",
     "section": "The risk register",
-    "text": "The risk register\nOne row per risk event:\n\nthe event, its cause and its effect\nlikelihood, impact and detection ratings\nthe response and the contingency plan\nthe trigger and the owner\n\n\nA register written once and filed has stopped being risk management."
+    "text": "The risk register\nThe document that carries all four steps. One row per risk event:\n\nthe event, its cause and its effect\nlikelihood, impact and detection ratings\nthe response and the contingency plan\nthe trigger and the owner\n\n\nA register written once and filed has stopped being risk management."
   },
   {
     "objectID": "slides/week-07.html#identification-is-a-group-activity",
     "href": "slides/week-07.html#identification-is-a-group-activity",
     "title": "Week 7 · Managing Risk",
     "section": "Identification is a group activity",
-    "text": "Identification is a group activity\n\nGroups judge risks more accurately than individuals [5].\nAim for breadth first; discard later.\nAn event nobody mentioned cannot be planned for."
+    "text": "Identification is a group activity\n\nThe project manager convenes the core team and the stakeholders who know the work.\nGroups judge risks more accurately than individuals do [5].\nBreadth first. An event that sounds absurd is cheap to discard later; an event nobody mentioned cannot be planned for."
   },
   {
-    "objectID": "slides/week-07.html#outcome-or-event",
-    "href": "slides/week-07.html#outcome-or-event",
+    "objectID": "slides/week-07.html#events-not-outcomes",
+    "href": "slides/week-07.html#events-not-outcomes",
     "title": "Week 7 · Managing Risk",
-    "section": "Outcome or event?",
-    "text": "Outcome or event?\n\n\n\n\n\n\n\nOutcome stated as a risk\nEvents that could cause it\n\n\n\n\nThe conference opens late\nVenue contract signed late; keynote cancels\n\n\nWe go over budget\nCatering minimums rise; AV adds a surcharge\n\n\nAttendance is low\nA competing event is announced the same week"
+    "section": "Events, not outcomes",
+    "text": "Events, not outcomes\nThe commonest mistake is to list the result you fear instead of the event that would cause it.\n\n\n\n\n\n\n\nOutcome stated as a risk\nEvents that could cause it\n\n\n\n\nThe conference opens late\nVenue contract signed late; keynote cancels\n\n\nWe go over budget\nCatering minimums rise; AV adds a surcharge\n\n\nAttendance is low\nA competing event is announced the same week\n\n\n\n\nAn outcome suggests no action. An event does."
   },
   {
     "objectID": "slides/week-07.html#a-usable-risk-statement",
     "href": "slides/week-07.html#a-usable-risk-statement",
     "title": "Week 7 · Managing Risk",
     "section": "A usable risk statement",
-    "text": "A usable risk statement\nBecause the venue’s legal team reviews contracts monthly,\nthe contract may be signed late,\nwhich would delay registration opening.\n\nCause → event → effect."
+    "text": "A usable risk statement\nBecause the venue’s legal team reviews contracts monthly,\nthe contract may be signed late,\nwhich would delay registration opening.\n\nCause → event → effect. If a sentence has no cause, it is probably an outcome."
   },
   {
     "objectID": "slides/week-07.html#risk-breakdown-structure",
     "href": "slides/week-07.html#risk-breakdown-structure",
     "title": "Week 7 · Managing Risk",
     "section": "Risk breakdown structure",
-    "text": "Risk breakdown structure"
+    "text": "Risk breakdown structure\nAn RBS divides the sources of risk into categories, as the WBS divides the work."
+  },
+  {
+    "objectID": "slides/week-07.html#use-the-rbs-from-the-top-down",
+    "href": "slides/week-07.html#use-the-rbs-from-the-top-down",
+    "title": "Week 7 · Managing Risk",
+    "section": "Use the RBS from the top down",
+    "text": "Use the RBS from the top down\n\nStart with risks to the whole project: funding, market, sponsor support.\nThen descend to the work packages.\nAsk which category is empty. That is where the team has not looked yet."
   },
   {
     "objectID": "slides/week-07.html#a-risk-profile-asks-standing-questions",
     "href": "slides/week-07.html#a-risk-profile-asks-standing-questions",
     "title": "Week 7 · Managing Risk",
     "section": "A risk profile asks standing questions",
-    "text": "A risk profile asks standing questions\n\n\n\nArea\nQuestion\n\n\n\n\nSuppliers\nWhich vendor failure leaves no substitute in two weeks?\n\n\nSchedule\nWhat depends on another organization’s calendar?\n\n\nBudget\nWhich costs are quoted, and which are guesses?\n\n\nAuthority\nWho can sign a contract, and how long does it take?"
+    "text": "A risk profile asks standing questions\nA risk profile is a checklist of questions an organization refines from one project to the next.\n\n\n\n\n\n\n\nArea\nQuestion\n\n\n\n\nRequirements\nHas the sponsor said what success looks like, in numbers?\n\n\nSuppliers\nWhich vendor failure leaves no substitute in two weeks?\n\n\nSchedule\nWhat depends on another organization’s calendar?\n\n\nBudget\nWhich costs are quoted, and which are guesses?\n\n\nAuthority\nWho can sign a contract, and how long does it take?"
   },
   {
     "objectID": "slides/week-07.html#the-pre-mortem",
     "href": "slides/week-07.html#the-pre-mortem",
     "title": "Week 7 · Managing Risk",
     "section": "The pre-mortem",
-    "text": "The pre-mortem\nDo not ask what might go wrong.\n\nAssume the project has failed, and explain why [2]."
+    "text": "The pre-mortem\nDo not ask what might go wrong.\n\nAssume the project has failed, and explain why [2].\n\n\nDoubting a plan the group just approved feels disloyal. Explaining a failure that has been declared a fact does not."
   },
   {
     "objectID": "slides/week-07.html#it-is-the-morning-after-the-conference",
@@ -3017,18 +3052,32 @@
     "text": "Convert the story to risks\n\n\n\n\n\n\n\n\n\nStory sentence\nCause\nEvent\nEffect\n\n\n\n\n“Registration opened two weeks late”\nContract review is monthly\nVenue contract signed late\nRegistration delayed\n\n\n\n\nWhich of your events are missing from the RBS?"
   },
   {
+    "objectID": "slides/week-07.html#not-every-risk-deserves-attention",
+    "href": "slides/week-07.html#not-every-risk-deserves-attention",
+    "title": "Week 7 · Managing Risk",
+    "section": "Not every risk deserves attention",
+    "text": "Not every risk deserves attention\nIdentification produces more risks than anyone can manage.\n\nAssessment sorts them: drop the trivial, merge the duplicates, rank the rest."
+  },
+  {
     "objectID": "slides/week-07.html#scenario-analysis",
     "href": "slides/week-07.html#scenario-analysis",
     "title": "Week 7 · Managing Risk",
     "section": "Scenario analysis",
-    "text": "Scenario analysis\nFor each event, rate:\n\nlikelihood that it occurs\nimpact on the project’s objectives\n\n\nDefine the scales before rating anything."
+    "text": "Scenario analysis\nThe most common method. For each event, describe what would happen, then rate:\n\nlikelihood that the event occurs\nimpact on the project’s objectives\n\n\nDefine the scales first. A rating of 4 means nothing until everyone agrees what a 4 is."
   },
   {
     "objectID": "slides/week-07.html#impact-scale",
     "href": "slides/week-07.html#impact-scale",
     "title": "Week 7 · Managing Risk",
     "section": "Impact scale",
-    "text": "Impact scale\n\n\n\n\n\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\n\n\n\n\nCost\nNegligible\n&lt;10%\n10–20%\n20–40%\n&gt;40%\n\n\nTime\nNegligible\n&lt;5%\n5–10%\n10–20%\n&gt;20%\n\n\nScope\nBarely noticed\nMinor areas\nMajor areas\nSponsor rejects\nUseless\n\n\n\nThresholds are a policy choice. Rate on the worst objective affected."
+    "text": "Impact scale\n\n\n\n\n\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\n\n\n\n\nCost\nNegligible\n&lt;10%\n10–20%\n20–40%\n&gt;40%\n\n\nTime\nNegligible\n&lt;5%\n5–10%\n10–20%\n&gt;20%\n\n\nScope\nBarely noticed\nMinor areas\nMajor areas\nSponsor rejects\nUseless\n\n\n\nThresholds are a policy choice. When an event hits more than one objective, rate it on the worst."
+  },
+  {
+    "objectID": "slides/week-07.html#the-chapters-example-an-operating-system-upgrade",
+    "href": "slides/week-07.html#the-chapters-example-an-operating-system-upgrade",
+    "title": "Week 7 · Managing Risk",
+    "section": "The chapter’s example: an operating-system upgrade",
+    "text": "The chapter’s example: an operating-system upgrade\n\n\n\nRisk event\nLikelihood\nImpact\nZone\n\n\n\n\nInterface problems\n4\n4\nMajor\n\n\nSystem freezing\n2\n5\nMajor\n\n\nUser backlash\n4\n3\nModerate\n\n\nHardware malfunctioning\n1\n5\nModerate\n\n\n\nRatings from Larson & Gray, Figures 7.6 and 7.7 [1]. Two of the four are rated unlikely and still rank high."
   },
   {
     "objectID": "slides/week-07.html#risk-severity-matrix",
@@ -3038,25 +3087,39 @@
     "text": "Risk severity matrix"
   },
   {
+    "objectID": "slides/week-07.html#reading-the-matrix",
+    "href": "slides/week-07.html#reading-the-matrix",
+    "title": "Week 7 · Managing Risk",
+    "section": "Reading the matrix",
+    "text": "Reading the matrix\n\nMajor zone, top right: act first.\nModerate zone, down the middle: plan and watch.\nMinor zone, bottom left: log it; revisit only if the ratings change.\n\n\nThe zones set the order of work. They do not say what the work is."
+  },
+  {
     "objectID": "slides/week-07.html#why-the-zones-lean-right",
     "href": "slides/week-07.html#why-the-zones-lean-right",
     "title": "Week 7 · Managing Risk",
     "section": "Why the zones lean right",
-    "text": "Why the zones lean right\nA 10% chance of losing the sponsorship outweighs a 90% chance of a small catering overrun.\n\nImpact weighs more than likelihood."
+    "text": "Why the zones lean right\nA 10% chance of losing $1,000,000 is a worse risk than a 90% chance of losing $1,000.\n\nImpact weighs more than likelihood, so the major zone runs further down the high-impact column.\n\n\nThat is why R1, a keynote cancellation rated unlikely, still lands in the major zone."
   },
   {
     "objectID": "slides/week-07.html#fmea-adds-detection",
     "href": "slides/week-07.html#fmea-adds-detection",
     "title": "Week 7 · Managing Risk",
     "section": "FMEA adds detection",
-    "text": "FMEA adds detection\nRPN = Impact × Likelihood × Detection difficulty\n\n\n\nRisk\nL\nI\nD\nRPN\n\n\n\n\nR1 Keynote cancels\n2\n5\n2\n20\n\n\nR2 Venue contract late\n4\n4\n2\n32\n\n\nR3 Registration site fails\n2\n4\n4\n32\n\n\nR4 Under 150 registrations\n3\n3\n3\n27\n\n\nR5 Livestream drops\n3\n2\n5\n30"
+    "text": "FMEA adds detection\nFailure mode and effects analysis adds a third rating: how hard the event is to detect in time to act.\nRPN = Impact × Likelihood × Detection difficulty\nEach rating runs 1 to 5. Detection: 1 = seen weeks ahead, 5 = found only when it hits."
+  },
+  {
+    "objectID": "slides/week-07.html#the-conferences-five-risks",
+    "href": "slides/week-07.html#the-conferences-five-risks",
+    "title": "Week 7 · Managing Risk",
+    "section": "The conference’s five risks",
+    "text": "The conference’s five risks\n\n\n\nRisk\nL\nI\nD\nRPN\n\n\n\n\nR1 Keynote cancels\n2\n5\n2\n20\n\n\nR2 Venue contract late\n4\n4\n2\n32\n\n\nR3 Registration site fails\n2\n4\n4\n32\n\n\nR4 Under 150 registrations\n3\n3\n3\n27\n\n\nR5 Livestream drops\n3\n2\n5\n30\n\n\n\nA site that fails silently overnight (R3) outranks a louder, likelier risk because nobody would see it coming."
   },
   {
     "objectID": "slides/week-07.html#the-weakness-of-multiplication",
     "href": "slides/week-07.html#the-weakness-of-multiplication",
     "title": "Week 7 · Managing Risk",
     "section": "The weakness of multiplication",
-    "text": "The weakness of multiplication\nR1 has the lowest RPN and the worst impact.\n\n1 × 5 × 5 = 5 × 5 × 1 = 25.\n\n\nThe numbers organize the discussion. They do not make the decision."
+    "text": "The weakness of multiplication\nR1 has the lowest RPN and the worst impact.\n\nTrivial, likely, invisible: 1 × 5 × 5 = 25.\nCatastrophic, likely, obvious: 5 × 5 × 1 = 25.\n\n\nThe numbers organize the discussion. They do not make the decision."
   },
   {
     "objectID": "slides/week-07.html#two-risks-one-number",
@@ -3066,18 +3129,46 @@
     "text": "Two risks, one number\nR2 and R3 both score 32.\nThe venue risk is visible weeks ahead.\nThe registration failure appears at 9 a.m. on launch day.\n\nShould they receive the same response budget?"
   },
   {
+    "objectID": "slides/week-07.html#probability-analysis-looks-at-the-whole-project",
+    "href": "slides/week-07.html#probability-analysis-looks-at-the-whole-project",
+    "title": "Week 7 · Managing Risk",
+    "section": "Probability analysis looks at the whole project",
+    "text": "Probability analysis looks at the whole project\nEvent-by-event tools ask “will this happen?”\n\nPERT and PERT simulation ask “how likely are we to finish on time and on budget?”\n\n\nThat answer sizes the contingency fund and the time buffer. Appendix 7.1, at the end of today."
+  },
+  {
     "objectID": "slides/week-07.html#five-responses",
     "href": "slides/week-07.html#five-responses",
     "title": "Week 7 · Managing Risk",
     "section": "Five responses",
-    "text": "Five responses\n\n\n\n\n\n\n\n\nResponse\nWhat it does\nConference example\n\n\n\n\nMitigate\nLowers likelihood or impact\nStandby keynote; contract to legal in week 1\n\n\nAvoid\nRemoves the event from the plan\nDrop the livestream\n\n\nTransfer\nMoves the cost to another party\nCancellation insurance\n\n\nEscalate\nHands it to whoever owns it\nSponsor travel freeze to the sponsor’s executive\n\n\nRetain\nAccepts it deliberately\nA severe winter storm"
+    "text": "Five responses\n\n\n\n\n\n\n\n\nResponse\nWhat it does\nConference example\n\n\n\n\nMitigate\nLowers likelihood or impact\nContract to legal in week 1; standby keynote\n\n\nAvoid\nRemoves the event from the plan\nDrop the livestream; record instead\n\n\nTransfer\nMoves the cost to another party\nCancellation insurance\n\n\nEscalate\nHands it to whoever owns it\nSponsor travel freeze goes to the sponsor’s executive\n\n\nRetain\nAccepts it deliberately\nA severe winter storm on the day"
   },
   {
-    "objectID": "slides/week-07.html#four-distinctions",
-    "href": "slides/week-07.html#four-distinctions",
+    "objectID": "slides/week-07.html#mitigate-two-levers-in-order",
+    "href": "slides/week-07.html#mitigate-two-levers-in-order",
     "title": "Week 7 · Managing Risk",
-    "section": "Four distinctions",
-    "text": "Four distinctions\n\nMitigation usually targets likelihood first.\nTransfer moves who pays; the event can still happen.\nEscalation ends the team’s ownership.\nRetention is recorded with a reason; a missed risk is not retained."
+    "section": "Mitigate: two levers, in order",
+    "text": "Mitigate: two levers, in order\n\nReduce the likelihood that the event occurs. Teams start here.\nReduce the impact if it occurs anyway.\n\n\nIf the first lever makes the event unlikely enough, the costlier second one may never be needed."
+  },
+  {
+    "objectID": "slides/week-07.html#avoid-changes-the-plan",
+    "href": "slides/week-07.html#avoid-changes-the-plan",
+    "title": "Week 7 · Managing Risk",
+    "section": "Avoid changes the plan",
+    "text": "Avoid changes the plan\nThe event cannot happen because the plan no longer contains it.\n\nProven technology instead of experimental technology.\nA concert moved indoors.\nA conference keynote recorded instead of livestreamed.\n\n\nNot every risk can be avoided. Those that can are usually avoided before launch."
+  },
+  {
+    "objectID": "slides/week-07.html#transfer-and-escalate-change-who-owns-it",
+    "href": "slides/week-07.html#transfer-and-escalate-change-who-owns-it",
+    "title": "Week 7 · Managing Risk",
+    "section": "Transfer and escalate change who owns it",
+    "text": "Transfer and escalate change who owns it\nTransfer moves who pays, not whether it happens. A fixed-price contractor adds a premium for the risk it takes on. Insurance costs a premium too.\n\nEscalate sends a threat outside the project’s scope or the manager’s authority to the people who own it. An escalated risk leaves the register."
+  },
+  {
+    "objectID": "slides/week-07.html#retain-is-a-decision",
+    "href": "slides/week-07.html#retain-is-a-decision",
+    "title": "Week 7 · Managing Risk",
+    "section": "Retain is a decision",
+    "text": "Retain is a decision\nA retained risk appears in the register with the reason it was retained.\n\nSome risks are too large or too unlikely to transfer or reduce: an earthquake, a blizzard on the day.\n\n\nA risk nobody listed has not been retained. It has been missed."
   },
   {
     "objectID": "slides/week-07.html#response-or-contingency-plan",
@@ -3087,60 +3178,81 @@
     "text": "Response or contingency plan?\n\n\n\n\nResponse\nContingency plan\n\n\n\n\nWhen it runs\nBefore the event, always\nOnly if the event occurs\n\n\nPart of the baseline?\nYes\nNo\n\n\nPaid from\nScheduled budget\nReserve"
   },
   {
+    "objectID": "slides/week-07.html#plan-trigger-owner",
+    "href": "slides/week-07.html#plan-trigger-owner",
+    "title": "Week 7 · Managing Risk",
+    "section": "Plan, trigger, owner",
+    "text": "Plan, trigger, owner\nA contingency plan has three parts:\n\nthe plan: what runs when the event is recognized\nthe trigger: an observable condition that says it has happened\nthe owner: one named person who watches the trigger and can act\n\n\nMiss any one and the plan exists only on paper."
+  },
+  {
     "objectID": "slides/week-07.html#a-trigger-is-observable",
     "href": "slides/week-07.html#a-trigger-is-observable",
     "title": "Week 7 · Managing Risk",
     "section": "A trigger is observable",
-    "text": "A trigger is observable\n“If the speaker seems unreliable” is not a trigger.\n\n“If the keynote has not confirmed travel by 15 September” is.\n\n\nEvery plan has one named owner who watches the trigger."
+    "text": "A trigger is observable\n“If the speaker seems unreliable” is not a trigger.\n\n“If the keynote has not confirmed travel 21 days out” is.\n\n\nA trigger has a threshold and a date. Someone can check it and answer yes or no."
   },
   {
     "objectID": "slides/week-07.html#risk-response-matrix",
     "href": "slides/week-07.html#risk-response-matrix",
     "title": "Week 7 · Managing Risk",
     "section": "Risk response matrix",
-    "text": "Risk response matrix\n\n\n\n\n\n\n\n\n\n\nRisk\nResponse\nContingency\nTrigger\nOwner\n\n\n\n\nR1 Keynote cancels\nStandby speaker\nPromote standby\nNo travel confirmation 21 days out\nProgram lead\n\n\nR2 Venue late\nSubmit in week 1\nRelease second venue hold\nUnsigned 10 workdays after submission\nProject manager\n\n\nR3 Registration fails\nLoad test\nBackup form\nError rate &gt;2% in first hour\nSystems lead"
+    "text": "Risk response matrix\n\n\n\n\n\n\n\n\n\n\nRisk\nResponse\nContingency\nTrigger\nOwner\n\n\n\n\nR1 Keynote cancels\nStandby speaker\nPromote standby\nNo travel confirmation 21 days out\nProgram lead\n\n\nR2 Venue late\nSubmit in week 1\nRelease second venue hold\nUnsigned 10 workdays after submission\nProject manager\n\n\nR3 Registration fails\nLoad test\nBackup form\nError rate &gt;2% in first hour\nSystems lead\n\n\n\nColumn structure follows Figure 7.8 [1]."
+  },
+  {
+    "objectID": "slides/week-07.html#an-opportunity-is-a-risk-with-a-positive-sign",
+    "href": "slides/week-07.html#an-opportunity-is-a-risk-with-a-positive-sign",
+    "title": "Week 7 · Managing Risk",
+    "section": "An opportunity is a risk with a positive sign",
+    "text": "An opportunity is a risk with a positive sign\nAn uncertain event that would help: a vendor cuts prices, a sponsor appears, a task finishes early.\n\nSame process: identify, assess by likelihood and impact, plan a response, hold a contingency plan and fund.\n\n\nOnly the responses differ."
   },
   {
     "objectID": "slides/week-07.html#five-responses-to-an-opportunity",
     "href": "slides/week-07.html#five-responses-to-an-opportunity",
     "title": "Week 7 · Managing Risk",
     "section": "Five responses to an opportunity",
-    "text": "Five responses to an opportunity\n\n\n\n\n\n\n\n\nResponse\nMirrors\nConference example\n\n\n\n\nExploit\nAvoid\nBest coordinator on speaker confirmation\n\n\nShare\nTransfer\nCo-host with a society that brings 100 registrations\n\n\nEnhance\nMitigate\nVenue whose rate falls if booked early\n\n\nEscalate\nEscalate\nSecond regional event referred to the department head\n\n\nAccept\nRetain\nFree coffee offered: say yes"
+    "text": "Five responses to an opportunity\n\n\n\n\n\n\n\n\nResponse\nMirrors\nConference example\n\n\n\n\nExploit\nAvoid\nBest coordinator on speaker confirmation, so it certainly finishes early\n\n\nShare\nTransfer\nCo-host with a society that brings 100 registrations\n\n\nEnhance\nMitigate\nVenue whose rate falls if booked early\n\n\nEscalate\nEscalate\nSecond regional event referred to the department head\n\n\nAccept\nRetain\nFree coffee offered: say yes, spend nothing chasing it"
   },
   {
     "objectID": "slides/week-07.html#two-reserves",
     "href": "slides/week-07.html#two-reserves",
     "title": "Week 7 · Managing Risk",
     "section": "Two reserves",
-    "text": "Two reserves\n\n\n\n\nContingency reserve\nManagement reserve\n\n\n\n\nCovers\nIdentified risks\nUnidentified and external risks\n\n\nControlled by\nProject manager\nSenior management\n\n\nIn the project budget?\nYes\nHeld above it"
+    "text": "Two reserves\n\n\n\n\n\n\n\n\n\nContingency reserve\nManagement reserve\n\n\n\n\nCovers\nIdentified risks in the register\nUnidentified and external risks\n\n\nSized from\nThe cost of specific contingency plans\nA policy percentage or senior judgement\n\n\nControlled by\nProject manager\nSenior management\n\n\nIn the project budget?\nYes\nHeld above it"
   },
   {
     "objectID": "slides/week-07.html#the-conference-budget",
     "href": "slides/week-07.html#the-conference-budget",
     "title": "Week 7 · Managing Risk",
     "section": "The conference budget",
-    "text": "The conference budget\n\n\n\n\nBaseline\nContingency\nProject budget\n\n\n\n\nWork packages\n$70,000\n$8,200\n$78,200\n\n\nManagement reserve\n\n\n$4,000\n\n\nTotal authorized\n\n\n$82,200\n\n\n\nReserves are shown openly, never buried in estimates."
+    "text": "The conference budget\n\n\n\n\nBaseline\nContingency\nProject budget\n\n\n\n\nWork packages\n$70,000\n$8,200\n$78,200\n\n\nManagement reserve\n\n\n$4,000\n\n\nTotal authorized\n\n\n$82,200\n\n\n\nLayout follows Table 7.1 [1]. Reserves sit in their own columns, never inside the estimates."
+  },
+  {
+    "objectID": "slides/week-07.html#why-reserves-stay-visible",
+    "href": "slides/week-07.html#why-reserves-stay-visible",
+    "title": "Week 7 · Managing Risk",
+    "section": "Why reserves stay visible",
+    "text": "Why reserves stay visible\nA reserve buried in an activity estimate:\n\ncannot be tracked,\ntends to be spent whether or not the risk occurs, and\nrepeats the padding problem from Week 5."
   },
   {
     "objectID": "slides/week-07.html#where-time-buffers-go",
     "href": "slides/week-07.html#where-time-buffers-go",
     "title": "Week 7 · Managing Risk",
     "section": "Where time buffers go",
-    "text": "Where time buffers go\n\nAfter activities with severe risk\nAt merge activities\nOn noncritical paths with little slack\nBefore activities that need scarce resources\n\n\nA buffer is a visible block, owned by the project manager."
+    "text": "Where time buffers go\nA time buffer is schedule time held against delay. Add it:\n\nafter activities with severe risk\nat merge activities, which inherit every predecessor’s delay\non noncritical paths with little slack, so they do not become critical\nbefore activities that need scarce resources\n\n\nA buffer is a visible block, owned by the project manager."
   },
   {
     "objectID": "slides/week-07.html#control-is-recurring-work",
     "href": "slides/week-07.html#control-is-recurring-work",
     "title": "Week 7 · Managing Risk",
     "section": "Control is recurring work",
-    "text": "Control is recurring work\n\nWatch the triggers on a fixed cadence.\nRe-rate as the project learns.\nAdd and retire risks; release reserve when a risk closes.\nRecord what happened; executed plans go through change control."
+    "text": "Control is recurring work\n\nWatch the triggers on a fixed cadence, and report even when nothing happened.\nRe-rate as the project learns. The venue risk falls to minor once the contract is signed.\nAdd and retire risks; release the reserve when a risk closes.\nRecord what happened, for this project’s baseline and the next project’s risk profile.\n\n\nA risk review belongs in the regular status meeting."
   },
   {
     "objectID": "slides/week-07.html#where-changes-come-from",
     "href": "slides/week-07.html#where-changes-come-from",
     "title": "Week 7 · Managing Risk",
     "section": "Where changes come from",
-    "text": "Where changes come from\n\nScope changes: new features, redesigns\nContingency plans being executed\nImprovements proposed by the team"
+    "text": "Where changes come from\n\nScope changes: new features, redesigns. Usually the largest.\nContingency plans being executed: they move the cost and schedule baselines.\nImprovements proposed by the team.\n\n\nSet the control process up during planning, before the first request arrives."
   },
   {
     "objectID": "slides/week-07.html#one-gate-for-every-change",
@@ -3150,11 +3262,32 @@
     "text": "One gate for every change"
   },
   {
+    "objectID": "slides/week-07.html#what-the-gate-does",
+    "href": "slides/week-07.html#what-the-gate-does",
+    "title": "Week 7 · Managing Risk",
+    "section": "What the gate does",
+    "text": "What the gate does\n\nCapture the proposed change.\nEstimate its effect on schedule, cost and risk.\nReview it and decide formally: approve, amend, reject or defer.\nTell everyone it affects, and assign who implements it.\nUpdate the baseline and track the change to completion."
+  },
+  {
+    "objectID": "slides/week-07.html#the-change-request-form",
+    "href": "slides/week-07.html#the-change-request-form",
+    "title": "Week 7 · Managing Risk",
+    "section": "The change request form",
+    "text": "The change request form\nOriginator, description and reason. Areas of impact: scope, cost, schedule, risk. Priority. Disposition. Sign-offs.\n\nAnd one field that ties this to the reserves: funding source.\n\n\nCustomer, contingency reserve or management reserve. The form forces that choice to be made."
+  },
+  {
     "objectID": "slides/week-07.html#a-second-keynote",
     "href": "slides/week-07.html#a-second-keynote",
     "title": "Week 7 · Managing Risk",
     "section": "A second keynote",
-    "text": "A second keynote\nSix weeks out, the sponsor asks for a second keynote, livestreamed to two partner campuses.\nThe program lead says yes by email.\n\nWhat should have happened before that yes? Which reserve pays?"
+    "text": "A second keynote\nSix weeks out, the sponsor asks for a second keynote, livestreamed to two partner campuses.\nThe program lead says yes by email.\n\nWhat should have happened before that yes? Which objectives does it touch? Which reserve pays?"
+  },
+  {
+    "objectID": "slides/week-07.html#where-pert-comes-from",
+    "href": "slides/week-07.html#where-pert-comes-from",
+    "title": "Week 7 · Managing Risk",
+    "section": "Where PERT comes from",
+    "text": "Where PERT comes from\nIn 1958 the U.S. Navy’s Polaris program had more than 3,300 contractors doing work no one had done before [1].\n\nPERT keeps the CPM network from Week 6 and replaces each single duration with a range."
   },
   {
     "objectID": "slides/week-07.html#three-estimates-per-activity",
@@ -3164,11 +3297,39 @@
     "text": "Three estimates per activity"
   },
   {
+    "objectID": "slides/week-07.html#why-the-activity-curve-leans-right",
+    "href": "slides/week-07.html#why-the-activity-curve-leans-right",
+    "title": "Week 7 · Managing Risk",
+    "section": "Why the activity curve leans right",
+    "text": "Why the activity curve leans right\nWork that falls behind tends to stay behind.\n\nSo the pessimistic tail is longer than the optimistic one, and the expected time sits to the right of the most likely time.\n\n\nAdd many such activities along a path and the total is close to normal."
+  },
+  {
     "objectID": "slides/week-07.html#the-formulas",
     "href": "slides/week-07.html#the-formulas",
     "title": "Week 7 · Managing Risk",
     "section": "The formulas",
-    "text": "The formulas\ntₑ = (a + 4m + b) / 6\nσ = (b − a) / 6\nσ(path) = √(sum of σ² along the path)\nZ = (Tₛ − Tₑ) / σ(path)\nAdd variances, never standard deviations."
+    "text": "The formulas\ntₑ = (a + 4m + b) / 6\nσ = (b − a) / 6\nσ(path) = √(sum of σ² along the path)\nZ = (Tₛ − Tₑ) / σ(path)\na, m, b: optimistic, most likely and pessimistic estimates. Tₛ: the date being asked about.\nAdd variances, never standard deviations."
+  },
+  {
+    "objectID": "slides/week-07.html#the-chapters-example",
+    "href": "slides/week-07.html#the-chapters-example",
+    "title": "Week 7 · Managing Risk",
+    "section": "The chapter’s example",
+    "text": "The chapter’s example\n\n\n\nActivity\na\nm\nb\ntₑ\nσ²\n\n\n\n\nA\n17\n29\n47\n30\n25\n\n\nB\n6\n12\n24\n13\n9\n\n\nC\n16\n19\n28\n20\n4\n\n\nD\n13\n16\n19\n16\n1\n\n\nE\n2\n5\n14\n6\n4\n\n\nF\n2\n5\n8\n5\n1\n\n\n\nValues from Larson & Gray, Table A7.1 [1]. Critical path A–B–D–F, Tₑ = 64."
+  },
+  {
+    "objectID": "slides/week-07.html#finish-by-67",
+    "href": "slides/week-07.html#finish-by-67",
+    "title": "Week 7 · Managing Risk",
+    "section": "Finish by 67?",
+    "text": "Finish by 67?\nσ(path) = √(25 + 9 + 1 + 1) = √36 = 6\n\nZ = (67 − 64) / 6 = +0.50\n\n\nThe normal table gives 0.69. A 69% chance of finishing by 67.\n\n\nBy 60? Z = (60 − 64) / 6 = −0.67, about 25%."
+  },
+  {
+    "objectID": "slides/week-07.html#reading-the-normal-table",
+    "href": "slides/week-07.html#reading-the-normal-table",
+    "title": "Week 7 · Managing Risk",
+    "section": "Reading the normal table",
+    "text": "Reading the normal table\n\n\n\nZ\nProbability\n\nZ\nProbability\n\n\n\n\n−1.00\n16%\n\n+0.50\n69%\n\n\n−0.67\n25%\n\n+1.00\n84%\n\n\n0.00\n50%\n\n+1.28\n90%\n\n\n\n\n\n+2.00\n98%\n\n\n\nZ counts standard deviations from Tₑ. Negative Z is a date earlier than expected."
   },
   {
     "objectID": "slides/week-07.html#the-conference-with-ranges",
@@ -3182,14 +3343,14 @@
     "href": "slides/week-07.html#the-conference-with-ranges-1",
     "title": "Week 7 · Managing Risk",
     "section": "The conference with ranges",
-    "text": "The conference with ranges\n\n\n\nID\nActivity\na\nm\nb\ntₑ\nσ²\n\n\n\n\nF\nExhibitors\n2\n5\n8\n5\n1\n\n\nG\nPublish program\n3\n3\n9\n4\n1\n\n\nH\nMaterials\n1\n4\n7\n4\n1\n\n\nI\nRehearsal\n2\n2\n8\n3\n1"
+    "text": "The conference with ranges\n\n\n\nID\nActivity\na\nm\nb\ntₑ\nσ²\n\n\n\n\nF\nExhibitors\n2\n5\n8\n5\n1\n\n\nG\nPublish program\n3\n3\n9\n4\n1\n\n\nH\nMaterials\n1\n4\n7\n4\n1\n\n\nI\nRehearsal\n2\n2\n8\n3\n1\n\n\n\nPredecessors are unchanged from Week 6. Durations in workdays."
   },
   {
     "objectID": "slides/week-07.html#three-paths",
     "href": "slides/week-07.html#three-paths",
     "title": "Week 7 · Managing Risk",
     "section": "Three paths",
-    "text": "Three paths\n\n\n\nPath\nΣ tₑ\nΣ σ²\nσ\n\n\n\n\nA–C–E–G–H–I\n29\n9\n3.00\n\n\nA–B–D–G–H–I\n27\n12\n3.46\n\n\nA–C–F–H–I\n21\n5\n2.24\n\n\n\nTₑ = 29, σ = 3. Four days longer than Week 6’s 25-day plan."
+    "text": "Three paths\n\n\n\nPath\nΣ tₑ\nΣ σ²\nσ\n\n\n\n\nA–C–E–G–H–I\n29\n9\n3.00\n\n\nA–B–D–G–H–I\n27\n12\n3.46\n\n\nA–C–F–H–I\n21\n5\n2.24\n\n\n\nTₑ = 29, σ = 3. Four days longer than Week 6’s 25-day plan, because activities can run long by more than they can run short."
   },
   {
     "objectID": "slides/week-07.html#how-likely-is-the-date",
@@ -3203,7 +3364,7 @@
     "href": "slides/week-07.html#the-90-date",
     "title": "Week 7 · Managing Risk",
     "section": "The 90% date",
-    "text": "The 90% date\nTₛ = 29 + 1.28 × 3 ≈ 33 workdays.\n\nA four-day time buffer over the expected duration."
+    "text": "The 90% date\nZ = 1.28 leaves 90% of the curve to its left.\n\nTₛ = 29 + 1.28 × 3 ≈ 33 workdays.\n\n\nA four-day time buffer over the expected duration."
   },
   {
     "objectID": "slides/week-07.html#the-curve",
@@ -3220,74 +3381,95 @@
     "text": "What the single path leaves out\nThe venue path is shorter on average but has the largest variance.\n\nOn a bad run it becomes the longer path, and G waits for it.\n\n\nPERT’s formula ignores that, so it is always optimistic [4]."
   },
   {
+    "objectID": "slides/week-07.html#pert-simulation",
+    "href": "slides/week-07.html#pert-simulation",
+    "title": "Week 7 · Managing Risk",
+    "section": "PERT simulation",
+    "text": "PERT simulation\n\nDraw a duration for every activity from its range.\nRun the forward pass and record the finish.\nRepeat thousands of times.\n\n\nOutput: the distribution of finish dates, the paths that became critical, and how often each activity was on one."
+  },
+  {
     "objectID": "slides/week-07.html#pert-formula-vs-simulation",
     "href": "slides/week-07.html#pert-formula-vs-simulation",
     "title": "Week 7 · Managing Risk",
     "section": "PERT formula vs simulation",
-    "text": "PERT formula vs simulation\n\n\n\nQuestion\nPERT formula\nSimulation\n\n\n\n\nFinish by day 29\n50%\n44%\n\n\nFinish by day 32\n84%\n80%\n\n\n90% confidence\n33 days\n34 days\n\n\n\n200,000 simulated projects."
+    "text": "PERT formula vs simulation\n\n\n\nQuestion\nPERT formula\nSimulation\n\n\n\n\nFinish by day 29\n50%\n44%\n\n\nFinish by day 32\n84%\n80%\n\n\n90% confidence\n33 days\n34 days\n\n\n\n200,000 simulated conferences."
   },
   {
     "objectID": "slides/week-07.html#criticality-index",
     "href": "slides/week-07.html#criticality-index",
     "title": "Week 7 · Managing Risk",
     "section": "Criticality index",
-    "text": "Criticality index\n\n\n\nActivities\nShare of runs on the longest path\n\n\n\n\nA, G, H, I\n100%\n\n\nC, E\n73%\n\n\nB, D\n27%\n\n\nF\n0%\n\n\n\nCPM calls B and D noncritical. One run in four, they decide the finish."
+    "text": "Criticality index\n\n\n\nActivities\nShare of runs on the longest path\n\n\n\n\nA, G, H, I\n100%\n\n\nC, E\n73%\n\n\nB, D\n27%\n\n\nF\n0%\n\n\n\nCPM calls B and D noncritical. One run in four, they decide the finish. That is the case for a buffer at the merge into G."
+  },
+  {
+    "objectID": "slides/week-07.html#two-ways-to-raise-the-odds",
+    "href": "slides/week-07.html#two-ways-to-raise-the-odds",
+    "title": "Week 7 · Managing Risk",
+    "section": "Two ways to raise the odds",
+    "text": "Two ways to raise the odds\nTo improve the chance of meeting a date, the chapter offers two moves [1]:\n\nSpend now to shorten one or more critical activities.\nHold a contingency fund and release it only if the schedule actually slips.\n\n\nThe chapter calls the second more prudent. It is not always."
   },
   {
     "objectID": "slides/week-07.html#spend-now-or-hold-a-reserve",
     "href": "slides/week-07.html#spend-now-or-hold-a-reserve",
     "title": "Week 7 · Managing Risk",
     "section": "Spend now or hold a reserve?",
-    "text": "Spend now or hold a reserve?\nOption 1: pay now to cut E to (5, 6, 11).\nOption 2: hold $3,000 to expedite if E is not complete by day 15.\n\nDoes option 1 reach 90% by day 32? Which path would then need watching?"
+    "text": "Spend now or hold a reserve?\nOption 1: pay a vendor now to cut E’s estimates to a = 5, m = 6, b = 11.\nOption 2: hold $3,000 in contingency, spent only if E is not complete by day 15.\n\nDoes option 1 reach 90% by day 32? Which path would then need watching? When would option 2 be the wrong call?"
+  },
+  {
+    "objectID": "slides/week-07.html#one-row-says-it-all",
+    "href": "slides/week-07.html#one-row-says-it-all",
+    "title": "Week 7 · Managing Risk",
+    "section": "One row says it all",
+    "text": "One row says it all\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\nL · I · D\nZone\nResponse\nContingency\nTrigger\nOwner\nReserve\n\n\n\n\nCause → event → effect\n2 · 5 · 2\nMajor\nMitigate\nPromote standby\n21 days, no confirmation\nProgram lead\n$2,700\n\n\n\n\nEvery idea in this chapter is a column in this row. The studio asks you to fill eight of them."
   },
   {
     "objectID": "slides/week-07.html#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip",
     "href": "slides/week-07.html#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip",
     "title": "Week 7 · Managing Risk",
     "section": "Studio 7 · A register that argues back, and a schedule that admits it might slip",
-    "text": "Studio 7 · A register that argues back, and a schedule that admits it might slip\n\nIdentify eight risk events from the RBS and your pre-mortem.\nRate likelihood, impact and detection.\nPlan responses for every major and moderate risk.\nTurn the schedule into a probability with PERT.\nLet Gemini argue with your register; reconcile its objections."
+    "text": "Studio 7 · A register that argues back, and a schedule that admits it might slip\n\nIdentify eight risk events from the RBS and your pre-mortem.\nRate likelihood, impact and detection.\nPlan responses for every major and moderate risk.\nTurn the schedule into a probability with PERT.\nLet Gemini argue with your register; reconcile its objections.\nSave your copy, then upload the PDF to Blackboard."
   },
   {
     "objectID": "slides/week-07.html#identify",
     "href": "slides/week-07.html#identify",
     "title": "Week 7 · Managing Risk",
     "section": "1 · Identify",
-    "text": "1 · Identify\n\nEight events in cause → event → effect form\nAt least three RBS categories\nAt least one opportunity"
+    "text": "1 · Identify\n\nEight events in cause → event → effect form\nAt least three RBS categories\nAt least one opportunity\nNot the five example risks from the notes"
   },
   {
     "objectID": "slides/week-07.html#assess",
     "href": "slides/week-07.html#assess",
     "title": "Week 7 · Managing Risk",
     "section": "2 · Assess",
-    "text": "2 · Assess\n\nRate likelihood, impact and detection against the impact scale.\nExplain one case where the RPN rank and the severity zone disagree."
+    "text": "2 · Assess\n\nRate likelihood, impact and detection against the scales sheet.\nRank by RPN and compare with the zones.\nExplain one pair where the two rankings disagree, and which you would act on."
   },
   {
     "objectID": "slides/week-07.html#respond",
     "href": "slides/week-07.html#respond",
     "title": "Week 7 · Managing Risk",
     "section": "3 · Respond",
-    "text": "3 · Respond\nFor each major and moderate risk:\n\nresponse type and action\ncontingency plan\nobservable trigger\nowner\nreserve"
+    "text": "3 · Respond\nFor each major and moderate risk:\n\nresponse type and action\ncontingency plan\nobservable trigger with a threshold\none owner\nreserve, or 0 with a reason"
   },
   {
     "objectID": "slides/week-07.html#pert-on-revised-estimates",
     "href": "slides/week-07.html#pert-on-revised-estimates",
     "title": "Week 7 · Managing Risk",
     "section": "4 · PERT on revised estimates",
-    "text": "4 · PERT on revised estimates\n\nexpected times and variances\nboth long paths\nthe chance of finishing by day 32\nthe 90% date\nwhere to place the buffer"
+    "text": "4 · PERT on revised estimates\n\nexpected times and variances\nall three paths, with Z and probability at day 32\nthe critical path, Tₑ and σ\nthe 90% date\nwhere to place the buffer, and how many days"
   },
   {
     "objectID": "slides/week-07.html#the-register-argues-back",
     "href": "slides/week-07.html#the-register-argues-back",
     "title": "Week 7 · Managing Risk",
     "section": "5 · The register argues back",
-    "text": "5 · The register argues back\nGemini reviews your register as a sceptical sponsor.\n\nYou decide which objections hold, in one page.\n\n\nWrite the register yourself first."
+    "text": "5 · The register argues back\nGemini reviews your register as a sceptical sponsor.\n\nYou decide which objections hold, in at most one page.\n\n\nWrite the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this conference."
   },
   {
-    "objectID": "slides/week-07.html#studio-submission",
-    "href": "slides/week-07.html#studio-submission",
+    "objectID": "slides/week-07.html#save-and-upload",
+    "href": "slides/week-07.html#save-and-upload",
     "title": "Week 7 · Managing Risk",
-    "section": "Studio submission",
-    "text": "Studio submission\n\nrisk register\nseverity matrix placement\nPERT table and probability\nbuffer recommendation\nreconciliation of at most one page\nAI acknowledgement"
+    "section": "6 · Save and upload",
+    "text": "6 · Save and upload\n\nOne PDF: register, matrix, RPN-versus-zone note, PERT, buffer, reconciliation, AI acknowledgement\nSave your copy to the Google Drive or OneDrive on your NDSU account\nThen upload SA7_yourlastname.pdf to Blackboard before you leave"
   },
   {
     "objectID": "slides/week-07.html#sources",
