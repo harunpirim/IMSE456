@@ -1689,9 +1689,16 @@
   {
     "objectID": "labs/lab-07.html",
     "href": "labs/lab-07.html",
-    "title": "Studio 7 · A register that argues back, and a schedule that admits it might slip",
+    "title": "Studio 7 · How likely is the date?",
     "section": "",
-    "text": "Deliverable\n\n\nSA7 — one PDF containing the risk register, severity matrix, PERT calculations, buffer recommendation and AI reconciliation\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\nIdentify, rate and respond to conference risks; turn the schedule into a probability; let a model attack the register and decide which objections hold\n\n\nTools\n\n\nWeek 7 workbook, Excel or Google Sheets, and Gemini (NDSU Gemini Pro account)\n\n\nWorkbook\n\n\nWeek 7 risk studio workbook\n\n\nAI use\n\n\nLevel 4 — full use with documentation · write the register and the PERT calculations yourself first, then use AI to review them, verify every claim, and append the AI acknowledgement\n\n\nWeek page\n\n\nWeek 7 — Managing Risk\n\n\n\n\n\n\n\n\n\nThis is individual work. Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5: your judgement about which of the model’s objections are right for this project.\n\n\n\nThe project is the conference you scheduled in Week 6. Its plan now exists; this studio asks what could break it and how sure anyone can be of the date. Use the Week 7 notes as your reference, especially the RBS, the severity matrix and the PERT section. Do not reuse the five example risks from the notes. Find your own.\nDownload the Week 7 risk studio workbook. It has five sheets: Register, Scales, Matrix, PERT and Reconciliation. Fill the yellow cells.\n\nPart 1 · Identify — 15 minutes\nStart from the failure story you wrote in Tuesday’s pre-mortem and from the conference RBS in the notes.\n\nEnter eight risks in the Register, R1 to R8.\nWrite each one as cause, event and effect, in its three columns. The event must be something that could happen, not an outcome you fear. “Opening is late” is an outcome; “the AV vendor withdraws two weeks out” is an event.\nCover at least three RBS categories.\nInclude at least one opportunity.\n\nBefore moving on, read each event column alone. If an event could not appear in a news report about the conference, rewrite it.\n\n\nPart 2 · Assess — 15 minutes\n\nRate each risk’s likelihood (L), impact (I) and detection difficulty (D) from 1 to 5 using the Scales sheet. Rate impact on the objective the event hurts most.\nThe workbook calculates the RPN and the severity zone, and places each risk on the Matrix sheet.\nRank your risks by RPN. Compare that order with the zones.\n\nFind one pair of risks where the RPN order and the zones disagree. In two or three sentences, say which ranking you would act on for this conference and why. If no pair disagrees, change nothing and explain what the agreement tells you about your ratings.\nFor an opportunity, rate impact as the size of the benefit, on the same 1–5 scale.\n\n\nPart 3 · Respond — 20 minutes\nFor every risk in the major or moderate zone, complete the rest of the row.\n\n\n\n\n\n\n\nColumn\nWhat a good entry looks like\n\n\n\n\nResponse type\nOne of mitigate, avoid, transfer, escalate, retain, or for an opportunity exploit, share, enhance, escalate, accept\n\n\nResponse (done now)\nWork that happens whether or not the event occurs, with its cost if any\n\n\nContingency plan\nWhat runs only if the event happens\n\n\nTrigger\nAn observable condition with a date or threshold that someone can check\n\n\nOwner\nOne role, not “the team”\n\n\nReserve ($)\nThe contingency money the plan would need, or 0 with a reason\n\n\n\nCheck three things before moving on:\n\nan escalated risk has no reserve and no project owner, because the project no longer manages it;\na transferred risk still has a contingency plan, because transfer moves the cost, not the event; and\nno trigger depends on someone’s opinion.\n\nRecord the total contingency reserve the register calls for.\n\n\nPart 4 · PERT — 20 minutes\nThe PERT sheet holds the team’s revised three-point estimates. They differ from the estimates in the notes.\n\nEnter formulas for \\(t_e = (a + 4m + b)/6\\) and variance \\(= ((b - a)/6)^2\\) for each activity.\nComplete the three paths: the sum of \\(t_e\\), the sum of variances, \\(\\sigma\\), \\(Z\\) at \\(T_S = 32\\), and the probability of finishing by day 32. Use =NORM.S.DIST(Z, TRUE).\nIdentify the critical path from the expected durations. State \\(T_E\\) and \\(\\sigma_{T_E}\\).\nCalculate the date that gives 90% confidence on the critical path, \\(T_E + 1.28\\,\\sigma_{T_E}\\).\n\nThen answer three questions in no more than 150 words in total:\n\nWhich path has the higher probability of finishing by day 32 on its own, and why is that not the same as the critical path?\nIs the true chance of finishing by day 32 higher or lower than the critical-path figure? Explain using the merge at G.\nHow many days of time buffer would you hold, and where in the network? Use one of the four placements in the notes.\n\n\n\nPart 5 · Let the model argue back — 15 minutes\nPaste your completed register into Gemini with the prompt below. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.\nYou are a sceptical project sponsor reviewing a risk register for a\none-day professional conference. Attack it. For each problem you find,\nname the risk ID and say which of these it is:\n\n- an outcome written as if it were an event\n- a likelihood, impact or detection rating inconsistent with the scale I give you\n- a response type that is misclassified (e.g. transfer that is really mitigation)\n- a contingency plan that is really a response, or the reverse\n- a trigger that is not observable or has no threshold\n- an owner who could not act on the trigger\n- a reserve that is missing, double-counted or unjustified\n- an important risk that is missing entirely\n\nDo not rewrite the register. List objections only, most serious first.\n\n[paste the Scales sheet and the Register here]\nIn the Reconciliation sheet, record each objection. Mark it accept, reject or partly, give a reason tied to this conference, and note what you changed in the register. Make the changes.\nKeep the reconciliation to one page. If none of the model’s objections hold, say so in the first row and describe what you checked to be sure. That is a finding, not a failure.\n\n\nPart 6 · Save and upload\nCreate one PDF in this order.\n\nrisk register, after your Part 5 changes\nseverity matrix sheet\nRPN-versus-zone comparison from Part 2\nPERT table, path calculations and 90% date\nanswers to the three PERT questions, at most 150 words\nreconciliation table, at most one page\nAI acknowledgement with tool, transcript link, changes and verification\n\nSave the workbook, the transcript link and the PDF in IMSE456/studio-07/ on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.\nThen upload the PDF to Blackboard before you leave the session. Name it SA7_yourlastname.pdf."
+    "text": "Deliverable\n\n\nSA7 — one PDF containing the worked example, your solution to Exercise 1, three short interpretations and the AI reconciliation\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\nLearn PERT on the chapter’s example, step by step; then solve the chapter’s Exercise 1 on your own; then let a model solve it and reconcile the two answers\n\n\nTools\n\n\nWeek 7 workbook, Excel or Google Sheets, paper for the network sketch, and Gemini (NDSU Gemini Pro account)\n\n\nWorkbook\n\n\nWeek 7 PERT studio workbook\n\n\nAI use\n\n\nLevel 4 — full use with documentation · solve the exercise yourself first, then use AI to solve it independently, compare, verify every number, and append the AI acknowledgement\n\n\nWeek page\n\n\nWeek 7 — Managing Risk\nTuesday ended with a probability: an 84% chance the conference opens by day 32. This studio teaches the method behind that number from the beginning, on the chapter’s own example, and then asks you to apply it to a problem you have not seen worked. Use the PERT section of the Week 7 notes as your reference. Four formulas are all you need:\nDownload the Week 7 PERT studio workbook. It has four sheets: Worked example, Exercise 1, Z table and Reconciliation. Fill the yellow cells. Enter formulas, not typed numbers, so that a changed estimate flows through.\nFor further practice after the session, Exercise 2 (the Consolidation Project) is reproduced in the Week 7 notes. It has fifteen activities and five questions, and its merge structure makes the single-path assumption bite harder."
+  },
+  {
+    "objectID": "labs/lab-07.html#source",
+    "href": "labs/lab-07.html#source",
+    "title": "Studio 7 · How likely is the date?",
+    "section": "Source",
+    "text": "Source\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 7, Appendix 7.1: the hypothetical example (Table A7.1) and Exercise 1 are reproduced as written."
   },
   {
     "objectID": "labs/lab-05.html",
@@ -3420,56 +3427,49 @@
     "href": "slides/week-07.html#one-row-says-it-all",
     "title": "Week 7 · Managing Risk",
     "section": "One row says it all",
-    "text": "One row says it all\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\nL · I · D\nZone\nResponse\nContingency\nTrigger\nOwner\nReserve\n\n\n\n\nCause → event → effect\n2 · 5 · 2\nMajor\nMitigate\nPromote standby\n21 days, no confirmation\nProgram lead\n$2,700\n\n\n\n\nEvery idea in this chapter is a column in this row. The studio asks you to fill eight of them."
+    "text": "One row says it all\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\nL · I · D\nZone\nResponse\nContingency\nTrigger\nOwner\nReserve\n\n\n\n\nCause → event → effect\n2 · 5 · 2\nMajor\nMitigate\nPromote standby\n21 days, no confirmation\nProgram lead\n$2,700\n\n\n\n\nEvery idea in this chapter is a column in this row. Thursday takes the last question of the day, how likely is the date, and teaches the method behind it."
   },
   {
-    "objectID": "slides/week-07.html#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip",
-    "href": "slides/week-07.html#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip",
+    "objectID": "slides/week-07.html#studio-7-how-likely-is-the-date",
+    "href": "slides/week-07.html#studio-7-how-likely-is-the-date",
     "title": "Week 7 · Managing Risk",
-    "section": "Studio 7 · A register that argues back, and a schedule that admits it might slip",
-    "text": "Studio 7 · A register that argues back, and a schedule that admits it might slip\n\nIdentify eight risk events from the RBS and your pre-mortem.\nRate likelihood, impact and detection.\nPlan responses for every major and moderate risk.\nTurn the schedule into a probability with PERT.\nLet Gemini argue with your register; reconcile its objections.\nSave your copy, then upload the PDF to Blackboard."
+    "section": "Studio 7 · How likely is the date?",
+    "text": "Studio 7 · How likely is the date?\n\nLearn PERT on the chapter’s example, step by step, in a spreadsheet.\nSolve the chapter’s Exercise 1 on your own: the National Holiday Toy project.\nInterpret the number: the near-critical path, the merge, the 90% date.\nLet Gemini solve it cold, then reconcile the two solutions.\nSave your copy, then upload the PDF to Blackboard."
   },
   {
-    "objectID": "slides/week-07.html#identify",
-    "href": "slides/week-07.html#identify",
+    "objectID": "slides/week-07.html#the-chapters-example-together",
+    "href": "slides/week-07.html#the-chapters-example-together",
     "title": "Week 7 · Managing Risk",
-    "section": "1 · Identify",
-    "text": "1 · Identify\n\nEight events in cause → event → effect form\nAt least three RBS categories\nAt least one opportunity\nNot the five example risks from the notes"
+    "section": "1 · The chapter’s example, together",
+    "text": "1 · The chapter’s example, together\n\ntₑ and σ² for six activities\nthe network from the predecessor column, and a forward pass on tₑ\nthe critical path, Tₑ and σ(path)\nZ and probability for Tₛ = 67 and Tₛ = 60\n\n\nYour sheet must match the chapter before you move on: Tₑ = 64, σ = 6, 69% and 25%."
   },
   {
-    "objectID": "slides/week-07.html#assess",
-    "href": "slides/week-07.html#assess",
+    "objectID": "slides/week-07.html#exercise-1-on-your-own",
+    "href": "slides/week-07.html#exercise-1-on-your-own",
     "title": "Week 7 · Managing Risk",
-    "section": "2 · Assess",
-    "text": "2 · Assess\n\nRate likelihood, impact and detection against the scales sheet.\nRank by RPN and compare with the zones.\nExplain one pair where the two rankings disagree, and which you would act on."
+    "section": "2 · Exercise 1 on your own",
+    "text": "2 · Exercise 1 on your own\nSeven activities. Activity 6 is a merge with three predecessors.\n\ntₑ and σ² for each\nthe network on paper, then the forward pass\nthe critical path, Tₑ, the critical variances, σ(path)\nZ at 93 and the probability\n\n\nThen every complete path: Σtₑ, Σσ², σ."
   },
   {
-    "objectID": "slides/week-07.html#respond",
-    "href": "slides/week-07.html#respond",
+    "objectID": "slides/week-07.html#interpret",
+    "href": "slides/week-07.html#interpret",
     "title": "Week 7 · Managing Risk",
-    "section": "3 · Respond",
-    "text": "3 · Respond\nFor each major and moderate risk:\n\nresponse type and action\ncontingency plan\nobservable trigger with a threshold\none owner\nreserve, or 0 with a reason"
+    "section": "3 · Interpret",
+    "text": "3 · Interpret\nIn at most 150 words:\n\nWhich other path is closest in length, and how does its variance compare?\nIs the true chance of finishing by 93 higher or lower than the single-path figure? Use the merge at 6.\nWhat date gives 90% confidence, and how much buffer is that over Tₑ?"
   },
   {
-    "objectID": "slides/week-07.html#pert-on-revised-estimates",
-    "href": "slides/week-07.html#pert-on-revised-estimates",
+    "objectID": "slides/week-07.html#let-the-model-solve-it-then-argue",
+    "href": "slides/week-07.html#let-the-model-solve-it-then-argue",
     "title": "Week 7 · Managing Risk",
-    "section": "4 · PERT on revised estimates",
-    "text": "4 · PERT on revised estimates\n\nexpected times and variances\nall three paths, with Z and probability at day 32\nthe critical path, Tₑ and σ\nthe 90% date\nwhere to place the buffer, and how many days"
-  },
-  {
-    "objectID": "slides/week-07.html#the-register-argues-back",
-    "href": "slides/week-07.html#the-register-argues-back",
-    "title": "Week 7 · Managing Risk",
-    "section": "5 · The register argues back",
-    "text": "5 · The register argues back\nGemini reviews your register as a sceptical sponsor.\n\nYou decide which objections hold, in at most one page.\n\n\nWrite the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this conference."
+    "section": "4 · Let the model solve it, then argue",
+    "text": "4 · Let the model solve it, then argue\nGemini gets the table cold and shows every step.\n\nYou compare line by line: each tₑ, each variance, the critical path, Tₑ, σ, Z, the probability.\n\n\nFor every difference, say who is right and why. Models often add standard deviations, or run the pass on m instead of tₑ."
   },
   {
     "objectID": "slides/week-07.html#save-and-upload",
     "href": "slides/week-07.html#save-and-upload",
     "title": "Week 7 · Managing Risk",
-    "section": "6 · Save and upload",
-    "text": "6 · Save and upload\n\nOne PDF: register, matrix, RPN-versus-zone note, PERT, buffer, reconciliation, AI acknowledgement\nSave your copy to the Google Drive or OneDrive on your NDSU account\nThen upload SA7_yourlastname.pdf to Blackboard before you leave"
+    "section": "5 · Save and upload",
+    "text": "5 · Save and upload\n\nOne PDF: worked example, Exercise 1 sheet, network sketch, interpretation, reconciliation, AI acknowledgement\nSave your copy to the Google Drive or OneDrive on your NDSU account\nThen upload SA7_yourlastname.pdf to Blackboard before you leave"
   },
   {
     "objectID": "slides/week-07.html#sources",
@@ -3847,7 +3847,7 @@
     "href": "weeks/week-07.html",
     "title": "Week 7 · Managing Risk",
     "section": "",
-    "text": "Sessions\n\n\n6 & 8 October\n\n\nChapter\n\n\nLarson Ch. 7\n\n\nTuesday\n\n\nThe pre-mortem — concept and case\n\n\nThursday\n\n\nA register that argues back, and a schedule that admits it might slip\n\n\nReading\n\n\nLarson Ch. 7\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave"
+    "text": "Sessions\n\n\n6 & 8 October\n\n\nChapter\n\n\nLarson Ch. 7\n\n\nTuesday\n\n\nThe pre-mortem — concept and case\n\n\nThursday\n\n\nHow likely is the date?\n\n\nReading\n\n\nLarson Ch. 7\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave"
   },
   {
     "objectID": "weeks/week-07.html#learning-objectives",
@@ -3945,14 +3945,14 @@
     "href": "weeks/week-07.html#practice-exercises",
     "title": "Week 7 · Managing Risk",
     "section": "Practice exercises",
-    "text": "Practice exercises\n\n\nGiven the project information in the following table, what is the probability of completing the National Holiday Toy project in 93 time units?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAct. ID\nDescription\nPredecessor\nOptm. (a)\nMost likely (m)\nPess. (b)\nAct time \\(t_e\\)\nVariance \\([(b-a)/6]^2\\)\nCritical\n\n\n\n\n1\nDesign package\nNone\n6\n12\n24\n\n\n\n\n\n2\nDesign product\n1\n16\n19\n28\n\n\n\n\n\n3\nBuild package\n1\n4\n7\n10\n\n\n\n\n\n4\nSecure patent\n2\n24\n27\n36\n\n\n\n\n\n5\nBuild product\n2\n17\n29\n47\n\n\n\n\n\n6\nPaint\n3, 4, 5\n4\n7\n10\n\n\n\n\n\n7\nTest market\n6\n13\n16\n19\n\n\n\n\n\n\n\nThe Global Tea and Organic Juice companies have merged. The following information has been collected for the “Consolidation Project.”\n\n\n\n\nActivity\nDescription\nPredecessor\na opt\nm ml\nb pess\n\n\n\n\n1\nCodify accounts\nNone\n16\n19\n28\n\n\n2\nFile articles of unification\nNone\n30\n30\n30\n\n\n3\nUnify price and credit policy\nNone\n60\n72\n90\n\n\n4\nUnify personnel policies\nNone\n18\n27\n30\n\n\n5\nUnify data processing\n1\n17\n29\n47\n\n\n6\nTrain accounting staff\n1\n4\n7\n10\n\n\n7\nPilot run data processing\n5\n12\n15\n18\n\n\n8\nCalculate P & L and balance sheet\n6, 7\n6\n12\n24\n\n\n9\nTransfer real property\n2\n18\n27\n30\n\n\n10\nTrain salesforce\n3\n20\n35\n50\n\n\n11\nNegotiate with unions\n4\n40\n55\n100\n\n\n12\nDetermine capital needs\n8\n11\n20\n29\n\n\n13\nExplain personnel policies\n11\n14\n23\n26\n\n\n14\nSecure line of credit\n9, 12\n13\n16\n19\n\n\n15\nEnd\n10, 13, 14\n0\n0\n0\n\n\n\n\nCompute the expected time for each activity.\nCompute the variance for each activity.\nCompute the expected project duration.\nWhat is the probability of completing the project by day 112? Within 116 days?\nWhat is the probability of completing “Negotiate with unions” by day 90?\n\n\n\n\n\n\n\n\nExercises are reproduced from Larson & Gray, Project Management: The Managerial Process, 2024 Release, McGraw Hill, Chapter 7, Appendix 7.1 [1]. After you answer exercise 2, look at the other paths’ variances. Which answer does the single-path calculation make look better than it is?"
+    "text": "Practice exercises\n\n\nGiven the project information in the following table, what is the probability of completing the National Holiday Toy project in 93 time units?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAct. ID\nDescription\nPredecessor\nOptm. (a)\nMost likely (m)\nPess. (b)\nAct time \\(t_e\\)\nVariance \\([(b-a)/6]^2\\)\nCritical\n\n\n\n\n1\nDesign package\nNone\n6\n12\n24\n\n\n\n\n\n2\nDesign product\n1\n16\n19\n28\n\n\n\n\n\n3\nBuild package\n1\n4\n7\n10\n\n\n\n\n\n4\nSecure patent\n2\n24\n27\n36\n\n\n\n\n\n5\nBuild product\n2\n17\n29\n47\n\n\n\n\n\n6\nPaint\n3, 4, 5\n4\n7\n10\n\n\n\n\n\n7\nTest market\n6\n13\n16\n19\n\n\n\n\n\n\n\nThe Global Tea and Organic Juice companies have merged. The following information has been collected for the “Consolidation Project.”\n\n\n\n\nActivity\nDescription\nPredecessor\na opt\nm ml\nb pess\n\n\n\n\n1\nCodify accounts\nNone\n16\n19\n28\n\n\n2\nFile articles of unification\nNone\n30\n30\n30\n\n\n3\nUnify price and credit policy\nNone\n60\n72\n90\n\n\n4\nUnify personnel policies\nNone\n18\n27\n30\n\n\n5\nUnify data processing\n1\n17\n29\n47\n\n\n6\nTrain accounting staff\n1\n4\n7\n10\n\n\n7\nPilot run data processing\n5\n12\n15\n18\n\n\n8\nCalculate P & L and balance sheet\n6, 7\n6\n12\n24\n\n\n9\nTransfer real property\n2\n18\n27\n30\n\n\n10\nTrain salesforce\n3\n20\n35\n50\n\n\n11\nNegotiate with unions\n4\n40\n55\n100\n\n\n12\nDetermine capital needs\n8\n11\n20\n29\n\n\n13\nExplain personnel policies\n11\n14\n23\n26\n\n\n14\nSecure line of credit\n9, 12\n13\n16\n19\n\n\n15\nEnd\n10, 13, 14\n0\n0\n0\n\n\n\n\nCompute the expected time for each activity.\nCompute the variance for each activity.\nCompute the expected project duration.\nWhat is the probability of completing the project by day 112? Within 116 days?\nWhat is the probability of completing “Negotiate with unions” by day 90?\n\n\n\n\n\n\n\n\nExercises are reproduced from Larson & Gray, Project Management: The Managerial Process, 2024 Release, McGraw Hill, Chapter 7, Appendix 7.1 [1]. Exercise 1 is Thursday’s studio; Exercise 2 is further practice. After you answer exercise 2, look at the other paths’ variances. Which answer does the single-path calculation make look better than it is?"
   },
   {
-    "objectID": "weeks/week-07.html#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip",
-    "href": "weeks/week-07.html#studio-7-a-register-that-argues-back-and-a-schedule-that-admits-it-might-slip",
+    "objectID": "weeks/week-07.html#studio-7-how-likely-is-the-date",
+    "href": "weeks/week-07.html#studio-7-how-likely-is-the-date",
     "title": "Week 7 · Managing Risk",
-    "section": "Studio 7 · A register that argues back, and a schedule that admits it might slip",
-    "text": "Studio 7 · A register that argues back, and a schedule that admits it might slip\nComplete the Week 7 studio.\nYou will build a risk register for the conference: identify events from the RBS, rate them, choose responses, and write contingency plans with triggers and owners. You will then turn the conference schedule into a probability with PERT and size a time buffer. Finally, an AI reviewer will attack your register, and you will decide which of its objections hold.\nWrite the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this project."
+    "section": "Studio 7 · How likely is the date?",
+    "text": "Studio 7 · How likely is the date?\nComplete the Week 7 studio.\nThe studio teaches PERT from the beginning. You will work through the chapter’s hypothetical network step by step, building the expected times, variances, critical path and the probability of a date in a spreadsheet as we go. Then you will solve the chapter’s Exercise 1, the National Holiday Toy project, on your own: network, forward pass, \\(T_E\\), \\(\\sigma_{T_E}\\), \\(Z\\) and the probability of finishing in 93 time units. Finally, Gemini solves the same exercise cold, and you reconcile the two solutions line by line.\nSolve it yourself first. The model can produce a number quickly; only you can tell whether it added variances or standard deviations."
   },
   {
     "objectID": "weeks/week-07.html#sources",

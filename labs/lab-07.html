@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Studio 7 · A register that argues back, and a schedule that admits it might slip – IMSE 456/656</title>
+<title>Studio 7 · How likely is the date? – IMSE 456/656</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,8 +161,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Studio 7 · A register that argues back, and a schedule that admits it might slip</h1>
-<p class="subtitle lead">Week 7 · Managing Risk · Larson Ch. 7</p>
+<h1 class="title">Studio 7 · How likely is the date?</h1>
+<p class="subtitle lead">Week 7 · Managing Risk · Larson Ch. 7, Appendix 7.1</p>
 </div>
 
 
@@ -185,7 +185,7 @@ window.Quarto = {
 Deliverable
 </dt>
 <dd>
-<strong>SA7</strong> — one PDF containing the risk register, severity matrix, PERT calculations, buffer recommendation and AI reconciliation
+<strong>SA7</strong> — one PDF containing the worked example, your solution to Exercise 1, three short interpretations and the AI reconciliation
 </dd>
 <dt>
 Studio
@@ -197,25 +197,25 @@ Produced in the Thursday session and uploaded to Blackboard before you leave —
 Session
 </dt>
 <dd>
-Identify, rate and respond to conference risks; turn the schedule into a probability; let a model attack the register and decide which objections hold
+Learn PERT on the chapter’s example, step by step; then solve the chapter’s Exercise 1 on your own; then let a model solve it and reconcile the two answers
 </dd>
 <dt>
 Tools
 </dt>
 <dd>
-Week 7 workbook, Excel or Google Sheets, and Gemini (NDSU Gemini Pro account)
+Week 7 workbook, Excel or Google Sheets, paper for the network sketch, and Gemini (NDSU Gemini Pro account)
 </dd>
 <dt>
 Workbook
 </dt>
 <dd>
-<a href="../files/week-07-risk-studio.xlsx">Week 7 risk studio workbook</a>
+<a href="../files/week-07-pert-studio.xlsx">Week 7 PERT studio workbook</a>
 </dd>
 <dt>
 AI use
 </dt>
 <dd>
-<strong>Level 4 — full use with documentation</strong> · write the register and the PERT calculations yourself first, then use AI to review them, verify every claim, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
+<strong>Level 4 — full use with documentation</strong> · solve the exercise yourself first, then use AI to solve it independently, compare, verify every number, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
 </dd>
 <dt>
 Week page
@@ -231,137 +231,204 @@ Week page
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>This is individual work.</strong> Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5: your judgement about which of the model’s objections are right for this project.</p>
+<p><strong>This is individual work.</strong> Parts 1 to 3 are done without AI. Part 4 brings the model in. What is graded most heavily is Part 4: your judgement about where the model’s solution and yours differ, and which one is right.</p>
 </div>
 </div>
 </div>
-<p>The project is the conference you scheduled in Week 6. Its plan now exists; this studio asks what could break it and how sure anyone can be of the date. Use the <a href="../weeks/week-07.html">Week 7 notes</a> as your reference, especially the RBS, the severity matrix and the PERT section. Do not reuse the five example risks from the notes. Find your own.</p>
-<p>Download the <a href="../files/week-07-risk-studio.xlsx">Week 7 risk studio workbook</a>. It has five sheets: <strong>Register</strong>, <strong>Scales</strong>, <strong>Matrix</strong>, <strong>PERT</strong> and <strong>Reconciliation</strong>. Fill the yellow cells.</p>
-<section id="part-1-identify-15-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-1-identify-15-minutes">Part 1 · Identify — 15 minutes</h3>
-<p>Start from the failure story you wrote in Tuesday’s pre-mortem and from the conference RBS in the notes.</p>
-<ol type="1">
-<li>Enter <strong>eight</strong> risks in the <strong>Register</strong>, R1 to R8.</li>
-<li>Write each one as cause, event and effect, in its three columns. The event must be something that could happen, not an outcome you fear. “Opening is late” is an outcome; “the AV vendor withdraws two weeks out” is an event.</li>
-<li>Cover at least <strong>three</strong> RBS categories.</li>
-<li>Include at least <strong>one opportunity</strong>.</li>
-</ol>
-<p>Before moving on, read each event column alone. If an event could not appear in a news report about the conference, rewrite it.</p>
-</section>
-<section id="part-2-assess-15-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-2-assess-15-minutes">Part 2 · Assess — 15 minutes</h3>
-<ol type="1">
-<li>Rate each risk’s likelihood (L), impact (I) and detection difficulty (D) from 1 to 5 using the <strong>Scales</strong> sheet. Rate impact on the objective the event hurts most.</li>
-<li>The workbook calculates the RPN and the severity zone, and places each risk on the <strong>Matrix</strong> sheet.</li>
-<li>Rank your risks by RPN. Compare that order with the zones.</li>
-</ol>
-<p>Find one pair of risks where the RPN order and the zones disagree. In two or three sentences, say which ranking you would act on for this conference and why. If no pair disagrees, change nothing and explain what the agreement tells you about your ratings.</p>
-<p>For an opportunity, rate impact as the size of the benefit, on the same 1–5 scale.</p>
-</section>
-<section id="part-3-respond-20-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-3-respond-20-minutes">Part 3 · Respond — 20 minutes</h3>
-<p>For every risk in the <strong>major</strong> or <strong>moderate</strong> zone, complete the rest of the row.</p>
+<p>Tuesday ended with a probability: an 84% chance the conference opens by day 32. This studio teaches the method behind that number from the beginning, on the chapter’s own example, and then asks you to apply it to a problem you have not seen worked. Use the <a href="../weeks/week-07.html#lo-a7-1-pert-how-likely-is-the-date">PERT section of the Week 7 notes</a> as your reference. Four formulas are all you need:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 78%">
+<col style="width: 24%">
+<col style="width: 36%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Column</th>
-<th style="text-align: left;">What a good entry looks like</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Use it for</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Response type</td>
-<td style="text-align: left;">One of mitigate, avoid, transfer, escalate, retain, or for an opportunity exploit, share, enhance, escalate, accept</td>
+<td style="text-align: left;">Expected time</td>
+<td style="text-align: left;"><span class="math inline">\(t_e = (a + 4m + b)/6\)</span></td>
+<td style="text-align: left;">one activity</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Response (done now)</td>
-<td style="text-align: left;">Work that happens whether or not the event occurs, with its cost if any</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: left;"><span class="math inline">\(\sigma^2 = ((b - a)/6)^2\)</span></td>
+<td style="text-align: left;">one activity</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Contingency plan</td>
-<td style="text-align: left;">What runs only if the event happens</td>
+<td style="text-align: left;">Path standard deviation</td>
+<td style="text-align: left;"><span class="math inline">\(\sigma_{T_E} = \sqrt{\sum \sigma^2}\)</span></td>
+<td style="text-align: left;">the activities on one path</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Trigger</td>
-<td style="text-align: left;">An observable condition with a date or threshold that someone can check</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Owner</td>
-<td style="text-align: left;">One role, not “the team”</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Reserve ($)</td>
-<td style="text-align: left;">The contingency money the plan would need, or 0 with a reason</td>
+<td style="text-align: left;">Standard score</td>
+<td style="text-align: left;"><span class="math inline">\(Z = (T_S - T_E)/\sigma_{T_E}\)</span></td>
+<td style="text-align: left;">one path and one date</td>
 </tr>
 </tbody>
 </table>
-<p>Check three things before moving on:</p>
-<ul>
-<li>an escalated risk has no reserve and no project owner, because the project no longer manages it;</li>
-<li>a transferred risk still has a contingency plan, because transfer moves the cost, not the event; and</li>
-<li>no trigger depends on someone’s opinion.</li>
-</ul>
-<p>Record the total contingency reserve the register calls for.</p>
-</section>
-<section id="part-4-pert-20-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-4-pert-20-minutes">Part 4 · PERT — 20 minutes</h3>
-<p>The <strong>PERT</strong> sheet holds the team’s revised three-point estimates. They differ from the estimates in the notes.</p>
+<p>Download the <a href="../files/week-07-pert-studio.xlsx">Week 7 PERT studio workbook</a>. It has four sheets: <strong>Worked example</strong>, <strong>Exercise 1</strong>, <strong>Z table</strong> and <strong>Reconciliation</strong>. Fill the yellow cells. Enter formulas, not typed numbers, so that a changed estimate flows through.</p>
+<section id="part-1-learn-the-method-on-the-chapters-example-25-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-learn-the-method-on-the-chapters-example-25-minutes">Part 1 · Learn the method on the chapter’s example — 25 minutes</h3>
+<p>The <strong>Worked example</strong> sheet holds the six activities of the chapter’s hypothetical network, with predecessors and three estimates each. We work through it together on the board; you build the same thing in the sheet as we go.</p>
 <ol type="1">
-<li>Enter formulas for <span class="math inline">\(t_e = (a + 4m + b)/6\)</span> and variance <span class="math inline">\(= ((b - a)/6)^2\)</span> for each activity.</li>
-<li>Complete the three paths: the sum of <span class="math inline">\(t_e\)</span>, the sum of variances, <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(Z\)</span> at <span class="math inline">\(T_S = 32\)</span>, and the probability of finishing by day 32. Use <code>=NORM.S.DIST(Z, TRUE)</code>.</li>
-<li>Identify the critical path from the expected durations. State <span class="math inline">\(T_E\)</span> and <span class="math inline">\(\sigma_{T_E}\)</span>.</li>
-<li>Calculate the date that gives 90% confidence on the critical path, <span class="math inline">\(T_E + 1.28\,\sigma_{T_E}\)</span>.</li>
+<li><strong>Expected time.</strong> Enter <span class="math inline">\(t_e\)</span> for each activity. Check: the weight of 4 sits on the most likely time, so <span class="math inline">\(t_e\)</span> is pulled only a little toward the long tail.</li>
+<li><strong>Variance.</strong> Enter <span class="math inline">\(\sigma^2\)</span> for each activity. Notice which activities are uncertain and which are nearly fixed.</li>
+<li><strong>The network.</strong> Sketch it on paper from the predecessor column. Run a forward pass on the <span class="math inline">\(t_e\)</span> values and name the critical path.</li>
+<li><strong>Path spread.</strong> Add the <strong>variances</strong> of the critical activities, then take the square root. Never add standard deviations.</li>
+<li><strong>A date.</strong> For <span class="math inline">\(T_S = 67\)</span>, compute <span class="math inline">\(Z\)</span> and read the probability from the <strong>Z table</strong> sheet or with <code>=NORM.S.DIST(Z, TRUE)</code>. Then do the same for <span class="math inline">\(T_S = 60\)</span>.</li>
 </ol>
-<p>Then answer three questions in no more than 150 words in total:</p>
+<p>Your sheet should agree with the chapter: <span class="math inline">\(T_E = 64\)</span>, <span class="math inline">\(\sigma_{T_E} = 6\)</span>, and about a 69% chance of finishing by 67 and a 25% chance by 60 [1]. If it does not, find the cell that disagrees before moving on. The usual culprit is a standard deviation added where a variance belonged.</p>
+</section>
+<section id="part-2-exercise-1-on-your-own-30-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-exercise-1-on-your-own-30-minutes">Part 2 · Exercise 1 on your own — 30 minutes</h3>
+<p>The <strong>Exercise 1</strong> sheet holds the chapter’s first appendix exercise, reproduced as written [1]:</p>
+<blockquote class="blockquote">
+<p>Given the project information in the following table, what is the probability of completing the National Holiday Toy project in 93 time units?</p>
+</blockquote>
+<table class="caption-top table">
+<caption>Exercise 1 from Larson &amp; Gray, Ch. 7, Appendix 7.1 [1].</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Act. ID</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Predecessor</th>
+<th style="text-align: right;">Optm. (<em>a</em>)</th>
+<th style="text-align: right;">Most likely (<em>m</em>)</th>
+<th style="text-align: right;">Pess. (<em>b</em>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Design package</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Design product</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Build package</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Secure patent</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Build product</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Paint</td>
+<td style="text-align: left;">3, 4, 5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Test market</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19</td>
+</tr>
+</tbody>
+</table>
+<p>Work in the same order as Part 1.</p>
+<ol type="1">
+<li><span class="math inline">\(t_e\)</span> and <span class="math inline">\(\sigma^2\)</span> for all seven activities.</li>
+<li>The network, sketched on paper. Activity 6 is a merge with three predecessors; write down all three candidate early finishes before choosing.</li>
+<li>The forward pass on <span class="math inline">\(t_e\)</span>, and the critical path. Mark the critical activities in the <strong>Critical</strong> column.</li>
+<li><span class="math inline">\(T_E\)</span>, the sum of the critical variances, and <span class="math inline">\(\sigma_{T_E}\)</span>.</li>
+<li><span class="math inline">\(Z\)</span> for <span class="math inline">\(T_S = 93\)</span> and the probability of finishing by 93.</li>
+</ol>
+<p>Then complete the <strong>Paths</strong> block: the sheet lists every complete path through the network. Fill in each path’s sum of <span class="math inline">\(t_e\)</span>, sum of variances and <span class="math inline">\(\sigma\)</span>. You will need them in Part 3.</p>
+</section>
+<section id="part-3-interpret-the-number-10-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-3-interpret-the-number-10-minutes">Part 3 · Interpret the number — 10 minutes</h3>
+<p>Answer three questions in the <strong>Exercise 1</strong> sheet, in no more than 150 words in total.</p>
 <ul>
-<li>Which path has the higher probability of finishing by day 32 on its own, and why is that not the same as the critical path?</li>
-<li>Is the true chance of finishing by day 32 higher or lower than the critical-path figure? Explain using the merge at G.</li>
-<li>How many days of time buffer would you hold, and where in the network? Use one of the four placements in the notes.</li>
+<li>Which path other than the critical one is closest in expected length, and how does its variance compare with the critical path’s?</li>
+<li>The chapter’s probability looks only at the critical path. Is the true chance of finishing by 93 higher or lower than that figure? Explain using the merge at activity 6.</li>
+<li>What scheduled time would give the sponsor 90% confidence? Use the critical path and <span class="math inline">\(Z = 1.28\)</span>, and say how many time units of buffer that adds over <span class="math inline">\(T_E\)</span>.</li>
 </ul>
 </section>
-<section id="part-5-let-the-model-argue-back-15-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-5-let-the-model-argue-back-15-minutes">Part 5 · Let the model argue back — 15 minutes</h3>
-<p>Paste your completed register into Gemini with the prompt below. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.</p>
-<pre class="text"><code>You are a sceptical project sponsor reviewing a risk register for a
-one-day professional conference. Attack it. For each problem you find,
-name the risk ID and say which of these it is:
+<section id="part-4-let-the-model-solve-it-then-argue-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-4-let-the-model-solve-it-then-argue-15-minutes">Part 4 · Let the model solve it, then argue — 15 minutes</h3>
+<p>Give Gemini the exercise cold, without your answer. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.</p>
+<pre class="text"><code>Solve this PERT problem and show every step: expected times, variances,
+the network and forward pass, the critical path, the project expected
+duration, the path standard deviation, Z and the probability.
 
-- an outcome written as if it were an event
-- a likelihood, impact or detection rating inconsistent with the scale I give you
-- a response type that is misclassified (e.g. transfer that is really mitigation)
-- a contingency plan that is really a response, or the reverse
-- a trigger that is not observable or has no threshold
-- an owner who could not act on the trigger
-- a reserve that is missing, double-counted or unjustified
-- an important risk that is missing entirely
+Given the project information in the following table, what is the
+probability of completing the National Holiday Toy project in 93 time
+units?
 
-Do not rewrite the register. List objections only, most serious first.
+[paste the seven-row table from the Exercise 1 sheet]
 
-[paste the Scales sheet and the Register here]</code></pre>
-<p>In the <strong>Reconciliation</strong> sheet, record each objection. Mark it <strong>accept</strong>, <strong>reject</strong> or <strong>partly</strong>, give a reason tied to this conference, and note what you changed in the register. Make the changes.</p>
-<p>Keep the reconciliation to one page. If none of the model’s objections hold, say so in the first row and describe what you checked to be sure. That is a finding, not a failure.</p>
+Then state one thing the single-path probability leaves out.</code></pre>
+<p>In the <strong>Reconciliation</strong> sheet, compare its solution with yours line by line: each <span class="math inline">\(t_e\)</span>, each variance, the critical path, <span class="math inline">\(T_E\)</span>, <span class="math inline">\(\sigma_{T_E}\)</span>, <span class="math inline">\(Z\)</span>, the probability, and its answer to the last prompt. For every difference, say which of you is right and why. Correct your sheet if the model found a real error; record the model’s error if it made one. Models often add standard deviations instead of variances, or run the forward pass on <span class="math inline">\(m\)</span> instead of <span class="math inline">\(t_e\)</span>.</p>
+<p>Keep the reconciliation to one page. If the two solutions agree on every line, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.</p>
 </section>
-<section id="part-6-save-and-upload" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-6-save-and-upload">Part 6 · Save and upload</h3>
+<section id="part-5-save-and-upload" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-5-save-and-upload">Part 5 · Save and upload</h3>
 <p>Create one PDF in this order.</p>
 <ul class="task-list">
-<li><label><input type="checkbox">risk register, after your Part 5 changes</label></li>
-<li><label><input type="checkbox">severity matrix sheet</label></li>
-<li><label><input type="checkbox">RPN-versus-zone comparison from Part 2</label></li>
-<li><label><input type="checkbox">PERT table, path calculations and 90% date</label></li>
-<li><label><input type="checkbox">answers to the three PERT questions, at most 150 words</label></li>
+<li><label><input type="checkbox">Worked example sheet, matching the chapter’s figures</label></li>
+<li><label><input type="checkbox">Exercise 1 sheet: table, critical path, <span class="math inline">\(T_E\)</span>, <span class="math inline">\(\sigma_{T_E}\)</span>, <span class="math inline">\(Z\)</span>, probability, and the Paths block</label></li>
+<li><label><input type="checkbox">a photo or scan of your network sketch</label></li>
+<li><label><input type="checkbox">answers to the three interpretation questions, at most 150 words</label></li>
 <li><label><input type="checkbox">reconciliation table, at most one page</label></li>
 <li><label><input type="checkbox">AI acknowledgement with tool, transcript link, changes and verification</label></li>
 </ul>
 <p>Save the workbook, the transcript link and the PDF in <code>IMSE456/studio-07/</code> on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.</p>
 <p>Then upload the PDF to Blackboard before you leave the session. Name it <code>SA7_yourlastname.pdf</code>.</p>
 </section>
+<p>For further practice after the session, Exercise 2 (the Consolidation Project) is reproduced in the <a href="../weeks/week-07.html#appendix-exercises">Week 7 notes</a>. It has fifteen activities and five questions, and its merge structure makes the single-path assumption bite harder.</p>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 7, Appendix 7.1: the hypothetical example (Table A7.1) and Exercise 1 are reproduced as written.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
