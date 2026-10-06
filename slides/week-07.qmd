@@ -831,12 +831,12 @@ Every idea in this chapter is a column in this row. The studio asks you to fill 
 
 # Thursday
 
-## Studio 7 · A register that argues back, and a schedule that admits it might slip
+## Studio 7 · A register that argues back
 
 1. Identify eight risk events from the RBS and your pre-mortem.
 2. Rate likelihood, impact and detection.
 3. Plan responses for every major and moderate risk.
-4. Turn the schedule into a probability with PERT.
+4. Total the reserve and place a time buffer.
 5. Let Gemini argue with your register; reconcile its objections.
 6. Save your copy, then upload the PDF to Blackboard.
 
@@ -863,13 +863,15 @@ For each major and moderate risk:
 - one owner
 - reserve, or 0 with a reason
 
-## 4 · PERT on revised estimates
+## 4 · Reserve and buffer
 
-- expected times and variances
-- all three paths, with Z and probability at day 32
-- the critical path, Tₑ and σ
-- the 90% date
-- where to place the buffer, and how many days
+- the contingency reserve your register calls for, and the project budget it implies
+- who controls each reserve, and what each pays for
+- one time buffer in the Week 6 network: activity, placement rule, days, reason
+
+. . .
+
+PERT is not part of the studio. It stays in today's session and the appendix exercises.
 
 ## 5 · The register argues back
 
@@ -885,7 +887,7 @@ Write the register yourself first. The model can find a missing trigger; only yo
 
 ## 6 · Save and upload
 
-- One PDF: register, matrix, RPN-versus-zone note, PERT, buffer, reconciliation, AI acknowledgement
+- One PDF: register, matrix, RPN-versus-zone note, reserve and buffer, reconciliation, AI acknowledgement
 - Save your copy to the Google Drive or OneDrive on your NDSU account
 - Then upload `SA7_yourlastname.pdf` to Blackboard before you leave
 

@@ -6,7 +6,7 @@ chapter: "Larson Ch. 7"
 dates: "6 and 8 October"
 reading: "Larson Ch. 7"
 session-a: "The pre-mortem"
-session-b: "A register that argues back, and a schedule that admits it might slip"
+session-b: "A register that argues back"
 video:
   provider: none
   id: ""
@@ -19,7 +19,7 @@ lab: true
 <dt>Sessions</dt><dd>6 &amp; 8 October</dd>
 <dt>Chapter</dt><dd>Larson Ch. 7</dd>
 <dt>Tuesday</dt><dd>The pre-mortem — concept and case</dd>
-<dt>Thursday</dt><dd>A register that argues back, and a schedule that admits it might slip</dd>
+<dt>Thursday</dt><dd>A register that argues back</dd>
 <dt>Reading</dt><dd>Larson Ch. 7</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
@@ -531,11 +531,11 @@ Exercises are reproduced from Larson & Gray, *Project Management: The Managerial
 
 # Thursday studio
 
-## Studio 7 · A register that argues back, and a schedule that admits it might slip
+## Studio 7 · A register that argues back
 
 Complete the [Week 7 studio](../labs/lab-07.qmd).
 
-You will build a risk register for the conference: identify events from the RBS, rate them, choose responses, and write contingency plans with triggers and owners. You will then turn the conference schedule into a probability with PERT and size a time buffer. Finally, an AI reviewer will attack your register, and you will decide which of its objections hold.
+You will build a risk register for the conference: identify events from the RBS, rate them, choose responses, and write contingency plans with triggers and owners. You will then total the reserve the register calls for and choose where a time buffer belongs in the Week 6 network. Finally, an AI reviewer will attack your register, and you will decide which of its objections hold. The studio covers LO 7-1 to 7-7; PERT stays in Tuesday's session and the practice exercises above.
 
 Write the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this project.
 
