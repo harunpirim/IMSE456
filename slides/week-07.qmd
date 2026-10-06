@@ -827,67 +827,65 @@ Does option 1 reach 90% by day 32? Which path would then need watching? When wou
 
 . . .
 
-Every idea in this chapter is a column in this row. The studio asks you to fill eight of them.
+Every idea in this chapter is a column in this row. Thursday takes the last question of the day, how likely is the date, and teaches the method behind it.
 
 # Thursday
 
-## Studio 7 · A register that argues back
+## Studio 7 · How likely is the date?
 
-1. Identify eight risk events from the RBS and your pre-mortem.
-2. Rate likelihood, impact and detection.
-3. Plan responses for every major and moderate risk.
-4. Total the reserve and place a time buffer.
-5. Let Gemini argue with your register; reconcile its objections.
-6. Save your copy, then upload the PDF to Blackboard.
+1. Learn PERT on the chapter's example, step by step, in a spreadsheet.
+2. Solve the chapter's Exercise 1 on your own: the National Holiday Toy project.
+3. Interpret the number: the near-critical path, the merge, the 90% date.
+4. Let Gemini solve it cold, then reconcile the two solutions.
+5. Save your copy, then upload the PDF to Blackboard.
 
-## 1 · Identify
+## 1 · The chapter's example, together
 
-- Eight events in cause → event → effect form
-- At least three RBS categories
-- At least one opportunity
-- Not the five example risks from the notes
-
-## 2 · Assess
-
-- Rate likelihood, impact and detection against the scales sheet.
-- Rank by RPN and compare with the zones.
-- Explain one pair where the two rankings disagree, and which you would act on.
-
-## 3 · Respond
-
-For each major and moderate risk:
-
-- response type and action
-- contingency plan
-- observable trigger with a threshold
-- one owner
-- reserve, or 0 with a reason
-
-## 4 · Reserve and buffer
-
-- the contingency reserve your register calls for, and the project budget it implies
-- who controls each reserve, and what each pays for
-- one time buffer in the Week 6 network: activity, placement rule, days, reason
+- tₑ and σ² for six activities
+- the network from the predecessor column, and a forward pass on tₑ
+- the critical path, Tₑ and σ(path)
+- Z and probability for Tₛ = 67 and Tₛ = 60
 
 . . .
 
-PERT is not part of the studio. It stays in today's session and the appendix exercises.
+Your sheet must match the chapter before you move on: Tₑ = 64, σ = 6, 69% and 25%.
 
-## 5 · The register argues back
+## 2 · Exercise 1 on your own
 
-Gemini reviews your register as a sceptical sponsor.
+Seven activities. Activity 6 is a merge with three predecessors.
+
+- tₑ and σ² for each
+- the network on paper, then the forward pass
+- the critical path, Tₑ, the critical variances, σ(path)
+- Z at 93 and the probability
 
 . . .
 
-You decide which objections hold, in at most one page.
+Then every complete path: Σtₑ, Σσ², σ.
+
+## 3 · Interpret
+
+In at most 150 words:
+
+- Which other path is closest in length, and how does its variance compare?
+- Is the true chance of finishing by 93 higher or lower than the single-path figure? Use the merge at 6.
+- What date gives 90% confidence, and how much buffer is that over Tₑ?
+
+## 4 · Let the model solve it, then argue
+
+Gemini gets the table cold and shows every step.
 
 . . .
 
-Write the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this conference.
+You compare line by line: each tₑ, each variance, the critical path, Tₑ, σ, Z, the probability.
 
-## 6 · Save and upload
+. . .
 
-- One PDF: register, matrix, RPN-versus-zone note, reserve and buffer, reconciliation, AI acknowledgement
+For every difference, say who is right and why. Models often add standard deviations, or run the pass on m instead of tₑ.
+
+## 5 · Save and upload
+
+- One PDF: worked example, Exercise 1 sheet, network sketch, interpretation, reconciliation, AI acknowledgement
 - Save your copy to the Google Drive or OneDrive on your NDSU account
 - Then upload `SA7_yourlastname.pdf` to Blackboard before you leave
 

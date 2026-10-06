@@ -1,130 +1,126 @@
 ---
-title: "Studio 7 · A register that argues back"
-subtitle: "Week 7 · Managing Risk · Larson Ch. 7"
+title: "Studio 7 · How likely is the date?"
+subtitle: "Week 7 · Managing Risk · Larson Ch. 7, Appendix 7.1"
 week: 7
 release: "2026-10-05"
 ---
 
 ::: {.week-meta}
 <dl>
-<dt>Deliverable</dt><dd><strong>SA7</strong> — one PDF containing the risk register, severity matrix, reserve and buffer recommendation, and AI reconciliation</dd>
+<dt>Deliverable</dt><dd><strong>SA7</strong> — one PDF containing the worked example, your solution to Exercise 1, three short interpretations and the AI reconciliation</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
-<dt>Session</dt><dd>Identify, rate and respond to conference risks; size the reserve and place a time buffer; let a model attack the register and decide which objections hold</dd>
-<dt>Tools</dt><dd>Week 7 workbook, Excel or Google Sheets, and Gemini (NDSU Gemini Pro account)</dd>
-<dt>Workbook</dt><dd><a href="../files/week-07-risk-studio.xlsx">Week 7 risk studio workbook</a></dd>
-<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · write the register and the reserve yourself first, then use AI to review them, verify every claim, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Session</dt><dd>Learn PERT on the chapter's example, step by step; then solve the chapter's Exercise 1 on your own; then let a model solve it and reconcile the two answers</dd>
+<dt>Tools</dt><dd>Week 7 workbook, Excel or Google Sheets, paper for the network sketch, and Gemini (NDSU Gemini Pro account)</dd>
+<dt>Workbook</dt><dd><a href="../files/week-07-pert-studio.xlsx">Week 7 PERT studio workbook</a></dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · solve the exercise yourself first, then use AI to solve it independently, compare, verify every number, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
 <dt>Week page</dt><dd><a href="../weeks/week-07.qmd">Week 7 — Managing Risk</a></dd>
 </dl>
 :::
 
 ::: {.callout-important appearance="simple"}
-**This is individual work.** Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5: your judgement about which of the model's objections are right for this project.
+**This is individual work.** Parts 1 to 3 are done without AI. Part 4 brings the model in. What is graded most heavily is Part 4: your judgement about where the model's solution and yours differ, and which one is right.
 :::
 
-The project is the conference you scheduled in Week 6. Its plan now exists; this studio asks what could break it, what to do about each threat, and what to hold in reserve. Use the [Week 7 notes](../weeks/week-07.qmd) as your reference, especially the RBS, the severity matrix, the five responses and the two reserves. PERT is Tuesday's material and the appendix exercises; it is not part of this studio. Do not reuse the five example risks from the notes. Find your own.
+Tuesday ended with a probability: an 84% chance the conference opens by day 32. This studio teaches the method behind that number from the beginning, on the chapter's own example, and then asks you to apply it to a problem you have not seen worked. Use the [PERT section of the Week 7 notes](../weeks/week-07.qmd#lo-a7-1-pert-how-likely-is-the-date) as your reference. Four formulas are all you need:
 
-Download the [Week 7 risk studio workbook](../files/week-07-risk-studio.xlsx). It has five sheets: **Register**, **Scales**, **Matrix**, **Reserve and buffer** and **Reconciliation**. Fill the yellow cells.
+| | Formula | Use it for |
+|:--|:--|:--|
+| Expected time | $t_e = (a + 4m + b)/6$ | one activity |
+| Variance | $\sigma^2 = ((b - a)/6)^2$ | one activity |
+| Path standard deviation | $\sigma_{T_E} = \sqrt{\sum \sigma^2}$ | the activities on one path |
+| Standard score | $Z = (T_S - T_E)/\sigma_{T_E}$ | one path and one date |
 
-::: {.part}
-### Part 1 · Identify — 15 minutes
+: {tbl-colwidths="[24,36,40]"}
 
-Start from the failure story you wrote in Tuesday's pre-mortem and from the conference RBS in the notes.
-
-1. Enter **eight** risks in the **Register**, R1 to R8.
-2. Write each one as cause, event and effect, in its three columns. The event must be something that could happen, not an outcome you fear. "Opening is late" is an outcome; "the AV vendor withdraws two weeks out" is an event.
-3. Cover at least **three** RBS categories.
-4. Include at least **one opportunity**.
-
-Before moving on, read each event column alone. If an event could not appear in a news report about the conference, rewrite it.
-:::
+Download the [Week 7 PERT studio workbook](../files/week-07-pert-studio.xlsx). It has four sheets: **Worked example**, **Exercise 1**, **Z table** and **Reconciliation**. Fill the yellow cells. Enter formulas, not typed numbers, so that a changed estimate flows through.
 
 ::: {.part}
-### Part 2 · Assess — 15 minutes
+### Part 1 · Learn the method on the chapter's example — 25 minutes
 
-1. Rate each risk's likelihood (L), impact (I) and detection difficulty (D) from 1 to 5 using the **Scales** sheet. Rate impact on the objective the event hurts most.
-2. The workbook calculates the RPN and the severity zone, and places each risk on the **Matrix** sheet.
-3. Rank your risks by RPN. Compare that order with the zones.
+The **Worked example** sheet holds the six activities of the chapter's hypothetical network, with predecessors and three estimates each. We work through it together on the board; you build the same thing in the sheet as we go.
 
-Find one pair of risks where the RPN order and the zones disagree. In two or three sentences, say which ranking you would act on for this conference and why. If no pair disagrees, change nothing and explain what the agreement tells you about your ratings.
+1. **Expected time.** Enter $t_e$ for each activity. Check: the weight of 4 sits on the most likely time, so $t_e$ is pulled only a little toward the long tail.
+2. **Variance.** Enter $\sigma^2$ for each activity. Notice which activities are uncertain and which are nearly fixed.
+3. **The network.** Sketch it on paper from the predecessor column. Run a forward pass on the $t_e$ values and name the critical path.
+4. **Path spread.** Add the **variances** of the critical activities, then take the square root. Never add standard deviations.
+5. **A date.** For $T_S = 67$, compute $Z$ and read the probability from the **Z table** sheet or with `=NORM.S.DIST(Z, TRUE)`. Then do the same for $T_S = 60$.
 
-For an opportunity, rate impact as the size of the benefit, on the same 1–5 scale.
-:::
-
-::: {.part}
-### Part 3 · Respond — 20 minutes
-
-For every risk in the **major** or **moderate** zone, complete the rest of the row.
-
-| Column | What a good entry looks like |
-|:--|:--|
-| Response type | One of mitigate, avoid, transfer, escalate, retain, or for an opportunity exploit, share, enhance, escalate, accept |
-| Response (done now) | Work that happens whether or not the event occurs, with its cost if any |
-| Contingency plan | What runs only if the event happens |
-| Trigger | An observable condition with a date or threshold that someone can check |
-| Owner | One role, not "the team" |
-| Reserve (\$) | The contingency money the plan would need, or 0 with a reason |
-
-: {tbl-colwidths="[22,78]"}
-
-Check three things before moving on:
-
-- an escalated risk has no reserve and no project owner, because the project no longer manages it;
-- a transferred risk still has a contingency plan, because transfer moves the cost, not the event; and
-- no trigger depends on someone's opinion.
-
-Record the total contingency reserve the register calls for.
+Your sheet should agree with the chapter: $T_E = 64$, $\sigma_{T_E} = 6$, and about a 69% chance of finishing by 67 and a 25% chance by 60 [1]. If it does not, find the cell that disagrees before moving on. The usual culprit is a standard deviation added where a variance belonged.
 :::
 
 ::: {.part}
-### Part 4 · Reserve and buffer — 10 minutes
+### Part 2 · Exercise 1 on your own — 30 minutes
 
-The **Reserve and buffer** sheet reads the total of your Reserve column from the Register.
+The **Exercise 1** sheet holds the chapter's first appendix exercise, reproduced as written [1]:
 
-1. Record the **contingency reserve** your register calls for and the **project budget** it implies: the \$70,000 baseline from the notes plus your reserve. The sheet calculates both.
-2. In one line each, say who controls the contingency reserve and who controls the management reserve, and what each one pays for.
-3. Choose **one** place for a time buffer in the Week 6 conference network. Name the activity, the placement rule it follows from the four in the notes, and how many days you would hold. Give the reason in one or two sentences, using what you know about that activity's predecessors and slack.
+> Given the project information in the following table, what is the probability of completing the National Holiday Toy project in 93 time units?
 
-If your reserve is more than a quarter of the baseline, say in one sentence which rows drive it and whether that is the register's judgement or its padding.
+| Act. ID | Description | Predecessor | Optm. (*a*) | Most likely (*m*) | Pess. (*b*) |
+|:--|:--|:--|--:|--:|--:|
+| 1 | Design package | None | 6 | 12 | 24 |
+| 2 | Design product | 1 | 16 | 19 | 28 |
+| 3 | Build package | 1 | 4 | 7 | 10 |
+| 4 | Secure patent | 2 | 24 | 27 | 36 |
+| 5 | Build product | 2 | 17 | 29 | 47 |
+| 6 | Paint | 3, 4, 5 | 4 | 7 | 10 |
+| 7 | Test market | 6 | 13 | 16 | 19 |
+
+: Exercise 1 from Larson & Gray, Ch. 7, Appendix 7.1 [1]. {tbl-colwidths="[10,26,16,16,16,16]"}
+
+Work in the same order as Part 1.
+
+1. $t_e$ and $\sigma^2$ for all seven activities.
+2. The network, sketched on paper. Activity 6 is a merge with three predecessors; write down all three candidate early finishes before choosing.
+3. The forward pass on $t_e$, and the critical path. Mark the critical activities in the **Critical** column.
+4. $T_E$, the sum of the critical variances, and $\sigma_{T_E}$.
+5. $Z$ for $T_S = 93$ and the probability of finishing by 93.
+
+Then complete the **Paths** block: the sheet lists every complete path through the network. Fill in each path's sum of $t_e$, sum of variances and $\sigma$. You will need them in Part 3.
 :::
 
 ::: {.part}
-### Part 5 · Let the model argue back — 15 minutes
+### Part 3 · Interpret the number — 10 minutes
 
-Paste your completed register into Gemini with the prompt below. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.
+Answer three questions in the **Exercise 1** sheet, in no more than 150 words in total.
+
+- Which path other than the critical one is closest in expected length, and how does its variance compare with the critical path's?
+- The chapter's probability looks only at the critical path. Is the true chance of finishing by 93 higher or lower than that figure? Explain using the merge at activity 6.
+- What scheduled time would give the sponsor 90% confidence? Use the critical path and $Z = 1.28$, and say how many time units of buffer that adds over $T_E$.
+:::
+
+::: {.part}
+### Part 4 · Let the model solve it, then argue — 15 minutes
+
+Give Gemini the exercise cold, without your answer. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.
 
 ```text
-You are a sceptical project sponsor reviewing a risk register for a
-one-day professional conference. Attack it. For each problem you find,
-name the risk ID and say which of these it is:
+Solve this PERT problem and show every step: expected times, variances,
+the network and forward pass, the critical path, the project expected
+duration, the path standard deviation, Z and the probability.
 
-- an outcome written as if it were an event
-- a likelihood, impact or detection rating inconsistent with the scale I give you
-- a response type that is misclassified (e.g. transfer that is really mitigation)
-- a contingency plan that is really a response, or the reverse
-- a trigger that is not observable or has no threshold
-- an owner who could not act on the trigger
-- a reserve that is missing, double-counted or unjustified
-- an important risk that is missing entirely
+Given the project information in the following table, what is the
+probability of completing the National Holiday Toy project in 93 time
+units?
 
-Do not rewrite the register. List objections only, most serious first.
+[paste the seven-row table from the Exercise 1 sheet]
 
-[paste the Scales sheet and the Register here]
+Then state one thing the single-path probability leaves out.
 ```
 
-In the **Reconciliation** sheet, record each objection. Mark it **accept**, **reject** or **partly**, give a reason tied to this conference, and note what you changed in the register. Make the changes.
+In the **Reconciliation** sheet, compare its solution with yours line by line: each $t_e$, each variance, the critical path, $T_E$, $\sigma_{T_E}$, $Z$, the probability, and its answer to the last prompt. For every difference, say which of you is right and why. Correct your sheet if the model found a real error; record the model's error if it made one. Models often add standard deviations instead of variances, or run the forward pass on $m$ instead of $t_e$.
 
-Keep the reconciliation to one page. If none of the model's objections hold, say so in the first row and describe what you checked to be sure. That is a finding, not a failure.
+Keep the reconciliation to one page. If the two solutions agree on every line, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.
 :::
 
 ::: {.part}
-### Part 6 · Save and upload
+### Part 5 · Save and upload
 
 Create one PDF in this order.
 
-- [ ] risk register, after your Part 5 changes
-- [ ] severity matrix sheet
-- [ ] RPN-versus-zone comparison from Part 2
-- [ ] reserve and buffer sheet, with the buffer reason
+- [ ] Worked example sheet, matching the chapter's figures
+- [ ] Exercise 1 sheet: table, critical path, $T_E$, $\sigma_{T_E}$, $Z$, probability, and the Paths block
+- [ ] a photo or scan of your network sketch
+- [ ] answers to the three interpretation questions, at most 150 words
 - [ ] reconciliation table, at most one page
 - [ ] AI acknowledgement with tool, transcript link, changes and verification
 
@@ -132,3 +128,9 @@ Save the workbook, the transcript link and the PDF in `IMSE456/studio-07/` on th
 
 Then upload the PDF to Blackboard before you leave the session. Name it `SA7_yourlastname.pdf`.
 :::
+
+For further practice after the session, Exercise 2 (the Consolidation Project) is reproduced in the [Week 7 notes](../weeks/week-07.qmd#appendix-exercises). It has fifteen activities and five questions, and its merge structure makes the single-path assumption bite harder.
+
+## Source
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 7, Appendix 7.1: the hypothetical example (Table A7.1) and Exercise 1 are reproduced as written.

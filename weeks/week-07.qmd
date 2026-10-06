@@ -6,7 +6,7 @@ chapter: "Larson Ch. 7"
 dates: "6 and 8 October"
 reading: "Larson Ch. 7"
 session-a: "The pre-mortem"
-session-b: "A register that argues back"
+session-b: "How likely is the date?"
 video:
   provider: none
   id: ""
@@ -19,7 +19,7 @@ lab: true
 <dt>Sessions</dt><dd>6 &amp; 8 October</dd>
 <dt>Chapter</dt><dd>Larson Ch. 7</dd>
 <dt>Tuesday</dt><dd>The pre-mortem — concept and case</dd>
-<dt>Thursday</dt><dd>A register that argues back</dd>
+<dt>Thursday</dt><dd>How likely is the date?</dd>
 <dt>Reading</dt><dd>Larson Ch. 7</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave</dd>
 </dl>
@@ -524,20 +524,20 @@ Recompute $T_E$ and $\sigma_{T_E}$ for the first option. Does it reach 90% by da
 :::
 
 ::: {.callout-note appearance="simple"}
-Exercises are reproduced from Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, Chapter 7, Appendix 7.1 [1]. After you answer exercise 2, look at the other paths' variances. Which answer does the single-path calculation make look better than it is?
+Exercises are reproduced from Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, Chapter 7, Appendix 7.1 [1]. Exercise 1 is Thursday's studio; Exercise 2 is further practice. After you answer exercise 2, look at the other paths' variances. Which answer does the single-path calculation make look better than it is?
 :::
 
 ---
 
 # Thursday studio
 
-## Studio 7 · A register that argues back
+## Studio 7 · How likely is the date?
 
 Complete the [Week 7 studio](../labs/lab-07.qmd).
 
-You will build a risk register for the conference: identify events from the RBS, rate them, choose responses, and write contingency plans with triggers and owners. You will then total the reserve the register calls for and choose where a time buffer belongs in the Week 6 network. Finally, an AI reviewer will attack your register, and you will decide which of its objections hold. The studio covers LO 7-1 to 7-7; PERT stays in Tuesday's session and the practice exercises above.
+The studio teaches PERT from the beginning. You will work through the chapter's hypothetical network step by step, building the expected times, variances, critical path and the probability of a date in a spreadsheet as we go. Then you will solve the chapter's Exercise 1, the National Holiday Toy project, on your own: network, forward pass, $T_E$, $\sigma_{T_E}$, $Z$ and the probability of finishing in 93 time units. Finally, Gemini solves the same exercise cold, and you reconcile the two solutions line by line.
 
-Write the register yourself first. The model can find a missing trigger; only you can judge whether its objection fits this project.
+Solve it yourself first. The model can produce a number quickly; only you can tell whether it added variances or standard deviations.
 
 ## Sources
 
