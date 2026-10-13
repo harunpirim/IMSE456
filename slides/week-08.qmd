@@ -1,0 +1,593 @@
+---
+title: "Week 8 · The chain, argued backwards"
+subtitle: "Midterm review · Chapters 1–7 · IMSE 456/656"
+author: Harun Pirim
+date: "2026-10-13"
+week: 8
+release: "2026-10-12"
+---
+
+## {.center}
+
+> A true understanding of project management comes not from knowing what a scope statement is, or the critical path, or partnering with contractors, but from comprehending how the different elements of the project management system interact.
+>
+> — Larson & Gray, Ch. 1
+
+## Thursday's examination
+
+| Part | Content | Points | Minutes |
+|---|---|---|---|
+| A | 20 multiple-choice questions | 40 | 20 |
+| B | 5 short conceptual questions, 2–4 sentences each | 30 | 15 |
+| C | 1 numerical problem: critical path and PERT together | 30 | 25 |
+| | **Total** | **100** | **65** |
+
+Closed book, closed notes. Non-programmable calculator. Every formula you need is printed on the paper, with a short normal table. AI is prohibited (Level 1).
+
+## How today runs
+
+Seven chapters, taken **backwards**: from the risk register to the definition of a project.
+
+For each one:
+
+- what it had to hand to the next link;
+- the three or four things to carry into Thursday;
+- one question in the exam's own format. Work it before the answer appears.
+
+The questions today are **similar** to Thursday's. They are not Thursday's.
+
+## The chain
+
+| Link | Needs from the link before it |
+|---|---|
+| **Ch 7** Risk register, reserves, PERT | durations, paths and merges from the schedule |
+| **Ch 6** Network, critical path, slack | durations under stated conditions from the estimate |
+| **Ch 5** Estimates: time, cost, range | work packages that can be estimated and owned |
+| **Ch 4** Scope, WBS, OBS, priorities | an organization with someone able to own a package |
+| **Ch 3** Structure and culture | a project that was selected and funded |
+| **Ch 2** Strategy and selection | a definition of what counts as a project |
+| **Ch 1** What a project is | — |
+
+Break any link and the ones above it still produce numbers. The numbers mean less.
+
+# Chapter 7 · Managing risk
+
+::: {.aside}
+Week 7 notes, LO 7-1 to LO 7-9 and Appendix 7.1
+:::
+
+## What the risk register needed from the links before it
+
+- From **Ch 6**: which activities are critical, where the merges are, how much slack each branch holds. A time buffer goes *at the merge* and *on the near-critical branch*.
+- From **Ch 5**: estimates with their ranges and risk drivers, and contingency held **visibly**, not padded into tasks.
+- From **Ch 4**: a scope statement to measure change against, and a change-control path for the contingency plan that fires.
+
+## Carry these
+
+- **Four steps, one loop**: identify → assess → plan responses → control, with control feeding new risks back.
+- **Events, not outcomes.** "The conference opens late" is a consequence. "The venue's legal team signs late" is an event.
+- **Five threat responses**: mitigate · avoid · transfer · escalate · retain.
+- **Response vs contingency plan**: a response runs *now*, inside the baseline; a contingency plan waits for a *trigger* and is drawn from a *reserve*.
+- **Two reserves**: contingency (identified risks, project manager) and management (unidentified risks, senior management).
+- **PERT**: $t_e=(a+4m+b)/6$, add **variances** along the critical path, $Z=(T_S-T_E)/\sigma$.
+
+## The five responses, in one table
+
+| Response | What it does | Example |
+|---|---|---|
+| **Mitigate** | lowers likelihood or impact | load-test the registration site a week early |
+| **Avoid** | changes the plan so the event cannot occur | drop the livestream, record instead |
+| **Transfer** | moves the financial consequence, at a price | cancellation insurance; fixed-price AV contract |
+| **Escalate** | hands it to whoever owns the authority | a hiring freeze rumour goes to the sponsor's executive |
+| **Retain** | accepts it deliberately, in the register | a once-a-decade storm on the day |
+
+Transfer does not remove the risk. Retention is a decision, not an omission.
+
+## Response · contingency plan · trigger · owner
+
+| Column | Test |
+|---|---|
+| **Response** | Scheduled work with a budget line. Happens whether or not the event does. |
+| **Contingency plan** | Outside the baseline. Runs only *if*. Paid from a reserve. |
+| **Trigger** | Observable. "No travel confirmation 21 days out," not "the speaker seems unreliable." |
+| **Owner** | One named person who watches the trigger and can act. |
+
+## Practice A · multiple choice
+
+Two risks are rated on likelihood, impact and detection difficulty, each 1–5.
+
+| Risk | L | I | D | RPN |
+|---|---|---|---|---|
+| R-A Keynote cancels | 2 | 5 | 2 | 20 |
+| R-B Coffee runs out | 5 | 2 | 2 | 20 |
+
+Which statement is correct?
+
+(a) The two risks deserve the same response budget, because their RPNs are equal\
+(b) R-B should be handled first, because it is more likely\
+(c) The RPN organizes the discussion but does not make the decision; most organizations weigh impact above likelihood, so R-A is the major risk\
+(d) R-A should be retained, because it is unlikely
+
+## Answer
+
+**(c).** Multiplication cannot tell 2 × 5 × 2 from 5 × 2 × 2. The severity matrix is deliberately asymmetric: the major zone runs further down the high-impact column than along the high-likelihood row. A one-in-ten chance of losing the keynote outranks a near-certain catering annoyance.
+
+The exam will ask you to *read* a number like this, not only to compute it.
+
+## The three PERT errors that cost marks
+
+The exam's one numerical problem runs PERT on top of the critical path. You will do the same in the Chapter 6 practice. First, the errors.
+
+1. Adding standard deviations instead of variances. (1 + 2 + 2 = 5, not 3.)
+2. Summing every activity in the network instead of the activities on the critical path.
+3. Running the passes on *m* instead of $t_e$. The pessimistic tail is usually longer, so $t_e > m$ and the project is longer than the most-likely plan.
+
+And one for interpretation: the single-path probability is **optimistic**. A shorter path with a larger variance can become the longer one at a merge.
+
+## Practice C · short answer
+
+> The register lists "attendance is low." Rewrite it as a risk event with a cause and an effect, and give it a trigger.
+
+A full-credit answer has three parts:
+
+- says why the entry is an outcome (it suggests no action);
+- a sentence of the form *because* ___, ___ *may happen*, *which would* ___;
+- an observable trigger: "fewer than 120 registrations by 1 October," not "if numbers look weak."
+
+# Chapter 6 · Developing a project schedule
+
+::: {.aside}
+Week 6 notes, LO 6-1 to LO 6-6
+:::
+
+## What the schedule handed to risk
+
+- A **critical path**: the activities with no reserve under the current plan.
+- **Merge activities**: they wait for the last of several predecessors and inherit every delay. That is where a time buffer earns its keep.
+- **Slack by branch**, so the team knows which near-critical path could become controlling.
+
+## Carry these
+
+- **Forward pass**: $EF = ES + D$; at a merge, $ES = \max$ of predecessor EFs.
+- **Backward pass**: $LS = LF - D$; at a burst, $LF = \min$ of successor LSs.
+- **Total slack** $= LS - ES = LF - EF$. It belongs to the **path**, not the activity.
+- **Free slack** $= \min(ES_{\text{successors}}) - EF$. Usable without moving any successor.
+- **Critical path** = longest path = project duration. Recalculate after every change.
+- Lags: FS + L, SS + L, FF + L are minimum separations. A lag is not hidden work.
+- Time runs from zero. EF = 2 means the successor may start at 2.
+
+## Practice B · critical path and PERT together
+
+| Activity | Predecessor(s) | *a* | *m* | *b* |
+|---|---|---|---|---|
+| A | — | 1 | 1 | 7 |
+| B | A | 1 | 4 | 7 |
+| C | A | 2 | 2 | 8 |
+| D | B | 2 | 2 | 20 |
+| E | C | 1 | 4 | 19 |
+| F | C | 1 | 1 | 7 |
+| G | D, E | 2 | 2 | 8 |
+| H | F, G | 2 | 2 | 14 |
+
+Times in workdays. Eight minutes; the four tasks are on the next slide.
+
+## Practice B · the four tasks
+
+1. Expected time and variance of each activity.
+2. Draw the network; run both passes on the expected times.
+3. Total slack, free slack, critical path, $T_E$.
+4. $\sigma_{T_E}$, the probability of finishing by day 22, and the $T_S$ that gives 90 percent.
+
+This is the shape of Thursday's Part C: one network, three-point estimates, both passes, then a probability.
+
+## The network
+
+<figure>
+<svg viewBox="0 0 820 400" role="img" aria-labelledby="pn-title" style="width:100%;height:auto;max-height:480px">
+  <title id="pn-title">Practice activity-on-node network with eight activities</title>
+  <defs>
+    <marker id="pn-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#0F5A4B" stroke-width="1.8" marker-end="url(#pn-ar)">
+    <path d="M130,200 L200,90"/><path d="M130,200 L200,230"/>
+    <path d="M300,90 L370,90"/><path d="M300,230 L370,230"/><path d="M300,230 L370,340"/>
+    <path d="M470,90 L540,160"/><path d="M470,230 L540,170"/>
+    <path d="M640,165 L700,250"/><path d="M470,340 L700,270"/>
+  </g>
+  <g fill="white" stroke="currentColor" stroke-width="1.5">
+    <rect x="30" y="175" width="100" height="50" rx="5"/>
+    <rect x="200" y="65" width="100" height="50" rx="5"/><rect x="200" y="205" width="100" height="50" rx="5"/>
+    <rect x="370" y="65" width="100" height="50" rx="5"/><rect x="370" y="205" width="100" height="50" rx="5"/><rect x="370" y="315" width="100" height="50" rx="5"/>
+    <rect x="540" y="140" width="100" height="50" rx="5"/>
+    <rect x="700" y="235" width="100" height="50" rx="5"/>
+  </g>
+  <g fill="currentColor" font-size="20" font-weight="600" text-anchor="middle">
+    <text x="80" y="207">A · 2</text>
+    <text x="250" y="97">B · 4</text><text x="250" y="237">C · 3</text>
+    <text x="420" y="97">D · 5</text><text x="420" y="237">E · 6</text><text x="420" y="347">F · 2</text>
+    <text x="590" y="172">G · 3</text>
+    <text x="750" y="267">H · 4</text>
+  </g>
+</svg>
+<figcaption>Activity · expected time. Arrows show immediate precedence only.</figcaption>
+</figure>
+
+## Answer · expected times and variances
+
+| Activity | *a* | *m* | *b* | $t_e$ | $\sigma$ | $\sigma^2$ |
+|---|---|---|---|---|---|---|
+| A | 1 | 1 | 7 | 2 | 1 | 1 |
+| B | 1 | 4 | 7 | 4 | 1 | 1 |
+| C | 2 | 2 | 8 | 3 | 1 | 1 |
+| D | 2 | 2 | 20 | 5 | 3 | 9 |
+| E | 1 | 4 | 19 | 6 | 3 | 9 |
+| F | 1 | 1 | 7 | 2 | 1 | 1 |
+| G | 2 | 2 | 8 | 3 | 1 | 1 |
+| H | 2 | 2 | 14 | 4 | 2 | 4 |
+
+The pessimistic tails are long, so every $t_e$ sits above its $m$. The passes run on the $t_e$ column.
+
+## Answer · forward pass
+
+| Activity | Predecessor EFs | ES | D | EF |
+|---|---|---|---|---|
+| A | start | 0 | 2 | 2 |
+| B | A = 2 | 2 | 4 | 6 |
+| C | A = 2 | 2 | 3 | 5 |
+| D | B = 6 | 6 | 5 | 11 |
+| E | C = 5 | 5 | 6 | 11 |
+| F | C = 5 | 5 | 2 | 7 |
+| G | D = 11, E = 11 | **11** | 3 | 14 |
+| H | F = 7, G = 14 | **14** | 4 | 18 |
+
+Expected project duration $T_E$ = **18 days**.
+
+## Answer · backward pass and slack
+
+| Activity | ES | EF | LS | LF | TS | FS |
+|---|---|---|---|---|---|---|
+| A | 0 | 2 | 0 | 2 | 0 | 0 |
+| B | 2 | 6 | 2 | 6 | 0 | 0 |
+| C | 2 | 5 | 2 | 5 | 0 | 0 |
+| D | 6 | 11 | 6 | 11 | 0 | 0 |
+| E | 5 | 11 | 5 | 11 | 0 | 0 |
+| F | 5 | 7 | 12 | 14 | **7** | **7** |
+| G | 11 | 14 | 11 | 14 | 0 | 0 |
+| H | 14 | 18 | 14 | 18 | 0 | 0 |
+
+C's LF = min(LS E = 5, LS F = 12) = 5. A's LF = min(2, 2) = 2.
+
+## Two critical paths
+
+| Path | Length |
+|---|---|
+| A – B – D – G – H | **18** |
+| A – C – E – G – H | **18** |
+| A – C – F – H | 11 |
+
+D and E both finish on day 11. Both branches are critical.
+
+- Shorten D by two days: the project is still 18. E controls.
+- Shorten D *and* E by two days each: 16.
+- Compression must shorten **every** controlling path, and the result must be recalculated each time.
+
+On Thursday the network has one critical path. The tie here is the lesson, not the format.
+
+## Answer · how likely is day 22?
+
+Both critical paths carry the same variance: $1 + 1 + 9 + 1 + 4 = 16$, so $\sigma_{T_E} = 4$.
+
+| Question | Working | Result |
+|---|---|---|
+| Finish by day 22 | $Z = (22 - 18)/4 = 1.00$ | **84%** |
+| Finish by day 18 | $Z = 0$ | 50% |
+| 90 percent confidence | $T_S = 18 + 1.28 \times 4 = 23.1$ | **24 days** |
+
+Variances were added along **one** path, not across the whole network (that sum would be 27).
+
+Because two paths tie, the project must wait for *both* at G. The single-path formula ignores that and is optimistic; a simulation would put the chance of finishing by day 22 below 84 percent.
+
+## Practice D · multiple choice
+
+B has 5 days of total slack and 0 days of free slack. Its only successor, D, has 5 days of total slack and 5 of free slack. Which statement is correct?
+
+(a) B can be delayed five days without affecting any other activity\
+(b) B and D each have an independent five-day reserve, ten days in total\
+(c) Delaying B by three days delays D's early start by three days and leaves two days of slack on the branch\
+(d) D is critical because its free slack equals its total slack
+
+## Answer
+
+**(c).** Total slack belongs to the path. B's zero free slack says D starts the moment B finishes, so any delay to B moves D. The branch has one five-day allowance, shared; giving each activity its own counts it twice.
+
+The exam asks for free slack on two activities and then poses a "what if D slips" question. Work it as a new forward pass from the changed activity.
+
+# Chapter 5 · Estimating project times and costs
+
+::: {.aside}
+Week 5 notes, LO 5-1 to LO 5-8 and Appendix 5.1
+:::
+
+## What the estimate handed to the schedule
+
+- A **duration** for each work package, under **stated normal conditions**, estimated independently of its neighbours.
+- **Effort and duration kept apart**: 40 labour-hours is not 5 days, and two people do not make it 2.5.
+- **Contingency held visibly**, so the schedule's reserve is one number the project manager can see and govern.
+
+## Carry these
+
+- **Range · accuracy · precision · confidence** are four different claims. 17.4 days is precise. "10–15 days" and the task took 9: inaccurate.
+- **Seven guidelines**: responsibility near the work; several estimators; normal conditions; consistent units; packages estimated independently; contingency visible; risk assessed before commitment.
+- **Top-down** fits strategy, high uncertainty, unstable scope, small internal work. **Bottom-up** fits fixed price, critical commitments, detail the customer requires.
+
+## Carry these, continued
+
+- **Direct cost** · **direct project overhead** · **G&A overhead**. Committed cost shows the future before actual cost does.
+- **Reference class forecasting** shifts the burden of proof: the advocates must say why this project will beat the base rate.
+- **White elephant**: would we spend the *remaining* money for the *remaining* benefit? Sunk cost explains the past; it does not buy the next dollar.
+
+## Practice F · multiple choice
+
+Which statement is about **precision** rather than accuracy, range or confidence?
+
+(a) "The job will take 10 to 15 days."\
+(b) "The job will take 12.5 days."\
+(c) "The job took 11 days, inside the 10-to-15 estimate."\
+(d) "There is a 90 percent chance the job finishes by Friday."
+
+## Answer
+
+**(b).** A point value to one decimal is a precise statement and says nothing about whether it is right. (a) is a range, (c) is an accuracy judgement made after the fact, (d) is a confidence claim.
+
+The exam's version of this question turns on accuracy: an estimate is judged against the range it stated, and finishing early *outside* the range is still inaccurate.
+
+## Practice G · short answer
+
+> Early in a project the actual-cost line sits comfortably under the scheduled budget. Why can **committed cost** be the more informative number at that point?
+
+Full credit: committed cost counts what the project has **obligated** through contracts and purchase orders before any invoice arrives; it therefore **rises before actual cost** and shows future spending now; a project can look under budget on actuals while signed contracts have already **consumed the remaining authorization**. Mention that all three lines meet at the same total.
+
+# Chapter 4 · Defining the project
+
+::: {.aside}
+Week 4 notes, LO 4-1 to LO 4-8
+:::
+
+## What definition handed to estimating
+
+- **Work packages** that answer five questions: what, how long, what cost, what resources, who owns it. Decomposition stops there.
+- **WBS codes** so that estimates, budgets and actuals aggregate at any level.
+- **Cost accounts**: a work package joined to the organization unit accountable for it.
+- A **priority matrix** so the estimator knows what the project will protect when the numbers collide.
+
+## Carry these
+
+- The **scope checklist**: objective, product description, justification, deliverables, milestones, technical requirements, limits and exclusions, acceptance criteria.
+- **Deliverable** is an output; **milestone** is a control point with no duration; **technical requirement** constrains performance; **acceptance criterion** is the evidence for yes; **exclusion** stops assumed work entering by silence.
+- **Scope creep** is a change whose consequences were not deliberately accepted. **Gold plating** is the team's own creep.
+- **Constrain · enhance · accept**. Marking everything "constrain" is a refusal to set priorities.
+
+## Carry these, continued
+
+- **WBS tests**: coverage (children add to the parent) and manageability (stop when it can be estimated and owned).
+- **PBS** when phases organize the work. **Responsibility matrix** needs exactly one R per row.
+- **Communication plan** ends with "who provides it." Power × interest sets the intensity.
+
+## Practice I · classify
+
+Put each statement in one box: deliverable · milestone · technical requirement · acceptance criterion · limit/exclusion.
+
+1. "The registration system handles 500 concurrent users with page loads under two seconds."
+2. "Registration opened: 1 September."
+3. "The sponsor signs off when 450 paid registrations are on file and the venue inspection has passed."
+4. "An approved, signed venue contract."
+5. "Hotel bookings for attendees are not part of this project."
+
+## Answer
+
+| Statement | Category |
+|---|---|
+| 500 users, under two seconds | technical requirement |
+| Registration opened, 1 September | milestone |
+| Sponsor signs off when 450 paid and inspection passed | acceptance criterion |
+| Signed venue contract | deliverable |
+| Hotel bookings not included | limit/exclusion |
+
+The exam's version is a single multiple-choice item. The trap is calling a milestone a deliverable: the milestone has **no duration** and produces nothing by itself.
+
+## Practice J · multiple choice
+
+The sponsor marks time, cost **and** performance all as *constrain* on the priority matrix. The best description of what has happened is:
+
+(a) The project now has three protected objectives and no risk\
+(b) The sponsor has refused to set priorities, so the project manager will improvise the ranking the first time pressure appears\
+(c) Quality has been moved to the centre of the triangle\
+(d) The project is a compliance project
+
+## Answer
+
+**(b).** The labels are comparative. If nothing may move, the first trade-off is decided by whoever is in the room at the time, which is the situation the matrix exists to prevent.
+
+# Chapter 3 · Organization: structure and culture
+
+::: {.aside}
+Week 3 notes, LO 3-1 to LO 3-7
+:::
+
+## What structure handed to definition
+
+- Someone who can **own** a work package: the OBS is only real if the unit on it has the authority and the budget.
+- The project manager's **authority over the people** who will execute the plan. Weak matrix: influence. Strong matrix or dedicated team: direction.
+- A **culture** that either supplies cooperation across units for free, or does not.
+
+## Carry these
+
+| Structure | One advantage | One disadvantage |
+|---|---|---|
+| **Functional** | no change, deep expertise, easy transition | no focus, no owner, slow, poor integration |
+| **Dedicated team** | fast, cohesive, integrated | expensive, projectitis, limited depth, hard transition |
+| **Matrix** | efficient sharing, strong focus, flexible | two bosses, infighting, stress, slow decisions |
+
+Each column is the same fact seen from two directions: what makes a structure cheap is what leaves the project without an owner.
+
+## Carry these, continued
+
+- **Weak · balanced · strong** matrix: coordinator with influence; *what* vs *how*; project manager controls assignments and trade-offs.
+- **PMO** facilitates and enables; it does not do the project's scheduling, planning and budgeting.
+- **Seven factors** raise the autonomy needed. Factor 7, stable resource requirements, is the one that argues the other way.
+- **Ten cultural dimensions**; three want the middle: control, management focus, means-ends.
+- **Structure and culture are substitutes.** Read the culture *before* choosing the structure.
+
+## Practice K · multiple choice
+
+Under which condition is a **strong matrix** preferable to a **dedicated project team**?
+
+(a) The project is large, novel, and strategically critical, and the organization's culture is hostile to cross-unit work\
+(b) Scarce specialists must be shared across several projects, and the organization wants the "feel" of a project team without carving the specialists out of their functions\
+(c) The project will run for ten years with the same staff\
+(d) The organization has no PMO
+
+## Answer
+
+**(b).** The strong matrix is the chapter's attempt to create the feel of a project team inside the functional hierarchy: the project manager directs the work, the specialists keep their functional home, and the organization keeps sharing them. Condition (a) is the case for a dedicated team, because that culture will not supply what the matrix needs.
+
+## Practice L · short answer
+
+> Why should a project manager read the organization's culture before choosing a project structure?
+
+Full credit: culture determines whether cross-unit requests are **normal or presumptuous**; a supportive culture supplies focus, integration and trade-off authority at no cost, so a light structure works; an unsupportive one withholds them, so the project must be **separated out** and given its own authority; a mismatch is **information about how much structural protection** the project needs, not an obstacle.
+
+# Chapter 2 · Organization strategy and project selection
+
+::: {.aside}
+Week 2 notes, LO 2-1 to LO 2-9
+:::
+
+## What selection handed to structure
+
+- A **classified** project: compliance, operational, or strategic, with its share of the portfolio decided before ranking.
+- A **gate 4 implementation plan** that was judged twice, the second time with real numbers.
+- A **published priority**, so that the structure it lands in knows how hard to fight for its people.
+
+## Carry these
+
+- **Four activities** of strategic management: mission → strategies → objectives → projects. Only the fourth is visible to a customer.
+- **SMART**; *assignable* is the one that gets dropped.
+- **Six symptoms** of a missing priority system; "resources are not adequate" is the trap.
+- **Optimism bias** flatters the estimate; **uniqueness bias** explains away the base rate.
+- **Phase gates**: go · kill · recycle. Gate 5 is the one organizations skip.
+- **Payback** is blind to time value and to everything after the cutoff. **NPV** counts every flow at present value.
+- **Must** objectives screen; **want** objectives are weighted. The weights relocate judgement; they do not remove it.
+- **Portfolio matrix**: bread and butter · pearl · oyster · white elephant. Balance, not ranking.
+
+## Practice M · short answer
+
+> Two projects cost the same. Payback prefers Y; net present value prefers X. Both calculations are correct. Explain how that can be, and say when a firm would be right to choose Y anyway.
+
+Full credit: payback measures **how long the money is exposed** and ignores the time value of money and **everything after the cutoff**; NPV discounts every flow and counts the later cash that Y stops producing; a firm **short of cash** may rightly prefer Y, but it cannot choose Y *believing* Y is the more valuable project.
+
+## Practice N · multiple choice
+
+A priority team ranks four proposals with a weighted scoring model. The totals fall within fifteen points of each other, and one member shows that moving a single weight by ten points reverses the order. What should the team conclude?
+
+(a) The model has failed and the proposals should be ranked on NPV alone\
+(b) The original weights stand, because they were published before scoring\
+(c) The judgement has been relocated into the weights, where it is visible and arguable; this ranking has not separated its candidates, so the argument should move to the criteria\
+(d) The proposals should be reclassified as must objectives
+
+## Answer
+
+**(c).** A total weighted score is not an objective fact. The gain of the model is that the argument now happens over the criteria, in writing, rather than over the projects. A ranking that flips under a plausible change in weights is telling the team that the proposals are not yet distinguishable on the stated criteria.
+
+## Practice O · multiple choice
+
+A product that was a pearl three years ago now aims at a market that has since saturated, and it keeps its budget because of the reputation it earned earlier. In the portfolio matrix it is now a
+
+(a) bread-and-butter project\
+(b) oyster\
+(c) white elephant\
+(d) compliance project
+
+## Answer
+
+**(c).** Nobody funds a white elephant on purpose. It is a pearl or an oyster that stopped being viable while nobody was looking. Nothing in its own status report says *this quadrant has changed*, which is the argument for reviewing the portfolio rather than the project.
+
+Chapter 5 asks the same question from inside the project: would we spend the *remaining* money for the *remaining* benefit? Sunk cost explains how we got here. It does not buy the next dollar.
+
+# Chapter 1 · Modern project management
+
+::: {.aside}
+Week 1 notes, LO 1-1 to LO 1-5
+:::
+
+## What chapter 1 handed to everything
+
+- A **project**: a temporary endeavour undertaken to create a unique product, service or result.
+- **Five characteristics**: an objective; a defined lifespan; several departments and professionals; something not done before; specific time, cost and performance requirements.
+- The **triple constraint**, which every later chapter trades across.
+- The **life cycle**: defining · planning · executing · closing. Effort peaks in executing; the chapters you were examined on live in defining and planning.
+- **Plan-driven vs agile**: predictability of scope and technology decides. Hybrid blends them. Agile suits small teams, four to eight.
+- **Technical and sociocultural** dimensions. Strength in one does not cover weakness in the other.
+
+## Carry these
+
+- Project vs operations: *writing* the piano piece, not *practising scales*.
+- Program: related projects under a common goal; the difference is scale and time span.
+- Closing has three jobs: deliver, redeploy, review (lessons learned).
+- Drivers of demand: compressed product life cycles, the knowledge explosion, the triple bottom line, the multiproject environment. Small projects carry hidden costs the accounting system never sees.
+- The WBS is a database, not a diagram. That claim was made in Week 1 and cashed in Week 4.
+
+## Practice P · multiple choice
+
+A refinery runs a maintenance shutdown every spring: same crews, same checklist, a fixed window, a fixed budget. Which of the five characteristics does it most clearly **fail**, and is it still a project?
+
+(a) A defined lifespan; no, it is operations\
+(b) Something never done before; yes, uniqueness is a matter of degree and the time, cost and performance requirements are specific\
+(c) Specific requirements; no, because the budget is fixed\
+(d) Several departments; yes, because only one crew is involved
+
+## Answer
+
+**(b).** The fourth characteristic is "not an either/or issue but a matter of degree." Each shutdown is customised to what the inspection finds, and it carries exactly the accountability the triple constraint describes. The weakest characteristic does not disqualify the project; the pattern of the five does.
+
+# The chain, argued backwards
+
+## When one link is missing, this is what you see at the top
+
+| Missing link | What the risk register looks like |
+|---|---|
+| No scope statement (Ch 4) | every change is a surprise; no baseline for change control |
+| Padded estimates (Ch 5) | contingency cannot be sized; reserves are spent whether or not the risk fires |
+| Missing dependency (Ch 6) | a buffer placed at the wrong merge; the real critical path unknown |
+| Weak-matrix authority in a hostile culture (Ch 3) | triggers fire and the owner cannot act |
+| Project selected on payback alone (Ch 2) | a white elephant with a perfect register |
+| Operations mistaken for a project (Ch 1) | a risk plan for work that needed a procedure |
+
+The exam's Part B questions each sit on one of these rows.
+
+## The formula sheet you will be given
+
+$$EF=ES+D \quad ES_{\text{merge}}=\max(EF) \quad LS=LF-D \quad LF_{\text{burst}}=\min(LS)$$
+
+$$TS=LS-ES=LF-EF \qquad FS=\min(ES_{\text{successors}})-EF$$
+
+$$t_e=\frac{a+4m+b}{6} \quad \sigma_{t_e}=\frac{b-a}{6} \quad \sigma_{T_E}=\sqrt{\textstyle\sum\sigma^2_{t_e}} \quad Z=\frac{T_S-T_E}{\sigma_{T_E}}$$
+
+Plus a seven-entry normal table. Part C is one problem: three-point estimates, the network, both passes, slack, then $\sigma_{T_E}$ and a probability. Practise **reading** these formulas, not memorising them.
+
+## How to prepare between now and Thursday
+
+1. Redo every practice question in this deck cold, without the answer slide.
+2. Do one combined problem **by hand with your calculator**: expected times, both passes, slack, then the probability of a date. Time yourself: twenty-five minutes.
+3. Work the "Check your understanding" and review-question lists at the end of each week's notes. Part B is drawn from the same ground.
+4. For each chapter, write the one sentence that says what it handed to the next. If you can argue the chain backwards, you can answer anything in Part B.
+
+## Thursday
+
+- **15 October, in class, 65 minutes.**
+- Bring a pen and a **non-programmable calculator**. Nothing else is permitted on the desk.
+- Closed book, closed notes, no phones, no watches that talk.
+- Twenty multiple-choice, five short answers, one critical-path-and-PERT problem. Formulas and a normal table on the paper.
+- Pace: 20 · 15 · 25, and five minutes to check that every Part A question has exactly one circle.

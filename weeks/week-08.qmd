@@ -10,7 +10,7 @@ session-b: "Midterm examination"
 video:
   provider: none
   id: ""
-slides: false
+slides: true
 lab: true
 ---
 
@@ -26,3 +26,13 @@ lab: true
 :::
 
 <!-- VIDEO -->
+
+## Tuesday · The chain, argued backwards
+
+A review of Chapters 1–7 taken in reverse: what each chapter had to hand to the next, what to carry into Thursday, and one practice question per chapter in the examination's own format. The only numbers in it are one critical-path-and-PERT problem, which is the shape of the exam's Part C.
+
+[Open the review slides →](../slides/week-08.qmd)
+
+## Thursday · Midterm examination
+
+In class, 65 minutes, closed book and closed notes. Bring a pen and a non-programmable calculator. Every formula you need, and a short normal table, is printed on the paper.

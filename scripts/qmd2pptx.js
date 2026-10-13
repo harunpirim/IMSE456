@@ -10,6 +10,7 @@
  *   npm install pptxgenjs          # once
  *   node scripts/qmd2pptx.js 1     # writes _pptx/week-01.pptx
  *   node scripts/qmd2pptx.js --all
+ *   node scripts/qmd2pptx.js private/midterm/review-lecture.qmd   # any path ending in .qmd
  *
  * Understood from the source: `#` section divider, `##` slide, `-`/`1.` lists,
  * `>` quote, pipe tables, ::: {.aside} callouts, and **bold** / *italic* /
@@ -413,7 +414,11 @@ const args = process.argv.slice(2);
 const srcs = args.includes("--all")
   ? fs.readdirSync(path.join(root, "slides")).filter((f) => f.endsWith(".qmd")).sort()
       .map((f) => path.join(root, "slides", f))
-  : args.map((a) => path.join(root, "slides", `week-${String(a).padStart(2, "0")}.qmd`));
+  : args.map((a) =>
+      // A bare number is a week under slides/; a path ending in .qmd (for a
+      // private deck, say) is used as given. Output always lands in _pptx/.
+      /\.qmd$/.test(a) ? path.resolve(a)
+        : path.join(root, "slides", `week-${String(a).padStart(2, "0")}.qmd`));
 
 if (!srcs.length) {
   console.error("usage: node scripts/qmd2pptx.js <week-number>... | --all");
