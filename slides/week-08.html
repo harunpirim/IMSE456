@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.43">
+
+  <meta name="author" content="Harun Pirim">
+  <meta name="dcterms.date" content="2026-10-13">
+  <title>IMSE 456/656 – Week 8 · The chain, argued backwards</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bc515f276a0ec74e345b33f60fe37fd6.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 8 · The chain, argued backwards</h1>
+  <p class="subtitle">Midterm review · Chapters 1–7 · IMSE 456/656</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Harun Pirim 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-10-13</p>
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<blockquote>
+<p>A true understanding of project management comes not from knowing what a scope statement is, or the critical path, or partnering with contractors, but from comprehending how the different elements of the project management system interact.</p>
+<p>— Larson &amp; Gray, Ch. 1</p>
+</blockquote>
+</section>
+<section id="thursdays-examination" class="slide level2">
+<h2>Thursday’s examination</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Part</th>
+<th>Content</th>
+<th>Points</th>
+<th>Minutes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>20 multiple-choice questions</td>
+<td>40</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>5 short conceptual questions, 2–4 sentences each</td>
+<td>30</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>1 numerical problem: critical path and PERT together</td>
+<td>30</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+<td><strong>65</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Closed book, closed notes. Non-programmable calculator. Every formula you need is printed on the paper, with a short normal table. AI is prohibited (Level 1).</p>
+</section>
+<section id="how-today-runs" class="slide level2">
+<h2>How today runs</h2>
+<p>Seven chapters, taken <strong>backwards</strong>: from the risk register to the definition of a project.</p>
+<p>For each one:</p>
+<ul>
+<li>what it had to hand to the next link;</li>
+<li>the three or four things to carry into Thursday;</li>
+<li>one question in the exam’s own format. Work it before the answer appears.</li>
+</ul>
+<p>The questions today are <strong>similar</strong> to Thursday’s. They are not Thursday’s.</p>
+</section>
+<section id="the-chain" class="slide level2">
+<h2>The chain</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Link</th>
+<th>Needs from the link before it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Ch 7</strong> Risk register, reserves, PERT</td>
+<td>durations, paths and merges from the schedule</td>
+</tr>
+<tr class="even">
+<td><strong>Ch 6</strong> Network, critical path, slack</td>
+<td>durations under stated conditions from the estimate</td>
+</tr>
+<tr class="odd">
+<td><strong>Ch 5</strong> Estimates: time, cost, range</td>
+<td>work packages that can be estimated and owned</td>
+</tr>
+<tr class="even">
+<td><strong>Ch 4</strong> Scope, WBS, OBS, priorities</td>
+<td>an organization with someone able to own a package</td>
+</tr>
+<tr class="odd">
+<td><strong>Ch 3</strong> Structure and culture</td>
+<td>a project that was selected and funded</td>
+</tr>
+<tr class="even">
+<td><strong>Ch 2</strong> Strategy and selection</td>
+<td>a definition of what counts as a project</td>
+</tr>
+<tr class="odd">
+<td><strong>Ch 1</strong> What a project is</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Break any link and the ones above it still produce numbers. The numbers mean less.</p>
+</section>
+<section>
+<section id="chapter-7-managing-risk" class="title-slide slide level1 center">
+<h1>Chapter 7 · Managing risk</h1>
+
+<aside><div>
+<p>Week 7 notes, LO 7-1 to LO 7-9 and Appendix 7.1</p>
+</div></aside></section>
+<section id="what-the-risk-register-needed-from-the-links-before-it" class="slide level2">
+<h2>What the risk register needed from the links before it</h2>
+<ul>
+<li>From <strong>Ch 6</strong>: which activities are critical, where the merges are, how much slack each branch holds. A time buffer goes <em>at the merge</em> and <em>on the near-critical branch</em>.</li>
+<li>From <strong>Ch 5</strong>: estimates with their ranges and risk drivers, and contingency held <strong>visibly</strong>, not padded into tasks.</li>
+<li>From <strong>Ch 4</strong>: a scope statement to measure change against, and a change-control path for the contingency plan that fires.</li>
+</ul>
+</section>
+<section id="carry-these" class="slide level2">
+<h2>Carry these</h2>
+<ul>
+<li><strong>Four steps, one loop</strong>: identify → assess → plan responses → control, with control feeding new risks back.</li>
+<li><strong>Events, not outcomes.</strong> “The conference opens late” is a consequence. “The venue’s legal team signs late” is an event.</li>
+<li><strong>Five threat responses</strong>: mitigate · avoid · transfer · escalate · retain.</li>
+<li><strong>Response vs contingency plan</strong>: a response runs <em>now</em>, inside the baseline; a contingency plan waits for a <em>trigger</em> and is drawn from a <em>reserve</em>.</li>
+<li><strong>Two reserves</strong>: contingency (identified risks, project manager) and management (unidentified risks, senior management).</li>
+<li><strong>PERT</strong>: <span class="math inline">\(t_e=(a+4m+b)/6\)</span>, add <strong>variances</strong> along the critical path, <span class="math inline">\(Z=(T_S-T_E)/\sigma\)</span>.</li>
+</ul>
+</section>
+<section id="the-five-responses-in-one-table" class="slide level2">
+<h2>The five responses, in one table</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Response</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Mitigate</strong></td>
+<td>lowers likelihood or impact</td>
+<td>load-test the registration site a week early</td>
+</tr>
+<tr class="even">
+<td><strong>Avoid</strong></td>
+<td>changes the plan so the event cannot occur</td>
+<td>drop the livestream, record instead</td>
+</tr>
+<tr class="odd">
+<td><strong>Transfer</strong></td>
+<td>moves the financial consequence, at a price</td>
+<td>cancellation insurance; fixed-price AV contract</td>
+</tr>
+<tr class="even">
+<td><strong>Escalate</strong></td>
+<td>hands it to whoever owns the authority</td>
+<td>a hiring freeze rumour goes to the sponsor’s executive</td>
+</tr>
+<tr class="odd">
+<td><strong>Retain</strong></td>
+<td>accepts it deliberately, in the register</td>
+<td>a once-a-decade storm on the day</td>
+</tr>
+</tbody>
+</table>
+<p>Transfer does not remove the risk. Retention is a decision, not an omission.</p>
+</section>
+<section id="response-contingency-plan-trigger-owner" class="slide level2">
+<h2>Response · contingency plan · trigger · owner</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Response</strong></td>
+<td>Scheduled work with a budget line. Happens whether or not the event does.</td>
+</tr>
+<tr class="even">
+<td><strong>Contingency plan</strong></td>
+<td>Outside the baseline. Runs only <em>if</em>. Paid from a reserve.</td>
+</tr>
+<tr class="odd">
+<td><strong>Trigger</strong></td>
+<td>Observable. “No travel confirmation 21 days out,” not “the speaker seems unreliable.”</td>
+</tr>
+<tr class="even">
+<td><strong>Owner</strong></td>
+<td>One named person who watches the trigger and can act.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="practice-a-multiple-choice" class="slide level2">
+<h2>Practice A · multiple choice</h2>
+<p>Two risks are rated on likelihood, impact and detection difficulty, each 1–5.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Risk</th>
+<th>L</th>
+<th>I</th>
+<th>D</th>
+<th>RPN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R-A Keynote cancels</td>
+<td>2</td>
+<td>5</td>
+<td>2</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>R-B Coffee runs out</td>
+<td>5</td>
+<td>2</td>
+<td>2</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Which statement is correct?</p>
+<ol type="a">
+<li>The two risks deserve the same response budget, because their RPNs are equal<br>
+</li>
+<li>R-B should be handled first, because it is more likely<br>
+</li>
+<li>The RPN organizes the discussion but does not make the decision; most organizations weigh impact above likelihood, so R-A is the major risk<br>
+</li>
+<li>R-A should be retained, because it is unlikely</li>
+</ol>
+</section>
+<section id="answer" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(c).</strong> Multiplication cannot tell 2 × 5 × 2 from 5 × 2 × 2. The severity matrix is deliberately asymmetric: the major zone runs further down the high-impact column than along the high-likelihood row. A one-in-ten chance of losing the keynote outranks a near-certain catering annoyance.</p>
+<p>The exam will ask you to <em>read</em> a number like this, not only to compute it.</p>
+</section>
+<section id="the-three-pert-errors-that-cost-marks" class="slide level2">
+<h2>The three PERT errors that cost marks</h2>
+<p>The exam’s one numerical problem runs PERT on top of the critical path. You will do the same in the Chapter 6 practice. First, the errors.</p>
+<ol type="1">
+<li>Adding standard deviations instead of variances. (1 + 2 + 2 = 5, not 3.)</li>
+<li>Summing every activity in the network instead of the activities on the critical path.</li>
+<li>Running the passes on <em>m</em> instead of <span class="math inline">\(t_e\)</span>. The pessimistic tail is usually longer, so <span class="math inline">\(t_e &gt; m\)</span> and the project is longer than the most-likely plan.</li>
+</ol>
+<p>And one for interpretation: the single-path probability is <strong>optimistic</strong>. A shorter path with a larger variance can become the longer one at a merge.</p>
+</section>
+<section id="practice-c-short-answer" class="slide level2">
+<h2>Practice C · short answer</h2>
+<blockquote>
+<p>The register lists “attendance is low.” Rewrite it as a risk event with a cause and an effect, and give it a trigger.</p>
+</blockquote>
+<p>A full-credit answer has three parts:</p>
+<ul>
+<li>says why the entry is an outcome (it suggests no action);</li>
+<li>a sentence of the form <em>because</em> <strong><em>, </em></strong> <em>may happen</em>, <em>which would</em> ___;</li>
+<li>an observable trigger: “fewer than 120 registrations by 1 October,” not “if numbers look weak.”</li>
+</ul>
+</section></section>
+<section>
+<section id="chapter-6-developing-a-project-schedule" class="title-slide slide level1 center">
+<h1>Chapter 6 · Developing a project schedule</h1>
+
+<aside><div>
+<p>Week 6 notes, LO 6-1 to LO 6-6</p>
+</div></aside></section>
+<section id="what-the-schedule-handed-to-risk" class="slide level2">
+<h2>What the schedule handed to risk</h2>
+<ul>
+<li>A <strong>critical path</strong>: the activities with no reserve under the current plan.</li>
+<li><strong>Merge activities</strong>: they wait for the last of several predecessors and inherit every delay. That is where a time buffer earns its keep.</li>
+<li><strong>Slack by branch</strong>, so the team knows which near-critical path could become controlling.</li>
+</ul>
+</section>
+<section id="carry-these-1" class="slide level2">
+<h2>Carry these</h2>
+<ul>
+<li><strong>Forward pass</strong>: <span class="math inline">\(EF = ES + D\)</span>; at a merge, <span class="math inline">\(ES = \max\)</span> of predecessor EFs.</li>
+<li><strong>Backward pass</strong>: <span class="math inline">\(LS = LF - D\)</span>; at a burst, <span class="math inline">\(LF = \min\)</span> of successor LSs.</li>
+<li><strong>Total slack</strong> <span class="math inline">\(= LS - ES = LF - EF\)</span>. It belongs to the <strong>path</strong>, not the activity.</li>
+<li><strong>Free slack</strong> <span class="math inline">\(= \min(ES_{\text{successors}}) - EF\)</span>. Usable without moving any successor.</li>
+<li><strong>Critical path</strong> = longest path = project duration. Recalculate after every change.</li>
+<li>Lags: FS + L, SS + L, FF + L are minimum separations. A lag is not hidden work.</li>
+<li>Time runs from zero. EF = 2 means the successor may start at 2.</li>
+</ul>
+</section>
+<section id="practice-b-critical-path-and-pert-together" class="slide level2">
+<h2>Practice B · critical path and PERT together</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th>Predecessor(s)</th>
+<th><em>a</em></th>
+<th><em>m</em></th>
+<th><em>b</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>—</td>
+<td>1</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>A</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>A</td>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>B</td>
+<td>2</td>
+<td>2</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>C</td>
+<td>1</td>
+<td>4</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>C</td>
+<td>1</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>D, E</td>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>F, G</td>
+<td>2</td>
+<td>2</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<p>Times in workdays. Eight minutes; the four tasks are on the next slide.</p>
+</section>
+<section id="practice-b-the-four-tasks" class="slide level2">
+<h2>Practice B · the four tasks</h2>
+<ol type="1">
+<li>Expected time and variance of each activity.</li>
+<li>Draw the network; run both passes on the expected times.</li>
+<li>Total slack, free slack, critical path, <span class="math inline">\(T_E\)</span>.</li>
+<li><span class="math inline">\(\sigma_{T_E}\)</span>, the probability of finishing by day 22, and the <span class="math inline">\(T_S\)</span> that gives 90 percent.</li>
+</ol>
+<p>This is the shape of Thursday’s Part C: one network, three-point estimates, both passes, then a probability.</p>
+</section>
+<section id="the-network" class="slide level2">
+<h2>The network</h2>
+<figure>
+<svg viewbox="0 0 820 400" role="img" aria-labelledby="pn-title" style="width:100%;height:auto;max-height:480px">
+<title id="pn-title">
+Practice activity-on-node network with eight activities
+</title>
+<defs> <marker id="pn-ar" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"> <path d="M0,0 L10,5 L0,10 z" fill="#0F5A4B"></path> </marker> </defs> <g fill="none" stroke="#0F5A4B" stroke-width="1.8" marker-end="url(#pn-ar)"> <path d="M130,200 L200,90"></path><path d="M130,200 L200,230"></path> <path d="M300,90 L370,90"></path><path d="M300,230 L370,230"></path><path d="M300,230 L370,340"></path> <path d="M470,90 L540,160"></path><path d="M470,230 L540,170"></path> <path d="M640,165 L700,250"></path><path d="M470,340 L700,270"></path> </g> <g fill="white" stroke="currentColor" stroke-width="1.5"> <rect x="30" y="175" width="100" height="50" rx="5"></rect> <rect x="200" y="65" width="100" height="50" rx="5"></rect><rect x="200" y="205" width="100" height="50" rx="5"></rect> <rect x="370" y="65" width="100" height="50" rx="5"></rect><rect x="370" y="205" width="100" height="50" rx="5"></rect><rect x="370" y="315" width="100" height="50" rx="5"></rect> <rect x="540" y="140" width="100" height="50" rx="5"></rect> <rect x="700" y="235" width="100" height="50" rx="5"></rect> </g> <g fill="currentColor" font-size="20" font-weight="600" text-anchor="middle"> <text x="80" y="207">A · 2</text> <text x="250" y="97">B · 4</text><text x="250" y="237">C · 3</text> <text x="420" y="97">D · 5</text><text x="420" y="237">E · 6</text><text x="420" y="347">F · 2</text> <text x="590" y="172">G · 3</text> <text x="750" y="267">H · 4</text> </g>
+</svg>
+<figcaption>
+Activity · expected time. Arrows show immediate precedence only.
+</figcaption>
+</figure>
+</section>
+<section id="answer-expected-times-and-variances" class="slide level2">
+<h2>Answer · expected times and variances</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th><em>a</em></th>
+<th><em>m</em></th>
+<th><em>b</em></th>
+<th><span class="math inline">\(t_e\)</span></th>
+<th><span class="math inline">\(\sigma\)</span></th>
+<th><span class="math inline">\(\sigma^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>1</td>
+<td>1</td>
+<td>7</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>2</td>
+<td>2</td>
+<td>20</td>
+<td>5</td>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>1</td>
+<td>4</td>
+<td>19</td>
+<td>6</td>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>1</td>
+<td>1</td>
+<td>7</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>2</td>
+<td>2</td>
+<td>14</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>The pessimistic tails are long, so every <span class="math inline">\(t_e\)</span> sits above its <span class="math inline">\(m\)</span>. The passes run on the <span class="math inline">\(t_e\)</span> column.</p>
+</section>
+<section id="answer-forward-pass" class="slide level2">
+<h2>Answer · forward pass</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th>Predecessor EFs</th>
+<th>ES</th>
+<th>D</th>
+<th>EF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>start</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>A = 2</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>A = 2</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>B = 6</td>
+<td>6</td>
+<td>5</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>C = 5</td>
+<td>5</td>
+<td>6</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>C = 5</td>
+<td>5</td>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>D = 11, E = 11</td>
+<td><strong>11</strong></td>
+<td>3</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>F = 7, G = 14</td>
+<td><strong>14</strong></td>
+<td>4</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<p>Expected project duration <span class="math inline">\(T_E\)</span> = <strong>18 days</strong>.</p>
+</section>
+<section id="answer-backward-pass-and-slack" class="slide level2">
+<h2>Answer · backward pass and slack</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Activity</th>
+<th>ES</th>
+<th>EF</th>
+<th>LS</th>
+<th>LF</th>
+<th>TS</th>
+<th>FS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>2</td>
+<td>5</td>
+<td>2</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>6</td>
+<td>11</td>
+<td>6</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>5</td>
+<td>11</td>
+<td>5</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>5</td>
+<td>7</td>
+<td>12</td>
+<td>14</td>
+<td><strong>7</strong></td>
+<td><strong>7</strong></td>
+</tr>
+<tr class="odd">
+<td>G</td>
+<td>11</td>
+<td>14</td>
+<td>11</td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>14</td>
+<td>18</td>
+<td>14</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>C’s LF = min(LS E = 5, LS F = 12) = 5. A’s LF = min(2, 2) = 2.</p>
+</section>
+<section id="two-critical-paths" class="slide level2">
+<h2>Two critical paths</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A – B – D – G – H</td>
+<td><strong>18</strong></td>
+</tr>
+<tr class="even">
+<td>A – C – E – G – H</td>
+<td><strong>18</strong></td>
+</tr>
+<tr class="odd">
+<td>A – C – F – H</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<p>D and E both finish on day 11. Both branches are critical.</p>
+<ul>
+<li>Shorten D by two days: the project is still 18. E controls.</li>
+<li>Shorten D <em>and</em> E by two days each: 16.</li>
+<li>Compression must shorten <strong>every</strong> controlling path, and the result must be recalculated each time.</li>
+</ul>
+<p>On Thursday the network has one critical path. The tie here is the lesson, not the format.</p>
+</section>
+<section id="answer-how-likely-is-day-22" class="slide level2">
+<h2>Answer · how likely is day 22?</h2>
+<p>Both critical paths carry the same variance: <span class="math inline">\(1 + 1 + 9 + 1 + 4 = 16\)</span>, so <span class="math inline">\(\sigma_{T_E} = 4\)</span>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Working</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Finish by day 22</td>
+<td><span class="math inline">\(Z = (22 - 18)/4 = 1.00\)</span></td>
+<td><strong>84%</strong></td>
+</tr>
+<tr class="even">
+<td>Finish by day 18</td>
+<td><span class="math inline">\(Z = 0\)</span></td>
+<td>50%</td>
+</tr>
+<tr class="odd">
+<td>90 percent confidence</td>
+<td><span class="math inline">\(T_S = 18 + 1.28 \times 4 = 23.1\)</span></td>
+<td><strong>24 days</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Variances were added along <strong>one</strong> path, not across the whole network (that sum would be 27).</p>
+<p>Because two paths tie, the project must wait for <em>both</em> at G. The single-path formula ignores that and is optimistic; a simulation would put the chance of finishing by day 22 below 84 percent.</p>
+</section>
+<section id="practice-d-multiple-choice" class="slide level2">
+<h2>Practice D · multiple choice</h2>
+<p>B has 5 days of total slack and 0 days of free slack. Its only successor, D, has 5 days of total slack and 5 of free slack. Which statement is correct?</p>
+<ol type="a">
+<li>B can be delayed five days without affecting any other activity<br>
+</li>
+<li>B and D each have an independent five-day reserve, ten days in total<br>
+</li>
+<li>Delaying B by three days delays D’s early start by three days and leaves two days of slack on the branch<br>
+</li>
+<li>D is critical because its free slack equals its total slack</li>
+</ol>
+</section>
+<section id="answer-1" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(c).</strong> Total slack belongs to the path. B’s zero free slack says D starts the moment B finishes, so any delay to B moves D. The branch has one five-day allowance, shared; giving each activity its own counts it twice.</p>
+<p>The exam asks for free slack on two activities and then poses a “what if D slips” question. Work it as a new forward pass from the changed activity.</p>
+</section></section>
+<section>
+<section id="chapter-5-estimating-project-times-and-costs" class="title-slide slide level1 center">
+<h1>Chapter 5 · Estimating project times and costs</h1>
+
+<aside><div>
+<p>Week 5 notes, LO 5-1 to LO 5-8 and Appendix 5.1</p>
+</div></aside></section>
+<section id="what-the-estimate-handed-to-the-schedule" class="slide level2">
+<h2>What the estimate handed to the schedule</h2>
+<ul>
+<li>A <strong>duration</strong> for each work package, under <strong>stated normal conditions</strong>, estimated independently of its neighbours.</li>
+<li><strong>Effort and duration kept apart</strong>: 40 labour-hours is not 5 days, and two people do not make it 2.5.</li>
+<li><strong>Contingency held visibly</strong>, so the schedule’s reserve is one number the project manager can see and govern.</li>
+</ul>
+</section>
+<section id="carry-these-2" class="slide level2">
+<h2>Carry these</h2>
+<ul>
+<li><strong>Range · accuracy · precision · confidence</strong> are four different claims. 17.4 days is precise. “10–15 days” and the task took 9: inaccurate.</li>
+<li><strong>Seven guidelines</strong>: responsibility near the work; several estimators; normal conditions; consistent units; packages estimated independently; contingency visible; risk assessed before commitment.</li>
+<li><strong>Top-down</strong> fits strategy, high uncertainty, unstable scope, small internal work. <strong>Bottom-up</strong> fits fixed price, critical commitments, detail the customer requires.</li>
+</ul>
+</section>
+<section id="carry-these-continued" class="slide level2">
+<h2>Carry these, continued</h2>
+<ul>
+<li><strong>Direct cost</strong> · <strong>direct project overhead</strong> · <strong>G&amp;A overhead</strong>. Committed cost shows the future before actual cost does.</li>
+<li><strong>Reference class forecasting</strong> shifts the burden of proof: the advocates must say why this project will beat the base rate.</li>
+<li><strong>White elephant</strong>: would we spend the <em>remaining</em> money for the <em>remaining</em> benefit? Sunk cost explains the past; it does not buy the next dollar.</li>
+</ul>
+</section>
+<section id="practice-f-multiple-choice" class="slide level2">
+<h2>Practice F · multiple choice</h2>
+<p>Which statement is about <strong>precision</strong> rather than accuracy, range or confidence?</p>
+<ol type="a">
+<li>“The job will take 10 to 15 days.”<br>
+</li>
+<li>“The job will take 12.5 days.”<br>
+</li>
+<li>“The job took 11 days, inside the 10-to-15 estimate.”<br>
+</li>
+<li>“There is a 90 percent chance the job finishes by Friday.”</li>
+</ol>
+</section>
+<section id="answer-2" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(b).</strong> A point value to one decimal is a precise statement and says nothing about whether it is right. (a) is a range, (c) is an accuracy judgement made after the fact, (d) is a confidence claim.</p>
+<p>The exam’s version of this question turns on accuracy: an estimate is judged against the range it stated, and finishing early <em>outside</em> the range is still inaccurate.</p>
+</section>
+<section id="practice-g-short-answer" class="slide level2">
+<h2>Practice G · short answer</h2>
+<blockquote>
+<p>Early in a project the actual-cost line sits comfortably under the scheduled budget. Why can <strong>committed cost</strong> be the more informative number at that point?</p>
+</blockquote>
+<p>Full credit: committed cost counts what the project has <strong>obligated</strong> through contracts and purchase orders before any invoice arrives; it therefore <strong>rises before actual cost</strong> and shows future spending now; a project can look under budget on actuals while signed contracts have already <strong>consumed the remaining authorization</strong>. Mention that all three lines meet at the same total.</p>
+</section></section>
+<section>
+<section id="chapter-4-defining-the-project" class="title-slide slide level1 center">
+<h1>Chapter 4 · Defining the project</h1>
+
+<aside><div>
+<p>Week 4 notes, LO 4-1 to LO 4-8</p>
+</div></aside></section>
+<section id="what-definition-handed-to-estimating" class="slide level2">
+<h2>What definition handed to estimating</h2>
+<ul>
+<li><strong>Work packages</strong> that answer five questions: what, how long, what cost, what resources, who owns it. Decomposition stops there.</li>
+<li><strong>WBS codes</strong> so that estimates, budgets and actuals aggregate at any level.</li>
+<li><strong>Cost accounts</strong>: a work package joined to the organization unit accountable for it.</li>
+<li>A <strong>priority matrix</strong> so the estimator knows what the project will protect when the numbers collide.</li>
+</ul>
+</section>
+<section id="carry-these-3" class="slide level2">
+<h2>Carry these</h2>
+<ul>
+<li>The <strong>scope checklist</strong>: objective, product description, justification, deliverables, milestones, technical requirements, limits and exclusions, acceptance criteria.</li>
+<li><strong>Deliverable</strong> is an output; <strong>milestone</strong> is a control point with no duration; <strong>technical requirement</strong> constrains performance; <strong>acceptance criterion</strong> is the evidence for yes; <strong>exclusion</strong> stops assumed work entering by silence.</li>
+<li><strong>Scope creep</strong> is a change whose consequences were not deliberately accepted. <strong>Gold plating</strong> is the team’s own creep.</li>
+<li><strong>Constrain · enhance · accept</strong>. Marking everything “constrain” is a refusal to set priorities.</li>
+</ul>
+</section>
+<section id="carry-these-continued-1" class="slide level2">
+<h2>Carry these, continued</h2>
+<ul>
+<li><strong>WBS tests</strong>: coverage (children add to the parent) and manageability (stop when it can be estimated and owned).</li>
+<li><strong>PBS</strong> when phases organize the work. <strong>Responsibility matrix</strong> needs exactly one R per row.</li>
+<li><strong>Communication plan</strong> ends with “who provides it.” Power × interest sets the intensity.</li>
+</ul>
+</section>
+<section id="practice-i-classify" class="slide level2">
+<h2>Practice I · classify</h2>
+<p>Put each statement in one box: deliverable · milestone · technical requirement · acceptance criterion · limit/exclusion.</p>
+<ol type="1">
+<li>“The registration system handles 500 concurrent users with page loads under two seconds.”</li>
+<li>“Registration opened: 1 September.”</li>
+<li>“The sponsor signs off when 450 paid registrations are on file and the venue inspection has passed.”</li>
+<li>“An approved, signed venue contract.”</li>
+<li>“Hotel bookings for attendees are not part of this project.”</li>
+</ol>
+</section>
+<section id="answer-3" class="slide level2">
+<h2>Answer</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Statement</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>500 users, under two seconds</td>
+<td>technical requirement</td>
+</tr>
+<tr class="even">
+<td>Registration opened, 1 September</td>
+<td>milestone</td>
+</tr>
+<tr class="odd">
+<td>Sponsor signs off when 450 paid and inspection passed</td>
+<td>acceptance criterion</td>
+</tr>
+<tr class="even">
+<td>Signed venue contract</td>
+<td>deliverable</td>
+</tr>
+<tr class="odd">
+<td>Hotel bookings not included</td>
+<td>limit/exclusion</td>
+</tr>
+</tbody>
+</table>
+<p>The exam’s version is a single multiple-choice item. The trap is calling a milestone a deliverable: the milestone has <strong>no duration</strong> and produces nothing by itself.</p>
+</section>
+<section id="practice-j-multiple-choice" class="slide level2">
+<h2>Practice J · multiple choice</h2>
+<p>The sponsor marks time, cost <strong>and</strong> performance all as <em>constrain</em> on the priority matrix. The best description of what has happened is:</p>
+<ol type="a">
+<li>The project now has three protected objectives and no risk<br>
+</li>
+<li>The sponsor has refused to set priorities, so the project manager will improvise the ranking the first time pressure appears<br>
+</li>
+<li>Quality has been moved to the centre of the triangle<br>
+</li>
+<li>The project is a compliance project</li>
+</ol>
+</section>
+<section id="answer-4" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(b).</strong> The labels are comparative. If nothing may move, the first trade-off is decided by whoever is in the room at the time, which is the situation the matrix exists to prevent.</p>
+</section></section>
+<section>
+<section id="chapter-3-organization-structure-and-culture" class="title-slide slide level1 center">
+<h1>Chapter 3 · Organization: structure and culture</h1>
+
+<aside><div>
+<p>Week 3 notes, LO 3-1 to LO 3-7</p>
+</div></aside></section>
+<section id="what-structure-handed-to-definition" class="slide level2">
+<h2>What structure handed to definition</h2>
+<ul>
+<li>Someone who can <strong>own</strong> a work package: the OBS is only real if the unit on it has the authority and the budget.</li>
+<li>The project manager’s <strong>authority over the people</strong> who will execute the plan. Weak matrix: influence. Strong matrix or dedicated team: direction.</li>
+<li>A <strong>culture</strong> that either supplies cooperation across units for free, or does not.</li>
+</ul>
+</section>
+<section id="carry-these-4" class="slide level2">
+<h2>Carry these</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Structure</th>
+<th>One advantage</th>
+<th>One disadvantage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Functional</strong></td>
+<td>no change, deep expertise, easy transition</td>
+<td>no focus, no owner, slow, poor integration</td>
+</tr>
+<tr class="even">
+<td><strong>Dedicated team</strong></td>
+<td>fast, cohesive, integrated</td>
+<td>expensive, projectitis, limited depth, hard transition</td>
+</tr>
+<tr class="odd">
+<td><strong>Matrix</strong></td>
+<td>efficient sharing, strong focus, flexible</td>
+<td>two bosses, infighting, stress, slow decisions</td>
+</tr>
+</tbody>
+</table>
+<p>Each column is the same fact seen from two directions: what makes a structure cheap is what leaves the project without an owner.</p>
+</section>
+<section id="carry-these-continued-2" class="slide level2">
+<h2>Carry these, continued</h2>
+<ul>
+<li><strong>Weak · balanced · strong</strong> matrix: coordinator with influence; <em>what</em> vs <em>how</em>; project manager controls assignments and trade-offs.</li>
+<li><strong>PMO</strong> facilitates and enables; it does not do the project’s scheduling, planning and budgeting.</li>
+<li><strong>Seven factors</strong> raise the autonomy needed. Factor 7, stable resource requirements, is the one that argues the other way.</li>
+<li><strong>Ten cultural dimensions</strong>; three want the middle: control, management focus, means-ends.</li>
+<li><strong>Structure and culture are substitutes.</strong> Read the culture <em>before</em> choosing the structure.</li>
+</ul>
+</section>
+<section id="practice-k-multiple-choice" class="slide level2">
+<h2>Practice K · multiple choice</h2>
+<p>Under which condition is a <strong>strong matrix</strong> preferable to a <strong>dedicated project team</strong>?</p>
+<ol type="a">
+<li>The project is large, novel, and strategically critical, and the organization’s culture is hostile to cross-unit work<br>
+</li>
+<li>Scarce specialists must be shared across several projects, and the organization wants the “feel” of a project team without carving the specialists out of their functions<br>
+</li>
+<li>The project will run for ten years with the same staff<br>
+</li>
+<li>The organization has no PMO</li>
+</ol>
+</section>
+<section id="answer-5" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(b).</strong> The strong matrix is the chapter’s attempt to create the feel of a project team inside the functional hierarchy: the project manager directs the work, the specialists keep their functional home, and the organization keeps sharing them. Condition (a) is the case for a dedicated team, because that culture will not supply what the matrix needs.</p>
+</section>
+<section id="practice-l-short-answer" class="slide level2">
+<h2>Practice L · short answer</h2>
+<blockquote>
+<p>Why should a project manager read the organization’s culture before choosing a project structure?</p>
+</blockquote>
+<p>Full credit: culture determines whether cross-unit requests are <strong>normal or presumptuous</strong>; a supportive culture supplies focus, integration and trade-off authority at no cost, so a light structure works; an unsupportive one withholds them, so the project must be <strong>separated out</strong> and given its own authority; a mismatch is <strong>information about how much structural protection</strong> the project needs, not an obstacle.</p>
+</section></section>
+<section>
+<section id="chapter-2-organization-strategy-and-project-selection" class="title-slide slide level1 center">
+<h1>Chapter 2 · Organization strategy and project selection</h1>
+
+<aside><div>
+<p>Week 2 notes, LO 2-1 to LO 2-9</p>
+</div></aside></section>
+<section id="what-selection-handed-to-structure" class="slide level2">
+<h2>What selection handed to structure</h2>
+<ul>
+<li>A <strong>classified</strong> project: compliance, operational, or strategic, with its share of the portfolio decided before ranking.</li>
+<li>A <strong>gate 4 implementation plan</strong> that was judged twice, the second time with real numbers.</li>
+<li>A <strong>published priority</strong>, so that the structure it lands in knows how hard to fight for its people.</li>
+</ul>
+</section>
+<section id="carry-these-5" class="slide level2">
+<h2>Carry these</h2>
+<ul>
+<li><strong>Four activities</strong> of strategic management: mission → strategies → objectives → projects. Only the fourth is visible to a customer.</li>
+<li><strong>SMART</strong>; <em>assignable</em> is the one that gets dropped.</li>
+<li><strong>Six symptoms</strong> of a missing priority system; “resources are not adequate” is the trap.</li>
+<li><strong>Optimism bias</strong> flatters the estimate; <strong>uniqueness bias</strong> explains away the base rate.</li>
+<li><strong>Phase gates</strong>: go · kill · recycle. Gate 5 is the one organizations skip.</li>
+<li><strong>Payback</strong> is blind to time value and to everything after the cutoff. <strong>NPV</strong> counts every flow at present value.</li>
+<li><strong>Must</strong> objectives screen; <strong>want</strong> objectives are weighted. The weights relocate judgement; they do not remove it.</li>
+<li><strong>Portfolio matrix</strong>: bread and butter · pearl · oyster · white elephant. Balance, not ranking.</li>
+</ul>
+</section>
+<section id="practice-m-short-answer" class="slide level2">
+<h2>Practice M · short answer</h2>
+<blockquote>
+<p>Two projects cost the same. Payback prefers Y; net present value prefers X. Both calculations are correct. Explain how that can be, and say when a firm would be right to choose Y anyway.</p>
+</blockquote>
+<p>Full credit: payback measures <strong>how long the money is exposed</strong> and ignores the time value of money and <strong>everything after the cutoff</strong>; NPV discounts every flow and counts the later cash that Y stops producing; a firm <strong>short of cash</strong> may rightly prefer Y, but it cannot choose Y <em>believing</em> Y is the more valuable project.</p>
+</section>
+<section id="practice-n-multiple-choice" class="slide level2">
+<h2>Practice N · multiple choice</h2>
+<p>A priority team ranks four proposals with a weighted scoring model. The totals fall within fifteen points of each other, and one member shows that moving a single weight by ten points reverses the order. What should the team conclude?</p>
+<ol type="a">
+<li>The model has failed and the proposals should be ranked on NPV alone<br>
+</li>
+<li>The original weights stand, because they were published before scoring<br>
+</li>
+<li>The judgement has been relocated into the weights, where it is visible and arguable; this ranking has not separated its candidates, so the argument should move to the criteria<br>
+</li>
+<li>The proposals should be reclassified as must objectives</li>
+</ol>
+</section>
+<section id="answer-6" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(c).</strong> A total weighted score is not an objective fact. The gain of the model is that the argument now happens over the criteria, in writing, rather than over the projects. A ranking that flips under a plausible change in weights is telling the team that the proposals are not yet distinguishable on the stated criteria.</p>
+</section>
+<section id="practice-o-multiple-choice" class="slide level2">
+<h2>Practice O · multiple choice</h2>
+<p>A product that was a pearl three years ago now aims at a market that has since saturated, and it keeps its budget because of the reputation it earned earlier. In the portfolio matrix it is now a</p>
+<ol type="a">
+<li>bread-and-butter project<br>
+</li>
+<li>oyster<br>
+</li>
+<li>white elephant<br>
+</li>
+<li>compliance project</li>
+</ol>
+</section>
+<section id="answer-7" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(c).</strong> Nobody funds a white elephant on purpose. It is a pearl or an oyster that stopped being viable while nobody was looking. Nothing in its own status report says <em>this quadrant has changed</em>, which is the argument for reviewing the portfolio rather than the project.</p>
+<p>Chapter 5 asks the same question from inside the project: would we spend the <em>remaining</em> money for the <em>remaining</em> benefit? Sunk cost explains how we got here. It does not buy the next dollar.</p>
+</section></section>
+<section>
+<section id="chapter-1-modern-project-management" class="title-slide slide level1 center">
+<h1>Chapter 1 · Modern project management</h1>
+
+<aside><div>
+<p>Week 1 notes, LO 1-1 to LO 1-5</p>
+</div></aside></section>
+<section id="what-chapter-1-handed-to-everything" class="slide level2">
+<h2>What chapter 1 handed to everything</h2>
+<ul>
+<li>A <strong>project</strong>: a temporary endeavour undertaken to create a unique product, service or result.</li>
+<li><strong>Five characteristics</strong>: an objective; a defined lifespan; several departments and professionals; something not done before; specific time, cost and performance requirements.</li>
+<li>The <strong>triple constraint</strong>, which every later chapter trades across.</li>
+<li>The <strong>life cycle</strong>: defining · planning · executing · closing. Effort peaks in executing; the chapters you were examined on live in defining and planning.</li>
+<li><strong>Plan-driven vs agile</strong>: predictability of scope and technology decides. Hybrid blends them. Agile suits small teams, four to eight.</li>
+<li><strong>Technical and sociocultural</strong> dimensions. Strength in one does not cover weakness in the other.</li>
+</ul>
+</section>
+<section id="carry-these-6" class="slide level2">
+<h2>Carry these</h2>
+<ul>
+<li>Project vs operations: <em>writing</em> the piano piece, not <em>practising scales</em>.</li>
+<li>Program: related projects under a common goal; the difference is scale and time span.</li>
+<li>Closing has three jobs: deliver, redeploy, review (lessons learned).</li>
+<li>Drivers of demand: compressed product life cycles, the knowledge explosion, the triple bottom line, the multiproject environment. Small projects carry hidden costs the accounting system never sees.</li>
+<li>The WBS is a database, not a diagram. That claim was made in Week 1 and cashed in Week 4.</li>
+</ul>
+</section>
+<section id="practice-p-multiple-choice" class="slide level2">
+<h2>Practice P · multiple choice</h2>
+<p>A refinery runs a maintenance shutdown every spring: same crews, same checklist, a fixed window, a fixed budget. Which of the five characteristics does it most clearly <strong>fail</strong>, and is it still a project?</p>
+<ol type="a">
+<li>A defined lifespan; no, it is operations<br>
+</li>
+<li>Something never done before; yes, uniqueness is a matter of degree and the time, cost and performance requirements are specific<br>
+</li>
+<li>Specific requirements; no, because the budget is fixed<br>
+</li>
+<li>Several departments; yes, because only one crew is involved</li>
+</ol>
+</section>
+<section id="answer-8" class="slide level2">
+<h2>Answer</h2>
+<p><strong>(b).</strong> The fourth characteristic is “not an either/or issue but a matter of degree.” Each shutdown is customised to what the inspection finds, and it carries exactly the accountability the triple constraint describes. The weakest characteristic does not disqualify the project; the pattern of the five does.</p>
+</section></section>
+<section>
+<section id="the-chain-argued-backwards" class="title-slide slide level1 center">
+<h1>The chain, argued backwards</h1>
+
+</section>
+<section id="when-one-link-is-missing-this-is-what-you-see-at-the-top" class="slide level2">
+<h2>When one link is missing, this is what you see at the top</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Missing link</th>
+<th>What the risk register looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No scope statement (Ch 4)</td>
+<td>every change is a surprise; no baseline for change control</td>
+</tr>
+<tr class="even">
+<td>Padded estimates (Ch 5)</td>
+<td>contingency cannot be sized; reserves are spent whether or not the risk fires</td>
+</tr>
+<tr class="odd">
+<td>Missing dependency (Ch 6)</td>
+<td>a buffer placed at the wrong merge; the real critical path unknown</td>
+</tr>
+<tr class="even">
+<td>Weak-matrix authority in a hostile culture (Ch 3)</td>
+<td>triggers fire and the owner cannot act</td>
+</tr>
+<tr class="odd">
+<td>Project selected on payback alone (Ch 2)</td>
+<td>a white elephant with a perfect register</td>
+</tr>
+<tr class="even">
+<td>Operations mistaken for a project (Ch 1)</td>
+<td>a risk plan for work that needed a procedure</td>
+</tr>
+</tbody>
+</table>
+<p>The exam’s Part B questions each sit on one of these rows.</p>
+</section>
+<section id="the-formula-sheet-you-will-be-given" class="slide level2">
+<h2>The formula sheet you will be given</h2>
+<p><span class="math display">\[EF=ES+D \quad ES_{\text{merge}}=\max(EF) \quad LS=LF-D \quad LF_{\text{burst}}=\min(LS)\]</span></p>
+<p><span class="math display">\[TS=LS-ES=LF-EF \qquad FS=\min(ES_{\text{successors}})-EF\]</span></p>
+<p><span class="math display">\[t_e=\frac{a+4m+b}{6} \quad \sigma_{t_e}=\frac{b-a}{6} \quad \sigma_{T_E}=\sqrt{\textstyle\sum\sigma^2_{t_e}} \quad Z=\frac{T_S-T_E}{\sigma_{T_E}}\]</span></p>
+<p>Plus a seven-entry normal table. Part C is one problem: three-point estimates, the network, both passes, slack, then <span class="math inline">\(\sigma_{T_E}\)</span> and a probability. Practise <strong>reading</strong> these formulas, not memorising them.</p>
+</section>
+<section id="how-to-prepare-between-now-and-thursday" class="slide level2">
+<h2>How to prepare between now and Thursday</h2>
+<ol type="1">
+<li>Redo every practice question in this deck cold, without the answer slide.</li>
+<li>Do one combined problem <strong>by hand with your calculator</strong>: expected times, both passes, slack, then the probability of a date. Time yourself: twenty-five minutes.</li>
+<li>Work the “Check your understanding” and review-question lists at the end of each week’s notes. Part B is drawn from the same ground.</li>
+<li>For each chapter, write the one sentence that says what it handed to the next. If you can argue the chain backwards, you can answer anything in Part B.</li>
+</ol>
+</section>
+<section id="thursday" class="slide level2">
+<h2>Thursday</h2>
+<ul>
+<li><strong>15 October, in class, 65 minutes.</strong></li>
+<li>Bring a pen and a <strong>non-programmable calculator</strong>. Nothing else is permitted on the desk.</li>
+<li>Closed book, closed notes, no phones, no watches that talk.</li>
+<li>Twenty multiple-choice, five short answers, one critical-path-and-PERT problem. Formulas and a normal table on the paper.</li>
+<li>Pace: 20 · 15 · 25, and five minutes to check that every Part A question has exactly one circle.</li>
+</ul>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>IMSE 456/656 · Program and Project Management · NDSU</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/harunpirim\.github\.io\/IMSE456");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
