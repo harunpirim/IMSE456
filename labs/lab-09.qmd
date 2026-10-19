@@ -1,0 +1,151 @@
+---
+title: "Studio 9 · Heuristic versus optimal, and the price of the difference"
+subtitle: "Week 9 · Scheduling Resources and Costs · Larson Ch. 8"
+week: 9
+release: "2026-10-19"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA9</strong> — one PDF containing the resource load chart, two hand-levelled schedules with their decision log, the optimum and the price of the gap, the time-phased budget, and the AI reconciliation</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>Level the conference by hand with the parallel method, find the optimum by brute force, put a price on the difference, phase the budget to the schedule you would run, and let a model level the same project cold</dd>
+<dt>Tools</dt><dd>Week 9 workbook, Excel or Google Sheets, Google Colab, and Gemini (NDSU Gemini Pro account)</dd>
+<dt>Workbook</dt><dd><a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a></dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · level the project yourself first, then use AI to level it independently, compare, verify every number, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-09.qmd">Week 9 — Scheduling Resources and Costs</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5 and the price you put on the gap in Part 3: a schedule is a decision about money, and the reconciliation is where you show whose schedule to trust.
+:::
+
+The project is the conference from Weeks 6 and 7. Its network is unchanged, and the \$70,000 baseline from Week 7 is now allocated to activities. What is new is that each activity needs one or two event coordinators while it runs, and the team is smaller than the early-start schedule assumes. The [Week 9 notes](../weeks/week-09.qmd) walk through the three-coordinator case and show the two-coordinator result; this studio has you produce both by hand, test the heuristic against the optimum, and then answer the question the notes leave open: what is the cheapest way out?
+
+Download the [Week 9 resource studio workbook](../files/week-09-resource-studio.xlsx). It has eight sheets: **Activities**, **Load ES**, **Level 3**, **Level 2**, **Loan**, **Log**, **Budget** and **Reconciliation**. Fill the yellow cells. The load grids and the budget calculate from the start days you enter.
+
+| Rule | Statement |
+|:--|:--|
+| Logic | An activity starts only after every predecessor has finished |
+| Limit | On no day may the coordinators in use exceed the number available |
+| No splitting | Once an activity starts it runs to completion with the coordinators it was given |
+| Priority | When two eligible activities compete, minimum slack first, where slack = LF − today − duration; then shortest duration; then lowest ID |
+
+: The parallel method's rules, as the chapter states them. {tbl-colwidths="[18,82]"}
+
+::: {.part}
+### Part 1 · Load the early-start schedule — 15 minutes
+
+1. On the **Activities** sheet, fill ES, EF, LS, LF and total slack for all nine activities. These are the Week 6 values; reconstruct them from the predecessors rather than copying.
+2. On **Load ES**, enter each activity's ES as its start day. Read off the peak load, the days over the limit of three, and the project finish.
+3. Apply the chapter's classification test to a team of three coordinators. Is this project time-constrained or resource-constrained? Write one sentence that names the test and the answer.
+:::
+
+::: {.part}
+### Part 2 · Level by hand — 25 minutes
+
+Work period by period, exactly as the parallel method says. Start a row in the **Log** sheet for every period in which you had a choice to make: who was eligible, their slack at that moment, and what you started or delayed.
+
+1. **Three coordinators.** On **Level 3**, enter the start days your decisions produce. The *Over by* row must be empty when you finish. Record the finish day.
+2. **Two coordinators.** Repeat on **Level 2**. Record the finish day.
+
+Check two things before moving on. No activity started before all its predecessors finished. No activity's start day was chosen by anything other than the priority rule; if you broke the rule somewhere, say so in the log and keep the result.
+:::
+
+::: {.part}
+### Part 3 · Heuristic versus optimal — 20 minutes
+
+The parallel method is a heuristic. With nine activities there are only 26 orders in which they can start without breaking a predecessor, so the optimum can be found by trying them all. Open [Google Colab](https://colab.research.google.com), paste the code below into a cell and run it.
+
+```python
+ACT = {"A": (2, [], 1),       "B": (5, ["A"], 2),      "C": (6, ["A"], 1),
+       "D": (4, ["B"], 1),    "E": (8, ["C"], 2),      "F": (5, ["C"], 2),
+       "G": (3, ["D", "E"], 1), "H": (4, ["F", "G"], 2), "I": (2, ["H"], 2)}
+AVAILABLE = [2] * 60        # coordinators available on each day
+
+import itertools
+
+def schedule(order):
+    start, load = {}, [0] * 60
+    for a in order:
+        dur, pred, need = ACT[a]
+        t = max([start[p] + ACT[p][0] for p in pred], default=0)
+        while any(load[d] + need > AVAILABLE[d] for d in range(t, t + dur)):
+            t += 1
+        start[a] = t
+        for d in range(t, t + dur):
+            load[d] += need
+    return start, max(start[a] + ACT[a][0] for a in ACT)
+
+best = None
+for order in itertools.permutations(ACT):
+    if any(order.index(p) > order.index(a) for a in ACT for p in ACT[a][1]):
+        continue
+    start, finish = schedule(order)
+    if best is None or finish < best[1]:
+        best = (start, finish)
+print("best finish:", best[1])
+print("start days:", best[0])
+```
+
+1. Record the optimum finish for two coordinators next to your Part 2 result. The gap is the price of the heuristic, in days. Enter the optimum's start days in the **Budget** sheet's optimum row.
+2. The sponsor's date is day 32 and the venue charges \$1,500 for every working day past it. Convert both schedules into dollars.
+3. In two or three sentences, explain why the rule lost. Look at day 2 of your log: what did minimum slack see, and what did it fail to see?
+4. **Scenario 3.** The department will lend a third coordinator for five consecutive days at \$600 a day, days of your choosing. On the **Loan** sheet, change five consecutive cells of the *Available* row from 2 to 3 and schedule against the new limits. To test a window in Colab, edit the `AVAILABLE` list the same way. Find the window that buys the earliest finish, and compare its total cost, penalty plus hire, with the two-coordinator optimum and with a third coordinator for the whole project (finish day 27 per the notes). Which would you recommend to the sponsor, in one sentence with the numbers?
+:::
+
+::: {.part}
+### Part 4 · Time-phase the budget — 15 minutes
+
+The **Budget** sheet spreads each activity's cost evenly over its days and adds up by five-day week for any set of start days you give it.
+
+1. Enter the start days for early start, late start, your three-coordinator schedule, your two-coordinator schedule, the optimum, and your Scenario 3 schedule. Check that every row totals \$70,000.
+2. Read the cumulative row for each. Say which baseline you would control the project against, and why that one.
+3. Answer the status check at the bottom of the sheet: at the end of week 2 the sponsor has been invoiced \$52,000. Against which baseline is that over, against which is it not, and what would you need to know before calling it an overrun?
+:::
+
+::: {.part}
+### Part 5 · Let the model level it, then argue — 15 minutes
+
+Give Gemini the problem cold, without your schedule. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.
+
+```text
+Level this project for two coordinators. Show the start and finish day of
+every activity, the coordinators in use on each day, and the project finish.
+Rules: an activity starts only after all its predecessors finish; no day may
+use more than two coordinators; an activity cannot be interrupted once it
+starts. State the priority rule you used whenever two activities competed.
+
+[paste the Activities table: ID, predecessors, duration, coordinators]
+
+Then say whether your schedule is the shortest possible, and how you know.
+```
+
+In the **Reconciliation** sheet, compare its schedule with yours and with the optimum, line by line. Models often do one of three things: start an activity before a predecessor finishes, use three coordinators on a day while claiming two, or pause an activity and resume it later. Check for each. For every difference, say who is right and why. Correct your sheet if the model found a real improvement; record its error if it made one.
+
+Keep the reconciliation to one page. If the model's schedule is correct and matches the optimum, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.
+:::
+
+::: {.part}
+### Part 6 · Save and upload
+
+Create one PDF in this order.
+
+- [ ] Activities sheet with the CPM values, and the Load ES grid with the peak and the days over the limit
+- [ ] Level 3 and Level 2 grids, each with its finish day, and the Log
+- [ ] the optimum finish and start days, the price of the heuristic in days and dollars, and your Scenario 3 recommendation with its numbers
+- [ ] the Budget sheet, the baseline you chose and why, and the status-check answer
+- [ ] reconciliation table, at most one page
+- [ ] AI acknowledgement with tool, transcript link, changes and verification
+
+Save the workbook, the Colab notebook link, the transcript link and the PDF in `IMSE456/studio-09/` on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.
+
+Then upload the PDF to Blackboard before you leave the session. Name it `SA9_yourlastname.pdf`.
+:::
+
+For further practice after the session, the chapter's three levelling exercises are reproduced in the [Week 9 notes](../weeks/week-09.qmd#chapter-exercises). Exercise 1 is a single-resource case you can do on paper in ten minutes.
+
+## Source
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 8: the parallel method and its priority rules. The conference's coordinator demands, costs and schedules are original to these course materials.
