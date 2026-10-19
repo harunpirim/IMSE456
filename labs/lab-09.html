@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Studio 9 · Heuristic versus optimal, and the price of the difference – IMSE 456/656</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1923bcff4dd3134c996d2ac37cc691ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cfab33a6bf2d0065be96bcd7a6150913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">IMSE 456/656</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../ai.html"> 
+<span class="menu-text">AI Studio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project.html"> 
+<span class="menu-text">Final Project</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/harunpirim/IMSE456"> <i class="bi bi-github" role="img" aria-label="Course repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Studio 9 · Heuristic versus optimal, and the price of the difference</h1>
+<p class="subtitle lead">Week 9 · Scheduling Resources and Costs · Larson Ch. 8</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="week-meta">
+<dl>
+<dt>
+Deliverable
+</dt>
+<dd>
+<strong>SA9</strong> — one PDF containing the resource load chart, two hand-levelled schedules with their decision log, the optimum and the price of the gap, the time-phased budget, and the AI reconciliation
+</dd>
+<dt>
+Studio
+</dt>
+<dd>
+Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback
+</dd>
+<dt>
+Session
+</dt>
+<dd>
+Level the conference by hand with the parallel method, find the optimum by brute force, put a price on the difference, phase the budget to the schedule you would run, and let a model level the same project cold
+</dd>
+<dt>
+Tools
+</dt>
+<dd>
+Week 9 workbook, Excel or Google Sheets, Google Colab, and Gemini (NDSU Gemini Pro account)
+</dd>
+<dt>
+Workbook
+</dt>
+<dd>
+<a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a>
+</dd>
+<dt>
+AI use
+</dt>
+<dd>
+<strong>Level 4 — full use with documentation</strong> · level the project yourself first, then use AI to level it independently, compare, verify every number, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
+</dd>
+<dt>
+Week page
+</dt>
+<dd>
+<a href="../weeks/week-09.html">Week 9 — Scheduling Resources and Costs</a>
+</dd>
+</dl>
+</div>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>This is individual work.</strong> Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5 and the price you put on the gap in Part 3: a schedule is a decision about money, and the reconciliation is where you show whose schedule to trust.</p>
+</div>
+</div>
+</div>
+<p>The project is the conference from Weeks 6 and 7. Its network is unchanged, and the $70,000 baseline from Week 7 is now allocated to activities. What is new is that each activity needs one or two event coordinators while it runs, and the team is smaller than the early-start schedule assumes. The <a href="../weeks/week-09.html">Week 9 notes</a> walk through the three-coordinator case and show the two-coordinator result; this studio has you produce both by hand, test the heuristic against the optimum, and then answer the question the notes leave open: what is the cheapest way out?</p>
+<p>Download the <a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a>. It has eight sheets: <strong>Activities</strong>, <strong>Load ES</strong>, <strong>Level 3</strong>, <strong>Level 2</strong>, <strong>Loan</strong>, <strong>Log</strong>, <strong>Budget</strong> and <strong>Reconciliation</strong>. Fill the yellow cells. The load grids and the budget calculate from the start days you enter.</p>
+<table class="caption-top table">
+<caption>The parallel method’s rules, as the chapter states them.</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rule</th>
+<th style="text-align: left;">Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Logic</td>
+<td style="text-align: left;">An activity starts only after every predecessor has finished</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Limit</td>
+<td style="text-align: left;">On no day may the coordinators in use exceed the number available</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No splitting</td>
+<td style="text-align: left;">Once an activity starts it runs to completion with the coordinators it was given</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Priority</td>
+<td style="text-align: left;">When two eligible activities compete, minimum slack first, where slack = LF − today − duration; then shortest duration; then lowest ID</td>
+</tr>
+</tbody>
+</table>
+<section id="part-1-load-the-early-start-schedule-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-load-the-early-start-schedule-15-minutes">Part 1 · Load the early-start schedule — 15 minutes</h3>
+<ol type="1">
+<li>On the <strong>Activities</strong> sheet, fill ES, EF, LS, LF and total slack for all nine activities. These are the Week 6 values; reconstruct them from the predecessors rather than copying.</li>
+<li>On <strong>Load ES</strong>, enter each activity’s ES as its start day. Read off the peak load, the days over the limit of three, and the project finish.</li>
+<li>Apply the chapter’s classification test to a team of three coordinators. Is this project time-constrained or resource-constrained? Write one sentence that names the test and the answer.</li>
+</ol>
+</section>
+<section id="part-2-level-by-hand-25-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-level-by-hand-25-minutes">Part 2 · Level by hand — 25 minutes</h3>
+<p>Work period by period, exactly as the parallel method says. Start a row in the <strong>Log</strong> sheet for every period in which you had a choice to make: who was eligible, their slack at that moment, and what you started or delayed.</p>
+<ol type="1">
+<li><strong>Three coordinators.</strong> On <strong>Level 3</strong>, enter the start days your decisions produce. The <em>Over by</em> row must be empty when you finish. Record the finish day.</li>
+<li><strong>Two coordinators.</strong> Repeat on <strong>Level 2</strong>. Record the finish day.</li>
+</ol>
+<p>Check two things before moving on. No activity started before all its predecessors finished. No activity’s start day was chosen by anything other than the priority rule; if you broke the rule somewhere, say so in the log and keep the result.</p>
+</section>
+<section id="part-3-heuristic-versus-optimal-20-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-3-heuristic-versus-optimal-20-minutes">Part 3 · Heuristic versus optimal — 20 minutes</h3>
+<p>The parallel method is a heuristic. With nine activities there are only 26 orders in which they can start without breaking a predecessor, so the optimum can be found by trying them all. Open <a href="https://colab.research.google.com">Google Colab</a>, paste the code below into a cell and run it.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ACT <span class="op">=</span> {<span class="st">"A"</span>: (<span class="dv">2</span>, [], <span class="dv">1</span>),       <span class="st">"B"</span>: (<span class="dv">5</span>, [<span class="st">"A"</span>], <span class="dv">2</span>),      <span class="st">"C"</span>: (<span class="dv">6</span>, [<span class="st">"A"</span>], <span class="dv">1</span>),</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">"D"</span>: (<span class="dv">4</span>, [<span class="st">"B"</span>], <span class="dv">1</span>),    <span class="st">"E"</span>: (<span class="dv">8</span>, [<span class="st">"C"</span>], <span class="dv">2</span>),      <span class="st">"F"</span>: (<span class="dv">5</span>, [<span class="st">"C"</span>], <span class="dv">2</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">"G"</span>: (<span class="dv">3</span>, [<span class="st">"D"</span>, <span class="st">"E"</span>], <span class="dv">1</span>), <span class="st">"H"</span>: (<span class="dv">4</span>, [<span class="st">"F"</span>, <span class="st">"G"</span>], <span class="dv">2</span>), <span class="st">"I"</span>: (<span class="dv">2</span>, [<span class="st">"H"</span>], <span class="dv">2</span>)}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>AVAILABLE <span class="op">=</span> [<span class="dv">2</span>] <span class="op">*</span> <span class="dv">60</span>        <span class="co"># coordinators available on each day</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> schedule(order):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    start, load <span class="op">=</span> {}, [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> a <span class="kw">in</span> order:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        dur, pred, need <span class="op">=</span> ACT[a]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> <span class="bu">max</span>([start[p] <span class="op">+</span> ACT[p][<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> pred], default<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="bu">any</span>(load[d] <span class="op">+</span> need <span class="op">&gt;</span> AVAILABLE[d] <span class="cf">for</span> d <span class="kw">in</span> <span class="bu">range</span>(t, t <span class="op">+</span> dur)):</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            t <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        start[a] <span class="op">=</span> t</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> d <span class="kw">in</span> <span class="bu">range</span>(t, t <span class="op">+</span> dur):</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            load[d] <span class="op">+=</span> need</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> start, <span class="bu">max</span>(start[a] <span class="op">+</span> ACT[a][<span class="dv">0</span>] <span class="cf">for</span> a <span class="kw">in</span> ACT)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>best <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> order <span class="kw">in</span> itertools.permutations(ACT):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">any</span>(order.index(p) <span class="op">&gt;</span> order.index(a) <span class="cf">for</span> a <span class="kw">in</span> ACT <span class="cf">for</span> p <span class="kw">in</span> ACT[a][<span class="dv">1</span>]):</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    start, finish <span class="op">=</span> schedule(order)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> best <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> finish <span class="op">&lt;</span> best[<span class="dv">1</span>]:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        best <span class="op">=</span> (start, finish)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"best finish:"</span>, best[<span class="dv">1</span>])</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"start days:"</span>, best[<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Record the optimum finish for two coordinators next to your Part 2 result. The gap is the price of the heuristic, in days. Enter the optimum’s start days in the <strong>Budget</strong> sheet’s optimum row.</li>
+<li>The sponsor’s date is day 32 and the venue charges $1,500 for every working day past it. Convert both schedules into dollars.</li>
+<li>In two or three sentences, explain why the rule lost. Look at day 2 of your log: what did minimum slack see, and what did it fail to see?</li>
+<li><strong>Scenario 3.</strong> The department will lend a third coordinator for five consecutive days at $600 a day, days of your choosing. On the <strong>Loan</strong> sheet, change five consecutive cells of the <em>Available</em> row from 2 to 3 and schedule against the new limits. To test a window in Colab, edit the <code>AVAILABLE</code> list the same way. Find the window that buys the earliest finish, and compare its total cost, penalty plus hire, with the two-coordinator optimum and with a third coordinator for the whole project (finish day 27 per the notes). Which would you recommend to the sponsor, in one sentence with the numbers?</li>
+</ol>
+</section>
+<section id="part-4-time-phase-the-budget-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-4-time-phase-the-budget-15-minutes">Part 4 · Time-phase the budget — 15 minutes</h3>
+<p>The <strong>Budget</strong> sheet spreads each activity’s cost evenly over its days and adds up by five-day week for any set of start days you give it.</p>
+<ol type="1">
+<li>Enter the start days for early start, late start, your three-coordinator schedule, your two-coordinator schedule, the optimum, and your Scenario 3 schedule. Check that every row totals $70,000.</li>
+<li>Read the cumulative row for each. Say which baseline you would control the project against, and why that one.</li>
+<li>Answer the status check at the bottom of the sheet: at the end of week 2 the sponsor has been invoiced $52,000. Against which baseline is that over, against which is it not, and what would you need to know before calling it an overrun?</li>
+</ol>
+</section>
+<section id="part-5-let-the-model-level-it-then-argue-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-5-let-the-model-level-it-then-argue-15-minutes">Part 5 · Let the model level it, then argue — 15 minutes</h3>
+<p>Give Gemini the problem cold, without your schedule. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.</p>
+<pre class="text"><code>Level this project for two coordinators. Show the start and finish day of
+every activity, the coordinators in use on each day, and the project finish.
+Rules: an activity starts only after all its predecessors finish; no day may
+use more than two coordinators; an activity cannot be interrupted once it
+starts. State the priority rule you used whenever two activities competed.
+
+[paste the Activities table: ID, predecessors, duration, coordinators]
+
+Then say whether your schedule is the shortest possible, and how you know.</code></pre>
+<p>In the <strong>Reconciliation</strong> sheet, compare its schedule with yours and with the optimum, line by line. Models often do one of three things: start an activity before a predecessor finishes, use three coordinators on a day while claiming two, or pause an activity and resume it later. Check for each. For every difference, say who is right and why. Correct your sheet if the model found a real improvement; record its error if it made one.</p>
+<p>Keep the reconciliation to one page. If the model’s schedule is correct and matches the optimum, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.</p>
+</section>
+<section id="part-6-save-and-upload" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-6-save-and-upload">Part 6 · Save and upload</h3>
+<p>Create one PDF in this order.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Activities sheet with the CPM values, and the Load ES grid with the peak and the days over the limit</label></li>
+<li><label><input type="checkbox">Level 3 and Level 2 grids, each with its finish day, and the Log</label></li>
+<li><label><input type="checkbox">the optimum finish and start days, the price of the heuristic in days and dollars, and your Scenario 3 recommendation with its numbers</label></li>
+<li><label><input type="checkbox">the Budget sheet, the baseline you chose and why, and the status-check answer</label></li>
+<li><label><input type="checkbox">reconciliation table, at most one page</label></li>
+<li><label><input type="checkbox">AI acknowledgement with tool, transcript link, changes and verification</label></li>
+</ul>
+<p>Save the workbook, the Colab notebook link, the transcript link and the PDF in <code>IMSE456/studio-09/</code> on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.</p>
+<p>Then upload the PDF to Blackboard before you leave the session. Name it <code>SA9_yourlastname.pdf</code>.</p>
+</section>
+<p>For further practice after the session, the chapter’s three levelling exercises are reproduced in the <a href="../weeks/week-09.html#chapter-exercises">Week 9 notes</a>. Exercise 1 is a single-resource case you can do on paper in ten minutes.</p>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 8: the parallel method and its priority rules. The conference’s coordinator demands, costs and schedules are original to these course materials.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/harunpirim\.github\.io\/IMSE456");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>IMSE 456/656 · Program and Project Management · Fall 2026</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Harun Pirim, PhD · North Dakota State University</p>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
