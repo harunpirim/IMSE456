@@ -57,6 +57,17 @@ Following Larson & Gray, Ch. 8, Sections 8.1 to 8.3, Figures 8.1 and 8.2
 <img src="../images/week09/planning-process.svg" style="max-height:330px;width:auto;display:block;margin:0 auto" alt="Scope and WBS, project network, resource and cost scheduling, master plan, with risk management feeding each.">
 </figure>
 
+## Six words for the week
+
+| Term | Meaning |
+|---|---|
+| Resource | People, equipment or material an activity draws on while it runs |
+| Resource loading | How much of a resource every day of the schedule asks for |
+| Smoothing | Moving noncritical work inside its slack to flatten the load; the finish holds |
+| Levelling | Delaying work until the resource is free; the finish may move |
+| Resource link | A predecessor that exists only because the people are busy |
+| Time-phased budget | The cost of the schedule laid out week by week |
+
 ## Five questions the network cannot answer
 
 - Will the people and equipment be enough, and free when needed?
@@ -72,6 +83,16 @@ Following Larson & Gray, Ch. 8, Sections 8.1 to 8.3, Figures 8.1 and 8.2
 . . .
 
 **Demand exceeds supply.** The peak needs people who do not exist. Remedy: **resource-constrained scheduling**, delay work until the resource is free, accept a later finish, make it as small as possible.
+
+## Smoothing and levelling side by side
+
+| | Smoothing | Levelling |
+|---|---|---|
+| Project is | Time-constrained | Resource-constrained |
+| What is fixed | The finish date | The resource limit |
+| What moves | Noncritical activities, inside slack | Any activity, as far as needed |
+| Goal | Flatter load, fewer peaks | Smallest delay that respects the limit |
+| Cost | Slack | Days |
 
 ## A resource constraint changes the sequence, not the logic
 
@@ -171,6 +192,26 @@ Following Larson & Gray, Ch. 8, Section 8.4, Figure 8.3
 
 Week 6 network, Week 7 budget. Costs spread evenly over each activity's days.
 
+## How to build a loading chart
+
+1. Schedule every activity at its early start.
+2. For each day, list the activities in progress.
+3. Add their resource demands.
+4. Draw the total against the line of what is available.
+
+. . .
+
+Five minutes with the Week 6 table, and the first picture of the week's problem.
+
+## The conference, day by day
+
+| Day | 1–2 | 3–7 | 8 | 9–11 | 12–13 | 14–16 | 17–19 | 20–25 |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| In progress | A | B, C | C, D | D, E, F | E, F | E | G | H, then I |
+| Coordinators | 1 | 3 | 2 | **5** | 4 | 2 | 1 | 2 |
+
+Fifty-four coordinator-days of work over 25 days. Three people could do it at 72% utilisation, if the work were spread evenly. It is not.
+
 ## Coordinators needed each day
 
 <figure>
@@ -188,6 +229,17 @@ F has six days of slack. Delay it until D finishes on day 11.
 . . .
 
 Load falls to three on days 9 to 11, rises to four on days 12 to 16. F finishes day 16, inside its late finish of 19. Project still 25.
+
+## Smoothing, before and after
+
+| Day | 9–11 | 12–13 | 14–16 | 17–19 |
+|---|:-:|:-:|:-:|:-:|
+| Before: in progress | D, E, F | E, F | E | G |
+| Before: load | 5 | 4 | 2 | 1 |
+| After: in progress | D, E | E, F | E, F | G |
+| After: load | 3 | 4 | 4 | 1 |
+
+F moved from days 9–13 to days 12–16. Peak 5 became 4, F's slack 6 became 3, the finish stayed at 25.
 
 ## The three goals of smoothing
 
@@ -249,6 +301,14 @@ In each period, list the activities whose predecessors are finished.
 
 Rank them by the priority rule. Start as many as the limit allows. Delay the rest and recheck next period.
 
+## The parallel method, step by step
+
+1. Set t = 0. Compute each activity's late finish from the network.
+2. List the activities whose predecessors are all finished and that have not started.
+3. For each, slack = LF − t − duration. Sort by slack, then duration, then ID.
+4. Walk the list. Start an activity if its demand fits under the limit with what is already running; otherwise delay it.
+5. Advance t to the next day on which something finishes or something becomes eligible. Repeat until every activity has started.
+
 ## The priority rule
 
 1. **Minimum slack**, recomputed as LF − now − duration
@@ -272,6 +332,17 @@ An activity that has waited past its late start has negative slack and goes to t
 | 7 | 1 | 2 | 10 | 12 | 0 | 2, 5, 6 |
 
 Values from Figure 8.4 [1]. Early-start load: 2, 2, 5, 5, 4, 4, 4, 4, 1, 1, 1, 1.
+
+## The chapter's example as a loading grid
+
+| Period | 0–1 | 2–3 | 4–5 | 6–7 | 8–9 | 10–11 | 12–13 |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| ES, running | 1 | 2, 3, 4 | 2, 3 | 2, 5, 6 | 6 | 7 | |
+| ES, people | 2 | **5** | **4** | **4** | 1 | 1 | |
+| Levelled, running | 1 | 3, 4 | 3 | 2, 6 | 2, 6 | 2, 5 | 7 |
+| Levelled, people | 2 | 3 | 2 | 3 | 3 | 3 | 1 |
+
+Three programmers available. The levelled grid never exceeds three and ends two periods later.
 
 ## Six decisions
 
@@ -310,6 +381,34 @@ Finish day 27. F, comfortably noncritical in the network, set the finish.
 
 Next pass, each activity's priority rests on a slack figure the last pass changed.
 
+## Two coordinators: the rule, decision by decision
+
+| Day | Eligible (slack, need) | Decision | Running after |
+|:-:|---|---|---|
+| 2 | C (0, 1), B (5, 2) | start C; B would make 3, delay | C |
+| 8 | B (−1, 2), E (0, 2), F (6, 2) | start B; delay E and F | B |
+| 13 | E (−5, 2), D (−1, 1), F (1, 2) | start E; delay D and F | E |
+| 21 | D (−9, 1), F (−7, 2) | start D; delay F | D |
+| 25 | F (−11, 2), G (−9, 1) | start F; delay G | F |
+| 30 | G | start G | G |
+
+Then H on 33 and I on 37. Finish day 39.
+
+## The same two coordinators, a different order
+
+| Start | Activity | Running with | Load |
+|:-:|---|---|:-:|
+| 0 | A | | 1 |
+| 2 | B | | 2 |
+| 7 | C and D | | 2 |
+| 13 | E | | 2 |
+| 21 | F | | 2 |
+| 26 | G | | 1 |
+| 29 | H | | 2 |
+| 33 | I | | 2 |
+
+Finish day 35. Every predecessor respected, never above two. Found by trying all 26 feasible orders.
+
 ## Two coordinators: heuristic versus optimal
 
 <figure>
@@ -329,6 +428,18 @@ Minimum slack starts C. B must wait until C finishes on day 8, because B needs b
 . . .
 
 The optimum starts B first. Slack measures time, not resource weight.
+
+## Reading any levelled schedule
+
+Three checks, in this order:
+
+1. **Logic.** Does every activity start after all its predecessors finish?
+2. **Limit.** On every day, is the resource in use at or under what is available?
+3. **No splitting.** Does every activity run without interruption?
+
+. . .
+
+A schedule that passes all three is feasible. Whether it is good is a fourth question: how far did the finish move?
 
 ## How good are heuristics?
 
@@ -494,6 +605,14 @@ Placed on the schedule, those amounts land in the three weeks the schedule gives
 
 Most packages become one activity, so the phasing is one for one.
 
+## Building the baseline, step by step
+
+1. Take the resource-levelled schedule, not the network's.
+2. For each activity, cost per day = direct cost ÷ duration.
+3. For each week, count each activity's workdays inside that week and multiply.
+4. Add across activities for the week's planned value.
+5. Accumulate week by week. That curve is the baseline.
+
 ## The conference's cost per day
 
 | A | B | C | D | E | F | G | H | I |
@@ -501,6 +620,19 @@ Most packages become one activity, so the phasing is one for one.
 | $1,000 | $6,000 | $1,000 | $2,000 | $1,500 | $500 | $1,000 | $1,000 | $1,250 |
 
 Direct cost divided by duration. Place each activity at its start and add up by week.
+
+## One week, worked: week 2 on the early-start plan
+
+| Activity | Workdays in week 2 | Cost per day | Planned value |
+|---|:-:|--:|--:|
+| B | 2 | $6,000 | $12,000 |
+| C | 3 | 1,000 | 3,000 |
+| D | 3 | 2,000 | 6,000 |
+| E | 2 | 1,500 | 3,000 |
+| F | 2 | 500 | 1,000 |
+| **Week 2** | | | **$25,000** |
+
+Week 2 is days 6 to 10. B finishes on day 7, D starts on day 8, E and F on day 9.
 
 ## The early-start baseline
 
@@ -545,6 +677,109 @@ The resource schedule is the time baseline. The budget phased to it is the cost 
 ## One sentence for the week
 
 A network tells you what could run together. A resource schedule tells you what will. A time-phased budget tells you what that costs, week by week.
+
+# Live in Smartsheet
+
+::: {.aside}
+The conference sheet, built before class; the same steps are in the Week 9 Smartsheet workout on Blackboard
+:::
+
+## What the sheet already holds
+
+- Nine rows: activity, ID, duration, predecessors as row numbers, cost
+- Start Mon 2 Nov 2026, Monday to Friday, no holidays
+- Kim, Lee and Ortiz assigned as the early-start plan needs them, 100% each
+- Column formulas for cost per day and weekly planned value
+- Sheet Summary: project finish, total cost, weekly and cumulative totals
+
+. . .
+
+Nothing in it knows yet that only three people exist.
+
+## Step 1 · Dependencies on
+
+Project Settings → Dependency Settings: enable, map Predecessors, Duration, Start Date, End Date.
+
+. . .
+
+Watch: every date fills in from row 1's start. Gantt view, Critical Path on.
+
+. . .
+
+Read: finish **Fri 4 Dec**, workday 25. Critical path A, C, E, G, H, I. Summary: total cost $70,000, cumulative to week 2 $48,000.
+
+## Step 2 · Who is double-booked
+
+Gantt view. Filter: Assigned To has Kim. Then Lee. Then Ortiz.
+
+. . .
+
+Read: Kim's D and F overlap **Thu 12 to Mon 16 Nov**. Lee's E and F overlap **Thu 12 to Wed 18 Nov**. Ortiz is never doubled.
+
+. . .
+
+The critical-path review passed this plan. The people did not.
+
+## Step 3 · One resource link
+
+Row 6 (F): Predecessors `3` becomes `3, 5`. F now waits for E.
+
+. . .
+
+Kim is on F and G together. Row 6 Assigned To: Lee, Ortiz.
+
+. . .
+
+Read: finish **Tue 8 Dec**, workday 27. F is now red in the Gantt. Cumulative to week 2: $47,000.
+
+## Step 4 · Two people
+
+Remove Ortiz from every row. Row 6 back to `3`. The filters show Kim and Lee doubled for most of November.
+
+. . .
+
+The rule's five links: row 2 `1, 3`; row 5 `3, 2`; row 4 `2, 5`; row 6 `3, 4`; row 7 `4, 5, 6`. Finish **Thu 24 Dec**.
+
+. . .
+
+Undo. The optimum's three links: row 3 `1, 2`; row 6 `3, 5`; row 7 `4, 5, 6`. Finish **Fri 18 Dec**.
+
+## Step 5 · The budget moves with the schedule
+
+Sheet Summary, cumulative to week 2:
+
+| Schedule | Cumulative to week 2 | Finish |
+|---|--:|---|
+| Early start | $48,000 | Fri 4 Dec |
+| Three coordinators | 47,000 | Tue 8 Dec |
+| Two, the rule | 20,000 | Thu 24 Dec |
+| Two, the optimum | 41,000 | Fri 18 Dec |
+
+Total cost reads $70,000 every time. Only the timing changes.
+
+## Step 6 · Two holidays
+
+Project Settings → Dependency Settings → Holidays: Thu 26 and Fri 27 Nov.
+
+. . .
+
+Every date after them slides two days. Workday counts and allocations do not change.
+
+. . .
+
+Three coordinators: Tue 8 Dec becomes Thu 10 Dec. Two, optimum: Fri 18 Dec becomes Tue 22 Dec.
+
+## What the software did, and did not do
+
+It computed every date, drew the Gantt, showed who was doubled, and re-phased the budget instantly.
+
+. . .
+
+It did not decide which activity waits. Every resource link was a human decision, typed into Predecessors.
+
+. . .
+
+Six months on, a resource link looks exactly like a logic link. Write "resource" in the row comment when you add one.
 
 # Thursday
 
