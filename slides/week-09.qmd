@@ -696,6 +696,8 @@ The conference sheet, built before class; the same steps are in the Week 9 Smart
 
 Nothing in it knows yet that only three people exist.
 
+To rebuild it: import the [Week 9 Smartsheet workbook](../files/week-09-smartsheet-resource-workout.xlsx), tab Smartsheet Import. Its Formulas tab lists every column and summary formula.
+
 ## Step 1 · Dependencies on
 
 Project Settings → Dependency Settings: enable, map Predecessors, Duration, Start Date, End Date.

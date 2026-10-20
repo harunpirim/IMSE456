@@ -395,6 +395,8 @@ You will load the conference's early-start schedule and find the days it asks fo
 
 Level it yourself first. The model can produce a schedule in seconds; only you will notice whether it kept two people on B for five days or quietly split the activity.
 
+Tuesday's session ends with the same conference built live in Smartsheet. The [Week 9 Smartsheet workbook](../files/week-09-smartsheet-resource-workout.xlsx) holds the import tab and every formula used, so you can rebuild the sheet in your own account and repeat the six steps from the deck.
+
 ## Sources
 
 1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 8.
