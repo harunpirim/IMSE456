@@ -3948,6 +3948,13 @@
     "text": "The last planning step"
   },
   {
+    "objectID": "slides/week-09.html#six-words-for-the-week",
+    "href": "slides/week-09.html#six-words-for-the-week",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Six words for the week",
+    "text": "Six words for the week\n\n\n\n\n\n\n\nTerm\nMeaning\n\n\n\n\nResource\nPeople, equipment or material an activity draws on while it runs\n\n\nResource loading\nHow much of a resource every day of the schedule asks for\n\n\nSmoothing\nMoving noncritical work inside its slack to flatten the load; the finish holds\n\n\nLevelling\nDelaying work until the resource is free; the finish may move\n\n\nResource link\nA predecessor that exists only because the people are busy\n\n\nTime-phased budget\nThe cost of the schedule laid out week by week"
+  },
+  {
     "objectID": "slides/week-09.html#five-questions-the-network-cannot-answer",
     "href": "slides/week-09.html#five-questions-the-network-cannot-answer",
     "title": "Week 9 · Scheduling Resources and Costs",
@@ -3960,6 +3967,13 @@
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "Two ways the network is wrong about resources",
     "text": "Two ways the network is wrong about resources\nDemand is uneven. Peaks and valleys in who is needed each day. Remedy: smoothing, delay noncritical work inside its slack, finish date unchanged.\n\nDemand exceeds supply. The peak needs people who do not exist. Remedy: resource-constrained scheduling, delay work until the resource is free, accept a later finish, make it as small as possible."
+  },
+  {
+    "objectID": "slides/week-09.html#smoothing-and-levelling-side-by-side",
+    "href": "slides/week-09.html#smoothing-and-levelling-side-by-side",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Smoothing and levelling side by side",
+    "text": "Smoothing and levelling side by side\n\n\n\n\n\n\n\n\n\nSmoothing\nLevelling\n\n\n\n\nProject is\nTime-constrained\nResource-constrained\n\n\nWhat is fixed\nThe finish date\nThe resource limit\n\n\nWhat moves\nNoncritical activities, inside slack\nAny activity, as far as needed\n\n\nGoal\nFlatter load, fewer peaks\nSmallest delay that respects the limit\n\n\nCost\nSlack\nDays"
   },
   {
     "objectID": "slides/week-09.html#a-resource-constraint-changes-the-sequence-not-the-logic",
@@ -4018,6 +4032,20 @@
     "text": "The conference with coordinators and costs\n\n\n\nID\nActivity\nPred.\nDays\nCoord.\nCost\n\n\n\n\nF\nRecruit exhibitors\nC\n5\n2\n2,500\n\n\nG\nPublish program\nD, E\n3\n1\n3,000\n\n\nH\nPrepare on-site materials\nF, G\n4\n2\n4,000\n\n\nI\nComplete rehearsal\nH\n2\n2\n2,500\n\n\n\nTotal\n\n\n\n$70,000\n\n\n\nWeek 6 network, Week 7 budget. Costs spread evenly over each activity’s days."
   },
   {
+    "objectID": "slides/week-09.html#how-to-build-a-loading-chart",
+    "href": "slides/week-09.html#how-to-build-a-loading-chart",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "How to build a loading chart",
+    "text": "How to build a loading chart\n\nSchedule every activity at its early start.\nFor each day, list the activities in progress.\nAdd their resource demands.\nDraw the total against the line of what is available.\n\n\nFive minutes with the Week 6 table, and the first picture of the week’s problem."
+  },
+  {
+    "objectID": "slides/week-09.html#the-conference-day-by-day",
+    "href": "slides/week-09.html#the-conference-day-by-day",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "The conference, day by day",
+    "text": "The conference, day by day\n\n\n\nDay\n1–2\n3–7\n8\n9–11\n12–13\n14–16\n17–19\n20–25\n\n\n\n\nIn progress\nA\nB, C\nC, D\nD, E, F\nE, F\nE\nG\nH, then I\n\n\nCoordinators\n1\n3\n2\n5\n4\n2\n1\n2\n\n\n\nFifty-four coordinator-days of work over 25 days. Three people could do it at 72% utilisation, if the work were spread evenly. It is not."
+  },
+  {
     "objectID": "slides/week-09.html#coordinators-needed-each-day",
     "href": "slides/week-09.html#coordinators-needed-each-day",
     "title": "Week 9 · Scheduling Resources and Costs",
@@ -4030,6 +4058,13 @@
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "Smoothing with four coordinators",
     "text": "Smoothing with four coordinators\nPeak of five on days 9 to 11: D, E and F together.\n\nF has six days of slack. Delay it until D finishes on day 11.\n\n\nLoad falls to three on days 9 to 11, rises to four on days 12 to 16. F finishes day 16, inside its late finish of 19. Project still 25."
+  },
+  {
+    "objectID": "slides/week-09.html#smoothing-before-and-after",
+    "href": "slides/week-09.html#smoothing-before-and-after",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Smoothing, before and after",
+    "text": "Smoothing, before and after\n\n\n\nDay\n9–11\n12–13\n14–16\n17–19\n\n\n\n\nBefore: in progress\nD, E, F\nE, F\nE\nG\n\n\nBefore: load\n5\n4\n2\n1\n\n\nAfter: in progress\nD, E\nE, F\nE, F\nG\n\n\nAfter: load\n3\n4\n4\n1\n\n\n\nF moved from days 9–13 to days 12–16. Peak 5 became 4, F’s slack 6 became 3, the finish stayed at 25."
   },
   {
     "objectID": "slides/week-09.html#the-three-goals-of-smoothing",
@@ -4067,6 +4102,13 @@
     "text": "The parallel method\nStep through the schedule one period at a time.\n\nIn each period, list the activities whose predecessors are finished.\n\n\nRank them by the priority rule. Start as many as the limit allows. Delay the rest and recheck next period."
   },
   {
+    "objectID": "slides/week-09.html#the-parallel-method-step-by-step",
+    "href": "slides/week-09.html#the-parallel-method-step-by-step",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "The parallel method, step by step",
+    "text": "The parallel method, step by step\n\nSet t = 0. Compute each activity’s late finish from the network.\nList the activities whose predecessors are all finished and that have not started.\nFor each, slack = LF − t − duration. Sort by slack, then duration, then ID.\nWalk the list. Start an activity if its demand fits under the limit with what is already running; otherwise delay it.\nAdvance t to the next day on which something finishes or something becomes eligible. Repeat until every activity has started."
+  },
+  {
     "objectID": "slides/week-09.html#the-priority-rule",
     "href": "slides/week-09.html#the-priority-rule",
     "title": "Week 9 · Scheduling Resources and Costs",
@@ -4079,6 +4121,13 @@
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "The chapter’s example: seven activities, three programmers",
     "text": "The chapter’s example: seven activities, three programmers\n\n\n\nID\nProg.\nDur.\nES\nLF\nSlack\nPred.\n\n\n\n\n1\n2\n2\n0\n2\n0\n—\n\n\n2\n2\n6\n2\n10\n2\n1\n\n\n3\n2\n4\n2\n6\n0\n1\n\n\n4\n1\n2\n2\n10\n6\n1\n\n\n5\n1\n2\n6\n10\n2\n3\n\n\n6\n1\n4\n6\n10\n0\n3\n\n\n7\n1\n2\n10\n12\n0\n2, 5, 6\n\n\n\nValues from Figure 8.4 [1]. Early-start load: 2, 2, 5, 5, 4, 4, 4, 4, 1, 1, 1, 1."
+  },
+  {
+    "objectID": "slides/week-09.html#the-chapters-example-as-a-loading-grid",
+    "href": "slides/week-09.html#the-chapters-example-as-a-loading-grid",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "The chapter’s example as a loading grid",
+    "text": "The chapter’s example as a loading grid\n\n\n\nPeriod\n0–1\n2–3\n4–5\n6–7\n8–9\n10–11\n12–13\n\n\n\n\nES, running\n1\n2, 3, 4\n2, 3\n2, 5, 6\n6\n7\n\n\n\nES, people\n2\n5\n4\n4\n1\n1\n\n\n\nLevelled, running\n1\n3, 4\n3\n2, 6\n2, 6\n2, 5\n7\n\n\nLevelled, people\n2\n3\n2\n3\n3\n3\n1\n\n\n\nThree programmers available. The levelled grid never exceeds three and ends two periods later."
   },
   {
     "objectID": "slides/week-09.html#six-decisions",
@@ -4102,6 +4151,20 @@
     "text": "What levelling does to the schedule\n\nIt consumes slack.\nIt can create a new critical sequence.\nCritical now means resource-critical, not only logic-critical.\n\n\nNext pass, each activity’s priority rests on a slack figure the last pass changed."
   },
   {
+    "objectID": "slides/week-09.html#two-coordinators-the-rule-decision-by-decision",
+    "href": "slides/week-09.html#two-coordinators-the-rule-decision-by-decision",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Two coordinators: the rule, decision by decision",
+    "text": "Two coordinators: the rule, decision by decision\n\n\n\nDay\nEligible (slack, need)\nDecision\nRunning after\n\n\n\n\n2\nC (0, 1), B (5, 2)\nstart C; B would make 3, delay\nC\n\n\n8\nB (−1, 2), E (0, 2), F (6, 2)\nstart B; delay E and F\nB\n\n\n13\nE (−5, 2), D (−1, 1), F (1, 2)\nstart E; delay D and F\nE\n\n\n21\nD (−9, 1), F (−7, 2)\nstart D; delay F\nD\n\n\n25\nF (−11, 2), G (−9, 1)\nstart F; delay G\nF\n\n\n30\nG\nstart G\nG\n\n\n\nThen H on 33 and I on 37. Finish day 39."
+  },
+  {
+    "objectID": "slides/week-09.html#the-same-two-coordinators-a-different-order",
+    "href": "slides/week-09.html#the-same-two-coordinators-a-different-order",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "The same two coordinators, a different order",
+    "text": "The same two coordinators, a different order\n\n\n\nStart\nActivity\nRunning with\nLoad\n\n\n\n\n0\nA\n\n1\n\n\n2\nB\n\n2\n\n\n7\nC and D\n\n2\n\n\n13\nE\n\n2\n\n\n21\nF\n\n2\n\n\n26\nG\n\n1\n\n\n29\nH\n\n2\n\n\n33\nI\n\n2\n\n\n\nFinish day 35. Every predecessor respected, never above two. Found by trying all 26 feasible orders."
+  },
+  {
     "objectID": "slides/week-09.html#two-coordinators-heuristic-versus-optimal",
     "href": "slides/week-09.html#two-coordinators-heuristic-versus-optimal",
     "title": "Week 9 · Scheduling Resources and Costs",
@@ -4114,6 +4177,13 @@
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "Why the rule lost four days",
     "text": "Why the rule lost four days\nDay 2: B and C are both eligible.\nC has zero slack and needs one coordinator. B has five days of slack and needs two.\n\nMinimum slack starts C. B must wait until C finishes on day 8, because B needs both people.\n\n\nThe optimum starts B first. Slack measures time, not resource weight."
+  },
+  {
+    "objectID": "slides/week-09.html#reading-any-levelled-schedule",
+    "href": "slides/week-09.html#reading-any-levelled-schedule",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Reading any levelled schedule",
+    "text": "Reading any levelled schedule\nThree checks, in this order:\n\nLogic. Does every activity start after all its predecessors finish?\nLimit. On every day, is the resource in use at or under what is available?\nNo splitting. Does every activity run without interruption?\n\n\nA schedule that passes all three is feasible. Whether it is good is a fourth question: how far did the finish move?"
   },
   {
     "objectID": "slides/week-09.html#how-good-are-heuristics",
@@ -4200,11 +4270,25 @@
     "text": "Spread the cost over the schedule\nThe chapter’s three-week test package: $120,000 of labour phased $40,000, $30,000, $50,000 [1].\n\nPlaced on the schedule, those amounts land in the three weeks the schedule gives it.\n\n\nMost packages become one activity, so the phasing is one for one."
   },
   {
+    "objectID": "slides/week-09.html#building-the-baseline-step-by-step",
+    "href": "slides/week-09.html#building-the-baseline-step-by-step",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Building the baseline, step by step",
+    "text": "Building the baseline, step by step\n\nTake the resource-levelled schedule, not the network’s.\nFor each activity, cost per day = direct cost ÷ duration.\nFor each week, count each activity’s workdays inside that week and multiply.\nAdd across activities for the week’s planned value.\nAccumulate week by week. That curve is the baseline."
+  },
+  {
     "objectID": "slides/week-09.html#the-conferences-cost-per-day",
     "href": "slides/week-09.html#the-conferences-cost-per-day",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "The conference’s cost per day",
     "text": "The conference’s cost per day\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\nB\nC\nD\nE\nF\nG\nH\nI\n\n\n\n\n$1,000\n$6,000\n$1,000\n$2,000\n$1,500\n$500\n$1,000\n$1,000\n$1,250\n\n\n\nDirect cost divided by duration. Place each activity at its start and add up by week."
+  },
+  {
+    "objectID": "slides/week-09.html#one-week-worked-week-2-on-the-early-start-plan",
+    "href": "slides/week-09.html#one-week-worked-week-2-on-the-early-start-plan",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "One week, worked: week 2 on the early-start plan",
+    "text": "One week, worked: week 2 on the early-start plan\n\n\n\nActivity\nWorkdays in week 2\nCost per day\nPlanned value\n\n\n\n\nB\n2\n$6,000\n$12,000\n\n\nC\n3\n1,000\n3,000\n\n\nD\n3\n2,000\n6,000\n\n\nE\n2\n1,500\n3,000\n\n\nF\n2\n500\n1,000\n\n\nWeek 2\n\n\n$25,000\n\n\n\nWeek 2 is days 6 to 10. B finishes on day 7, D starts on day 8, E and F on day 9."
   },
   {
     "objectID": "slides/week-09.html#the-early-start-baseline",
@@ -4240,6 +4324,62 @@
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "One sentence for the week",
     "text": "One sentence for the week\nA network tells you what could run together. A resource schedule tells you what will. A time-phased budget tells you what that costs, week by week."
+  },
+  {
+    "objectID": "slides/week-09.html#what-the-sheet-already-holds",
+    "href": "slides/week-09.html#what-the-sheet-already-holds",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "What the sheet already holds",
+    "text": "What the sheet already holds\n\nNine rows: activity, ID, duration, predecessors as row numbers, cost\nStart Mon 2 Nov 2026, Monday to Friday, no holidays\nKim, Lee and Ortiz assigned as the early-start plan needs them, 100% each\nColumn formulas for cost per day and weekly planned value\nSheet Summary: project finish, total cost, weekly and cumulative totals\n\n\nNothing in it knows yet that only three people exist.\nTo rebuild it: import the Week 9 Smartsheet workbook, tab Smartsheet Import. Its Formulas tab lists every column and summary formula."
+  },
+  {
+    "objectID": "slides/week-09.html#step-1-dependencies-on",
+    "href": "slides/week-09.html#step-1-dependencies-on",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Step 1 · Dependencies on",
+    "text": "Step 1 · Dependencies on\nProject Settings → Dependency Settings: enable, map Predecessors, Duration, Start Date, End Date.\n\nWatch: every date fills in from row 1’s start. Gantt view, Critical Path on.\n\n\nRead: finish Fri 4 Dec, workday 25. Critical path A, C, E, G, H, I. Summary: total cost $70,000, cumulative to week 2 $48,000."
+  },
+  {
+    "objectID": "slides/week-09.html#step-2-who-is-double-booked",
+    "href": "slides/week-09.html#step-2-who-is-double-booked",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Step 2 · Who is double-booked",
+    "text": "Step 2 · Who is double-booked\nGantt view. Filter: Assigned To has Kim. Then Lee. Then Ortiz.\n\nRead: Kim’s D and F overlap Thu 12 to Mon 16 Nov. Lee’s E and F overlap Thu 12 to Wed 18 Nov. Ortiz is never doubled.\n\n\nThe critical-path review passed this plan. The people did not."
+  },
+  {
+    "objectID": "slides/week-09.html#step-3-one-resource-link",
+    "href": "slides/week-09.html#step-3-one-resource-link",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Step 3 · One resource link",
+    "text": "Step 3 · One resource link\nRow 6 (F): Predecessors 3 becomes 3, 5. F now waits for E.\n\nKim is on F and G together. Row 6 Assigned To: Lee, Ortiz.\n\n\nRead: finish Tue 8 Dec, workday 27. F is now red in the Gantt. Cumulative to week 2: $47,000."
+  },
+  {
+    "objectID": "slides/week-09.html#step-4-two-people",
+    "href": "slides/week-09.html#step-4-two-people",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Step 4 · Two people",
+    "text": "Step 4 · Two people\nRemove Ortiz from every row. Row 6 back to 3. The filters show Kim and Lee doubled for most of November.\n\nThe rule’s five links: row 2 1, 3; row 5 3, 2; row 4 2, 5; row 6 3, 4; row 7 4, 5, 6. Finish Thu 24 Dec.\n\n\nUndo. The optimum’s three links: row 3 1, 2; row 6 3, 5; row 7 4, 5, 6. Finish Fri 18 Dec."
+  },
+  {
+    "objectID": "slides/week-09.html#step-5-the-budget-moves-with-the-schedule",
+    "href": "slides/week-09.html#step-5-the-budget-moves-with-the-schedule",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Step 5 · The budget moves with the schedule",
+    "text": "Step 5 · The budget moves with the schedule\nSheet Summary, cumulative to week 2:\n\n\n\nSchedule\nCumulative to week 2\nFinish\n\n\n\n\nEarly start\n$48,000\nFri 4 Dec\n\n\nThree coordinators\n47,000\nTue 8 Dec\n\n\nTwo, the rule\n20,000\nThu 24 Dec\n\n\nTwo, the optimum\n41,000\nFri 18 Dec\n\n\n\nTotal cost reads $70,000 every time. Only the timing changes."
+  },
+  {
+    "objectID": "slides/week-09.html#step-6-two-holidays",
+    "href": "slides/week-09.html#step-6-two-holidays",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Step 6 · Two holidays",
+    "text": "Step 6 · Two holidays\nProject Settings → Dependency Settings → Holidays: Thu 26 and Fri 27 Nov.\n\nEvery date after them slides two days. Workday counts and allocations do not change.\n\n\nThree coordinators: Tue 8 Dec becomes Thu 10 Dec. Two, optimum: Fri 18 Dec becomes Tue 22 Dec."
+  },
+  {
+    "objectID": "slides/week-09.html#what-the-software-did-and-did-not-do",
+    "href": "slides/week-09.html#what-the-software-did-and-did-not-do",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "What the software did, and did not do",
+    "text": "What the software did, and did not do\nIt computed every date, drew the Gantt, showed who was doubled, and re-phased the budget instantly.\n\nIt did not decide which activity waits. Every resource link was a human decision, typed into Predecessors.\n\n\nSix months on, a resource link looks exactly like a logic link. Write “resource” in the row comment when you add one."
   },
   {
     "objectID": "slides/week-09.html#studio-9-heuristic-versus-optimal-and-the-price-of-the-difference",
@@ -4862,7 +5002,7 @@
     "href": "weeks/week-09.html#studio-9-heuristic-versus-optimal-and-the-price-of-the-difference",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "Studio 9 · Heuristic versus optimal, and the price of the difference",
-    "text": "Studio 9 · Heuristic versus optimal, and the price of the difference\nComplete the Week 9 studio.\nYou will load the conference’s early-start schedule and find the days it asks for more coordinators than exist. You will level it by hand with the parallel method for a team of three and then a team of two, recording every priority decision. You will then find the best two-coordinator schedule by trying every feasible order in a short Colab notebook, and put a number of days and dollars on the gap between the heuristic and the optimum. Finally you will time-phase the $70,000 budget to the schedule you would actually run, and let Gemini level the same project cold and argue with it.\nLevel it yourself first. The model can produce a schedule in seconds; only you will notice whether it kept two people on B for five days or quietly split the activity."
+    "text": "Studio 9 · Heuristic versus optimal, and the price of the difference\nComplete the Week 9 studio.\nYou will load the conference’s early-start schedule and find the days it asks for more coordinators than exist. You will level it by hand with the parallel method for a team of three and then a team of two, recording every priority decision. You will then find the best two-coordinator schedule by trying every feasible order in a short Colab notebook, and put a number of days and dollars on the gap between the heuristic and the optimum. Finally you will time-phase the $70,000 budget to the schedule you would actually run, and let Gemini level the same project cold and argue with it.\nLevel it yourself first. The model can produce a schedule in seconds; only you will notice whether it kept two people on B for five days or quietly split the activity.\nTuesday’s session ends with the same conference built live in Smartsheet. The Week 9 Smartsheet workbook holds the import tab and every formula used, so you can rebuild the sheet in your own account and repeat the six steps from the deck."
   },
   {
     "objectID": "weeks/week-09.html#sources",
