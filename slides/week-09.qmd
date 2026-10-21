@@ -809,7 +809,7 @@ Six months on, a resource link looks exactly like a logic link. Write "resource"
 
 ## 3 · Heuristic versus optimal
 
-- Twenty lines of Python try every precedence-feasible order
+- The Week 9 levelling notebook in Colab: enter the table, run all; it logs the heuristic and finds the optimum
 - Optimum finish against your heuristic finish
 - The price: days, and dollars at the venue's penalty
 

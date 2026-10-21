@@ -391,7 +391,7 @@ Exercises are reproduced from Larson & Gray, *Project Management: The Managerial
 
 Complete the [Week 9 studio](../labs/lab-09.qmd).
 
-You will load the conference's early-start schedule and find the days it asks for more coordinators than exist. You will level it by hand with the parallel method for a team of three and then a team of two, recording every priority decision. You will then find the best two-coordinator schedule by trying every feasible order in a short Colab notebook, and put a number of days and dollars on the gap between the heuristic and the optimum. Finally you will time-phase the \$70,000 budget to the schedule you would actually run, and let Gemini level the same project cold and argue with it.
+You will load the conference's early-start schedule and find the days it asks for more coordinators than exist. You will level it by hand with the parallel method for a team of three and then a team of two, recording every priority decision. You will then find the best two-coordinator schedule with the [Week 9 levelling notebook](../files/week-09-resource-levelling.ipynb) in Colab, which also runs the parallel method and prints its decision log, and put a number of days and dollars on the gap between the heuristic and the optimum. Finally you will time-phase the \$70,000 budget to the schedule you would actually run, and let Gemini level the same project cold and argue with it.
 
 Level it yourself first. The model can produce a schedule in seconds; only you will notice whether it kept two people on B for five days or quietly split the activity.
 
