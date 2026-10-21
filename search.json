@@ -4407,7 +4407,7 @@
     "href": "slides/week-09.html#heuristic-versus-optimal",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "3 · Heuristic versus optimal",
-    "text": "3 · Heuristic versus optimal\n\nThe Week 9 levelling notebook in Colab: enter the table, run all; it logs the heuristic and finds the optimum\nOptimum finish against your heuristic finish\nThe price: days, and dollars at the venue’s penalty"
+    "text": "3 · Heuristic versus optimal\n\nThe Week 9 levelling notebook opens in Colab: enter the table, run all; it logs the heuristic and finds the optimum\nOptimum finish against your heuristic finish\nThe price: days, and dollars at the venue’s penalty"
   },
   {
     "objectID": "slides/week-09.html#time-phase-the-budget",
@@ -5002,7 +5002,7 @@
     "href": "weeks/week-09.html#studio-9-heuristic-versus-optimal-and-the-price-of-the-difference",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "Studio 9 · Heuristic versus optimal, and the price of the difference",
-    "text": "Studio 9 · Heuristic versus optimal, and the price of the difference\nComplete the Week 9 studio.\nYou will load the conference’s early-start schedule and find the days it asks for more coordinators than exist. You will level it by hand with the parallel method for a team of three and then a team of two, recording every priority decision. You will then find the best two-coordinator schedule with the Week 9 levelling notebook in Colab, which also runs the parallel method and prints its decision log, and put a number of days and dollars on the gap between the heuristic and the optimum. Finally you will time-phase the $70,000 budget to the schedule you would actually run, and let Gemini level the same project cold and argue with it.\nLevel it yourself first. The model can produce a schedule in seconds; only you will notice whether it kept two people on B for five days or quietly split the activity.\nTuesday’s session ends with the same conference built live in Smartsheet. The Week 9 Smartsheet workbook holds the import tab and every formula used, so you can rebuild the sheet in your own account and repeat the six steps from the deck."
+    "text": "Studio 9 · Heuristic versus optimal, and the price of the difference\nComplete the Week 9 studio.\nYou will load the conference’s early-start schedule and find the days it asks for more coordinators than exist. You will level it by hand with the parallel method for a team of three and then a team of two, recording every priority decision. You will then find the best two-coordinator schedule with the Week 9 levelling notebook, which opens in Colab, which also runs the parallel method and prints its decision log, and put a number of days and dollars on the gap between the heuristic and the optimum. Finally you will time-phase the $70,000 budget to the schedule you would actually run, and let Gemini level the same project cold and argue with it.\nLevel it yourself first. The model can produce a schedule in seconds; only you will notice whether it kept two people on B for five days or quietly split the activity.\nTuesday’s session ends with the same conference built live in Smartsheet. The Week 9 Smartsheet workbook holds the import tab and every formula used, so you can rebuild the sheet in your own account and repeat the six steps from the deck."
   },
   {
     "objectID": "weeks/week-09.html#sources",
