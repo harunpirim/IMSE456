@@ -4386,49 +4386,56 @@
     "href": "slides/week-09.html#studio-9-heuristic-versus-optimal-and-the-price-of-the-difference",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "Studio 9 · Heuristic versus optimal, and the price of the difference",
-    "text": "Studio 9 · Heuristic versus optimal, and the price of the difference\n\nLoad the early-start schedule and find the days over the limit.\nLevel by hand with the parallel method: three coordinators, then two.\nFind the optimum by trying every feasible order in Colab; price the gap.\nTime-phase the $70,000 to the schedule you would actually run.\nLet Gemini level it cold, then argue.\nSave your copy, then upload the PDF to Blackboard."
+    "text": "Studio 9 · Heuristic versus optimal, and the price of the difference\n\nLoad the early-start schedule by hand; check it in the notebook.\nLevel by hand with the parallel method: three coordinators, then two; compare logs with the notebook’s.\nLet the notebook find the optimum; price the gap; test a five-day loan.\nTime-phase the $70,000 and pick the baseline you would run.\nLet Gemini level it cold, then check it against the notebook.\nSave your copy, then upload the PDF to Blackboard."
+  },
+  {
+    "objectID": "slides/week-09.html#two-tools-no-workbook",
+    "href": "slides/week-09.html#two-tools-no-workbook",
+    "title": "Week 9 · Scheduling Resources and Costs",
+    "section": "Two tools, no workbook",
+    "text": "Two tools, no workbook\nPaper for everything you compute: CPM, the load, two levelling logs, the reconciliation table.\nThe Week 9 levelling notebook to check every part, linked from the Studio 9 page. Open in Colab, File → Save a copy in Drive, edit only the EDIT cell.\n\n\n\nSetting\nPart\n\n\n\n\nLIMIT = 3\n1 and 2: CPM, load, three-coordinator log\n\n\nLIMIT = 2\n2, 3, 5: two-coordinator log, optimum, the check\n\n\nLOAN = (19, 23, 1)\n3: a third coordinator for five days\n\n\n\nSmartsheet is optional, to see any schedule as dates."
   },
   {
     "objectID": "slides/week-09.html#load",
     "href": "slides/week-09.html#load",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "1 · Load",
-    "text": "1 · Load\n\nCPM values for the studio’s demands\nEarly-start load by day, peak, days over the limit\nTime-constrained or resource-constrained? Apply the test."
+    "text": "1 · Load\n\nBy hand: ES, EF, LS, LF, slack for all nine activities\nBy hand: coordinators in use on each day 0 to 24, the peak, the days above three\nTime-constrained or resource-constrained? Apply the test.\n\n\nCheck: LIMIT = 3, Run all. Sections 1 and 2 print the CPM table and draw the load."
   },
   {
     "objectID": "slides/week-09.html#level-by-hand",
     "href": "slides/week-09.html#level-by-hand",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "2 · Level by hand",
-    "text": "2 · Level by hand\n\nParallel method, period by period\nMinimum slack, then shortest duration, then lowest ID\nEvery decision in the log: eligible, slack, started, delayed\nFinish day for three coordinators and for two"
+    "text": "2 · Level by hand\n\n\n\n\n\n\n\n\n\n\nPeriod\nRunning, in use\nEligible (slack, need)\nStarted\nDelayed\n\n\n\n\n0\n—, 0\nA (0, 1)\nA\n—\n\n\n2\n…\n…\n…\n…\n\n\n\n\nMinimum slack, then shortest duration, then lowest ID; slack = LF − period − duration\nOne row per period with a decision; three coordinators, then two\n\n\nCheck: section 3 prints the notebook’s own log. Find the first period where yours differs, and say who is right."
   },
   {
     "objectID": "slides/week-09.html#heuristic-versus-optimal",
     "href": "slides/week-09.html#heuristic-versus-optimal",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "3 · Heuristic versus optimal",
-    "text": "3 · Heuristic versus optimal\n\nThe Week 9 levelling notebook opens in Colab: enter the table, run all; it logs the heuristic and finds the optimum\nOptimum finish against your heuristic finish\nThe price: days, and dollars at the venue’s penalty"
+    "text": "3 · Heuristic versus optimal\n\nLIMIT = 2: the notebook’s optimum against your heuristic finish\nThe price in days, and in dollars at $1,500 a day past day 32\nWhy the rule lost: read period 2 of your log\n\n\nScenario 3. LOAN = (19, 23, 1): one extra coordinator on days 19 to 23 at $600 a day. Try at least three windows; compare the best with no loan and with a third coordinator all project."
   },
   {
     "objectID": "slides/week-09.html#time-phase-the-budget",
     "href": "slides/week-09.html#time-phase-the-budget",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "4 · Time-phase the budget",
-    "text": "4 · Time-phase the budget\n\nWeekly spend and cumulative for each schedule\nWhich baseline would you control against, and why\nThe status check: $52,000 invoiced at the end of week 2"
+    "text": "4 · Time-phase the budget\n\nSection 6, with LIMIT = 3 and LIMIT = 2: cumulative planned value by week for early start, heuristic and optimum\nEvery column totals $70,000\nWhich baseline would you control against, and why\n\n\nStatus check. $52,000 invoiced at the end of week 2. Over which baselines? What would you need to know before calling it an overrun?"
   },
   {
-    "objectID": "slides/week-09.html#let-the-model-level-it",
-    "href": "slides/week-09.html#let-the-model-level-it",
+    "objectID": "slides/week-09.html#ai-against-the-notebook",
+    "href": "slides/week-09.html#ai-against-the-notebook",
     "title": "Week 9 · Scheduling Resources and Costs",
-    "section": "5 · Let the model level it",
-    "text": "5 · Let the model level it\nGemini gets the table and the limit, nothing else.\n\nYou check three things it often gets wrong: a split activity, a broken predecessor, a day over the limit.\n\n\nThen reconcile, line by line, against yours and the optimum."
+    "section": "5 · AI against the notebook",
+    "text": "5 · AI against the notebook\nGemini gets the table and the limit, nothing else.\n\nIs its schedule feasible? Run its start days through the notebook’s check with LIMIT = 2 and LOAN = None.\n\n\nWhich does it match: your Part 2 log, the heuristic at day 39, the optimum at day 35, or none? If it claims to be the shortest possible, is it?\n\n\nA schedule shorter than 35 is infeasible somewhere. Find where."
   },
   {
     "objectID": "slides/week-09.html#save-and-upload",
     "href": "slides/week-09.html#save-and-upload",
     "title": "Week 9 · Scheduling Resources and Costs",
     "section": "6 · Save and upload",
-    "text": "6 · Save and upload\n\nOne PDF: load chart, two levelled schedules with the log, optimum and price, budget, reconciliation, AI acknowledgement\nSave your copy to the Google Drive or OneDrive on your NDSU account\nThen upload SA9_yourlastname.pdf to Blackboard before you leave"
+    "text": "6 · Save and upload\n\nOne PDF: hand CPM and load, two hand logs, the notebook’s report, Scenario 3, budgets and status check, reconciliation, AI acknowledgement\nSave your notebook copy, a photo of your hand work and the PDF to the Google Drive or OneDrive on your NDSU account\nThen upload SA9_yourlastname.pdf to Blackboard before you leave"
   },
   {
     "objectID": "slides/week-09.html#sources",
