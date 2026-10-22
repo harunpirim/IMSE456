@@ -787,54 +787,91 @@ Six months on, a resource link looks exactly like a logic link. Write "resource"
 
 ## Studio 9 · Heuristic versus optimal, and the price of the difference
 
-1. Load the early-start schedule and find the days over the limit.
-2. Level by hand with the parallel method: three coordinators, then two.
-3. Find the optimum by trying every feasible order in Colab; price the gap.
-4. Time-phase the $70,000 to the schedule you would actually run.
-5. Let Gemini level it cold, then argue.
+1. Load the early-start schedule by hand; check it in the notebook.
+2. Level by hand with the parallel method: three coordinators, then two; compare logs with the notebook's.
+3. Let the notebook find the optimum; price the gap; test a five-day loan.
+4. Time-phase the $70,000 and pick the baseline you would run.
+5. Let Gemini level it cold, then check it against the notebook.
 6. Save your copy, then upload the PDF to Blackboard.
+
+## Two tools, no workbook
+
+**Paper** for everything you compute: CPM, the load, two levelling logs, the reconciliation table.
+
+**The Week 9 levelling notebook** to check every part, linked from the Studio 9 page. Open in Colab, File → Save a copy in Drive, edit only the EDIT cell.
+
+| Setting | Part |
+|---|---|
+| `LIMIT = 3` | 1 and 2: CPM, load, three-coordinator log |
+| `LIMIT = 2` | 2, 3, 5: two-coordinator log, optimum, the check |
+| `LOAN = (19, 23, 1)` | 3: a third coordinator for five days |
+
+Smartsheet is optional, to see any schedule as dates.
 
 ## 1 · Load
 
-- CPM values for the studio's demands
-- Early-start load by day, peak, days over the limit
+- By hand: ES, EF, LS, LF, slack for all nine activities
+- By hand: coordinators in use on each day 0 to 24, the peak, the days above three
 - Time-constrained or resource-constrained? Apply the test.
+
+. . .
+
+Check: `LIMIT = 3`, Run all. Sections 1 and 2 print the CPM table and draw the load.
 
 ## 2 · Level by hand
 
-- Parallel method, period by period
-- Minimum slack, then shortest duration, then lowest ID
-- Every decision in the log: eligible, slack, started, delayed
-- Finish day for three coordinators and for two
+| Period | Running, in use | Eligible (slack, need) | Started | Delayed |
+|:-:|---|---|---|---|
+| 0 | —, 0 | A (0, 1) | A | — |
+| 2 | … | … | … | … |
+
+- Minimum slack, then shortest duration, then lowest ID; slack = LF − period − duration
+- One row per period with a decision; three coordinators, then two
+
+. . .
+
+Check: section 3 prints the notebook's own log. Find the first period where yours differs, and say who is right.
 
 ## 3 · Heuristic versus optimal
 
-- [The Week 9 levelling notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb) opens in Colab: enter the table, run all; it logs the heuristic and finds the optimum
-- Optimum finish against your heuristic finish
-- The price: days, and dollars at the venue's penalty
+- `LIMIT = 2`: the notebook's optimum against your heuristic finish
+- The price in days, and in dollars at $1,500 a day past day 32
+- Why the rule lost: read period 2 of your log
+
+. . .
+
+**Scenario 3.** `LOAN = (19, 23, 1)`: one extra coordinator on days 19 to 23 at $600 a day. Try at least three windows; compare the best with no loan and with a third coordinator all project.
 
 ## 4 · Time-phase the budget
 
-- Weekly spend and cumulative for each schedule
+- Section 6, with `LIMIT = 3` and `LIMIT = 2`: cumulative planned value by week for early start, heuristic and optimum
+- Every column totals $70,000
 - Which baseline would you control against, and why
-- The status check: $52,000 invoiced at the end of week 2
 
-## 5 · Let the model level it
+. . .
+
+**Status check.** $52,000 invoiced at the end of week 2. Over which baselines? What would you need to know before calling it an overrun?
+
+## 5 · AI against the notebook
 
 Gemini gets the table and the limit, nothing else.
 
 . . .
 
-You check three things it often gets wrong: a split activity, a broken predecessor, a day over the limit.
+Is its schedule feasible? Run its start days through the notebook's `check` with `LIMIT = 2` and `LOAN = None`.
 
 . . .
 
-Then reconcile, line by line, against yours and the optimum.
+Which does it match: your Part 2 log, the heuristic at day 39, the optimum at day 35, or none? If it claims to be the shortest possible, is it?
+
+. . .
+
+A schedule shorter than 35 is infeasible somewhere. Find where.
 
 ## 6 · Save and upload
 
-- One PDF: load chart, two levelled schedules with the log, optimum and price, budget, reconciliation, AI acknowledgement
-- Save your copy to the Google Drive or OneDrive on your NDSU account
+- One PDF: hand CPM and load, two hand logs, the notebook's report, Scenario 3, budgets and status check, reconciliation, AI acknowledgement
+- Save your notebook copy, a photo of your hand work and the PDF to the Google Drive or OneDrive on your NDSU account
 - Then upload `SA9_yourlastname.pdf` to Blackboard before you leave
 
 ## Sources
