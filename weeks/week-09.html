@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1923bcff4dd3134c996d2ac37cc691ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9104daac81efb73da29258ca94f65f62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cfab33a6bf2d0065be96bcd7a6150913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1148,10 +1148,9 @@ Figure&nbsp;5: Weekly spend and cumulative baseline for the early-start schedule
 <section id="step-1-upload" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-upload">Step 1 · Upload</h3>
 <ol type="1">
-<li>In Smartsheet choose <strong>+ Create → Import → Microsoft Excel</strong>, pick the workbook, and import the <strong>Smartsheet Import</strong> tab. Row 1 becomes the column headers and <em>Activity</em> the primary column.</li>
-<li>Check that A is in row 1 and I in row 9. Predecessors are <strong>row numbers</strong>, so a stray title row breaks every date; delete it if one appeared.</li>
-<li>Change column types: <em>Assigned To</em> → Contact List with <em>Allow multiple contacts per cell</em> ticked; <em>Cost</em> → Text/Number with currency formatting. Leave <em>Duration</em> and <em>Predecessors</em> as they are for the moment.</li>
-<li>Add two Date columns, <em>Start Date</em> and <em>End Date</em>, to the right of <em>Predecessors</em>.</li>
+<li>In Smartsheet choose <strong>+ Create → Import → Microsoft Excel</strong> and pick the workbook. Keep row 1 as column headers and <em>Activity</em> as the primary column. The workbook has one worksheet.</li>
+<li>Check that A is in row 1, I in row 9, and nothing below. Predecessors are <strong>row numbers</strong>, so a stray row breaks every date; delete it if one appeared.</li>
+<li>Check that <em>Start Date</em> in row 1 reads 11/02/26. If <em>Start Date</em> or <em>End Date</em> came in as text, right-click its header → <strong>Edit Column Properties</strong> → Date.</li>
 </ol>
 </section>
 <section id="step-2-activate-dependencies" class="level3">
@@ -1159,7 +1158,7 @@ Figure&nbsp;5: Weekly spend and cumulative baseline for the early-start schedule
 <ol type="1">
 <li>Right-click any column header → <strong>Project Settings</strong> (or File → Project Settings), tab <strong>Dependency Settings</strong>.</li>
 <li>Tick <strong>Dependencies Enabled</strong>, then map <em>Predecessors</em>, <em>Duration</em>, <em>Start Date</em> and <em>End Date</em> to the columns of those names. Working days Monday to Friday, holidays none, length of day 8 hours. Save.</li>
-<li>Type <strong>11/02/26</strong> into <em>Start Date</em> in row 1. Every other date fills in. If a predecessor cell came through blank, retype it: B 1, C 1, D 2, E 3, F 3, G 4, 5, H 6, 7, I 8.</li>
+<li>Every other date fills in from row 1’s start. If a predecessor cell came through blank, retype it: B 1, C 1, D 2, E 3, F 3, G 4, 5, H 6, 7, I 8.</li>
 <li>Switch to <strong>Gantt</strong> view and turn on <strong>Critical Path</strong> in the Gantt settings (gear on the Gantt toolbar).</li>
 </ol>
 <p><em>Check:</em> row 9 ends <strong>Fri 4 Dec</strong>, workday 25. The red bars are A, C, E, G, H and I.</p>
@@ -1168,11 +1167,11 @@ Figure&nbsp;5: Weekly spend and cumulative baseline for the early-start schedule
 <h3 class="anchored" data-anchor-id="step-3-see-who-is-double-booked">Step 3 · See who is double-booked</h3>
 <p>Resource views are not on every plan, so use filters, which are on all of them.</p>
 <ol type="1">
-<li>In Gantt view open <strong>Filter → New filter</strong>, condition <em>Assigned To</em> <strong>has</strong> <em>Kim</em>, name it Kim, save. Make Lee and Ortiz the same way.</li>
+<li>In Gantt view open <strong>Filter → New filter</strong>, condition <em>Assigned To</em> <strong>contains</strong> <em>Kim</em>, name it Kim, save. Make Lee and Ortiz the same way.</li>
 <li>Switch between the three filters. Where two bars overlap on the same dates, that person is doing two activities at once.</li>
 </ol>
 <p><em>Check:</em> Kim’s D and F overlap <strong>Thu 12 to Mon 16 Nov</strong>; Lee’s E and F overlap <strong>Thu 12 to Wed 18 Nov</strong>; Ortiz never overlaps. This is the loading chart from <a href="#fig-load" class="quarto-xref">Figure&nbsp;3</a> drawn per person, and it is the first place the critical-path schedule meets the people.</p>
-<p>If your plan does show a <strong>Resource Management</strong> tab in Project Settings, set <em>Assigned To</em> as the assignment column and <em>Allocation %</em> as the allocation column; a Resource View button then appears and shows the same days in red.</p>
+<p>If your plan does show a <strong>Resource Management</strong> tab in Project Settings, change <em>Assigned To</em> to a Contact List column, add an <em>Allocation %</em> column with 100% in every row, and select both on that tab; a Resource View button then appears and shows the same days in red.</p>
 </section>
 <section id="step-4-edit-level-with-resource-links" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-edit-level-with-resource-links">Step 4 · Edit: level with resource links</h3>
@@ -1189,10 +1188,10 @@ Figure&nbsp;5: Weekly spend and cumulative baseline for the early-start schedule
 </section>
 <section id="step-5-edit-time-phase-the-budget" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-edit-time-phase-the-budget">Step 5 · Edit: time-phase the budget</h3>
-<p>Smartsheet imports values, not formulas, so each formula is typed once in row 1 and converted. The workbook’s <strong>Formulas</strong> tab has all of them.</p>
+<p>Each formula is typed once in row 1 and converted with right-click → <strong>Convert to Column Formula</strong>.</p>
 <ol type="1">
 <li>Add a Text/Number column <em>Cost per day</em>. In row 1 enter <code>=Cost@row / NETWORKDAYS([Start Date]@row, [End Date]@row)</code>, then right-click the cell → <strong>Convert to Column Formula</strong>.</li>
-<li>Add columns <em>Wk 1 PV</em> to <em>Wk 8 PV</em> and enter each week’s formula from the Formulas tab. Each counts the activity’s workdays inside that week and multiplies by cost per day.</li>
+<li>Add columns <em>Wk 1 PV</em> to <em>Wk 8 PV</em>. Week 1 runs Mon 2 to Fri 6 Nov: <code>=MAX(0, NETWORKDAYS(IF([Start Date]@row &gt; DATE(2026, 11, 2), [Start Date]@row, DATE(2026, 11, 2)), IF([End Date]@row &lt; DATE(2026, 11, 6), [End Date]@row, DATE(2026, 11, 6)))) * [Cost per day]@row</code>. For each later week, add 7 days to both dates: week 2 is 9 to 13 Nov, week 3 16 to 20 Nov, and so on to week 8, 21 to 25 Dec.&nbsp;The formula counts the activity’s workdays inside the week and multiplies by cost per day.</li>
 <li>Open the <strong>Sheet Summary</strong> panel (right rail) and add fields: <em>Total cost</em> <code>=SUM(Cost:Cost)</code>, one <em>Wk n total</em> per week <code>=SUM([Wk 1 PV]:[Wk 1 PV])</code>, and cumulative fields that add them up.</li>
 </ol>
 <p><em>Check:</em> total cost is $70,000 under every schedule. On the early-start schedule the cumulative to week 2 is $48,000; with three coordinators $47,000; with two by the parallel method $20,000; with two by the optimum $41,000.</p>

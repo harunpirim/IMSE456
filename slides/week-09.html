@@ -1535,7 +1535,7 @@ Harun Pirim
 </ul>
 <div class="fragment">
 <p>Nothing in it knows yet that only three people exist.</p>
-<p>To rebuild it: import the <a href="../files/week-09-smartsheet-resource-workout.xlsx">Week 9 Smartsheet workbook</a>, tab Smartsheet Import. Its Formulas tab lists every column and summary formula.</p>
+<p>To rebuild it: import the conference workbook linked from the Studio 9 page; its one worksheet is the whole sheet.</p>
 </div>
 </section>
 <section id="step-1-dependencies-on" class="slide level2">
@@ -1641,138 +1641,39 @@ Harun Pirim
 </section>
 <section id="studio-9-heuristic-versus-optimal-and-the-price-of-the-difference" class="slide level2">
 <h2>Studio 9 · Heuristic versus optimal, and the price of the difference</h2>
+<p>Two parts, one file: the conference workbook, linked from the Studio 9 page.</p>
 <ol type="1">
-<li>Load the early-start schedule by hand; check it in the notebook.</li>
-<li>Level by hand with the parallel method: three coordinators, then two; compare logs with the notebook’s.</li>
-<li>Let the notebook find the optimum; price the gap; test a five-day loan.</li>
-<li>Time-phase the $70,000 and pick the baseline you would run.</li>
-<li>Let Gemini level it cold, then check it against the notebook.</li>
+<li><strong>Smartsheet.</strong> Import the workbook, turn on dependencies, see who is double-booked, resolve one conflict with a resource link.</li>
+<li><strong>Colab.</strong> Run the levelling notebook on the same workbook: the parallel method against the optimum, priced in days and dollars.</li>
 <li>Save your copy, then upload the PDF to Blackboard.</li>
 </ol>
 </section>
-<section id="two-tools-no-workbook" class="slide level2">
-<h2>Two tools, no workbook</h2>
-<p><strong>Paper</strong> for everything you compute: CPM, the load, two levelling logs, the reconciliation table.</p>
-<p><strong>The Week 9 levelling notebook</strong> to check every part, linked from the Studio 9 page. Open in Colab, File → Save a copy in Drive, edit only the EDIT cell.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Setting</th>
-<th>Part</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>LIMIT = 3</code></td>
-<td>1 and 2: CPM, load, three-coordinator log</td>
-</tr>
-<tr class="even">
-<td><code>LIMIT = 2</code></td>
-<td>2, 3, 5: two-coordinator log, optimum, the check</td>
-</tr>
-<tr class="odd">
-<td><code>LOAN = (19, 23, 1)</code></td>
-<td>3: a third coordinator for five days</td>
-</tr>
-</tbody>
-</table>
-<p>Smartsheet is optional, to see any schedule as dates.</p>
+<section id="part-1-smartsheet" class="slide level2">
+<h2>Part 1 · Smartsheet</h2>
+<ol type="1">
+<li><strong>+ Create → Import → Microsoft Excel</strong>; row 1 as headers, Activity as the primary column</li>
+<li><strong>Project Settings → Dependency Settings</strong>: enable, map Start Date, End Date, Duration, Predecessors; Monday to Friday</li>
+<li><strong>Gantt</strong>, Show Critical Path. Check: finish <strong>Fri 4 Dec</strong></li>
+<li><strong>Filters</strong> Assigned To contains Kim, Lee, Ortiz: who overlaps, on which dates</li>
+<li>Row 6 Predecessors <code>3, 5</code>, Assigned To <code>Lee, Ortiz</code>. Check: finish <strong>Tue 8 Dec</strong></li>
+</ol>
+<p>Screenshots 1 to 3 and four short answers.</p>
 </section>
-<section id="load" class="slide level2">
-<h2>1 · Load</h2>
+<section id="part-2-colab" class="slide level2">
+<h2>Part 2 · Colab</h2>
+<ol type="1">
+<li>Open the notebook from the Studio 9 page; <strong>File → Save a copy in Drive</strong>; <strong>Runtime → Run all</strong></li>
+<li>Section 0 loads the same workbook; check the table against your sheet</li>
+<li><code>LIMIT = 2</code>: read the parallel method’s log, the optimum, the checks and the report</li>
+<li><code>LIMIT = 3</code>, run all again: does it agree with Smartsheet’s Tue 8 Dec?</li>
+</ol>
+<p>Screenshots 4 to 6 and four short answers.</p>
+</section>
+<section id="part-3-save-and-upload" class="slide level2">
+<h2>Part 3 · Save and upload</h2>
 <ul>
-<li>By hand: ES, EF, LS, LF, slack for all nine activities</li>
-<li>By hand: coordinators in use on each day 0 to 24, the peak, the days above three</li>
-<li>Time-constrained or resource-constrained? Apply the test.</li>
-</ul>
-<div class="fragment">
-<p>Check: <code>LIMIT = 3</code>, Run all. Sections 1 and 2 print the CPM table and draw the load.</p>
-</div>
-</section>
-<section id="level-by-hand" class="slide level2">
-<h2>2 · Level by hand</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Period</th>
-<th>Running, in use</th>
-<th>Eligible (slack, need)</th>
-<th>Started</th>
-<th>Delayed</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td>—, 0</td>
-<td>A (0, 1)</td>
-<td>A</td>
-<td>—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Minimum slack, then shortest duration, then lowest ID; slack = LF − period − duration</li>
-<li>One row per period with a decision; three coordinators, then two</li>
-</ul>
-<div class="fragment">
-<p>Check: section 3 prints the notebook’s own log. Find the first period where yours differs, and say who is right.</p>
-</div>
-</section>
-<section id="heuristic-versus-optimal" class="slide level2">
-<h2>3 · Heuristic versus optimal</h2>
-<ul>
-<li><code>LIMIT = 2</code>: the notebook’s optimum against your heuristic finish</li>
-<li>The price in days, and in dollars at $1,500 a day past day 32</li>
-<li>Why the rule lost: read period 2 of your log</li>
-</ul>
-<div class="fragment">
-<p><strong>Scenario 3.</strong> <code>LOAN = (19, 23, 1)</code>: one extra coordinator on days 19 to 23 at $600 a day. Try at least three windows; compare the best with no loan and with a third coordinator all project.</p>
-</div>
-</section>
-<section id="time-phase-the-budget" class="slide level2">
-<h2>4 · Time-phase the budget</h2>
-<ul>
-<li>Section 6, with <code>LIMIT = 3</code> and <code>LIMIT = 2</code>: cumulative planned value by week for early start, heuristic and optimum</li>
-<li>Every column totals $70,000</li>
-<li>Which baseline would you control against, and why</li>
-</ul>
-<div class="fragment">
-<p><strong>Status check.</strong> $52,000 invoiced at the end of week 2. Over which baselines? What would you need to know before calling it an overrun?</p>
-</div>
-</section>
-<section id="ai-against-the-notebook" class="slide level2">
-<h2>5 · AI against the notebook</h2>
-<p>Gemini gets the table and the limit, nothing else.</p>
-<div class="fragment">
-<p>Is its schedule feasible? Run its start days through the notebook’s <code>check</code> with <code>LIMIT = 2</code> and <code>LOAN = None</code>.</p>
-</div>
-<div class="fragment">
-<p>Which does it match: your Part 2 log, the heuristic at day 39, the optimum at day 35, or none? If it claims to be the shortest possible, is it?</p>
-</div>
-<div class="fragment">
-<p>A schedule shorter than 35 is infeasible somewhere. Find where.</p>
-</div>
-</section>
-<section id="save-and-upload" class="slide level2">
-<h2>6 · Save and upload</h2>
-<ul>
-<li>One PDF: hand CPM and load, two hand logs, the notebook’s report, Scenario 3, budgets and status check, reconciliation, AI acknowledgement</li>
-<li>Save your notebook copy, a photo of your hand work and the PDF to the Google Drive or OneDrive on your NDSU account</li>
+<li>One PDF: Part 1 screenshots and answers, Part 2 screenshots and answers, AI acknowledgement if used</li>
+<li>Save the PDF, a Smartsheet export and your notebook link to the Google Drive or OneDrive on your NDSU account</li>
 <li>Then upload <code>SA9_yourlastname.pdf</code> to Blackboard before you leave</li>
 </ul>
 </section>
