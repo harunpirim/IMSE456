@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1923bcff4dd3134c996d2ac37cc691ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cfab33a6bf2d0065be96bcd7a6150913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9104daac81efb73da29258ca94f65f62.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -208,19 +208,25 @@ Level the conference by hand with the parallel method, find the optimum by brute
 Tools
 </dt>
 <dd>
-Week 9 workbook, Excel or Google Sheets, Google Colab, and Gemini (NDSU Gemini Pro account)
+Week 9 studio workbook, Excel or Google Sheets, Google Colab, Smartsheet, and Gemini (NDSU Gemini Pro account)
 </dd>
 <dt>
 Workbook
 </dt>
 <dd>
-<a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a>
+<a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a> · <a href="../files/week-09-smartsheet-resource-workout.xlsx">Smartsheet import workbook</a>
+</dd>
+<dt>
+Notebook
+</dt>
+<dd>
+<a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb">Week 9 levelling notebook</a>, opens in Colab
 </dd>
 <dt>
 AI use
 </dt>
 <dd>
-<strong>Level 4 — full use with documentation</strong> · level the project yourself first, then use AI to level it independently, compare, verify every number, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
+<strong>Level 4 — full use with documentation</strong> · level the project yourself first, then have AI level it independently, check its schedule against the Colab notebook’s results, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a>
 </dd>
 <dt>
 Week page
@@ -236,12 +242,13 @@ Week page
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>This is individual work.</strong> Parts 1 to 4 are done without AI. Part 5 brings the model in. What is graded most heavily is Part 5 and the price you put on the gap in Part 3: a schedule is a decision about money, and the reconciliation is where you show whose schedule to trust.</p>
+<p><strong>This is individual work.</strong> Parts 1 to 4 are done without AI. Part 5 brings the model in and tests it against the notebook. What is graded most heavily is Part 5 and the price you put on the gap in Part 3: a schedule is a decision about money, and the reconciliation is where you show whose schedule to trust.</p>
 </div>
 </div>
 </div>
 <p>The project is the conference from Weeks 6 and 7. Its network is unchanged, and the $70,000 baseline from Week 7 is now allocated to activities. What is new is that each activity needs one or two event coordinators while it runs, and the team is smaller than the early-start schedule assumes. The <a href="../weeks/week-09.html">Week 9 notes</a> walk through the three-coordinator case and show the two-coordinator result; this studio has you produce both by hand, test the heuristic against the optimum, and then answer the question the notes leave open: what is the cheapest way out?</p>
-<p>Download the <a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a>. It has eight sheets: <strong>Activities</strong>, <strong>Load ES</strong>, <strong>Level 3</strong>, <strong>Level 2</strong>, <strong>Loan</strong>, <strong>Log</strong>, <strong>Budget</strong> and <strong>Reconciliation</strong>. Fill the yellow cells. The load grids and the budget calculate from the start days you enter.</p>
+<p>Three files are used. The <a href="../files/week-09-resource-studio.xlsx">Week 9 resource studio workbook</a> is where you work by hand. The <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb">Week 9 levelling notebook</a> computes the heuristic and the optimum for any table and is the reference every other answer is checked against. The <a href="../files/week-09-smartsheet-resource-workout.xlsx">Smartsheet import workbook</a> rebuilds Tuesday’s live sheet if you want to see your schedules as dates; the <a href="../weeks/week-09.html#working-in-smartsheet">Week 9 notes</a> walk through it step by step.</p>
+<p>The studio workbook has eight sheets: <strong>Activities</strong>, <strong>Load ES</strong>, <strong>Level 3</strong>, <strong>Level 2</strong>, <strong>Loan</strong>, <strong>Log</strong>, <strong>Budget</strong> and <strong>Reconciliation</strong>. Fill the yellow cells. The load grids and the budget calculate from the start days you enter.</p>
 <table class="caption-top table">
 <caption>The parallel method’s rules, as the chapter states them.</caption>
 <colgroup>
@@ -337,9 +344,10 @@ Week page
 <li>Answer the status check at the bottom of the sheet: at the end of week 2 the sponsor has been invoiced $52,000. Against which baseline is that over, against which is it not, and what would you need to know before calling it an overrun?</li>
 </ol>
 </section>
-<section id="part-5-let-the-model-level-it-then-argue-15-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-5-let-the-model-level-it-then-argue-15-minutes">Part 5 · Let the model level it, then argue — 15 minutes</h3>
-<p>Give Gemini the problem cold, without your schedule. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.</p>
+<section id="part-5-ai-against-the-notebook-15-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-5-ai-against-the-notebook-15-minutes">Part 5 · AI against the notebook — 15 minutes</h3>
+<p>By now you hold three answers for the two-coordinator case: your hand-levelled schedule from Part 2, and the notebook’s parallel-method and optimum schedules from Part 3. Now get a fourth from Gemini and find out which of the three it matches, if any. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.</p>
+<p>Give the model the problem cold, without any schedule.</p>
 <pre class="text"><code>Level this project for two coordinators. Show the start and finish day of
 every activity, the coordinators in use on each day, and the project finish.
 Rules: an activity starts only after all its predecessors finish; no day may
@@ -349,8 +357,14 @@ starts. State the priority rule you used whenever two activities competed.
 [paste the Activities table: ID, predecessors, duration, coordinators]
 
 Then say whether your schedule is the shortest possible, and how you know.</code></pre>
-<p>In the <strong>Reconciliation</strong> sheet, compare its schedule with yours and with the optimum, line by line. Models often do one of three things: start an activity before a predecessor finishes, use three coordinators on a day while claiming two, or pause an activity and resume it later. Check for each. For every difference, say who is right and why. Correct your sheet if the model found a real improvement; record its error if it made one.</p>
-<p>Keep the reconciliation to one page. If the model’s schedule is correct and matches the optimum, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.</p>
+<p>In the <strong>Reconciliation</strong> sheet, enter the model’s values in one column and the notebook’s optimum in the next, line by line: finish day, the start of B, C and E, peak coordinators, any day over the limit, any predecessor violated, any activity split. Then answer, in the sheet:</p>
+<ol type="1">
+<li><strong>Is the model’s schedule feasible?</strong> Run the notebook’s three checks on it by eye: logic, limit, no splitting. Models often start D before B finishes, use three people on a day while claiming two, or pause E and resume it. Name the day and the activity for each failure you find.</li>
+<li><strong>Which of the three does it match?</strong> Your Part 2 schedule, the notebook’s parallel method (day 39), the notebook’s optimum (day 35), or none. If it claims its schedule is the shortest possible, check that claim against the optimum and say whether it is true.</li>
+<li><strong>Who is right where they differ?</strong> For every line where the model and the notebook disagree, say which is correct and why. The notebook enumerated every feasible order, so a model schedule shorter than the optimum is infeasible somewhere; find where.</li>
+<li><strong>What changed your mind?</strong> If the model found something you had wrong in Part 2, correct your sheet and say so. If the model was wrong and the notebook right, record the error.</li>
+</ol>
+<p>Keep the reconciliation to one page. If the model’s schedule is feasible and matches the optimum, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.</p>
 </section>
 <section id="part-6-save-and-upload" class="level3 part">
 <h3 class="anchored" data-anchor-id="part-6-save-and-upload">Part 6 · Save and upload</h3>
@@ -360,10 +374,10 @@ Then say whether your schedule is the shortest possible, and how you know.</code
 <li><label><input type="checkbox">Level 3 and Level 2 grids, each with its finish day, and the Log</label></li>
 <li><label><input type="checkbox">the optimum finish and start days, the price of the heuristic in days and dollars, and your Scenario 3 recommendation with its numbers</label></li>
 <li><label><input type="checkbox">the Budget sheet, the baseline you chose and why, and the status-check answer</label></li>
-<li><label><input type="checkbox">reconciliation table, at most one page</label></li>
+<li><label><input type="checkbox">reconciliation table, at most one page: the model’s schedule against the notebook’s, with the feasibility checks and which of the three it matched</label></li>
 <li><label><input type="checkbox">AI acknowledgement with tool, transcript link, changes and verification</label></li>
 </ul>
-<p>Save the workbook, the Colab notebook link, the transcript link and the PDF in <code>IMSE456/studio-09/</code> on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.</p>
+<p>Save the workbook, your copy of the Colab notebook, the transcript link and the PDF in <code>IMSE456/studio-09/</code> on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.</p>
 <p>Then upload the PDF to Blackboard before you leave the session. Name it <code>SA9_yourlastname.pdf</code>.</p>
 </section>
 <p>For further practice after the session, the chapter’s three levelling exercises are reproduced in the <a href="../weeks/week-09.html#chapter-exercises">Week 9 notes</a>. Exercise 1 is a single-resource case you can do on paper in ten minutes.</p>
