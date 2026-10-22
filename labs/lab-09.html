@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 Deliverable
 </dt>
 <dd>
-<strong>SA9</strong> — one PDF with your Smartsheet screenshots and answers (Part 1) and the notebook’s results and your answers (Part 2)
+<strong>SA9</strong> — one PDF with four screenshots and six short answers
 </dd>
 <dt>
 Studio
@@ -168,7 +168,7 @@ Produced in the Thursday session and uploaded to Blackboard before you leave —
 Session
 </dt>
 <dd>
-Import the conference into Smartsheet, switch on the settings, see how the coordinators are used and resolve one conflict; then find the heuristic and the optimal schedule in Colab and price the difference
+70 minutes: Smartsheet 35, Colab 25, upload 5, 5 spare
 </dd>
 <dt>
 Tools
@@ -208,210 +208,52 @@ Week page
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>This is individual work.</strong> Do both parts on your own computer. Your answers are graded, so write each one in full sentences next to the screenshot it refers to.</p>
+<p><strong>This is individual work.</strong> Download the <a href="../files/week-09-smartsheet-resource-workout.xlsx">conference workbook</a> before the session starts. Write each answer in one to three sentences next to its screenshot.</p>
 </div>
 </div>
 </div>
-<p>The project is the conference from Weeks 6 and 7, with two additions: each activity needs one or two of the three event coordinators while it runs, and each has a direct cost. The <a href="../weeks/week-09.html">Week 9 notes</a> explain why that matters. Today you see it two ways: in Smartsheet, as people booked twice on the same days, and in Colab, as the price of solving the problem with a rule of thumb instead of exactly.</p>
-<p>Both parts use one file. Download the <a href="../files/week-09-smartsheet-resource-workout.xlsx">conference workbook</a> before you start. It has one worksheet:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 76%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Column</th>
-<th style="text-align: left;">What it holds</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Activity, ID</td>
-<td style="text-align: left;">The nine activities, A to I, in rows 1 to 9</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Duration</td>
-<td style="text-align: left;">Workdays, written <code>2d</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Predecessors</td>
-<td style="text-align: left;"><strong>Row numbers</strong> of the immediate predecessors: B’s <code>1</code> means “after row 1, A”; G’s <code>4, 5</code> means “after D and E”</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Start Date, End Date</td>
-<td style="text-align: left;">Row 1 starts Mon 2 Nov 2026; Smartsheet fills in every other date</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Assigned To</td>
-<td style="text-align: left;">Which of Kim, Lee and Ortiz work on the activity</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Coordinators</td>
-<td style="text-align: left;">How many people the activity needs on each day it runs</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cost</td>
-<td style="text-align: left;">Direct cost, used by the notebook</td>
-</tr>
-</tbody>
-</table>
-<section id="part-1-smartsheet-how-the-coordinators-are-used-45-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-1-smartsheet-how-the-coordinators-are-used-45-minutes">Part 1 · Smartsheet: how the coordinators are used — 45 minutes</h3>
-<p><strong>1 · Import the workbook</strong></p>
+<p>The conference from Weeks 6 and 7 now has three coordinators, Kim, Lee and Ortiz, and each activity needs one or two of them. In Smartsheet you see the people booked twice; in Colab you see what a rule of thumb costs against the best schedule. The workbook’s <strong>Predecessors</strong> are row numbers: G’s <code>4, 5</code> means “after rows 4 and 5, D and E”.</p>
+<section id="part-1-smartsheet-35-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-smartsheet-35-minutes">Part 1 · Smartsheet — 35 minutes</h3>
 <ol type="1">
-<li>In Smartsheet choose <strong>+ Create → Import → Microsoft Excel</strong> and select the conference workbook.</li>
-<li>In the import dialog keep <strong>row 1 as column headers</strong> and <strong>Activity</strong> as the primary column. Import.</li>
-<li>Check the sheet: nine rows, A in row 1 and I in row 9, nothing below row 9, and Start Date in row 1 reading 11/02/26. If Start Date or End Date came in as text, right-click its header → <strong>Edit Column Properties</strong> → type <strong>Date</strong>.</li>
+<li><strong>Import.</strong> <strong>+ Create → Import → Microsoft Excel</strong>, select the workbook. Keep row 1 as headers and <em>Activity</em> as the primary column. Check: nine rows, A to I, and Start Date in row 1 reads 11/02/26. If a date column came in as text, right-click its header → <strong>Edit Column Properties</strong> → Date.</li>
+<li><strong>Turn on dependencies.</strong> Right-click any column header → <strong>Project Settings</strong> → <strong>Dependency Settings</strong>. Tick <strong>Dependencies Enabled</strong> and map Start Date, End Date, Duration and Predecessors to the columns of those names. Monday to Friday, no holidays. <strong>OK</strong>. <em>Check:</em> row 9 ends <strong>Fri 4 Dec</strong>.</li>
+<li><strong>Critical path.</strong> Switch to <strong>Gantt</strong> view, open the Gantt settings (gear icon) and turn on <strong>Show Critical Path</strong>. <em>Check:</em> A, C, E, G, H and I are highlighted. <strong>Screenshot 1.</strong></li>
+<li><strong>Who is double-booked.</strong> <strong>Filter → New Filter</strong>: <em>Assigned To</em> · <em>contains</em> · <em>Kim</em>. Save it, then make <em>Lee</em> and <em>Ortiz</em> the same way. Apply each in turn: overlapping bars mean that person is on two activities at once. <strong>Screenshot 2</strong>: the Kim filter.</li>
+<li><strong>Resolve one conflict.</strong> Turn the filter off. In row 6 (F) change Predecessors from <code>3</code> to <code>3, 5</code>, so F waits for E, and change Assigned To to <code>Lee, Ortiz</code>. <em>Check:</em> finish <strong>Tue 8 Dec</strong>, and no filter shows overlaps. <strong>Screenshot 3.</strong></li>
 </ol>
-<p><strong>2 · Turn on the project settings</strong></p>
+<p><strong>Answer</strong></p>
 <ol type="1">
-<li>Right-click any column header → <strong>Project Settings</strong> (or <strong>File → Project Settings</strong>).</li>
-<li>On <strong>Dependency Settings</strong>, tick <strong>Dependencies Enabled</strong>. Map the columns: Start Date → <em>Start Date</em>, End Date → <em>End Date</em>, Duration → <em>Duration</em>, Predecessors → <em>Predecessors</em>.</li>
-<li>Working days <strong>Monday to Friday</strong>, holidays <strong>none</strong>, length of day <strong>8 hours</strong>. Click <strong>OK</strong>.</li>
-<li>Every End Date and every later Start Date fills in. If a Predecessors cell came through blank, retype it from the workbook.</li>
+<li>Who is double-booked, on which dates, by which activities, and why did the critical-path schedule do that?</li>
+<li>After the F change, what is the finish date, which activity joined the critical path, and why?</li>
+<li>What did Smartsheet do for you, and what did you have to decide yourself?</li>
 </ol>
-<p><em>Check:</em> row 9 (I) ends <strong>Fri 4 Dec</strong>.</p>
-<p><strong>3 · Show the critical path</strong></p>
+<p>If your Project Settings show a <strong>Resource Management</strong> tab, its Resource View shows the same overlaps in red; it needs Assigned To as a Contact List and an Allocation % column. Filters are enough for this studio.</p>
+</section>
+<section id="part-2-colab-25-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-colab-25-minutes">Part 2 · Colab — 25 minutes</h3>
 <ol type="1">
-<li>Switch to <strong>Gantt</strong> view (view switcher at the top left of the sheet).</li>
-<li>Open the Gantt settings (gear icon on the Gantt toolbar) and turn on <strong>Show Critical Path</strong>.</li>
+<li><strong>Open.</strong> Open the <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb">levelling notebook</a>, choose <strong>File → Save a copy in Drive</strong>, then <strong>Runtime → Run all</strong>. If Colab asks, choose <strong>Run anyway</strong>. Section 0 loads the same workbook; check it shows the nine activities.</li>
+<li><strong>Two coordinators.</strong> The notebook starts with <code>LIMIT = 2</code>: Ortiz has left. Read section 3, the parallel method and its decision log; section 4, the optimum; and section 6, the report. <strong>Screenshot 4</strong>: the two Gantt charts and the summary table in section 6.</li>
+<li><strong>Three coordinators.</strong> In the EDIT cell change <code>LIMIT = 2</code> to <code>LIMIT = 3</code> and run all again. Read the finish days in the summary table.</li>
 </ol>
-<p><em>Check:</em> A, C, E, G, H and I are highlighted. Take <strong>screenshot 1</strong>: the Gantt with the critical path.</p>
-<p><strong>4 · See how the coordinators are used</strong></p>
-<p>Smartsheet’s Resource View is not on every plan; filters work on all of them and show the same thing.</p>
-<ol type="1">
-<li>On the toolbar open <strong>Filter → New Filter</strong>. Condition: <strong>Assigned To</strong> · <strong>contains</strong> · <strong>Kim</strong>. Name it <em>Kim</em> and save it.</li>
-<li>Make <em>Lee</em> and <em>Ortiz</em> filters the same way.</li>
-<li>Apply each filter in turn. Where two bars overlap on the same dates, that person is working two activities at once.</li>
-</ol>
-<p>Record what you see in a table like this one, then take <strong>screenshot 2</strong>: the Gantt filtered to Kim.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 38%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Coordinator</th>
-<th style="text-align: left;">Activities that overlap</th>
-<th style="text-align: left;">Dates</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Kim</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lee</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ortiz</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p>If your Project Settings dialog does show a <strong>Resource Management</strong> tab, you may use it instead: change Assigned To to a Contact List column, add a column <em>Allocation %</em> with 100% in every row, select both on that tab, and open the <strong>Resource View</strong> from the toolbar. Over-booked days show in red.</p>
-<p><strong>5 · Resolve one conflict with a resource link</strong></p>
-<p>The notes’ parallel method decides that F, which needs two people, waits for E. Smartsheet cannot decide this for you; you type it.</p>
-<ol type="1">
-<li>Turn off the filter. In row 6 (F), change Predecessors from <code>3</code> to <code>3, 5</code>. F now starts after E finishes.</li>
-<li>F now overlaps G, and Kim is on G. In row 6 change Assigned To to <code>Lee, Ortiz</code>.</li>
-<li>Reapply the three filters. No bars should overlap.</li>
-<li>In row 6, add a comment: <em>resource link: F waits for E because the coordinators are busy</em>.</li>
-</ol>
-<p><em>Check:</em> the finish moves to <strong>Tue 8 Dec</strong>. Take <strong>screenshot 3</strong>: the Gantt with the critical path after the change.</p>
-<p><strong>Part 1 questions</strong></p>
-<ol type="1">
-<li>What is the finish date and the critical path before you changed anything?</li>
-<li>Who is double-booked, on which dates, and by which activities? Why did the critical-path schedule put those activities on the same days?</li>
-<li>After the F link, what is the new finish date, which activity joined the critical path, and why?</li>
-<li>In one or two sentences: what did Smartsheet do for you, and what did it not do?</li>
+<p>If Colab is blocked on your network, <a href="../files/week-09-resource-levelling.ipynb">download the notebook</a> and upload it with <strong>File → Upload notebook</strong>.</p>
+<p><strong>Answer</strong></p>
+<ol start="4" type="1">
+<li>With two coordinators, what finish day does the parallel method give, and the optimum? What is the gap in workdays, and in dollars at $1,500 per workday past day 32?</li>
+<li>In the log at period 2, which activity did the rule start and which did it delay? Why did that cost days?</li>
+<li>With three coordinators, does the notebook’s finish match the Tue 8 Dec you reached in Smartsheet? (Workday 27 is Tue 8 Dec.)</li>
 </ol>
 </section>
-<section id="part-2-colab-heuristic-versus-optimum-40-minutes" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-2-colab-heuristic-versus-optimum-40-minutes">Part 2 · Colab: heuristic versus optimum — 40 minutes</h3>
-<p><strong>1 · Open and run the notebook</strong></p>
-<ol type="1">
-<li>Open the <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb">Week 9 levelling notebook</a>. It opens in Colab, read-only.</li>
-<li>Choose <strong>File → Save a copy in Drive</strong>. Work in your copy from now on.</li>
-<li>Choose <strong>Runtime → Run all</strong>. The first run takes about a minute. If Colab asks whether to run a notebook not authored by Google, choose <strong>Run anyway</strong>.</li>
-<li>Section 0 downloads the same conference workbook and prints the activity table. Check it against your Smartsheet sheet: nine activities, the same predecessors, the same coordinators.</li>
-</ol>
-<p>If Colab is blocked on your network, <a href="../files/week-09-resource-levelling.ipynb">download the notebook</a> and upload it to Colab with <strong>File → Upload notebook</strong> from another connection.</p>
-<p><strong>2 · Read the results for two coordinators</strong></p>
-<p>The notebook starts with <code>LIMIT = 2</code> in the EDIT cell: Ortiz has left, and Kim and Lee carry everything. Scroll through the output.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 76%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Section</th>
-<th style="text-align: left;">What to read</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1 · CPM</td>
-<td style="text-align: left;">The network duration with unlimited people and the critical path; should match Smartsheet’s 25 workdays</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2 · Loading chart</td>
-<td style="text-align: left;">Coordinators needed each day; red where the early-start plan needs more than two</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3 · Parallel method</td>
-<td style="text-align: left;">The chapter’s heuristic, with a log of every decision and the finish day</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4 · Optimum</td>
-<td style="text-align: left;">The best possible schedule, found by trying every order the logic allows</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5 · Checks</td>
-<td style="text-align: left;">Both schedules respect every predecessor and never use more than two people</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6 · Report</td>
-<td style="text-align: left;">Both Gantt charts and the summary table with the penalty in dollars</td>
-</tr>
-</tbody>
-</table>
-<p>Take <strong>screenshot 4</strong>: the two Gantt charts in section 6. Take <strong>screenshot 5</strong>: the summary table below them.</p>
-<p><strong>3 · Run it again with three coordinators</strong></p>
-<ol type="1">
-<li>In the EDIT cell change <code>LIMIT = 2</code> to <code>LIMIT = 3</code>.</li>
-<li>Choose <strong>Runtime → Run all</strong> again.</li>
-<li>Read the finish days in the summary table. Take <strong>screenshot 6</strong>.</li>
-</ol>
-<p><strong>Part 2 questions</strong></p>
-<ol type="1">
-<li>With two coordinators, what finish day does the parallel method give, and what does the optimum give? What is the difference in workdays, and in dollars at the venue’s $1,500 per workday past day 32?</li>
-<li>Read the parallel method’s log in section 3 at period 2. Which activity did the rule start, which did it delay, and why did that choice cost days?</li>
-<li>With three coordinators, does the notebook’s finish agree with the finish you reached in Smartsheet in Part 1? Workday 27 is Tue 8 Dec.</li>
-<li>With two coordinators, which schedule would you give the sponsor, and what would you tell them about day 32?</li>
-</ol>
-</section>
-<section id="part-3-save-and-upload" class="level3 part">
-<h3 class="anchored" data-anchor-id="part-3-save-and-upload">Part 3 · Save and upload</h3>
-<p>Create one PDF in this order.</p>
+<section id="upload-5-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="upload-5-minutes">Upload — 5 minutes</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Part 1: screenshots 1, 2 and 3, the coordinator table, and answers 1 to 4</label></li>
-<li><label><input type="checkbox">Part 2: screenshots 4, 5 and 6, and answers 1 to 4</label></li>
-<li><label><input type="checkbox">the AI acknowledgement, if you used AI: tool, transcript link, what you checked</label></li>
+<li><label><input type="checkbox">One PDF: screenshots 1 to 4 with answers 1 to 6, and the AI acknowledgement if you used AI</label></li>
+<li><label><input type="checkbox">Saved to <code>IMSE456/studio-09/</code> on your NDSU Google Drive or OneDrive, with your notebook copy’s link</label></li>
+<li><label><input type="checkbox">Uploaded to Blackboard as <code>SA9_yourlastname.pdf</code> before you leave</label></li>
 </ul>
-<p>Save the PDF, an export of your Smartsheet sheet (<strong>File → Export → Export to Microsoft Excel</strong>) and the link to your notebook copy in <code>IMSE456/studio-09/</code> on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.</p>
-<p>Then upload the PDF to Blackboard before you leave the session. Name it <code>SA9_yourlastname.pdf</code>.</p>
 </section>
-<p>For further practice after the session, the chapter’s three levelling exercises are reproduced in the <a href="../weeks/week-09.html#chapter-exercises">Week 9 notes</a>, and the notes’ <a href="../weeks/week-09.html#working-in-smartsheet">Smartsheet section</a> takes the sheet further: two coordinators, a time-phased budget and holidays.</p>
+<p>To go further after class, the notes’ <a href="../weeks/week-09.html#working-in-smartsheet">Smartsheet section</a> takes the sheet to two coordinators, a time-phased budget and holidays, and the chapter’s <a href="../weeks/week-09.html#chapter-exercises">levelling exercises</a> are good paper practice.</p>
 <section id="source" class="level2">
 <h2 class="anchored" data-anchor-id="source">Source</h2>
 <ol type="1">
