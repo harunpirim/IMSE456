@@ -403,16 +403,15 @@ Tuesday's session ends with the conference built live in Smartsheet. Everything 
 
 ### Step 1 · Upload
 
-1. In Smartsheet choose **+ Create → Import → Microsoft Excel**, pick the workbook, and import the **Smartsheet Import** tab. Row 1 becomes the column headers and *Activity* the primary column.
-2. Check that A is in row 1 and I in row 9. Predecessors are **row numbers**, so a stray title row breaks every date; delete it if one appeared.
-3. Change column types: *Assigned To* → Contact List with *Allow multiple contacts per cell* ticked; *Cost* → Text/Number with currency formatting. Leave *Duration* and *Predecessors* as they are for the moment.
-4. Add two Date columns, *Start Date* and *End Date*, to the right of *Predecessors*.
+1. In Smartsheet choose **+ Create → Import → Microsoft Excel** and pick the workbook. Keep row 1 as column headers and *Activity* as the primary column. The workbook has one worksheet.
+2. Check that A is in row 1, I in row 9, and nothing below. Predecessors are **row numbers**, so a stray row breaks every date; delete it if one appeared.
+3. Check that *Start Date* in row 1 reads 11/02/26. If *Start Date* or *End Date* came in as text, right-click its header → **Edit Column Properties** → Date.
 
 ### Step 2 · Activate dependencies
 
 1. Right-click any column header → **Project Settings** (or File → Project Settings), tab **Dependency Settings**.
 2. Tick **Dependencies Enabled**, then map *Predecessors*, *Duration*, *Start Date* and *End Date* to the columns of those names. Working days Monday to Friday, holidays none, length of day 8 hours. Save.
-3. Type **11/02/26** into *Start Date* in row 1. Every other date fills in. If a predecessor cell came through blank, retype it: B 1, C 1, D 2, E 3, F 3, G 4, 5, H 6, 7, I 8.
+3. Every other date fills in from row 1's start. If a predecessor cell came through blank, retype it: B 1, C 1, D 2, E 3, F 3, G 4, 5, H 6, 7, I 8.
 4. Switch to **Gantt** view and turn on **Critical Path** in the Gantt settings (gear on the Gantt toolbar).
 
 *Check:* row 9 ends **Fri 4 Dec**, workday 25. The red bars are A, C, E, G, H and I.
@@ -421,12 +420,12 @@ Tuesday's session ends with the conference built live in Smartsheet. Everything 
 
 Resource views are not on every plan, so use filters, which are on all of them.
 
-1. In Gantt view open **Filter → New filter**, condition *Assigned To* **has** *Kim*, name it Kim, save. Make Lee and Ortiz the same way.
+1. In Gantt view open **Filter → New filter**, condition *Assigned To* **contains** *Kim*, name it Kim, save. Make Lee and Ortiz the same way.
 2. Switch between the three filters. Where two bars overlap on the same dates, that person is doing two activities at once.
 
 *Check:* Kim's D and F overlap **Thu 12 to Mon 16 Nov**; Lee's E and F overlap **Thu 12 to Wed 18 Nov**; Ortiz never overlaps. This is the loading chart from @fig-load drawn per person, and it is the first place the critical-path schedule meets the people.
 
-If your plan does show a **Resource Management** tab in Project Settings, set *Assigned To* as the assignment column and *Allocation %* as the allocation column; a Resource View button then appears and shows the same days in red.
+If your plan does show a **Resource Management** tab in Project Settings, change *Assigned To* to a Contact List column, add an *Allocation %* column with 100% in every row, and select both on that tab; a Resource View button then appears and shows the same days in red.
 
 ### Step 4 · Edit: level with resource links
 
@@ -439,10 +438,12 @@ If your plan does show a **Resource Management** tab in Project Settings, set *A
 
 ### Step 5 · Edit: time-phase the budget
 
-Smartsheet imports values, not formulas, so each formula is typed once in row 1 and converted. The workbook's **Formulas** tab has all of them.
+Each formula is typed once in row 1 and converted with right-click → **Convert to Column Formula**.
 
 1. Add a Text/Number column *Cost per day*. In row 1 enter `=Cost@row / NETWORKDAYS([Start Date]@row, [End Date]@row)`, then right-click the cell → **Convert to Column Formula**.
-2. Add columns *Wk 1 PV* to *Wk 8 PV* and enter each week's formula from the Formulas tab. Each counts the activity's workdays inside that week and multiplies by cost per day.
+2. Add columns *Wk 1 PV* to *Wk 8 PV*. Week 1 runs Mon 2 to Fri 6 Nov:
+   `=MAX(0, NETWORKDAYS(IF([Start Date]@row > DATE(2026, 11, 2), [Start Date]@row, DATE(2026, 11, 2)), IF([End Date]@row < DATE(2026, 11, 6), [End Date]@row, DATE(2026, 11, 6)))) * [Cost per day]@row`.
+   For each later week, add 7 days to both dates: week 2 is 9 to 13 Nov, week 3 16 to 20 Nov, and so on to week 8, 21 to 25 Dec. The formula counts the activity's workdays inside the week and multiplies by cost per day.
 3. Open the **Sheet Summary** panel (right rail) and add fields: *Total cost* `=SUM(Cost:Cost)`, one *Wk n total* per week `=SUM([Wk 1 PV]:[Wk 1 PV])`, and cumulative fields that add them up.
 
 *Check:* total cost is \$70,000 under every schedule. On the early-start schedule the cumulative to week 2 is \$48,000; with three coordinators \$47,000; with two by the parallel method \$20,000; with two by the optimum \$41,000.

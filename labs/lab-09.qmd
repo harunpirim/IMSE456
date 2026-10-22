@@ -7,163 +7,159 @@ release: "2026-10-19"
 
 ::: {.week-meta}
 <dl>
-<dt>Deliverable</dt><dd><strong>SA9</strong> — one PDF containing your hand CPM and load, two hand-levelled schedules with their decision logs, the notebook's results and the price of the gap, the time-phased budget, and the AI reconciliation</dd>
+<dt>Deliverable</dt><dd><strong>SA9</strong> — one PDF with your Smartsheet screenshots and answers (Part 1) and the notebook's results and your answers (Part 2)</dd>
 <dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
-<dt>Session</dt><dd>Level the conference by hand with the parallel method, check every step against the notebook, find the optimum, put a price on the difference, phase the budget to the schedule you would run, and test a model's schedule against the notebook</dd>
-<dt>Tools</dt><dd>Paper or a tablet, Google Colab, Gemini (NDSU Gemini Pro account), and optionally Smartsheet</dd>
+<dt>Session</dt><dd>Import the conference into Smartsheet, switch on the settings, see how the coordinators are used and resolve one conflict; then find the heuristic and the optimal schedule in Colab and price the difference</dd>
+<dt>Tools</dt><dd>Smartsheet (your NDSU account) and Google Colab</dd>
+<dt>Workbook</dt><dd><a href="../files/week-09-smartsheet-resource-workout.xlsx">Conference workbook</a> (Excel), used in both parts</dd>
 <dt>Notebook</dt><dd><a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb">Week 9 levelling notebook</a>, opens in Colab</dd>
-<dt>Smartsheet</dt><dd><a href="../files/week-09-smartsheet-resource-workout.xlsx">Smartsheet import workbook</a>, optional, to see schedules as dates</dd>
-<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · level the project yourself first, then have AI level it independently, check its schedule against the notebook's results, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a> if you use it</dd>
 <dt>Week page</dt><dd><a href="../weeks/week-09.qmd">Week 9 — Scheduling Resources and Costs</a></dd>
 </dl>
 :::
 
 ::: {.callout-important appearance="simple"}
-**This is individual work.** Parts 1 and 2 are done by hand, then checked against the notebook. Part 5 brings the model in and tests it against the notebook. What is graded most heavily is Part 5 and the price you put on the gap in Part 3: a schedule is a decision about money, and the reconciliation is where you show whose schedule to trust.
+**This is individual work.** Do both parts on your own computer. Your answers are graded, so write each one in full sentences next to the screenshot it refers to.
 :::
 
-The project is the conference from Weeks 6 and 7. Its network is unchanged, and the \$70,000 baseline from Week 7 is now allocated to activities. What is new is that each activity needs one or two event coordinators while it runs, and the team is smaller than the early-start schedule assumes. The [Week 9 notes](../weeks/week-09.qmd) walk through the three-coordinator case and show the two-coordinator result; this studio has you produce both by hand, test the heuristic against the optimum, and then answer the question the notes leave open: what is the cheapest way out?
+The project is the conference from Weeks 6 and 7, with two additions: each activity needs one or two of the three event coordinators while it runs, and each has a direct cost. The [Week 9 notes](../weeks/week-09.qmd) explain why that matters. Today you see it two ways: in Smartsheet, as people booked twice on the same days, and in Colab, as the price of solving the problem with a rule of thumb instead of exactly.
 
-You work on paper and check yourself in the [Week 9 levelling notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb). Open it in Colab, choose **File → Save a copy in Drive** so your edits are kept, and edit only the cell marked EDIT. Its default data is the table below. If Colab is blocked on your network, [download the notebook](../files/week-09-resource-levelling.ipynb) and upload it to Colab from another connection. If you want to see any schedule as calendar dates, the [Smartsheet section of the notes](../weeks/week-09.qmd#working-in-smartsheet) rebuilds Tuesday's sheet from the [Smartsheet import workbook](../files/week-09-smartsheet-resource-workout.xlsx).
+Both parts use one file. Download the [conference workbook](../files/week-09-smartsheet-resource-workout.xlsx) before you start. It has one worksheet:
 
-| ID | Activity | Predecessors | Days | Coordinators | Cost |
-|:--:|:--|:--:|--:|--:|--:|
-| A | Approve event brief | — | 2 | 1 | \$2,000 |
-| B | Contract venue | A | 5 | 2 | 30,000 |
-| C | Draft program | A | 6 | 1 | 6,000 |
-| D | Configure registration | B | 4 | 1 | 8,000 |
-| E | Confirm speakers | C | 8 | 2 | 12,000 |
-| F | Recruit exhibitors | C | 5 | 2 | 2,500 |
-| G | Publish program | D, E | 3 | 1 | 3,000 |
-| H | Prepare on-site materials | F, G | 4 | 2 | 4,000 |
-| I | Complete rehearsal | H | 2 | 2 | 2,500 |
-
-: The conference. Days are workdays counted from 0; an activity with ES 2 and duration 5 runs on days 2 to 6. {tbl-colwidths="[7,33,14,10,16,20]"}
-
-| Rule | Statement |
+| Column | What it holds |
 |:--|:--|
-| Logic | An activity starts only after every predecessor has finished |
-| Limit | On no day may the coordinators in use exceed the number available |
-| No splitting | Once an activity starts it runs to completion with the coordinators it was given |
-| Priority | When two eligible activities compete, minimum slack first, where slack = LF − today − duration; then shortest duration; then lowest ID |
+| Activity, ID | The nine activities, A to I, in rows 1 to 9 |
+| Duration | Workdays, written `2d` |
+| Predecessors | **Row numbers** of the immediate predecessors: B's `1` means "after row 1, A"; G's `4, 5` means "after D and E" |
+| Start Date, End Date | Row 1 starts Mon 2 Nov 2026; Smartsheet fills in every other date |
+| Assigned To | Which of Kim, Lee and Ortiz work on the activity |
+| Coordinators | How many people the activity needs on each day it runs |
+| Cost | Direct cost, used by the notebook |
 
-: The parallel method's rules, as the chapter states them. {tbl-colwidths="[18,82]"}
+: {tbl-colwidths="[24,76]"}
 
 ::: {.part}
-### Part 1 · Load the early-start schedule — 15 minutes
+### Part 1 · Smartsheet: how the coordinators are used — 45 minutes
 
-By hand first.
+**1 · Import the workbook**
 
-1. Compute ES, EF, LS, LF and total slack for all nine activities. These are the Week 6 values; reconstruct them from the predecessors rather than copying.
-2. Draw the early-start load: for each day 0 to 24, add up the coordinators of the activities in progress. Mark the peak and every day above three.
-3. Apply the chapter's classification test to a team of three coordinators. Is this project time-constrained or resource-constrained? Write one sentence that names the test and the answer.
+1. In Smartsheet choose **+ Create → Import → Microsoft Excel** and select the conference workbook.
+2. In the import dialog keep **row 1 as column headers** and **Activity** as the primary column. Import.
+3. Check the sheet: nine rows, A in row 1 and I in row 9, nothing below row 9, and Start Date in row 1 reading 11/02/26. If Start Date or End Date came in as text, right-click its header → **Edit Column Properties** → type **Date**.
 
-Then check. In the notebook's EDIT cell set `LIMIT = 3` and choose **Runtime → Run all**. Section 1 prints the CPM table and section 2 draws the loading chart. Compare both with yours; correct any difference and note what caused it.
+**2 · Turn on the project settings**
+
+1. Right-click any column header → **Project Settings** (or **File → Project Settings**).
+2. On **Dependency Settings**, tick **Dependencies Enabled**. Map the columns: Start Date → *Start Date*, End Date → *End Date*, Duration → *Duration*, Predecessors → *Predecessors*.
+3. Working days **Monday to Friday**, holidays **none**, length of day **8 hours**. Click **OK**.
+4. Every End Date and every later Start Date fills in. If a Predecessors cell came through blank, retype it from the workbook.
+
+*Check:* row 9 (I) ends **Fri 4 Dec**.
+
+**3 · Show the critical path**
+
+1. Switch to **Gantt** view (view switcher at the top left of the sheet).
+2. Open the Gantt settings (gear icon on the Gantt toolbar) and turn on **Show Critical Path**.
+
+*Check:* A, C, E, G, H and I are highlighted. Take **screenshot 1**: the Gantt with the critical path.
+
+**4 · See how the coordinators are used**
+
+Smartsheet's Resource View is not on every plan; filters work on all of them and show the same thing.
+
+1. On the toolbar open **Filter → New Filter**. Condition: **Assigned To** · **contains** · **Kim**. Name it *Kim* and save it.
+2. Make *Lee* and *Ortiz* filters the same way.
+3. Apply each filter in turn. Where two bars overlap on the same dates, that person is working two activities at once.
+
+Record what you see in a table like this one, then take **screenshot 2**: the Gantt filtered to Kim.
+
+| Coordinator | Activities that overlap | Dates |
+|:--|:--|:--|
+| Kim | | |
+| Lee | | |
+| Ortiz | | |
+
+: {tbl-colwidths="[22,38,40]"}
+
+If your Project Settings dialog does show a **Resource Management** tab, you may use it instead: change Assigned To to a Contact List column, add a column *Allocation %* with 100% in every row, select both on that tab, and open the **Resource View** from the toolbar. Over-booked days show in red.
+
+**5 · Resolve one conflict with a resource link**
+
+The notes' parallel method decides that F, which needs two people, waits for E. Smartsheet cannot decide this for you; you type it.
+
+1. Turn off the filter. In row 6 (F), change Predecessors from `3` to `3, 5`. F now starts after E finishes.
+2. F now overlaps G, and Kim is on G. In row 6 change Assigned To to `Lee, Ortiz`.
+3. Reapply the three filters. No bars should overlap.
+4. In row 6, add a comment: *resource link: F waits for E because the coordinators are busy*.
+
+*Check:* the finish moves to **Tue 8 Dec**. Take **screenshot 3**: the Gantt with the critical path after the change.
+
+**Part 1 questions**
+
+1. What is the finish date and the critical path before you changed anything?
+2. Who is double-booked, on which dates, and by which activities? Why did the critical-path schedule put those activities on the same days?
+3. After the F link, what is the new finish date, which activity joined the critical path, and why?
+4. In one or two sentences: what did Smartsheet do for you, and what did it not do?
 :::
 
 ::: {.part}
-### Part 2 · Level by hand — 25 minutes
+### Part 2 · Colab: heuristic versus optimum — 40 minutes
 
-Work period by period, exactly as the parallel method says, and keep a log with one row for every period in which you had a choice to make.
+**1 · Open and run the notebook**
 
-| Period | Running, coordinators in use | Eligible (slack, need) | Started | Delayed |
-|:--:|:--|:--|:--|:--|
-| 0 | — , 0 | A (0, 1) | A | — |
-| 2 | … | … | … | … |
+1. Open the [Week 9 levelling notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-09-resource-levelling.ipynb). It opens in Colab, read-only.
+2. Choose **File → Save a copy in Drive**. Work in your copy from now on.
+3. Choose **Runtime → Run all**. The first run takes about a minute. If Colab asks whether to run a notebook not authored by Google, choose **Run anyway**.
+4. Section 0 downloads the same conference workbook and prints the activity table. Check it against your Smartsheet sheet: nine activities, the same predecessors, the same coordinators.
 
-: Copy this layout onto paper. Slack is recomputed at each period as LF − period − duration. {tbl-colwidths="[10,26,28,18,18]"}
+If Colab is blocked on your network, [download the notebook](../files/week-09-resource-levelling.ipynb) and upload it to Colab with **File → Upload notebook** from another connection.
 
-1. **Three coordinators.** Level the project and record the start day of every activity and the finish day.
-2. **Two coordinators.** Repeat with two. Record the finish day.
+**2 · Read the results for two coordinators**
 
-Check two things before looking at the notebook. No activity started before all its predecessors finished. No day uses more coordinators than exist.
+The notebook starts with `LIMIT = 2` in the EDIT cell: Ortiz has left, and Kim and Lee carry everything. Scroll through the output.
 
-Then compare. Section 3 of the notebook prints the parallel method's own log. Run it with `LIMIT = 3`, then with `LIMIT = 2`. For each, find the first period where your log and the notebook's differ, if any, and say which is right and why. If you broke the priority rule on purpose somewhere, say so and keep your result; it is evidence for Part 3.
+| Section | What to read |
+|:--|:--|
+| 1 · CPM | The network duration with unlimited people and the critical path; should match Smartsheet's 25 workdays |
+| 2 · Loading chart | Coordinators needed each day; red where the early-start plan needs more than two |
+| 3 · Parallel method | The chapter's heuristic, with a log of every decision and the finish day |
+| 4 · Optimum | The best possible schedule, found by trying every order the logic allows |
+| 5 · Checks | Both schedules respect every predecessor and never use more than two people |
+| 6 · Report | Both Gantt charts and the summary table with the penalty in dollars |
+
+: {tbl-colwidths="[24,76]"}
+
+Take **screenshot 4**: the two Gantt charts in section 6. Take **screenshot 5**: the summary table below them.
+
+**3 · Run it again with three coordinators**
+
+1. In the EDIT cell change `LIMIT = 2` to `LIMIT = 3`.
+2. Choose **Runtime → Run all** again.
+3. Read the finish days in the summary table. Take **screenshot 6**.
+
+**Part 2 questions**
+
+1. With two coordinators, what finish day does the parallel method give, and what does the optimum give? What is the difference in workdays, and in dollars at the venue's \$1,500 per workday past day 32?
+2. Read the parallel method's log in section 3 at period 2. Which activity did the rule start, which did it delay, and why did that choice cost days?
+3. With three coordinators, does the notebook's finish agree with the finish you reached in Smartsheet in Part 1? Workday 27 is Tue 8 Dec.
+4. With two coordinators, which schedule would you give the sponsor, and what would you tell them about day 32?
 :::
 
 ::: {.part}
-### Part 3 · Heuristic versus optimal — 20 minutes
-
-The parallel method is a heuristic. With nine activities there are only 26 orders in which they can start without breaking a predecessor, so the optimum can be found by trying them all. Section 4 of the notebook does exactly that; section 5 checks both schedules; section 6 reports them side by side.
-
-1. With `LIMIT = 2`, record the notebook's optimum finish and start days next to your Part 2 result. The gap between the parallel method and the optimum is the price of the heuristic, in days.
-2. The sponsor's date is day 32 and the venue charges \$1,500 for every working day past it. The summary table converts both schedules into dollars; check one of them by hand.
-3. In two or three sentences, explain why the rule lost. Look at period 2 of your log: what did minimum slack see, and what did it fail to see?
-4. **Scenario 3.** The department will lend a third coordinator for five consecutive days at \$600 a day, days of your choosing. In the EDIT cell keep `LIMIT = 2` and set `LOAN = (19, 23, 1)`, meaning one extra coordinator on workdays 19 to 23. Run all and read the summary's *penalty + loan* column. Try at least three other windows. Find the window with the lowest total, and compare it with the two-coordinator optimum without a loan and with a third coordinator for the whole project (`LIMIT = 3`, finish day 27, at \$600 a day for every day of the project). Which would you recommend to the sponsor, in one sentence with the numbers?
-:::
-
-::: {.part}
-### Part 4 · Time-phase the budget — 15 minutes
-
-Section 6 of the notebook spreads each activity's cost evenly over its days and totals it by five-day week for the early-start schedule, the parallel method and the optimum.
-
-1. Run with `LIMIT = 3` and with `LIMIT = 2`, and record the cumulative planned value at the end of each week for every schedule. Check that each totals \$70,000.
-2. Say which baseline you would control the project against, and why that one.
-3. **Status check.** At the end of week 2 the sponsor has been invoiced \$52,000. Against which baselines is that over, against which is it not, and what would you need to know before calling it an overrun?
-:::
-
-::: {.part}
-### Part 5 · AI against the notebook — 15 minutes
-
-By now you hold three answers for the two-coordinator case: your hand-levelled schedule from Part 2, and the notebook's parallel-method and optimum schedules from Part 3. Now get a fourth from Gemini and find out which of the three it matches, if any. Use your NDSU Gemini Pro account; the free tier can run out partway through a studio. If you cannot get access, see the instructor or TA rather than paying for an account.
-
-Give the model the problem cold, without any schedule.
-
-```text
-Level this project for two coordinators. Show the start and finish day of
-every activity, the coordinators in use on each day, and the project finish.
-Rules: an activity starts only after all its predecessors finish; no day may
-use more than two coordinators; an activity cannot be interrupted once it
-starts. State the priority rule you used whenever two activities competed.
-
-[paste the conference table above: ID, predecessors, days, coordinators]
-
-Then say whether your schedule is the shortest possible, and how you know.
-```
-
-Build a reconciliation table like this one, with one row per line.
-
-| Line | Yours (Part 2) | Model | Notebook optimum | Who is right, and why |
-|:--|:--|:--|:--|:--|
-| Finish day | | | | |
-| Start of B, C, E | | | | |
-| Peak coordinators | | | | |
-| Any day over the limit? | | | | |
-| Any predecessor violated? | | | | |
-| Any activity split? | | | | |
-| Claims shortest possible? True? | | | | |
-
-: {tbl-colwidths="[24,14,14,16,32]"}
-
-Then answer:
-
-1. **Is the model's schedule feasible?** Apply the three checks to it by eye: logic, limit, no splitting. Models often start D before B finishes, use three people on a day while claiming two, or pause E and resume it. Name the day and the activity for each failure you find. To be sure, set `LIMIT = 2` and `LOAN = None`, run all, and type the model's start days into the notebook's `check` function in a new cell: `check({"A": 0, "B": ..., ...}, "model")`.
-2. **Which of the three does it match?** Your Part 2 schedule, the notebook's parallel method (day 39), the notebook's optimum (day 35), or none. If it claims its schedule is the shortest possible, check that claim against the optimum and say whether it is true.
-3. **Who is right where they differ?** For every line where the model and the notebook disagree, say which is correct and why. The notebook tried every feasible order, so a model schedule shorter than the optimum is infeasible somewhere; find where.
-4. **What changed your mind?** If the model found something you had wrong in Part 2, correct your log and say so. If the model was wrong and the notebook right, record the error.
-
-Keep the reconciliation to one page. If the model's schedule is feasible and matches the optimum, say so in the first row and describe the two checks you made to be sure. That is a finding, not a failure.
-:::
-
-::: {.part}
-### Part 6 · Save and upload
+### Part 3 · Save and upload
 
 Create one PDF in this order.
 
-- [ ] your hand CPM table and early-start load, with the notebook's versions and any correction noted
-- [ ] your two hand logs with their finish days, and the first difference from the notebook's log for each
-- [ ] the notebook's report for `LIMIT = 2`: the Gantt pair, the summary table, and the price of the heuristic in days and dollars, with your explanation of why the rule lost
-- [ ] your Scenario 3 windows, the best one, and your recommendation with its numbers
-- [ ] the cumulative budgets, the baseline you chose and why, and the status-check answer
-- [ ] reconciliation table, at most one page, with the feasibility checks and which schedule the model matched
-- [ ] AI acknowledgement with tool, transcript link, changes and verification
+- [ ] Part 1: screenshots 1, 2 and 3, the coordinator table, and answers 1 to 4
+- [ ] Part 2: screenshots 4, 5 and 6, and answers 1 to 4
+- [ ] the AI acknowledgement, if you used AI: tool, transcript link, what you checked
 
-Save your copy of the Colab notebook, a photo or scan of your hand work, the transcript link and the PDF in `IMSE456/studio-09/` on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.
+Save the PDF, an export of your Smartsheet sheet (**File → Export → Export to Microsoft Excel**) and the link to your notebook copy in `IMSE456/studio-09/` on the Google Drive or OneDrive that comes with your NDSU account. That copy is yours.
 
 Then upload the PDF to Blackboard before you leave the session. Name it `SA9_yourlastname.pdf`.
 :::
 
-For further practice after the session, the chapter's three levelling exercises are reproduced in the [Week 9 notes](../weeks/week-09.qmd#chapter-exercises). Exercise 1 is a single-resource case you can do on paper in ten minutes.
+For further practice after the session, the chapter's three levelling exercises are reproduced in the [Week 9 notes](../weeks/week-09.qmd#chapter-exercises), and the notes' [Smartsheet section](../weeks/week-09.qmd#working-in-smartsheet) takes the sheet further: two coordinators, a time-phased budget and holidays.
 
 ## Source
 
