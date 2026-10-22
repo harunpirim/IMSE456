@@ -787,36 +787,29 @@ Six months on, a resource link looks exactly like a logic link. Write "resource"
 
 ## Studio 9 · Heuristic versus optimal, and the price of the difference
 
-Two parts, one file: the conference workbook, linked from the Studio 9 page.
+70 minutes, one file: the conference workbook, linked from the Studio 9 page.
 
-1. **Smartsheet.** Import the workbook, turn on dependencies, see who is double-booked, resolve one conflict with a resource link.
-2. **Colab.** Run the levelling notebook on the same workbook: the parallel method against the optimum, priced in days and dollars.
-3. Save your copy, then upload the PDF to Blackboard.
+| Part | Minutes | What |
+|---|--:|---|
+| 1 · Smartsheet | 35 | Import, dependencies, critical path, who is double-booked, one resource link |
+| 2 · Colab | 25 | Parallel method against the optimum, at two and three coordinators |
+| Upload | 5 | Four screenshots, six answers, one PDF |
 
 ## Part 1 · Smartsheet
 
-1. **+ Create → Import → Microsoft Excel**; row 1 as headers, Activity as the primary column
-2. **Project Settings → Dependency Settings**: enable, map Start Date, End Date, Duration, Predecessors; Monday to Friday
-3. **Gantt**, Show Critical Path. Check: finish **Fri 4 Dec**
-4. **Filters** Assigned To contains Kim, Lee, Ortiz: who overlaps, on which dates
-5. Row 6 Predecessors `3, 5`, Assigned To `Lee, Ortiz`. Check: finish **Tue 8 Dec**
-
-Screenshots 1 to 3 and four short answers.
+1. **Import** the workbook; row 1 as headers
+2. **Project Settings → Dependency Settings**: enable and map the four columns. Check: **Fri 4 Dec**
+3. **Gantt**, Show Critical Path. Screenshot 1
+4. **Filters** Assigned To contains Kim, Lee, Ortiz. Screenshot 2
+5. Row 6: Predecessors `3, 5`, Assigned To `Lee, Ortiz`. Check: **Tue 8 Dec**. Screenshot 3
 
 ## Part 2 · Colab
 
-1. Open the notebook from the Studio 9 page; **File → Save a copy in Drive**; **Runtime → Run all**
-2. Section 0 loads the same workbook; check the table against your sheet
-3. `LIMIT = 2`: read the parallel method's log, the optimum, the checks and the report
-4. `LIMIT = 3`, run all again: does it agree with Smartsheet's Tue 8 Dec?
+1. Open the notebook, **Save a copy in Drive**, **Run all**
+2. `LIMIT = 2`: the log, the optimum, the report. Screenshot 4
+3. `LIMIT = 3`, run all: does it match Smartsheet's Tue 8 Dec?
 
-Screenshots 4 to 6 and four short answers.
-
-## Part 3 · Save and upload
-
-- One PDF: Part 1 screenshots and answers, Part 2 screenshots and answers, AI acknowledgement if used
-- Save the PDF, a Smartsheet export and your notebook link to the Google Drive or OneDrive on your NDSU account
-- Then upload `SA9_yourlastname.pdf` to Blackboard before you leave
+Then one PDF to Blackboard as `SA9_yourlastname.pdf` before you leave.
 
 ## Sources
 
