@@ -53,6 +53,8 @@ function frontMatter(text) {
 
 /** Split the body into slides at `#` (section) and `##` (content) headings. */
 function parseSlides(body) {
+  // Markdown escapes a literal dollar as \$ so Pandoc does not read math; a slide wants the plain sign.
+  body = body.replace(/\\\$/g, "$");
   const slides = [];
   let cur = null;
   for (const line of body.split("\n")) {

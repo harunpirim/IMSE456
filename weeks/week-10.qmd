@@ -26,3 +26,275 @@ lab: true
 :::
 
 <!-- VIDEO -->
+
+> Speed is the ultimate weapon in business. All else being equal, the fastest company in any market will win.
+>
+> — Dave Girouard, quoted as the chapter's epigraph in Larson & Gray [1]
+
+::: {.callout-note appearance="simple"}
+**Source.** This week's notes follow Larson & Gray, *Project Management: The Managerial Process*, 2024 Release, McGraw Hill, **Chapter 9** [1]. The exposition is reworded; the options for accelerating a project, the cost-duration graph, the least-cost crashing procedure, the practical cautions and the options for cutting cost are the chapter's. Figures 2 and 3 are redrawn from the chapter's Figures 9.2 and 9.3, and the chapter's worked example reproduces the values in its Figures 9.3 to 9.5; each says so where it appears. The conference's crash times and costs, its cost-duration curve and its optimum are original to these course materials. Brooks's law is cited to Brooks [2]; the exact formulation of the time-cost trade-off to Kelley [3].
+:::
+
+## Learning objectives
+
+| | |
+|:--|:--|
+| **LO 9-1** | Explain why a project might be crashed. |
+| **LO 9-2** | Choose among ways to shorten an activity when resources are available. |
+| **LO 9-3** | Choose among ways to shorten an activity when resources are constrained. |
+| **LO 9-4** | Find the optimum cost-time point of a project network. |
+| **LO 9-5** | Weigh the risks of compressing a schedule. |
+| **LO 9-6** | Choose among ways to reduce project cost when time is not the issue. |
+
+: {tbl-colwidths="[13,87]"}
+
+## Concepts introduced
+
+::: {.chips}
+<span class="chip">crashing</span><span class="chip">fast tracking</span><span class="chip">Brooks's law</span><span class="chip">outsourcing</span><span class="chip">overtime</span><span class="chip">scope reduction</span><span class="chip">direct cost</span><span class="chip">indirect cost</span><span class="chip">normal time</span><span class="chip">crash time</span><span class="chip">crash cost</span><span class="chip">cost slope</span><span class="chip">cost-duration graph</span><span class="chip">optimum cost-time point</span><span class="chip">linearity assumption</span>
+:::
+
+---
+
+# LO 9-1 · Why crash a project
+
+*Following Larson & Gray, Ch. 9, Section 9.1 [1].*
+
+Week 9 left the conference with a schedule the team can actually staff and a budget laid out week by week. This week the question changes. Someone wants it sooner.
+
+The chapter opens with three situations every project manager meets eventually [1]. The finished schedule lands two months after a date the boss has already promised a customer. Five months in, the team is three weeks behind a date that cannot move. Four months in, management changes its mind about what matters and says money is no object, just finish. In each, the plan is sound and the date is wrong.
+
+The reasons behind those situations recur:
+
+- **An imposed date.** A contract, a launch, a regulator or a sponsor sets the finish, and the network says it cannot be met at normal pace.
+- **Time to market.** Being first is worth more than the extra cost of getting there, a point Week 1 made about product life cycles.
+- **Incentive and penalty contracts.** A bonus for finishing early or a penalty for finishing late puts a price on every day.
+- **Recovering a slip.** Delays early in the project have eaten the slack, and the only way back is to compress what remains.
+- **Indirect cost.** Every day the project runs costs supervision, rented space and interest. Finishing sooner saves that money, sometimes more than the speed-up costs.
+- **Freeing people.** The team is needed on the next project, and every day this one runs is a day that one waits.
+
+**Crashing** is the general term for shortening a project's duration beyond its normal, lowest-cost schedule. It always costs something; the question this week answers is how to buy the time as cheaply as possible, and when to stop buying.
+
+---
+
+# LO 9-2 · Options when resources are available
+
+*Following Larson & Gray, Ch. 9, Section 9.2 [1].*
+
+When money and people are available, four options shorten an activity without changing the plan's logic.
+
+**Add resources.** The commonest choice is more people or more equipment on a critical activity. It works in proportion only when the work can be divided with little coordination: picking a crop by hand, repaving a road in sections. Most project work is not like that. Every person added must talk to every other: a team of *n* people has *n*(*n* − 1)/2 pairs, so going from two people to four takes the pairs from one to six. New people also need training before they help. Frederick Brooks, managing IBM's System/360 software in the 1960s, put the result bluntly: "adding manpower to a late software project makes it later" [2]. Later research found the effect is not universal; what matters is adding people early enough that they are productive before the deadline [1].
+
+**Outsource.** A subcontractor may bring equipment or expertise the team lacks: a backhoe that digs in two hours what a crew digs in two days, or a specialist firm that halves the time an internal team would need. Outsourcing also frees internal people for other critical work. Week 12 returns to the trade-offs.
+
+**Schedule overtime.** Longer days or weekend work add hours without adding people, so there is no new coordination or training cost. It is expensive, it tires people, and it cannot be sustained for long.
+
+**Do it twice.** When the final design cannot be fixed in time, build a quick interim solution now and replace it with the proper one later. The project pays for the work twice to keep the date.
+
+Of these, overtime, outsourcing and added resources are the methods used most often, because they keep the original plan intact [1].
+
+---
+
+# LO 9-3 · Options when resources are constrained
+
+*Following Larson & Gray, Ch. 9, Section 9.2 [1].*
+
+When the budget is fixed or no one else is available, the options narrow. These also work when resources are available.
+
+| Option | What changes | The catch |
+|:--|:--|:--|
+| **Improve the team's efficiency** | Better planning and organisation; fewer obstacles such as approvals and red tape | Gains are real but usually modest |
+| **Fast tracking** | Logic: sequential activities overlap, typically by turning a finish-to-start link into start-to-start | Work begun on unfinished inputs may have to be redone |
+| **Critical-chain management** | The whole approach to buffers and task estimates | Takes training and long-term commitment; hard to adopt mid-project |
+| **Reduce scope** | What is delivered | The project may lose value: a car that is slower, software with fewer features |
+| **Compromise quality** | How well it is delivered | Rarely acceptable |
+
+: {tbl-colwidths="[24,38,38]"}
+
+**Fast tracking** deserves a closer look because Week 6 built its mechanics. A start-to-start link with a lag lets manufacturing engineers begin building the production line once the key specifications are set, rather than waiting for final design approval. The project gets shorter; the risk is that a late design change wastes the work already done. Fast tracking works where the people involved coordinate closely and trust the work handed to them.
+
+**Reducing scope** is the commonest response to a date that cannot be met, and the one most likely to destroy value. The way to do it well is to reopen the requirements with the sponsor. Requirements are often written in an optimistic moment and include things that are desirable rather than essential. A frank conversation, *you can have all of it in February or these parts of it in December*, either buys more time or money, or separates what the project must deliver from what it would be nice to deliver. Sometimes the leaner project is the better one.
+
+---
+
+# LO 9-4 · The optimum cost-time point
+
+*Following Larson & Gray, Ch. 9, Sections 9.3 and 9.4 [1].*
+
+Crashing changes two kinds of cost in opposite directions.
+
+**Indirect costs** are the costs of keeping the project open: supervision, administration, consultants, rented space, interest. They cannot be traced to any one activity, and they accrue for every day the project runs. Shorten the project and they fall. If supervision and administration cost \$2,000 a day, every day saved saves \$2,000, provided those people have somewhere else useful to be [1].
+
+**Direct costs** are labour, materials, equipment and subcontracts charged to particular activities. At **normal time** an activity is done the efficient, low-cost way. Shortening it means overtime, extra people or faster methods, so its direct cost rises.
+
+Total cost is the sum. As the project is compressed from its normal duration, indirect cost falls steadily while direct cost rises, slowly at first and then faster as only expensive options remain. Somewhere the total stops falling. That duration is the **optimum cost-time point**, and finishing either later or earlier costs more.
+
+## One activity: normal point, crash point, slope
+
+For each activity the team estimates two points. The normal point is its normal time and normal cost. The **crash point** is its **crash time**, the shortest time in which it can realistically be done, and its **crash cost**, the direct cost of doing it that fast. Both points come from the people who know the work best.
+
+![One activity's cost-duration line. Shortening it from 10 time units to 5 raises its cost from \$400 to \$800. Redrawn from Larson & Gray, Ch. 9, Figure 9.2 [1].](../images/week10/activity-graph.svg){#fig-activity width=100%}
+
+The line between the two points has a **slope**, the cost of saving one unit of time:
+
+$$
+\text{slope} = \frac{\text{crash cost} - \text{normal cost}}{\text{normal time} - \text{crash time}}
+$$
+
+For the activity in @fig-activity, (\$800 − \$400) ÷ (10 − 5) = \$80 per unit, and it can be shortened by at most five units. The graph rests on five assumptions: cost rises in a straight line; normal time is the low-cost way; crash time is a real limit; the slope is a cost per unit of time; and every shortening stays between the two points [1].
+
+## The chapter's procedure
+
+The procedure buys time one unit at a time, always at the lowest price:
+
+1. Find the critical path or paths.
+2. Among critical activities that can still be shortened, choose the cheapest way to cut **every** critical path by one unit. With one critical path, that is the activity with the lowest slope. With several, it is either one activity they share or one activity on each, whichever costs less in total.
+3. Shorten, add its cost to the direct cost, and recompute the paths.
+4. Repeat until no critical path can be shortened.
+
+For each duration reached, total cost = direct cost + indirect cost. The optimum is the smallest total.
+
+## The chapter's example
+
+The chapter works the procedure on a seven-activity network with a normal duration of 25 time units and a total direct cost of \$450 [1].
+
+![The chapter's example network. Redrawn from Larson & Gray, Ch. 9, Figure 9.3 [1].](../images/week10/chapter-network.svg){#fig-chapter-network width=100%}
+
+| Activity | Normal time | Normal cost | Crash time | Crash cost | Slope | Can save |
+|:--:|--:|--:|--:|--:|--:|--:|
+| A | 3 | \$50 | 2 | \$70 | \$20 | 1 |
+| B | 6 | 80 | 4 | 160 | 40 | 2 |
+| C | 10 | 60 | 9 | 90 | 30 | 1 |
+| D | 11 | 50 | 7 | 150 | 25 | 4 |
+| E | 8 | 100 | 6 | 160 | 30 | 2 |
+| F | 5 | 40 | 4 | 70 | 30 | 1 |
+| G | 6 | 70 | 6 | 70 | — | 0 |
+
+: Values from Larson & Gray, Ch. 9, Figure 9.3 [1]. {tbl-colwidths="[12,14,14,14,14,14,18]"}
+
+The critical path is A–D–F–G. G cannot be shortened, so the candidates are A (\$20), D (\$25) and F (\$30). The procedure then runs:
+
+| Duration | Critical paths | Cheapest cut | Cost | Direct | Indirect | Total |
+|:--:|:--|:--|--:|--:|--:|--:|
+| 25 | A–D–F–G | — | | \$450 | \$400 | \$850 |
+| 24 | A–D–F–G | A | \$20 | 470 | 350 | 820 |
+| 23 | A–D–F–G, A–C–F–G | D | 25 | 495 | 300 | 795 |
+| 22 | all three | F, shared by two paths | 30 | 525 | 250 | **775** |
+| 21 | all three | C + D + E, one on each path | 85 | 610 | 200 | 810 |
+
+: Values from Larson & Gray, Ch. 9, Figures 9.4 and 9.5 [1]; the critical-path column is this course's reconstruction. Indirect cost falls by \$50 a unit. {tbl-colwidths="[11,22,26,9,10,10,12]"}
+
+Two moments in the table carry the method. At 22, F is chosen because it lies on two critical paths at once, so one \$30 cut shortens both. At 21, every critical path needs its own cut, and the cheapest combination costs \$85, more than the \$50 of indirect cost it saves. The optimum is 22 time units at \$775, three units shorter and \$75 cheaper than the normal plan.
+
+## The conference
+
+The conference from Weeks 6 to 9 now has crash estimates for every activity. Its normal schedule is 25 workdays at a direct cost of \$70,000, and keeping it open costs \$1,000 a day in coordinators' time and the venue hold.
+
+| ID | Activity | Normal | Crash | Normal cost | Crash cost | Cost per day saved |
+|:--:|:--|--:|--:|--:|--:|--:|
+| A | Approve event brief | 2 | 1 | \$2,000 | \$3,200 | \$1,200 |
+| B | Contract venue | 5 | 3 | 30,000 | 31,400 | 700 |
+| C | Draft program | 6 | 4 | 6,000 | 6,800 | 400 |
+| D | Configure registration | 4 | 3 | 8,000 | 8,900 | 900 |
+| E | Confirm speakers | 8 | 5 | 12,000 | 13,800 | 600 |
+| F | Recruit exhibitors | 5 | 3 | 2,500 | 3,100 | 300 |
+| G | Publish program | 3 | 2 | 3,000 | 4,500 | 1,500 |
+| H | Prepare on-site materials | 4 | 2 | 4,000 | 5,600 | 800 |
+| I | Complete rehearsal | 2 | 2 | 2,500 | 2,500 | — |
+
+: Conference crash estimates, in workdays. Predecessors are unchanged from Week 6. {tbl-colwidths="[6,30,9,9,14,14,18]"}
+
+The critical path is A–C–E–G–H–I. The venue path A–B–D–G–H–I is 20 days and the exhibitor path A–C–F–H–I 19. F is the cheapest activity to crash, at \$300 a day, and buys nothing, because it is not on the critical path.
+
+| Duration | Shorten | Cost of the day | Direct | Indirect | Total | Finish |
+|:--:|:--|--:|--:|--:|--:|:--|
+| 25 | — | | \$70,000 | \$25,000 | \$95,000 | Fri 4 Dec |
+| 24 | C | \$400 | 70,400 | 24,000 | 94,400 | Thu 3 Dec |
+| 23 | C | 400 | 70,800 | 23,000 | 93,800 | Wed 2 Dec |
+| 22 | E | 600 | 71,400 | 22,000 | 93,400 | Tue 1 Dec |
+| 21 | E | 600 | 72,000 | 21,000 | 93,000 | Mon 30 Nov |
+| 20 | E | 600 | 72,600 | 20,000 | 92,600 | Fri 27 Nov |
+| 19 | H, shared | 800 | 73,400 | 19,000 | 92,400 | Thu 26 Nov |
+| 18 | H, shared | 800 | 74,200 | 18,000 | **92,200** | Wed 25 Nov |
+| 17 | A, shared | 1,200 | 75,400 | 17,000 | 92,400 | Tue 24 Nov |
+| 16 | G, shared | 1,500 | 76,900 | 16,000 | 92,900 | Mon 23 Nov |
+
+: The conference crashed one day at a time from a Mon 2 Nov start, Monday to Friday. {tbl-colwidths="[10,16,13,13,12,12,24]"}
+
+At 20 days the venue path becomes critical too. From there the only cuts that shorten both paths are activities they share: H, then A, then G. H at \$800 is still cheaper than a day of indirect cost; A at \$1,200 is not. The optimum is **18 workdays, Wed 25 Nov, \$92,200**: a week earlier than the normal plan and \$2,800 cheaper. Two more days are possible, and each makes the project more expensive.
+
+![The conference's cost-duration graph. Total cost is lowest at 18 workdays.](../images/week10/cost-duration.svg){#fig-cost-duration width=100%}
+
+The rule that decides where to stop is simple: **crash while the next day costs less than a day of indirect cost.** Change the indirect rate and the optimum moves. Release the venue hold, so a day costs \$700, and H's \$800 is no longer worth it: the optimum becomes 20 days. Add a \$300-a-day penalty, so a day costs \$1,300, and A's \$1,200 becomes worth paying: 17 days.
+
+::: {.case}
+### Crashed to the limit, lost money
+
+The sponsor asks how fast the conference could open. A keen coordinator calls every vendor, books every rush option, and shortens all nine activities to their crash times. The conference now finishes in 16 workdays, on Mon 23 Nov. The direct cost is \$79,800.
+
+::: {.qn}
+What is the total cost of the coordinator's plan, and how does it compare with doing nothing at all? Which crashes bought no time? What should the coordinator have done instead, and what would it have cost?
+:::
+:::
+
+The [crashing notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb) runs the procedure for any table you give it, checks every step against an exact linear program [3], and draws the graph. For the conference and for the chapter's example, the procedure and the exact answer agree at every duration.
+
+---
+
+# LO 9-5 · The risks of compressing a schedule
+
+*Following Larson & Gray, Ch. 9, Section 9.5 [1].*
+
+## Using the graph
+
+A cost-duration graph keeps indirect cost in view when the pressure is on, which is exactly when it is forgotten [1]. It is most useful before the project starts and no date has been imposed, because normal times then mean what they say. Built after a date is imposed, the "normal" times have already been bent to fit it. Built mid-project, some options have already gone. Even when nobody draws the graph, the reasoning applies to every decision to buy time.
+
+## The estimates are rough
+
+Crash times are hard to collect. "The shortest time you can realistically do it in" means different things to different estimators, and many are uncomfortable giving a number at all. Crash estimates are usually rougher than normal ones [1]. That is one reason the straight-line assumption rarely troubles practitioners: the line is a better approximation than the data it is drawn through. The exception is an activity that cannot be shortened a day at a time. A task that takes 10 days, or 7 days with a second crew, has no 8- or 9-day option; crashing it is all or nothing.
+
+## Cheapest is not always best
+
+The procedure picks the cheapest day. Four other considerations can overrule it [1]:
+
+- **Risk.** Some activities are riskier to rush. Compressing software design to save a day may plant errors that cost weeks downstream. A more expensive activity may be the safer one to crash.
+- **Timing.** Crashing early buys insurance: if later work slips, the time is already banked, and later activities can still be crashed. Crashing late keeps options open but leaves no margin.
+- **Resources.** The people or equipment needed to crash the cheapest activity may be committed elsewhere. Week 9's resource limits still apply.
+- **Morale.** If the least-cost rule keeps landing on the same group, fatigue and resentment follow; if crashing means overtime pay for some and not others, so can friction. Watch how the team responds.
+
+---
+
+# LO 9-6 · When cost, not time, is the issue
+
+*Following Larson & Gray, Ch. 9, Section 9.6 [1].*
+
+Speed is not always the priority. On a fixed-price contract, every dollar saved is margin; tight bids and cost-sharing contracts add more pressure; and overruns damage future business even when the customer pays them. Sometimes the cheaper project is the longer one: a smaller team, less experienced staff and cheaper equipment over more weeks.
+
+| Option | How it saves | Watch for |
+|:--|:--|:--|
+| **Reduce scope** | Deliver less; start from the WBS. Since time is not the issue, any activity is a candidate, critical or not | Lost value |
+| **Owner takes on work** | The customer does tasks it can do itself, such as painting the room or running in-house training | Agree it before the project starts, not mid-way |
+| **Outsource** | A specialist may have bulk discounts, better equipment, lower overhead or cheaper labour | Less control; deliverables must be clearly defined |
+| **Brainstorm** | Ask the team; people closest to the work see savings others miss | Nothing, except not asking |
+
+: {tbl-colwidths="[22,48,30]"}
+
+One project manager's team found more than \$75,000 of savings without touching the scope, simply because someone asked [1].
+
+---
+
+# Thursday studio
+
+## Studio 10 · Find the economic optimum, not the earliest date
+
+Complete the [Week 10 studio](../labs/lab-10.qmd).
+
+You will import the conference's crash estimates into Smartsheet, add one column formula and four summary fields that turn every duration change into a total cost, and crash the project one day at a time by the chapter's procedure until total cost stops falling. Then you will run the [crashing notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb) on the same workbook, check your steps against its log and its exact answer, and see how the optimum moves when the cost of a day changes.
+
+## Sources
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 9.
+2. Brooks, F. P. (1975). *The Mythical Man-Month: Essays on Software Engineering*. Addison-Wesley.
+3. Kelley, J. E. (1961). Critical-path planning and scheduling: Mathematical basis. *Operations Research*, 9(3), 296–320.
+
+The conference's crash estimates, cost-duration curve and optimum are original to these course materials.

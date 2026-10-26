@@ -1,0 +1,96 @@
+---
+title: "Studio 10 · Find the economic optimum, not the earliest date"
+subtitle: "Week 10 · Reducing Project Duration · Larson Ch. 9"
+week: 10
+release: "2026-10-26"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA10</strong> — one PDF with four screenshots, the crashing table and six short answers</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>70 minutes: Smartsheet 35, Colab 25, upload 5, 5 spare</dd>
+<dt>Tools</dt><dd>Smartsheet (your NDSU account) and Google Colab</dd>
+<dt>Workbook</dt><dd><a href="../files/week-10-crashing-workbook.xlsx">Conference crashing workbook</a> (Excel), used in both parts</dd>
+<dt>Notebook</dt><dd><a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb">Week 10 crashing notebook</a>, opens in Colab</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a> if you use it</dd>
+<dt>Week page</dt><dd><a href="../weeks/week-10.qmd">Week 10 — Reducing Project Duration</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Download the [conference crashing workbook](../files/week-10-crashing-workbook.xlsx) before the session starts. Write each answer in one to three sentences next to its screenshot.
+:::
+
+The conference runs 25 workdays at a direct cost of \$70,000, and every day it stays open costs \$1,000 in coordinators' time and the venue hold. Each activity can be done faster at a price; the workbook gives its normal and crash days and costs, and the cost of each day saved. In Smartsheet you crash the schedule yourself and watch total cost fall and then rise; in Colab you check your answer exactly. **Predecessors** are row numbers: G's `4, 5` means "after rows 4 and 5, D and E".
+
+::: {.part}
+### Part 1 · Smartsheet — 35 minutes
+
+1. **Import.** **+ Create → Import → Microsoft Excel**, select the workbook. Keep row 1 as headers and *Activity* as the primary column. Check: nine rows, A to I, and Start Date in row 1 reads 11/02/26. If a date column came in as text, right-click its header → **Edit Column Properties** → Date.
+2. **Turn on dependencies.** Right-click any column header → **Project Settings** → **Dependency Settings**. Tick **Dependencies Enabled** and map Start Date, End Date, Duration and Predecessors to the columns of those names. Monday to Friday, no holidays. **OK**. *Check:* row 9 ends **Fri 4 Dec**.
+3. **Critical path.** Switch to **Gantt** view, open the Gantt settings (gear icon) and turn on **Show Critical Path**. *Check:* A, C, E, G, H and I are highlighted. **Screenshot 1.**
+4. **Cost formulas.** Back in Grid view, add a column *Direct cost* (Text/Number). In row 1 paste the formula below, then right-click the cell → **Convert to Column Formula**.
+
+    ```text
+    =[Normal cost]@row + [Cost per day]@row * ([Normal days]@row - NETWORKDAYS([Start Date]@row, [End Date]@row))
+    ```
+
+    Open the **Sheet Summary** panel (right edge of the sheet) and add four fields, type Text/Number, with these names and formulas:
+
+    | Field | Formula |
+    |:--|:--|
+    | Workdays | `=NETWORKDAYS(MIN([Start Date]:[Start Date]), MAX([End Date]:[End Date]))` |
+    | Direct | `=SUM([Direct cost]:[Direct cost])` |
+    | Indirect | `=[Workdays]# * 1000` |
+    | Total | `=[Direct]# + [Indirect]#` |
+
+    : {tbl-colwidths="[18,82]"}
+
+    *Check:* Workdays 25, Direct \$70,000, Indirect \$25,000, Total \$95,000.
+5. **Crash one day at a time.** Shorten a critical activity by one day by editing its **Duration** (for example C from `6d` to `5d`). Watch the dates and the four summary fields update, and record each step in a table like the one below. Each time, choose the **cheapest** way to cut **every** critical path by one day, never below an activity's *Crash days*. When two paths are critical, a shared activity cuts both. Stop when the next day would raise *Total*, then undo that last day. **Screenshot 2**: the Gantt at your optimum. **Screenshot 3**: the Sheet Summary at your optimum.
+
+| Workdays | Activity shortened | Cost of the day | Direct | Indirect | Total | Finish |
+|:--:|:--|--:|--:|--:|--:|:--|
+| 25 | — | — | \$70,000 | \$25,000 | \$95,000 | Fri 4 Dec |
+| 24 | | | | | | |
+| … | | | | | | |
+
+: Copy this layout into your PDF, one row per day saved. {tbl-colwidths="[11,20,13,13,12,12,19]"}
+
+**Answer**
+
+1. Which activity did you shorten first, and why not F, the cheapest activity in the workbook?
+2. At which duration did a second path become critical, and how did that change your choices?
+3. Where is your optimum (workdays, finish date, total cost), and why does the next day not pay?
+:::
+
+::: {.part}
+### Part 2 · Colab — 25 minutes
+
+1. **Open.** Open the [crashing notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb), choose **File → Save a copy in Drive**, then **Runtime → Run all**. If Colab asks, choose **Run anyway**. Section 0 loads the same workbook; check it shows the nine activities.
+2. **Compare.** Section 2 is the chapter's procedure, one day at a time; section 3 checks every step with an exact optimisation; section 4 draws the cost-duration graph and names the optimum; section 5 prices crashing everything. **Screenshot 4**: the graph and the optimum line printed below it.
+3. **Change the cost of a day.** In the EDIT cell set `INDIRECT_PER_DAY = 700` and run all; then set it to `1300` and run all again. Note the optimum each time.
+
+If Colab is blocked on your network, [download the notebook](../files/week-10-crashing.ipynb) and upload it with **File → Upload notebook**.
+
+**Answer**
+
+4. Does the notebook's step log match your Smartsheet table? If not, which step differs, and who is right?
+5. Where is the optimum at \$700 a day and at \$1,300 a day? Name the activity whose cost per day explains each move.
+6. Section 5: why does crashing every activity cost more than not crashing at all?
+:::
+
+::: {.part}
+### Upload — 5 minutes
+
+- [ ] One PDF: screenshots 1 to 4, your crashing table, answers 1 to 6, and the AI acknowledgement if you used AI
+- [ ] Saved to `IMSE456/studio-10/` on your NDSU Google Drive or OneDrive, with your notebook copy's link
+- [ ] Uploaded to Blackboard as `SA10_yourlastname.pdf` before you leave
+:::
+
+To go further after class, the notebook's *Try it* section reproduces the chapter's own example and runs on your final project if you fill in a copy of the workbook.
+
+## Source
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 9: the least-cost crashing procedure and the cost-duration graph. The conference's crash estimates are original to these course materials.
