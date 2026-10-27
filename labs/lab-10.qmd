@@ -89,7 +89,7 @@ If Colab is blocked on your network, [download the notebook](../files/week-10-cr
 - [ ] Uploaded to Blackboard as `SA10_yourlastname.pdf` before you leave
 :::
 
-To go further after class, the notebook's *Try it* section reproduces the chapter's own example and runs on your final project if you fill in a copy of the workbook.
+To go further after class, the notebook's *Try it* section reproduces the chapter's own example and runs on your final project if you fill in a copy of the workbook. The [interactive notebook](https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-10-crashing-marimo.py) runs both of Tuesday's examples in the browser, with a slider for every activity.
 
 ## Source
 

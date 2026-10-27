@@ -399,22 +399,54 @@ A day saved is worth exactly what the project costs per day. Buy the cheap days,
 # Live in Smartsheet
 
 ::: {.aside}
-The conference crashing workbook, imported before class; the same steps are in Studio 10
+Two sheets, both set up the way Studio 10 sets one up: the chapter's example, then the conference. The workbooks are linked from the week page
 :::
 
-## Step 1 · The sheet
+## Two sheets, one routine
 
-Import the workbook; dependencies on; Gantt with the critical path.
-
-. . .
-
-Grid view: the *Direct cost* column formula, and four Sheet Summary fields: Workdays, Direct, Indirect, Total.
+*Duration* drives the dates. *Direct cost* prices each activity at its current length. The Sheet Summary adds **Workdays**, **Direct**, **Indirect** and **Total**.
 
 . . .
 
-Read: 25 workdays, \$70,000 + \$25,000 = \$95,000.
+Each round: read the critical paths on the Gantt, cut the cheapest way across **all** of them, read Total. Stop when it rises.
 
-## Step 2 · Buy the first day
+## Chapter · Step 1 · The normal plan
+
+Time units read as workdays from Mon 2 Nov. Indirect is `=400 - 50 * (25 - [Workdays]#)`.
+
+. . .
+
+Read: 25 days, Fri 4 Dec, \$450 + \$400 = \$850. Critical: A–D–F–G.
+
+. . .
+
+A `3d` → `2d`: 24 days, \$820. D `11d` → `10d`: 23 days, \$795.
+
+## Chapter · Step 2 · One cut, two paths
+
+At 23 the Gantt highlights A–C–F–G too.
+
+. . .
+
+F lies on both: `5d` → `4d`. 22 days, Tue 1 Dec, Total **\$775**.
+
+## Chapter · Step 3 · Three cuts for one day
+
+All three paths are critical now, and A and F are spent.
+
+. . .
+
+C, D and E, one on each path: \$85 for a day worth \$50. Total \$810. Undo all three: the optimum is 22.
+
+## Conference · Step 1 · The sheet
+
+Same routine, nine activities, \$1,000 a day.
+
+. . .
+
+Read: 25 workdays, \$70,000 + \$25,000 = \$95,000. Critical: A–C–E–G–H–I.
+
+## Conference · Step 2 · Buy the first day
 
 Which activity? Not F: it is not critical.
 
@@ -426,7 +458,7 @@ C Duration `6d` → `5d`. Finish moves to Thu 3 Dec; Total to \$94,400.
 
 C again: \$93,800. E three times: \$92,600 at 20 days.
 
-## Step 3 · Two critical paths
+## Conference · Step 3 · Two critical paths
 
 At 20 days the Gantt highlights the venue path too.
 
@@ -438,13 +470,21 @@ E would shorten only one path. H shortens both: `4d` → `3d` → `2d`.
 
 Read: 18 workdays, Wed 25 Nov, Total \$92,200.
 
-## Step 4 · One day too far
+## Conference · Step 4 · One day too far
 
 A `2d` → `1d`: 17 workdays, Total \$92,400. It went up.
 
 . . .
 
 Undo. The optimum is where the total turned.
+
+## Both examples, in your browser
+
+The [marimo notebook](https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-10-crashing-marimo.py) runs both examples with nothing to install.
+
+. . .
+
+Sliders crash each activity; the critical paths, the finish and Total move as you drag. Step through the procedure, see the graph, and check every combination.
 
 # Thursday
 

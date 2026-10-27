@@ -239,6 +239,8 @@ What is the total cost of the coordinator's plan, and how does it compare with d
 
 The [crashing notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb) runs the procedure for any table you give it, checks every step against an exact linear program [3], and draws the graph. For the conference and for the chapter's example, the procedure and the exact answer agree at every duration.
 
+To try both examples by hand, open the [interactive crashing notebook](https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-10-crashing-marimo.py). It runs in the browser with nothing to install. Choose the chapter's example or the conference, shorten activities with sliders and watch the critical paths, the finish and the total cost move; step through the procedure one unit at a time with every option it weighed; and see your own plan on the cost-duration graph. To repeat Tuesday's Smartsheet demonstration, import the [chapter's example workbook](../files/week-10-chapter-example-workbook.xlsx) or the [conference workbook](../files/week-10-crashing-workbook.xlsx) and follow Part 1 of the studio; for the chapter's example, set *Indirect* to `=400 - 50 * (25 - [Workdays]#)`.
+
 ---
 
 # LO 9-5 · The risks of compressing a schedule

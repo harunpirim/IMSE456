@@ -154,16 +154,19 @@ function parseBlocks(lines) {
   return blocks;
 }
 
-/** **bold** / *italic* / `code` -> pptxgenjs rich-text runs. */
+/** **bold** / *italic* / `code` / [text](url) -> pptxgenjs rich-text runs. */
 function runs(md, base = {}) {
   const out = [];
-  const re = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g;
+  const re = /(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g;
   let last = 0, m;
   const push = (text, opts) => { if (text) out.push({ text, options: { ...base, ...opts } }); };
   while ((m = re.exec(md))) {
     push(md.slice(last, m.index), {});
     const tok = m[0];
-    if (tok.startsWith("**")) push(tok.slice(2, -2), { bold: true });
+    const link = tok.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    // only absolute links survive into the deck; a relative .qmd path means nothing offline
+    if (link) push(link[1], /^https?:/.test(link[2]) ? { hyperlink: { url: link[2] }, color: GREEN, underline: true } : {});
+    else if (tok.startsWith("**")) push(tok.slice(2, -2), { bold: true });
     else if (tok.startsWith("`")) push(tok.slice(1, -1), { fontFace: "Consolas", color: GREEN });
     else push(tok.slice(1, -1), { italic: true });
     last = re.lastIndex;
@@ -172,7 +175,7 @@ function runs(md, base = {}) {
   return out.length ? out : [{ text: md, options: base }];
 }
 
-const plain = (md) => md.replace(/\*\*|\*|`/g, "");
+const plain = (md) => md.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*|\*|`/g, "");
 
 // ---------------------------------------------------------------- rendering
 
