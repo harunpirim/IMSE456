@@ -912,20 +912,48 @@ Harun Pirim
 <h1>Live in Smartsheet</h1>
 
 <aside><div>
-<p>The conference crashing workbook, imported before class; the same steps are in Studio 10</p>
+<p>Two sheets, both set up the way Studio 10 sets one up: the chapter’s example, then the conference. The workbooks are linked from the week page</p>
 </div></aside></section>
-<section id="step-1-the-sheet" class="slide level2">
-<h2>Step 1 · The sheet</h2>
-<p>Import the workbook; dependencies on; Gantt with the critical path.</p>
+<section id="two-sheets-one-routine" class="slide level2">
+<h2>Two sheets, one routine</h2>
+<p><em>Duration</em> drives the dates. <em>Direct cost</em> prices each activity at its current length. The Sheet Summary adds <strong>Workdays</strong>, <strong>Direct</strong>, <strong>Indirect</strong> and <strong>Total</strong>.</p>
 <div class="fragment">
-<p>Grid view: the <em>Direct cost</em> column formula, and four Sheet Summary fields: Workdays, Direct, Indirect, Total.</p>
-</div>
-<div class="fragment">
-<p>Read: 25 workdays, $70,000 + $25,000 = $95,000.</p>
+<p>Each round: read the critical paths on the Gantt, cut the cheapest way across <strong>all</strong> of them, read Total. Stop when it rises.</p>
 </div>
 </section>
-<section id="step-2-buy-the-first-day" class="slide level2">
-<h2>Step 2 · Buy the first day</h2>
+<section id="chapter-step-1-the-normal-plan" class="slide level2">
+<h2>Chapter · Step 1 · The normal plan</h2>
+<p>Time units read as workdays from Mon 2 Nov.&nbsp;Indirect is <code>=400 - 50 * (25 - [Workdays]#)</code>.</p>
+<div class="fragment">
+<p>Read: 25 days, Fri 4 Dec, $450 + $400 = $850. Critical: A–D–F–G.</p>
+</div>
+<div class="fragment">
+<p>A <code>3d</code> → <code>2d</code>: 24 days, $820. D <code>11d</code> → <code>10d</code>: 23 days, $795.</p>
+</div>
+</section>
+<section id="chapter-step-2-one-cut-two-paths" class="slide level2">
+<h2>Chapter · Step 2 · One cut, two paths</h2>
+<p>At 23 the Gantt highlights A–C–F–G too.</p>
+<div class="fragment">
+<p>F lies on both: <code>5d</code> → <code>4d</code>. 22 days, Tue 1 Dec, Total <strong>$775</strong>.</p>
+</div>
+</section>
+<section id="chapter-step-3-three-cuts-for-one-day" class="slide level2">
+<h2>Chapter · Step 3 · Three cuts for one day</h2>
+<p>All three paths are critical now, and A and F are spent.</p>
+<div class="fragment">
+<p>C, D and E, one on each path: $85 for a day worth $50. Total $810. Undo all three: the optimum is 22.</p>
+</div>
+</section>
+<section id="conference-step-1-the-sheet" class="slide level2">
+<h2>Conference · Step 1 · The sheet</h2>
+<p>Same routine, nine activities, $1,000 a day.</p>
+<div class="fragment">
+<p>Read: 25 workdays, $70,000 + $25,000 = $95,000. Critical: A–C–E–G–H–I.</p>
+</div>
+</section>
+<section id="conference-step-2-buy-the-first-day" class="slide level2">
+<h2>Conference · Step 2 · Buy the first day</h2>
 <p>Which activity? Not F: it is not critical.</p>
 <div class="fragment">
 <p>C Duration <code>6d</code> → <code>5d</code>. Finish moves to Thu 3 Dec; Total to $94,400.</p>
@@ -934,8 +962,8 @@ Harun Pirim
 <p>C again: $93,800. E three times: $92,600 at 20 days.</p>
 </div>
 </section>
-<section id="step-3-two-critical-paths" class="slide level2">
-<h2>Step 3 · Two critical paths</h2>
+<section id="conference-step-3-two-critical-paths" class="slide level2">
+<h2>Conference · Step 3 · Two critical paths</h2>
 <p>At 20 days the Gantt highlights the venue path too.</p>
 <div class="fragment">
 <p>E would shorten only one path. H shortens both: <code>4d</code> → <code>3d</code> → <code>2d</code>.</p>
@@ -944,11 +972,18 @@ Harun Pirim
 <p>Read: 18 workdays, Wed 25 Nov, Total $92,200.</p>
 </div>
 </section>
-<section id="step-4-one-day-too-far" class="slide level2">
-<h2>Step 4 · One day too far</h2>
+<section id="conference-step-4-one-day-too-far" class="slide level2">
+<h2>Conference · Step 4 · One day too far</h2>
 <p>A <code>2d</code> → <code>1d</code>: 17 workdays, Total $92,400. It went up.</p>
 <div class="fragment">
 <p>Undo. The optimum is where the total turned.</p>
+</div>
+</section>
+<section id="both-examples-in-your-browser" class="slide level2">
+<h2>Both examples, in your browser</h2>
+<p>The <a href="https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-10-crashing-marimo.py">marimo notebook</a> runs both examples with nothing to install.</p>
+<div class="fragment">
+<p>Sliders crash each activity; the critical paths, the finish and Total move as you drag. Step through the procedure, see the graph, and check every combination.</p>
 </div>
 </section></section>
 <section>

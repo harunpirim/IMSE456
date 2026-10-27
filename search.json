@@ -67,7 +67,7 @@
     "href": "weeks/week-10.html#the-conference",
     "title": "Week 10 · Reducing Project Duration",
     "section": "The conference",
-    "text": "The conference\nThe conference from Weeks 6 to 9 now has crash estimates for every activity. Its normal schedule is 25 workdays at a direct cost of $70,000, and keeping it open costs $1,000 a day in coordinators’ time and the venue hold.\n\nConference crash estimates, in workdays. Predecessors are unchanged from Week 6.\n\n\n\n\n\n\n\n\n\n\n\nID\nActivity\nNormal\nCrash\nNormal cost\nCrash cost\nCost per day saved\n\n\n\n\nA\nApprove event brief\n2\n1\n$2,000\n$3,200\n$1,200\n\n\nB\nContract venue\n5\n3\n30,000\n31,400\n700\n\n\nC\nDraft program\n6\n4\n6,000\n6,800\n400\n\n\nD\nConfigure registration\n4\n3\n8,000\n8,900\n900\n\n\nE\nConfirm speakers\n8\n5\n12,000\n13,800\n600\n\n\nF\nRecruit exhibitors\n5\n3\n2,500\n3,100\n300\n\n\nG\nPublish program\n3\n2\n3,000\n4,500\n1,500\n\n\nH\nPrepare on-site materials\n4\n2\n4,000\n5,600\n800\n\n\nI\nComplete rehearsal\n2\n2\n2,500\n2,500\n—\n\n\n\nThe critical path is A–C–E–G–H–I. The venue path A–B–D–G–H–I is 20 days and the exhibitor path A–C–F–H–I 19. F is the cheapest activity to crash, at $300 a day, and buys nothing, because it is not on the critical path.\n\nThe conference crashed one day at a time from a Mon 2 Nov start, Monday to Friday.\n\n\n\n\n\n\n\n\n\n\n\nDuration\nShorten\nCost of the day\nDirect\nIndirect\nTotal\nFinish\n\n\n\n\n25\n—\n\n$70,000\n$25,000\n$95,000\nFri 4 Dec\n\n\n24\nC\n$400\n70,400\n24,000\n94,400\nThu 3 Dec\n\n\n23\nC\n400\n70,800\n23,000\n93,800\nWed 2 Dec\n\n\n22\nE\n600\n71,400\n22,000\n93,400\nTue 1 Dec\n\n\n21\nE\n600\n72,000\n21,000\n93,000\nMon 30 Nov\n\n\n20\nE\n600\n72,600\n20,000\n92,600\nFri 27 Nov\n\n\n19\nH, shared\n800\n73,400\n19,000\n92,400\nThu 26 Nov\n\n\n18\nH, shared\n800\n74,200\n18,000\n92,200\nWed 25 Nov\n\n\n17\nA, shared\n1,200\n75,400\n17,000\n92,400\nTue 24 Nov\n\n\n16\nG, shared\n1,500\n76,900\n16,000\n92,900\nMon 23 Nov\n\n\n\nAt 20 days the venue path becomes critical too. From there the only cuts that shorten both paths are activities they share: H, then A, then G. H at $800 is still cheaper than a day of indirect cost; A at $1,200 is not. The optimum is 18 workdays, Wed 25 Nov, $92,200: a week earlier than the normal plan and $2,800 cheaper. Two more days are possible, and each makes the project more expensive.\n\n\n\n\n\n\nFigure 3: The conference’s cost-duration graph. Total cost is lowest at 18 workdays.\n\n\n\nThe rule that decides where to stop is simple: crash while the next day costs less than a day of indirect cost. Change the indirect rate and the optimum moves. Release the venue hold, so a day costs $700, and H’s $800 is no longer worth it: the optimum becomes 20 days. Add a $300-a-day penalty, so a day costs $1,300, and A’s $1,200 becomes worth paying: 17 days.\n\nCrashed to the limit, lost money\nThe sponsor asks how fast the conference could open. A keen coordinator calls every vendor, books every rush option, and shortens all nine activities to their crash times. The conference now finishes in 16 workdays, on Mon 23 Nov. The direct cost is $79,800.\n\nWhat is the total cost of the coordinator’s plan, and how does it compare with doing nothing at all? Which crashes bought no time? What should the coordinator have done instead, and what would it have cost?\n\n\nThe crashing notebook runs the procedure for any table you give it, checks every step against an exact linear program [3], and draws the graph. For the conference and for the chapter’s example, the procedure and the exact answer agree at every duration."
+    "text": "The conference\nThe conference from Weeks 6 to 9 now has crash estimates for every activity. Its normal schedule is 25 workdays at a direct cost of $70,000, and keeping it open costs $1,000 a day in coordinators’ time and the venue hold.\n\nConference crash estimates, in workdays. Predecessors are unchanged from Week 6.\n\n\n\n\n\n\n\n\n\n\n\nID\nActivity\nNormal\nCrash\nNormal cost\nCrash cost\nCost per day saved\n\n\n\n\nA\nApprove event brief\n2\n1\n$2,000\n$3,200\n$1,200\n\n\nB\nContract venue\n5\n3\n30,000\n31,400\n700\n\n\nC\nDraft program\n6\n4\n6,000\n6,800\n400\n\n\nD\nConfigure registration\n4\n3\n8,000\n8,900\n900\n\n\nE\nConfirm speakers\n8\n5\n12,000\n13,800\n600\n\n\nF\nRecruit exhibitors\n5\n3\n2,500\n3,100\n300\n\n\nG\nPublish program\n3\n2\n3,000\n4,500\n1,500\n\n\nH\nPrepare on-site materials\n4\n2\n4,000\n5,600\n800\n\n\nI\nComplete rehearsal\n2\n2\n2,500\n2,500\n—\n\n\n\nThe critical path is A–C–E–G–H–I. The venue path A–B–D–G–H–I is 20 days and the exhibitor path A–C–F–H–I 19. F is the cheapest activity to crash, at $300 a day, and buys nothing, because it is not on the critical path.\n\nThe conference crashed one day at a time from a Mon 2 Nov start, Monday to Friday.\n\n\n\n\n\n\n\n\n\n\n\nDuration\nShorten\nCost of the day\nDirect\nIndirect\nTotal\nFinish\n\n\n\n\n25\n—\n\n$70,000\n$25,000\n$95,000\nFri 4 Dec\n\n\n24\nC\n$400\n70,400\n24,000\n94,400\nThu 3 Dec\n\n\n23\nC\n400\n70,800\n23,000\n93,800\nWed 2 Dec\n\n\n22\nE\n600\n71,400\n22,000\n93,400\nTue 1 Dec\n\n\n21\nE\n600\n72,000\n21,000\n93,000\nMon 30 Nov\n\n\n20\nE\n600\n72,600\n20,000\n92,600\nFri 27 Nov\n\n\n19\nH, shared\n800\n73,400\n19,000\n92,400\nThu 26 Nov\n\n\n18\nH, shared\n800\n74,200\n18,000\n92,200\nWed 25 Nov\n\n\n17\nA, shared\n1,200\n75,400\n17,000\n92,400\nTue 24 Nov\n\n\n16\nG, shared\n1,500\n76,900\n16,000\n92,900\nMon 23 Nov\n\n\n\nAt 20 days the venue path becomes critical too. From there the only cuts that shorten both paths are activities they share: H, then A, then G. H at $800 is still cheaper than a day of indirect cost; A at $1,200 is not. The optimum is 18 workdays, Wed 25 Nov, $92,200: a week earlier than the normal plan and $2,800 cheaper. Two more days are possible, and each makes the project more expensive.\n\n\n\n\n\n\nFigure 3: The conference’s cost-duration graph. Total cost is lowest at 18 workdays.\n\n\n\nThe rule that decides where to stop is simple: crash while the next day costs less than a day of indirect cost. Change the indirect rate and the optimum moves. Release the venue hold, so a day costs $700, and H’s $800 is no longer worth it: the optimum becomes 20 days. Add a $300-a-day penalty, so a day costs $1,300, and A’s $1,200 becomes worth paying: 17 days.\n\nCrashed to the limit, lost money\nThe sponsor asks how fast the conference could open. A keen coordinator calls every vendor, books every rush option, and shortens all nine activities to their crash times. The conference now finishes in 16 workdays, on Mon 23 Nov. The direct cost is $79,800.\n\nWhat is the total cost of the coordinator’s plan, and how does it compare with doing nothing at all? Which crashes bought no time? What should the coordinator have done instead, and what would it have cost?\n\n\nThe crashing notebook runs the procedure for any table you give it, checks every step against an exact linear program [3], and draws the graph. For the conference and for the chapter’s example, the procedure and the exact answer agree at every duration.\nTo try both examples by hand, open the interactive crashing notebook. It runs in the browser with nothing to install. Choose the chapter’s example or the conference, shorten activities with sliders and watch the critical paths, the finish and the total cost move; step through the procedure one unit at a time with every option it weighed; and see your own plan on the cost-duration graph. To repeat Tuesday’s Smartsheet demonstration, import the chapter’s example workbook or the conference workbook and follow Part 1 of the studio; for the chapter’s example, set Indirect to =400 - 50 * (25 - [Workdays]#)."
   },
   {
     "objectID": "weeks/week-10.html#using-the-graph",
@@ -3035,7 +3035,7 @@
     "href": "labs/lab-10.html",
     "title": "Studio 10 · Find the economic optimum, not the earliest date",
     "section": "",
-    "text": "Deliverable\n\n\nSA10 — one PDF with four screenshots, the crashing table and six short answers\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\n70 minutes: Smartsheet 35, Colab 25, upload 5, 5 spare\n\n\nTools\n\n\nSmartsheet (your NDSU account) and Google Colab\n\n\nWorkbook\n\n\nConference crashing workbook (Excel), used in both parts\n\n\nNotebook\n\n\nWeek 10 crashing notebook, opens in Colab\n\n\nAI use\n\n\nLevel 4 — full use with documentation · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the AI acknowledgement if you use it\n\n\nWeek page\n\n\nWeek 10 — Reducing Project Duration\nThe conference runs 25 workdays at a direct cost of $70,000, and every day it stays open costs $1,000 in coordinators’ time and the venue hold. Each activity can be done faster at a price; the workbook gives its normal and crash days and costs, and the cost of each day saved. In Smartsheet you crash the schedule yourself and watch total cost fall and then rise; in Colab you check your answer exactly. Predecessors are row numbers: G’s 4, 5 means “after rows 4 and 5, D and E”.\nTo go further after class, the notebook’s Try it section reproduces the chapter’s own example and runs on your final project if you fill in a copy of the workbook."
+    "text": "Deliverable\n\n\nSA10 — one PDF with four screenshots, the crashing table and six short answers\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\n70 minutes: Smartsheet 35, Colab 25, upload 5, 5 spare\n\n\nTools\n\n\nSmartsheet (your NDSU account) and Google Colab\n\n\nWorkbook\n\n\nConference crashing workbook (Excel), used in both parts\n\n\nNotebook\n\n\nWeek 10 crashing notebook, opens in Colab\n\n\nAI use\n\n\nLevel 4 — full use with documentation · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the AI acknowledgement if you use it\n\n\nWeek page\n\n\nWeek 10 — Reducing Project Duration\nThe conference runs 25 workdays at a direct cost of $70,000, and every day it stays open costs $1,000 in coordinators’ time and the venue hold. Each activity can be done faster at a price; the workbook gives its normal and crash days and costs, and the cost of each day saved. In Smartsheet you crash the schedule yourself and watch total cost fall and then rise; in Colab you check your answer exactly. Predecessors are row numbers: G’s 4, 5 means “after rows 4 and 5, D and E”.\nTo go further after class, the notebook’s Try it section reproduces the chapter’s own example and runs on your final project if you fill in a copy of the workbook. The interactive notebook runs both of Tuesday’s examples in the browser, with a slider for every activity."
   },
   {
     "objectID": "labs/lab-10.html#source",
@@ -4739,32 +4739,67 @@
     "text": "One sentence for the week\nA day saved is worth exactly what the project costs per day. Buy the cheap days, on every critical path, and stop when the next one costs more."
   },
   {
-    "objectID": "slides/week-10.html#step-1-the-sheet",
-    "href": "slides/week-10.html#step-1-the-sheet",
+    "objectID": "slides/week-10.html#two-sheets-one-routine",
+    "href": "slides/week-10.html#two-sheets-one-routine",
     "title": "Week 10 · Reducing Project Duration",
-    "section": "Step 1 · The sheet",
-    "text": "Step 1 · The sheet\nImport the workbook; dependencies on; Gantt with the critical path.\n\nGrid view: the Direct cost column formula, and four Sheet Summary fields: Workdays, Direct, Indirect, Total.\n\n\nRead: 25 workdays, $70,000 + $25,000 = $95,000."
+    "section": "Two sheets, one routine",
+    "text": "Two sheets, one routine\nDuration drives the dates. Direct cost prices each activity at its current length. The Sheet Summary adds Workdays, Direct, Indirect and Total.\n\nEach round: read the critical paths on the Gantt, cut the cheapest way across all of them, read Total. Stop when it rises."
   },
   {
-    "objectID": "slides/week-10.html#step-2-buy-the-first-day",
-    "href": "slides/week-10.html#step-2-buy-the-first-day",
+    "objectID": "slides/week-10.html#chapter-step-1-the-normal-plan",
+    "href": "slides/week-10.html#chapter-step-1-the-normal-plan",
     "title": "Week 10 · Reducing Project Duration",
-    "section": "Step 2 · Buy the first day",
-    "text": "Step 2 · Buy the first day\nWhich activity? Not F: it is not critical.\n\nC Duration 6d → 5d. Finish moves to Thu 3 Dec; Total to $94,400.\n\n\nC again: $93,800. E three times: $92,600 at 20 days."
+    "section": "Chapter · Step 1 · The normal plan",
+    "text": "Chapter · Step 1 · The normal plan\nTime units read as workdays from Mon 2 Nov. Indirect is =400 - 50 * (25 - [Workdays]#).\n\nRead: 25 days, Fri 4 Dec, $450 + $400 = $850. Critical: A–D–F–G.\n\n\nA 3d → 2d: 24 days, $820. D 11d → 10d: 23 days, $795."
   },
   {
-    "objectID": "slides/week-10.html#step-3-two-critical-paths",
-    "href": "slides/week-10.html#step-3-two-critical-paths",
+    "objectID": "slides/week-10.html#chapter-step-2-one-cut-two-paths",
+    "href": "slides/week-10.html#chapter-step-2-one-cut-two-paths",
     "title": "Week 10 · Reducing Project Duration",
-    "section": "Step 3 · Two critical paths",
-    "text": "Step 3 · Two critical paths\nAt 20 days the Gantt highlights the venue path too.\n\nE would shorten only one path. H shortens both: 4d → 3d → 2d.\n\n\nRead: 18 workdays, Wed 25 Nov, Total $92,200."
+    "section": "Chapter · Step 2 · One cut, two paths",
+    "text": "Chapter · Step 2 · One cut, two paths\nAt 23 the Gantt highlights A–C–F–G too.\n\nF lies on both: 5d → 4d. 22 days, Tue 1 Dec, Total $775."
   },
   {
-    "objectID": "slides/week-10.html#step-4-one-day-too-far",
-    "href": "slides/week-10.html#step-4-one-day-too-far",
+    "objectID": "slides/week-10.html#chapter-step-3-three-cuts-for-one-day",
+    "href": "slides/week-10.html#chapter-step-3-three-cuts-for-one-day",
     "title": "Week 10 · Reducing Project Duration",
-    "section": "Step 4 · One day too far",
-    "text": "Step 4 · One day too far\nA 2d → 1d: 17 workdays, Total $92,400. It went up.\n\nUndo. The optimum is where the total turned."
+    "section": "Chapter · Step 3 · Three cuts for one day",
+    "text": "Chapter · Step 3 · Three cuts for one day\nAll three paths are critical now, and A and F are spent.\n\nC, D and E, one on each path: $85 for a day worth $50. Total $810. Undo all three: the optimum is 22."
+  },
+  {
+    "objectID": "slides/week-10.html#conference-step-1-the-sheet",
+    "href": "slides/week-10.html#conference-step-1-the-sheet",
+    "title": "Week 10 · Reducing Project Duration",
+    "section": "Conference · Step 1 · The sheet",
+    "text": "Conference · Step 1 · The sheet\nSame routine, nine activities, $1,000 a day.\n\nRead: 25 workdays, $70,000 + $25,000 = $95,000. Critical: A–C–E–G–H–I."
+  },
+  {
+    "objectID": "slides/week-10.html#conference-step-2-buy-the-first-day",
+    "href": "slides/week-10.html#conference-step-2-buy-the-first-day",
+    "title": "Week 10 · Reducing Project Duration",
+    "section": "Conference · Step 2 · Buy the first day",
+    "text": "Conference · Step 2 · Buy the first day\nWhich activity? Not F: it is not critical.\n\nC Duration 6d → 5d. Finish moves to Thu 3 Dec; Total to $94,400.\n\n\nC again: $93,800. E three times: $92,600 at 20 days."
+  },
+  {
+    "objectID": "slides/week-10.html#conference-step-3-two-critical-paths",
+    "href": "slides/week-10.html#conference-step-3-two-critical-paths",
+    "title": "Week 10 · Reducing Project Duration",
+    "section": "Conference · Step 3 · Two critical paths",
+    "text": "Conference · Step 3 · Two critical paths\nAt 20 days the Gantt highlights the venue path too.\n\nE would shorten only one path. H shortens both: 4d → 3d → 2d.\n\n\nRead: 18 workdays, Wed 25 Nov, Total $92,200."
+  },
+  {
+    "objectID": "slides/week-10.html#conference-step-4-one-day-too-far",
+    "href": "slides/week-10.html#conference-step-4-one-day-too-far",
+    "title": "Week 10 · Reducing Project Duration",
+    "section": "Conference · Step 4 · One day too far",
+    "text": "Conference · Step 4 · One day too far\nA 2d → 1d: 17 workdays, Total $92,400. It went up.\n\nUndo. The optimum is where the total turned."
+  },
+  {
+    "objectID": "slides/week-10.html#both-examples-in-your-browser",
+    "href": "slides/week-10.html#both-examples-in-your-browser",
+    "title": "Week 10 · Reducing Project Duration",
+    "section": "Both examples, in your browser",
+    "text": "Both examples, in your browser\nThe marimo notebook runs both examples with nothing to install.\n\nSliders crash each activity; the critical paths, the finish and Total move as you drag. Step through the procedure, see the graph, and check every combination."
   },
   {
     "objectID": "slides/week-10.html#studio-10-find-the-economic-optimum-not-the-earliest-date",
