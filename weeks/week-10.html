@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,40 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-9-1-why-crash-a-project" id="toc-lo-9-1-why-crash-a-project" class="nav-link" data-scroll-target="#lo-9-1-why-crash-a-project">LO 9-1 · Why crash a project</a></li>
+  <li><a href="#lo-9-2-options-when-resources-are-available" id="toc-lo-9-2-options-when-resources-are-available" class="nav-link" data-scroll-target="#lo-9-2-options-when-resources-are-available">LO 9-2 · Options when resources are available</a></li>
+  <li><a href="#lo-9-3-options-when-resources-are-constrained" id="toc-lo-9-3-options-when-resources-are-constrained" class="nav-link" data-scroll-target="#lo-9-3-options-when-resources-are-constrained">LO 9-3 · Options when resources are constrained</a></li>
+  <li><a href="#lo-9-4-the-optimum-cost-time-point" id="toc-lo-9-4-the-optimum-cost-time-point" class="nav-link" data-scroll-target="#lo-9-4-the-optimum-cost-time-point">LO 9-4 · The optimum cost-time point</a>
+  <ul class="collapse">
+  <li><a href="#one-activity-normal-point-crash-point-slope" id="toc-one-activity-normal-point-crash-point-slope" class="nav-link" data-scroll-target="#one-activity-normal-point-crash-point-slope">One activity: normal point, crash point, slope</a></li>
+  <li><a href="#the-chapters-procedure" id="toc-the-chapters-procedure" class="nav-link" data-scroll-target="#the-chapters-procedure">The chapter’s procedure</a></li>
+  <li><a href="#the-chapters-example" id="toc-the-chapters-example" class="nav-link" data-scroll-target="#the-chapters-example">The chapter’s example</a></li>
+  <li><a href="#the-conference" id="toc-the-conference" class="nav-link" data-scroll-target="#the-conference">The conference</a>
+  <ul class="collapse">
+  <li><a href="#crashed-to-the-limit-lost-money" id="toc-crashed-to-the-limit-lost-money" class="nav-link" data-scroll-target="#crashed-to-the-limit-lost-money">Crashed to the limit, lost money</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-9-5-the-risks-of-compressing-a-schedule" id="toc-lo-9-5-the-risks-of-compressing-a-schedule" class="nav-link" data-scroll-target="#lo-9-5-the-risks-of-compressing-a-schedule">LO 9-5 · The risks of compressing a schedule</a>
+  <ul class="collapse">
+  <li><a href="#using-the-graph" id="toc-using-the-graph" class="nav-link" data-scroll-target="#using-the-graph">Using the graph</a></li>
+  <li><a href="#the-estimates-are-rough" id="toc-the-estimates-are-rough" class="nav-link" data-scroll-target="#the-estimates-are-rough">The estimates are rough</a></li>
+  <li><a href="#cheapest-is-not-always-best" id="toc-cheapest-is-not-always-best" class="nav-link" data-scroll-target="#cheapest-is-not-always-best">Cheapest is not always best</a></li>
+  </ul></li>
+  <li><a href="#lo-9-6-when-cost-not-time-is-the-issue" id="toc-lo-9-6-when-cost-not-time-is-the-issue" class="nav-link" data-scroll-target="#lo-9-6-when-cost-not-time-is-the-issue">LO 9-6 · When cost, not time, is the issue</a></li>
+  <li><a href="#thursday-studio" id="toc-thursday-studio" class="nav-link" data-scroll-target="#thursday-studio">Thursday studio</a>
+  <ul class="collapse">
+  <li><a href="#studio-10-find-the-economic-optimum-not-the-earliest-date" id="toc-studio-10-find-the-economic-optimum-not-the-earliest-date" class="nav-link" data-scroll-target="#studio-10-find-the-economic-optimum-not-the-earliest-date">Studio 10 · Find the economic optimum, not the earliest date</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -201,8 +262,683 @@ Produced in the Thursday session and uploaded to Blackboard before you leave
 </div>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>Speed is the ultimate weapon in business. All else being equal, the fastest company in any market will win.</p>
+<p>— Dave Girouard, quoted as the chapter’s epigraph in Larson &amp; Gray [1]</p>
+</blockquote>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 9</strong> [1]. The exposition is reworded; the options for accelerating a project, the cost-duration graph, the least-cost crashing procedure, the practical cautions and the options for cutting cost are the chapter’s. Figures 2 and 3 are redrawn from the chapter’s Figures 9.2 and 9.3, and the chapter’s worked example reproduces the values in its Figures 9.3 to 9.5; each says so where it appears. The conference’s crash times and costs, its cost-duration curve and its optimum are original to these course materials. Brooks’s law is cited to Brooks [2]; the exact formulation of the time-cost trade-off to Kelley [3].</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 87%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 9-1</strong></td>
+<td style="text-align: left;">Explain why a project might be crashed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 9-2</strong></td>
+<td style="text-align: left;">Choose among ways to shorten an activity when resources are available.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 9-3</strong></td>
+<td style="text-align: left;">Choose among ways to shorten an activity when resources are constrained.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 9-4</strong></td>
+<td style="text-align: left;">Find the optimum cost-time point of a project network.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 9-5</strong></td>
+<td style="text-align: left;">Weigh the risks of compressing a schedule.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 9-6</strong></td>
+<td style="text-align: left;">Choose among ways to reduce project cost when time is not the issue.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">crashing</span><span class="chip">fast tracking</span><span class="chip">Brooks’s law</span><span class="chip">outsourcing</span><span class="chip">overtime</span><span class="chip">scope reduction</span><span class="chip">direct cost</span><span class="chip">indirect cost</span><span class="chip">normal time</span><span class="chip">crash time</span><span class="chip">crash cost</span><span class="chip">cost slope</span><span class="chip">cost-duration graph</span><span class="chip">optimum cost-time point</span><span class="chip">linearity assumption</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-9-1-why-crash-a-project" class="level1">
+<h1>LO 9-1 · Why crash a project</h1>
+<p><em>Following Larson &amp; Gray, Ch. 9, Section 9.1 [1].</em></p>
+<p>Week 9 left the conference with a schedule the team can actually staff and a budget laid out week by week. This week the question changes. Someone wants it sooner.</p>
+<p>The chapter opens with three situations every project manager meets eventually [1]. The finished schedule lands two months after a date the boss has already promised a customer. Five months in, the team is three weeks behind a date that cannot move. Four months in, management changes its mind about what matters and says money is no object, just finish. In each, the plan is sound and the date is wrong.</p>
+<p>The reasons behind those situations recur:</p>
+<ul>
+<li><strong>An imposed date.</strong> A contract, a launch, a regulator or a sponsor sets the finish, and the network says it cannot be met at normal pace.</li>
+<li><strong>Time to market.</strong> Being first is worth more than the extra cost of getting there, a point Week 1 made about product life cycles.</li>
+<li><strong>Incentive and penalty contracts.</strong> A bonus for finishing early or a penalty for finishing late puts a price on every day.</li>
+<li><strong>Recovering a slip.</strong> Delays early in the project have eaten the slack, and the only way back is to compress what remains.</li>
+<li><strong>Indirect cost.</strong> Every day the project runs costs supervision, rented space and interest. Finishing sooner saves that money, sometimes more than the speed-up costs.</li>
+<li><strong>Freeing people.</strong> The team is needed on the next project, and every day this one runs is a day that one waits.</li>
+</ul>
+<p><strong>Crashing</strong> is the general term for shortening a project’s duration beyond its normal, lowest-cost schedule. It always costs something; the question this week answers is how to buy the time as cheaply as possible, and when to stop buying.</p>
+<hr>
+</section>
+<section id="lo-9-2-options-when-resources-are-available" class="level1">
+<h1>LO 9-2 · Options when resources are available</h1>
+<p><em>Following Larson &amp; Gray, Ch. 9, Section 9.2 [1].</em></p>
+<p>When money and people are available, four options shorten an activity without changing the plan’s logic.</p>
+<p><strong>Add resources.</strong> The commonest choice is more people or more equipment on a critical activity. It works in proportion only when the work can be divided with little coordination: picking a crop by hand, repaving a road in sections. Most project work is not like that. Every person added must talk to every other: a team of <em>n</em> people has <em>n</em>(<em>n</em> − 1)/2 pairs, so going from two people to four takes the pairs from one to six. New people also need training before they help. Frederick Brooks, managing IBM’s System/360 software in the 1960s, put the result bluntly: “adding manpower to a late software project makes it later” [2]. Later research found the effect is not universal; what matters is adding people early enough that they are productive before the deadline [1].</p>
+<p><strong>Outsource.</strong> A subcontractor may bring equipment or expertise the team lacks: a backhoe that digs in two hours what a crew digs in two days, or a specialist firm that halves the time an internal team would need. Outsourcing also frees internal people for other critical work. Week 12 returns to the trade-offs.</p>
+<p><strong>Schedule overtime.</strong> Longer days or weekend work add hours without adding people, so there is no new coordination or training cost. It is expensive, it tires people, and it cannot be sustained for long.</p>
+<p><strong>Do it twice.</strong> When the final design cannot be fixed in time, build a quick interim solution now and replace it with the proper one later. The project pays for the work twice to keep the date.</p>
+<p>Of these, overtime, outsourcing and added resources are the methods used most often, because they keep the original plan intact [1].</p>
+<hr>
+</section>
+<section id="lo-9-3-options-when-resources-are-constrained" class="level1">
+<h1>LO 9-3 · Options when resources are constrained</h1>
+<p><em>Following Larson &amp; Gray, Ch. 9, Section 9.2 [1].</em></p>
+<p>When the budget is fixed or no one else is available, the options narrow. These also work when resources are available.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 38%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">What changes</th>
+<th style="text-align: left;">The catch</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Improve the team’s efficiency</strong></td>
+<td style="text-align: left;">Better planning and organisation; fewer obstacles such as approvals and red tape</td>
+<td style="text-align: left;">Gains are real but usually modest</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Fast tracking</strong></td>
+<td style="text-align: left;">Logic: sequential activities overlap, typically by turning a finish-to-start link into start-to-start</td>
+<td style="text-align: left;">Work begun on unfinished inputs may have to be redone</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Critical-chain management</strong></td>
+<td style="text-align: left;">The whole approach to buffers and task estimates</td>
+<td style="text-align: left;">Takes training and long-term commitment; hard to adopt mid-project</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Reduce scope</strong></td>
+<td style="text-align: left;">What is delivered</td>
+<td style="text-align: left;">The project may lose value: a car that is slower, software with fewer features</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Compromise quality</strong></td>
+<td style="text-align: left;">How well it is delivered</td>
+<td style="text-align: left;">Rarely acceptable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fast tracking</strong> deserves a closer look because Week 6 built its mechanics. A start-to-start link with a lag lets manufacturing engineers begin building the production line once the key specifications are set, rather than waiting for final design approval. The project gets shorter; the risk is that a late design change wastes the work already done. Fast tracking works where the people involved coordinate closely and trust the work handed to them.</p>
+<p><strong>Reducing scope</strong> is the commonest response to a date that cannot be met, and the one most likely to destroy value. The way to do it well is to reopen the requirements with the sponsor. Requirements are often written in an optimistic moment and include things that are desirable rather than essential. A frank conversation, <em>you can have all of it in February or these parts of it in December</em>, either buys more time or money, or separates what the project must deliver from what it would be nice to deliver. Sometimes the leaner project is the better one.</p>
+<hr>
+</section>
+<section id="lo-9-4-the-optimum-cost-time-point" class="level1">
+<h1>LO 9-4 · The optimum cost-time point</h1>
+<p><em>Following Larson &amp; Gray, Ch. 9, Sections 9.3 and 9.4 [1].</em></p>
+<p>Crashing changes two kinds of cost in opposite directions.</p>
+<p><strong>Indirect costs</strong> are the costs of keeping the project open: supervision, administration, consultants, rented space, interest. They cannot be traced to any one activity, and they accrue for every day the project runs. Shorten the project and they fall. If supervision and administration cost $2,000 a day, every day saved saves $2,000, provided those people have somewhere else useful to be [1].</p>
+<p><strong>Direct costs</strong> are labour, materials, equipment and subcontracts charged to particular activities. At <strong>normal time</strong> an activity is done the efficient, low-cost way. Shortening it means overtime, extra people or faster methods, so its direct cost rises.</p>
+<p>Total cost is the sum. As the project is compressed from its normal duration, indirect cost falls steadily while direct cost rises, slowly at first and then faster as only expensive options remain. Somewhere the total stops falling. That duration is the <strong>optimum cost-time point</strong>, and finishing either later or earlier costs more.</p>
+<section id="one-activity-normal-point-crash-point-slope" class="level2">
+<h2 class="anchored" data-anchor-id="one-activity-normal-point-crash-point-slope">One activity: normal point, crash point, slope</h2>
+<p>For each activity the team estimates two points. The normal point is its normal time and normal cost. The <strong>crash point</strong> is its <strong>crash time</strong>, the shortest time in which it can realistically be done, and its <strong>crash cost</strong>, the direct cost of doing it that fast. Both points come from the people who know the work best.</p>
+<div id="fig-activity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week10/activity-graph.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: One activity’s cost-duration line. Shortening it from 10 time units to 5 raises its cost from $400 to $800. Redrawn from Larson &amp; Gray, Ch. 9, Figure 9.2 [1].
+</figcaption>
+</figure>
+</div>
+<p>The line between the two points has a <strong>slope</strong>, the cost of saving one unit of time:</p>
+<p><span class="math display">\[
+\text{slope} = \frac{\text{crash cost} - \text{normal cost}}{\text{normal time} - \text{crash time}}
+\]</span></p>
+<p>For the activity in <a href="#fig-activity" class="quarto-xref">Figure&nbsp;1</a>, ($800 − $400) ÷ (10 − 5) = $80 per unit, and it can be shortened by at most five units. The graph rests on five assumptions: cost rises in a straight line; normal time is the low-cost way; crash time is a real limit; the slope is a cost per unit of time; and every shortening stays between the two points [1].</p>
+</section>
+<section id="the-chapters-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="the-chapters-procedure">The chapter’s procedure</h2>
+<p>The procedure buys time one unit at a time, always at the lowest price:</p>
+<ol type="1">
+<li>Find the critical path or paths.</li>
+<li>Among critical activities that can still be shortened, choose the cheapest way to cut <strong>every</strong> critical path by one unit. With one critical path, that is the activity with the lowest slope. With several, it is either one activity they share or one activity on each, whichever costs less in total.</li>
+<li>Shorten, add its cost to the direct cost, and recompute the paths.</li>
+<li>Repeat until no critical path can be shortened.</li>
+</ol>
+<p>For each duration reached, total cost = direct cost + indirect cost. The optimum is the smallest total.</p>
+</section>
+<section id="the-chapters-example" class="level2">
+<h2 class="anchored" data-anchor-id="the-chapters-example">The chapter’s example</h2>
+<p>The chapter works the procedure on a seven-activity network with a normal duration of 25 time units and a total direct cost of $450 [1].</p>
+<div id="fig-chapter-network" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chapter-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week10/chapter-network.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chapter-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The chapter’s example network. Redrawn from Larson &amp; Gray, Ch. 9, Figure 9.3 [1].
+</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<caption>Values from Larson &amp; Gray, Ch. 9, Figure 9.3 [1].</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Activity</th>
+<th style="text-align: right;">Normal time</th>
+<th style="text-align: right;">Normal cost</th>
+<th style="text-align: right;">Crash time</th>
+<th style="text-align: right;">Crash cost</th>
+<th style="text-align: right;">Slope</th>
+<th style="text-align: right;">Can save</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$50</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">$70</td>
+<td style="text-align: right;">$20</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>The critical path is A–D–F–G. G cannot be shortened, so the candidates are A ($20), D ($25) and F ($30). The procedure then runs:</p>
+<table class="caption-top table">
+<caption>Values from Larson &amp; Gray, Ch. 9, Figures 9.4 and 9.5 [1]; the critical-path column is this course’s reconstruction. Indirect cost falls by $50 a unit.</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 22%">
+<col style="width: 26%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Duration</th>
+<th style="text-align: left;">Critical paths</th>
+<th style="text-align: left;">Cheapest cut</th>
+<th style="text-align: right;">Cost</th>
+<th style="text-align: right;">Direct</th>
+<th style="text-align: right;">Indirect</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: left;">A–D–F–G</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">$450</td>
+<td style="text-align: right;">$400</td>
+<td style="text-align: right;">$850</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">24</td>
+<td style="text-align: left;">A–D–F–G</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">$20</td>
+<td style="text-align: right;">470</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">820</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">23</td>
+<td style="text-align: left;">A–D–F–G, A–C–F–G</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">495</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">795</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">22</td>
+<td style="text-align: left;">all three</td>
+<td style="text-align: left;">F, shared by two paths</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">525</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;"><strong>775</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">21</td>
+<td style="text-align: left;">all three</td>
+<td style="text-align: left;">C + D + E, one on each path</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">610</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">810</td>
+</tr>
+</tbody>
+</table>
+<p>Two moments in the table carry the method. At 22, F is chosen because it lies on two critical paths at once, so one $30 cut shortens both. At 21, every critical path needs its own cut, and the cheapest combination costs $85, more than the $50 of indirect cost it saves. The optimum is 22 time units at $775, three units shorter and $75 cheaper than the normal plan.</p>
+</section>
+<section id="the-conference" class="level2">
+<h2 class="anchored" data-anchor-id="the-conference">The conference</h2>
+<p>The conference from Weeks 6 to 9 now has crash estimates for every activity. Its normal schedule is 25 workdays at a direct cost of $70,000, and keeping it open costs $1,000 a day in coordinators’ time and the venue hold.</p>
+<table class="caption-top table">
+<caption>Conference crash estimates, in workdays. Predecessors are unchanged from Week 6.</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: right;">Normal</th>
+<th style="text-align: right;">Crash</th>
+<th style="text-align: right;">Normal cost</th>
+<th style="text-align: right;">Crash cost</th>
+<th style="text-align: right;">Cost per day saved</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">Approve event brief</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$2,000</td>
+<td style="text-align: right;">$3,200</td>
+<td style="text-align: right;">$1,200</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">Contract venue</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">30,000</td>
+<td style="text-align: right;">31,400</td>
+<td style="text-align: right;">700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">Draft program</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6,000</td>
+<td style="text-align: right;">6,800</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Configure registration</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;">8,900</td>
+<td style="text-align: right;">900</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: left;">Confirm speakers</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;">13,800</td>
+<td style="text-align: right;">600</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: left;">Recruit exhibitors</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2,500</td>
+<td style="text-align: right;">3,100</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: left;">Publish program</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;">4,500</td>
+<td style="text-align: right;">1,500</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: left;">Prepare on-site materials</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4,000</td>
+<td style="text-align: right;">5,600</td>
+<td style="text-align: right;">800</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Complete rehearsal</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2,500</td>
+<td style="text-align: right;">2,500</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>The critical path is A–C–E–G–H–I. The venue path A–B–D–G–H–I is 20 days and the exhibitor path A–C–F–H–I 19. F is the cheapest activity to crash, at $300 a day, and buys nothing, because it is not on the critical path.</p>
+<table class="caption-top table">
+<caption>The conference crashed one day at a time from a Mon 2 Nov start, Monday to Friday.</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Duration</th>
+<th style="text-align: left;">Shorten</th>
+<th style="text-align: right;">Cost of the day</th>
+<th style="text-align: right;">Direct</th>
+<th style="text-align: right;">Indirect</th>
+<th style="text-align: right;">Total</th>
+<th style="text-align: left;">Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">25</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">$70,000</td>
+<td style="text-align: right;">$25,000</td>
+<td style="text-align: right;">$95,000</td>
+<td style="text-align: left;">Fri 4 Dec</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">24</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">$400</td>
+<td style="text-align: right;">70,400</td>
+<td style="text-align: right;">24,000</td>
+<td style="text-align: right;">94,400</td>
+<td style="text-align: left;">Thu 3 Dec</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">23</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">70,800</td>
+<td style="text-align: right;">23,000</td>
+<td style="text-align: right;">93,800</td>
+<td style="text-align: left;">Wed 2 Dec</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">22</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">71,400</td>
+<td style="text-align: right;">22,000</td>
+<td style="text-align: right;">93,400</td>
+<td style="text-align: left;">Tue 1 Dec</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">21</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">72,000</td>
+<td style="text-align: right;">21,000</td>
+<td style="text-align: right;">93,000</td>
+<td style="text-align: left;">Mon 30 Nov</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">72,600</td>
+<td style="text-align: right;">20,000</td>
+<td style="text-align: right;">92,600</td>
+<td style="text-align: left;">Fri 27 Nov</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">H, shared</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">73,400</td>
+<td style="text-align: right;">19,000</td>
+<td style="text-align: right;">92,400</td>
+<td style="text-align: left;">Thu 26 Nov</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18</td>
+<td style="text-align: left;">H, shared</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">74,200</td>
+<td style="text-align: right;">18,000</td>
+<td style="text-align: right;"><strong>92,200</strong></td>
+<td style="text-align: left;">Wed 25 Nov</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17</td>
+<td style="text-align: left;">A, shared</td>
+<td style="text-align: right;">1,200</td>
+<td style="text-align: right;">75,400</td>
+<td style="text-align: right;">17,000</td>
+<td style="text-align: right;">92,400</td>
+<td style="text-align: left;">Tue 24 Nov</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: left;">G, shared</td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;">76,900</td>
+<td style="text-align: right;">16,000</td>
+<td style="text-align: right;">92,900</td>
+<td style="text-align: left;">Mon 23 Nov</td>
+</tr>
+</tbody>
+</table>
+<p>At 20 days the venue path becomes critical too. From there the only cuts that shorten both paths are activities they share: H, then A, then G. H at $800 is still cheaper than a day of indirect cost; A at $1,200 is not. The optimum is <strong>18 workdays, Wed 25 Nov, $92,200</strong>: a week earlier than the normal plan and $2,800 cheaper. Two more days are possible, and each makes the project more expensive.</p>
+<div id="fig-cost-duration" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cost-duration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week10/cost-duration.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cost-duration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The conference’s cost-duration graph. Total cost is lowest at 18 workdays.
+</figcaption>
+</figure>
+</div>
+<p>The rule that decides where to stop is simple: <strong>crash while the next day costs less than a day of indirect cost.</strong> Change the indirect rate and the optimum moves. Release the venue hold, so a day costs $700, and H’s $800 is no longer worth it: the optimum becomes 20 days. Add a $300-a-day penalty, so a day costs $1,300, and A’s $1,200 becomes worth paying: 17 days.</p>
+<section id="crashed-to-the-limit-lost-money" class="level3 case">
+<h3 class="anchored" data-anchor-id="crashed-to-the-limit-lost-money">Crashed to the limit, lost money</h3>
+<p>The sponsor asks how fast the conference could open. A keen coordinator calls every vendor, books every rush option, and shortens all nine activities to their crash times. The conference now finishes in 16 workdays, on Mon 23 Nov.&nbsp;The direct cost is $79,800.</p>
+<div class="qn">
+<p>What is the total cost of the coordinator’s plan, and how does it compare with doing nothing at all? Which crashes bought no time? What should the coordinator have done instead, and what would it have cost?</p>
+</div>
+</section>
+<p>The <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb">crashing notebook</a> runs the procedure for any table you give it, checks every step against an exact linear program [3], and draws the graph. For the conference and for the chapter’s example, the procedure and the exact answer agree at every duration.</p>
+<hr>
+</section>
+</section>
+<section id="lo-9-5-the-risks-of-compressing-a-schedule" class="level1">
+<h1>LO 9-5 · The risks of compressing a schedule</h1>
+<p><em>Following Larson &amp; Gray, Ch. 9, Section 9.5 [1].</em></p>
+<section id="using-the-graph" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-graph">Using the graph</h2>
+<p>A cost-duration graph keeps indirect cost in view when the pressure is on, which is exactly when it is forgotten [1]. It is most useful before the project starts and no date has been imposed, because normal times then mean what they say. Built after a date is imposed, the “normal” times have already been bent to fit it. Built mid-project, some options have already gone. Even when nobody draws the graph, the reasoning applies to every decision to buy time.</p>
+</section>
+<section id="the-estimates-are-rough" class="level2">
+<h2 class="anchored" data-anchor-id="the-estimates-are-rough">The estimates are rough</h2>
+<p>Crash times are hard to collect. “The shortest time you can realistically do it in” means different things to different estimators, and many are uncomfortable giving a number at all. Crash estimates are usually rougher than normal ones [1]. That is one reason the straight-line assumption rarely troubles practitioners: the line is a better approximation than the data it is drawn through. The exception is an activity that cannot be shortened a day at a time. A task that takes 10 days, or 7 days with a second crew, has no 8- or 9-day option; crashing it is all or nothing.</p>
+</section>
+<section id="cheapest-is-not-always-best" class="level2">
+<h2 class="anchored" data-anchor-id="cheapest-is-not-always-best">Cheapest is not always best</h2>
+<p>The procedure picks the cheapest day. Four other considerations can overrule it [1]:</p>
+<ul>
+<li><strong>Risk.</strong> Some activities are riskier to rush. Compressing software design to save a day may plant errors that cost weeks downstream. A more expensive activity may be the safer one to crash.</li>
+<li><strong>Timing.</strong> Crashing early buys insurance: if later work slips, the time is already banked, and later activities can still be crashed. Crashing late keeps options open but leaves no margin.</li>
+<li><strong>Resources.</strong> The people or equipment needed to crash the cheapest activity may be committed elsewhere. Week 9’s resource limits still apply.</li>
+<li><strong>Morale.</strong> If the least-cost rule keeps landing on the same group, fatigue and resentment follow; if crashing means overtime pay for some and not others, so can friction. Watch how the team responds.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="lo-9-6-when-cost-not-time-is-the-issue" class="level1">
+<h1>LO 9-6 · When cost, not time, is the issue</h1>
+<p><em>Following Larson &amp; Gray, Ch. 9, Section 9.6 [1].</em></p>
+<p>Speed is not always the priority. On a fixed-price contract, every dollar saved is margin; tight bids and cost-sharing contracts add more pressure; and overruns damage future business even when the customer pays them. Sometimes the cheaper project is the longer one: a smaller team, less experienced staff and cheaper equipment over more weeks.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 48%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">How it saves</th>
+<th style="text-align: left;">Watch for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Reduce scope</strong></td>
+<td style="text-align: left;">Deliver less; start from the WBS. Since time is not the issue, any activity is a candidate, critical or not</td>
+<td style="text-align: left;">Lost value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Owner takes on work</strong></td>
+<td style="text-align: left;">The customer does tasks it can do itself, such as painting the room or running in-house training</td>
+<td style="text-align: left;">Agree it before the project starts, not mid-way</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Outsource</strong></td>
+<td style="text-align: left;">A specialist may have bulk discounts, better equipment, lower overhead or cheaper labour</td>
+<td style="text-align: left;">Less control; deliverables must be clearly defined</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Brainstorm</strong></td>
+<td style="text-align: left;">Ask the team; people closest to the work see savings others miss</td>
+<td style="text-align: left;">Nothing, except not asking</td>
+</tr>
+</tbody>
+</table>
+<p>One project manager’s team found more than $75,000 of savings without touching the scope, simply because someone asked [1].</p>
+<hr>
+</section>
+<section id="thursday-studio" class="level1">
+<h1>Thursday studio</h1>
+<section id="studio-10-find-the-economic-optimum-not-the-earliest-date" class="level2">
+<h2 class="anchored" data-anchor-id="studio-10-find-the-economic-optimum-not-the-earliest-date">Studio 10 · Find the economic optimum, not the earliest date</h2>
+<p>Complete the <a href="../labs/lab-10.html">Week 10 studio</a>.</p>
+<p>You will import the conference’s crash estimates into Smartsheet, add one column formula and four summary fields that turn every duration change into a total cost, and crash the project one day at a time by the chapter’s procedure until total cost stops falling. Then you will run the <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-10-crashing.ipynb">crashing notebook</a> on the same workbook, check your steps against its log and its exact answer, and see how the optimum moves when the cost of a day changes.</p>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 9.</li>
+<li>Brooks, F. P. (1975). <em>The Mythical Man-Month: Essays on Software Engineering</em>. Addison-Wesley.</li>
+<li>Kelley, J. E. (1961). Critical-path planning and scheduling: Mathematical basis. <em>Operations Research</em>, 9(3), 296–320.</li>
+</ol>
+<p>The conference’s crash estimates, cost-duration curve and optimum are original to these course materials.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,7 +1371,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
