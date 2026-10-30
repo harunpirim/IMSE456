@@ -1,0 +1,117 @@
+---
+title: "Studio 11 · Build the dashboard, then find what it hides"
+subtitle: "Week 11 · Progress and Performance Measurement · Larson Ch. 13"
+week: 11
+release: "2026-11-02"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA11</strong> — one PDF with four screenshots, the week-4 status line and six short answers</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>70 minutes: Smartsheet 40, Colab 20, upload 5, 5 spare</dd>
+<dt>Tools</dt><dd>Smartsheet (your NDSU account) and Google Colab</dd>
+<dt>Workbook</dt><dd><a href="../files/week-11-evm-workbook.xlsx">Conference earned value workbook</a> (Excel), used in both parts</dd>
+<dt>Notebook</dt><dd><a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-11-evm.ipynb">Week 11 earned value notebook</a>, opens in Colab</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a> if you use it</dd>
+<dt>Week page</dt><dd><a href="../weeks/week-11.qmd">Week 11 — Progress and Performance Measurement</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Download the [conference earned value workbook](../files/week-11-evm-workbook.xlsx) before the session starts. Write each answer in one to three sentences next to its screenshot.
+:::
+
+The workbook holds the conference's baseline: nine activities, their planned start and planned workdays, and a budget for each that sums to \$70,000. *% Complete* and *Actual cost* are empty, waiting for the status reports. In Smartsheet you build the earned value sheet and a dashboard, post two weekly reports, and use the baseline Gantt chart to find what the dashboard leaves out. In Colab you chart the trend, check the schedule on the network, and price a recovery. **Predecessors** are row numbers: G's `4, 5` means "after rows 4 and 5, D and E".
+
+::: {.part}
+### Part 1 · Smartsheet — 40 minutes
+
+1. **Import.** **+ Create → Import → Microsoft Excel**, select the workbook. Keep row 1 as headers and *Activity* as the primary column. *Check:* nine rows, A to I; Start Date in row 1 reads 11/02/26; *Planned start* is filled in every row. If a date column came in as text, right-click its header → **Edit Column Properties** → Date.
+2. **Dependencies.** Right-click any column header → **Project Settings**. Tick **Dependencies Enabled** and map Start Date, End Date, Duration, Predecessors and **% Complete** to the columns of those names. Monday to Friday, no holidays. **OK**. *Check:* row 9 ends **Fri 4 Dec**.
+3. **Set the baseline.** Switch to **Gantt** view, select **Baselines** in the toolbar, then **Set baseline**. Smartsheet adds *Baseline Start*, *Baseline Finish* and *Variance* columns and draws a baseline bar under each task. *Check:* Variance is 0 in every row. Do this **before** entering any status; a baseline set afterwards measures nothing.
+4. **Earned value formulas.** Back in Grid view, add four Text/Number columns with the names below. In row 1 of each, paste the formula, then right-click the cell → **Convert to Column Formula**. The date in *Planned value* is the status date, end of week 3.
+
+    | Column | Formula |
+    |:--|:--|
+    | Planned value | `=[Budget]@row * MAX(0, MIN(1, NETWORKDAYS([Planned start]@row, DATE(2026, 11, 20)) / [Planned days]@row))` |
+    | Earned value | `=[Budget]@row * [% Complete]@row` |
+    | Cost variance | `=[Earned value]@row - [Actual cost]@row` |
+    | Schedule variance | `=[Earned value]@row - [Planned value]@row` |
+
+    : {tbl-colwidths="[20,80]"}
+
+    Open the **Sheet Summary** panel (right edge of the sheet) and add these fields. Each is Text/Number except *Finish*, which is Date:
+
+    | Field | Formula |
+    |:--|:--|
+    | BAC | `=SUM([Budget]:[Budget])` |
+    | PV | `=SUM([Planned value]:[Planned value])` |
+    | EV | `=SUM([Earned value]:[Earned value])` |
+    | AC | `=SUM([Actual cost]:[Actual cost])` |
+    | CPI | `=ROUND([EV]# / [AC]#, 2)` |
+    | SPI | `=ROUND([EV]# / [PV]#, 2)` |
+    | EAC | `=ROUND([AC]# + ([BAC]# - [EV]#) / ([EV]# / [AC]#), 0)` |
+    | VAC | `=[BAC]# - [EAC]#` |
+    | Finish | `=MAX([End Date]:[End Date])` |
+
+    : {tbl-colwidths="[18,82]"}
+
+    *Check:* BAC \$70,000 and PV \$59,000. CPI and EAC show a divide-by-zero error until there is an actual cost; that is expected.
+5. **Post the week-3 report.** Enter the status below. Type percentages with the % sign. Change Duration only where the table gives one; the dates move by themselves.
+
+    | Row | Duration | % Complete | Actual cost |
+    |:--|:--:|--:|--:|
+    | A Approve event brief | | 100% | 2,100 |
+    | B Contract venue | `4d` | 100% | 28,500 |
+    | C Draft program | `11d` | 100% | 6,400 |
+    | D Configure registration | | 100% | 7,600 |
+    | E Confirm speakers | | 25% | 3,200 |
+    | F Recruit exhibitors | | 40% | 900 |
+
+    : Week 3, Fri 20 Nov. G, H and I stay at 0. {tbl-colwidths="[40,20,20,20]"}
+
+    *Check:* PV \$59,000, EV \$50,000, AC \$48,700, CPI 1.03, SPI 0.85, EAC \$68,180, VAC \$1,820. **Screenshot 1**: the Gantt view with baseline bars, scrolled so the *Variance* column and row 9's bars are visible.
+6. **Build the dashboard.** **+ Create → Dashboard**, name it *Conference EVM*, and open it in edit mode. Add a **Metric** widget whose source is your sheet's summary fields; show CPI, SPI, EAC, VAC and Finish. Add a **Chart** widget whose data is the *Activity*, *Planned value*, *Earned value* and *Actual cost* columns for all nine rows, as a column chart. Save. **Screenshot 2**: the dashboard at week 3.
+7. **Post week 4.** Fri 27 Nov. In any *Planned value* cell, change `DATE(2026, 11, 20)` to `DATE(2026, 11, 27)` and press Enter; the column formula updates every row. Then enter E: Duration `9d`, **75%**, Actual cost 9,600; and F: **100%**, Actual cost 2,800. Record the week-4 line: PV, EV, AC, CPI, SPI, EAC, VAC and Finish. **Screenshot 3**: the dashboard at week 4.
+
+**Answer**
+
+1. At week 3, which dashboard numbers would a sponsor read as good news? What does the baseline Gantt show that they do not? Name the activity and the number of workdays.
+2. SPI 0.85 says 15 percent of the scheduled work is missing, yet the finish is 20 percent later than planned. Use rows B and C to explain why the dollars understate the delay.
+3. From week 3 to week 4, SPI went up and the finish moved later. How can both be true?
+:::
+
+::: {.part}
+### Part 2 · Colab — 20 minutes
+
+1. **Open.** Open the [earned value notebook](https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-11-evm.ipynb), choose **File → Save a copy in Drive**, then **Runtime → Run all**. If Colab asks, choose **Run anyway**. Section 0 loads the same workbook; section 3 should match your week-3 Smartsheet numbers.
+2. **What the dollars hide.** Read section 5 (the network and the total cost with indirect cost) and section 7 (the cheapest recovery) at week 3.
+3. **Add week 4.** In the EDIT cell, replace the comment line `# 4: {...}` with the line below, set `STATUS_WEEK = 4`, and run all. **Screenshot 4**: the two graphs in section 4.
+
+    ```python
+    4: {"A": (1.00, 2100), "B": (1.00, 28500, 4), "C": (1.00, 6400, 11), "D": (1.00, 7600), "E": (0.75, 9600, 9), "F": (1.00, 2800)},
+    ```
+
+If Colab is blocked on your network, [download the notebook](../files/week-11-evm.ipynb) and upload it with **File → Upload notebook**.
+
+**Answer**
+
+4. At week 3, what does the conference cost all in, with the \$1,000 a day of indirect cost, compared with the \$95,000 plan? What is the cheapest recovery in section 7, and does it pay?
+5. Across weeks 1 to 4 the CPI stays near 1.02 and EAC moves by less than \$1,500. What does that support in the chapter's claim about the CPI, and what can the CPI not tell you?
+6. Section 6 at week 4: what is EV under each earning rule? Which rule would you use for the conference's weekly reports, and why?
+:::
+
+::: {.part}
+### Upload — 5 minutes
+
+- [ ] One PDF: screenshots 1 to 4, your week-4 status line, answers 1 to 6, and the AI acknowledgement if you used AI
+- [ ] Saved to `IMSE456/studio-11/` on your NDSU Google Drive or OneDrive, with your notebook copy's link
+- [ ] Uploaded to Blackboard as `SA11_yourlastname.pdf` before you leave
+:::
+
+To go further after class, the [interactive earned value notebook](https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-11-evm-marimo.py) runs the chapter's Digital Camera example and the conference's reports with a slider for every activity, and the week page's practice exercises reproduce the chapter's own.
+
+## Source
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 13: earned value, its variances, indexes and forecasts, and the earning rules. The conference's baseline and status reports are original to these course materials.
