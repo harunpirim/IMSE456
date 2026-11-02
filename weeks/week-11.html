@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,47 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-13-1-the-four-steps-of-control" id="toc-lo-13-1-the-four-steps-of-control" class="nav-link" data-scroll-target="#lo-13-1-the-four-steps-of-control">LO 13-1 · The four steps of control</a></li>
+  <li><a href="#lo-13-2-monitoring-time-with-a-tracking-gantt-chart" id="toc-lo-13-2-monitoring-time-with-a-tracking-gantt-chart" class="nav-link" data-scroll-target="#lo-13-2-monitoring-time-with-a-tracking-gantt-chart">LO 13-2 · Monitoring time with a tracking Gantt chart</a></li>
+  <li><a href="#lo-13-3-why-earned-value-is-needed" id="toc-lo-13-3-why-earned-value-is-needed" class="nav-link" data-scroll-target="#lo-13-3-why-earned-value-is-needed">LO 13-3 · Why earned value is needed</a></li>
+  <li><a href="#lo-13-4-cost-and-schedule-variance" id="toc-lo-13-4-cost-and-schedule-variance" class="nav-link" data-scroll-target="#lo-13-4-cost-and-schedule-variance">LO 13-4 · Cost and schedule variance</a>
+  <ul class="collapse">
+  <li><a href="#the-chapters-example-a-digital-camera-prototype" id="toc-the-chapters-example-a-digital-camera-prototype" class="nav-link" data-scroll-target="#the-chapters-example-a-digital-camera-prototype">The chapter’s example: a Digital Camera prototype</a></li>
+  </ul></li>
+  <li><a href="#lo-13-5-performance-and-percent-complete-indexes" id="toc-lo-13-5-performance-and-percent-complete-indexes" class="nav-link" data-scroll-target="#lo-13-5-performance-and-percent-complete-indexes">LO 13-5 · Performance and percent complete indexes</a>
+  <ul class="collapse">
+  <li><a href="#other-ways-to-earn-value" id="toc-other-ways-to-earn-value" class="nav-link" data-scroll-target="#other-ways-to-earn-value">Other ways to earn value</a></li>
+  </ul></li>
+  <li><a href="#lo-13-6-forecasting-the-final-cost" id="toc-lo-13-6-forecasting-the-final-cost" class="nav-link" data-scroll-target="#lo-13-6-forecasting-the-final-cost">LO 13-6 · Forecasting the final cost</a></li>
+  <li><a href="#the-conference-status-reports" id="toc-the-conference-status-reports" class="nav-link" data-scroll-target="#the-conference-status-reports">The conference: status reports</a>
+  <ul class="collapse">
+  <li><a href="#worked-example-the-week-2-status-report" id="toc-worked-example-the-week-2-status-report" class="nav-link" data-scroll-target="#worked-example-the-week-2-status-report">Worked example: the week-2 status report</a>
+  <ul class="collapse">
+  <li><a href="#the-cpi-that-looked-good" id="toc-the-cpi-that-looked-good" class="nav-link" data-scroll-target="#the-cpi-that-looked-good">The CPI that looked good</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-13-7-scope-creep-baseline-changes-and-the-cost-of-data" id="toc-lo-13-7-scope-creep-baseline-changes-and-the-cost-of-data" class="nav-link" data-scroll-target="#lo-13-7-scope-creep-baseline-changes-and-the-cost-of-data">LO 13-7 · Scope creep, baseline changes and the cost of data</a>
+  <ul class="collapse">
+  <li><a href="#technical-performance" id="toc-technical-performance" class="nav-link" data-scroll-target="#technical-performance">Technical performance</a></li>
+  <li><a href="#scope-creep" id="toc-scope-creep" class="nav-link" data-scroll-target="#scope-creep">Scope creep</a></li>
+  <li><a href="#baseline-changes" id="toc-baseline-changes" class="nav-link" data-scroll-target="#baseline-changes">Baseline changes</a></li>
+  <li><a href="#the-cost-of-data" id="toc-the-cost-of-data" class="nav-link" data-scroll-target="#the-cost-of-data">The cost of data</a></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice exercises</a></li>
+  </ul></li>
+  <li><a href="#thursday-studio" id="toc-thursday-studio" class="nav-link" data-scroll-target="#thursday-studio">Thursday studio</a>
+  <ul class="collapse">
+  <li><a href="#studio-11-build-the-dashboard-then-find-what-it-hides" id="toc-studio-11-build-the-dashboard-then-find-what-it-hides" class="nav-link" data-scroll-target="#studio-11-build-the-dashboard-then-find-what-it-hides">Studio 11 · Build the dashboard, then find what it hides</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -151,17 +219,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="gated">
-<p><span class="lock">Not posted yet</span></p>
-<p>Notes, slides, and the recording for this week are not published yet.</p>
-</div>
 <div class="week-meta">
 <dl>
+<dt>
+Sessions
+</dt>
+<dd>
+3 &amp; 5 November
+</dd>
+<dt>
+Chapter
+</dt>
+<dd>
+Larson Ch. 13
+</dd>
 <dt>
 Tuesday
 </dt>
 <dd>
-The CPI that looked good
+The CPI that looked good — concept, worked example and case
 </dd>
 <dt>
 Thursday
@@ -175,11 +251,1523 @@ Reading
 <dd>
 Larson Ch. 13
 </dd>
+<dt>
+Studio
+</dt>
+<dd>
+Produced in the Thursday session and uploaded to Blackboard before you leave
+</dd>
 </dl>
 </div>
-<p>See the <a href="../schedule.html">schedule</a> for everything that is live now.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Recording</strong> — posts after the session.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 13</strong> [1]. The exposition is reworded; the control process, the tracking Gantt chart, earned value management and its glossary, the variances, indexes and forecasts, the earning rules and the discussion of scope and baseline changes are the chapter’s. Figures 2 to 6 are redrawn from the chapter’s Figures 13.1, 13.4, 13.5, 13.9 and 13.12, Figure 2 with the conference’s data in the chapter’s layout, and the Digital Camera example reproduces the values in its Figure 13.8 and Table 13.3; each says so where it appears. The chapter’s exercises are reproduced as written. The conference’s baseline, status reports and forecasts are original to these course materials. The accuracy of the CPI forecast is cited to Christensen [2] and Fleming and Koppelman [3], as the chapter cites them.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 85%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 13-1</strong></td>
+<td style="text-align: left;">Identify the four steps for controlling a project.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 13-2</strong></td>
+<td style="text-align: left;">Use a tracking Gantt chart to monitor time performance.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 13-3</strong></td>
+<td style="text-align: left;">Explain why earned value management is needed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 13-4</strong></td>
+<td style="text-align: left;">Calculate and interpret cost and schedule variance.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 13-5</strong></td>
+<td style="text-align: left;">Calculate and interpret performance and percent complete indexes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 13-6</strong></td>
+<td style="text-align: left;">Forecast final project cost.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 13-7</strong></td>
+<td style="text-align: left;">Identify and manage scope creep and baseline changes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO A13.1-1</strong></td>
+<td style="text-align: left;">Apply the simpler earned value rules to measure progress.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">control process</span><span class="chip">baseline</span><span class="chip">tracking Gantt chart</span><span class="chip">milestone schedule</span><span class="chip">earned value (EV)</span><span class="chip">planned value (PV)</span><span class="chip">actual cost (AC)</span><span class="chip">BAC</span><span class="chip">cost variance</span><span class="chip">schedule variance</span><span class="chip">CPI</span><span class="chip">SPI</span><span class="chip">PCIB and PCIC</span><span class="chip">ETC and EAC</span><span class="chip">VAC</span><span class="chip">TCPI</span><span class="chip">percent complete rule</span><span class="chip">0/100 and 50/50 rules</span><span class="chip">scope creep</span><span class="chip">rubber baseline</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-13-1-the-four-steps-of-control" class="level1">
+<h1>LO 13-1 · The four steps of control</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Sections 13.1 and 13.2 [1].</em></p>
+<p>Weeks 4 to 10 built a plan for the conference: a scope, a network, estimates, a resource-feasible schedule, a time-phased budget, and a date bought at the lowest price. This week the conference starts, and the question becomes whether it is going to plan.</p>
+<p><strong>Control</strong> is comparing what is happening with what was planned, deciding whether the difference matters, and acting on it. The chapter breaks it into four steps [1]:</p>
+<ol type="1">
+<li><strong>Set a baseline.</strong> The time-phased plan of work, resources and budget, built from the WBS and the resource schedule. Week 9 built the conference’s.</li>
+<li><strong>Measure progress and performance.</strong> Time is easy to measure: is the critical path early or late, and is the slack on near-critical paths shrinking? Cost is harder, because money spent says nothing about how much work it bought.</li>
+<li><strong>Compare plan with actual.</strong> Status reports every one to four weeks catch a deviation while it can still be corrected.</li>
+<li><strong>Take action.</strong> If the deviation matters, correct it: authorise overtime, crash an activity, reassign people. If the scope or the conditions have changed, revise the baseline.</li>
+</ol>
+<div id="fig-control" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-control-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/control-loop.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-control-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Control as a loop. Each reporting period measures against the same baseline. Drawn from Larson &amp; Gray, Ch. 13, Section 13.2 [1].
+</figcaption>
+</figure>
+</div>
+<p>A monitoring system answers a short list of questions, and the data it collects should be chosen to answer them: where the project stands on schedule and cost; what it will cost and when it will finish; which problems need attention now; and who, what and where is causing any overrun [1]. The data are usually actual durations, actual resource use and actual costs, collected at the work package level and compared with the planned values for the same packages.</p>
+<hr>
+</section>
+<section id="lo-13-2-monitoring-time-with-a-tracking-gantt-chart" class="level1">
+<h1>LO 13-2 · Monitoring time with a tracking Gantt chart</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Section 13.3 [1].</em></p>
+<p>A <strong>tracking Gantt chart</strong> draws each activity twice: its baseline bar, and below it the actual bar for the work done plus a bar for the work still to do. Activities that finished early or late, activities in progress and their expected remaining duration, and activities pushed later by their predecessors are all visible against the plan at once [1].</p>
+<div id="fig-tracking" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tracking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/tracking-gantt.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tracking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The conference at the end of week 3 as a tracking Gantt chart. Draft program took 11 workdays instead of 6, so everything after it on the critical path moved five workdays. Layout redrawn from Larson &amp; Gray, Ch. 13, Figure 13.1 [1]; the conference’s data are original to this course.
+</figcaption>
+</figure>
+</div>
+<p>Two other displays summarise time performance for different audiences. A <strong>project schedule control chart</strong> plots, at each report, how many time units the project is ahead of or behind schedule, so a trend toward lateness is visible before it becomes large. A <strong>milestone schedule</strong> lists the major deliverables with planned and actual dates and the difference in days. It suits sponsors, owners and regulators who want to know whether the big events are on time and have no use for activity detail. The chapter’s example is a university reporting a new business school building to its president: schematic design five days late, historic review ten days early, and so on down to occupancy [1].</p>
+<hr>
+</section>
+<section id="lo-13-3-why-earned-value-is-needed" class="level1">
+<h1>LO 13-3 · Why earned value is needed</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Section 13.4 [1].</em></p>
+<p>The chapter makes the case with a painting contract [1]. Ten identical condos, two weeks and $10,000 each: 20 weeks and $100,000 in all. Ten weeks in, $50,000 has been spent. That sounds like on plan, because half the time has gone and half the money. But if good weather let the crew paint six condos for that $50,000, the project is ahead and under budget; if bad weather allowed only four, it is behind and over. Planned cost and actual cost alone cannot tell these apart, because neither says how much work was done.</p>
+<p><strong>Earned value</strong> supplies the missing number: the budgeted cost of the work actually completed. If 4½ condos are painted, their budget is $45,000, and that is what the project has earned, whatever it spent to get there.</p>
+<table class="caption-top table">
+<caption>The vocabulary of earned value, following Larson &amp; Gray, Ch. 13, Table 13.2 [1].</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>PV</strong>, planned value</td>
+<td style="text-align: left;">The time-phased baseline: the budget of the work <em>scheduled</em> to be done by now. Older name BCWS.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>EV</strong>, earned value</td>
+<td style="text-align: left;">The budget of the work <em>actually</em> done by now: percent complete × budget, summed. Older name BCWP.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>AC</strong>, actual cost</td>
+<td style="text-align: left;">What the work done by now actually cost. Older name ACWP.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>CV</strong>, cost variance</td>
+<td style="text-align: left;">EV − AC. Negative: the work done cost more than its budget.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>SV</strong>, schedule variance</td>
+<td style="text-align: left;">EV − PV. Negative: less work is done than planned, in dollars.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>BAC</strong>, budget at completion</td>
+<td style="text-align: left;">The total budget of the baseline.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>ETC</strong>, estimate to complete</td>
+<td style="text-align: left;">The forecast cost of the remaining work.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>EAC</strong>, estimate at completion</td>
+<td style="text-align: left;">The forecast total cost: AC + ETC.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>VAC</strong>, variance at completion</td>
+<td style="text-align: left;">BAC − EAC: the forecast over- or underrun.</td>
+</tr>
+</tbody>
+</table>
+<p>An earned value system works only if cost and schedule are tied together from the start. The chapter’s five steps [1]: define the work with a WBS and OBS, down to work packages with budgets (Weeks 4 and 5); schedule the work and resources in a network (Weeks 6 to 9); time-phase the budgets into the baseline PV (Week 9); during execution, collect actual cost and percent complete for each work package; and compute the variances, rolled up by deliverable and by organisation unit, alongside a check of the network schedule.</p>
+<p><strong>Percent complete</strong> is the heart of the system. The more objective the measure behind it, the better: units finished, lines of code, drawings issued, cubic yards poured. Many organisations cap the credit at 80 or 90 percent until a work package is actually finished, so the last 10 percent cannot be claimed early [1]. The baseline normally holds only the <strong>direct</strong> costs the project manager controls: labour, equipment and materials. Overhead and profit are added later by accounting [1]. That matters for the conference, whose $1,000-a-day indirect cost from Week 10 is not in its $70,000 BAC.</p>
+<hr>
+</section>
+<section id="lo-13-4-cost-and-schedule-variance" class="level1">
+<h1>LO 13-4 · Cost and schedule variance</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Sections 13.4 and 13.5 [1].</em></p>
+<p>Two computations carry the method: <strong>CV = EV − AC</strong> and <strong>SV = EV − PV</strong>. Both compare everything with EV, the value of the work done. PV is the anchor; AC says what the work cost; EV says what it was worth.</p>
+<div id="fig-cost-schedule" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cost-schedule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/cost-schedule.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cost-schedule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The chapter’s cost/schedule graph at period 25 of a 45-period project with BAC $400: PV $300, EV $200, AC $340. Redrawn from Larson &amp; Gray, Ch. 13, Figure 13.4 [1].
+</figcaption>
+</figure>
+</div>
+<p>In <a href="#fig-cost-schedule" class="quarto-xref">Figure&nbsp;3</a>, three-quarters of the work was scheduled by period 25, half was done, and 85 percent of the budget is spent. CV = 200 − 340 = −140: over budget. SV = 200 − 300 = −100: behind. The chapter reads the graph as pointing toward roughly an 18 percent cost overrun and a finish about five periods late [1]. Every combination of signs is possible, and the order of the three curves at today’s line gives it away (<a href="#fig-review" class="quarto-xref">Figure&nbsp;4</a>).</p>
+<div id="fig-review" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-review-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/ev-review.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-review-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Four combinations of schedule and cost variance. Redrawn from Larson &amp; Gray, Ch. 13, Figure 13.5 [1].
+</figcaption>
+</figure>
+</div>
+<section id="the-chapters-example-a-digital-camera-prototype" class="level2">
+<h2 class="anchored" data-anchor-id="the-chapters-example-a-digital-camera-prototype">The chapter’s example: a Digital Camera prototype</h2>
+<p>The chapter works a six-activity project with a budget of $320,000 and a planned duration of 11 periods [1]. To keep it simple, each cost account is one work package and one activity; the baseline is laid out at early start; and an activity incurs some cost every period it is in progress.</p>
+<div style="overflow-x: auto">
+<table class="caption-top table">
+<caption>The Digital Camera baseline, $000. Values from Larson &amp; Gray, Ch. 13, Figure 13.8 [1].</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Activity</th>
+<th style="text-align: right;">Duration</th>
+<th style="text-align: right;">ES</th>
+<th style="text-align: right;">LF</th>
+<th style="text-align: right;">Slack</th>
+<th style="text-align: right;">Budget</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+<th style="text-align: right;">6</th>
+<th style="text-align: right;">7</th>
+<th style="text-align: right;">8</th>
+<th style="text-align: right;">9</th>
+<th style="text-align: right;">10</th>
+<th style="text-align: right;">11</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A Design specifications</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B Shell &amp; power</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C Memory/software</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D Zoom system</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E Assemble</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F Test</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>PV by period</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>320</strong></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Cumulative PV</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">290</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">320</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Each period, the people in the field report percent complete and actual cost for every activity. An activity not started earns nothing; a finished one earns its whole budget; one in progress earns its percent complete times its budget [1].</p>
+<table class="caption-top table">
+<caption>Selected status reports, $000. Values from Larson &amp; Gray, Ch. 13, Table 13.3 and Figure 13.11 [1]; period 7 groups the three finished activities.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Report</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: right;">% complete</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">AC</th>
+<th style="text-align: right;">PV</th>
+<th style="text-align: right;">CV</th>
+<th style="text-align: right;">SV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Period 1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Period 2</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">−10</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Period 3</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">−10</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">−5</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">−10</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">+1</td>
+<td style="text-align: right;">+6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>66</strong></td>
+<td style="text-align: right;"><strong>90</strong></td>
+<td style="text-align: right;"><strong>60</strong></td>
+<td style="text-align: right;"><strong>−24</strong></td>
+<td style="text-align: right;"><strong>+6</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Period 7</td>
+<td style="text-align: left;">A, B, D</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">−40</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">90%</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">−30</td>
+<td style="text-align: right;">−10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">not started</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">−30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>160</strong></td>
+<td style="text-align: right;"><strong>230</strong></td>
+<td style="text-align: right;"><strong>200</strong></td>
+<td style="text-align: right;"><strong>−70</strong></td>
+<td style="text-align: right;"><strong>−40</strong></td>
+</tr>
+</tbody>
+</table>
+<p>At period 3 the project looks ahead of schedule (SV +6) and is already over budget (CV −24). By period 7, A, B and D are finished and all three ran over; C, memory and software, is 90 percent done, $30,000 over, and late. E cannot start until C is done. The project has spent $230,000 to earn $160,000 against a plan of $200,000.</p>
+<div id="fig-camera" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camera-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/camera-summary.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camera-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The Digital Camera’s cumulative PV, EV and AC through period 7. Redrawn from Larson &amp; Gray, Ch. 13, Figures 13.8 and 13.9 and Table 13.3 [1].
+</figcaption>
+</figure>
+</div>
+<p>The tracking Gantt chart adds what the dollars cannot: C, planned for four periods, now needs six, which delays E and F and the whole project by two periods [1]. Rolled up by deliverable and department, the variances point at their owners. The Storage department’s memory and software deliverable is at SV −$10,000 and CV −$30,000; Assembly’s SV of −$30,000 is not Assembly’s fault, because its work is waiting on C [1].</p>
+<p><strong>SV is in dollars, not time.</strong> A project can show a negative SV while it is ahead on the critical path, if noncritical work is lagging, and a near-zero SV while the critical path slips, if large noncritical activities are ahead. The chapter calls SV a fair indicator of overall schedule status once a project is past about 20 percent complete, and says only the network or the tracking Gantt chart measures schedule accurately at the work package level [1].</p>
+<hr>
+</section>
+</section>
+<section id="lo-13-5-performance-and-percent-complete-indexes" class="level1">
+<h1>LO 13-5 · Performance and percent complete indexes</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Section 13.6 [1].</em></p>
+<p>Dividing instead of subtracting turns the variances into efficiency ratios that can be compared across projects and plotted over time.</p>
+<table class="caption-top table">
+<caption>Interpreting the indexes, following Larson &amp; Gray, Ch. 13, Table 13.4 [1].</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Index</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Above 1.00</th>
+<th style="text-align: left;">At 1.00</th>
+<th style="text-align: left;">Below 1.00</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>CPI</strong>, cost performance index</td>
+<td style="text-align: left;">EV ÷ AC</td>
+<td style="text-align: left;">under cost</td>
+<td style="text-align: left;">on cost</td>
+<td style="text-align: left;">over cost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>SPI</strong>, schedule performance index</td>
+<td style="text-align: left;">EV ÷ PV</td>
+<td style="text-align: left;">ahead of schedule</td>
+<td style="text-align: left;">on schedule</td>
+<td style="text-align: left;">behind schedule</td>
+</tr>
+</tbody>
+</table>
+<p>For the camera at period 7, CPI = 160 ÷ 230 = .70: each dollar spent has bought 70 cents of planned work. SPI = 160 ÷ 200 = .80: 80 cents of work done for each dollar of work scheduled. The CPI is the most widely used index and the most trusted. US government studies found it stable from about 20 percent complete, whatever the contract or program, which makes it an early warning of an overrun [1].</p>
+<div id="fig-indexes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-indexes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/camera-indexes.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-indexes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The camera’s indexes through period 7. Cost efficiency fell in period 2 and never recovered. Redrawn from Larson &amp; Gray, Ch. 13, Figure 13.12 [1].
+</figcaption>
+</figure>
+</div>
+<p>Two <strong>percent complete indexes</strong> compare progress so far with the whole project [1]:</p>
+<ul>
+<li><strong>PCIB = EV ÷ BAC</strong>, percent complete in budget terms. For the camera, 160 ÷ 320 = .50: half the budgeted work is done. It ignores what was spent, and suits a project whose original estimates are trusted.</li>
+<li><strong>PCIC = AC ÷ EAC</strong>, percent complete in spending terms, using a revised estimate at completion. The camera’s team re-estimates EAC at 575, so PCIC = 230 ÷ 575 = .40. It suits managers who trust the newer estimate more than the original budget.</li>
+</ul>
+<p>The two can differ a great deal, and both assume nothing changes from here. Construction projects often add a third: how much of the <strong>management reserve</strong> the overruns have used up. The camera set aside $40,000 and is $70,000 over, so its cost variance has absorbed 175 percent of the reserve.</p>
+<section id="other-ways-to-earn-value" class="level2">
+<h2 class="anchored" data-anchor-id="other-ways-to-earn-value">Other ways to earn value</h2>
+<p><em>Following Larson &amp; Gray, Ch. 13, Section 13.6 and Appendix 13.1 [1]. LO A13.1-1.</em></p>
+<p>Estimating percent complete for every work package every period takes effort, and the estimates are subjective. Three simpler rules reduce both [1]:</p>
+<ul>
+<li><strong>0/100.</strong> Nothing is earned until the work package is finished; then all of it. For very short packages.</li>
+<li><strong>50/50.</strong> Half is earned when the package starts and half when it finishes. For short, low-cost packages.</li>
+<li><strong>Weighted monitoring gates.</strong> A long activity is split into discrete steps, each worth a fixed share of the budget, and the earned value at each gate cannot exceed that share. A $500 activity with gates at 30, 50 and 100 percent earns at most $150, $250 and $500. This rule is common for progress payments to contractors, because it stops payment for work not yet done.</li>
+</ul>
+<p>The first two need only two facts, <em>started</em> and <em>finished</em>, which removes the guesswork. The same status report earns different amounts under each rule, and so gives a different CPI and SPI.</p>
+<hr>
+</section>
+</section>
+<section id="lo-13-6-forecasting-the-final-cost" class="level1">
+<h1>LO 13-6 · Forecasting the final cost</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Section 13.7 [1].</em></p>
+<p>There are two ways to revise the forecast of what the project will cost [1]. The first lets the people doing the work re-estimate what is left, usually on smaller projects:</p>
+<p><span class="math display">\[
+\text{EAC}_{re} = \text{AC} + \text{ETC}_{re}
+\]</span></p>
+<p>The second, used on large projects with a reliable original budget, assumes the cost efficiency so far continues on the work that remains:</p>
+<p><span class="math display">\[
+\text{ETC} = \frac{\text{BAC} - \text{EV}}{\text{CPI}} \qquad \text{EAC}_f = \text{AC} + \text{ETC}
+\]</span></p>
+<p>For the camera: ETC = (320 − 160) ÷ .696 = 230, EAC = 230 + 230 = 460, and VAC = 320 − 460 = −140. If nothing changes, the $320,000 prototype costs $460,000. Research the chapter cites found this forecast within 10 percent on large projects more than 15 percent complete [2], [3]. It assumes the cost data are reliable, that EV and AC are cumulative, and that the past predicts the future, so it is a benchmark against which to compare other forecasts.</p>
+<p>The <strong>to-complete performance index</strong> asks the question from the other side: how efficient must the remaining work be to finish on budget?</p>
+<p><span class="math display">\[
+\text{TCPI} = \frac{\text{BAC} - \text{EV}}{\text{BAC} - \text{AC}}
+\]</span></p>
+<p>For the camera, (320 − 160) ÷ (320 − 230) = 1.78. Every remaining dollar would have to earn $1.78 of work, after the project has managed 70 cents so far. That will not happen: the scope must shrink or the budget must grow. A TCPI below 1.00 means the remaining budget is more than enough, which frees money for quality, margin or scope [1].</p>
+<p>The chapter’s example monthly report for a conveyor belt project, Red Octopus, shows how the measures appear together [1]:</p>
+<table class="caption-top table">
+<caption>Earned value figures from Larson &amp; Gray, Ch. 13, Exhibit 13.1 [1].</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">PV</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">AC</th>
+<th style="text-align: right;">SV</th>
+<th style="text-align: right;">CV</th>
+<th style="text-align: right;">BAC</th>
+<th style="text-align: right;">EAC</th>
+<th style="text-align: right;">VAC</th>
+<th style="text-align: right;">EAC<sub>f</sub></th>
+<th style="text-align: right;">CPI</th>
+<th style="text-align: right;">PCIB</th>
+<th style="text-align: right;">PCIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">588,240</td>
+<td style="text-align: right;">566,064</td>
+<td style="text-align: right;">596,800</td>
+<td style="text-align: right;">−22,176</td>
+<td style="text-align: right;">−30,736</td>
+<td style="text-align: right;">1,051,200</td>
+<td style="text-align: right;">1,090,640</td>
+<td style="text-align: right;">−39,440</td>
+<td style="text-align: right;">1,107,469</td>
+<td style="text-align: right;">.95</td>
+<td style="text-align: right;">.538</td>
+<td style="text-align: right;">.547</td>
+</tr>
+</tbody>
+</table>
+<p>The narrative under it does what the numbers cannot. The project is about 25 days late, a figure taken from the network rather than from the $22,176 SV; the delay has moved onto the critical path; it traces to losing a design team; and $21,000 of the cost variance is an approved design change [1].</p>
+<hr>
+</section>
+<section id="the-conference-status-reports" class="level1">
+<h1>The conference: status reports</h1>
+<p>The conference’s baseline is the Week 9 schedule at early start: each activity’s budget spread evenly over its planned workdays. Weekly status reports run from Mon 2 Nov.</p>
+<table class="caption-top table">
+<caption>The conference’s time-phased baseline. Week <em>w</em> ends on workday 5<em>w</em>.</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 26%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: center;">Planned workdays</th>
+<th style="text-align: right;">Budget</th>
+<th style="text-align: right;">Week 1</th>
+<th style="text-align: right;">Week 2</th>
+<th style="text-align: right;">Week 3</th>
+<th style="text-align: right;">Week 4</th>
+<th style="text-align: right;">Week 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">Approve event brief</td>
+<td style="text-align: center;">1–2</td>
+<td style="text-align: right;">$2,000</td>
+<td style="text-align: right;">2,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">Contract venue</td>
+<td style="text-align: center;">3–7</td>
+<td style="text-align: right;">30,000</td>
+<td style="text-align: right;">18,000</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">Draft program</td>
+<td style="text-align: center;">3–8</td>
+<td style="text-align: right;">6,000</td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Configure registration</td>
+<td style="text-align: center;">8–11</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6,000</td>
+<td style="text-align: right;">2,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: left;">Confirm speakers</td>
+<td style="text-align: center;">9–16</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;">7,500</td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: left;">Recruit exhibitors</td>
+<td style="text-align: center;">9–13</td>
+<td style="text-align: right;">2,500</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G</td>
+<td style="text-align: left;">Publish program</td>
+<td style="text-align: center;">17–19</td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3,000</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H</td>
+<td style="text-align: left;">Prepare on-site materials</td>
+<td style="text-align: center;">20–23</td>
+<td style="text-align: right;">4,000</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">3,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Complete rehearsal</td>
+<td style="text-align: center;">24–25</td>
+<td style="text-align: right;">2,500</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2,500</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><strong>PV this week</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>$70,000</strong></td>
+<td style="text-align: right;">23,000</td>
+<td style="text-align: right;">25,000</td>
+<td style="text-align: right;">11,000</td>
+<td style="text-align: right;">5,500</td>
+<td style="text-align: right;">5,500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><strong>Cumulative PV</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">23,000</td>
+<td style="text-align: right;">48,000</td>
+<td style="text-align: right;">59,000</td>
+<td style="text-align: right;">64,500</td>
+<td style="text-align: right;">70,000</td>
+</tr>
+</tbody>
+</table>
+<section id="worked-example-the-week-2-status-report" class="level2">
+<h2 class="anchored" data-anchor-id="worked-example-the-week-2-status-report">Worked example: the week-2 status report</h2>
+<p>Fri 13 Nov, end of week 2. The coordinators report:</p>
+<table class="caption-top table">
+<caption>Fill in EV, PV, CV and SV, then compute CPI, SPI, PCIB, ETC, EAC, VAC and TCPI.</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Activity</th>
+<th style="text-align: right;">% complete</th>
+<th style="text-align: right;">Actual cost</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">PV</th>
+<th style="text-align: right;">CV</th>
+<th style="text-align: right;">SV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">Approve event brief</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">$2,100</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">Contract venue</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">28,500</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">Draft program</td>
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;">3,800</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Configure registration</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">7,600</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E, F</td>
+<td style="text-align: left;">Confirm speakers, recruit exhibitors</td>
+<td style="text-align: right;">not started</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>The venue was contracted a day early and $1,500 under budget, and registration, which follows it, is finished too. The program draft is half done, two days after it was due to finish, because the program lead was away. Work it by hand first, then check every number in the <a href="https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-11-evm-marimo.py">interactive earned value notebook</a>, which opens in the browser with nothing to install. Choose the conference and <em>End of week 2</em>, keep <em>Show the answers</em> off until you have finished, then switch it on. The same notebook runs the Digital Camera example, lets you change any activity’s percent complete and actual cost, switches between earning rules, and draws the graphs.</p>
+<section id="the-cpi-that-looked-good" class="level3 case">
+<h3 class="anchored" data-anchor-id="the-cpi-that-looked-good">The CPI that looked good</h3>
+<p>Fri 20 Nov, end of week 3. The program draft finished on workday 13, after 11 workdays instead of 6. Speakers and exhibitors started the next day. The report:</p>
+<table class="caption-top table">
+<caption>Week 3 status. G, H and I have not started.</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: right;">% complete</th>
+<th style="text-align: right;">Actual cost</th>
+<th style="text-align: left;">Duration now expected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">$2,100</td>
+<td style="text-align: left;">2 days, as planned</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">28,500</td>
+<td style="text-align: left;">4 days (planned 5)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">6,400</td>
+<td style="text-align: left;">11 days (planned 6)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: right;">finished</td>
+<td style="text-align: right;">7,600</td>
+<td style="text-align: left;">4 days, as planned</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">3,200</td>
+<td style="text-align: left;">8 days, as planned</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: left;">5 days, as planned</td>
+</tr>
+</tbody>
+</table>
+<p>The coordinator’s dashboard shows CPI 1.03 and a forecast $1,820 under budget, and the report to the sponsor says the conference is under budget and on track.</p>
+<div class="qn">
+<p>What does the dashboard leave out? When will the conference actually finish, and what will it cost once the $1,000 a day of indirect cost from Week 10 is counted? What should the coordinator propose, and what would it cost?</p>
+</div>
+</section>
+<div id="fig-conference" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-conference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week11/conference-scurve.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: The conference’s cumulative cost graph at week 3. Cost efficiency is on plan; the network forecasts a finish five workdays late. The conference’s data are original to this course; layout follows Larson &amp; Gray, Ch. 13, Figure 13.9 [1].
+</figcaption>
+</figure>
+</div>
+<p>The week-3 dollars say SPI .85: 15 percent of the scheduled work is missing. The network says 5 of 25 workdays, 20 percent of the plan, because the late work is on the critical path and the $30,000 venue, which finished early, props up the total. Section 5 of the <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-11-evm.ipynb">earned value notebook</a> recomputes the network from each status report, and section 7 prices a recovery from Week 10’s crash data.</p>
+<hr>
+</section>
+</section>
+<section id="lo-13-7-scope-creep-baseline-changes-and-the-cost-of-data" class="level1">
+<h1>LO 13-7 · Scope creep, baseline changes and the cost of data</h1>
+<p><em>Following Larson &amp; Gray, Ch. 13, Section 13.8 [1].</em></p>
+<section id="technical-performance" class="level2">
+<h2 class="anchored" data-anchor-id="technical-performance">Technical performance</h2>
+<p>Cost and schedule are not the whole story. A project under budget and early that delivers something that does not work has failed [1]. Technical performance is measured against the requirements in the scope statement and work packages, which should state criteria and tolerances. The measure depends on the project: defects found in software, a prototype car’s fuel economy against its specification, engagement with a marketing campaign. Tests and inspections belong in the schedule, and quality tools such as histograms, scatter diagrams and Pareto charts help find causes [1].</p>
+</section>
+<section id="scope-creep" class="level2">
+<h2 class="anchored" data-anchor-id="scope-creep">Scope creep</h2>
+<p><strong>Scope creep</strong> is the gradual growth of a project’s scope through additions that each look small, accepted without a formal change, a new budget or a new date. Each one consumes time and money the baseline never held, so the variances worsen for reasons the status report cannot explain. The defence is the one Week 4 set up: a clear scope statement, and a change control process through which every addition is priced, approved and written into the baseline.</p>
+</section>
+<section id="baseline-changes" class="level2">
+<h2 class="anchored" data-anchor-id="baseline-changes">Baseline changes</h2>
+<p>Change is inevitable and some of it is good [1]. It comes from outside, such as a customer request or a new regulation, or from inside, as people find problems or better ways. Force majeure, such as floods, hurricanes or a pandemic, can make a baseline meaningless. When the scope genuinely changes, the baseline should change with it, adding cost for added scope and removing cost for removed scope.</p>
+<p>Baseline changes must not be used to hide poor performance. A baseline revised so often that it always matches the results is a <strong>rubber baseline</strong>: it stretches to fit whatever happened [1]. The chapter’s rules: most changes are absorbed as variances rather than new baselines; no retroactive changes to work already done; no moving money between cost accounts after the work is finished; and unforeseen events are paid for from the contingency reserve, usually at the project manager’s discretion. On large projects a joint change review team of project and customer staff may decide every change [1].</p>
+</section>
+<section id="the-cost-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-cost-of-data">The cost of data</h2>
+<p>Collecting percent complete is time-consuming and unpopular [1]. Some organisations use pseudo percent complete systems, with weekly work packages and simple completion reports, which work well across many small and medium projects. On large projects there is no substitute for percent complete measured at clearly defined monitoring points. Data that exist but never reach the people who need them are as useless as no data. The communication plan decides who receives which report, how often and in what form [1]:</p>
+<table class="caption-top table">
+<caption>A communication plan for a conference centre WiFi project, from Larson &amp; Gray, Ch. 13, Figure 13.16 [1].</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Information</th>
+<th style="text-align: left;">When</th>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Milestone report</td>
+<td style="text-align: left;">Bimonthly</td>
+<td style="text-align: left;">E-mail</td>
+<td style="text-align: left;">Project office</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Time/cost report</td>
+<td style="text-align: left;">Weekly</td>
+<td style="text-align: left;">E-mail</td>
+<td style="text-align: left;">Project office</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Risk report</td>
+<td style="text-align: left;">Weekly</td>
+<td style="text-align: left;">E-mail</td>
+<td style="text-align: left;">Project office</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Issues</td>
+<td style="text-align: left;">Weekly</td>
+<td style="text-align: left;">E-mail</td>
+<td style="text-align: left;">Anyone</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Team meeting times</td>
+<td style="text-align: left;">Weekly</td>
+<td style="text-align: left;">Meeting</td>
+<td style="text-align: left;">Project manager</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outsourcing performance</td>
+<td style="text-align: left;">Bimonthly</td>
+<td style="text-align: left;">Meeting</td>
+<td style="text-align: left;">Project manager</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Change requests</td>
+<td style="text-align: left;">Anytime</td>
+<td style="text-align: left;">Document</td>
+<td style="text-align: left;">Project manager, customer, design</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Stage gate decisions</td>
+<td style="text-align: left;">Monthly</td>
+<td style="text-align: left;">Meeting</td>
+<td style="text-align: left;">Project office</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="practice-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="practice-exercises">Practice exercises</h2>
+<div id="chapter-exercises">
+<p>The chapter’s exercises are reproduced as written [1]. Exercise 3’s network is transcribed into its baseline table; its status forms are given as far as this course’s copy of the chapter shows them.</p>
+<ol type="1">
+<li><p>In month 9 the following project information is available: actual cost is $2,000, earned value is $2,100, and planned cost is $2,400. Compute the SV and CV for the project.</p></li>
+<li><p>On day 51 a project has an earned value of $600, an actual cost of $650, and a planned cost of $560. Compute the SV, CV, and CPI for the project. What is your assessment of the project on day 51?</p></li>
+<li><p>Given the following project network and baseline information, complete the form to develop a status report for the project at the end of period 4 and the end of period 8. From the data you have collected and computed for periods 4 and 8, what information are you prepared to tell the customer about the status of the project at the end of period 8?</p></li>
+</ol>
+<p>Network: A precedes B and C; B precedes D; C precedes E; D and E precede F.</p>
+<div style="overflow-x: auto">
+<table class="caption-top table">
+<caption>Project baseline (PV), in dollars.</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Task</th>
+<th style="text-align: right;">DUR</th>
+<th style="text-align: right;">ES</th>
+<th style="text-align: right;">LF</th>
+<th style="text-align: right;">SL</th>
+<th style="text-align: right;">Budget (PV)</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+<th style="text-align: right;">6</th>
+<th style="text-align: right;">7</th>
+<th style="text-align: right;">8</th>
+<th style="text-align: right;">9</th>
+<th style="text-align: right;">10</th>
+<th style="text-align: right;">11</th>
+<th style="text-align: right;">12</th>
+<th style="text-align: right;">13</th>
+<th style="text-align: right;">14</th>
+<th style="text-align: right;">15</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2,400</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1,600</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">Period PV total</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">700</td>
+<td style="text-align: right;">700</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">900</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">Cumulative PV</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">1,800</td>
+<td style="text-align: right;">2,500</td>
+<td style="text-align: right;">3,200</td>
+<td style="text-align: right;">3,700</td>
+<td style="text-align: right;">4,600</td>
+<td style="text-align: right;">5,400</td>
+<td style="text-align: right;">6,000</td>
+<td style="text-align: right;">6,400</td>
+<td style="text-align: right;">6,800</td>
+<td style="text-align: right;">7,000</td>
+<td style="text-align: right;">7,100</td>
+<td style="text-align: right;">7,400</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">End of period 4</th>
+<th style="text-align: right;">Actual % complete</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">AC</th>
+<th style="text-align: right;">PV</th>
+<th style="text-align: right;">CV</th>
+<th style="text-align: right;">SV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">Finished</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cumulative totals</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">End of period 8</th>
+<th style="text-align: right;">Actual % complete</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">AC</th>
+<th style="text-align: right;">PV</th>
+<th style="text-align: right;">CV</th>
+<th style="text-align: right;">SV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">Finished</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">Finished</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2,200</td>
+<td style="text-align: right;">2,400</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">C</td>
+<td style="text-align: right;">Finished</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;">1,500</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">E, F</td>
+<td style="text-align: right;"><em>as given in the chapter</em></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cumulative totals</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Exercises are reproduced from Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, Chapter 13 [1]. The network and baseline of exercise 3 are transcribed from the chapter’s figure; the rows for E and F at period 8 are in your copy of the chapter. Exercise 1 is a quick check of the signs. In exercise 3, compare SV with what the network says about the critical path before you write the customer’s summary.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="thursday-studio" class="level1">
+<h1>Thursday studio</h1>
+<section id="studio-11-build-the-dashboard-then-find-what-it-hides" class="level2">
+<h2 class="anchored" data-anchor-id="studio-11-build-the-dashboard-then-find-what-it-hides">Studio 11 · Build the dashboard, then find what it hides</h2>
+<p>Complete the <a href="../labs/lab-11.html">Week 11 studio</a>.</p>
+<p>You will import the conference’s baseline into Smartsheet, set a project baseline so the Gantt chart tracks against it, add the earned value columns and summary fields, and enter the week-3 status report. Then you will build a dashboard of the measures, use the baseline Gantt chart to find the slip the dashboard does not show, and post week 4. In Colab, the <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-11-evm.ipynb">earned value notebook</a> charts the weekly reports, recomputes the network, compares earning rules and prices a recovery.</p>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 13.</li>
+<li>Christensen, D. S. (1998). The costs and benefits of the earned value management process. <em>Acquisition Review Quarterly</em>, 5(4), 373–386.</li>
+<li>Fleming, Q. W., &amp; Koppelman, J. M. (2010). <em>Earned Value Project Management</em> (4th ed.). Project Management Institute.</li>
+</ol>
+<p>The conference’s baseline, status reports, forecasts and recovery are original to these course materials.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -612,7 +2200,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -150,13 +184,258 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="gated">
-<p><span class="lock">Not posted yet</span></p>
-<p>Notes, slides, and the recording for this week are not published yet.</p>
+<div class="week-meta">
+<dl>
+<dt>
+Deliverable
+</dt>
+<dd>
+<strong>SA11</strong> — one PDF with four screenshots, the week-4 status line and six short answers
+</dd>
+<dt>
+Studio
+</dt>
+<dd>
+Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback
+</dd>
+<dt>
+Session
+</dt>
+<dd>
+70 minutes: Smartsheet 40, Colab 20, upload 5, 5 spare
+</dd>
+<dt>
+Tools
+</dt>
+<dd>
+Smartsheet (your NDSU account) and Google Colab
+</dd>
+<dt>
+Workbook
+</dt>
+<dd>
+<a href="../files/week-11-evm-workbook.xlsx">Conference earned value workbook</a> (Excel), used in both parts
+</dd>
+<dt>
+Notebook
+</dt>
+<dd>
+<a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-11-evm.ipynb">Week 11 earned value notebook</a>, opens in Colab
+</dd>
+<dt>
+AI use
+</dt>
+<dd>
+<strong>Level 4 — full use with documentation</strong> · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the <a href="../syllabus.html#how-to-disclose">AI acknowledgement</a> if you use it
+</dd>
+<dt>
+Week page
+</dt>
+<dd>
+<a href="../weeks/week-11.html">Week 11 — Progress and Performance Measurement</a>
+</dd>
+</dl>
 </div>
-<p>See the <a href="../schedule.html">schedule</a> for everything that is live now.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>This is individual work.</strong> Download the <a href="../files/week-11-evm-workbook.xlsx">conference earned value workbook</a> before the session starts. Write each answer in one to three sentences next to its screenshot.</p>
+</div>
+</div>
+</div>
+<p>The workbook holds the conference’s baseline: nine activities, their planned start and planned workdays, and a budget for each that sums to $70,000. <em>% Complete</em> and <em>Actual cost</em> are empty, waiting for the status reports. In Smartsheet you build the earned value sheet and a dashboard, post two weekly reports, and use the baseline Gantt chart to find what the dashboard leaves out. In Colab you chart the trend, check the schedule on the network, and price a recovery. <strong>Predecessors</strong> are row numbers: G’s <code>4, 5</code> means “after rows 4 and 5, D and E”.</p>
+<section id="part-1-smartsheet-40-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-1-smartsheet-40-minutes">Part 1 · Smartsheet — 40 minutes</h3>
+<ol type="1">
+<li><p><strong>Import.</strong> <strong>+ Create → Import → Microsoft Excel</strong>, select the workbook. Keep row 1 as headers and <em>Activity</em> as the primary column. <em>Check:</em> nine rows, A to I; Start Date in row 1 reads 11/02/26; <em>Planned start</em> is filled in every row. If a date column came in as text, right-click its header → <strong>Edit Column Properties</strong> → Date.</p></li>
+<li><p><strong>Dependencies.</strong> Right-click any column header → <strong>Project Settings</strong>. Tick <strong>Dependencies Enabled</strong> and map Start Date, End Date, Duration, Predecessors and <strong>% Complete</strong> to the columns of those names. Monday to Friday, no holidays. <strong>OK</strong>. <em>Check:</em> row 9 ends <strong>Fri 4 Dec</strong>.</p></li>
+<li><p><strong>Set the baseline.</strong> Switch to <strong>Gantt</strong> view, select <strong>Baselines</strong> in the toolbar, then <strong>Set baseline</strong>. Smartsheet adds <em>Baseline Start</em>, <em>Baseline Finish</em> and <em>Variance</em> columns and draws a baseline bar under each task. <em>Check:</em> Variance is 0 in every row. Do this <strong>before</strong> entering any status; a baseline set afterwards measures nothing.</p></li>
+<li><p><strong>Earned value formulas.</strong> Back in Grid view, add four Text/Number columns with the names below. In row 1 of each, paste the formula, then right-click the cell → <strong>Convert to Column Formula</strong>. The date in <em>Planned value</em> is the status date, end of week 3.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Planned value</td>
+<td style="text-align: left;"><code>=[Budget]@row * MAX(0, MIN(1, NETWORKDAYS([Planned start]@row, DATE(2026, 11, 20)) / [Planned days]@row))</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Earned value</td>
+<td style="text-align: left;"><code>=[Budget]@row * [% Complete]@row</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cost variance</td>
+<td style="text-align: left;"><code>=[Earned value]@row - [Actual cost]@row</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Schedule variance</td>
+<td style="text-align: left;"><code>=[Earned value]@row - [Planned value]@row</code></td>
+</tr>
+</tbody>
+</table>
+<p>Open the <strong>Sheet Summary</strong> panel (right edge of the sheet) and add these fields. Each is Text/Number except <em>Finish</em>, which is Date:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BAC</td>
+<td style="text-align: left;"><code>=SUM([Budget]:[Budget])</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PV</td>
+<td style="text-align: left;"><code>=SUM([Planned value]:[Planned value])</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EV</td>
+<td style="text-align: left;"><code>=SUM([Earned value]:[Earned value])</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AC</td>
+<td style="text-align: left;"><code>=SUM([Actual cost]:[Actual cost])</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CPI</td>
+<td style="text-align: left;"><code>=ROUND([EV]# / [AC]#, 2)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SPI</td>
+<td style="text-align: left;"><code>=ROUND([EV]# / [PV]#, 2)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EAC</td>
+<td style="text-align: left;"><code>=ROUND([AC]# + ([BAC]# - [EV]#) / ([EV]# / [AC]#), 0)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">VAC</td>
+<td style="text-align: left;"><code>=[BAC]# - [EAC]#</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Finish</td>
+<td style="text-align: left;"><code>=MAX([End Date]:[End Date])</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Check:</em> BAC $70,000 and PV $59,000. CPI and EAC show a divide-by-zero error until there is an actual cost; that is expected.</p></li>
+<li><p><strong>Post the week-3 report.</strong> Enter the status below. Type percentages with the % sign. Change Duration only where the table gives one; the dates move by themselves.</p>
+<table class="caption-top table">
+<caption>Week 3, Fri 20 Nov.&nbsp;G, H and I stay at 0.</caption>
+<colgroup>
+<col style="width: 40%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Row</th>
+<th style="text-align: center;">Duration</th>
+<th style="text-align: right;">% Complete</th>
+<th style="text-align: right;">Actual cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A Approve event brief</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">2,100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B Contract venue</td>
+<td style="text-align: center;"><code>4d</code></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">28,500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C Draft program</td>
+<td style="text-align: center;"><code>11d</code></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">6,400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D Configure registration</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">7,600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E Confirm speakers</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">3,200</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F Recruit exhibitors</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">900</td>
+</tr>
+</tbody>
+</table>
+<p><em>Check:</em> PV $59,000, EV $50,000, AC $48,700, CPI 1.03, SPI 0.85, EAC $68,180, VAC $1,820. <strong>Screenshot 1</strong>: the Gantt view with baseline bars, scrolled so the <em>Variance</em> column and row 9’s bars are visible.</p></li>
+<li><p><strong>Build the dashboard.</strong> <strong>+ Create → Dashboard</strong>, name it <em>Conference EVM</em>, and open it in edit mode. Add a <strong>Metric</strong> widget whose source is your sheet’s summary fields; show CPI, SPI, EAC, VAC and Finish. Add a <strong>Chart</strong> widget whose data is the <em>Activity</em>, <em>Planned value</em>, <em>Earned value</em> and <em>Actual cost</em> columns for all nine rows, as a column chart. Save. <strong>Screenshot 2</strong>: the dashboard at week 3.</p></li>
+<li><p><strong>Post week 4.</strong> Fri 27 Nov.&nbsp;In any <em>Planned value</em> cell, change <code>DATE(2026, 11, 20)</code> to <code>DATE(2026, 11, 27)</code> and press Enter; the column formula updates every row. Then enter E: Duration <code>9d</code>, <strong>75%</strong>, Actual cost 9,600; and F: <strong>100%</strong>, Actual cost 2,800. Record the week-4 line: PV, EV, AC, CPI, SPI, EAC, VAC and Finish. <strong>Screenshot 3</strong>: the dashboard at week 4.</p></li>
+</ol>
+<p><strong>Answer</strong></p>
+<ol type="1">
+<li>At week 3, which dashboard numbers would a sponsor read as good news? What does the baseline Gantt show that they do not? Name the activity and the number of workdays.</li>
+<li>SPI 0.85 says 15 percent of the scheduled work is missing, yet the finish is 20 percent later than planned. Use rows B and C to explain why the dollars understate the delay.</li>
+<li>From week 3 to week 4, SPI went up and the finish moved later. How can both be true?</li>
+</ol>
+</section>
+<section id="part-2-colab-20-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="part-2-colab-20-minutes">Part 2 · Colab — 20 minutes</h3>
+<ol type="1">
+<li><p><strong>Open.</strong> Open the <a href="https://colab.research.google.com/github/harunpirim/IMSE456/blob/main/files/week-11-evm.ipynb">earned value notebook</a>, choose <strong>File → Save a copy in Drive</strong>, then <strong>Runtime → Run all</strong>. If Colab asks, choose <strong>Run anyway</strong>. Section 0 loads the same workbook; section 3 should match your week-3 Smartsheet numbers.</p></li>
+<li><p><strong>What the dollars hide.</strong> Read section 5 (the network and the total cost with indirect cost) and section 7 (the cheapest recovery) at week 3.</p></li>
+<li><p><strong>Add week 4.</strong> In the EDIT cell, replace the comment line <code># 4: {...}</code> with the line below, set <code>STATUS_WEEK = 4</code>, and run all. <strong>Screenshot 4</strong>: the two graphs in section 4.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>: {<span class="st">"A"</span>: (<span class="fl">1.00</span>, <span class="dv">2100</span>), <span class="st">"B"</span>: (<span class="fl">1.00</span>, <span class="dv">28500</span>, <span class="dv">4</span>), <span class="st">"C"</span>: (<span class="fl">1.00</span>, <span class="dv">6400</span>, <span class="dv">11</span>), <span class="st">"D"</span>: (<span class="fl">1.00</span>, <span class="dv">7600</span>), <span class="st">"E"</span>: (<span class="fl">0.75</span>, <span class="dv">9600</span>, <span class="dv">9</span>), <span class="st">"F"</span>: (<span class="fl">1.00</span>, <span class="dv">2800</span>)},</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p>If Colab is blocked on your network, <a href="../files/week-11-evm.ipynb">download the notebook</a> and upload it with <strong>File → Upload notebook</strong>.</p>
+<p><strong>Answer</strong></p>
+<ol start="4" type="1">
+<li>At week 3, what does the conference cost all in, with the $1,000 a day of indirect cost, compared with the $95,000 plan? What is the cheapest recovery in section 7, and does it pay?</li>
+<li>Across weeks 1 to 4 the CPI stays near 1.02 and EAC moves by less than $1,500. What does that support in the chapter’s claim about the CPI, and what can the CPI not tell you?</li>
+<li>Section 6 at week 4: what is EV under each earning rule? Which rule would you use for the conference’s weekly reports, and why?</li>
+</ol>
+</section>
+<section id="upload-5-minutes" class="level3 part">
+<h3 class="anchored" data-anchor-id="upload-5-minutes">Upload — 5 minutes</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">One PDF: screenshots 1 to 4, your week-4 status line, answers 1 to 6, and the AI acknowledgement if you used AI</label></li>
+<li><label><input type="checkbox">Saved to <code>IMSE456/studio-11/</code> on your NDSU Google Drive or OneDrive, with your notebook copy’s link</label></li>
+<li><label><input type="checkbox">Uploaded to Blackboard as <code>SA11_yourlastname.pdf</code> before you leave</label></li>
+</ul>
+</section>
+<p>To go further after class, the <a href="https://marimo.app/github.com/harunpirim/IMSE456/blob/main/files/week-11-evm-marimo.py">interactive earned value notebook</a> runs the chapter’s Digital Camera example and the conference’s reports with a slider for every activity, and the week page’s practice exercises reproduce the chapter’s own.</p>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 13: earned value, its variances, indexes and forecasts, and the earning rules. The conference’s baseline and status reports are original to these course materials.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

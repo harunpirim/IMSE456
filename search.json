@@ -2517,7 +2517,14 @@
     "href": "labs/lab-11.html",
     "title": "Studio 11 · Build the dashboard, then find what it hides",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\nSee the schedule for everything that is live now."
+    "text": "Deliverable\n\n\nSA11 — one PDF with four screenshots, the week-4 status line and six short answers\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback\n\n\nSession\n\n\n70 minutes: Smartsheet 40, Colab 20, upload 5, 5 spare\n\n\nTools\n\n\nSmartsheet (your NDSU account) and Google Colab\n\n\nWorkbook\n\n\nConference earned value workbook (Excel), used in both parts\n\n\nNotebook\n\n\nWeek 11 earned value notebook, opens in Colab\n\n\nAI use\n\n\nLevel 4 — full use with documentation · you may use AI to help with either tool; check every number against Smartsheet or the notebook, and append the AI acknowledgement if you use it\n\n\nWeek page\n\n\nWeek 11 — Progress and Performance Measurement\nThe workbook holds the conference’s baseline: nine activities, their planned start and planned workdays, and a budget for each that sums to $70,000. % Complete and Actual cost are empty, waiting for the status reports. In Smartsheet you build the earned value sheet and a dashboard, post two weekly reports, and use the baseline Gantt chart to find what the dashboard leaves out. In Colab you chart the trend, check the schedule on the network, and price a recovery. Predecessors are row numbers: G’s 4, 5 means “after rows 4 and 5, D and E”.\nTo go further after class, the interactive earned value notebook runs the chapter’s Digital Camera example and the conference’s reports with a slider for every activity, and the week page’s practice exercises reproduce the chapter’s own."
+  },
+  {
+    "objectID": "labs/lab-11.html#source",
+    "href": "labs/lab-11.html#source",
+    "title": "Studio 11 · Build the dashboard, then find what it hides",
+    "section": "Source",
+    "text": "Source\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 13: earned value, its variances, indexes and forecasts, and the earning rules. The conference’s baseline and status reports are original to these course materials."
   },
   {
     "objectID": "labs/lab-09.html",
@@ -4837,6 +4844,293 @@
     "text": "Sources\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 8.\nKolisch, R., & Hartmann, S. (2006). Experimental investigation of heuristics for resource-constrained project scheduling: An update. European Journal of Operational Research, 174(1), 23–37.\nTalbot, F. B., & Patterson, J. H. (1978). An efficient integer programming algorithm with network cuts for solving resource-constrained scheduling problems. Management Science, 24(11), 1163–1174.\n\n\n\n\n\nThe conference’s coordinator demands, costs, schedules and the optimum are original to these course materials."
   },
   {
+    "objectID": "slides/week-11.html#section",
+    "href": "slides/week-11.html#section",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "",
+    "text": "Ten weeks into a twenty-week, $100,000 job, you have spent $50,000.\n\nAre you on plan?\nAfter the painting example in Larson & Gray, Ch. 13 [1]. Figures redrawn from the chapter. The conference’s baseline and status reports are original to this course."
+  },
+  {
+    "objectID": "slides/week-11.html#what-this-week-adds-to-the-plan",
+    "href": "slides/week-11.html#what-this-week-adds-to-the-plan",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "What this week adds to the plan",
+    "text": "What this week adds to the plan\nWeeks 4 to 10 built the conference’s plan: scope, network, estimates, a staffed schedule, a time-phased budget, a date bought at the lowest price.\n\nThis week the conference starts. Is it going to plan?\n\n\nMoney spent says nothing about work done. Earned value is the number that does."
+  },
+  {
+    "objectID": "slides/week-11.html#learning-objectives",
+    "href": "slides/week-11.html#learning-objectives",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\nLO 13-1\nThe four steps of control\n\n\nLO 13-2\nMonitor time with a tracking Gantt chart\n\n\nLO 13-3\nWhy earned value is needed\n\n\nLO 13-4\nCost and schedule variance\n\n\nLO 13-5\nPerformance and percent complete indexes\n\n\nLO 13-6\nForecast the final cost\n\n\nLO 13-7\nScope creep and baseline changes"
+  },
+  {
+    "objectID": "slides/week-11.html#eight-words-for-the-week",
+    "href": "slides/week-11.html#eight-words-for-the-week",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Eight words for the week",
+    "text": "Eight words for the week\n\n\n\nTerm\nMeaning\n\n\n\n\nPV\nBudget of the work scheduled by now\n\n\nEV\nBudget of the work done by now\n\n\nAC\nWhat the work done actually cost\n\n\nCV = EV − AC\nNegative: over budget\n\n\nSV = EV − PV\nNegative: behind, in dollars\n\n\nCPI = EV ÷ AC\nValue earned per dollar spent\n\n\nSPI = EV ÷ PV\nValue earned per dollar scheduled\n\n\nEAC\nForecast total cost"
+  },
+  {
+    "objectID": "slides/week-11.html#control-is-a-loop",
+    "href": "slides/week-11.html#control-is-a-loop",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Control is a loop",
+    "text": "Control is a loop"
+  },
+  {
+    "objectID": "slides/week-11.html#what-the-monitoring-system-answers",
+    "href": "slides/week-11.html#what-the-monitoring-system-answers",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "What the monitoring system answers",
+    "text": "What the monitoring system answers\n\nWhere are we on schedule and cost?\nWhat will it cost, and when will it finish?\nWhich problems need attention now?\nWho, what and where is causing any overrun?\n\n\nCollect the data that answer these, at the work package level, every one to four weeks."
+  },
+  {
+    "objectID": "slides/week-11.html#the-tracking-gantt-chart",
+    "href": "slides/week-11.html#the-tracking-gantt-chart",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The tracking Gantt chart",
+    "text": "The tracking Gantt chart"
+  },
+  {
+    "objectID": "slides/week-11.html#two-summaries-of-time",
+    "href": "slides/week-11.html#two-summaries-of-time",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Two summaries of time",
+    "text": "Two summaries of time\nSchedule control chart. Periods ahead or behind, plotted at each report. A trend toward late shows early.\n\nMilestone schedule. Major deliverables, planned and actual dates, days early or late. For sponsors, owners and regulators."
+  },
+  {
+    "objectID": "slides/week-11.html#ten-condos",
+    "href": "slides/week-11.html#ten-condos",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Ten condos",
+    "text": "Ten condos\nTen condos, two weeks and $10,000 each. Twenty weeks, $100,000.\n\nWeek 10: $50,000 spent. Good weather, six painted: ahead and under budget.\n\n\nBad weather, four painted: behind and over.\n\n\nPlanned and actual cost cannot tell these apart."
+  },
+  {
+    "objectID": "slides/week-11.html#earned-value",
+    "href": "slides/week-11.html#earned-value",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Earned value",
+    "text": "Earned value\nThe budget of the work actually done.\n\n4½ condos painted × $10,000 = EV $45,000, whatever it cost to paint them.\n\n\nPV is the anchor. AC is what it cost. EV is what it was worth."
+  },
+  {
+    "objectID": "slides/week-11.html#five-steps-to-an-integrated-system",
+    "href": "slides/week-11.html#five-steps-to-an-integrated-system",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Five steps to an integrated system",
+    "text": "Five steps to an integrated system\n\nDefine the work: WBS, work packages, budgets\nSchedule work and resources in a network\nTime-phase the budgets: the baseline PV\nCollect AC and percent complete for each work package\nCompute the variances; roll them up by deliverable and department\n\nSteps 1 to 3 are Weeks 4 to 9."
+  },
+  {
+    "objectID": "slides/week-11.html#the-percent-complete-rule",
+    "href": "slides/week-11.html#the-percent-complete-rule",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The percent complete rule",
+    "text": "The percent complete rule\nEV = percent complete × budget, for each work package.\n\nMeasure it with something countable: units, drawings, cubic yards.\n\n\nMany cap the credit at 80 or 90 percent until the package is finished.\n\n\nBaselines hold direct cost only. The conference’s $1,000 a day of indirect cost is not in its $70,000 BAC."
+  },
+  {
+    "objectID": "slides/week-11.html#the-costschedule-graph",
+    "href": "slides/week-11.html#the-costschedule-graph",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The cost/schedule graph",
+    "text": "The cost/schedule graph"
+  },
+  {
+    "objectID": "slides/week-11.html#read-the-order-at-todays-line",
+    "href": "slides/week-11.html#read-the-order-at-todays-line",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Read the order at today’s line",
+    "text": "Read the order at today’s line"
+  },
+  {
+    "objectID": "slides/week-11.html#digital-camera-the-baseline",
+    "href": "slides/week-11.html#digital-camera-the-baseline",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Digital Camera: the baseline",
+    "text": "Digital Camera: the baseline\nSix activities, $320,000, 11 periods. Budgets laid out at early start.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPeriod\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n\n\n\n\nPV\n10\n10\n40\n50\n40\n20\n30\n40\n50\n10\n20\n\n\nCumulative\n10\n20\n60\n110\n150\n170\n200\n240\n290\n300\n320\n\n\n\n$000, from Figure 13.8 [1]."
+  },
+  {
+    "objectID": "slides/week-11.html#digital-camera-period-3",
+    "href": "slides/week-11.html#digital-camera-period-3",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Digital Camera: period 3",
+    "text": "Digital Camera: period 3\n\n\n\nActivity\n% complete\nEV\nAC\nPV\nCV\nSV\n\n\n\n\nA\nfinished\n20\n30\n20\n−10\n0\n\n\nB\n33%\n5\n10\n5\n−5\n0\n\n\nC\n20%\n20\n30\n20\n−10\n0\n\n\nD\n60%\n21\n20\n15\n+1\n+6\n\n\nTotal\n\n66\n90\n60\n−24\n+6\n\n\n\nAhead of schedule, already over budget. Table 13.3 [1]."
+  },
+  {
+    "objectID": "slides/week-11.html#digital-camera-period-7",
+    "href": "slides/week-11.html#digital-camera-period-7",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Digital Camera: period 7",
+    "text": "Digital Camera: period 7\n\n\n\nActivity\n% complete\nEV\nAC\nPV\nCV\nSV\n\n\n\n\nA, B, D\nfinished\n70\n110\n70\n−40\n0\n\n\nC\n90%\n90\n120\n100\n−30\n−10\n\n\nE\nnot started\n0\n0\n30\n0\n−30\n\n\nTotal\n\n160\n230\n200\n−70\n−40\n\n\n\nSpent $230k to earn $160k of a $200k plan."
+  },
+  {
+    "objectID": "slides/week-11.html#the-summary-graph",
+    "href": "slides/week-11.html#the-summary-graph",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The summary graph",
+    "text": "The summary graph"
+  },
+  {
+    "objectID": "slides/week-11.html#sv-is-in-dollars-not-days",
+    "href": "slides/week-11.html#sv-is-in-dollars-not-days",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "SV is in dollars, not days",
+    "text": "SV is in dollars, not days\nC needs six periods, not four. E and F wait. The project finishes two periods late.\n\nAssembly shows SV −$30k. Not Assembly’s fault: its work is waiting on C.\n\n\nOnly the network, or the tracking Gantt chart, measures time."
+  },
+  {
+    "objectID": "slides/week-11.html#two-efficiency-ratios",
+    "href": "slides/week-11.html#two-efficiency-ratios",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Two efficiency ratios",
+    "text": "Two efficiency ratios\n\n\n\nIndex\nFormula\n&gt; 1.00\n&lt; 1.00\n\n\n\n\nCPI\nEV ÷ AC\nunder cost\nover cost\n\n\nSPI\nEV ÷ PV\nahead\nbehind\n\n\n\n\nCamera, period 7: CPI = 160 ÷ 230 = .70. SPI = 160 ÷ 200 = .80.\n\n\nCPI is the trusted one: stable from about 20 percent complete."
+  },
+  {
+    "objectID": "slides/week-11.html#the-indexes-over-time",
+    "href": "slides/week-11.html#the-indexes-over-time",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The indexes over time",
+    "text": "The indexes over time"
+  },
+  {
+    "objectID": "slides/week-11.html#how-far-along",
+    "href": "slides/week-11.html#how-far-along",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "How far along?",
+    "text": "How far along?\nPCIB = EV ÷ BAC = 160 ÷ 320 = .50. Budget view.\n\nPCIC = AC ÷ EAC, with the team’s re-estimate of 575: 230 ÷ 575 = .40. Spending view.\n\n\nReserve absorbed: $70k over against a $40k reserve. 175 percent."
+  },
+  {
+    "objectID": "slides/week-11.html#three-ways-to-earn-value",
+    "href": "slides/week-11.html#three-ways-to-earn-value",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Three ways to earn value",
+    "text": "Three ways to earn value\n\n\n\n\n\n\n\n\nRule\nEarns\nFor\n\n\n\n\nPercent complete\n% × budget\nMost work packages\n\n\n0/100\nAll of it when finished\nVery short packages\n\n\n50/50\nHalf at start, half at finish\nShort, low-cost packages\n\n\nWeighted gates\nA capped share at each gate\nLong work, progress payments\n\n\n\nThe last three need only started and finished."
+  },
+  {
+    "objectID": "slides/week-11.html#two-forecasts",
+    "href": "slides/week-11.html#two-forecasts",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Two forecasts",
+    "text": "Two forecasts\nEACre = AC + ETCre. The team re-estimates what is left.\n\nETC = (BAC − EV) ÷ CPI, EACf = AC + ETC. The efficiency so far continues.\n\n\nCamera: ETC = 160 ÷ .696 = 230. EAC = 460. VAC = −140.\n\n\nWithin 10 percent on large projects past 15 percent complete [2], [3]."
+  },
+  {
+    "objectID": "slides/week-11.html#to-complete-performance-index",
+    "href": "slides/week-11.html#to-complete-performance-index",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "To-complete performance index",
+    "text": "To-complete performance index\nTCPI = (BAC − EV) ÷ (BAC − AC)\n\nCamera: (320 − 160) ÷ (320 − 230) = 1.78.\n\n\nEvery remaining dollar must earn $1.78, after earning 70 cents so far. Cut scope or raise the budget."
+  },
+  {
+    "objectID": "slides/week-11.html#a-monthly-report",
+    "href": "slides/week-11.html#a-monthly-report",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "A monthly report",
+    "text": "A monthly report\n\n\n\nPV\nEV\nAC\nCPI\nEACf\nBAC\n\n\n\n\n588,240\n566,064\n596,800\n.95\n1,107,469\n1,051,200\n\n\n\n\nSV −$22,176. The project is 25 days late, and that number came from the network.\n\n\nThe narrative names the cause: a design team lost, a $21,000 design change."
+  },
+  {
+    "objectID": "slides/week-11.html#the-baseline-by-week",
+    "href": "slides/week-11.html#the-baseline-by-week",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The baseline, by week",
+    "text": "The baseline, by week\n\n\n\nID\nBudget\nWk 1\nWk 2\nWk 3\nWk 4\nWk 5\n\n\n\n\nA\n$2,000\n2,000\n\n\n\n\n\n\nB\n30,000\n18,000\n12,000\n\n\n\n\n\nC\n6,000\n3,000\n3,000\n\n\n\n\n\nD\n8,000\n\n6,000\n2,000\n\n\n\n\nE\n12,000\n\n3,000\n7,500\n1,500\n\n\n\nF\n2,500\n\n1,000\n1,500\n\n\n\n\nG, H, I\n9,500\n\n\n\n4,000\n5,500\n\n\n\nCumulative PV: 23,000 · 48,000 · 59,000 · 64,500 · 70,000."
+  },
+  {
+    "objectID": "slides/week-11.html#the-week-2-report",
+    "href": "slides/week-11.html#the-week-2-report",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The week-2 report",
+    "text": "The week-2 report\n\n\n\nID\nStatus\nAC\nEV\nPV\nCV\nSV\n\n\n\n\nA\nfinished\n$2,100\n\n\n\n\n\n\nB\nfinished\n28,500\n\n\n\n\n\n\nC\n50%\n3,800\n\n\n\n\n\n\nD\nfinished\n7,600\n\n\n\n\n\n\nE, F\nnot started\n0\n\n\n\n\n\n\n\nFill in the table. Then CPI, SPI, PCIB, ETC, EAC, VAC, TCPI."
+  },
+  {
+    "objectID": "slides/week-11.html#check-your-work",
+    "href": "slides/week-11.html#check-your-work",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Check your work",
+    "text": "Check your work\nOpen the marimo notebook: conference, end of week 2.\n\nTotals: EV $43,000, AC $42,000, PV $48,000. CV +$1,000, SV −$5,000.\n\n\nCPI 1.02, SPI 0.90. EAC $68,372. TCPI 0.96.\n\n\nWhich activity’s dollars make SV look small? Which activity’s delay moves the finish?"
+  },
+  {
+    "objectID": "slides/week-11.html#week-3",
+    "href": "slides/week-11.html#week-3",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Week 3",
+    "text": "Week 3\n\n\n\nID\nStatus\nAC\nNow expected\n\n\n\n\nA\nfinished\n$2,100\n2 days\n\n\nB\nfinished\n28,500\n4 days (plan 5)\n\n\nC\nfinished\n6,400\n11 days (plan 6)\n\n\nD\nfinished\n7,600\n4 days\n\n\nE\n25%\n3,200\n8 days\n\n\nF\n40%\n900\n5 days\n\n\n\nDashboard: CPI 1.03. EAC $68,180, $1,820 under budget. “Under budget and on track.”"
+  },
+  {
+    "objectID": "slides/week-11.html#the-case-question",
+    "href": "slides/week-11.html#the-case-question",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The case question",
+    "text": "The case question\nWhat does the dashboard leave out?\n\nWhen will the conference finish? What will it cost with $1,000 a day of indirect cost?\n\n\nWhat should the coordinator propose, and what would it cost?"
+  },
+  {
+    "objectID": "slides/week-11.html#the-dollars-and-the-network",
+    "href": "slides/week-11.html#the-dollars-and-the-network",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The dollars and the network",
+    "text": "The dollars and the network"
+  },
+  {
+    "objectID": "slides/week-11.html#technical-performance",
+    "href": "slides/week-11.html#technical-performance",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Technical performance",
+    "text": "Technical performance\nUnder budget and early, and it does not work: the project failed.\n\nMeasure against the requirements’ criteria and tolerances. Put tests and inspections in the schedule."
+  },
+  {
+    "objectID": "slides/week-11.html#scope-creep",
+    "href": "slides/week-11.html#scope-creep",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Scope creep",
+    "text": "Scope creep\nSmall additions, each accepted without a price, a budget or a date.\n\nThe variances worsen for reasons the report cannot explain.\n\n\nThe defence: a clear scope statement and change control. Every addition is priced, approved and baselined."
+  },
+  {
+    "objectID": "slides/week-11.html#baseline-changes",
+    "href": "slides/week-11.html#baseline-changes",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Baseline changes",
+    "text": "Baseline changes\nReal scope change: change the baseline.\n\nA baseline revised until it matches the results is a rubber baseline.\n\n\nNo retroactive changes. No moving money after the work is done. Unforeseen events come from contingency."
+  },
+  {
+    "objectID": "slides/week-11.html#the-cost-of-data",
+    "href": "slides/week-11.html#the-cost-of-data",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The cost of data",
+    "text": "The cost of data\nPercent complete is slow and unpopular to collect.\n\nMany small projects: pseudo percent complete, weekly work packages.\n\n\nLarge projects: no substitute for measured monitoring points. And a communication plan, so the data reach the people who need them."
+  },
+  {
+    "objectID": "slides/week-11.html#one-sentence-for-the-week",
+    "href": "slides/week-11.html#one-sentence-for-the-week",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "One sentence for the week",
+    "text": "One sentence for the week\nEarned value tells you what the money bought. Only the network tells you when you will finish. Report both."
+  },
+  {
+    "objectID": "slides/week-11.html#studio-11-build-the-dashboard-then-find-what-it-hides",
+    "href": "slides/week-11.html#studio-11-build-the-dashboard-then-find-what-it-hides",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Studio 11 · Build the dashboard, then find what it hides",
+    "text": "Studio 11 · Build the dashboard, then find what it hides\n70 minutes, one file: the conference earned value workbook, linked from the Studio 11 page.\n\n\n\n\n\n\n\n\nPart\nMinutes\nWhat\n\n\n\n\n1 · Smartsheet\n40\nBaseline, EVM columns and summary, week-3 report, dashboard, week 4\n\n\n2 · Colab\n20\nTrend, the network, earning rules, a priced recovery\n\n\nUpload\n5\nFour screenshots, the week-4 line, six answers"
+  },
+  {
+    "objectID": "slides/week-11.html#part-1-smartsheet",
+    "href": "slides/week-11.html#part-1-smartsheet",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Part 1 · Smartsheet",
+    "text": "Part 1 · Smartsheet\n\nImport; dependencies on, with % Complete mapped\nSet the baseline before any status\nFour column formulas and nine summary fields. Check: PV $59,000\nWeek 3 report. Screenshot 1: the baseline Gantt\nDashboard: metrics and a chart. Screenshot 2\nWeek 4 report. Screenshot 3"
+  },
+  {
+    "objectID": "slides/week-11.html#part-2-colab",
+    "href": "slides/week-11.html#part-2-colab",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Part 2 · Colab",
+    "text": "Part 2 · Colab\n\nOpen the notebook, Save a copy in Drive, Run all\nWeek 3: the network and the all-in cost; the cheapest recovery\nAdd week 4 and rerun. Screenshot 4: the graphs\n\nThen one PDF to Blackboard as SA11_yourlastname.pdf before you leave."
+  },
+  {
+    "objectID": "slides/week-11.html#sources",
+    "href": "slides/week-11.html#sources",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Sources",
+    "text": "Sources\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 13.\nChristensen, D. S. (1998). The costs and benefits of the earned value management process. Acquisition Review Quarterly, 5(4), 373–386.\nFleming, Q. W., & Koppelman, J. M. (2010). Earned Value Project Management (4th ed.). Project Management Institute.\n\n\n\n\n\nThe conference’s baseline, status reports and forecasts are original to these course materials."
+  },
+  {
     "objectID": "weeks/week-01.html",
     "href": "weeks/week-01.html",
     "title": "Week 1 · Modern Project Management",
@@ -5422,7 +5716,91 @@
     "href": "weeks/week-11.html",
     "title": "Week 11 · Progress and Performance Measurement",
     "section": "",
-    "text": "Not posted yet\nNotes, slides, and the recording for this week are not published yet.\n\n\n\n\nTuesday\n\n\nThe CPI that looked good\n\n\nThursday\n\n\nBuild the dashboard, then find what it hides\n\n\nReading\n\n\nLarson Ch. 13\n\n\n\nSee the schedule for everything that is live now."
+    "text": "Sessions\n\n\n3 & 5 November\n\n\nChapter\n\n\nLarson Ch. 13\n\n\nTuesday\n\n\nThe CPI that looked good — concept, worked example and case\n\n\nThursday\n\n\nBuild the dashboard, then find what it hides\n\n\nReading\n\n\nLarson Ch. 13\n\n\nStudio\n\n\nProduced in the Thursday session and uploaded to Blackboard before you leave"
+  },
+  {
+    "objectID": "weeks/week-11.html#learning-objectives",
+    "href": "weeks/week-11.html#learning-objectives",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\n\n\n\n\nLO 13-1\nIdentify the four steps for controlling a project.\n\n\nLO 13-2\nUse a tracking Gantt chart to monitor time performance.\n\n\nLO 13-3\nExplain why earned value management is needed.\n\n\nLO 13-4\nCalculate and interpret cost and schedule variance.\n\n\nLO 13-5\nCalculate and interpret performance and percent complete indexes.\n\n\nLO 13-6\nForecast final project cost.\n\n\nLO 13-7\nIdentify and manage scope creep and baseline changes.\n\n\nLO A13.1-1\nApply the simpler earned value rules to measure progress."
+  },
+  {
+    "objectID": "weeks/week-11.html#concepts-introduced",
+    "href": "weeks/week-11.html#concepts-introduced",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Concepts introduced",
+    "text": "Concepts introduced\n\ncontrol processbaselinetracking Gantt chartmilestone scheduleearned value (EV)planned value (PV)actual cost (AC)BACcost varianceschedule varianceCPISPIPCIB and PCICETC and EACVACTCPIpercent complete rule0/100 and 50/50 rulesscope creeprubber baseline"
+  },
+  {
+    "objectID": "weeks/week-11.html#the-chapters-example-a-digital-camera-prototype",
+    "href": "weeks/week-11.html#the-chapters-example-a-digital-camera-prototype",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The chapter’s example: a Digital Camera prototype",
+    "text": "The chapter’s example: a Digital Camera prototype\nThe chapter works a six-activity project with a budget of $320,000 and a planned duration of 11 periods [1]. To keep it simple, each cost account is one work package and one activity; the baseline is laid out at early start; and an activity incurs some cost every period it is in progress.\n\n\nThe Digital Camera baseline, $000. Values from Larson & Gray, Ch. 13, Figure 13.8 [1].\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nActivity\nDuration\nES\nLF\nSlack\nBudget\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n\n\n\n\nA Design specifications\n2\n0\n2\n0\n20\n10\n10\n\n\n\n\n\n\n\n\n\n\n\nB Shell & power\n2\n2\n6\n2\n15\n\n\n5\n10\n\n\n\n\n\n\n\n\n\nC Memory/software\n4\n2\n6\n0\n100\n\n\n20\n30\n30\n20\n\n\n\n\n\n\n\nD Zoom system\n3\n2\n6\n1\n35\n\n\n15\n10\n10\n\n\n\n\n\n\n\n\nE Assemble\n3\n6\n9\n0\n120\n\n\n\n\n\n\n30\n40\n50\n\n\n\n\nF Test\n2\n9\n11\n0\n30\n\n\n\n\n\n\n\n\n\n10\n20\n\n\nPV by period\n\n\n\n\n320\n10\n10\n40\n50\n40\n20\n30\n40\n50\n10\n20\n\n\nCumulative PV\n\n\n\n\n\n10\n20\n60\n110\n150\n170\n200\n240\n290\n300\n320\n\n\n\n\nEach period, the people in the field report percent complete and actual cost for every activity. An activity not started earns nothing; a finished one earns its whole budget; one in progress earns its percent complete times its budget [1].\n\nSelected status reports, $000. Values from Larson & Gray, Ch. 13, Table 13.3 and Figure 13.11 [1]; period 7 groups the three finished activities.\n\n\nReport\nActivity\n% complete\nEV\nAC\nPV\nCV\nSV\n\n\n\n\nPeriod 1\nA\n50%\n10\n10\n10\n0\n0\n\n\nPeriod 2\nA\nfinished\n20\n30\n20\n−10\n0\n\n\nPeriod 3\nA\nfinished\n20\n30\n20\n−10\n0\n\n\n\nB\n33%\n5\n10\n5\n−5\n0\n\n\n\nC\n20%\n20\n30\n20\n−10\n0\n\n\n\nD\n60%\n21\n20\n15\n+1\n+6\n\n\n\nTotal\n\n66\n90\n60\n−24\n+6\n\n\nPeriod 7\nA, B, D\nfinished\n70\n110\n70\n−40\n0\n\n\n\nC\n90%\n90\n120\n100\n−30\n−10\n\n\n\nE\nnot started\n0\n0\n30\n0\n−30\n\n\n\nTotal\n\n160\n230\n200\n−70\n−40\n\n\n\nAt period 3 the project looks ahead of schedule (SV +6) and is already over budget (CV −24). By period 7, A, B and D are finished and all three ran over; C, memory and software, is 90 percent done, $30,000 over, and late. E cannot start until C is done. The project has spent $230,000 to earn $160,000 against a plan of $200,000.\n\n\n\n\n\n\nFigure 5: The Digital Camera’s cumulative PV, EV and AC through period 7. Redrawn from Larson & Gray, Ch. 13, Figures 13.8 and 13.9 and Table 13.3 [1].\n\n\n\nThe tracking Gantt chart adds what the dollars cannot: C, planned for four periods, now needs six, which delays E and F and the whole project by two periods [1]. Rolled up by deliverable and department, the variances point at their owners. The Storage department’s memory and software deliverable is at SV −$10,000 and CV −$30,000; Assembly’s SV of −$30,000 is not Assembly’s fault, because its work is waiting on C [1].\nSV is in dollars, not time. A project can show a negative SV while it is ahead on the critical path, if noncritical work is lagging, and a near-zero SV while the critical path slips, if large noncritical activities are ahead. The chapter calls SV a fair indicator of overall schedule status once a project is past about 20 percent complete, and says only the network or the tracking Gantt chart measures schedule accurately at the work package level [1]."
+  },
+  {
+    "objectID": "weeks/week-11.html#other-ways-to-earn-value",
+    "href": "weeks/week-11.html#other-ways-to-earn-value",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Other ways to earn value",
+    "text": "Other ways to earn value\nFollowing Larson & Gray, Ch. 13, Section 13.6 and Appendix 13.1 [1]. LO A13.1-1.\nEstimating percent complete for every work package every period takes effort, and the estimates are subjective. Three simpler rules reduce both [1]:\n\n0/100. Nothing is earned until the work package is finished; then all of it. For very short packages.\n50/50. Half is earned when the package starts and half when it finishes. For short, low-cost packages.\nWeighted monitoring gates. A long activity is split into discrete steps, each worth a fixed share of the budget, and the earned value at each gate cannot exceed that share. A $500 activity with gates at 30, 50 and 100 percent earns at most $150, $250 and $500. This rule is common for progress payments to contractors, because it stops payment for work not yet done.\n\nThe first two need only two facts, started and finished, which removes the guesswork. The same status report earns different amounts under each rule, and so gives a different CPI and SPI."
+  },
+  {
+    "objectID": "weeks/week-11.html#worked-example-the-week-2-status-report",
+    "href": "weeks/week-11.html#worked-example-the-week-2-status-report",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Worked example: the week-2 status report",
+    "text": "Worked example: the week-2 status report\nFri 13 Nov, end of week 2. The coordinators report:\n\nFill in EV, PV, CV and SV, then compute CPI, SPI, PCIB, ETC, EAC, VAC and TCPI.\n\n\n\n\n\n\n\n\n\n\n\n\nID\nActivity\n% complete\nActual cost\nEV\nPV\nCV\nSV\n\n\n\n\nA\nApprove event brief\nfinished\n$2,100\n\n\n\n\n\n\nB\nContract venue\nfinished\n28,500\n\n\n\n\n\n\nC\nDraft program\n50%\n3,800\n\n\n\n\n\n\nD\nConfigure registration\nfinished\n7,600\n\n\n\n\n\n\nE, F\nConfirm speakers, recruit exhibitors\nnot started\n0\n\n\n\n\n\n\n\nTotal\n\n\n\n\n\n\n\n\n\nThe venue was contracted a day early and $1,500 under budget, and registration, which follows it, is finished too. The program draft is half done, two days after it was due to finish, because the program lead was away. Work it by hand first, then check every number in the interactive earned value notebook, which opens in the browser with nothing to install. Choose the conference and End of week 2, keep Show the answers off until you have finished, then switch it on. The same notebook runs the Digital Camera example, lets you change any activity’s percent complete and actual cost, switches between earning rules, and draws the graphs.\n\nThe CPI that looked good\nFri 20 Nov, end of week 3. The program draft finished on workday 13, after 11 workdays instead of 6. Speakers and exhibitors started the next day. The report:\n\nWeek 3 status. G, H and I have not started.\n\n\n\n\n\n\n\n\nID\n% complete\nActual cost\nDuration now expected\n\n\n\n\nA\nfinished\n$2,100\n2 days, as planned\n\n\nB\nfinished\n28,500\n4 days (planned 5)\n\n\nC\nfinished\n6,400\n11 days (planned 6)\n\n\nD\nfinished\n7,600\n4 days, as planned\n\n\nE\n25%\n3,200\n8 days, as planned\n\n\nF\n40%\n900\n5 days, as planned\n\n\n\nThe coordinator’s dashboard shows CPI 1.03 and a forecast $1,820 under budget, and the report to the sponsor says the conference is under budget and on track.\n\nWhat does the dashboard leave out? When will the conference actually finish, and what will it cost once the $1,000 a day of indirect cost from Week 10 is counted? What should the coordinator propose, and what would it cost?\n\n\n\n\n\n\n\n\nFigure 7: The conference’s cumulative cost graph at week 3. Cost efficiency is on plan; the network forecasts a finish five workdays late. The conference’s data are original to this course; layout follows Larson & Gray, Ch. 13, Figure 13.9 [1].\n\n\n\nThe week-3 dollars say SPI .85: 15 percent of the scheduled work is missing. The network says 5 of 25 workdays, 20 percent of the plan, because the late work is on the critical path and the $30,000 venue, which finished early, props up the total. Section 5 of the earned value notebook recomputes the network from each status report, and section 7 prices a recovery from Week 10’s crash data."
+  },
+  {
+    "objectID": "weeks/week-11.html#technical-performance",
+    "href": "weeks/week-11.html#technical-performance",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Technical performance",
+    "text": "Technical performance\nCost and schedule are not the whole story. A project under budget and early that delivers something that does not work has failed [1]. Technical performance is measured against the requirements in the scope statement and work packages, which should state criteria and tolerances. The measure depends on the project: defects found in software, a prototype car’s fuel economy against its specification, engagement with a marketing campaign. Tests and inspections belong in the schedule, and quality tools such as histograms, scatter diagrams and Pareto charts help find causes [1]."
+  },
+  {
+    "objectID": "weeks/week-11.html#scope-creep",
+    "href": "weeks/week-11.html#scope-creep",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Scope creep",
+    "text": "Scope creep\nScope creep is the gradual growth of a project’s scope through additions that each look small, accepted without a formal change, a new budget or a new date. Each one consumes time and money the baseline never held, so the variances worsen for reasons the status report cannot explain. The defence is the one Week 4 set up: a clear scope statement, and a change control process through which every addition is priced, approved and written into the baseline."
+  },
+  {
+    "objectID": "weeks/week-11.html#baseline-changes",
+    "href": "weeks/week-11.html#baseline-changes",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Baseline changes",
+    "text": "Baseline changes\nChange is inevitable and some of it is good [1]. It comes from outside, such as a customer request or a new regulation, or from inside, as people find problems or better ways. Force majeure, such as floods, hurricanes or a pandemic, can make a baseline meaningless. When the scope genuinely changes, the baseline should change with it, adding cost for added scope and removing cost for removed scope.\nBaseline changes must not be used to hide poor performance. A baseline revised so often that it always matches the results is a rubber baseline: it stretches to fit whatever happened [1]. The chapter’s rules: most changes are absorbed as variances rather than new baselines; no retroactive changes to work already done; no moving money between cost accounts after the work is finished; and unforeseen events are paid for from the contingency reserve, usually at the project manager’s discretion. On large projects a joint change review team of project and customer staff may decide every change [1]."
+  },
+  {
+    "objectID": "weeks/week-11.html#the-cost-of-data",
+    "href": "weeks/week-11.html#the-cost-of-data",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "The cost of data",
+    "text": "The cost of data\nCollecting percent complete is time-consuming and unpopular [1]. Some organisations use pseudo percent complete systems, with weekly work packages and simple completion reports, which work well across many small and medium projects. On large projects there is no substitute for percent complete measured at clearly defined monitoring points. Data that exist but never reach the people who need them are as useless as no data. The communication plan decides who receives which report, how often and in what form [1]:\n\nA communication plan for a conference centre WiFi project, from Larson & Gray, Ch. 13, Figure 13.16 [1].\n\n\n\n\n\n\n\n\nInformation\nWhen\nMode\nResponsible\n\n\n\n\nMilestone report\nBimonthly\nE-mail\nProject office\n\n\nTime/cost report\nWeekly\nE-mail\nProject office\n\n\nRisk report\nWeekly\nE-mail\nProject office\n\n\nIssues\nWeekly\nE-mail\nAnyone\n\n\nTeam meeting times\nWeekly\nMeeting\nProject manager\n\n\nOutsourcing performance\nBimonthly\nMeeting\nProject manager\n\n\nChange requests\nAnytime\nDocument\nProject manager, customer, design\n\n\nStage gate decisions\nMonthly\nMeeting\nProject office"
+  },
+  {
+    "objectID": "weeks/week-11.html#practice-exercises",
+    "href": "weeks/week-11.html#practice-exercises",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Practice exercises",
+    "text": "Practice exercises\n\nThe chapter’s exercises are reproduced as written [1]. Exercise 3’s network is transcribed into its baseline table; its status forms are given as far as this course’s copy of the chapter shows them.\n\nIn month 9 the following project information is available: actual cost is $2,000, earned value is $2,100, and planned cost is $2,400. Compute the SV and CV for the project.\nOn day 51 a project has an earned value of $600, an actual cost of $650, and a planned cost of $560. Compute the SV, CV, and CPI for the project. What is your assessment of the project on day 51?\nGiven the following project network and baseline information, complete the form to develop a status report for the project at the end of period 4 and the end of period 8. From the data you have collected and computed for periods 4 and 8, what information are you prepared to tell the customer about the status of the project at the end of period 8?\n\nNetwork: A precedes B and C; B precedes D; C precedes E; D and E precede F.\n\n\nProject baseline (PV), in dollars.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask\nDUR\nES\nLF\nSL\nBudget (PV)\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\n\n\n\nA\n2\n0\n2\n0\n400\n200\n200\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB\n6\n2\n8\n0\n2,400\n\n\n200\n600\n200\n600\n200\n600\n\n\n\n\n\n\n\n\n\nC\n5\n2\n9\n2\n1,500\n\n\n200\n400\n500\n100\n300\n\n\n\n\n\n\n\n\n\n\nD\n4\n8\n12\n0\n1,600\n\n\n\n\n\n\n\n\n400\n400\n400\n400\n\n\n\n\n\nE\n3\n7\n12\n2\n900\n\n\n\n\n\n\n\n300\n400\n200\n\n\n\n\n\n\n\nF\n3\n12\n15\n0\n600\n\n\n\n\n\n\n\n\n\n\n\n\n200\n100\n300\n\n\n\n\n\n\n\nPeriod PV total\n200\n200\n400\n1,000\n700\n700\n500\n900\n800\n600\n400\n400\n200\n100\n300\n\n\n\n\n\n\n\nCumulative PV\n200\n400\n800\n1,800\n2,500\n3,200\n3,700\n4,600\n5,400\n6,000\n6,400\n6,800\n7,000\n7,100\n7,400\n\n\n\n\n\n\n\nEnd of period 4\nActual % complete\nEV\nAC\nPV\nCV\nSV\n\n\n\n\nA\nFinished\n\n300\n400\n\n\n\n\nB\n50%\n\n1,000\n800\n\n\n\n\nC\n33%\n\n500\n600\n\n\n\n\nD\n0%\n\n0\n\n\n\n\n\nE\n0%\n\n\n\n\n\n\n\nCumulative totals\n\n\n\n\n\n\n\n\n\n\n\n\nEnd of period 8\nActual % complete\nEV\nAC\nPV\nCV\nSV\n\n\n\n\nA\nFinished\n\n300\n400\n\n\n\n\nB\nFinished\n\n2,200\n2,400\n\n\n\n\nC\nFinished\n\n1,500\n1,500\n\n\n\n\nD\n25%\n\n300\n0\n\n\n\n\nE, F\nas given in the chapter\n\n\n\n\n\n\n\nCumulative totals\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercises are reproduced from Larson & Gray, Project Management: The Managerial Process, 2024 Release, McGraw Hill, Chapter 13 [1]. The network and baseline of exercise 3 are transcribed from the chapter’s figure; the rows for E and F at period 8 are in your copy of the chapter. Exercise 1 is a quick check of the signs. In exercise 3, compare SV with what the network says about the critical path before you write the customer’s summary."
+  },
+  {
+    "objectID": "weeks/week-11.html#studio-11-build-the-dashboard-then-find-what-it-hides",
+    "href": "weeks/week-11.html#studio-11-build-the-dashboard-then-find-what-it-hides",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Studio 11 · Build the dashboard, then find what it hides",
+    "text": "Studio 11 · Build the dashboard, then find what it hides\nComplete the Week 11 studio.\nYou will import the conference’s baseline into Smartsheet, set a project baseline so the Gantt chart tracks against it, add the earned value columns and summary fields, and enter the week-3 status report. Then you will build a dashboard of the measures, use the baseline Gantt chart to find the slip the dashboard does not show, and post week 4. In Colab, the earned value notebook charts the weekly reports, recomputes the network, compares earning rules and prices a recovery."
+  },
+  {
+    "objectID": "weeks/week-11.html#sources",
+    "href": "weeks/week-11.html#sources",
+    "title": "Week 11 · Progress and Performance Measurement",
+    "section": "Sources",
+    "text": "Sources\n\nLarson, E. W., & Gray, C. F. Project Management: The Managerial Process, 2024 Release. McGraw Hill. Chapter 13.\nChristensen, D. S. (1998). The costs and benefits of the earned value management process. Acquisition Review Quarterly, 5(4), 373–386.\nFleming, Q. W., & Koppelman, J. M. (2010). Earned Value Project Management (4th ed.). Project Management Institute.\n\nThe conference’s baseline, status reports, forecasts and recovery are original to these course materials."
   },
   {
     "objectID": "weeks/week-13.html",
