@@ -1,0 +1,113 @@
+---
+title: "Studio 12 · Run a sprint, then measure the flow you produced"
+subtitle: "Week 12 · Agile Project Management · Larson Ch. 15"
+week: 12
+release: "2026-11-09"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA12</strong> — one PDF with three screenshots, the day-10 sprint line and six short answers</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>70 minutes: set up 15, run the sprint 25, dashboard 10, review 10, upload 5, 5 spare</dd>
+<dt>Tool</dt><dd>Smartsheet (your NDSU account): Grid View, Card View, Sheet Summary and a dashboard</dd>
+<dt>Workbooks</dt><dd><a href="../files/week-12-sprint-backlog.xlsx">Sprint 1 backlog</a> and <a href="../files/week-12-burndown.xlsx">Sprint 1 burndown</a> (Excel), both imported</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · you may use AI to help with Smartsheet; check every number against your sheets, and append the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a> if you use it</dd>
+<dt>Week page</dt><dd><a href="../weeks/week-12.qmd">Week 12 — Agile Project Management</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work.** Download both workbooks before the session starts. Write each answer in one to three sentences next to its screenshot.
+:::
+
+The conference app's team, Ana, Ben, Cara and Dev, committed to stories 1, 2 and 3 for sprint 1: 16 points, ten tasks, 84 hours, Mon 2 Nov to Fri 13 Nov. The [sprint backlog workbook](../files/week-12-sprint-backlog.xlsx) holds the ten tasks, each with an owner, an estimate and *Hours left* equal to the estimate. The [burndown workbook](../files/week-12-burndown.xlsx) holds one row per sprint day with the ideal line filled in. You will run the sprint from the team's daily scrum log, one day at a time, then read what the board, the burndown and the flow measures each say.
+
+::: {.part}
+### Part 1 · Set up the board — 15 minutes
+
+1. **Import both workbooks.** **+ Create → Import → Microsoft Excel**, one file at a time; keep row 1 as headers. *Check:* the sprint backlog has ten rows, T1 to T10, all *Not started*; the burndown has eleven rows, Day 0 to Day 10, with *Ideal* falling from 84 to 0.
+2. **Make Status a dropdown.** In the sprint backlog, right-click the *Status* header → **Edit Column Properties** → **Dropdown (Single Select)**, with the values `Not started`, `In progress`, `Done`, in that order.
+3. **Cycle time.** Add a Text/Number column *Cycle days*. In row 1 paste the formula below, then right-click the cell → **Convert to Column Formula**. A task's cycle time counts the workdays it was in progress, both ends included.
+
+    ```
+    =IF([Status]@row = "Done", [Done day]@row - [Start day]@row + 1, "")
+    ```
+
+4. **Sheet Summary.** Open the **Sheet Summary** panel and add four Text/Number fields:
+
+    | Field | Formula |
+    |:--|:--|
+    | Hours left | `=SUM([Hours left]:[Hours left])` |
+    | In progress | `=COUNTIF([Status]:[Status], "In progress")` |
+    | Done tasks | `=COUNTIF([Status]:[Status], "Done")` |
+    | Avg cycle days | `=IFERROR(ROUND(AVG([Cycle days]:[Cycle days]), 2), "")` |
+
+    : {tbl-colwidths="[22,78]"}
+
+    *Check:* Hours left 84, In progress 0, Done tasks 0.
+5. **Card View.** Switch the sprint backlog to **Card View**, **View by: Status**. In the card settings, show *Owner*, *Hours left* and *Story* on each card. You now have a task board with three lanes.
+:::
+
+::: {.part}
+### Part 2 · Run the sprint — 25 minutes
+
+Work through the log one day at a time. For each entry, drag the card to its new lane and edit the card (or the row in Grid View): type the new *Hours left*, the *Start day* when a task starts, and the *Done day* when it finishes. Then open the burndown sheet and, on that day's row, type the three numbers from the Sheet Summary: **Hours left**, **In progress** and **Done tasks**.
+
+::: {style="overflow-x: auto"}
+| Day | Date | Daily scrum: end-of-day status | Also said at the scrum |
+|:--:|:--|:--|:--|
+| 1 | Mon 2 Nov | **T1** → In progress, start 1, 8 h; **T2** → In progress, start 1, 12 h; **T5** → Done, start 1, done 1, 0 h; **T8** → In progress, start 1, 4 h | |
+| 2 | Tue 3 Nov | **T1** 4 h; **T2** 10 h; **T6** → In progress, start 2, 5 h; **T8** → Done, done 2, 0 h; **T9** → In progress, start 2, 10 h | |
+| 3 | Wed 4 Nov | **T1** → Done, done 3, 0 h; **T2** 14 h; **T3** → In progress, start 3, 6 h; **T6** 2 h; **T9** 7 h | Ben: the payment sandbox rejects test cards; T2 is re-estimated upward. |
+| 4 | Thu 5 Nov | **T2** 12 h; **T3** 4 h; **T6** → Done, done 4, 0 h; **T7** → In progress, start 4, 2 h; **T9** 4 h | The product owner asks the team to add the sponsor banner, story 10, to this sprint. |
+| 5 | Fri 6 Nov | **T2** 11 h; **T3** 2 h; **T7** → Done, done 5, 0 h; **T9** 1 h | Ben is waiting for the payment provider's live keys. Ana cannot finish the receipt until payments post. |
+| 6 | Mon 9 Nov | **T2** 10 h; **T9** → Done, done 6, 0 h; **T10** → In progress, start 6, 2 h | |
+| 7 | Tue 10 Nov | **T2** 6 h; **T10** → Done, done 7, 0 h | |
+| 8 | Wed 11 Nov | **T2** 2 h; **T3** → Done, done 8, 0 h | |
+| 9 | Thu 12 Nov | **T2** → Done, done 9, 0 h; **T4** → In progress, start 9, 5 h | |
+| 10 | Fri 13 Nov | **T4** 3 h | Dev's test finds a bug in the refund path. |
+
+: Sprint 1's daily scrum log. "T2 12 h" means T2 stays in its lane with 12 hours left. A task not mentioned is unchanged. {tbl-colwidths="[6,12,57,25]"}
+:::
+
+*Check:* at the end of day 5 the summary reads Hours left 26, In progress 3, Done tasks 5. **Screenshot 1**: the Card View board at the end of day 5.
+
+At the end of day 10, record your **day-10 sprint line**: Hours left, In progress, Done tasks and Avg cycle days.
+:::
+
+::: {.part}
+### Part 3 · Dashboard — 10 minutes
+
+1. **+ Create → Dashboard**, name it *Conference app · Sprint 1*, and open it in edit mode.
+2. Add a **Chart** widget. Source: your burndown sheet; select the *Label*, *Ideal* and *Hours left* columns for Day 0 to Day 10. Choose a **line chart**. Title it *Sprint 1 burndown*.
+3. Add a **Metric** widget whose source is the sprint backlog's Sheet Summary; show all four fields.
+4. Save. **Screenshot 2**: the dashboard. **Screenshot 3**: the sprint backlog in Grid View at day 10, with *Status*, *Start day*, *Done day* and *Cycle days* visible.
+:::
+
+::: {.part}
+### Part 4 · Sprint review and retrospective — 10 minutes
+
+**Answer**
+
+1. On day 8 the burndown sits below the ideal line. What did the board show on day 8 that the chart does not? Name the tasks and the story at risk.
+2. **Sprint review.** Which stories can the product owner accept as done? What is the sprint's velocity in points, and what share of the 84 committed hours was burned? Why does story 1 score nothing?
+3. On day 4 the product owner asked to add the sponsor banner. What should happen to the request, who should say so, and why?
+4. **Flow.** Report the average cycle time, the throughput (done tasks ÷ 10 days) and the longest cycle time. By Little's law, with throughput unchanged, what average cycle time would a WIP limit of 2 give? Which task would a WIP limit have changed most, and how?
+5. **Release forecast.** 39 points remain in the product backlog. How many more sprints does the release need at the velocity you just measured, and at the planned 16? Sprint 2, ending Fri 27 Nov, is the last full sprint before the rehearsal on Thu 3 Dec. Which stories would you ask the product owner to put in it, and why?
+6. **Retrospective.** Propose one change to how the team works in sprint 2, and tie it to a number from your sheets.
+:::
+
+::: {.part}
+### Upload — 5 minutes
+
+- [ ] One PDF: screenshots 1 to 3, your day-10 sprint line, answers 1 to 6, and the AI acknowledgement if you used AI
+- [ ] Saved to `IMSE456/studio-12/` on your NDSU Google Drive or OneDrive
+- [ ] Uploaded to Blackboard as `SA12_yourlastname.pdf` before you leave
+:::
+
+The week page's practice problems add a velocity forecast, a burndown to draw and a Little's law calculation, if you want more practice after class.
+
+## Source
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 15: Scrum roles, meetings, product and sprint backlogs, and burndown charts. Flow measures follow Anderson, *Kanban* (2010), and Little (1961). The conference app, its backlog and its sprint log are original to these course materials.
