@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,46 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-15-1-traditional-versus-agile-methods" id="toc-lo-15-1-traditional-versus-agile-methods" class="nav-link" data-scroll-target="#lo-15-1-traditional-versus-agile-methods">LO 15-1 · Traditional versus agile methods</a>
+  <ul class="collapse">
+  <li><a href="#the-waterfall-and-its-assumption" id="toc-the-waterfall-and-its-assumption" class="nav-link" data-scroll-target="#the-waterfall-and-its-assumption">The waterfall and its assumption</a></li>
+  <li><a href="#the-agile-manifesto" id="toc-the-agile-manifesto" class="nav-link" data-scroll-target="#the-agile-manifesto">The Agile Manifesto</a></li>
+  <li><a href="#where-each-approach-fits" id="toc-where-each-approach-fits" class="nav-link" data-scroll-target="#where-each-approach-fits">Where each approach fits</a></li>
+  </ul></li>
+  <li><a href="#lo-15-2-iterative-incremental-development" id="toc-lo-15-2-iterative-incremental-development" class="nav-link" data-scroll-target="#lo-15-2-iterative-incremental-development">LO 15-2 · Iterative, incremental development</a></li>
+  <li><a href="#lo-15-3-core-agile-principles" id="toc-lo-15-3-core-agile-principles" class="nav-link" data-scroll-target="#lo-15-3-core-agile-principles">LO 15-3 · Core agile principles</a></li>
+  <li><a href="#lo-15-4-scrum" id="toc-lo-15-4-scrum" class="nav-link" data-scroll-target="#lo-15-4-scrum">LO 15-4 · Scrum</a>
+  <ul class="collapse">
+  <li><a href="#three-roles" id="toc-three-roles" class="nav-link" data-scroll-target="#three-roles">Three roles</a></li>
+  <li><a href="#five-meetings" id="toc-five-meetings" class="nav-link" data-scroll-target="#five-meetings">Five meetings</a></li>
+  <li><a href="#product-and-sprint-backlogs" id="toc-product-and-sprint-backlogs" class="nav-link" data-scroll-target="#product-and-sprint-backlogs">Product and sprint backlogs</a></li>
+  <li><a href="#burndown-charts-and-velocity" id="toc-burndown-charts-and-velocity" class="nav-link" data-scroll-target="#burndown-charts-and-velocity">Burndown charts and velocity</a></li>
+  <li><a href="#worked-example-plan-the-conference-app" id="toc-worked-example-plan-the-conference-app" class="nav-link" data-scroll-target="#worked-example-plan-the-conference-app">Worked example: plan the conference app</a></li>
+  <li><a href="#in-class-plan-the-release-in-smartsheet" id="toc-in-class-plan-the-release-in-smartsheet" class="nav-link" data-scroll-target="#in-class-plan-the-release-in-smartsheet">In class: plan the release in Smartsheet</a>
+  <ul class="collapse">
+  <li><a href="#fixed-price-fixed-scope-agile-process" id="toc-fixed-price-fixed-scope-agile-process" class="nav-link" data-scroll-target="#fixed-price-fixed-scope-agile-process">Fixed price, fixed scope, agile process</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#lo-15-5-extreme-programming" id="toc-lo-15-5-extreme-programming" class="nav-link" data-scroll-target="#lo-15-5-extreme-programming">LO 15-5 · Extreme Programming</a></li>
+  <li><a href="#lo-15-6-kanban" id="toc-lo-15-6-kanban" class="nav-link" data-scroll-target="#lo-15-6-kanban">LO 15-6 · Kanban</a></li>
+  <li><a href="#lo-15-7-the-limits-of-agile" id="toc-lo-15-7-the-limits-of-agile" class="nav-link" data-scroll-target="#lo-15-7-the-limits-of-agile">LO 15-7 · The limits of agile</a>
+  <ul class="collapse">
+  <li><a href="#practice-problems" id="toc-practice-problems" class="nav-link" data-scroll-target="#practice-problems">Practice problems</a></li>
+  </ul></li>
+  <li><a href="#thursday-studio" id="toc-thursday-studio" class="nav-link" data-scroll-target="#thursday-studio">Thursday studio</a>
+  <ul class="collapse">
+  <li><a href="#studio-12-run-a-sprint-then-measure-the-flow-you-produced" id="toc-studio-12-run-a-sprint-then-measure-the-flow-you-produced" class="nav-link" data-scroll-target="#studio-12-run-a-sprint-then-measure-the-flow-you-produced">Studio 12 · Run a sprint, then measure the flow you produced</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -151,17 +218,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="gated">
-<p><span class="lock">Not posted yet</span></p>
-<p>Notes, slides, and the recording for this week are not published yet.</p>
-</div>
 <div class="week-meta">
 <dl>
+<dt>
+Sessions
+</dt>
+<dd>
+10 &amp; 12 November
+</dd>
+<dt>
+Chapter
+</dt>
+<dd>
+Larson Ch. 15
+</dd>
 <dt>
 Tuesday
 </dt>
 <dd>
-Fixed price, fixed scope, agile process
+Fixed price, fixed scope, agile process — concept, release planning in Smartsheet, and case
 </dd>
 <dt>
 Thursday
@@ -175,11 +250,673 @@ Reading
 <dd>
 Larson Ch. 15
 </dd>
+<dt>
+Studio
+</dt>
+<dd>
+Produced in the Thursday session and uploaded to Blackboard before you leave
+</dd>
 </dl>
 </div>
-<p>See the <a href="../schedule.html">schedule</a> for everything that is live now.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Recording</strong> — posts after the session.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 15</strong> [1]. The exposition is reworded; the comparison of traditional and agile methods, the house analogy, the core agile principles, and the Scrum roles, meetings, backlogs and burndown charts are the chapter’s, and the Phone-In Prescription backlogs reproduce the values in its Figures 15.6 and 15.7. Figures 1, 3 and 4 are redrawn from the chapter’s Figures 15.1, 15.4 and 15.5; Figure 2 is redrawn from the project uncertainty diagram the chapter reuses from Chapter 1. The Agile Manifesto is quoted from its authors [2]. The sections on Extreme Programming, Kanban and the limits of agile follow the chapter’s learning objectives, with the substance cited to Beck [3], Anderson [4], Little [5] and the Scrum Guide [6]. The conference attendee app, its backlog, its sprint and the contract case are original to these course materials.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 85%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 15-1</strong></td>
+<td style="text-align: left;">Recognize the conditions in which traditional project management versus Agile Project Management should be used.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 15-2</strong></td>
+<td style="text-align: left;">Understand the value of iterative, incremental development for creating new products.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 15-3</strong></td>
+<td style="text-align: left;">Identify core Agile principles.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 15-4</strong></td>
+<td style="text-align: left;">Understand the basic methodology used in Scrum.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 15-5</strong></td>
+<td style="text-align: left;">Understand the basic methodology used by Extreme programming.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 15-6</strong></td>
+<td style="text-align: left;">Know how to create and use a Kanban board.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 15-7</strong></td>
+<td style="text-align: left;">Recognize the limitations of Agile Project Management.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">waterfall</span><span class="chip">Agile Manifesto</span><span class="chip">iterative, incremental development</span><span class="chip">rolling wave planning</span><span class="chip">Scrum</span><span class="chip">product owner</span><span class="chip">Scrum master</span><span class="chip">development team</span><span class="chip">sprint</span><span class="chip">product backlog</span><span class="chip">sprint backlog</span><span class="chip">user story</span><span class="chip">story points</span><span class="chip">velocity</span><span class="chip">burndown chart</span><span class="chip">Extreme Programming</span><span class="chip">Kanban board</span><span class="chip">WIP limit</span><span class="chip">cycle time</span><span class="chip">throughput</span><span class="chip">hybrid</span></p>
+</div>
+<hr>
+</section>
+<section id="lo-15-1-traditional-versus-agile-methods" class="level1">
+<h1>LO 15-1 · Traditional versus agile methods</h1>
+<p><em>Following Larson &amp; Gray, Ch. 15, Section 15.1 [1].</em></p>
+<p>Weeks 4 to 11 planned the conference from the top down: a scope statement, a WBS, a network, estimates, a staffed schedule, a budget, a baseline to measure against. That works because a conference is a known kind of thing. Everyone agrees what a venue contract, a program and a rehearsal are before work begins.</p>
+<p>Not every project is like that. When the product is new and the customer cannot say what it should do until they have used something, a plan made up front is a plan for the wrong product. <strong>Agile Project Management</strong> replaces the single up-front plan with short cycles that each deliver a working piece, look at it with the customer, and decide what to build next [1].</p>
+<section id="the-waterfall-and-its-assumption" class="level2">
+<h2 class="anchored" data-anchor-id="the-waterfall-and-its-assumption">The waterfall and its assumption</h2>
+<p>When commercial software took off in the 1980s, it was managed like any other project. The result is called the <strong>waterfall method</strong>: a sequence of phases, each finished and signed off before the next starts [1].</p>
+<div id="fig-waterfall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-waterfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/waterfall.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-waterfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The waterfall approach. Redrawn from Larson &amp; Gray, Ch. 15, Figure 15.1 [1]; the excerpt shows the first three phases, and the rest are the conventional ones.
+</figcaption>
+</figure>
+</div>
+<p>The method rests on one assumption: that the essential requirements can be written down before design begins, after which the work runs in one direction from design to release. When the assumption holds, the waterfall is efficient. When it fails, the customer meets the product for the first time at the end, and every misunderstanding surfaces when it is most expensive to fix.</p>
+</section>
+<section id="the-agile-manifesto" class="level2">
+<h2 class="anchored" data-anchor-id="the-agile-manifesto">The Agile Manifesto</h2>
+<p>Frustration with heavy documentation and fixed phases came from programmers, not management. In 2001 a group of them, later the Agile Alliance, wrote the <strong>Agile Manifesto</strong>, which states four preferences [2]:</p>
+<blockquote class="blockquote">
+<p>Individuals and interactions over processes and tools<br> Working software over comprehensive documentation<br> Customer collaboration over contract negotiation<br> Responding to change over following a plan</p>
+</blockquote>
+<p>The authors add that the items on the right still have value; the items on the left have more [2]. Twelve principles expand the values [1, 2]. Grouped, they say:</p>
+<table class="caption-top table">
+<caption>The twelve principles, grouped. Paraphrased from the Agile Manifesto [2] as listed in Larson &amp; Gray, Ch. 15 [1].</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Theme</th>
+<th style="text-align: left;">What the principles ask for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">The customer</td>
+<td style="text-align: left;">Put valuable software in the customer’s hands early and keep it coming; treat a late change in requirements as welcome.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Delivery</td>
+<td style="text-align: left;">Deliver working software often, every few weeks rather than months; progress is measured in software that works; keep a pace that can be sustained indefinitely.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">People</td>
+<td style="text-align: left;">Business people and developers work together daily; build projects around motivated people and trust them; talk face to face; let teams organize themselves.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Craft</td>
+<td style="text-align: left;">Keep attention on technical excellence and good design; maximize the work not done; reflect at regular intervals and adjust.</td>
+</tr>
+</tbody>
+</table>
+<p>Most of these concern the people doing the work. The chapter reads the manifesto as a socio-technical statement, the balance Week 1 argued for, written by people who found the technical side had been imposed on them. It describes a <strong>mindset</strong> that values collaboration, trust, change and customer satisfaction, not a set of procedures [1].</p>
+</section>
+<section id="where-each-approach-fits" class="level2">
+<h2 class="anchored" data-anchor-id="where-each-approach-fits">Where each approach fits</h2>
+<p>Chapter 1’s uncertainty diagram puts the choice on two axes: how well the scope is defined, and how well the technology is understood [1].</p>
+<div id="fig-uncertainty" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-uncertainty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/uncertainty.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uncertainty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Project uncertainty and the choice of method. Redrawn from the project uncertainty diagram in Larson &amp; Gray, Ch. 15, Figure 15.2, which reuses Chapter 1’s [1]. The example projects are added.
+</figcaption>
+</figure>
+</div>
+<p>Traditional methods were built for the <strong>predictable zone</strong>: scope settled, technology known. Agile is for the <strong>unpredictable zone</strong>, where the work is closer to experiment than execution. In the chapter’s words, projects there <em>evolve rather than are executed</em>, and solutions are <em>discovered rather than implemented</em> [1].</p>
+<table class="caption-top table">
+<caption>Traditional versus agile project management. Reproduced from Larson &amp; Gray, Ch. 15, Table 15.1 [1].</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Traditional</th>
+<th style="text-align: left;">Agile</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Design up front</td>
+<td style="text-align: left;">Continuous design</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fixed scope</td>
+<td style="text-align: left;">Flexible scope</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Deliverables</td>
+<td style="text-align: left;">Features and requirements</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Freeze design as early as possible</td>
+<td style="text-align: left;">Freeze design as late as possible</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low uncertainty</td>
+<td style="text-align: left;">High uncertainty</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Avoid change</td>
+<td style="text-align: left;">Embrace change</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low customer interaction</td>
+<td style="text-align: left;">High customer interaction</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Conventional project teams</td>
+<td style="text-align: left;">Self-organized project teams</td>
+</tr>
+</tbody>
+</table>
+<p>The conference itself sits in the predictable zone, and the course has managed it that way. The attendee app the sponsor has commissioned alongside it does not: nobody yet knows which features attendees will actually use.</p>
+<hr>
+</section>
+</section>
+<section id="lo-15-2-iterative-incremental-development" class="level1">
+<h1>LO 15-2 · Iterative, incremental development</h1>
+<p><em>Following Larson &amp; Gray, Ch. 15, Section 15.2 [1].</em></p>
+<p>Ken Schwaber, one of Scrum’s authors, explains <strong>iterative, incremental development (IID)</strong> with a house [1]. Built the traditional way, the buyers move in only when every room is finished. Built iteratively, the house goes up a room at a time, the most important room first, with the plumbing and wiring extended as each room is added. After each room, builders and buyers look at what exists and adjust. The buyers drop the extra room they were sure they needed, and add things they had not thought of. The house ends up fitting how they actually live.</p>
+<div id="fig-iid" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-iid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/iid.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-iid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Iterative, incremental development. Original figure, drawn for these notes from the description in Larson &amp; Gray, Ch. 15, Section 15.2 [1].
+</figcaption>
+</figure>
+</div>
+<p>Two words do different work here. <strong>Iterative</strong> means the cycle repeats: plan, build, test, review, again. <strong>Incremental</strong> means each cycle adds a usable piece rather than a layer of an unusable whole. Four weeks of waterfall produce a requirements document; four weeks of IID produce something a customer can try.</p>
+<p>Agile is <strong>rolling wave planning</strong> taken to its limit [1]. Week 4 used rolling waves for work packages too distant to detail. Agile plans the next sprint in detail and leaves everything after it as a prioritized list, re-planned at the end of each sprint with what has been learned.</p>
+<p>Agile is a family of methods, not one [1]. The chapter lists Scrum, Extreme Programming (XP), Agile Modeling, Lean Development, the Rational Unified Process (RUP), Crystal Clear, the Dynamic Systems Development Method (DSDM) and Rapid Product Development (RPD). This week covers Scrum, XP and Kanban.</p>
+<hr>
+</section>
+<section id="lo-15-3-core-agile-principles" class="level1">
+<h1>LO 15-3 · Core agile principles</h1>
+<p><em>Following Larson &amp; Gray, Ch. 15, Section 15.2 [1].</em></p>
+<p>The methods differ in detail, but most share six principles [1]:</p>
+<ul>
+<li><strong>Focus on customer value.</strong> Priorities among requirements and features are set by the business, in order of value.</li>
+<li><strong>Iterative and incremental delivery.</strong> Value reaches the customer in small, working pieces, as a steady flow.</li>
+<li><strong>Experimentation and adaptation.</strong> Assumptions are tested early; working prototypes draw out feedback that sharpens the requirements.</li>
+<li><strong>Self-organization.</strong> The people doing the work choose the tasks and divide them up.</li>
+<li><strong>Servant leadership.</strong> The project manager supports and facilitates; the team is not directed.</li>
+<li><strong>Continuous improvement.</strong> The team reflects, learns and adapts; the work informs the plan.</li>
+</ul>
+<p>Set them beside Weeks 4 to 11. The WBS, the network and the baseline still exist in spirit, but they are made one sprint at a time and owned by the team doing the work.</p>
+<hr>
+</section>
+<section id="lo-15-4-scrum" class="level1">
+<h1>LO 15-4 · Scrum</h1>
+<p><em>Following Larson &amp; Gray, Ch. 15, Section 15.3 [1].</em></p>
+<p>Scrum takes its name from rugby, where the whole team moves the ball down the field together. Takeuchi and Nonaka used the image in 1986 to describe how the best product development teams worked: overlapping phases, one cross-functional team, the whole group going the distance together rather than handing work over a wall [1, 7].</p>
+<div id="fig-scrum" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/scrum-process.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: The Scrum development process. Redrawn from Larson &amp; Gray, Ch. 15, Figure 15.4 [1].
+</figcaption>
+</figure>
+</div>
+<p>A Scrum project is a run of fixed-length <strong>sprints</strong>, one to four weeks each. The <strong>product backlog</strong> holds every feature the product might have, in priority order. At the start of each sprint the team takes the top items it can finish into a <strong>sprint backlog</strong> and builds them: analysis, design, build and test happen inside the sprint, not in separate phases. A short <strong>daily scrum</strong> keeps the team aligned. At the end the team demonstrates a working <strong>increment</strong>, and what the customer says about it reorders the product backlog for the next sprint.</p>
+<section id="three-roles" class="level2">
+<h2 class="anchored" data-anchor-id="three-roles">Three roles</h2>
+<p><strong>Product owner.</strong> Speaks for the customers and end users. On a commercial product it may be the product manager; on an internal one, the manager of the group that will use the software; elsewhere, a client representative. The product owner builds and orders the product backlog, often refining features into stories and use cases with the team, and negotiates each sprint’s goal. They may change features and priorities between sprints but <strong>not once a sprint has started</strong>. They accept or reject each increment, decide when the product is finished, and watch the cost [1].</p>
+<p><strong>Development team.</strong> Delivers the product. Typically five to nine people with cross-functional skills and no fixed titles; people take on whatever the work needs. The team is <strong>self-organizing</strong>: it decides who does the work and how. Members ideally sit together so that face-to-face conversation is constant, and they own the commitments they make at sprint planning and review [1].</p>
+<p><strong>Scrum master.</strong> Facilitates the process and removes impediments, inside the team and in the wider organization. The Scrum master is not the team’s leader and holds no formal authority. Their job is to keep the process honest, shield the team from outside interference, help the product owner plan and keep the team energized: more coach than manager. The chapter calls this <strong>servant leadership</strong> [1].</p>
+<p>The 2020 Scrum Guide calls the team “developers” and makes the Scrum master accountable for the team’s effectiveness [6], but the division of labour is the same.</p>
+</section>
+<section id="five-meetings" class="level2">
+<h2 class="anchored" data-anchor-id="five-meetings">Five meetings</h2>
+<div id="fig-meetings" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meetings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/scrum-meetings.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meetings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Scrum meetings. Redrawn from Larson &amp; Gray, Ch. 15, Figure 15.5 [1].
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Release planning.</strong> Once per release. The product owner, team and Scrum master set the goals and the overall plan: the highest-priority backlog, the main risks, the features the release will contain, a probable delivery date and an initial cost estimate. Management then tracks progress and adjusts the plan sprint by sprint [1].</li>
+<li><strong>Sprint planning.</strong> Opens every sprint. The product owner says which items matter most; the team says how much can be done. An item too large to finish in one sprint is broken into pieces that can be [1]. The chosen items become tasks, each with an owner, in the sprint backlog. After planning closes, the sprint’s goals are fixed [1].</li>
+<li><strong>Daily scrum.</strong> Same time, same place, every workday, standing up and usually fifteen minutes. Each member says what they finished since the last scrum, what they will do before the next, and what is in their way [1, 6]. Problems are named here and solved afterwards, by the people they concern. Impediments go to the Scrum master.</li>
+<li><strong>Sprint review.</strong> Closes every sprint: the team demonstrates the increment to the product owner and other stakeholders. The product owner rules on what is done; anything unfinished returns to the product backlog. The team can suggest improvements, which the product owner takes or declines. The review is where the product is examined and the requirements refined [1].</li>
+<li><strong>Sprint retrospective.</strong> Then the team, facilitated by the Scrum master, looks at how the sprint went and chooses specific changes to how it works in the next one. The review improves the product; the retrospective improves the team [1].</li>
+</ul>
+</section>
+<section id="product-and-sprint-backlogs" class="level2">
+<h2 class="anchored" data-anchor-id="product-and-sprint-backlogs">Product and sprint backlogs</h2>
+<p>The <strong>product backlog</strong> belongs to the product owner: the customer’s prioritized list of features, each with an estimate of the work it will take. The chapter’s example is a phone-in prescription system [1]:</p>
+<table class="caption-top table">
+<caption>Partial product backlog, Phone-In Prescription Software Project. Values reproduced from Larson &amp; Gray, Ch. 15, Figure 15.6 [1].</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 32%">
+<col style="width: 12%">
+<col style="width: 18%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Product</th>
+<th style="text-align: center;">Priority</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: right;">Estimate hours</th>
+<th style="text-align: right;">Actual hours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Customer information</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Complete</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Insurance information</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Complete</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Drug information</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Started</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Doctor information</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Not started</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Inventory status</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Started</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>sprint backlog</strong> belongs to the team. It lists the tasks that deliver this sprint’s features, who is responsible for each, the hours spent and the hours left, and where each task stands [1]:</p>
+<div style="overflow-x: auto">
+<table class="caption-top table">
+<caption>Partial sprint backlog, Phone-In Prescription Software Project. Values reproduced from Larson &amp; Gray, Ch. 15, Figure 15.7 [1].</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sprint task</th>
+<th style="text-align: center;">Responsible</th>
+<th style="text-align: right;">Actual hours</th>
+<th style="text-align: right;">Remaining hours</th>
+<th style="text-align: center;">Defined</th>
+<th style="text-align: center;">In progress</th>
+<th style="text-align: center;">Tested</th>
+<th style="text-align: center;">Accepted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Drug categories</td>
+<td style="text-align: center;">RT</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Generics</td>
+<td style="text-align: center;">CG</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Branded</td>
+<td style="text-align: center;">AL</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Design drug inventory system</td>
+<td style="text-align: center;">EL</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Code inventory availability</td>
+<td style="text-align: center;">CE</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">32</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Code manufacture order</td>
+<td style="text-align: center;">MC</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">32</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Integrate all inventory systems</td>
+<td style="text-align: center;">LE</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The sprint backlog is a status report as well as a plan. Its <em>Remaining hours</em> column is the number Scrum tracks.</p>
+</section>
+<section id="burndown-charts-and-velocity" class="level2">
+<h2 class="anchored" data-anchor-id="burndown-charts-and-velocity">Burndown charts and velocity</h2>
+<p>Agile measures what remains rather than predicting from what has been spent. A <strong>sprint burndown chart</strong> plots, each day, the hours of work left in the sprint backlog, the sum of the remaining estimates of every unfinished task [1]. A straight <strong>ideal line</strong> runs from the committed total on day 0 to zero on the last day.</p>
+<div id="fig-burndown" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-burndown-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/burndown.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-burndown-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: A sprint burndown chart. Illustrative data; layout follows the description of sprint burndown charts in Larson &amp; Gray, Ch. 15 [1].
+</figcaption>
+</figure>
+</div>
+<p>Remaining hours are re-estimated every day, so the line can rise: a task turns out bigger than thought, or work is found. A line above the ideal says the sprint is behind; below it, ahead. A <strong>release burndown</strong> does the same across sprints, in features or story points left in the product backlog [1].</p>
+<p>Many teams size backlog items in <strong>story points</strong>, a relative measure of size and difficulty, rather than hours. <strong>Velocity</strong> is the number of points a team actually finishes in a sprint. Only items the product owner accepts as done count; an item 90 percent built scores nothing until it is finished. It is Week 11’s 0/100 earning rule, applied to features.</p>
+<p>Velocity turns a backlog into a forecast:</p>
+<p><span class="math display">\[\text{sprints to release} = \left\lceil \frac{\text{points left in the backlog}}{\text{velocity}} \right\rceil\]</span></p>
+</section>
+<section id="worked-example-plan-the-conference-app" class="level2">
+<h2 class="anchored" data-anchor-id="worked-example-plan-the-conference-app">Worked example: plan the conference app</h2>
+<p>Alongside the conference, the sponsor has commissioned an attendee app from a four-person team, Ana, Ben, Cara and Dev, working in two-week sprints from Mon 2 Nov.&nbsp;The conference coordinator is product owner. The team expects to finish <strong>16 points a sprint</strong>. The app has to be live for the rehearsal on Thu 3 Dec.</p>
+<table class="caption-top table">
+<caption>The conference app’s product backlog, in the product owner’s priority order. Each story is written in full in the <a href="../files/week-12-product-backlog.xlsx">product backlog workbook</a>.</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 70%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Story</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Register and pay online</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Confirmation email with QR code</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Browse the program by day and track</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Check in by QR scan at the door</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Build a personal schedule</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Push notice of room changes</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Speaker profiles</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Exhibitor map</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Session feedback form</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Sponsor banner</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<p>Work these by hand before Tuesday’s class:</p>
+<ol type="1">
+<li>How many points are in the backlog, and how many sprints does the release need at 16 points a sprint? On what date does the last sprint end?</li>
+<li>Fill the sprints in priority order. When the next story does not fit, the product owner may pull a smaller one forward. What is in each sprint?</li>
+<li>Sprint 1’s stories split into ten tasks totalling 84 hours. What is the ideal burndown rate, in hours a day?</li>
+<li>In the Phone-In Prescription backlog above, how many estimated hours sit in items that are not complete? How many hours remain in the sprint backlog?</li>
+</ol>
+</section>
+<section id="in-class-plan-the-release-in-smartsheet" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-plan-the-release-in-smartsheet">In class: plan the release in Smartsheet</h2>
+<p>On Tuesday you plan the release in Smartsheet’s <strong>Card View</strong>, the board layout Scrum and Kanban teams use. Bring a laptop.</p>
+<ol type="1">
+<li><strong>Import.</strong> Download the <a href="../files/week-12-product-backlog.xlsx">product backlog workbook</a>. In Smartsheet, <strong>+ Create → Import → Microsoft Excel</strong>; keep row 1 as headers and <em>Story</em> as the primary column.</li>
+<li><strong>Make Sprint a dropdown.</strong> Right-click the <em>Sprint</em> header → <strong>Edit Column Properties</strong> → <strong>Dropdown (Single Select)</strong>, with the values <code>Product backlog</code>, <code>Sprint 1</code>, <code>Sprint 2</code>, <code>Sprint 3</code>.</li>
+<li><strong>Count points per sprint.</strong> Add a Text/Number column <em>Sprint points</em>. In row 1 enter <code>=SUMIF([Sprint]:[Sprint], [Sprint]@row, [Points]:[Points])</code>, then right-click the cell → <strong>Convert to Column Formula</strong>.</li>
+<li><strong>Switch to Card View.</strong> In the view switcher choose <strong>Card View</strong>, then <strong>View by: Sprint</strong>. In the card settings show <em>Points</em> and <em>Sprint points</em> on each card.</li>
+<li><strong>Plan.</strong> Drag cards from <em>Product backlog</em> into <em>Sprint 1</em> in priority order until <em>Sprint points</em> reaches 16; then Sprint 2, then Sprint 3.</li>
+</ol>
+<p>The plan you finish with is the case below.</p>
+<section id="fixed-price-fixed-scope-agile-process" class="level3 case">
+<h3 class="anchored" data-anchor-id="fixed-price-fixed-scope-agile-process">Fixed price, fixed scope, agile process</h3>
+<p>The sponsor’s purchasing office signed the app contract the way it signs every contract: a fixed price of $47,000, $1,000 for each of the 47 points, for all ten stories, live by Thu 3 Dec.&nbsp;The development firm agreed and plans to deliver in Scrum, two-week sprints at 16 points each. Its proposal promises to “welcome changing requirements” and to let the product owner reorder the backlog after every sprint.</p>
+<div id="fig-release" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-release-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/release-burndown.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-release-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: The conference app’s release burndown at the planned velocity. The app’s data are original to this course.
+</figcaption>
+</figure>
+</div>
+<div class="qn">
+<p>Which of scope, date and price can this contract actually hold fixed, given the release plan you just built? What does the contract’s fixed scope do to the product owner’s right to reorder, and to the firm’s incentive at the sprint review? Rewrite the deal so the date holds and Scrum works as Scrum.</p>
+</div>
+</section>
+<hr>
+</section>
+</section>
+<section id="lo-15-5-extreme-programming" class="level1">
+<h1>LO 15-5 · Extreme Programming</h1>
+<p><em>Following the learning objective in Larson &amp; Gray, Ch. 15 [1]; practices from Beck [3].</em></p>
+<p><strong>Extreme Programming (XP)</strong> takes good engineering practice and turns it up as far as it will go: if code review is good, review all the time; if testing is good, test before writing the code [3]. Where Scrum is a management frame, XP is a set of practices for the people writing the software:</p>
+<ul>
+<li><strong>Planning game.</strong> The customer writes stories and sets priorities; programmers estimate them. Each release is small and each iteration short, one to two weeks.</li>
+<li><strong>Pair programming.</strong> Two programmers at one machine: one types, one reviews, and they switch.</li>
+<li><strong>Test-driven development.</strong> Write the automated test first, then the code that passes it.</li>
+<li><strong>Continuous integration.</strong> Merge and test working code several times a day.</li>
+<li><strong>Refactoring and simple design.</strong> Build only what today’s stories need, and keep improving the code’s structure as it grows.</li>
+<li><strong>Collective code ownership and coding standards.</strong> Anyone can change any part of the code.</li>
+<li><strong>On-site customer.</strong> A real user sits with the team to answer questions as they arise.</li>
+<li><strong>Sustainable pace.</strong> No routine overtime; tired programmers write bugs.</li>
+</ul>
+<p>Many teams run Scrum for the management cycle and XP’s practices inside each sprint.</p>
+<hr>
+</section>
+<section id="lo-15-6-kanban" class="level1">
+<h1>LO 15-6 · Kanban</h1>
+<p><em>Following the learning objective in Larson &amp; Gray, Ch. 15 [1]; method from Anderson [4] and Little [5].</em></p>
+<p><strong>Kanban</strong>, Japanese for “signboard”, came from Toyota’s production system, where a card signals that a station needs more parts. Applied to knowledge work, a <strong>Kanban board</strong> makes the flow of work visible: one column for each stage, one card for each item, and cards moving left to right as work progresses [4].</p>
+<div id="fig-kanban" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kanban-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week12/kanban.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kanban-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: A Kanban board with WIP limits. Original figure, with stories from the conference app’s backlog.
+</figcaption>
+</figure>
+</div>
+<p>Building one takes four steps:</p>
+<ol type="1">
+<li><strong>Map the stages</strong> work actually passes through: <em>To do, Ready, In progress, Test, Done</em> is a common start.</li>
+<li><strong>Put every item on a card</strong>, and only on a card. Work that is not on the board does not exist.</li>
+<li><strong>Set a work-in-progress (WIP) limit</strong> on each active column. When a column is full, nobody starts anything new there. They help finish what is in it.</li>
+<li><strong>Pull, don’t push.</strong> A card moves right only when the next column has room, so a slow stage shows up as a full column, not as a pile of half-done work spread across the team.</li>
+</ol>
+<p>Unlike Scrum, Kanban has no sprints and no fixed roles; work flows continuously. Its measures are about <strong>flow</strong>:</p>
+<ul>
+<li><strong>Cycle time</strong>: workdays from when an item starts to when it is done.</li>
+<li><strong>Throughput</strong>: items finished per day, or per week.</li>
+<li><strong>WIP</strong>: items started and not finished.</li>
+</ul>
+<p><strong>Little’s law</strong> ties them together for a stable system: average WIP = throughput × average cycle time [5]. Turned round, cycle time = WIP ÷ throughput. If a team finishes two items a day and keeps eight in progress, each item takes four days on average. Halve the WIP at the same throughput and items take two. This is why WIP limits work: starting less makes everything finish sooner.</p>
+<p>Smartsheet’s Card View is a Kanban board. Lanes come from a dropdown column, such as <em>Status</em>, and dragging a card changes that column’s value in the sheet. Thursday’s studio runs the conference app’s first sprint on one.</p>
+<hr>
+</section>
+<section id="lo-15-7-the-limits-of-agile" class="level1">
+<h1>LO 15-7 · The limits of agile</h1>
+<p><em>Following the learning objective in Larson &amp; Gray, Ch. 15 [1].</em></p>
+<p>Agile solves the problem of not knowing what to build. It brings problems of its own:</p>
+<ul>
+<li><strong>It does not give management a fixed scope, date and cost at the start.</strong> Organizations that budget annually, sign fixed-price contracts or report against a baseline find this hard to accept. The usual compromise fixes time and cost and lets scope vary.</li>
+<li><strong>It depends on an available, decisive customer.</strong> A product owner who cannot attend reviews or will not prioritize stalls the method.</li>
+<li><strong>It scales awkwardly.</strong> Five to nine people in one room is the design point. Large programs need frameworks that coordinate many teams, and much of the simplicity goes.</li>
+<li><strong>It assumes co-location and continuity.</strong> Distributed teams and rotating staff weaken the face-to-face communication the method runs on.</li>
+<li><strong>It produces little documentation.</strong> Regulated industries and long-lived systems need records that agile teams tend not to write.</li>
+<li><strong>It suits work that can be split into small, usable increments.</strong> A bridge is not useful at 20 percent complete.</li>
+</ul>
+<p>Most organizations end up <strong>hybrid</strong>: a traditional plan for the parts that are predictable, with agile teams inside it for the parts that are not. The conference is one example. Venue, program and rehearsal follow the network built in Weeks 6 to 10, while the app is built in sprints whose release has to land before the rehearsal.</p>
+<hr>
+<section id="practice-problems" class="level2">
+<h2 class="anchored" data-anchor-id="practice-problems">Practice problems</h2>
+<p>These are written for this course; the chapter’s own review questions and exercises are in your copy of the text.</p>
+<ol type="1">
+<li>A product backlog holds 120 points. The team’s velocity over the last three sprints was 18, 22 and 20 points. How many more sprints does the release need? If two stories totalling 15 points are added, what changes?</li>
+<li>A five-day sprint commits 60 hours. Remaining hours at the end of each day are 52, 50, 41, 30 and 12. Draw the burndown with its ideal line. On which day did the team fall behind, and what is the sprint’s likely outcome?</li>
+<li>A Kanban team finishes 3 items a day and averages 15 items in progress. What is the average cycle time? The team adopts WIP limits that hold work in progress to 9 items without changing throughput. What happens to cycle time?</li>
+<li>For each of these, say whether you would plan it traditionally, in sprints, or as a hybrid, and why: a warehouse relocation; a mobile game for a client who is not sure what they want; a hospital’s new patient record system.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="thursday-studio" class="level1">
+<h1>Thursday studio</h1>
+<section id="studio-12-run-a-sprint-then-measure-the-flow-you-produced" class="level2">
+<h2 class="anchored" data-anchor-id="studio-12-run-a-sprint-then-measure-the-flow-you-produced">Studio 12 · Run a sprint, then measure the flow you produced</h2>
+<p>Complete the <a href="../labs/lab-12.html">Week 12 studio</a>.</p>
+<p>You will run the conference app’s first sprint in Smartsheet. Import the sprint backlog and set up a Card View task board with flow formulas. Then play ten days of daily scrums from a log, moving cards and updating hours, and record each day’s numbers in a burndown sheet. Build a dashboard with the burndown chart and close the sprint with a review, a velocity, a release forecast and a retrospective. The <a href="../files/week-12-sprint-backlog.xlsx">sprint backlog</a> and <a href="../files/week-12-burndown.xlsx">burndown</a> workbooks are the two files you import.</p>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 15.</li>
+<li>Beck, K., et al.&nbsp;(2001). <em>Manifesto for Agile Software Development</em>. <a href="https://agilemanifesto.org" class="uri">https://agilemanifesto.org</a></li>
+<li>Beck, K. (2000). <em>Extreme Programming Explained: Embrace Change</em>. Addison-Wesley.</li>
+<li>Anderson, D. J. (2010). <em>Kanban: Successful Evolutionary Change for Your Technology Business</em>. Blue Hole Press.</li>
+<li>Little, J. D. C. (1961). A proof for the queuing formula L = λW. <em>Operations Research</em>, 9(3), 383–387.</li>
+<li>Schwaber, K., &amp; Sutherland, J. (2020). <em>The Scrum Guide</em>. <a href="https://scrumguides.org" class="uri">https://scrumguides.org</a></li>
+<li>Takeuchi, H., &amp; Nonaka, I. (1986). The new new product development game. <em>Harvard Business Review</em>, 64(1), 137–146.</li>
+</ol>
+<p>The conference attendee app, its backlog, its sprint, its contract and the practice problems are original to these course materials.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -612,7 +1349,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
