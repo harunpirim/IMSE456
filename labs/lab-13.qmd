@@ -1,0 +1,118 @@
+---
+title: "Studio 13 · Map the network you are actually working in"
+subtitle: "Week 13 · Being an Effective Project Manager · Managing Project Teams · Larson Ch. 10 + 11"
+week: 13
+release: "2026-11-16"
+---
+
+::: {.week-meta}
+<dl>
+<dt>Deliverable</dt><dd><strong>SA13</strong> — one PDF with two screenshots, a photo of your hand-drawn map, a reconciliation table, an influence plan and six short answers</dd>
+<dt>Studio</dt><dd>Produced in the Thursday session and uploaded to Blackboard before you leave — graded with feedback</dd>
+<dt>Session</dt><dd>70 minutes: conference register 12, your network unaided 18, bring in the model 12, influence plan 8, answers 10, upload 5, 5 spare</dd>
+<dt>Tools</dt><dd>Smartsheet (your NDSU account), paper and a phone camera, and Gemini Pro</dd>
+<dt>Workbook</dt><dd><a href="../files/week-13-stakeholder-register.xlsx">Conference stakeholder register</a> (Excel), imported in Part 1</dd>
+<dt>AI use</dt><dd><strong>Level 4 — full use with documentation</strong> · Parts 1 and 2 are done without AI; Part 3 brings the model in. Name the tool and link the transcript in the <a href="../syllabus.qmd#how-to-disclose">AI acknowledgement</a></dd>
+<dt>Week page</dt><dd><a href="../weeks/week-13.qmd">Week 13 — Being an Effective Project Manager · Managing Project Teams</a></dd>
+</dl>
+:::
+
+::: {.callout-important appearance="simple"}
+**This is individual work about your team's project.** Each member maps the partner's network on their own; comparing maps afterwards is useful for your team, but what you upload is yours. Use **roles, not names**, for people in the partner organization ("operations manager", not a person's name), and leave out anything your partner asked you to keep confidential, in Smartsheet and above all in what you paste into the model. The course assumes a **Gemini Pro** account; if you cannot get one, see the instructor or TA rather than paying for it yourself.
+:::
+
+The week page mapped the conference's network: twelve stakeholders, what the project needs from each, and where each sits on the power/interest grid. Today you build the same register in Smartsheet, check it against the conference, then do it for real for the organization your final project is working with. You do the mapping yourself first. Only then do you ask a model, and what is graded is the reconciliation: what it found that you missed, what it got wrong, and what you changed your mind about.
+
+::: {.part}
+### Part 1 · Build the register on the conference — 12 minutes
+
+1. **Import.** Download the [conference stakeholder register](../files/week-13-stakeholder-register.xlsx). In Smartsheet, **+ Create → Import → Microsoft Excel**; keep row 1 as headers and *Stakeholder* as the primary column. *Check:* twelve rows, Sponsor to Caterer.
+2. **Make Stance a dropdown.** Right-click the *Stance* header → **Edit Column Properties** → **Dropdown (Single Select)**, with the values `Supporter`, `Indifferent`, `Antagonist`, in that order. Do the same for *We need*, with `Cooperation`, `Approval`, `Could block`.
+3. **Two formula columns.** Add two Text/Number columns, *Priority* and *Strategy*. In row 1 of each paste the formula below, then right-click the cell → **Convert to Column Formula**. A score of 3 or more counts as high.
+
+    | Column | Formula |
+    |:--|:--|
+    | Priority | `=[Power]@row * [Interest]@row` |
+    | Strategy | `=IF(AND([Power]@row >= 3, [Interest]@row >= 3), "Manage closely", IF([Power]@row >= 3, "Keep satisfied", IF([Interest]@row >= 3, "Keep informed", "Monitor")))` |
+
+    : {tbl-colwidths="[16,84]"}
+
+4. **Check.** Sort by *Priority*, descending (right-click the header → **Sort Rows**). *Check:* Sponsor 25 is first and Program chair 15 second; four rows read *Manage closely*, four *Keep satisfied*, three *Keep informed*, one *Monitor*. If yours differ, fix the formula before going on.
+5. **Card View.** Switch to **Card View**, **View by: Stance**. In the card settings show *Strategy*, *We need* and *Currency* on each card.
+6. **Play the case.** In the Tuesday case the IT director refused to release Priya. Drag the IT director's card to *Antagonist*. **Screenshot 1**: the Card View board after the move.
+:::
+
+::: {.part}
+### Part 2 · Your partner's network, unaided — 18 minutes
+
+No AI in this part. The point is to find out what *you* see.
+
+1. **Copy the sheet.** **File → Save as New**, name it *FP stakeholder register*, and open the copy. Delete rows 2 to 12. Overwrite row 1 with your first stakeholder; the formula columns fill in for every row you add.
+2. **Add a Source column.** A Dropdown column *Source* with the values `Me`, `Model`. Every row you enter in this part is `Me`.
+3. **List the stakeholders.** Ask the chapter's three questions about your project: whose cooperation do we need, whose approval, whose opposition could stop us? Enter **at least ten** stakeholders, from **at least five** of the groups in Figure 1 on the week page: your team, the partner contact, the contact's boss, the people who do the work you are improving, IT or facilities, suppliers, regulators, the instructor and TA as top management of the course, and so on. Fill in every column. Score power and interest honestly; a partner contact who never answers email has low interest whatever their title.
+4. **Draw the map.** On paper, draw your project in the middle and every stakeholder around it, in the style of Figure 2 on the week page: a dashed line for cooperation, a solid line for approval, a heavy or red line for could block. Photograph it.
+5. **Screenshot 2**: the register in Grid View, sorted by *Priority* descending, with every column visible.
+:::
+
+::: {.part}
+### Part 3 · Bring in the model, then reconcile — 12 minutes
+
+1. Open Gemini Pro. Describe your project in three sentences, without confidential details, and paste this after it:
+
+    ```
+    Using the three questions "whose cooperation will we need, whose agreement
+    or approval will we need, whose opposition could stop us", list every
+    stakeholder this project depends on. For each, give a power and an interest
+    score from 1 to 5, what the project needs from them, and what they are likely
+    to value in return. Include stakeholders a student team would be likely to miss.
+    ```
+
+2. Compare its list with yours, line by line. Build a three-part **reconciliation table** in your PDF:
+
+    | | Stakeholder | Why |
+    |:--|:--|:--|
+    | **The model found, I missed, I accept** | | why they matter to *your* project |
+    | **The model found, I reject** | | why they don't apply, or what it got wrong |
+    | **I found, the model missed** | | what you know that it couldn't |
+
+3. Add every stakeholder you accepted to your sheet with *Source* = `Model`, and re-sort by *Priority*.
+
+If the model found nothing you missed and got nothing wrong, say so; that is a finding, not a failure. Do not invent an error to fill the table.
+:::
+
+::: {.part}
+### Part 4 · Influence plan — 8 minutes
+
+For the three stakeholders at the top of your re-sorted register, fill in a table in your PDF:
+
+| Stakeholder | What we need from them before FP4 | Currency we can offer (week page, LO 10-3) | Next contact: who, how, when |
+|:--|:--|:--|:--|
+| | | | |
+:::
+
+::: {.part}
+### Part 5 · Answer — 10 minutes
+
+Questions 5 and 6 are about your own final-project team, not the partner.
+
+1. **Conference.** After you moved the IT director to *Antagonist*, the card shows *Keep satisfied* and *Approval*. Why is that combination the one most likely to surprise a project manager, and what should the coordinator have done about it before the corridor conversation?
+2. **Your map.** Which stakeholder on your map has the most power and the least interest? What would happen to your project if they said no, and when did you last hear from them?
+3. **Reconciliation.** How many stakeholders did the model add that you accepted, and how many did you reject? Which single addition or error matters most to your project, and why?
+4. **Influence.** For the top stakeholder in your influence plan, why that currency and not another? What does it cost your team to offer it?
+5. **Your team's stage.** Which of the five stages of team development is your final-project team in now? Give one piece of evidence from the last two weeks, and name two of the nine situational conditions from LO 11-3 that your team lacks.
+6. **One norm.** Propose one norm for your team's last three weeks, in a sentence the whole team could sign, and say which pitfall or conflict it is meant to prevent.
+:::
+
+::: {.part}
+### Upload — 5 minutes
+
+- [ ] One PDF: screenshots 1 and 2, the photo of your map, the reconciliation table, the influence plan, answers 1 to 6, and the AI acknowledgement naming the tool with a link to the transcript
+- [ ] Saved to `IMSE456/studio-13/` on your NDSU Google Drive or OneDrive
+- [ ] Uploaded to Blackboard as `SA13_yourlastname.pdf` before you leave
+:::
+
+The week page's practice problems add a communication-channels calculation, a power/interest classification and three conflict scenarios, if you want more practice after class.
+
+## Source
+
+1. Larson, E. W., & Gray, C. F. *Project Management: The Managerial Process*, 2024 Release. McGraw Hill. Chapter 10: stakeholder groups, influence currencies and stakeholder mapping; Chapter 11: team development, situational factors and norms. The power/interest grid follows the chapter's Chapter 3 and Mendelow (1981). The conference's stakeholder register is original to these course materials.
