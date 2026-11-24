@@ -242,10 +242,10 @@ Before opening Smartsheet, work one row by hand: at an actual cost of \$46,000, 
 
 ## Build it in Smartsheet
 
-The [streaming bids file](../files/week-14-streaming-bids.xlsx) holds 31 scenarios, actual costs from \$30,000 to \$60,000 in steps of \$1,000. The four rows you will report on are marked *Part B* in the *Question* column.
+The [streaming bids file](../files/week-14-streaming-bids.xlsx) holds 31 scenarios, actual costs from \$30,000 to \$60,000 in steps of \$1,000, and the seven columns you will fill with formulas, still empty. The four rows you will report on are marked *Part B* in the *Question* column.
 
-1. **Import.** **+ Create → Import → Microsoft Excel**, select the file, keep row 1 as headers and *Scenario* as the primary column. *Check:* 31 rows, \$30k to \$60k.
-2. **Formula columns.** Add seven Text/Number columns with the names below, in this order. In row 1 of each, paste the formula, then right-click the cell → **Convert to Column Formula**. Format the money columns as currency with the **\$** button in the toolbar.
+1. **Import.** **+ Create → Import → Microsoft Excel**, select the file, keep row 1 as headers and *Scenario* as the primary column. *Check:* 31 rows, \$30k to \$60k, and ten columns: *Scenario*, *Actual cost*, *Question*, then seven empty columns from *FFP pays* to *Cheapest bid*.
+2. **Formula columns.** The seven empty columns are waiting for their formulas. In row 1 of each, paste the formula below, then right-click the cell → **Convert to Column Formula**, and the whole column fills. Format the money columns as currency with the **\$** button in the toolbar.
 
     | Column | Formula |
     |:--|:--|

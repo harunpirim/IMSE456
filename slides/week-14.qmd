@@ -293,11 +293,11 @@ A type, and one sentence of reason, for each.
 
 1. **+ Create → Import → Microsoft Excel**: `week-14-streaming-bids.xlsx`
 2. Row 1 as headers, *Scenario* as the primary column
-3. *Check:* 31 rows, \$30k to \$60k; four rows marked *Part B*
+3. *Check:* 31 rows, \$30k to \$60k; four rows marked *Part B*; seven empty columns, *FFP pays* to *Cheapest bid*
 
 . . .
 
-Then seven formula columns. Paste each formula in row 1, right-click → **Convert to Column Formula**.
+Fill the seven empty columns: paste each formula in row 1, right-click → **Convert to Column Formula**.
 
 ## The seven formula columns
 
