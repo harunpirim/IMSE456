@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1923bcff4dd3134c996d2ac37cc691ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8889bc407ed9489a0dcb90920db83940.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-59d476a31f29e97092a94806b65e8338.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -126,8 +155,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#concepts-introduced" id="toc-concepts-introduced" class="nav-link" data-scroll-target="#concepts-introduced">Concepts introduced</a></li>
+  <li><a href="#lo-12-1-why-outsource-and-what-it-costs" id="toc-lo-12-1-why-outsource-and-what-it-costs" class="nav-link" data-scroll-target="#lo-12-1-why-outsource-and-what-it-costs">LO 12-1 · Why outsource, and what it costs</a></li>
+  <li><a href="#lo-12-2-the-request-for-proposal" id="toc-lo-12-2-the-request-for-proposal" class="nav-link" data-scroll-target="#lo-12-2-the-request-for-proposal">LO 12-2 · The request for proposal</a></li>
+  <li><a href="#lo-12-3-best-practices" id="toc-lo-12-3-best-practices" class="nav-link" data-scroll-target="#lo-12-3-best-practices">LO 12-3 · Best practices</a></li>
+  <li><a href="#lo-12-4-principled-negotiation" id="toc-lo-12-4-principled-negotiation" class="nav-link" data-scroll-target="#lo-12-4-principled-negotiation">LO 12-4 · Principled negotiation</a></li>
+  <li><a href="#lo-12-5-customer-satisfaction-the-met-expectations-model" id="toc-lo-12-5-customer-satisfaction-the-met-expectations-model" class="nav-link" data-scroll-target="#lo-12-5-customer-satisfaction-the-met-expectations-model">LO 12-5 · Customer satisfaction: the met-expectations model</a></li>
+  <li><a href="#lo-a12-1-the-procurement-process" id="toc-lo-a12-1-the-procurement-process" class="nav-link" data-scroll-target="#lo-a12-1-the-procurement-process">LO A12-1 · The procurement process</a></li>
+  <li><a href="#lo-a12-2-fixed-price-and-cost-plus-contracts" id="toc-lo-a12-2-fixed-price-and-cost-plus-contracts" class="nav-link" data-scroll-target="#lo-a12-2-fixed-price-and-cost-plus-contracts">LO A12-2 · Fixed-price and cost-plus contracts</a>
+  <ul class="collapse">
+  <li><a href="#how-an-incentive-fee-works" id="toc-how-an-incentive-fee-works" class="nav-link" data-scroll-target="#how-an-incentive-fee-works">How an incentive fee works</a></li>
+  </ul></li>
+  <li><a href="#in-class-choose-the-contract" id="toc-in-class-choose-the-contract" class="nav-link" data-scroll-target="#in-class-choose-the-contract">In class: choose the contract</a>
+  <ul class="collapse">
+  <li><a href="#build-it-in-smartsheet" id="toc-build-it-in-smartsheet" class="nav-link" data-scroll-target="#build-it-in-smartsheet">Build it in Smartsheet</a>
+  <ul class="collapse">
+  <li><a href="#the-incentive-that-produced-the-wrong-behaviour" id="toc-the-incentive-that-produced-the-wrong-behaviour" class="nav-link" data-scroll-target="#the-incentive-that-produced-the-wrong-behaviour">The incentive that produced the wrong behaviour</a></li>
+  </ul></li>
+  <li><a href="#practice-problems" id="toc-practice-problems" class="nav-link" data-scroll-target="#practice-problems">Practice problems</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -169,13 +224,13 @@ Larson Ch. 12
 Tuesday
 </dt>
 <dd>
-The incentive that produced the wrong behaviour — concept and case
+The incentive that produced the wrong behaviour — concept, an in-class contract activity, and case
 </dd>
 <dt>
 Thursday
 </dt>
 <dd>
-A contract-type decision tool — compressed, Tuesday only
+No class — Thanksgiving
 </dd>
 <dt>
 Reading
@@ -184,10 +239,10 @@ Reading
 Larson Ch. 12
 </dd>
 <dt>
-Studio
+In class
 </dt>
 <dd>
-Produced in the Thursday session and uploaded to Blackboard before you leave
+Smartsheet (your NDSU account): bring a laptop and download the <a href="../files/week-14-streaming-bids.xlsx">streaming bids file</a> before class
 </dd>
 </dl>
 </div>
@@ -201,8 +256,462 @@ Produced in the Thursday session and uploaded to Blackboard before you leave
 </div>
 </div>
 </div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Source.</strong> This week’s notes follow Larson &amp; Gray, <em>Project Management: The Managerial Process</em>, 2024 Release, McGraw Hill, <strong>Chapter 12</strong> [1]. The exposition is reworded. The chapter supplies the advantages and disadvantages of outsourcing, the elements of a request for proposal, the best practices list, the four principles of negotiation and the met-expectations model. The RFP outline, the best-practices list and the negotiation principles are reproduced from its Figures 12.2 and 12.4 and Table 12.2, and Figure 1 is redrawn from its Figure 12.7. The chapter’s appendix on contract management (LO A12-1 and A12-2) is not in the excerpt these notes were written from, so those sections follow the PMBOK Guide [3] and the U.S. Federal Acquisition Regulation [4], cited as such. The negotiation section draws on Fisher, Ury and Patton [2] directly. The conference’s streaming contract, the in-class activity, the case and the practice problems are original to these course materials.</p>
+</div>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 85%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 12-1</strong></td>
+<td style="text-align: left;">Understand the advantages and disadvantages of outsourcing project work.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 12-2</strong></td>
+<td style="text-align: left;">Describe the basic elements of a Request for Proposal (RFP).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 12-3</strong></td>
+<td style="text-align: left;">Identify best practices for outsourcing project work.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO 12-4</strong></td>
+<td style="text-align: left;">Practice principled negotiation.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO 12-5</strong></td>
+<td style="text-align: left;">Describe the met-expectations model of customer satisfaction and its implications for working with customers on projects.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LO A12-1</strong></td>
+<td style="text-align: left;">Describe the procurement management process.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LO A12-2</strong></td>
+<td style="text-align: left;">Describe the differences between fixed-price and cost-plus contracts and their advantages and disadvantages.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="concepts-introduced" class="level2">
+<h2 class="anchored" data-anchor-id="concepts-introduced">Concepts introduced</h2>
+<div class="chips">
+<p><span class="chip">outsourcing</span><span class="chip">make or buy</span><span class="chip">request for proposal (RFP)</span><span class="chip">statement of work (SOW)</span><span class="chip">evaluation criteria</span><span class="chip">partnering</span><span class="chip">principled negotiation</span><span class="chip">interests vs positions</span><span class="chip">BATNA</span><span class="chip">objective criteria</span><span class="chip">met-expectations model</span><span class="chip">procurement process</span><span class="chip">firm fixed price</span><span class="chip">fixed price incentive fee</span><span class="chip">cost plus fixed fee</span><span class="chip">cost plus incentive fee</span><span class="chip">share ratio</span><span class="chip">time and materials</span><span class="chip">contract change control</span></p>
+</div>
+<p>The conference has been relying on outside firms all along. The venue was contracted in Week 11, and the attendee app went to a development firm on a fixed price in Week 12. The caterer, the AV crew and the hybrid streaming are all bought in. Most projects are like this: much of the work is done by organizations the project manager does not run, under contracts somebody else may have written. This week covers how to buy that work, how to write the contract, and how to work with the people on the other side of it.</p>
+<hr>
+</section>
+<section id="lo-12-1-why-outsource-and-what-it-costs" class="level1">
+<h1>LO 12-1 · Why outsource, and what it costs</h1>
+<p><em>Following Larson &amp; Gray, Ch. 12 [1].</em></p>
+<p><strong>Outsourcing</strong> means contracting out work the organization could otherwise do itself. On projects it ranges from one specialist task, such as a backhoe operator for an afternoon, to the whole project with the owner only coordinating. The chapter lists four advantages [1]:</p>
+<ol type="1">
+<li><strong>Lower cost.</strong> Competition between suppliers keeps prices down, offshore labour can be cheaper, and the company no longer carries the overhead of keeping the capability in-house.</li>
+<li><strong>Faster completion.</strong> The same budget buys more people, and contractors bring equipment that speeds the work. A hired backhoe does in hours what a landscaping crew would take days to do by hand.</li>
+<li><strong>Expertise.</strong> The company concentrates on its core competencies and hires the know-how for the rest, often getting better quality than it could produce itself.</li>
+<li><strong>Flexibility.</strong> The company is no longer limited to its own resources, and a small firm can work globally by teaming with partners abroad.</li>
+</ol>
+<p>The disadvantages, the chapter notes, are less often written down [1]:</p>
+<ol type="1">
+<li><strong>Coordination breakdowns.</strong> Professionals from different organizations, often in different buildings, cities or countries, find close mutual adjustment hard.</li>
+<li><strong>Loss of control.</strong> The core team depends on organizations it has no authority over. The semiconductor shortage during the COVID-19 pandemic halted projects that had nothing to do with chips except that they needed some.</li>
+<li><strong>Conflict.</strong> Participants do not share values, priorities or culture, and trust is hard to build across organizational lines with limited contact.</li>
+<li><strong>Security.</strong> Trade secrets can leak, especially to a contractor who also works for a competitor. Confidential data such as payroll, medical and insurance records needs special care.</li>
+<li><strong>Political sensitivity.</strong> Offshoring is blamed for job losses at home, and firms are criticized for the labour practices of their suppliers.</li>
+</ol>
+<p>Every advantage on the first list is about the work. Every disadvantage on the second is about the relationship. The rest of the chapter is largely about managing the second list.</p>
+<hr>
+</section>
+<section id="lo-12-2-the-request-for-proposal" class="level1">
+<h1>LO 12-2 · The request for proposal</h1>
+<p><em>Following Larson &amp; Gray, Ch. 12 [1].</em></p>
+<p>Once the decision to buy is made, the buyer tells potential suppliers what it wants in a <strong>request for proposal (RFP)</strong>. The chapter’s outline has nine parts [1]:</p>
+<table class="caption-top table">
+<caption>The elements of a request for proposal. Reproduced from Larson &amp; Gray, Ch. 12, Figure 12.2 [1]; the third column summarises the chapter’s discussion.</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 34%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: left;">Element</th>
+<th style="text-align: left;">What it settles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Summary of needs and request for action</td>
+<td style="text-align: left;">The background and a plain description of the final deliverable</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Statement of work (SOW)</td>
+<td style="text-align: left;">The scope and major deliverables, with a date and a cost ceiling</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Deliverable specifications, requirements, features and tasks</td>
+<td style="text-align: left;">Detailed enough that proposals can be checked against them and the work later controlled against them</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Responsibilities: vendor and customer</td>
+<td style="text-align: left;">Who pays for what, what is excluded, how the two communicate, how issues escalate, how progress is judged</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Project schedule</td>
+<td style="text-align: left;">A firm schedule that can be used for control: what, who and when</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Costs and payment schedule</td>
+<td style="text-align: left;">How costs are determined and when progress payments are made</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Type of contract</td>
+<td style="text-align: left;">Fixed price or cost-plus, and any incentives or penalties</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Experience and staffing</td>
+<td style="text-align: left;">The skills required, and assurance that the named people will be available</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Evaluation criteria</td>
+<td style="text-align: left;">How proposals will be judged, for example on method, price, schedule and experience, and whether those are weighted</td>
+</tr>
+</tbody>
+</table>
+<p>Two points deserve emphasis. The <strong>responsibilities</strong> element is where trouble most often starts. Leaving out who supplies the test equipment, or who pays for the contractor’s on-site office, is a classic source of disputes once work is under way [1]. The <strong>specifications</strong> do double duty: they are how proposals are compared, and later the yardstick the work is measured against. A vague RFP produces proposals that cannot be compared and a contract that cannot be enforced.</p>
+<p>The chapter’s two examples show the range. A navy RFP for a fast near-shore warship sets performance targets: at least 55 knots, 80 to 250 feet long, radar-absorbing panels. A market research RFP is a short SOW: design, data collection, analysis and recommendations by a fixed date, for no more than $300,000 [1].</p>
+<hr>
+</section>
+<section id="lo-12-3-best-practices" class="level1">
+<h1>LO 12-3 · Best practices</h1>
+<p><em>Following Larson &amp; Gray, Ch. 12 [1].</em></p>
+<p>Firms that outsource well share a set of practices [1]:</p>
+<ul>
+<li>Well-defined requirements and procedures.</li>
+<li>Extensive training and team-building activities.</li>
+<li>Well-established conflict management processes in place.</li>
+<li>Frequent review and status updates.</li>
+<li>Co-location when needed.</li>
+<li>Fair and incentive-laden contracts.</li>
+<li>Long-term outsourcing relationships.</li>
+</ul>
+<p>: Best practices in outsourcing project work, as listed in Larson &amp; Gray, Ch. 12, Figure 12.4 [1].</p>
+<p>The theme running through the list is <strong>partnership</strong>: owner and contractor working toward a shared goal, not master and servant, buyer and seller [1]. Read the list against the disadvantages under LO 12-1 and each practice answers one of them. Clear requirements and frequent reviews answer coordination breakdowns. Joint training, team building and co-location answer the trust problem. An agreed process for escalating disagreements answers conflict. A fair contract with incentives aligns the two firms’ interests, and a long-term relationship gives both sides a reason to protect the next job by behaving well on this one.</p>
+<p>The word <em>fair</em> matters. A contract that loads all the risk onto one side invites that side to protect itself at the project’s expense, which is this week’s case.</p>
+<hr>
+</section>
+<section id="lo-12-4-principled-negotiation" class="level1">
+<h1>LO 12-4 · Principled negotiation</h1>
+<p><em>Following Larson &amp; Gray, Ch. 12 [1], who take the four principles from Fisher, Ury and Patton [2].</em></p>
+<p>Projects are negotiated constantly: over scope with the customer, over resources with functional managers, and over price, changes and claims with contractors. Week 13’s influence currencies are one side of this. The other is how to conduct the negotiation itself. Treating it as a contest, where each side opens with a position and concedes as little as possible, damages the relationship the project still depends on tomorrow. <strong>Principled negotiation</strong>, developed at the Harvard Negotiation Project, has four principles [1, 2]:</p>
+<ol type="1">
+<li><strong>Separate the people from the problem.</strong> Attack the problem, not the person across the table. Emotions, perceptions and communication are real, so deal with them directly and don’t let them become the issue.</li>
+<li><strong>Focus on interests, not positions.</strong> A position is what someone says they want; an interest is why they want it. Two positions can be incompatible while the interests behind them are not.</li>
+<li><strong>Invent options for mutual gain.</strong> Generate possibilities before judging them, and look for options that give each side more of what it cares about.</li>
+<li><strong>When possible, use objective criteria.</strong> Settle on standards neither side controls, such as market rates, the contract’s own terms, test results or an expert’s opinion, so neither side has to give in to the other’s will.</li>
+</ol>
+<p>: The four principles. Reproduced from Larson &amp; Gray, Ch. 12, Table 12.2 [1].</p>
+<p>Fisher and colleagues add the idea of a <strong>BATNA</strong>, your <em>best alternative to a negotiated agreement</em> [2]. Know what you will do if the talks fail. It tells you when to walk away, and improving it is often the strongest move available. A venue that knows you have a signed backup room negotiates differently from one that knows you don’t.</p>
+<p>A small example from the conference. The venue’s position is “AV hook-up in the main hall is $2,500 extra”. The coordinator’s position is “the contract includes AV”. Behind them, the venue’s interest is that its technician has to be paid for a Saturday, and the coordinator’s interest is that the stream works and the budget holds. Options open up: the conference’s own AV firm does the hook-up under the venue technician’s eye for two hours. The objective criterion is the contract itself, read together: what does its AV clause actually say?</p>
+<hr>
+</section>
+<section id="lo-12-5-customer-satisfaction-the-met-expectations-model" class="level1">
+<h1>LO 12-5 · Customer satisfaction: the met-expectations model</h1>
+<p><em>Following Larson &amp; Gray, Ch. 12 [1].</em></p>
+<p>The chapter’s starting point is that a project succeeds when its customer is satisfied, not merely when it is on time, on budget and to specification. Dissatisfaction also spreads: for each satisfied customer who tells one person, a dissatisfied customer tells about eight [1].</p>
+<p>The chapter’s model of satisfaction is a ratio [1]:</p>
+<p><span class="math display">\[\text{satisfaction} = \frac{\text{perceived performance}}{\text{expected performance}}\]</span></p>
+<p>Below 1 the customer is dissatisfied; around 1, satisfied; above 1, very satisfied or delighted.</p>
+<div id="fig-met" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-met-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week14/met-expectations.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-met-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The met-expectations model of customer satisfaction. Redrawn from Larson &amp; Gray, Ch. 12, Figure 12.7 [1].
+</figcaption>
+</figure>
+</div>
+<p>Three consequences follow [1]:</p>
+<ul>
+<li><strong>Aim for slightly above 1, not far above.</strong> Exceeding expectations costs money: finishing two weeks early means overtime, and beating a reliability requirement by a wide margin means more design and testing. Other things being equal, a ratio near 1.05 is more profitable than 1.5.</li>
+<li><strong>Both terms are perceptions.</strong> A project finished early and under budget can still leave a customer dissatisfied if they think the work is poor and their concerns were ignored. A project that ran late and over budget can leave them very satisfied if they believe the team protected their interests and did its best in hard circumstances.</li>
+<li><strong>Manage expectations from the start, and keep managing them.</strong> Explaining an overrun after the fact is the weakest position. Shape realistic expectations early, keep the customer’s view of actual performance accurate as the work goes, and help them understand enough to judge the project fairly.</li>
+</ul>
+<hr>
+</section>
+<section id="lo-a12-1-the-procurement-process" class="level1">
+<h1>LO A12-1 · The procurement process</h1>
+<p><em>The chapter covers this in its Appendix 12.1, which is not in the excerpt. This section follows the PMBOK Guide [3].</em></p>
+<p>Buying project work is itself a small project with a life cycle:</p>
+<div id="fig-procurement" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-procurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week14/procurement.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-procurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The procurement process. Original figure; steps after PMI’s procurement processes [3].
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><strong>Plan.</strong> Decide make or buy for each part of the work. Decide what to buy, when, by what kind of solicitation, and on what type of contract.</li>
+<li><strong>Solicit.</strong> Issue the RFP (LO 12-2), answer bidders’ questions so all of them hear the same answers, and receive proposals.</li>
+<li><strong>Select.</strong> Score the proposals against the evaluation criteria the RFP announced, and check references and the staff each bidder named.</li>
+<li><strong>Contract.</strong> Negotiate the final terms and sign.</li>
+<li><strong>Administer.</strong> Monitor the seller’s performance against the SOW and schedule, approve payments, and run <strong>contract change control</strong>. Any change to scope, price or date goes through the contract’s change procedure, in writing, before the work is done. Unrecorded changes are where most contract disputes come from.</li>
+<li><strong>Close.</strong> Confirm the deliverables were accepted, settle claims and final payment, and record lessons for the next purchase.</li>
+</ol>
+<p>PMBOK groups these as <em>plan</em>, <em>conduct</em> and <em>control</em> procurements [3]. Whatever the labels, the work runs from a make-or-buy decision to a formal closeout.</p>
+<hr>
+</section>
+<section id="lo-a12-2-fixed-price-and-cost-plus-contracts" class="level1">
+<h1>LO A12-2 · Fixed-price and cost-plus contracts</h1>
+<p><em>The chapter introduces the two families in its RFP discussion [1] and develops them in Appendix 12.1, which is not in the excerpt. The types and formulas here follow the PMBOK Guide [3] and the Federal Acquisition Regulation, Part 16 [4].</em></p>
+<p>There are two families of contract, and they differ in who carries the risk that the work costs more than expected [1].</p>
+<p><strong>Fixed-price</strong> contracts agree a price in advance, and it stands as long as the scope does not change. They suit well-defined work with predictable costs. The seller carries the cost risk: every dollar of overrun comes out of its profit, so it has to estimate carefully and will price in a contingency [1].</p>
+<p><strong>Cost-plus</strong> contracts reimburse the seller’s allowable costs and add a fee. They suit work whose scope or cost cannot be known when the contract is signed: research, development, or an untested site. The buyer carries the cost risk and has to monitor costs closely [1].</p>
+<div id="fig-spectrum" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spectrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/week14/contract-spectrum.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spectrum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Contract types arranged by who carries the cost risk. Original figure, after the PMBOK Guide [3].
+</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<caption>Common contract types. After the PMBOK Guide [3] and FAR Part 16 [4].</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 20%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">The seller is paid</th>
+<th style="text-align: left;">Fits when</th>
+<th style="text-align: left;">Watch out for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Firm fixed price (FFP)</strong></td>
+<td style="text-align: left;">The agreed price</td>
+<td style="text-align: left;">Scope is clear, costs predictable</td>
+<td style="text-align: left;">Contingency in the price; corner-cutting when the seller is losing money; disputes over what counts as a change</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Fixed price incentive fee (FPIF)</strong></td>
+<td style="text-align: left;">Target cost + target profit, adjusted by a share of the under- or overrun, up to a <strong>ceiling price</strong></td>
+<td style="text-align: left;">Fairly clear scope, some cost uncertainty</td>
+<td style="text-align: left;">Setting realistic targets and ceiling</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Cost plus fixed fee (CPFF)</strong></td>
+<td style="text-align: left;">Actual allowable cost + a fee fixed in dollars</td>
+<td style="text-align: left;">Scope or cost genuinely uncertain</td>
+<td style="text-align: left;">No reason for the seller to control cost</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Cost plus incentive fee (CPIF)</strong></td>
+<td style="text-align: left;">Actual cost + a fee that rises when cost comes in under target and falls when it comes in over, between a minimum and a maximum</td>
+<td style="text-align: left;">Uncertain, but a target can be set</td>
+<td style="text-align: left;">Negotiating the target cost and the share</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Time and materials (T&amp;M)</strong></td>
+<td style="text-align: left;">Hourly rates for labour + materials at cost</td>
+<td style="text-align: left;">Small or open-ended jobs, staff augmentation</td>
+<td style="text-align: left;">Open-ended cost; set a not-to-exceed ceiling</td>
+</tr>
+</tbody>
+</table>
+<p>One variant is missing from the table on purpose. <strong>Cost plus a percentage of cost</strong> pays a fee that grows with the seller’s spending, so the seller earns more by spending more. U.S. federal contracting prohibits it for that reason [4]. The chapter’s own description of cost-plus, a fee “usually” set as a percentage of total cost [1], describes exactly this risk.</p>
+<section id="how-an-incentive-fee-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-an-incentive-fee-works">How an incentive fee works</h2>
+<p>An incentive contract sets a <strong>target cost</strong> and a <strong>target fee</strong>, and a <strong>share ratio</strong> that splits any difference between target and actual cost, written buyer/seller [3]. With a seller share <em>s</em>:</p>
+<p><span class="math display">\[\text{fee} = \text{target fee} + s \times (\text{target cost} - \text{actual cost})\]</span></p>
+<p>bounded by a minimum and a maximum fee. The buyer pays actual cost plus the fee. At an 80/20 share, every $1,000 the seller saves earns it $200 more fee, and every $1,000 it overruns costs it $200. The seller keeps a stake in the cost without bearing all of it.</p>
+<p>A fixed price incentive works the same way on profit, but the buyer’s total is capped at the <strong>ceiling price</strong>. Above the ceiling, every extra dollar comes out of the seller’s profit, as under a firm fixed price [3].</p>
+<hr>
+</section>
+</section>
+<section id="in-class-choose-the-contract" class="level1">
+<h1>In class: choose the contract</h1>
+<p>The conference still has three purchases to make. Work in pairs on Tuesday: Part A on paper, Part B by hand and then in Smartsheet, where you build the bid comparison and a dashboard that shows who carries the risk.</p>
+<p><strong>Part A · Which contract?</strong> For each purchase, choose a contract type from the table above and give the reason in one sentence:</p>
+<ol type="1">
+<li>Lunch for 400 attendees on both days, from a fixed menu, with numbers confirmed a week ahead.</li>
+<li>Hybrid streaming of the main hall, in a venue whose network nobody has tested. A site survey next week will settle what equipment is needed.</li>
+<li>An on-call AV technician for the two conference days. Nobody knows how many hours will be needed.</li>
+</ol>
+<p><strong>Part B · Price the streaming bids.</strong> Three firms bid for the streaming:</p>
+<ul>
+<li><strong>Bid 1, firm fixed price:</strong> $45,000.</li>
+<li><strong>Bid 2, cost plus fixed fee:</strong> actual cost plus a fee of $4,000.</li>
+<li><strong>Bid 3, cost plus incentive fee:</strong> target cost $40,000, target fee $4,000, share 80/20 (buyer/seller), minimum fee $1,000, maximum fee $6,000.</li>
+</ul>
+<p>Before opening Smartsheet, work one row by hand: at an actual cost of $46,000, what does the conference pay under each bid, and what does each seller earn?</p>
+<section id="build-it-in-smartsheet" class="level2">
+<h2 class="anchored" data-anchor-id="build-it-in-smartsheet">Build it in Smartsheet</h2>
+<p>The <a href="../files/week-14-streaming-bids.xlsx">streaming bids file</a> holds 31 scenarios, actual costs from $30,000 to $60,000 in steps of $1,000. The four rows you will report on are marked <em>Part B</em> in the <em>Question</em> column.</p>
+<ol type="1">
+<li><p><strong>Import.</strong> <strong>+ Create → Import → Microsoft Excel</strong>, select the file, keep row 1 as headers and <em>Scenario</em> as the primary column. <em>Check:</em> 31 rows, $30k to $60k.</p></li>
+<li><p><strong>Formula columns.</strong> Add seven Text/Number columns with the names below, in this order. In row 1 of each, paste the formula, then right-click the cell → <strong>Convert to Column Formula</strong>. Format the money columns as currency with the <strong>$</strong> button in the toolbar.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">FFP pays</td>
+<td style="text-align: left;"><code>=45000</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FFP profit</td>
+<td style="text-align: left;"><code>=[FFP pays]@row - [Actual cost]@row</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CPFF pays</td>
+<td style="text-align: left;"><code>=[Actual cost]@row + 4000</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CPFF fee</td>
+<td style="text-align: left;"><code>=[CPFF pays]@row - [Actual cost]@row</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CPIF fee</td>
+<td style="text-align: left;"><code>=MIN(6000, MAX(1000, 4000 + 0.2 * (40000 - [Actual cost]@row)))</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CPIF pays</td>
+<td style="text-align: left;"><code>=[Actual cost]@row + [CPIF fee]@row</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cheapest bid</td>
+<td style="text-align: left;"><code>=IF(AND([CPIF pays]@row &lt;= [FFP pays]@row, [CPIF pays]@row &lt;= [CPFF pays]@row), "CPIF", IF([FFP pays]@row &lt; [CPFF pays]@row, "FFP", "CPFF"))</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Check:</em> on the $46k row, CPIF fee reads $2,800. If it does not, compare your formula with the table before going on.</p></li>
+<li><p><strong>Sheet Summary.</strong> Open the <strong>Sheet Summary</strong> panel (the icon on the right rail) and add four Text/Number fields:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Fixed price cheapest from</td>
+<td style="text-align: left;"><code>=MIN(COLLECT([Actual cost]:[Actual cost], [Cheapest bid]:[Cheapest bid], "FFP"))</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rows FFP cheapest</td>
+<td style="text-align: left;"><code>=COUNTIF([Cheapest bid]:[Cheapest bid], "FFP")</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rows CPIF cheapest</td>
+<td style="text-align: left;"><code>=COUNTIF([Cheapest bid]:[Cheapest bid], "CPIF")</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rows CPFF cheapest</td>
+<td style="text-align: left;"><code>=COUNTIF([Cheapest bid]:[Cheapest bid], "CPFF")</code></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Dashboard.</strong> <strong>+ Create → Dashboard</strong>, name it <em>Streaming bids</em>, and open it in edit mode.</p>
+<ul>
+<li>Add a <strong>Chart</strong> widget. Source: your sheet; select the <em>Scenario</em>, <em>FFP pays</em>, <em>CPFF pays</em> and <em>CPIF pays</em> columns for all 31 rows. Choose a <strong>line chart</strong> and title it <em>What the conference pays</em>.</li>
+<li>Add a second <strong>Chart</strong> widget with <em>Scenario</em>, <em>FFP profit</em>, <em>CPFF fee</em> and <em>CPIF fee</em>, also a line chart, titled <em>What the seller earns</em>.</li>
+<li>Add a <strong>Metric</strong> widget whose source is the Sheet Summary, showing the four fields.</li>
+<li>Save.</li>
+</ul></li>
+<li><p><strong>Filter.</strong> Back in the sheet, filter <em>Question</em> is <em>Part B</em> to see just the four rows you report.</p></li>
+</ol>
+<p>Then answer, from the sheet and the dashboard:</p>
+<ol type="1">
+<li>For actual costs of $36,000, $40,000, $46,000 and $55,000, what does the conference pay under each bid, and what does each seller earn?</li>
+<li>On the first chart, where does the CPIF line cross the fixed price? The summary field gives the first $1,000 step where the fixed price is cheapest; work out the exact crossing point from the fee formula.</li>
+<li>Below what actual cost does Bid 3’s fee hit its maximum, and above what actual cost does it hit its minimum? Find both on the second chart.</li>
+<li>Read the <em>Cheapest bid</em> column. Which bid is cheapest when costs come in low, and which when they come in high? The conference has to sign before anyone knows the cost: which bid would you sign, and why?</li>
+<li>Under which bid does the seller have no financial reason to keep costs down? Under which does it have the strongest reason to skip work that was promised but is hard to verify? Point to the line on the second chart that tells you.</li>
+</ol>
+<section id="the-incentive-that-produced-the-wrong-behaviour" class="level3 case">
+<h3 class="anchored" data-anchor-id="the-incentive-that-produced-the-wrong-behaviour">The incentive that produced the wrong behaviour</h3>
+<p>The sponsor’s purchasing office did not wait for the class’s advice. It signed the AV and streaming contract at <strong>cost plus 15 percent of cost</strong>, “so the firm is covered for whatever the venue turns out to need”. To make sure installation was done in time, it added a <strong>bonus of $500 for each day before Mon 30 Nov</strong> that the installation is signed off. The statement of work requires a full-load streaming test with 500 simulated viewers before sign-off.</p>
+<p>The firm signed off installation on Tue 24 Nov, six days early, and claimed $3,000. Its invoice shows $52,000 of cost, including a second camera package and a rented generator nobody asked for, plus a $7,800 fee. The coordinator had budgeted $45,000. At the rehearsal on Thu 3 Dec, the stream dropped twice with fewer than 250 viewers connected. The full-load test had been “deferred to after the rehearsal”. The sponsor asks the coordinator what went wrong, and whether the stream will hold for 500 people on the day.</p>
+<div class="qn">
+<p>Which clause rewarded which behaviour? Rewrite the contract, type, fee and incentive, so that what the firm is paid for is what the conference needs. The coordinator now has to negotiate with the firm before the conference. Using principled negotiation, what are each side’s interests, what objective criteria apply, and what is the coordinator’s BATNA? Finally, what does the sponsor now expect of the stream, and how should the coordinator manage that expectation between now and the day?</p>
+</div>
+</section>
+<p>Kerr named this failure decades ago: organizations routinely reward one behaviour while hoping for another [5]. A contract is a reward system for a firm, and it gets the behaviour it pays for.</p>
+<hr>
+</section>
+<section id="practice-problems" class="level2">
+<h2 class="anchored" data-anchor-id="practice-problems">Practice problems</h2>
+<p>These are written for this course; the chapter’s own review questions and exercises are in your copy of the text.</p>
+<ol type="1">
+<li>A fixed price incentive contract has target cost $100,000, target profit $10,000, ceiling price $120,000 and a 70/30 share (buyer/seller). What does the buyer pay, and what does the seller earn, if actual cost is $90,000, $110,000 and $125,000?</li>
+<li>A customer rates performance on a 10-point scale. Before the project they expected an 8; at handover they perceive a 7.6. What is the satisfaction ratio? Name two legitimate ways the project manager could have produced a ratio of about 1.05, one acting on each term.</li>
+<li>The conference’s draft RFP for catering reads in full: “Lunch for 400 on both days, buffet, vegetarian options, by 12:00. Fixed price. Proposals due Fri 4 Dec.” Which of the nine RFP elements are missing, and which missing element is most likely to cause a dispute?</li>
+<li>A functional manager’s position is “none of my engineers can go to your project before March”. Write two interests that might lie behind that position, and one option for mutual gain for each.</li>
+<li>For each, say whether you would outsource it and why, using the advantages and disadvantages under LO 12-1: (a) the conference’s registration website; (b) security staff for the conference days; (c) the program committee’s selection of papers.</li>
+</ol>
+<hr>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ol type="1">
+<li>Larson, E. W., &amp; Gray, C. F. <em>Project Management: The Managerial Process</em>, 2024 Release. McGraw Hill. Chapter 12.</li>
+<li>Fisher, R., Ury, W., &amp; Patton, B. (2011). <em>Getting to Yes: Negotiating Agreement Without Giving In</em> (3rd ed.). Penguin.</li>
+<li>Project Management Institute. (2017). <em>A Guide to the Project Management Body of Knowledge (PMBOK Guide)</em> (6th ed.). Chapter 12, Project Procurement Management.</li>
+<li>Federal Acquisition Regulation, 48 C.F.R. Part 16, Types of Contracts; §16.102(c) on cost-plus-a-percentage-of-cost. <a href="https://www.acquisition.gov/far/part-16" class="uri">https://www.acquisition.gov/far/part-16</a></li>
+<li>Kerr, S. (1975). On the folly of rewarding A, while hoping for B. <em>Academy of Management Journal</em>, 18(4), 769–783.</li>
+</ol>
+<p>The conference’s streaming contract and bids, the in-class activity, the case and the practice problems are original to these course materials.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,7 +1144,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p>Harun Pirim, PhD · North Dakota State University</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/harunpirim/IMSE456/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
